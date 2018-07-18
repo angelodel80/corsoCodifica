@@ -1,0 +1,12 @@
+<?xml version="1.0" standalone="no"?>
+<svg width="12cm" height="4cm" viewBox="0 0 1200 400"
+     xmlns="http://www.w3.org/2000/svg"
+     xmlns:xlink="http://www.w3.org/1999/xlink">
+  <a xlink:href="http://www.w3.org/TR/SVG11/"
+     transform="translate(450, 100) rotate(90, 150, 100)">
+    <rect width="300" height="200" fill="#C00" 
+          stroke="black" stroke-width="20" />
+    <text x="150" y="150" text-anchor="middle" 
+          font-size="120" fill="yellow">SVG</text>
+  </a>
+</svg>

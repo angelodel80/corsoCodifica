@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<TVGuide start="2001-07-05" end="2001-07-05">
+  <Channel href="BBC1.xml" />
+  <Channel href="BBC2.xml" />
+  <Channel href="ITV.xml" />
+  <Channel href="Channel4.xml" />
+  <Channel href="Channel5.xml" />
+  <Channel href="SkyOne.xml" />
+</TVGuide>

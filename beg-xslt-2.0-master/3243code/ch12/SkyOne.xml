@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Channel>
+  <Name>Sky One</Name>
+  <Program rating="9">
+    <Start>2001-07-05T19:00:00</Start>
+    <Duration>PT30M</Duration>
+    <Series>Simpsons</Series>
+    <Title></Title>
+  </Program>
+  <Program rating="9">
+    <Start>2001-07-05T19:30:00</Start>
+    <Duration>PT30M</Duration>
+    <Series>Simpsons</Series>
+    <Title></Title>
+  </Program>
+  <Program rating="8">
+    <Start>2001-07-05T20:00:00</Start>
+    <Duration>PT1H</Duration>
+    <Series>StarTrekVoyager</Series>
+    <Title>Renaissance Man</Title>
+  </Program>
+  <Program rating="6">
+    <Start>2001-07-05T21:00:00</Start>
+    <Duration>PT1H</Duration>
+    <Series>DarkAngel</Series>
+    <Title></Title>
+  </Program>
+  <Program flag="favorite" rating="10">
+    <Start>2001-07-05T22:00:00</Start>
+    <Duration>PT1H</Duration>
+    <Series>StarTrekNextGeneration</Series>
+    <Title>The Inner Light</Title>
+  </Program>
+</Channel>

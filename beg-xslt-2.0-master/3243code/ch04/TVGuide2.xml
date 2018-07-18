@@ -1,0 +1,257 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<?xml-stylesheet type="text/xsl" href="TVguide8.xsl"?>
+<TVGuide start="2001-07-05" end="2001-07-05">
+  <Channel>
+    <Name>BBC1</Name>
+    <Program>
+      <Start>2001-07-05T19:00:00</Start>
+      <Duration>PT30M</Duration>
+      <Series>QuestionOfSport</Series>
+      <Title></Title>
+    </Program>
+    <Program rating="5" flag="favorite">
+      <Start>2001-07-05T19:30:00</Start>
+      <Duration>PT30M</Duration>
+      <Series>EastEnders</Series>
+      <Title></Title>
+      <Description>
+        <Character>Mark</Character>'s health scare forces him to reconsider his
+        future with <Character>Lisa</Character>, while 
+        <Link href="http://www.bbc.co.uk/eastenders/characters/jamie_m_biog.shtml">
+          <Character>Jamie</Character>
+        </Link> is torn between <Character>Sonia</Character> and 
+        <Character>Zoe</Character>.
+      </Description>
+      <CastList>
+        <CastMember>
+          <Character>
+            <Name>Zoe Slater</Name>
+            <Description>
+              The youngest Slater girl, <Character>Zoe</Character> really 
+              makes the most of the fact she's the baby of the family.
+            </Description>
+          </Character>
+          <Actor>
+            <Name>Michelle Ryan</Name>
+            <Description>
+              For more details, see 
+              <Link href="http://www.ajmanagement.co.uk/michelle-ryan.htm">
+                <Actor>Michelle Ryan</Actor>'s Agency
+              </Link>.
+            </Description>
+          </Actor>
+        </CastMember>
+        <CastMember>
+          <Character>
+            <Name>Jamie Mitchell</Name>
+            <Description>
+              Jamie's a bit of a heartthrob (who could resist that 
+              little-boy-lost look?) but until <Character>Janine 
+              Butcher</Character> came along he'd steered clear of girls.
+            </Description>
+          </Character>
+          <Actor>
+            <Name>Jack Ryder</Name>
+            <Description>
+              Won Best Newcomer for <Character>Jamie Mitchell</Character>
+              in the 1999 TV awards.
+            </Description>
+          </Actor>
+        </CastMember>
+        <CastMember>
+          <Character>
+            <Name>Sonia Jackson</Name>
+            <Description>
+              Amongst the Jackson crowd <Character>Sonia</Character> has 
+              always been the one with her head screwed on right.
+            </Description>
+          </Character>
+          <Actor>
+            <Name>Natalie Cassidy</Name>
+            <Description>
+              Started training at The Anna Scher Theatre when she was 
+              eight years old.
+            </Description>
+          </Actor>
+        </CastMember>
+      </CastList>
+      <Writers>
+        <Writer><Name>Nick Saltrese</Name></Writer>
+        <Writer><Name>Julie Wassmer</Name></Writer>
+      </Writers>
+      <Director><Name>Stewart Edwards</Name></Director>
+      <Producer><Name>Emma Turner</Name></Producer>
+    </Program>
+    <Program type="documentary">
+      <Start>2001-07-05T20:00:00</Start>
+      <Duration>PT45M</Duration>
+      <Series></Series>
+      <Title>Get Real with Casualty</Title>
+    </Program>
+    <Program>
+      <Start>2001-07-05T20:45:00</Start>
+      <Duration>PT45M</Duration>
+      <Series>Lottery</Series>
+      <Title></Title>
+    </Program>
+    <Program>
+      <Start>2001-07-05T21:30:00</Start>
+      <Duration>PT1H</Duration>
+      <Series>Panorama</Series>
+      <Title></Title>
+    </Program>
+  </Channel>
+  <Channel>
+    <Name>BBC2</Name>
+    <Program>
+      <Start>2001-07-05T19:00:00</Start>
+      <Duration>PT1H</Duration>
+      <Series>Snooker</Series>
+      <Title></Title>
+    </Program>
+    <Program>
+      <Start>2001-07-05T20:00:00</Start>
+      <Duration>PT1H</Duration>
+      <Series>HomeFront</Series>
+      <Title></Title>
+    </Program>
+    <Program>
+      <Start>2001-07-05T21:00:00</Start>
+      <Duration>PT50M</Duration>
+      <Series>WildAfrica</Series>
+      <Title></Title>
+    </Program>
+    <Program flag="interesting">
+      <Start>2001-07-05T21:50:00</Start>
+      <Duration>PT40M</Duration>
+      <Series>Taboo</Series>
+      <Title>Nakedness</Title>
+    </Program>
+  </Channel>
+  <Channel>
+    <Name>ITV</Name>
+    <Program>
+      <Start>2001-07-05T19:00:00</Start>
+      <Duration>PT30M</Duration>
+      <Series>Emmerdale</Series>
+      <Title></Title>
+    </Program>
+    <Program>
+      <Start>2001-07-05T19:30:00</Start>
+      <Duration>PT30M</Duration>
+      <Series>CoronationStreet</Series>
+      <Title></Title>
+    </Program>
+    <Program>
+      <Start>2001-07-05T20:00:00</Start>
+      <Duration>PT1H</Duration>
+      <Series>Millionaire</Series>
+      <Title></Title>
+    </Program>
+    <Program type="drama">
+      <Start>2001-07-05T21:00:00</Start>
+      <Duration>PT2H</Duration>
+      <Series></Series>
+      <Title>Hot Money</Title>
+    </Program>
+  </Channel>
+  <Channel>
+    <Name>Channel 4</Name>
+    <Program>
+      <Start>2001-07-05T19:00:00</Start>
+      <Duration>PT55M</Duration>
+      <Series>Channel4News</Series>
+      <Title></Title>
+    </Program>
+    <Program>
+      <Start>2001-07-05T19:55:00</Start>
+      <Duration>PT5M</Duration>
+      <Series>SlotArt</Series>
+      <Title></Title>
+    </Program>
+    <Program>
+      <Start>2001-07-05T20:00:00</Start>
+      <Duration>PT30M</Duration>
+      <Series>Brookside</Series>
+      <Title></Title>
+    </Program>
+    <Program>
+      <Start>2001-07-05T20:30:00</Start>
+      <Duration>PT30M</Duration>
+      <Series>Brookside</Series>
+      <Title></Title>
+    </Program>
+    <Program>
+      <Start>2001-07-05T21:00:00</Start>
+      <Duration>PT1H</Duration>
+      <Series>Swallow</Series>
+      <Title></Title>
+    </Program>
+    <Program flag="favorite">
+      <Start>2001-07-05T22:00:00</Start>
+      <Duration>PT1H</Duration>
+      <Series>AllyMcBeal</Series>
+      <Title></Title>
+    </Program>
+  </Channel>
+  <Channel>
+    <Name>Channel 5</Name>
+    <Program>
+      <Start>2001-07-05T19:00:00</Start>
+      <Duration>PT30M</Duration>
+      <Series>MovieChartShow</Series>
+      <Title></Title>
+    </Program>
+    <Program>
+      <Start>2001-07-05T19:30:00</Start>
+      <Duration>PT30M</Duration>
+      <Series>FiveNews</Series>
+      <Title></Title>
+    </Program>
+    <Program type="entertainment">
+      <Start>2001-07-05T20:00:00</Start>
+      <Duration>PT1H</Duration>
+      <Series></Series>
+      <Title>The World's Worst Drivers Caught On Tape</Title>
+    </Program>
+    <Program type="film">
+      <Start>2001-07-05T21:00:00</Start>
+      <Duration>PT1H55M</Duration>
+      <Series></Series>
+      <Title>Black and White</Title>
+    </Program>
+  </Channel>
+  <Channel>
+    <Name>Sky One</Name>
+    <Program>
+      <Start>2001-07-05T19:00:00</Start>
+      <Duration>PT30M</Duration>
+      <Series>Simpsons</Series>
+      <Title></Title>
+    </Program>
+    <Program>
+      <Start>2001-07-05T19:30:00</Start>
+      <Duration>PT30M</Duration>
+      <Series>Simpsons</Series>
+      <Title></Title>
+    </Program>
+    <Program rating="8">
+      <Start>2001-07-05T20:00:00</Start>
+      <Duration>PT1H</Duration>
+      <Series>StarTrekVoyager</Series>
+      <Title>Renaissance Man</Title>
+    </Program>
+    <Program>
+      <Start>2001-07-05T21:00:00</Start>
+      <Duration>PT1H</Duration>
+      <Series>DarkAngel</Series>
+      <Title></Title>
+    </Program>
+    <Program flag="favorite">
+      <Start>2001-07-05T22:00:00</Start>
+      <Duration>PT1H</Duration>
+      <Series>StarTrekNextGeneration</Series>
+      <Title>The Inner Light</Title>
+    </Program>
+  </Channel>
+</TVGuide>

@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<TVGuide start="2001-07-05" end="2001-07-05">
+  <Channel>
+    <Name>BBC1</Name>
+    <Program>
+      <Start>2001-07-05T19:00:00</Start>
+      <Duration>PT30M</Duration>
+      <Series>QuestionOfSport</Series>
+      <Title></Title>
+    </Program>
+    <Program rating="5" flag="favorite">
+      <Start>2001-07-05T19:30:00</Start>
+      <Duration>PT30M</Duration>
+      <Series>EastEnders</Series>
+      <Title></Title>
+      <Description>
+        Mark's health scare forces him to reconsider his future with Lisa,
+        while Jamie is torn between Sonia and Zoe.
+      </Description>
+      <CastList>
+        <CastMember>
+          <Character><Name>Zoe Slater</Name></Character>
+          <Actor><Name>Michelle Ryan</Name></Actor>
+        </CastMember>
+        <CastMember>
+          <Character><Name>Jamie Mitchell</Name></Character>
+          <Actor><Name>Jack Ryder</Name></Actor>
+        </CastMember>
+        <CastMember>
+          <Character><Name>Sonia Jackson</Name></Character>
+          <Actor><Name>Natalie Cassidy</Name></Actor>
+        </CastMember>
+      </CastList>
+      <Writers>
+        <Writer><Name>Nick Saltrese</Name></Writer>
+        <Writer><Name>Julie Wassmer</Name></Writer>
+      </Writers>
+      <Director><Name>Stewart Edwards</Name></Director>
+      <Producer><Name>Emma Turner</Name></Producer>
+    </Program>
+    <Program type="documentary">
+      <Start>2001-07-05T20:00:00</Start>
+      <Duration>PT45M</Duration>
+      <Series></Series>
+      <Title>Get Real with Casualty</Title>
+    </Program>
+    <Program>
+      <Start>2001-07-05T20:45:00</Start>
+      <Duration>PT45M</Duration>
+      <Series>Lottery</Series>
+      <Title></Title>
+    </Program>
+    <Program>
+      <Start>2001-07-05T21:00:00</Start>
+      <Duration>PT1H</Duration>
+      <Series>Panorama</Series>
+      <Title></Title>
+    </Program>
+  </Channel>
+  <Channel>
+    <Name>BBC2</Name>
+    <Program>
+      <Start>2001-07-05T19:00:00</Start>
+      <Duration>PT1H</Duration>
+      <Series>Snooker</Series>
+      <Title></Title>
+    </Program>
+    <Program>
+      <Start>2001-07-05T20:00:00</Start>
+      <Duration>PT1H</Duration>
+      <Series>HomeFront</Series>
+      <Title></Title>
+    </Program>
+    <Program>
+      <Start>2001-07-05T21:00:00</Start>
+      <Duration>PT50M</Duration>
+      <Series>WildAfrica</Series>
+      <Title></Title>
+    </Program>
+    <Program flag="interesting">
+      <Start>2001-07-05T21:50:00</Start>
+      <Duration>PT40M</Duration>
+      <Series>Taboo</Series>
+      <Title>Nakedness</Title>
+    </Program>
+  </Channel>
+  <Channel>
+    <Name>ITV</Name>
+    <Program>
+      <Start>2001-07-05T19:00:00</Start>
+      <Duration>PT30M</Duration>
+      <Series>Emmerdale</Series>
+      <Title></Title>
+    </Program>
+    <Program>
+      <Start>2001-07-05T19:30:00</Start>
+      <Duration>PT30M</Duration>
+      <Series>CoronationStreet</Series>
+      <Title></Title>
+    </Program>
+    <Program>
+      <Start>2001-07-05T20:00:00</Start>
+      <Duration>PT1H</Duration>
+      <Series>Millionaire</Series>
+      <Title></Title>
+    </Program>
+    <Program type="drama">
+      <Start>2001-07-05T21:00:00</Start>
+      <Duration>PT2H</Duration>
+      <Series></Series>
+      <Title>Hot Money</Title>
+    </Program>
+  </Channel>
+  <Channel>
+    <Name>Channel 4</Name>
+    <Program>
+      <Start>2001-07-05T19:00:00</Start>
+      <Duration>PT55M</Duration>
+      <Series>Channel4News</Series>
+      <Title></Title>
+    </Program>
+    <Program>
+      <Start>2001-07-05T19:55:00</Start>
+      <Duration>PT5M</Duration>
+      <Series>SlotArt</Series>
+      <Title></Title>
+    </Program>
+    <Program>
+      <Start>2001-07-05T20:00:00</Start>
+      <Duration>PT30M</Duration>
+      <Series>Brookside</Series>
+      <Title></Title>
+    </Program>
+    <Program>
+      <Start>2001-07-05T20:30:00</Start>
+      <Duration>PT30M</Duration>
+      <Series>Brookside</Series>
+      <Title></Title>
+    </Program>
+    <Program>
+      <Start>2001-07-05T21:00:00</Start>
+      <Duration>PT1H</Duration>
+      <Series>Swallow</Series>
+      <Title></Title>
+    </Program>
+    <Program flag="favorite">
+      <Start>2001-07-05T22:00:00</Start>
+      <Duration>PT1H</Duration>
+      <Series>AllyMcBeal</Series>
+      <Title></Title>
+    </Program>
+  </Channel>
+  <Channel>
+    <Name>Channel 5</Name>
+    <Program>
+      <Start>2001-07-05T19:00:00</Start>
+      <Duration>PT30M</Duration>
+      <Series>MovieChartShow</Series>
+      <Title></Title>
+    </Program>
+    <Program>
+      <Start>2001-07-05T19:30:00</Start>
+      <Duration>PT30M</Duration>
+      <Series>5News</Series>
+      <Title></Title>
+    </Program>
+    <Program type="entertainment">
+      <Start>2001-07-05T20:00:00</Start>
+      <Duration>PT1H</Duration>
+      <Series></Series>
+      <Title>The World's Worst Drivers Caught On Tape</Title>
+    </Program>
+    <Program type="film">
+      <Start>2001-07-05T21:00:00</Start>
+      <Duration>PT1H55M</Duration>
+      <Series></Series>
+      <Title>Black and White</Title>
+    </Program>
+  </Channel>
+</TVGuide>

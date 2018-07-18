@@ -1,0 +1,156 @@
+<?xml version="1.0"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+           targetNamespace="http://www.example.com/TVGuide"
+           xmlns="http://www.example.com/TVGuide"
+           elementFormDefault="qualified">
+
+<xs:element name="TVGuide">
+  <xs:complexType>
+    <xs:sequence>
+      <xs:element name="Channel" type="Channel" maxOccurs="unbounded" />
+    </xs:sequence>
+    <xs:attribute name="start" type="xs:date" use="required" />
+    <xs:attribute name="end" type="xs:date" use="required" />
+  </xs:complexType>
+</xs:element>
+
+<xs:complexType name="Channel">
+  <xs:sequence>
+    <xs:element name="Name" type="xs:token" />
+    <xs:element name="Program" type="Program" maxOccurs="unbounded" />
+  </xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="Program">
+  <xs:sequence>
+    <xs:element name="Start" type="xs:dateTime" />
+    <xs:element name="Duration" type="xs:duration" />
+    <xs:element name="Series" type="Series" />
+    <xs:element name="Title" type="xs:token" />
+    <xs:element name="Description" type="Inline" minOccurs="0"/>
+    <xs:element name="CastList" type="CastList" minOccurs="0" />
+    <xs:choice minOccurs="0">
+      <xs:element name="Writers" type="Writers" />
+      <xs:element ref="Writer" />
+    </xs:choice>
+    <xs:choice minOccurs="0">
+      <xs:element name="Directors" type="Directors" />
+      <xs:element ref="Director" />
+    </xs:choice>
+    <xs:choice minOccurs="0">
+      <xs:element name="Producers" type="Producers" />
+      <xs:element ref="Producer" />
+    </xs:choice>
+  </xs:sequence>
+  <xs:attribute name="rating" type="Rating" />
+  <xs:attribute name="flag" type="Flag" />
+</xs:complexType>
+
+<xs:simpleType name="Series">
+  <xs:union memberTypes="xs:NCName">
+    <xs:simpleType>
+      <xs:restriction base="xs:token">
+        <xs:enumeration value="" />
+      </xs:restriction>
+    </xs:simpleType>
+  </xs:union>
+</xs:simpleType>
+
+<xs:complexType name="Inline" mixed="true">
+  <xs:sequence>
+    <xs:element ref="_Inline" minOccurs="0" maxOccurs="unbounded" />
+  </xs:sequence>
+</xs:complexType>
+
+<xs:element name="_Inline" type="Inline" abstract="true" />
+
+<xs:element name="Character" substitutionGroup="_Inline" />
+<xs:element name="Actor" substitutionGroup="_Inline" />
+
+<xs:element name="Link" type="Link" substitutionGroup="_Inline" />
+
+<xs:complexType name="Link">
+  <xs:complexContent mixed="true">
+    <xs:extension base="Inline">
+      <xs:attribute name="href" type="xs:anyURI" />
+    </xs:extension>    
+  </xs:complexContent>
+</xs:complexType>
+
+<xs:complexType name="CastList">
+  <xs:sequence>
+    <xs:element name="CastMember" type="CastMember" maxOccurs="unbounded" />
+  </xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="CastMember">
+  <xs:sequence>
+    <xs:element name="Character" type="Person" />
+    <xs:element name="Actor" type="Person" />
+  </xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="Person">
+  <xs:sequence>
+    <xs:element name="Name" type="xs:token" />
+    <xs:element name="Description" type="Inline" minOccurs="0" />
+  </xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="PersonList">
+  <xs:sequence>
+    <xs:element ref="_Person" maxOccurs="unbounded" />
+  </xs:sequence>
+</xs:complexType>
+
+<xs:element name="_Person" type="Person" abstract="true" />
+
+<xs:element name="Writer" substitutionGroup="_Person" />
+<xs:element name="Director" substitutionGroup="_Person" />
+<xs:element name="Producer" substitutionGroup="_Person" />
+
+<xs:complexType name="Writers">
+  <xs:complexContent>
+    <xs:restriction base="PersonList">
+      <xs:sequence>
+        <xs:element ref="Writer" maxOccurs="unbounded" />
+      </xs:sequence>
+    </xs:restriction>    
+  </xs:complexContent>
+</xs:complexType>
+
+<xs:complexType name="Directors">
+  <xs:complexContent>
+    <xs:restriction base="PersonList">
+      <xs:sequence>
+        <xs:element ref="Director" maxOccurs="unbounded" />
+      </xs:sequence>
+    </xs:restriction>    
+  </xs:complexContent>
+</xs:complexType>
+
+<xs:complexType name="Producers">
+  <xs:complexContent>
+    <xs:restriction base="PersonList">
+      <xs:sequence>
+        <xs:element ref="Producer" maxOccurs="unbounded" />
+      </xs:sequence>
+    </xs:restriction>    
+  </xs:complexContent>
+</xs:complexType>
+
+<xs:simpleType name="Rating">
+  <xs:restriction base="xs:integer">
+    <xs:minInclusive value="1" />
+    <xs:maxInclusive value="10" />
+  </xs:restriction>
+</xs:simpleType>
+
+<xs:simpleType name="Flag">
+  <xs:restriction base="xs:token">
+    <xs:enumeration value="favorite" />
+    <xs:enumeration value="interesting" />
+  </xs:restriction>
+</xs:simpleType>
+
+</xs:schema>

@@ -1,0 +1,113 @@
+<HTML>
+<HEAD>
+  <TITLE>TV Guide</TITLE>
+  <LINK rel="stylesheet" href="TVGuide.html.css">
+  <SCRIPT type="text/javascript">
+    function toggle(element) {
+      if (element.style.display == 'none') {
+        element.style.display = 'block';
+      } else {
+        element.style.display = 'none';
+      }
+    }
+  </SCRIPT>
+</HEAD>
+
+<BODY>
+  <H1>TV Guide</H1>
+  <H2><SPAN class="day">Thursday</SPAN> 5 July</H2>
+  <TABLE width="100%">
+
+    <TR>
+      <TH width="16%">Channel
+      <TH colspan="6" width="12%">7:00
+      <TH colspan="6" width="12%">7:30
+      <TH colspan="6" width="12%">8:00
+      <TH colspan="6" width="12%">8:30
+      <TH colspan="6" width="12%">9:00
+      <TH colspan="6" width="12%">9:30
+      <TH colspan="6" width="12%">10:00
+
+    <TR>
+      <TH class="channel">BBC1
+      <TD colspan="6" class="quiz">
+        <SPAN class="title">A Question Of Sport</SPAN><BR>
+      <TD colspan="6" class="soap">
+        <IMG src="flag.gif" alt="[Flagged]" width="20" height="20">
+        <SPAN class="title">EastEnders</SPAN><BR>
+        Mark's health scare forces him to reconsider his future with Lisa,
+        while Jamie is torn between Sonia and Zoe.
+        <SPAN onclick="toggle(EastEndersCast);">[Cast]</SPAN>
+        <DIV id="EastEndersCast" style="display: none;">
+          <UL class="castlist">
+            <LI>
+              <SPAN class="character">Zoe Slater</SPAN>
+              <SPAN class="actor">Michelle Ryan</SPAN>
+            <LI>
+              <SPAN class="character">Jamie Mitchell</SPAN>
+              <SPAN class="actor">Jack Ryder</SPAN>
+            <LI>
+              <SPAN class="character">Sonia Jackson</SPAN>
+              <SPAN class="actor">Natalie Cassidy</SPAN>
+          </UL>
+        </DIV>
+      <TD colspan="9" class="documentary">
+        <SPAN class="title">Get Real with Casualty</SPAN><BR>
+      <TD colspan="9" class="entertainment">
+        <SPAN class="title">The National Lottery</SPAN><BR>
+      <TD colspan="12" class="news">
+        <SPAN class="title">Panorama</SPAN><BR>
+      <TD colspan="6">
+      
+    <TR>
+      <TH class="channel">BBC2
+      <TD colspan="12" class="sport">
+        <SPAN class="title">Snooker</SPAN><BR>
+      <TD colspan="12" class="improvement">
+        <SPAN class="title">Home Front</SPAN><BR>
+      <TD colspan="10" class="documentary">
+        <SPAN class="title">Wild Africa</SPAN><BR>
+      <TD colspan="8" class="documentary">
+        <IMG src="flag.gif" alt="[Flagged]" width="20" height="20">
+        <SPAN class="title">Taboo <SPAN class="subtitle">Nakedness</SPAN></SPAN><BR>
+      
+    <TR>
+      <TH class="channel">ITV
+      <TD colspan="6" class="soap">
+        <SPAN class="title">Emmerdale</SPAN><BR>
+      <TD colspan="6" class="soap">
+        <SPAN class="title">Coronation Street</SPAN><BR>
+      <TD colspan="12" class="quiz">
+        <SPAN class="title">Who Wants to Be a Millionaire?</SPAN><BR>
+      <TD colspan="18" class="drama">
+        <SPAN class="title">Hot Money</SPAN><BR>
+      
+    <TR>
+      <TH class="channel">Channel 4
+      <TD colspan="11" class="news">
+        <SPAN class="title">Channel 4 News</SPAN><BR>
+      <TD colspan="1" class="documentary">
+        <SPAN class="title">Slot Art</SPAN><BR>
+      <TD colspan="6" class="soap">
+        <SPAN class="title">Brookside</SPAN><BR>
+      <TD colspan="6" class="soap">
+        <SPAN class="title">Brookside</SPAN><BR>
+      <TD colspan="12" class="drama">
+        <SPAN class="title">Swallow</SPAN><BR>
+      <TD colspan="6" class="drama">
+        <IMG src="flag.gif" alt="[Flagged]" width="20" height="20">
+        <SPAN class="title">Ally McBeal</SPAN><BR>
+      
+    <TR>
+      <TH class="channel">Channel 5
+      <TD colspan="6" class="entertainment">
+        <SPAN class="title">The Movie Chart Show</SPAN><BR>
+      <TD colspan="6" class="news">
+        <SPAN class="title">5 News</SPAN><BR>
+      <TD colspan="12" class="entertainment">
+        <SPAN class="title">The World's Worst Drivers Caught On Tape</SPAN><BR>
+      <TD colspan="18" class="film">
+        <SPAN class="title">Black and White</SPAN><BR>
+  </TABLE>
+</BODY>
+</HTML>

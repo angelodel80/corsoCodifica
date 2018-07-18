@@ -1,0 +1,586 @@
+<?xml version="1.0" encoding="UTF-8"?>
+  document:
+  
+  processing instruction: xml-stylesheet:
+                          type="text/xsl" href="NodeTree4.xsl"
+  element: {http://www.example.com/TVGuide}
+            TVGuide
+  attribute: {http://www.w3.org/2001/XMLSchema-instance}
+              schemaLocation:
+             http://www.example.com/TVGuide TVGuide.xsd
+  attribute: {}
+              start:
+             2001-07-05
+  attribute: {}
+              end:
+             2001-07-05
+  element: {http://www.example.com/TVGuide}
+            Channel
+  element: {http://www.example.com/TVGuide}
+            Name
+  text: BBC1
+  element: {http://www.example.com/TVGuide}
+            Program
+  element: {http://www.example.com/TVGuide}
+            Start
+  text: 2001-07-05T19:00:00
+  element: {http://www.example.com/TVGuide}
+            Duration
+  text: PT30M
+  element: {http://www.example.com/TVGuide}
+            Series
+  text: QuestionOfSport
+  element: {http://www.example.com/TVGuide}
+            Title
+  element: {http://www.example.com/TVGuide}
+            Program
+  attribute: {}
+              rating:
+             5
+  attribute: {}
+              flag:
+             favorite
+  element: {http://www.example.com/TVGuide}
+            Start
+  text: 2001-07-05T19:30:00
+  element: {http://www.example.com/TVGuide}
+            Duration
+  text: PT30M
+  element: {http://www.example.com/TVGuide}
+            Series
+  text: EastEnders
+  element: {http://www.example.com/TVGuide}
+            Title
+  element: {http://www.example.com/TVGuide}
+            Description
+  element: {http://www.example.com/TVGuide}
+            Character
+  text: Mark
+  text: 's health scare forces him to reconsider his
+        future with 
+  element: {http://www.example.com/TVGuide}
+            Character
+  text: Lisa
+  text: , while 
+        
+  element: {http://www.example.com/TVGuide}
+            Link
+  attribute: {}
+              href:
+             http://www.bbc.co.uk/eastenders/characters/jamie_m_biog.shtml
+  element: {http://www.example.com/TVGuide}
+            Character
+  text: Jamie
+  text:  is torn between 
+  element: {http://www.example.com/TVGuide}
+            Character
+  text: Sonia
+  text:  and 
+        
+  element: {http://www.example.com/TVGuide}
+            Character
+  text: Zoe
+  text: .
+      
+  element: {http://www.example.com/TVGuide}
+            CastList
+  element: {http://www.example.com/TVGuide}
+            CastMember
+  element: {http://www.example.com/TVGuide}
+            Character
+  element: {http://www.example.com/TVGuide}
+            Name
+  text: Zoe Slater
+  element: {http://www.example.com/TVGuide}
+            Description
+  text: 
+              The youngest Slater girl, 
+  element: {http://www.example.com/TVGuide}
+            Character
+  text: Zoe
+  text:  really 
+              makes the most of the fact she's the baby of the family.
+            
+  element: {http://www.example.com/TVGuide}
+            Actor
+  element: {http://www.example.com/TVGuide}
+            Name
+  text: Michelle Ryan
+  element: {http://www.example.com/TVGuide}
+            Description
+  text: 
+              For more details, see 
+              
+  element: {http://www.example.com/TVGuide}
+            Link
+  attribute: {}
+              href:
+             http://www.ajmanagement.co.uk/michelle-ryan.htm
+  element: {http://www.example.com/TVGuide}
+            Actor
+  text: Michelle Ryan
+  text: 's Agency
+              
+  text: .
+            
+  element: {http://www.example.com/TVGuide}
+            CastMember
+  element: {http://www.example.com/TVGuide}
+            Character
+  element: {http://www.example.com/TVGuide}
+            Name
+  text: Jamie Mitchell
+  element: {http://www.example.com/TVGuide}
+            Description
+  text: 
+              Jamie's a bit of a heartthrob (who could resist that 
+              little-boy-lost look?) but until 
+  element: {http://www.example.com/TVGuide}
+            Character
+  text: Janine 
+              Butcher
+  text:  came along he'd steered clear of girls.
+            
+  element: {http://www.example.com/TVGuide}
+            Actor
+  element: {http://www.example.com/TVGuide}
+            Name
+  text: Jack Ryder
+  element: {http://www.example.com/TVGuide}
+            Description
+  text: 
+              Won Best Newcomer for 
+  element: {http://www.example.com/TVGuide}
+            Character
+  text: Jamie Mitchell
+  text: 
+              in the 1999 TV awards.
+            
+  element: {http://www.example.com/TVGuide}
+            CastMember
+  element: {http://www.example.com/TVGuide}
+            Character
+  element: {http://www.example.com/TVGuide}
+            Name
+  text: Sonia Jackson
+  element: {http://www.example.com/TVGuide}
+            Description
+  text: 
+              Amongst the Jackson crowd 
+  element: {http://www.example.com/TVGuide}
+            Character
+  text: Sonia
+  text:  has 
+              always been the one with her head screwed on right.
+            
+  element: {http://www.example.com/TVGuide}
+            Actor
+  element: {http://www.example.com/TVGuide}
+            Name
+  text: Natalie Cassidy
+  element: {http://www.example.com/TVGuide}
+            Description
+  text: 
+              Started training at The Anna Scher Theatre when she was 
+              eight years old.
+            
+  element: {http://www.example.com/TVGuide}
+            Writers
+  element: {http://www.example.com/TVGuide}
+            Writer
+  element: {http://www.example.com/TVGuide}
+            Name
+  text: Nick Saltrese
+  element: {http://www.example.com/TVGuide}
+            Writer
+  element: {http://www.example.com/TVGuide}
+            Name
+  text: Julie Wassmer
+  element: {http://www.example.com/TVGuide}
+            Director
+  element: {http://www.example.com/TVGuide}
+            Name
+  text: Stewart Edwards
+  element: {http://www.example.com/TVGuide}
+            Producer
+  element: {http://www.example.com/TVGuide}
+            Name
+  text: Emma Turner
+  element: {http://www.example.com/TVGuide}
+            Program
+  element: {http://www.example.com/TVGuide}
+            Start
+  text: 2001-07-05T20:00:00
+  element: {http://www.example.com/TVGuide}
+            Duration
+  text: PT45M
+  element: {http://www.example.com/TVGuide}
+            Series
+  element: {http://www.example.com/TVGuide}
+            Title
+  text: Get Real with Casualty
+  element: {http://www.example.com/TVGuide}
+            Program
+  element: {http://www.example.com/TVGuide}
+            Start
+  text: 2001-07-05T20:45:00
+  element: {http://www.example.com/TVGuide}
+            Duration
+  text: PT45M
+  element: {http://www.example.com/TVGuide}
+            Series
+  text: Lottery
+  element: {http://www.example.com/TVGuide}
+            Title
+  element: {http://www.example.com/TVGuide}
+            Program
+  element: {http://www.example.com/TVGuide}
+            Start
+  text: 2001-07-05T21:30:00
+  element: {http://www.example.com/TVGuide}
+            Duration
+  text: PT1H
+  element: {http://www.example.com/TVGuide}
+            Series
+  text: Panorama
+  element: {http://www.example.com/TVGuide}
+            Title
+  element: {http://www.example.com/TVGuide}
+            Channel
+  element: {http://www.example.com/TVGuide}
+            Name
+  text: BBC2
+  element: {http://www.example.com/TVGuide}
+            Program
+  element: {http://www.example.com/TVGuide}
+            Start
+  text: 2001-07-05T19:00:00
+  element: {http://www.example.com/TVGuide}
+            Duration
+  text: PT1H
+  element: {http://www.example.com/TVGuide}
+            Series
+  text: Snooker
+  element: {http://www.example.com/TVGuide}
+            Title
+  element: {http://www.example.com/TVGuide}
+            Program
+  element: {http://www.example.com/TVGuide}
+            Start
+  text: 2001-07-05T20:00:00
+  element: {http://www.example.com/TVGuide}
+            Duration
+  text: PT1H
+  element: {http://www.example.com/TVGuide}
+            Series
+  text: HomeFront
+  element: {http://www.example.com/TVGuide}
+            Title
+  element: {http://www.example.com/TVGuide}
+            Program
+  element: {http://www.example.com/TVGuide}
+            Start
+  text: 2001-07-05T21:00:00
+  element: {http://www.example.com/TVGuide}
+            Duration
+  text: PT50M
+  element: {http://www.example.com/TVGuide}
+            Series
+  text: WildAfrica
+  element: {http://www.example.com/TVGuide}
+            Title
+  element: {http://www.example.com/TVGuide}
+            Program
+  attribute: {}
+              flag:
+             interesting
+  element: {http://www.example.com/TVGuide}
+            Start
+  text: 2001-07-05T21:50:00
+  element: {http://www.example.com/TVGuide}
+            Duration
+  text: PT40M
+  element: {http://www.example.com/TVGuide}
+            Series
+  text: Taboo
+  element: {http://www.example.com/TVGuide}
+            Title
+  text: Nakedness
+  element: {http://www.example.com/TVGuide}
+            Channel
+  element: {http://www.example.com/TVGuide}
+            Name
+  text: ITV
+  element: {http://www.example.com/TVGuide}
+            Program
+  element: {http://www.example.com/TVGuide}
+            Start
+  text: 2001-07-05T19:00:00
+  element: {http://www.example.com/TVGuide}
+            Duration
+  text: PT30M
+  element: {http://www.example.com/TVGuide}
+            Series
+  text: Emmerdale
+  element: {http://www.example.com/TVGuide}
+            Title
+  element: {http://www.example.com/TVGuide}
+            Program
+  element: {http://www.example.com/TVGuide}
+            Start
+  text: 2001-07-05T19:30:00
+  element: {http://www.example.com/TVGuide}
+            Duration
+  text: PT30M
+  element: {http://www.example.com/TVGuide}
+            Series
+  text: CoronationStreet
+  element: {http://www.example.com/TVGuide}
+            Title
+  element: {http://www.example.com/TVGuide}
+            Program
+  element: {http://www.example.com/TVGuide}
+            Start
+  text: 2001-07-05T20:00:00
+  element: {http://www.example.com/TVGuide}
+            Duration
+  text: PT1H
+  element: {http://www.example.com/TVGuide}
+            Series
+  text: Millionaire
+  element: {http://www.example.com/TVGuide}
+            Title
+  element: {http://www.example.com/TVGuide}
+            Program
+  element: {http://www.example.com/TVGuide}
+            Start
+  text: 2001-07-05T21:00:00
+  element: {http://www.example.com/TVGuide}
+            Duration
+  text: PT2H
+  element: {http://www.example.com/TVGuide}
+            Series
+  element: {http://www.example.com/TVGuide}
+            Title
+  text: Hot Money
+  element: {http://www.example.com/TVGuide}
+            Channel
+  element: {http://www.example.com/TVGuide}
+            Name
+  text: Channel 4
+  element: {http://www.example.com/TVGuide}
+            Program
+  element: {http://www.example.com/TVGuide}
+            Start
+  text: 2001-07-05T19:00:00
+  element: {http://www.example.com/TVGuide}
+            Duration
+  text: PT55M
+  element: {http://www.example.com/TVGuide}
+            Series
+  text: Channel4News
+  element: {http://www.example.com/TVGuide}
+            Title
+  element: {http://www.example.com/TVGuide}
+            Program
+  element: {http://www.example.com/TVGuide}
+            Start
+  text: 2001-07-05T19:55:00
+  element: {http://www.example.com/TVGuide}
+            Duration
+  text: PT5M
+  element: {http://www.example.com/TVGuide}
+            Series
+  text: SlotArt
+  element: {http://www.example.com/TVGuide}
+            Title
+  element: {http://www.example.com/TVGuide}
+            Program
+  element: {http://www.example.com/TVGuide}
+            Start
+  text: 2001-07-05T20:00:00
+  element: {http://www.example.com/TVGuide}
+            Duration
+  text: PT30M
+  element: {http://www.example.com/TVGuide}
+            Series
+  text: Brookside
+  element: {http://www.example.com/TVGuide}
+            Title
+  element: {http://www.example.com/TVGuide}
+            Program
+  element: {http://www.example.com/TVGuide}
+            Start
+  text: 2001-07-05T20:30:00
+  element: {http://www.example.com/TVGuide}
+            Duration
+  text: PT30M
+  element: {http://www.example.com/TVGuide}
+            Series
+  text: Brookside
+  element: {http://www.example.com/TVGuide}
+            Title
+  element: {http://www.example.com/TVGuide}
+            Program
+  element: {http://www.example.com/TVGuide}
+            Start
+  text: 2001-07-05T21:00:00
+  element: {http://www.example.com/TVGuide}
+            Duration
+  text: PT1H
+  element: {http://www.example.com/TVGuide}
+            Series
+  text: Swallow
+  element: {http://www.example.com/TVGuide}
+            Title
+  element: {http://www.example.com/TVGuide}
+            Program
+  attribute: {}
+              flag:
+             favorite
+  element: {http://www.example.com/TVGuide}
+            Start
+  text: 2001-07-05T22:00:00
+  element: {http://www.example.com/TVGuide}
+            Duration
+  text: PT1H
+  element: {http://www.example.com/TVGuide}
+            Series
+  text: AllyMcBeal
+  element: {http://www.example.com/TVGuide}
+            Title
+  element: {http://www.example.com/TVGuide}
+            Channel
+  element: {http://www.example.com/TVGuide}
+            Name
+  text: Channel 5
+  element: {http://www.example.com/TVGuide}
+            Program
+  element: {http://www.example.com/TVGuide}
+            Start
+  text: 2001-07-05T19:00:00
+  element: {http://www.example.com/TVGuide}
+            Duration
+  text: PT30M
+  element: {http://www.example.com/TVGuide}
+            Series
+  text: MovieChartShow
+  element: {http://www.example.com/TVGuide}
+            Title
+  element: {http://www.example.com/TVGuide}
+            Program
+  element: {http://www.example.com/TVGuide}
+            Start
+  text: 2001-07-05T19:30:00
+  element: {http://www.example.com/TVGuide}
+            Duration
+  text: PT30M
+  element: {http://www.example.com/TVGuide}
+            Series
+  text: FiveNews
+  element: {http://www.example.com/TVGuide}
+            Title
+  element: {http://www.example.com/TVGuide}
+            Program
+  element: {http://www.example.com/TVGuide}
+            Start
+  text: 2001-07-05T20:00:00
+  element: {http://www.example.com/TVGuide}
+            Duration
+  text: PT1H
+  element: {http://www.example.com/TVGuide}
+            Series
+  element: {http://www.example.com/TVGuide}
+            Title
+  text: The World's Worst Drivers Caught On Tape
+  element: {http://www.example.com/TVGuide}
+            Program
+  element: {http://www.example.com/TVGuide}
+            Start
+  text: 2001-07-05T21:00:00
+  element: {http://www.example.com/TVGuide}
+            Duration
+  text: PT1H55M
+  element: {http://www.example.com/TVGuide}
+            Series
+  element: {http://www.example.com/TVGuide}
+            Title
+  text: Black and White
+  element: {http://www.example.com/TVGuide}
+            Channel
+  element: {http://www.example.com/TVGuide}
+            Name
+  text: Sky One
+  element: {http://www.example.com/TVGuide}
+            Program
+  element: {http://www.example.com/TVGuide}
+            Start
+  text: 2001-07-05T19:00:00
+  element: {http://www.example.com/TVGuide}
+            Duration
+  text: PT30M
+  element: {http://www.example.com/TVGuide}
+            Series
+  text: Simpsons
+  element: {http://www.example.com/TVGuide}
+            Title
+  element: {http://www.example.com/TVGuide}
+            Program
+  element: {http://www.example.com/TVGuide}
+            Start
+  text: 2001-07-05T19:30:00
+  element: {http://www.example.com/TVGuide}
+            Duration
+  text: PT30M
+  element: {http://www.example.com/TVGuide}
+            Series
+  text: Simpsons
+  element: {http://www.example.com/TVGuide}
+            Title
+  element: {http://www.example.com/TVGuide}
+            Program
+  attribute: {}
+              rating:
+             8
+  element: {http://www.example.com/TVGuide}
+            Start
+  text: 2001-07-05T20:00:00
+  element: {http://www.example.com/TVGuide}
+            Duration
+  text: PT1H
+  element: {http://www.example.com/TVGuide}
+            Series
+  text: StarTrekVoyager
+  element: {http://www.example.com/TVGuide}
+            Title
+  text: Renaissance Man
+  element: {http://www.example.com/TVGuide}
+            Program
+  element: {http://www.example.com/TVGuide}
+            Start
+  text: 2001-07-05T21:00:00
+  element: {http://www.example.com/TVGuide}
+            Duration
+  text: PT1H
+  element: {http://www.example.com/TVGuide}
+            Series
+  text: DarkAngel
+  element: {http://www.example.com/TVGuide}
+            Title
+  element: {http://www.example.com/TVGuide}
+            Program
+  attribute: {}
+              flag:
+             favorite
+  element: {http://www.example.com/TVGuide}
+            Start
+  text: 2001-07-05T22:00:00
+  element: {http://www.example.com/TVGuide}
+            Duration
+  text: PT1H
+  element: {http://www.example.com/TVGuide}
+            Series
+  text: StarTrekNextGeneration
+  element: {http://www.example.com/TVGuide}
+            Title
+  text: The Inner Light

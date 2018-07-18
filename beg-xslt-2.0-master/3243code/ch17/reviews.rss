@@ -1,0 +1,77 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+         xmlns:rss="http://purl.org/rss/1.0/"
+         xmlns:dc="http://purl.org/dc/elements/1.1/"
+         xmlns:sy="http://purl.org/rss/modules/syndication/"
+         xmlns:rev="http://www.example.com/reviews">
+
+<rss:channel rdf:about="http://www.example.com/reviews/reviews.rss">
+
+  <rss:title>TV Reviews</rss:title>
+  <rss:link>http://www.example.com/reviews/</rss:link>
+  <rss:description>
+    Reviews of TV programs showing in the next 24 hours.
+  </rss:description>
+
+  <sy:updatePeriod>daily</sy:updatePeriod>
+
+  <rss:items>
+    <rdf:Seq>
+      <rdf:li rdf:resource="http://www.example.com/reviews/2571.html" />
+      <rdf:li rdf:resource="http://www.example.com/reviews/85674.html" />
+      <rdf:li rdf:resource="http://www.example.com/reviews/4328.html" />
+      <rdf:li rdf:resource="http://www.example.com/reviews/3219.html" />
+    </rdf:Seq>
+  </rss:items>
+
+</rss:channel>
+
+<rss:item rdf:about="http://www.example.com/reviews/2571.html">
+  <rss:title>EastEnders: They're Mad About the Boy</rss:title>
+  <rss:link>http://www.example.com/reviews/2571.html</rss:link>
+  <rss:description>
+    Jamie Mitchell has never been so popular.
+  </rss:description>
+  <dc:creator>Georgina Holland (george@reviews.example.com)</dc:creator>
+  <dc:date>2001-07-05</dc:date>
+  <dc:rights>Copyright &#169; 2001 Example Reviews Plc.</dc:rights>
+  <rev:rating>5</rev:rating>
+</rss:item>
+
+<rss:item rdf:about="http://www.example.com/reviews/85674.html">
+  <rss:title>Panorama: Current Issues</rss:title>
+  <rss:link>http://www.example.com/reviews/85674.html</rss:link>
+  <rss:description>
+    Today's Panorama tackles the issue of pet cloning.
+  </rss:description>
+  <dc:creator>Christian Taylor (chris@reviews.example.com)</dc:creator>
+  <dc:date>2001-07-05</dc:date>
+  <dc:rights>Copyright &#169; 2001 Example Reviews Plc.</dc:rights>
+  <rev:rating>6</rev:rating>
+</rss:item>
+
+<rss:item rdf:about="http://www.example.com/reviews/4328.html">
+  <rss:title>Taboo: Show Me More</rss:title>
+  <rss:link>http://www.example.com/reviews/4328.html</rss:link>
+  <rss:description>
+    High-brow documentary meets pornography.
+  </rss:description>
+  <dc:creator>Harriet Johnson (harry@reviews.example.com)</dc:creator>
+  <dc:date>2001-07-05</dc:date>
+  <dc:rights>Copyright &#169; 2001 Example Reviews Plc.</dc:rights>
+  <rev:rating>6</rev:rating>
+</rss:item>
+
+<rss:item rdf:about="http://www.example.com/reviews/3219.html">
+  <rss:title>Hot Money: Scorching!</rss:title>
+  <rss:link>http://www.example.com/reviews/3219.html</rss:link>
+  <rss:description>
+    ITV's drama season continues.
+  </rss:description>
+  <dc:creator>Georgina Holland (george@reviews.example.com)</dc:creator>
+  <dc:date>2001-07-05</dc:date>
+  <dc:rights>Copyright &#169; 2001 Example Reviews Plc.</dc:rights>
+  <rev:rating>8</rev:rating>
+</rss:item>
+
+</rdf:RDF>

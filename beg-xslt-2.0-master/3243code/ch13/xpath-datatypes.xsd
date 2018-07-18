@@ -1,0 +1,41 @@
+<?xml version='1.0'?>
+
+<!--
+This document provides an XML Schema for xdt:dayTimeDuration and
+xdt:yearMonthDuration.
+
+The other xdt: types are not described here, since xdt:untyped and
+xdt:anyAtomicType are special types that cannot be properly defined
+using XML Schema itself, and since xdt:untypedAtomic should not be
+used for validation, but only used for unvalidated elements and
+attributes.
+-->
+
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+	   targetNamespace="http://www.w3.org/2005/02/xpath-datatypes"
+	   xmlns:xdt="http://www.w3.org/2005/02/xpath-datatypes"
+	   elementFormDefault="qualified"
+	   blockDefault="#all"
+	   xml:lang="en">
+
+<xs:simpleType name='dayTimeDuration'>
+  <xs:annotation>
+    <xs:documentation
+	source="http://www.w3.org/TR/xpath-datamodel/#xdt-dayTimeDuration"/>
+  </xs:annotation>
+  <xs:restriction base='xs:duration'>
+    <xs:pattern value="[\-]?P([0-9]+D(T([0-9]+(H([0-9]+(M([0-9]+(\.[0-9]*)?S|\.[0-9]+S)?|(\.[0-9]*)?S)|(\.[0-9]*)?S)?|M([0-9]+(\.[0-9]*)?S|\.[0-9]+S)?|(\.[0-9]*)?S)|\.[0-9]+S))?|T([0-9]+(H([0-9]+(M([0-9]+(\.[0-9]*)?S|\.[0-9]+S)?|(\.[0-9]*)?S)|(\.[0-9]*)?S)?|M([0-9]+(\.[0-9]*)?S|\.[0-9]+S)?|(\.[0-9]*)?S)|\.[0-9]+S))"/>
+  </xs:restriction>
+</xs:simpleType>
+
+<xs:simpleType name='yearMonthDuration'>
+  <xs:annotation>
+    <xs:documentation
+	source="http://www.w3.org/TR/xpath-datamodel/#xdt-yearMonthDuration"/>
+  </xs:annotation>
+  <xs:restriction base='xs:duration'>
+    <xs:pattern value="[\-]?P[0-9]+(Y([0-9]+M)?|M)"/>
+  </xs:restriction>
+</xs:simpleType>
+
+</xs:schema>

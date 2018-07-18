@@ -1,0 +1,2434 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  Copyright 1999-2004 The Apache Software Foundation
+
+  Licensed under the Apache License, Version 2.0 (the "License");
+  you may not use this file except in compliance with the License.
+  You may obtain a copy of the License at
+
+      http://www.apache.org/licenses/LICENSE-2.0
+
+  Unless required by applicable law or agreed to in writing, software
+  distributed under the License is distributed on an "AS IS" BASIS,
+  WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  See the License for the specific language governing permissions and
+  limitations under the License.
+--><!-- CVS $Id: cocoon.xconf 76060 2004-11-16 23:46:46Z antonio $ --><cocoon version="2.1">
+
+<!--+
+    |  This is the Apache Cocoon configuration file. This is the place
+    |  where you configure the components that Cocoon uses internally (stuff
+    |  like the cache) or handles to the pipeline components
+    |  (stuff like XML parsers or XSLT processors).
+    +-->
+
+<!-- =========================== Sitemap =============================== -->
+
+  <!--+
+      | New implementation of the sitemap. It is interpreted, so load times
+      | are super-fast, and request processing is slightly faster than with
+      | the compiled engine thanks to the HotSpot VM.
+      |
+      | Reloading of the sitemap:
+      |   The check-reload attribute determines if the sitemap is to be
+      |   reloaded on change.
+      |   Set to "no", the sitemap is generated once at startup.
+      |   Set to "yes", the sitemap is regenerated if it changes.
+      |
+      | For development environment, set the check-reload to yes.
+      | For production environment, it is advisable to set check-reload to no.
+      +-->
+  <sitemap check-reload="yes" file="context://sitemap.xmap" logger="sitemap"/>
+
+<!-- ========================= Sitemap Flowscript ========================== -->
+
+  <!--+
+      |  The <flow-interpreters> element is used to describe the flowscript
+      |  engines usedd by the current instance.
+      |
+      |  The attributes recognized by the <flow-interpreters> element are:
+      |
+      |    default (string value):
+      |
+      |       the default interpreted language assumed for <map:script>
+      |       elements which do not specify a "language" attribute. If not
+      |       present, the first language that's described within the
+      |       <flow-interpreters> element is assumed to be the default
+      |       language.
+      |
+      |  Within <flow-interpreters> only <component-instance> elements are
+      |  recognized. The attributes recognized by this element are "name"
+      |  and "class". "name" specifies the name of a scripting language,
+      |  and "class" defines the Java class that implements it. See
+      |  org.apache.cocoon.components.flow.Interpreter for the Cocoon
+      |  interface with an scripting language interpreter.
+      |
+      |  A <component-instance> element contains as subelements the
+      |  following elements:
+      |
+      |    reload-scripts (boolean value, default false):
+      |       whether to check if the scripts source files are modified.
+      |       Checking for modification is an expensive operation, so leave
+      |       it disabled in a production environment. If not present it is
+      |       assumed to be "false". When "true" *all* script files are
+      |       checked for modification on each function invocation done using
+      |       <map:call function="...">, but not more frequent than the value
+      |       of "check-time" (see below).
+      |
+      |    check-time (long value, default 1000):
+      |       time in miliseconds between the checks for the last modification
+      |       date of script files.
+      |
+      |    debugger (boolean value, default false):
+      |       whether support for the JavaScript debugger should be enabled in
+      |       the control flow.
+      +-->
+  <flow-interpreters default="javascript" logger="flow">
+    <!-- FOM (Flow Object Model) -->
+    <component-instance class="org.apache.cocoon.components.flow.javascript.fom.FOM_JavaScriptInterpreter" name="javascript">
+      <load-on-startup>resource://org/apache/cocoon/components/flow/javascript/fom/fom_system.js</load-on-startup>
+      <reload-scripts>true</reload-scripts>
+      <check-time>4000</check-time>
+      <!--  <debugger>enabled</debugger> -->  <!-- JavaScript Debugger support -->
+    </component-instance>
+  <!--..... Start configuration from 'intercepted-flow' -->&#13;
+
+
+    <!-- Intercepted, FOM-aware JavaScript Interpreter -->
+    <component-instance class="org.apache.cocoon.components.flow.javascript.fom.AO_FOM_JavaScriptInterpreter" name="intercepted-javascript">
+      <load-on-startup>resource://org/apache/cocoon/components/flow/javascript/fom/ao_fom_system.js</load-on-startup>
+      <reload-scripts>true</reload-scripts>
+      <check-time>40</check-time>
+      <!--  <debugger>enabled</debugger> --> <!-- JavaScript Debugger support -->
+      
+      <!-- ************* interception support ***************** -->
+        <!-- on/off switch -->
+        <enable-interception>true</enable-interception>
+        <!-- list of all functions that stop flow execution -->
+        <cont-creating-functions>
+          <function>cocoon.sendPageAndWait()</function>
+          <function>woody.send()</function>
+        </cont-creating-functions>
+        <!-- the result script is copied in the same directory as the basescript 
+             if the file protocol is used to resolve the script 
+             
+             WARNING:
+             the result script is streamed into the same directory as the basescript
+             with the only difference that "_intercepted.js" is appended. So make
+             sure that you don't create any files with the name 
+             [yourPath]/[yourBasescript-name]_intercepted.js which will be overwritten
+             
+         -->
+        <serialize-result-script>false</serialize-result-script>
+    </component-instance>   
+
+<!--..... End configuration from 'intercepted-flow' -->&#13;
+<!--..... Start configuration from 'apples-processor' -->&#13;
+
+
+  <component-instance class="org.apache.cocoon.components.flow.apples.ApplesProcessor" logger="apples" name="apples">
+  <!--
+      <load-on-startup>resource://org/apache/cocoon/components/flow/javascript/fom/fom_system.js</load-on-startup>
+      <reload-scripts>true</reload-scripts>
+      <check-time>4000</check-time>
+      -->
+  </component-instance>
+
+<!--..... End configuration from 'apples-processor' -->&#13;
+<!--..... Start configuration from 'javaflow' -->&#13;
+
+  <component-instance class="org.apache.cocoon.components.flow.java.JavaInterpreter" name="java"/>
+<!--..... End configuration from 'javaflow' -->&#13;
+</flow-interpreters>
+
+  <!--+
+      | Configuration for the continuations manager.
+      |
+      | This section specifies the default time-to-live of continuations
+      | in miliseconds using the "time-to-live" attribute of
+      | the <continuations-manager> element.
+      |
+      | The <expirations-check> element specifies different policies for
+      | expiring continuations. Currently only the "periodic" type is
+      | supported.
+      +-->
+  <continuations-manager logger="flow.manager" time-to-live="3600000">
+    <expirations-check type="periodic">
+      <offset>180000</offset>
+      <period>180000</period>
+    </expirations-check>
+  </continuations-manager>
+
+<!-- =================== Sitemap Input/Output Modules ====================== -->
+
+  <!--+
+      | InputModules are a replacement to reading values directly
+      | e.g. from request parameters. By using this abstraction and
+      | indirection, other components can be more generic and changes
+      | to the application logic are easier.
+      |
+      | A number of components already use InputModules: the sitemap processor,
+      | flow, some matchers, the linkrewriting transformer, database actions
+      | and more.
+      |
+      | For example the sitemap processor allows to obtain a value
+      | named "foo" from an the InputModule for request parameters by
+      | writing {request-param:foo} wherever a sitemap variable is
+      | allowed.
+      |
+      | Some InputModules need the help of other InputModules to
+      | obtain values and only apply a function to the obtained value
+      | or change the name of the attribute. These modules usually
+      | carry "Meta" in their name. An example is the ChainMetaModule
+      | which tries several other modules in turn until a non-null
+      | value is obtained or all modules are tied.
+	  |
+      | For details and optional configuration parameters refer to the
+      | accompanying javadocs.
+      +-->
+  <input-modules>
+    <component-instance class="org.apache.cocoon.components.modules.input.URLEncodeModule" logger="core.modules.input" name="url-encode">
+      <encoding>UTF-8</encoding>
+    </component-instance>
+    <component-instance class="org.apache.cocoon.components.modules.input.URLDecodeModule" logger="core.modules.input" name="url-decode">
+      <encoding>UTF-8</encoding>
+    </component-instance>
+    <component-instance class="org.apache.cocoon.components.modules.input.GlobalInputModule" logger="core.modules.input" name="global"/>
+    <component-instance class="org.apache.cocoon.components.modules.input.RequestModule" logger="core.modules.input" name="request"/>
+    <component-instance class="org.apache.cocoon.components.modules.input.BaseLinkModule" logger="core.modules.input" name="baselink"/>
+    <component-instance class="org.apache.cocoon.components.modules.input.SessionModule" logger="core.modules.input" name="session"/>
+    <component-instance class="org.apache.cocoon.components.modules.input.RequestParameterModule" logger="core.modules.input" name="request-param"/>
+    <component-instance class="org.apache.cocoon.components.modules.input.RawRequestParameterModule" logger="core.modules.input" name="raw-request-param"/>
+    <component-instance class="org.apache.cocoon.components.modules.input.RequestAttributeModule" logger="core.modules.input" name="request-attr"/>
+    <component-instance class="org.apache.cocoon.components.modules.input.HeaderAttributeModule" logger="core.modules.input" name="request-header"/>
+    <component-instance class="org.apache.cocoon.components.modules.input.SessionAttributeModule" logger="core.modules.input" name="session-attr"/>
+    <component-instance class="org.apache.cocoon.components.modules.input.SystemPropertyModule" logger="core.modules.input" name="system-property"/>
+    <component-instance class="org.apache.cocoon.components.modules.input.StringConstantModule" logger="core.modules.input" name="constant"/>
+    <component-instance class="org.apache.cocoon.components.modules.input.RandomNumberModule" logger="core.modules.input" name="random"/>
+    <component-instance class="org.apache.cocoon.components.modules.input.DigestMetaModule" logger="core.modules.input" name="digest"/>
+    <component-instance class="org.apache.cocoon.components.modules.input.DateInputModule" logger="core.modules.input" name="date">
+      <!-- <format>EEE, d MMM yyyy HH:mm:ss Z</format> -->
+      <!--Eg: Mon, 28 Oct 2002 03:08:49 +1100 -->
+    </component-instance>
+    <component-instance class="org.apache.cocoon.components.modules.input.NullInputModule" logger="core.modules.input" name="nullinput"/>
+    <component-instance class="org.apache.cocoon.components.modules.input.RealPathModule" logger="core.modules.input" name="realpath"/>
+    <component-instance class="org.apache.cocoon.components.modules.input.NamingInputModule" logger="core.modules.input" name="naming">
+    </component-instance>
+    <component-instance class="org.apache.cocoon.components.modules.input.PropertiesFileModule" logger="core.modules.input" name="cocoon-properties">
+      <file src="resource://org/apache/cocoon/cocoon.properties"/>
+    </component-instance>
+    <component-instance class="org.apache.cocoon.components.modules.input.FlowAttributeModule" logger="core.modules.input" name="flow-attribute"/>
+    <component-instance class="org.apache.cocoon.components.modules.input.FlowContinuationModule" logger="core.modules.input" name="flow-continuation"/>
+
+    <component-instance class="org.apache.cocoon.components.modules.input.XMLMetaModule" logger="core.modules.input" name="xmlmeta"/>
+    <component-instance class="org.apache.cocoon.components.modules.input.MapMetaModule" logger="core.modules.input" name="mapmeta"/>
+    <component-instance class="org.apache.cocoon.components.modules.input.DateMetaInputModule" logger="core.modules.input" name="datemeta"/>
+    <component-instance class="org.apache.cocoon.components.modules.input.JXPathMetaModule" logger="core.modules.input" name="jxpath"/>
+    <component-instance class="org.apache.cocoon.components.modules.input.SimpleMappingMetaModule" logger="core.modules.input" name="simplemap"/>
+    <component-instance class="org.apache.cocoon.components.modules.input.LocateResource" logger="core.modules.input" name="locate"/>
+    <component-instance class="org.apache.cocoon.components.modules.input.ChainMetaModule" logger="core.modules.input" name="chain">
+      <input-module name="request-param"/>
+      <input-module name="request-attr"/>
+      <input-module name="session-attr"/>
+      <input-module name="defaults"/>
+    </component-instance>
+
+    <!-- The 'defaults', 'myxml' and 'slashdot' input modules are used
+         in the samples -->
+    <component-instance class="org.apache.cocoon.components.modules.input.DefaultsModule" logger="core.modules.input" name="defaults">
+      <values>
+        <skin>defaultSkin</skin>
+        <base-url>http://localhost:8080/cocoon</base-url>
+      </values>
+    </component-instance>
+
+    <component-instance class="org.apache.cocoon.components.modules.input.XMLFileModule" logger="core.modules.xml" name="myxml">
+      <file src="context://samples/modules/forrestconf.xml"/>
+    </component-instance>
+    <component-instance class="org.apache.cocoon.components.modules.input.XMLFileModule" logger="core.modules.xml" name="slashdot">
+      <file src="http://slashdot.org/slashdot.rss"/>
+    </component-instance>
+
+  <!--..... Start configuration from 'db-modules-input' -->&#13;
+
+
+      <component-instance class="org.apache.cocoon.components.modules.input.CollectionMetaModule" logger="core.modules.input" name="collection"/>
+
+<!--..... End configuration from 'db-modules-input' -->&#13;
+<!--..... Start configuration from 'modules' -->&#13;
+
+
+      <!-- This input module provides access to the information of a session context -->
+      <component-instance class="org.apache.cocoon.webapps.session.components.ContextInputModule" logger="core.modules.input" name="session-context"/>
+
+<!--..... End configuration from 'modules' -->&#13;
+<!--..... Start configuration from 'linkrewriter' -->&#13;
+
+
+      <!-- For the sitedemo sample -->
+      <component-instance class="org.apache.cocoon.components.modules.input.XMLFileModule" logger="core.modules.xml" name="linkmap">
+        <file src="cocoon://samples/linkrewriter/sitedemo/linkmap"/>
+        <!-- Shouldn't this be the default? -->
+        <reloadable>true</reloadable>
+      </component-instance>
+       <component-instance class="org.apache.cocoon.components.modules.input.SimpleMappingMetaModule" logger="core.modules.mapper" name="site">
+         <input-module name="linkmap"/>
+         <prefix>/site/</prefix>
+         <suffix>/@href</suffix>
+       </component-instance>
+
+       <!-- For the bookdemo sample -->
+       <component-instance class="org.apache.cocoon.components.modules.input.XMLFileModule" logger="core.modules.xml" name="book-raw">
+        <!-- Shouldn't this be the default? -->
+        <file src="cocoon://samples/linkrewriter/bookdemo/linkmap"/>
+        <reloadable>true</reloadable>
+      </component-instance>
+       <component-instance class="org.apache.cocoon.components.modules.input.SimpleMappingMetaModule" logger="core.modules.mapper" name="book">
+         <input-module name="book-raw"/>
+       </component-instance>
+ 
+<!--..... End configuration from 'linkrewriter' -->&#13;
+<!--..... Start configuration from 'slide-module' -->&#13;
+
+
+  <component-instance class="org.apache.cocoon.components.modules.input.XMLFileModule" logger="core.modules.slide" name="slide">
+    <reloadable>false</reloadable>
+    <cacheable>false</cacheable>
+    <file src="context://WEB-INF/slide.xconf"/>
+  </component-instance>
+
+  <component-instance class="org.apache.cocoon.components.modules.input.SimpleMappingMetaModule" logger="core.modules.slide-config" name="slide-config">
+    <prefix>/slide/namespace[@name='cocoon']/configuration</prefix>
+    <input-module name="slide"/>
+  </component-instance>
+  
+<!--..... End configuration from 'slide-module' -->&#13;
+<!--..... Start configuration from 'modules' -->&#13;
+
+
+      <component-instance class="org.apache.cocoon.portal.components.modules.input.CopletModule" logger="core.modules.input" name="coplet"/>
+      <component-instance class="org.apache.cocoon.portal.components.modules.input.LayoutModule" logger="core.modules.input" name="portal-layout"/>
+
+<!--..... End configuration from 'modules' -->&#13;
+</input-modules>
+
+  <!--+
+      | OutputModules are companion modules for InputModules.
+      |
+      | The same principles apply here, only that OutputModules allow
+      | writing data to places. Apparently, there are a lot less
+      | places to write to than to read data from, thus there are only
+      | a few OutputModules coming with Apache Cocoon.
+      |
+      | One special feature of OutputModules is, that they expose some
+      | limited transactional behaviour. Hence it does not suffice to
+      | write a value, but it is required to confirm this at the
+      | end. Until then, the value could not be read from the
+      | corresponding InputModule. This behaviour is not enfored but
+      | it should be expected. Omitting a commit or rollback is an
+      | error.
+      |
+      | OutputModules are currently used by flow, a number of actions
+      | and transformers.
+      +-->
+  <output-modules>
+    <component-instance class="org.apache.cocoon.components.modules.output.RequestAttributeOutputModule" logger="core.modules.output" name="request-attr"/>
+    <component-instance class="org.apache.cocoon.components.modules.output.RequestAttributeMap" logger="core.modules.output" name="request-attr-map"/>
+    <component-instance class="org.apache.cocoon.components.modules.output.SessionAttributeOutputModule" logger="core.modules.output" name="session-attr"/>
+  </output-modules>
+
+<!-- ================================= XML ================================ -->
+
+  <!--+
+      | Source Factories
+      |
+      | Each source factory adds a special uri schemes to the system.
+      +-->
+  <source-factories>
+    <component-instance class="org.apache.excalibur.source.impl.ResourceSourceFactory" name="resource"/>
+    <component-instance class="org.apache.cocoon.components.source.impl.ContextSourceFactory" name="context"/>
+    <component-instance class="org.apache.cocoon.components.source.impl.SitemapSourceFactory" name="cocoon"/>
+    <!--+
+        | The "file:" source protocol is modifiable (can be written to) and
+        | traversable (directory structures can be crawled).
+        +-->
+    <component-instance class="org.apache.excalibur.source.impl.FileSourceFactory" name="file"/>
+    <component-instance class="org.apache.cocoon.components.source.impl.PartSourceFactory" name="upload"/>
+    <component-instance class="org.apache.cocoon.components.source.impl.ModuleSourceFactory" name="module"/>
+
+    <!--+
+        | The "*" protocol handles all uri schemes that are not explicitely
+        | specified. This includes all JDK standard protocols.
+        +-->
+    <component-instance class="org.apache.excalibur.source.impl.URLSourceFactory" name="*"/>
+  <!--..... Start configuration from 'blob' -->&#13;
+
+
+    <!-- blob pseudo protocol -->
+    <component-instance class="org.apache.cocoon.components.source.impl.BlobSourceFactory" name="blob"/>
+
+<!--..... End configuration from 'blob' -->&#13;
+<!--..... Start configuration from 'repository-source' -->&#13;
+
+
+    <!-- pseudo protocol for the repository source wrapper -->
+    <component-instance class="org.apache.cocoon.components.source.impl.RepositorySourceFactory" name="repository"/>
+    
+<!--..... End configuration from 'repository-source' -->&#13;
+<!--..... Start configuration from 'caching-source' -->&#13;
+
+
+    <!--+
+        | Caching source protocol.
+        | This protocol extension implements a proxy-like source
+        | that can cache the contents of its delegate source.
+        | 
+        | The uri syntax is as follows:
+        | cached:subprotocol:/path[?cocoon:cache-expires=60][&cache-name=main]
+        | 
+        | Where: 
+        | - 'cached' is the caching source protocol scheme name as defined below.
+        | - 'subprotcol:/path' identifies the source to get the actual contents from
+        |   eg. http://cocoon.apache.org/doco.html?version=1.2
+        | - optional querystring parameters that start with 'cocoon:' represent special 
+        |   instructions to pass to the implementation.
+        |
+        | The protocol can be parametrized as follows:
+        | - 'async' (false). When this is set to true cached source contents are updated
+        |   in the background.
+        | - 'cache-role' (org.apache.cocoon.caching.Cache). Use this if you want to use
+        |   a Cache other than the default one.
+        | - 'refresher-role' (org.apache.cocoon.components.source.impl.Refresher). Use this
+        |   if you wish to use a Refresher other than the default one.
+        |   A Refresher is used when asynchronic caching is turned on. It is responsible for
+        |   updating the cached contents in the background.
+        | - 'default-expires' (-1). The expires value if it is not specified on the source
+        |    itself. The default value of -1 means to never expire.
+        +-->
+    <component-instance class="org.apache.cocoon.components.source.impl.CachingSourceFactory" logger="core.source.cached" name="cached">
+      <!--
+      <parameter name="async" value="true"/>
+      <parameter name="cache-role" value="org.apache.cocoon.caching.Cache"/>
+      <parameter name="default-expires" value="-1"/>
+      -->
+      <parameter name="refresher-role" value="org.apache.cocoon.components.source.impl.Refresher/Delay"/>
+    </component-instance>
+
+<!--..... End configuration from 'caching-source' -->&#13;
+<!--..... Start configuration from 'xmodule-source' -->&#13;
+
+
+    <!-- xmodule pseudo protocol -->
+    <component-instance class="org.apache.cocoon.components.source.impl.XModuleSourceFactory" name="xmodule"/>
+
+<!--..... End configuration from 'xmodule-source' -->&#13;
+<!--..... Start configuration from 'zip-source' -->&#13;
+
+    
+    <!-- zip pseudo protocol -->
+    <component-instance class="org.apache.cocoon.components.source.impl.ZipSourceFactory" name="zip"/>
+    
+<!--..... End configuration from 'zip-source' -->&#13;
+<!--..... Start configuration from 'slide-source' -->&#13;
+
+    <!-- pseudo protocol for Jakarta Slide repositories -->
+    <component-instance class="org.apache.cocoon.components.source.impl.SlideSourceFactory" logger="slide.source" name="slide"/>
+<!--..... End configuration from 'slide-source' -->&#13;
+<!--..... Start configuration from 'xmldb' -->&#13;
+
+
+    <!-- xmldb pseudo protocol -->
+    <component-instance class="org.apache.cocoon.components.source.impl.XMLDBSourceFactory" name="xmldb">
+      <!--+
+          | Xindice 1.1 XML-RPC driver. See Xindice javadoc for configuration options.
+          +-->
+      <driver class="org.apache.xindice.client.xmldb.DatabaseImpl" type="xindice">
+        <!-- Specifies xindice web application context path.
+             Default is "/xindice/".
+        <service-location>/xindice/</service-location>
+        -->
+
+        <!-- Specifies name of the XML-RPC 'driver' (XML parser) to use.
+             Default is "xerces".
+        <xmlrpc-driver>xerces</xmlrpc-driver>
+        -->
+      </driver>
+
+      <!--+
+          | Xindice 1.1 Embedded driver. See Xindice javadoc for configuration options.
+          +-->
+      <driver class="org.apache.xindice.client.xmldb.DatabaseImpl" type="xindice-embed">
+        <!-- Specifies path to the Xindice configuration file.
+             If missing, buit-in configuration defaults will be used.
+        <configuration>/opt/xindice/config/system.xml</configuration>
+        -->
+
+        <!-- Specifies path to the Xindice DB home directory.
+             Default is `pwd` (current working directory).
+        <db-home>/var/xindice/db</db-home>
+        -->
+
+        <managed>true</managed>
+      </driver>
+
+      <!-- Add here other XML:DB compliant databases' drivers -->
+    </component-instance>
+
+<!--..... End configuration from 'xmldb' -->&#13;
+<!--..... Start configuration from 'qdox' -->&#13;
+
+    <component-instance class="org.apache.cocoon.components.source.impl.QDoxSourceFactory" logger="core.sources.qdox" name="qdox">
+      <include-inheritance value="yes"/>
+
+      <!-- these source-roots must be configured for your system! -->
+      <source-roots group="test-source">
+        <!-- test source-root as mentioned in the qdox block samples.xml file -->
+          <source-root uri="file:///tmp/qdox-test"/>
+          <!-- test source-root for linux (replace the above) -->
+          <!-- <source-root uri="jar:file:///usr/java/j2sdk1.4.2_03/src.zip!"/> -->
+      </source-roots>
+
+      <!-- examples of other source-roots
+      <source-roots group="JDK">
+        <source-root uri="jar:file:///tmp/jdk-src.zip!" />
+      </source-roots>
+      <source-roots group="Avalon">
+        <source-root uri="file://D:/cvs-workspaces/apache/jakarta-avalon/src/java" />
+        <source-root uri="file://D:/cvs-workspaces/apache/jakarta-avalon-logkit/src/java" />
+        <source-root uri="file://D:/cvs-workspaces/apache/jakarta-avalon-excalibur/component/src/java" />
+        <source-root uri="file://D:/cvs-workspaces/apache/jakarta-avalon-excalibur/sourceresolve/src/java" />
+        <source-root uri="file://D:/cvs-workspaces/apache/jakarta-avalon-excalibur/pool/src/java" />
+        <source-root uri="file://D:/cvs-workspaces/apache/jakarta-avalon-excalibur/xmlutil/src/java" />
+      </source-roots>
+      <source-roots group="Cocoon">
+        <source-root uri="file://D:/cvs-workspaces/apache/xml-cocoon2/src/java" />
+        <source-root uri="file://D:/cvs-workspaces/apache/xml-cocoon2/src/deprecated/java" />
+      </source-roots>
+      -->
+
+    </component-instance>
+
+<!--..... End configuration from 'qdox' -->&#13;
+<!--..... Start configuration from 'protocol' -->&#13;
+
+
+    <!-- portal protocol -->
+    <component-instance class="org.apache.cocoon.portal.source.CopletSourceFactory" name="coplet"/>
+<!--..... End configuration from 'protocol' -->&#13;
+<!--..... Start configuration from 'webdav-source' -->&#13;
+
+
+    <!-- pseudo protocol for WebDAV repositories -->
+    <component-instance class="org.apache.cocoon.components.source.impl.WebDAVSourceFactory" name="webdav"/>
+<!--..... End configuration from 'webdav-source' -->&#13;
+</source-factories>
+
+  <!--+
+      | Entity resolution catalogs
+      |
+      | The default catalog is distributed at WEB-INF/entities/catalog
+      | This is the contextual pathname for Cocoon resources.
+      | You can override this path, if necessary, using the "catalog" parameter:
+      |
+      |    <parameter name="catalog" value="WEB-INF/entities/catalog"/>
+      |
+      | However, it is probably desirable to leave this default catalog config
+      | and declare your own local catalogs, which are loaded in addition to
+      | the system catalog.
+      |
+      | There are various ways to do local configuration (see "Entity Catalogs"
+      | documentation). One way is via the CatalogManager.properties file.
+      | As an additional method, you can specify the "local-catalog"
+      | parameter here.
+      |
+      | local-catalog:
+      |   The full filesystem pathname to a single local catalog file.
+      |
+      |  <parameter name="local-catalog" value="/usr/local/sgml/mycatalog"/>
+      |
+      | verbosity:
+      | The level of messages for status/debug (messages go to standard output)
+      | The following messages are provided ...
+      |  0 = none
+      |  1 = ? (... not sure yet)
+      |  2 = 1+, Loading catalog, Resolved public, Resolved system
+      |  3 = 2+, Catalog does not exist, resolvePublic, resolveSystem
+      |  10 = 3+, List all catalog entries when loading a catalog
+      |    (Cocoon also logs the "Resolved public" messages.)
+      |
+      |     <parameter name="verbosity" value="2"/>
+      +-->
+  <entity-resolver logger="core.resolver">
+   <parameter name="catalog" value="WEB-INF/entities/catalog"/>
+   <parameter name="verbosity" value="1"/>
+  </entity-resolver>
+
+  <!--+
+      | XML Parser
+      |
+      | Apache Cocoon requires a JAXP 1.1 parser. The default parser is
+      | org.apache.excalibur.xml.impl.JaxpParser.
+      | Note: If you have problems because your servlet environment uses its
+      | own parser not conforming to JAXP 1.1 try using the alternative
+      | XercesParser instead of the JaxpParser. To activate the XercesParser,
+      | change the class attribute to
+      |   class="org.apache.excalibur.xml.impl.XercesParser"
+      | You will also need to add a system property to your JVM,
+      | probably on the startup of your servlet engine like this:
+      | -Dorg.apache.excalibur.xml.sax.SAXParser=org.apache.excalibur.xml.impl.XercesParser
+      |
+      | Configuration parameters for the JaxpParser (not the XercesParser!):
+      | - validate (boolean, default = false): should the parser validate
+      |     parsed documents?
+      |     Note: XML validation is only being used for the documentation build.
+      |     (If you are going to use it elsewhere, then do so with caution.)
+      |     You really should have validated all of your XML documents already,
+      |     according to their proper DTD or schema. Do not expect Cocoon
+      |     to do it.
+      | - namespace-prefixes (boolean, default = false) : do we want
+      |     namespaces declarations also as 'xmlns:' attributes?
+      |     Note : setting this to true confuses some XSL processors
+      |     (e.g. Saxon).
+      | - stop-on-warning (boolean, default = true) : should the parser
+      |     stop parsing if a warning occurs ?
+      | - stop-on-recoverable-error (boolean, default = true) : should the
+      |     parser stop parsing if a recoverable error occurs ?
+      | - reuse-parsers (boolean, default = true) : do we want to reuse
+      |     parsers or create a new parser for each parse ?
+      |     Note : even if this parameter is true, parsers are not recycled
+      |     in case of parsing errors : some parsers (e.g. Xerces) do not like
+      |     to be reused after failure.
+      | - sax-parser-factory (string, optional) : the name of the
+      |     SAXParserFactory implementation class to be used instead of using
+      |     the standard JAXP mechanism (SAXParserFactory.newInstance()). This
+      |     allows to choose unambiguously the JAXP implementation to be used
+      |     when several of them are available in the classpath.
+      | - document-builder-factory (string, optional) : the name of the
+      |     DocumentBuilderFactory implementation to be used (similar to
+      |     sax-parser-factory for DOM).
+      | - drop-dtd-comments : should comment() events from DTD's be dropped?
+      |     Note: Since this implementation does not support the DeclHandler
+      |     interface anyway, it is quite useless to only have the comments
+      |     from DTD. And the comment events from the internal DTD subset
+      |     would appear in the serialized output again.
+      +-->
+  <xml-parser class="org.apache.excalibur.xml.impl.JaxpParser" logger="core.xml-parser" pool-grow="4" pool-max="32" pool-min="8">
+    <parameter name="validate" value="false"/>
+    <parameter name="namespace-prefixes" value="false"/>
+    <parameter name="stop-on-warning" value="true"/>
+    <parameter name="stop-on-recoverable-error" value="true"/>
+    <parameter name="reuse-parsers" value="false"/>
+    <parameter name="drop-dtd-comments" value="true"/>
+  </xml-parser>
+
+  <!--+
+      | XSLT Processor
+      |
+      | 'incremental-processing' (only works with Xalan) allows the XSLT
+      | processor to start the output of the transformation as soon as possible.
+      | if set to false, the transforer waits until the end of the
+      | transformation to deliver the output.
+      | WARNING: * if you enable incremental-processing, you should be aware of
+      |            the following bug:
+      |            http://issues.apache.org/bugzilla/show_bug.cgi?id=13186
+      |          * incremental-processing creates an additional, non-pooled thread.
+      |          * using incremental-processing does not save memory, the input
+      |            tree will still be build completely.
+      |          * incremental processing is a 'static' thing in Xalan: if you
+      |            enable it on one xslt-processor, enable it on all.
+      +-->
+  <xslt-processor logger="core.xslt-processor">
+     <parameter name="use-store" value="true"/>
+     <parameter name="incremental-processing" value="false"/>
+  </xslt-processor>
+
+  <!--+
+      | XSLT Processor using xsltc from Xalan
+      | For Interpreted Xalan use:
+      | <transformer-factory>org.apache.xalan.processor.TransformerFactoryImpl</transformer-factory>
+      +-->
+  <component class="org.apache.excalibur.xml.xslt.XSLTProcessorImpl" logger="core.xslt-processor" role="org.apache.excalibur.xml.xslt.XSLTProcessor/xsltc">
+     <parameter name="use-store" value="true"/>
+     <parameter name="transformer-factory" value="org.apache.xalan.xsltc.trax.TransformerFactoryImpl"/>
+  </component>
+
+  <!--+
+      | Xalan XSLT Processor
+      +-->
+  <component class="org.apache.excalibur.xml.xslt.XSLTProcessorImpl" logger="core.xslt-processor" role="org.apache.excalibur.xml.xslt.XSLTProcessor/xalan">
+     <parameter name="use-store" value="true"/>
+     <parameter name="incremental-processing" value="false"/>
+     <parameter name="transformer-factory" value="org.apache.xalan.processor.TransformerFactoryImpl"/>
+  </component>
+
+  <!--+
+      | Saxon XSLT Processor
+      | For old (6.5.2) Saxon use:
+      |  <parameter name="transformer-factory" value="com.icl.saxon.TransformerFactoryImpl"/>
+      | For new (7+) Saxon use:
+      |  <parameter name="transformer-factory" value="net.sf.saxon.TransformerFactoryImpl"/>
+      +-->
+  <component logger="core.xslt-processor"
+             role="org.apache.excalibur.xml.xslt.XSLTProcessor/saxon"
+             class="org.apache.excalibur.xml.xslt.XSLTProcessorImpl">
+     <parameter name="use-store" value="true"/>
+     <parameter name="transformer-factory" value="net.sf.saxon.TransformerFactoryImpl"/>
+  </component>
+
+  <!-- Xpath Processor: -->
+  <xpath-processor class="org.apache.excalibur.xml.xpath.XPathProcessorImpl" logger="core.xpath-processor"/>
+
+  <!-- The XMLizers converts different mime-types to XML -->
+  <xmlizer>
+      <parser mime-type="text/xml" role="org.apache.excalibur.xml.sax.SAXParser"/>
+  <!--..... Start configuration from 'tidy' -->&#13;
+
+
+      <parser mime-type="text/html" role="org.apache.excalibur.xml.sax.SAXParser/HTML"/>
+
+<!--..... End configuration from 'tidy' -->&#13;
+</xmlizer>
+
+<!-- ============================ Object Stores =========================== -->
+
+  <!--+
+      | Transient Store: holds objects that don't have to survive shutdown
+      |
+      | Common configuration parameters:
+      | maxobjects: Indicates how many objects will be held in the cache.
+      |    When the number of maxobjects has been reached. The last object
+      |    in the cache will be thrown out.
+      +-->
+  <transient-store logger="core.store.transient">
+    <parameter name="maxobjects" value="1000"/>
+  </transient-store>
+
+  <!--+
+      | Store: generic store. The default implementation is an in-memory store
+      | backed by a disk store (based on EHCache). This forms a two-stage
+      | cache composed of a fast in-memory MRU front-end and a persistent
+      | back-end which stores the less-used objects.
+      |
+      | Common configuration parameters:
+      | maxobjects: Indicates how many objects will be held in the cache.
+      |    When the number of maxobjects has been reached. The last object
+      |    in the cache will be thrown out.
+      +-->
+  <store logger="core.store">
+    <parameter name="maxobjects" value="1000"/>
+    <parameter name="use-cache-directory" value="true"/>
+  </store>
+
+  <!--+
+      | Store Janitor: the store garbage collector and memory usage controller.
+      |
+      | WARNING: Be careful with the heapsize and freememory parameters.
+      |           Wrong values can cause high cpu usage.
+      |
+      | Example configuration:
+      | Jvm settings:
+      |    -Xmx200000000
+      | store-janitor settings:
+      |    <parameter name="freememory" value="5000000"/>
+      |    <parameter name="heapsize" value="196000000"/>
+      |
+      | It is recommended to have heapsize equal to -Xmx, especially on Sun's
+      | JVM which are unable to shrink its heap once it grows above minimum.
+      | Freememory should be greater than amount of memory necessary for normal
+      | application operation.
+      | BUT: The heap size of the memory of the JVM is a little bit less than
+      |      the value you specify for -Xmx, so you have to set the heapsize
+      |      for the store janitor to a value which is lower (2% less seems
+      |      to be a working value).
+      +-->
+  <store-janitor logger="core.store.janitor">
+     <!-- How much free memory shall be available in the jvm -->
+     <parameter name="freememory" value="2048000"/>
+     <!-- Indicates the limit of the jvm memory consumption. The default max
+          heapsize for Sun's JVM is (almost) 64Mb -->
+     <parameter name="heapsize" value="66600000"/>
+     <!-- How often shall the cleanup thread check memory -->
+     <parameter name="cleanupthreadinterval" value="10"/>
+     <!-- Experimental adaptive algorithm for cleanup interval
+     <parameter name="adaptivethreadinterval" value="true"/>
+     -->
+     <!-- Indicates the thread priority of the cleanup thread -->
+     <parameter name="threadpriority" value="5"/>
+     <!-- How much percent of the elements of each registered Store
+          shall be removed when low on memory. Default 10% -->
+     <parameter name="percent_to_free" value="10"/>
+     <!-- Invoke the garbage collector when low memory is reached -->
+     <parameter name="invokegc" value="false"/>
+  </store-janitor>
+
+<!-- ========================= Protocol Handlers =========================== -->
+
+
+<!-- ================ Internationalization Catalogs =================== -->
+
+  <!--+
+      | I18n Bundle Factory
+      |
+      | BundleFactory loads Bundles with i18n resources for the given locale.
+      | Bundles are loaded from the 'catalogue_location'. Bundle base name is
+      | 'catalogue_name' value.
+      | If 'cache-at-startup' is true then BundleFactory preloads bundles.
+      +-->
+  <i18n-bundles logger="core.i18n-bundles">
+    <catalogue-name>messages</catalogue-name>
+    <catalogue-location>context://samples/i18n/translations</catalogue-location>
+    <cache-at-startup>true</cache-at-startup>
+  </i18n-bundles>
+
+<!-- ====================== System Components =========================== -->
+
+  <!--+
+      | The core classloader implementation
+      +-->
+  <classloader class="org.apache.cocoon.components.classloader.ClassLoaderManagerImpl" logger="core.classloader"/>
+
+  <!--+
+      | XML compiler/decompiler
+      |
+      | these components are used to process SAX events and produce a binary
+      | representation that is much more compact and efficient for
+      | subsequent parsing. These are used by the cache system to save
+      | the intermediate results of the pipeline stages reducing the overhead
+      | of xml parsing/serialization.
+      +-->
+  <xml-serializer class="org.apache.cocoon.components.sax.XMLByteStreamCompiler" logger="core.xml-serializer" pool-grow="4" pool-max="32" pool-min="8"/>
+  <xml-deserializer class="org.apache.cocoon.components.sax.XMLByteStreamInterpreter" logger="core.xml-deserializer" pool-grow="4" pool-max="32" pool-min="8"/>
+
+  <!--+
+      | The Cache Manager is a component that can be used to cache content.
+      | It is currently used by the cinclude transformer
+      +-->
+  <component class="org.apache.cocoon.transformation.helpers.DefaultIncludeCacheManager" role="org.apache.cocoon.transformation.helpers.IncludeCacheManager">
+    <!-- Set the preemptive-loader-url to a pipeline inside Cocoon that
+         contains the preemptive loader action. The URL must be absolute!
+    <parameter name="preemptive-loader-url"
+               value="http://localhost:8080/cocoon/samples/cinclude/loader"/>
+    -->
+ </component>
+
+  <!--+
+      | Runnable manager
+      |
+      | this component manages commands (Runnables) executed in background using
+      | preconfigured pools of worker threads
+      +-->
+  <runnable-manager logger="core.runnable">
+    <!--+
+        | This is the default configuration of the runnable-manager. More
+        | indepth information can be found at
+        | http://gee.cs.oswego.edu/dl/classes/EDU/oswego/cs/dl/util/concurrent/PooledExecutor.html
+        | The following elements can be used:
+        |
+        | thread-factory:        specifies the fully qualified class name of an
+        |                        org.apache.cocoon.components.thread.ThreadFactory
+        |                        implementation. It is responsible to create Thread
+        |                        classes.
+        | thread-pools:          container element for thread-pool elements.
+        | name:                  required name of the pool.
+        | priority:              optional priority all threads of the pool will
+        |                        have (the ThreadFactory will be set to this
+        |                        priority).The possible values  are:
+        |                          MIN:  corresponds to Thread#MIN_PRIORITY
+        |                          NORM: corresponds to Thread#NORM_PRIORITY (default)
+        |                          MAX:  corresponds to Thread#MAX_PRIORITY
+        | daemon:                whether newly created Threads should run in
+        |                        daemon mode or not. Default to false.
+        | queue-size:            optional size of a queue to hold Runnables if the
+        |                        pool is full. Possible values are:
+        |                          less than 0:    unbounded (default)
+        |                          equal to 0:     no queue at all
+        |                          greater than 0: size of the queue
+        | max-pool-size:         optional maximum number of threads in the pool.
+        |                        Defaults to 5.
+        |                        NOTE: if a queue is specified (queue-sie != 0)
+        |                              this value will be ignored.
+        | min-pool-size:         optional minimum number of threads in the pool.
+        |                        Defaults to 5.
+        |                        NOTE: if a queue has been specified (queue-sie != 0)
+        |                              this value will be used as the maximum of
+        |                              thread running concurrently.
+        | keep-alive-time-ms:    The time in ms an idle thread should keep alive
+        |                        before it might get garbage collected. This
+        |                        defaults to 60000 ms.
+        | block-policy;          The policy to be used if all resources (thread in
+        |                        the pool and slots in the queue) are exhausted.
+        |                        Possible values are:
+        |                          ABORT:         Throw a RuntimeException
+        |                          DISCARD:       Throw away the current request
+        |                                         and return.
+        |                          DISCARDOLDEST: Throw away the oldest request
+        |                                         and return.
+        |                          RUN (default): The thread making the execute
+        |                                         request runs the task itself.
+        |                                         This policy helps guard against
+        |                                         lockup.
+        |                          WAIT:          Wait until a thread becomes
+        |                                         available. This policy should, in
+        |                                         general, not be used if the
+        |                                         minimum number of threads is zero,
+        |                                         in which case a thread may never
+        |                                         become available.
+        | shutdown-graceful:     Terminate thread pool after processing all
+        |                        Runnables currently in queue. Any Runnable entered
+        |                        after this point will be discarded. A shut down
+        |                        pool cannot be restarted. This also means that a
+        |                        pool will need keep-alive-time-ms to terminate.
+        |                        The default value not to shutdown graceful.
+        | shutdown-wait-time-ms: The time in ms to wait before issuing an
+        |                        immediate shutdown after a graceful shutdown
+        |                        has been requested.
+        +-->
+    <thread-factory>org.apache.cocoon.components.thread.DefaultThreadFactory</thread-factory>
+    <thread-pools>
+      <!--+
+          | This is the default thread pool. It's use fits best for short
+          | running background tasks.
+          +-->
+      <thread-pool>
+        <name>default</name>
+        <priority>NORM</priority>
+        <daemon>false</daemon>
+        <queue-size>-1</queue-size>
+        <max-pool-size>5</max-pool-size>
+        <min-pool-size>5</min-pool-size>
+        <keep-alive-time-ms>60000</keep-alive-time-ms>
+        <block-policy>RUN</block-policy>
+        <shutdown-graceful>false</shutdown-graceful>
+        <shutdown-wait-time-ms>-1</shutdown-wait-time-ms>
+      </thread-pool>
+      <!--+
+          | This thread pool should be used for daemons (permanently running
+          | threads).
+          +-->
+      <thread-pool>
+        <name>daemon</name>
+        <priority>NORM</priority>
+        <daemon>true</daemon>
+        <queue-size>0</queue-size>
+        <max-pool-size>-1</max-pool-size>
+        <min-pool-size>1</min-pool-size>
+        <keep-alive-time-ms>60000</keep-alive-time-ms>
+        <block-policy>ABORT</block-policy>
+        <shutdown-graceful>false</shutdown-graceful>
+        <shutdown-wait-time-ms>-1</shutdown-wait-time-ms>
+      </thread-pool>
+    </thread-pools>
+  </runnable-manager>
+<!--..... Start configuration from 'soapserver' -->&#13;
+
+
+ <component class="org.apache.cocoon.components.axis.SoapServerImpl" logger="core.source.soapserver" role="org.apache.cocoon.components.axis.SoapServer">
+   <managed-services>
+     <descriptor src="resource://org/apache/cocoon/webservices/memory/DeploymentDescriptor.wsdd"/>
+     <descriptor src="resource://org/apache/cocoon/webservices/system/DeploymentDescriptor.wsdd"/>
+     <descriptor src="resource://org/apache/cocoon/webservices/cache/DeploymentDescriptor.wsdd"/>
+     <descriptor src="resource://org/apache/cocoon/webservices/instrument/DeploymentDescriptor.wsdd"/>     
+   </managed-services>
+ </component>
+<!--..... End configuration from 'soapserver' -->&#13;
+<!--..... Start configuration from 'cron' -->&#13;
+
+
+    <component class="org.apache.cocoon.components.cron.CocoonQuartzJobScheduler" logger="cron" role="org.apache.cocoon.components.cron.JobScheduler">
+      <!--+
+          | Definitions for a thread pool used to schedule jobs
+          +-->
+      <thread-pool>
+        <!--+
+            | Should we queue up execution requests if the pool is busy?
+            | Defaults to false
+            +-->
+        <use-queueing>false</use-queueing>
+
+        <!--+
+            | How big should the queue be.
+            | Defaults to unlimited size (<0 == default)
+            +-->
+        <queue-size>-1</queue-size>
+
+        <!--+
+            | The maximum size of the pool.
+            | Defaults to Integer.MAX_VALUE (<0 == default)
+            +-->
+        <max-pool-size>-1</max-pool-size>
+
+        <!--+
+            | The minimum size of the pool.
+            | Defaults to 1 (<0 == default)
+            +-->
+        <min-pool-size>1</min-pool-size>
+
+        <!--+
+            | How long will an idle thread be kept before it will be discarded.
+            | Defaults to 60000ms (<0 == default)
+            +-->
+        <keep-alive-time-ms>60000</keep-alive-time-ms>
+
+        <!--+
+            | Which blocking policy should be used if the maximum pool
+            | size and queue size is bounded:
+            | Run:           (default) The thread making the execute
+            |                request runs the task itself. This policy
+            |                helps guard against lockup.
+            | Wait:          Wait until a thread becomes available.
+            | Abort:         Throw a RuntimeException
+            | Discard:       Throw away the current request and return.
+            | DiscardOldest: Throw away the oldest request and return.
+            +-->
+        <block-policy>RUN</block-policy>
+
+        <!--+
+            | Should queued and running jobs be given a chance to finished
+            | on system shutdown. Defaults to true
+            +-->
+        <shutdown-graceful>true</shutdown-graceful>
+
+        <!--+
+            | The maximum time to wait for running jobs to complete.
+            | Defaults to unlimited time (<0 == default)
+            +-->
+        <shutdown-wait-time-ms>5000</shutdown-wait-time-ms>
+      </thread-pool>
+
+      <!--+
+          | Definition of the JobStore.
+          | Store type can be one of "ram" (default), "tx", or "cmt".
+          |
+          | "tx" and "cmt" stores require datasource configuration.
+          | (Attributes delegate and provider are optional)
+      <store type="tx" delegate="org.quartz.impl.jdbcjobstore.StdJDBCDelegate">
+        <datasource provider="jndi">jdbc/MyJobStoreDS</datasource>
+      </store>
+          +-->
+      <store type="ram"/>
+
+      <!-- Definintions of triggers -->
+      <triggers>
+        <!--+
+            | A trigger element has the following attributes:
+            |    name:            A name for the trigger. Mandatory
+            |    target:          A role name to lookup the job object in the ServiceManager. Mandatory
+            |    concurrent-runs: Is it allowed to reschedule a job even if the previous one is
+            |                     still running. Optionl, defaults to true.
+            | A trigger element has the following child elements:
+            |    cron: A string expression defining the scheduling timing.
+            |          Optional. If not specified the following elements are explored:
+            |       seconds:  Expression for the secods part of a cron expression.
+            |       minutes:  Expression for the minutes part of a cron expression.
+            |       hours:    Expression for the hours part of a cron expression.
+            |       days:     Expression for the days part of a cron expression.
+            |       month:    Expression for the months part of a cron expression.
+            |       weekdays: Expression for the weekdays part of a cron expression.
+            |       years:    Expression for the years part of a cron expression.
+            | For detailed information about the expressions look at the
+            | documentation.
+            +-->
+
+        <!--+
+            | Sample trigger definitions, use components defined below.
+        <trigger name="test-job1"
+                 target="org.apache.cocoon.components.cron.CronJob/test"
+                 concurrent-runs="false">
+          <cron>*/12 * * * * ? *</cron>
+        </trigger>
+        <trigger name="test-job2"
+                 target="org.apache.cocoon.components.cron.CronJob/test"
+                 concurrent-runs="true">
+          <seconds>*/12</seconds>
+          <minutes>*/5</minutes>
+          <hours>8,10,12,14,16,18</hours>
+          <days>?</days>
+          <months>*</months>
+          <weekdays>SUN-FRI</weekdays>
+        </trigger>
+        <trigger name="pipeline-test"
+                 target="org.apache.cocoon.components.cron.CronJob/pipeline-test"
+                 concurrent-runs="true">
+          <minutes>0</minutes>
+          <hours>12</hours>
+          <days>?</days>
+          <months>*</months>
+          <weekdays>MON-FRI</weekdays>
+        </trigger>
+            +-->
+      </triggers>
+    </component>
+
+  <!--+
+      | Sample definition of the TestCronJob cron job, used by
+      | trigger configuration above.
+  <component role="org.apache.cocoon.components.cron.CronJob/test"
+             class="org.apache.cocoon.components.cron.TestCronJob"
+             logger="cron.test">
+    <msg>I'm here</msg>
+    <sleep>23000</sleep>
+    <pipeline>samples/hello-world/hello.xhtml</pipeline>
+  </component>
+      +-->
+
+  <!--+
+      | Sample definition of the CocoonPipelineCronJob cron job, used by
+      | trigger configuration above.
+  <component role="org.apache.cocoon.components.cron.CronJob/pipeline-test"
+             class="org.apache.cocoon.components.cron.CocoonPipelineCronJob"
+             logger="cron.pipeline">
+      <pipeline>samples/hello-world/hello.xhtml</pipeline>
+  </component>
+      +-->
+
+<!--..... End configuration from 'cron' -->&#13;
+<!--..... Start configuration from 'xsp-markup' -->&#13;
+
+  <!--+
+      | Logicsheets
+      |
+      | This section defines the XSP logicsheets. A logicsheet is a special
+      | XSLT stylesheet used to translate user-defined dynamic markup into
+      | equivalent XSP markup that embeds directives for a given markup
+      | language.
+      |
+      | Logicsheets are the XSP equivalent of taglibs. For info about
+      | the tags included in the default taglibs, please, refer to the
+      | documentation.
+      +-->
+  <markup-languages>
+    <xsp-language logger="core.markup.xsp" name="xsp">
+      <parameter name="prefix" value="xsp"/>
+      <parameter name="uri" value="http://apache.org/xsp"/>
+
+      <!--+
+          | Properties for the java language
+          +-->
+      <target-language name="java">
+        <!-- Defines the XSP Core logicsheet for the Java language -->
+        <parameter name="core-logicsheet" value="resource://org/apache/cocoon/components/language/markup/xsp/java/xsp.xsl"/>
+
+        <!-- The Request logicsheet: access request parameters -->
+        <builtin-logicsheet>
+          <parameter name="prefix" value="xsp-request"/>
+          <parameter name="uri" value="http://apache.org/xsp/request/2.0"/>
+          <parameter name="href" value="resource://org/apache/cocoon/components/language/markup/xsp/java/request.xsl"/>
+        </builtin-logicsheet>
+
+        <!-- The Response logicsheet: access response parameters -->
+        <builtin-logicsheet>
+          <parameter name="prefix" value="xsp-response"/>
+          <parameter name="uri" value="http://apache.org/xsp/response/2.0"/>
+          <parameter name="href" value="resource://org/apache/cocoon/components/language/markup/xsp/java/response.xsl"/>
+        </builtin-logicsheet>
+
+        <!-- The Session logicsheet: manages and access the session -->
+        <builtin-logicsheet>
+          <parameter name="prefix" value="xsp-session"/>
+          <parameter name="uri" value="http://apache.org/xsp/session/2.0"/>
+          <parameter name="href" value="resource://org/apache/cocoon/components/language/markup/xsp/java/session.xsl"/>
+        </builtin-logicsheet>
+
+        <!-- The Cookie logicsheet: manages and access cookies  -->
+        <builtin-logicsheet>
+          <parameter name="prefix" value="xsp-cookie"/>
+          <parameter name="uri" value="http://apache.org/xsp/cookie/2.0"/>
+          <parameter name="href" value="resource://org/apache/cocoon/components/language/markup/xsp/java/cookie.xsl"/>
+        </builtin-logicsheet>
+
+        <!-- The Log logicsheet: access the cocoon logs from an xsp page  -->
+        <builtin-logicsheet>
+          <parameter name="prefix" value="log"/>
+          <parameter name="uri" value="http://apache.org/xsp/log/2.0"/>
+          <parameter name="href" value="resource://org/apache/cocoon/components/language/markup/xsp/java/log.xsl"/>
+        </builtin-logicsheet>
+
+        <!-- The Utility logicsheet -->
+        <builtin-logicsheet>
+          <parameter name="prefix" value="util"/>
+          <parameter name="uri" value="http://apache.org/xsp/util/2.0"/>
+          <parameter name="href" value="resource://org/apache/cocoon/components/language/markup/xsp/java/util.xsl"/>
+        </builtin-logicsheet>
+
+        <!-- The xsp-formval taglib serves as interface to retrieve
+             validation results from a request attribute -->
+        <builtin-logicsheet>
+          <parameter name="prefix" value="xsp-formval"/>
+          <parameter name="uri" value="http://apache.org/xsp/form-validator/2.0"/>
+          <parameter name="href" value="resource://org/apache/cocoon/components/language/markup/xsp/java/form-validator.xsl"/>
+        </builtin-logicsheet>
+
+        <!-- The sel taglib allows to put multiple pages / view into
+             one xsp. While in general it is good style to put
+             different views into different xsp because they're more
+             easily maintained, this is a useful feature with
+             e.g. with long forms that are broken into parts -->
+        <builtin-logicsheet>
+          <parameter name="prefix" value="sel"/>
+          <parameter name="uri" value="http://apache.org/xsp/sel/1.0"/>
+          <parameter name="href" value="resource://org/apache/cocoon/components/language/markup/xsp/java/sel.xsl"/>
+        </builtin-logicsheet>
+
+        <!-- The Action logicsheet -->
+        <builtin-logicsheet>
+          <parameter name="prefix" value="action"/>
+          <parameter name="uri" value="http://apache.org/cocoon/action/1.0"/>
+          <parameter name="href" value="resource://org/apache/cocoon/components/language/markup/xsp/java/action.xsl"/>
+        </builtin-logicsheet>
+
+        <!-- The capture taglib is for capturing parts of the XSP-generated
+             XML as XML fragments or DOM nodes -->
+        <builtin-logicsheet>
+          <parameter name="prefix" value="capture"/>
+          <parameter name="uri" value="http://apache.org/cocoon/capture/1.0"/>
+          <parameter name="href" value="resource://org/apache/cocoon/components/language/markup/xsp/java/capture.xsl"/>
+        </builtin-logicsheet>
+
+        <!-- The XScript logicsheet -->
+        <builtin-logicsheet>
+          <parameter name="prefix" value="xscript"/>
+          <parameter name="uri" value="http://apache.org/xsp/xscript/1.0"/>
+          <parameter name="href" value="resource://org/apache/cocoon/components/language/markup/xsp/java/xscript.xsl"/>
+        </builtin-logicsheet>
+
+        <!-- The SOAP logicsheet -->
+        <builtin-logicsheet>
+          <parameter name="prefix" value="soap"/>
+          <parameter name="uri" value="http://apache.org/xsp/soap/3.0"/>
+          <parameter name="href" value="resource://org/apache/cocoon/components/language/markup/xsp/java/soap.xsl"/>
+        </builtin-logicsheet>
+
+        <!-- The JPath logicsheet -->
+        <builtin-logicsheet>
+          <parameter name="prefix" value="jpath"/>
+          <parameter name="uri" value="http://apache.org/xsp/jpath/1.0"/>
+          <parameter name="href" value="resource://org/apache/cocoon/components/language/markup/xsp/java/jpath.xsl"/>
+        </builtin-logicsheet>
+
+        <!-- The input logicsheet allows easy access to InputModules -->
+        <builtin-logicsheet>
+          <parameter name="prefix" value="input"/>
+          <parameter name="uri" value="http://apache.org/cocoon/xsp/input/1.0"/>
+          <parameter name="href" value="resource://org/apache/cocoon/components/language/markup/xsp/java/input.xsl"/>
+        </builtin-logicsheet>
+      <!--..... Start configuration from 'esql' -->&#13;
+
+
+        <!-- The ESQL logicsheet is an XSP logicsheet that performs sql queries and 
+             serializes their results as XML. This allows you to work with data from a 
+             wide variety of different sources when using Apache Cocoon. -->
+        <builtin-logicsheet>
+          <parameter name="prefix" value="esql"/>
+          <parameter name="uri" value="http://apache.org/cocoon/SQL/v2"/>
+          <parameter name="href" value="resource://org/apache/cocoon/components/language/markup/xsp/java/esql.xsl"/>
+        </builtin-logicsheet>
+
+
+<!--..... End configuration from 'esql' -->&#13;
+<!--..... Start configuration from 'xsp-session-fw' -->&#13;
+
+
+        <!--+
+            |  The session-fw logicsheet is an XSP logicsheet that allows access to the session
+            | context
+            +-->
+        <builtin-logicsheet>
+          <parameter name="prefix" value="xsp-session-fw"/>
+          <parameter name="uri" value="http://apache.org/xsp/session-fw/1.0"/>
+          <parameter name="href" value="resource://org/apache/cocoon/components/language/markup/xsp/java/session-fw.xsl"/>
+        </builtin-logicsheet>
+
+
+<!--..... End configuration from 'xsp-session-fw' -->&#13;
+<!--..... Start configuration from 'sendmail_xsl' -->&#13;
+
+
+        <!--+
+            |  The sendmail logicsheet is an XSP logicsheet that allows sending
+            |  simple emails as well as multipart mime emails
+            +-->
+        <builtin-logicsheet>
+          <parameter name="prefix" value="sendmail"/>
+          <parameter name="uri" value="http://apache.org/cocoon/sendmail/1.0"/>
+          <parameter name="href" value="resource://org/apache/cocoon/components/language/markup/xsp/java/sendmail.xsl"/>
+        </builtin-logicsheet>
+
+<!--..... End configuration from 'sendmail_xsl' -->&#13;
+</target-language>
+
+      <!--+
+          | Properties for the javascript language
+          +-->
+      <target-language name="js">
+        <parameter name="core-logicsheet" value="resource://org/apache/cocoon/components/language/markup/xsp/javascript/xsp.xsl"/>
+
+        <builtin-logicsheet>
+          <parameter name="prefix" value="xsp-request"/>
+          <parameter name="uri" value="http://apache.org/xsp/request/2.0"/>
+          <parameter name="href" value="resource://org/apache/cocoon/components/language/markup/xsp/javascript/request.xsl"/>
+        </builtin-logicsheet>
+
+        <builtin-logicsheet>
+          <parameter name="prefix" value="xsp-response"/>
+          <parameter name="uri" value="http://apache.org/xsp/response/2.0"/>
+          <parameter name="href" value="resource://org/apache/cocoon/components/language/markup/xsp/javascript/response.xsl"/>
+        </builtin-logicsheet>
+
+        <builtin-logicsheet>
+          <parameter name="prefix" value="xsp-session"/>
+          <parameter name="uri" value="http://apache.org/xsp/session/2.0"/>
+          <parameter name="href" value="resource://org/apache/cocoon/components/language/markup/xsp/javascript/session.xsl"/>
+        </builtin-logicsheet>
+      </target-language>
+    <!--..... Start configuration from 'python-xsp' -->&#13;
+
+      <!-- XSP in Python -->
+      <target-language name="python">
+        <parameter name="core-logicsheet" value="resource://org/apache/cocoon/components/language/markup/xsp/python/xsp.xsl"/>
+      </target-language>
+<!--..... End configuration from 'python-xsp' -->&#13;
+</xsp-language>
+  </markup-languages>
+<!--..... End configuration from 'xsp-markup' -->&#13;
+<!--..... Start configuration from 'xsp-program-generator' -->&#13;
+
+  <!--+
+      | Program Generator
+      |
+      | The ProgamGenerator builds programs from a XML document written in a
+      | MarkupLanguage.
+      |
+      |    auto-reload: whether the system should check if the source was
+      |                 modified and reload of consequence.
+      |    root-package: the java package to use for the generated classes
+      |    preload: whether the system should preload the necessary components
+      +-->
+  <program-generator logger="core.program-generator">
+    <parameter name="auto-reload" value="true"/>
+    <parameter name="root-package" value="org.apache.cocoon.www"/>
+    <parameter name="preload" value="true"/>
+  </program-generator>
+<!--..... End configuration from 'xsp-program-generator' -->&#13;
+<!--..... Start configuration from 'xsp-program-language' -->&#13;
+
+  <!--+
+      | Programming Languages for the XSP pages
+      +-->
+  <programming-languages>
+    <java-language logger="core.language.java" name="java">
+
+      <!--+ Specifies which formatter to use to format source code.
+          | This parameter is optional.
+          | At the moment there is no implementation of a code formatter available.
+          +-->
+      <!--parameter name="code-formatter" value="org.apache.cocoon.components.language.programming.java.NullFormatter"/-->
+
+      <!-- A singleton-like implementation of a ClassLoader -->
+      <parameter name="class-loader" value="org.apache.cocoon.components.classloader.ClassLoaderManagerImpl"/>
+
+      <!--+
+          | Specifies which Java compiler to use. Possible variants are:
+          |
+          |  - EclipseJavaCompiler: the Eclipse JTD java compiler
+          |  - Javac: the java compiler that comes with JDK
+          |  - Jikes: the Jikes java compiler
+          |  - Pizza: the Pizza java compiler
+          |
+          | NOTE: the Eclipse JTD is the only java compiler that is capable
+          |       of imports classes thru the context classloader. All other
+          |       compilers import classes from the JVM classpath and might
+          |       normally result in ClassNotFound problems at compilation
+          |       time. It is *HIGHLY* suggested that you use this compiler
+          |       or you might experience problems in some servlet containers.
+          +-->
+      <parameter name="compiler" value="org.apache.cocoon.components.language.programming.java.EclipseJavaCompiler"/>
+      <!--parameter name="compiler" value="org.apache.cocoon.components.language.programming.java.Javac"/-->
+      <!--parameter name="compiler" value="org.apache.cocoon.components.language.programming.java.Jikes"/-->
+      <!--parameter name="compiler" value="org.apache.cocoon.components.language.programming.java.Pizza"/-->
+
+    </java-language>
+
+    <!-- Interpreted JavaScript language -->
+    <js-language logger="core.language.js" name="js"/>
+  <!--..... Start configuration from 'python-language' -->&#13;
+
+    <!-- Python language -->
+    <python-language logger="core.language.python" name="python"/>
+<!--..... End configuration from 'python-language' -->&#13;
+</programming-languages>
+<!--..... End configuration from 'xsp-program-language' -->&#13;
+<!--..... Start configuration from 'xsp-xscript' -->&#13;
+
+  <!-- Xscript -->
+  <xscript logger="core.xscript">
+    <parameter name="xscript:copy-of" value="resource://org/apache/cocoon/components/xscript/xslt/copy-of.xsl"/>
+    <parameter name="xscript:value-of" value="resource://org/apache/cocoon/components/xscript/xslt/value-of.xsl"/>
+  </xscript>
+<!--..... End configuration from 'xsp-xscript' -->&#13;
+<!--..... Start configuration from 'datasources' -->&#13;
+
+  <datasources>
+    <jdbc logger="core.datasources.personnel" name="personnel">
+      <!--
+          If you have an Oracle database, and are using the the
+      pool-controller below, you should add the attribute
+      "oradb" and set it to true.
+
+      <pool-controller min="5" max="10" oradb="true"/>
+
+      That way the test to see if the server has disconnected
+      the JdbcConnection will function properly.
+      -->
+      <pool-controller max="10" min="5"/>
+      <!--
+          If you need to ensure an autocommit is set to true or
+      false, then create the "auto-commit" element below.
+
+      <auto-commit>false</auto-commit>
+
+      The default is true.
+      -->
+      <dburl>jdbc:hsqldb:hsql://localhost:9002</dburl>
+      <user>sa</user>
+      <password/>
+    </jdbc>
+  </datasources>
+<!--..... End configuration from 'datasources' -->&#13;
+<!--..... Start configuration from 'db-modules' -->&#13;
+
+   <!-- =============== Database Modules ==================== -->
+   
+   <autoincrement-modules>
+      <component-instance class="org.apache.cocoon.components.modules.database.HsqlIdentityAutoIncrementModule" logger="core.modules.auto" name="auto"/>
+<!--
+      Choose the one suitable for your DBMS. You *can* have more than
+      one at a time, but they need to have different names. You then
+      need to specify explicitly, which one to use in your descriptor
+      file.
+
+      <component-instance logger="core.modules.auto" name="auto" class="org.apache.cocoon.components.modules.database.ManualAutoIncrementModule"/>
+      <component-instance logger="core.modules.auto" name="auto" class="org.apache.cocoon.components.modules.database.IfxSerialAutoIncrementModule"/>
+      <component-instance logger="core.modules.auto" name="auto" class="org.apache.cocoon.components.modules.database.McKoiSequenceModule"/>
+      <component-instance logger="core.modules.auto" name="auto" class="org.apache.cocoon.components.modules.database.MysqlAutoIncrementModule"/>
+      <component-instance logger="core.modules.auto" name="auto" class="org.apache.cocoon.components.modules.database.PgsqlAutoIncrementModule"/>
+      <component-instance logger="core.modules.auto" name="auto" class="org.apache.cocoon.components.modules.database.SQLServerIdentityAutoIncrementModule"/>
+-->
+   </autoincrement-modules>
+<!--..... End configuration from 'db-modules' -->&#13;
+<!--..... Start configuration from 'hsqldb' -->&#13;
+
+
+  <!--+
+      | HSQLDB Server for samples:
+      |
+      |  port   : number      port where the server is listening
+      |  silent : true/false  display all queries
+      |  trace  : true/false  display JDBC trace messages
+      +-->
+  <hsqldb-server class="org.apache.cocoon.components.hsqldb.ServerImpl" logger="core.hsqldb-server" pool-max="1" pool-min="1">
+     <parameter name="port" value="9002"/>
+     <parameter name="silent" value="true"/>
+     <parameter name="trace" value="false"/>
+     <parameter name="thread-pool-name" value="daemon"/>
+  </hsqldb-server>
+
+<!--..... End configuration from 'hsqldb' -->&#13;
+<!--..... Start configuration from 'jms-connection-manager' -->&#13;
+
+  <!-- +
+    | Configuration of a set JMS Connections. 
+    | Three types of connections can be configured: 
+    | - general <connection>s: created by a call to ConnectionFactory.createConnection()
+    | - <topic-connection>s: created by a call to TopicConnectionFactory.createTopicConnection()
+    | - <queue-connection>s: created by a call to QeueuConnectionFactory.createQueueConnection()
+    | 
+    | Each connection must have a unique name. This is the name other components
+    | use to retrieve it.
+    | 
+    | All connection types support the same set of parameters:
+    | - javax.naming.*: properties used to create the initial JNDI context.
+    |   JNDI parameters must be specified with their literal values here.
+    |   For example, javax.naming.Context.INITIAL_CONTEXT_FACTORY is 
+    |   equivalent to "java.naming.factory.initial".
+    | - connection-factory: the JNDI lookup name of the javax.jms.ConnectionFactory service.
+    | - username / password: optional connection credentials
+    + -->
+  <jms-connection-manager logger="core.jms">
+    <topic-connection name="local-topics">
+      <parameter name="java.naming.factory.initial" value="org.exolab.jms.jndi.InitialContextFactory"/>
+      <parameter name="java.naming.provider.url" value="rmi://localhost:1099/"/>
+      <!-- OpenJMS RMI topic connection factory -->
+      <parameter name="connection-factory" value="JmsTopicConnectionFactory"/>
+      <!--
+      <parameter name="username" value="user"/>
+      <parameter name="password" value="secret"/>
+      -->
+    </topic-connection>
+  </jms-connection-manager>
+<!--..... End configuration from 'jms-connection-manager' -->&#13;
+<!--..... Start configuration from 'eventcache' -->&#13;
+
+    <component class="org.apache.cocoon.caching.impl.EventAwareCacheImpl" role="org.apache.cocoon.caching.Cache/EventAware"/>
+    <!-- The event registry which maps Cache events to Pipeline keys -->
+    <!--component role="org.apache.cocoon.caching.EventRegistry"
+                  class="org.apache.cocoon.caching.impl.DefaultEventRegistryImpl"/-->
+    <component class="org.apache.cocoon.caching.impl.StoreEventRegistryImpl" role="org.apache.cocoon.caching.EventRegistry"/>
+<!--..... End configuration from 'eventcache' -->&#13;
+<!--..... Start configuration from 'jmslistener' -->&#13;
+
+	<component class="org.apache.cocoon.caching.impl.JMSEventMessageListener" logger="core.jms" role="org.apache.cocoon.caching.impl.JMSEventMessageListener">
+       <parameter name="connection" value="local-topics"/>
+       <parameter name="topic" value="topic1"/>
+       <!--
+       <parameter name="eventcache-role" value="org.apache.cocoon.caching.Cache/EventAware"/>
+       -->
+    </component>
+<!--..... End configuration from 'jmslistener' -->&#13;
+<!--..... Start configuration from 'SourceRepository' -->&#13;
+
+  <source-repository logger="core.source-repository"/>
+<!--..... End configuration from 'SourceRepository' -->&#13;
+<!--..... Start configuration from 'repository-manager' -->&#13;
+
+
+  <component class="org.apache.cocoon.components.repository.RepositoryManager" logger="core.repository" role="org.apache.cocoon.components.repository.RepositoryManager">
+
+    <!-- put your repository implementations here like
+    <repository name="webdav" class="org.apache.cocoon.components.repository.impl.WebDAVRepository"/>
+    -->
+
+  <!--..... Start configuration from 'webdav-repository' -->&#13;
+
+
+  <repository class="org.apache.cocoon.components.repository.impl.WebDAVRepository" name="webdav">
+    <repo-base>localhost/webdav/</repo-base>
+  </repository>
+
+<!--..... End configuration from 'webdav-repository' -->&#13;
+</component>
+
+<!--..... End configuration from 'repository-manager' -->&#13;
+<!--..... Start configuration from 'sourcedescriptor' -->&#13;
+
+
+  <component class="org.apache.cocoon.components.source.impl.SourceDescriptorManager" logger="core.source.sourcedescriptor" role="org.apache.cocoon.components.source.SourceDescriptor">
+    
+    <sourceinspector class="org.apache.cocoon.components.source.impl.XPathSourceInspector">
+      <parameter name="namespace" value="http://xml.apache.org/cocoon/xdoc/1.0"/>
+      <parameter name="name" value="title"/>
+      <parameter name="extension" value=".xdoc"/>
+      <parameter name="xpath" value="/document/header/title"/>
+    </sourceinspector>
+    
+    <sourceinspector class="org.apache.cocoon.components.source.impl.JPEGSourceInspector"/>
+    <sourceinspector class="org.apache.cocoon.components.source.impl.GIFSourceInspector"/>
+    
+    <!-- You need to have databases block included to use this feature
+    <sourcedescriptor class="org.apache.cocoon.components.source.impl.SimpleJdbcSourceDescriptor">
+      <property name="author" namespace="meta" />
+      <property name="keyword" namespace="meta" />
+      <datasource>personnel</datasource>
+    </sourcedescriptor>
+    -->
+    
+  </component>
+ 
+<!--..... End configuration from 'sourcedescriptor' -->&#13;
+<!--..... Start configuration from 'delay-refresher' -->&#13;
+
+
+  <!--+
+      | A Refresher is a component that is used by the CachingSource protocol.
+      | It is responsible for updating the cached contents of sources that are
+      | registered with it by the protocol.
+      | The DelayRefresher is an implementation that periodically updates the
+      | sources.
+      | It recognizes the following parameters:
+      | - 'write-interval' (0). The Refresher can persist its list of registered
+      |   sources to update periodically. This parameter specifies how often
+      |   it should write this list to file. Specifying a value of 0 (the default)
+      |   means that target configurations will not be persisted at all.
+      | - 'write-file' (refresher-targets.xml). Specifying a different value 
+      |   than the default for this parameter only makes sense if you configure
+      |   more than one DelayRefreshers. It represents the file name, relative to
+      |   the cocoon working directory of the file the refresher writes its list
+      |   of registered target configurations to.
+      | - 'update-target-role' (org.apache.cocoon.components.cron.CronJob/UpdateTarget)
+      |   The role name of the CronJob to use for updating the Sources.
+      +-->
+  <component class="org.apache.cocoon.components.source.impl.DelayRefresher" logger="core.refresher.delay" role="org.apache.cocoon.components.source.impl.Refresher/Delay">
+    <!--
+    <parameter name="write-interval" value="0"/>
+    <parameter name="write-file" value="refresher-targets.xml"/>
+    <parameter name="update-target-role" value="org.apache.cocoon.components.cron.CronJob/UpdateTarget"/>
+    -->
+  </component>
+  
+  <!--+
+      | This is the default CronJob for updating the Source files 
+      | used by the DelayRefresher.
+      +-->
+  <component class="org.apache.cocoon.components.source.impl.UpdateTarget" logger="core.refresher.update" role="org.apache.cocoon.components.cron.CronJob/UpdateTarget"/>
+  
+<!--..... End configuration from 'delay-refresher' -->&#13;
+<!--..... Start configuration from 'session' -->&#13;
+
+
+  <session-manager logger="core.session-manager"/>
+  <session-form-manager logger="core.session-manager"/>
+  <session-transaction-manager logger="core.session-manager"/>
+  <session-context-manager logger="core.session-manager"/>
+
+  <session-media-manager logger="core.media-manager" pool-grow="4" pool-max="32" pool-min="8">
+      <mediatypes default="html">
+        <media name="wap" useragent="Nokia"/>
+        <media name="wap" useragent="UP"/>
+        <media name="wap" useragent="Wapalizer"/>
+      </mediatypes>
+  </session-media-manager>
+
+  <session-context-providers>
+      <component-instance class="org.apache.cocoon.webapps.session.context.StandardSessionContextProvider" name="request"/>
+      <component-instance class="org.apache.cocoon.webapps.session.context.StandardSessionContextProvider" name="temporary"/>
+  <!--..... Start configuration from 'provider' -->&#13;
+
+    <component-instance class="org.apache.cocoon.webapps.authentication.context.AuthenticationContextProvider" name="authentication"/>
+<!--..... End configuration from 'provider' -->&#13;
+</session-context-providers>
+<!--..... End configuration from 'session' -->&#13;
+<!--..... Start configuration from 'authentication' -->&#13;
+
+
+    <!--+
+        + The authentication manager
+        +-->
+    <authentication-manager logger="core.authentication-manager">
+    </authentication-manager>
+    
+<!--..... End configuration from 'authentication' -->&#13;
+<!--..... Start configuration from 'jsp' -->&#13;
+
+   
+  <!-- JSP Engine:
+    The JSPGenerator and JSPReader select a JSPEngine component. The JSPEngine component
+    launches a JSP servlet engine of your servlet container, feeds the
+    HttpRequest into the JSP servlet engine, and pipes the jsp response as
+    SAX events into Cocoon2. The JSP page is specified by the HttpRequest.
+    This way you can continue to use your JSP pages. Your migration from JSP
+    to XSP may be done step by step. You may specify your JSP pages either as
+    JSP scriptlets or as JSP-XML. But keep in mind that your JSP output should
+    be valid XML.
+  -->
+  <jsp-engine logger="core.jsp-engine">
+    <parameter name="servlet-class" value="org.apache.jasper.servlet.JspServlet"/>
+  </jsp-engine>
+  
+  <!--
+    Alternative implementation that uses a RequestDispatcher for running named Servlets.
+  -->
+  <!--
+  <jsp-engine logger="core.jsp-engine" class="org.apache.cocoon.components.jsp.JSPEngineImplNamedDispatcherInclude">
+    <parameter name="servlet-name" value="*.jsp"/>
+    <parameter name="forward" value="false"/>
+  </jsp-engine>
+  -->
+  
+<!--..... End configuration from 'jsp' -->&#13;
+<!--..... Start configuration from 'forms-binding' -->&#13;
+
+       
+  <forms-binding logger="forms.binding">
+    <bindings>
+      <binding name="value" src="org.apache.cocoon.forms.binding.ValueJXPathBindingBuilder"/>
+      <binding name="multi-value" src="org.apache.cocoon.forms.binding.MultiValueJXPathBindingBuilder"/>
+      <binding name="context" src="org.apache.cocoon.forms.binding.ContextJXPathBindingBuilder"/>
+      <binding name="repeater" src="org.apache.cocoon.forms.binding.RepeaterJXPathBindingBuilder"/>
+      <binding name="simple-repeater" src="org.apache.cocoon.forms.binding.SimpleRepeaterJXPathBindingBuilder"/>
+      <binding name="temp-repeater" src="org.apache.cocoon.forms.binding.TempRepeaterJXPathBindingBuilder"/>
+      <binding name="aggregate" src="org.apache.cocoon.forms.binding.AggregateJXPathBindingBuilder"/>
+      <binding name="set-attribute" src="org.apache.cocoon.forms.binding.SetAttributeJXPathBindingBuilder"/>
+      <binding name="insert-node" src="org.apache.cocoon.forms.binding.InsertNodeJXPathBindingBuilder"/>
+      <binding name="delete-node" src="org.apache.cocoon.forms.binding.DeleteNodeJXPathBindingBuilder"/>
+      <binding name="insert-bean" src="org.apache.cocoon.forms.binding.InsertBeanJXPathBindingBuilder"/>
+      <binding name="javascript" src="org.apache.cocoon.forms.binding.JavaScriptJXPathBindingBuilder"/>
+      <binding name="custom" src="org.apache.cocoon.forms.binding.CustomJXPathBindingBuilder"/>
+      <binding name="case" src="org.apache.cocoon.forms.binding.CaseJXPathBindingBuilder"/>
+      <binding name="class" src="org.apache.cocoon.forms.binding.ClassJXPathBindingBuilder"/>
+      <binding name="new" src="org.apache.cocoon.forms.binding.NewJXPathBindingBuilder"/>
+      <binding name="struct" src="org.apache.cocoon.forms.binding.StructJXPathBindingBuilder"/>
+      <binding name="union" src="org.apache.cocoon.forms.binding.UnionJXPathBindingBuilder"/>
+    </bindings>
+  </forms-binding>
+
+<!--..... End configuration from 'forms-binding' -->&#13;
+<!--..... Start configuration from 'forms-datatype' -->&#13;
+
+
+  <!--+
+      | forms's datatypes and validation rules.
+      +-->
+  <forms-datatype logger="forms">
+    <datatypes>
+      <datatype name="string" src="org.apache.cocoon.forms.datatype.typeimpl.StringTypeBuilder">
+        <convertors default="dummy" plain="dummy">
+          <convertor name="dummy" src="org.apache.cocoon.forms.datatype.convertor.DummyStringConvertorBuilder"/>
+        </convertors>
+      </datatype>
+      <datatype name="integer" src="org.apache.cocoon.forms.datatype.typeimpl.IntegerTypeBuilder">
+        <convertors default="formatting" plain="plain">
+          <convertor name="plain" src="org.apache.cocoon.forms.datatype.convertor.PlainIntegerConvertorBuilder"/>
+          <convertor name="formatting" src="org.apache.cocoon.forms.datatype.convertor.FormattingIntegerConvertorBuilder"/>
+        </convertors>
+      </datatype>  
+      <datatype name="long" src="org.apache.cocoon.forms.datatype.typeimpl.LongTypeBuilder">
+        <convertors default="formatting" plain="plain">
+          <convertor name="plain" src="org.apache.cocoon.forms.datatype.convertor.PlainLongConvertorBuilder"/>
+          <convertor name="formatting" src="org.apache.cocoon.forms.datatype.convertor.FormattingLongConvertorBuilder"/>
+        </convertors>
+      </datatype>
+      <datatype name="decimal" src="org.apache.cocoon.forms.datatype.typeimpl.DecimalTypeBuilder">
+        <convertors default="formatting" plain="plain">
+          <convertor name="plain" src="org.apache.cocoon.forms.datatype.convertor.PlainDecimalConvertorBuilder"/>
+          <convertor name="formatting" src="org.apache.cocoon.forms.datatype.convertor.FormattingDecimalConvertorBuilder"/>
+        </convertors>
+      </datatype>
+      <datatype name="float" src="org.apache.cocoon.forms.datatype.typeimpl.FloatTypeBuilder">
+        <convertors default="formatting" plain="plain">
+          <convertor name="plain" src="org.apache.cocoon.forms.datatype.convertor.PlainFloatConvertorBuilder"/>
+          <convertor name="formatting" src="org.apache.cocoon.forms.datatype.convertor.FormattingFloatConvertorBuilder"/>
+        </convertors>
+      </datatype>
+      <datatype name="double" src="org.apache.cocoon.forms.datatype.typeimpl.DoubleTypeBuilder">
+        <convertors default="formatting" plain="plain">
+          <convertor name="plain" src="org.apache.cocoon.forms.datatype.convertor.PlainDoubleConvertorBuilder"/>
+          <convertor name="formatting" src="org.apache.cocoon.forms.datatype.convertor.FormattingDoubleConvertorBuilder"/>
+        </convertors>
+      </datatype>
+      <datatype name="date" src="org.apache.cocoon.forms.datatype.typeimpl.DateTypeBuilder">
+        <convertors default="formatting" plain="millis">
+          <convertor name="formatting" src="org.apache.cocoon.forms.datatype.convertor.FormattingDateConvertorBuilder"/>
+          <convertor name="millis" src="org.apache.cocoon.forms.datatype.convertor.MillisDateConvertorBuilder"/>
+        </convertors>
+      </datatype>
+      <datatype name="boolean" src="org.apache.cocoon.forms.datatype.typeimpl.BooleanTypeBuilder">
+        <convertors default="plain" plain="plain">
+          <convertor name="plain" src="org.apache.cocoon.forms.datatype.convertor.PlainBooleanConvertorBuilder"/>
+        </convertors>
+      </datatype>  
+      <datatype name="enum" src="org.apache.cocoon.forms.datatype.typeimpl.EnumTypeBuilder">
+        <convertors default="enum" plain="enum">
+          <convertor name="enum" src="org.apache.cocoon.forms.datatype.convertor.EnumConvertorBuilder"/>
+        </convertors>
+      </datatype>
+    </datatypes>
+    <validation-rules>
+      <!-- old-style datatype validators (deprecated) -->
+      <validation-rule name="length" src="org.apache.cocoon.forms.datatype.validationruleimpl.LengthValidationRuleBuilder"/>
+      <validation-rule name="email" src="org.apache.cocoon.forms.datatype.validationruleimpl.EmailValidationRuleBuilder"/>
+      <validation-rule name="value-count" src="org.apache.cocoon.forms.datatype.validationruleimpl.ValueCountValidationRuleBuilder"/>
+      <validation-rule name="range" src="org.apache.cocoon.forms.datatype.validationruleimpl.RangeValidationRuleBuilder"/>
+      <validation-rule name="assert" src="org.apache.cocoon.forms.datatype.validationruleimpl.AssertValidationRuleBuilder"/>
+      <validation-rule name="mod10" src="org.apache.cocoon.forms.datatype.validationruleimpl.Mod10ValidationRuleBuilder"/>
+      <validation-rule name="regexp" src="org.apache.cocoon.forms.datatype.validationruleimpl.RegExpValidationRuleBuilder"/>
+    </validation-rules>
+  </forms-datatype>
+  
+<!--..... End configuration from 'forms-datatype' -->&#13;
+<!--..... Start configuration from 'forms-expression' -->&#13;
+
+
+  <forms-expression logger="forms.expression">
+    <function class="org.apache.cocoon.forms.expression.NullFunction" name="Null"/>
+    <function class="org.apache.cocoon.forms.expression.IsNullFunction" name="IsNull"/>
+    <function class="org.apache.cocoon.forms.expression.StringFunction" name="String"/>
+  </forms-expression>
+<!--..... End configuration from 'forms-expression' -->&#13;
+<!--..... Start configuration from 'forms-form' -->&#13;
+
+
+  <!--+
+      | forms's FormManager component
+      +-->
+  <forms-formmanager>
+    <widgets>
+      <widget name="form" src="org.apache.cocoon.forms.formmodel.FormDefinitionBuilder"/>
+      <widget name="field" src="org.apache.cocoon.forms.formmodel.FieldDefinitionBuilder"/>
+      <widget name="repeater" src="org.apache.cocoon.forms.formmodel.RepeaterDefinitionBuilder"/>
+      <widget name="booleanfield" src="org.apache.cocoon.forms.formmodel.BooleanFieldDefinitionBuilder"/>
+      <widget name="multivaluefield" src="org.apache.cocoon.forms.formmodel.MultiValueFieldDefinitionBuilder"/>
+      <widget name="action" src="org.apache.cocoon.forms.formmodel.ActionDefinitionBuilder"/>
+      <widget name="repeater-action" src="org.apache.cocoon.forms.formmodel.RepeaterActionDefinitionBuilder"/>
+      <widget name="row-action" src="org.apache.cocoon.forms.formmodel.RowActionDefinitionBuilder"/>
+      <widget name="submit" src="org.apache.cocoon.forms.formmodel.SubmitDefinitionBuilder"/>
+      <widget name="button" src="org.apache.cocoon.forms.formmodel.ButtonDefinitionBuilder"/>
+      <widget name="aggregatefield" src="org.apache.cocoon.forms.formmodel.AggregateFieldDefinitionBuilder"/>
+      <widget name="output" src="org.apache.cocoon.forms.formmodel.OutputDefinitionBuilder"/>
+      <widget name="upload" src="org.apache.cocoon.forms.formmodel.UploadDefinitionBuilder"/>
+      <widget name="messages" src="org.apache.cocoon.forms.formmodel.MessagesDefinitionBuilder"/>
+      <widget name="class" src="org.apache.cocoon.forms.formmodel.ClassDefinitionBuilder"/>
+      <widget name="new" src="org.apache.cocoon.forms.formmodel.NewDefinitionBuilder"/>
+      <widget name="struct" src="org.apache.cocoon.forms.formmodel.StructDefinitionBuilder"/>
+      <widget name="union" src="org.apache.cocoon.forms.formmodel.UnionDefinitionBuilder"/>
+    </widgets>
+  </forms-formmanager>
+<!--..... End configuration from 'forms-form' -->&#13;
+<!--..... Start configuration from 'forms-selection-lists' -->&#13;
+
+
+  <forms-selection-lists default="default">
+    <selection-list class="org.apache.cocoon.forms.datatype.DefaultSelectionListBuilder" name="default"/>
+    <selection-list class="org.apache.cocoon.forms.datatype.FlowJXPathSelectionListBuilder" name="flow-jxpath"/>
+    <selection-list class="org.apache.cocoon.forms.datatype.EnumSelectionListBuilder" name="enum"/>
+    <selection-list class="org.apache.cocoon.forms.datatype.JavaSelectionListBuilder" name="java"/>
+  </forms-selection-lists>
+  
+<!--..... End configuration from 'forms-selection-lists' -->&#13;
+<!--..... Start configuration from 'forms-validators' -->&#13;
+
+
+  <forms-validators>
+    <!-- new-style validators -->
+    <validator class="org.apache.cocoon.forms.validation.impl.JavaScriptValidatorBuilder" name="javascript"/>
+    <validator class="org.apache.cocoon.forms.validation.impl.LengthValidatorBuilder" name="length"/>
+    <validator class="org.apache.cocoon.forms.validation.impl.EmailValidatorBuilder" name="email"/>
+    <validator class="org.apache.cocoon.forms.validation.impl.ValueCountValidatorBuilder" name="value-count"/>
+    <validator class="org.apache.cocoon.forms.validation.impl.RangeValidatorBuilder" name="range"/>
+    <validator class="org.apache.cocoon.forms.validation.impl.AssertValidatorBuilder" name="assert"/>
+    <validator class="org.apache.cocoon.forms.validation.impl.Mod10ValidatorBuilder" name="mod10"/>
+    <validator class="org.apache.cocoon.forms.validation.impl.RegExpValidatorBuilder" name="regexp"/>
+  </forms-validators>
+
+<!--..... End configuration from 'forms-validators' -->&#13;
+<!--..... Start configuration from 'forms-widgetlisteners' -->&#13;
+
+
+  <forms-widgetlisteners>
+    <listener class="org.apache.cocoon.forms.event.impl.JavaClassWidgetListenerBuilder" name="java"/>
+    <listener class="org.apache.cocoon.forms.event.impl.JavaScriptWidgetListenerBuilder" name="javascript"/>
+  </forms-widgetlisteners>
+
+<!--..... End configuration from 'forms-widgetlisteners' -->&#13;
+<!--..... Start configuration from 'lucene' -->&#13;
+
+
+  <!-- Search:
+    These are the components that handle the search. 
+    
+    Cocoon indexer write into an index.
+    Cocoon searcher reads form an index, returning matched hits.
+    Cocoon crawler crawls all links starting from a given base URI.
+    Lucene xml indexer build a lucene document from XML content.
+   -->
+  <cocoon-indexer logger="core.search.indexer"/>
+  <cocoon-searcher logger="core.search.searcher"/>  
+  <cocoon-crawler logger="core.search.crawler"/>
+  <lucene-xml-indexer logger="core.search.lucene"/>
+<!--..... End configuration from 'lucene' -->&#13;
+<!--..... Start configuration from 'profiler' -->&#13;
+
+
+  <!--+ 
+      | Profiler:
+      | The profiler facilitates the gathering of statistics about timings of
+      | different steps of pipelines.
+      +-->
+  <profiler results="10"/>
+<!--..... End configuration from 'profiler' -->&#13;
+<!--..... Start configuration from 'web3' -->&#13;
+
+
+  <web3 logger="core.web3">
+    <!-- optional 
+    <class>put your DSImpl here</class>
+    -->
+    <backend name="indy">
+      <pool level="0" size="10" trace="false">
+        <client>100</client>
+        <user>user</user>
+        <password>secret</password>
+        <language>DE</language>
+        <route>indy</route>
+        <system>00</system>
+        <gateway>sapgw00</gateway>
+        <program-id>USR-GR02</program-id>
+      </pool>
+    </backend>
+  </web3>
+
+  <web3-streamer logger="core.web3">
+    <default logger="core.web3.default-streamer" name="default"/>
+  </web3-streamer>
+
+  <web-client logger="core.web3-client"/>
+
+<!--..... End configuration from 'web3' -->&#13;
+<!--..... Start configuration from 'slide-repository' -->&#13;
+
+
+  <!--+ 
+      | Jakarta Slide repository
+      |
+      | The Slide repository handles serveral sources sorted in namspaces.
+      +-->
+  <slide-repository file="context://WEB-INF/slide.xconf" logger="slide.repository"/>
+  
+<!--..... End configuration from 'slide-repository' -->&#13;
+<!--..... Start configuration from 'deli' -->&#13;
+
+
+<!-- ================================ Deli ================================ -->
+
+  <!--+
+      | Deli CC/PP Database
+      |
+      | Deli matches the requesting user agent with a database of CC/PP
+      | profiles and augments the set of variables available to any XSLT
+      | stylesheet with stuff like user agent screen size, or color depth
+      | that can be useful for tuning your output to the various devices.
+      |
+      | Note: this is mostly useful for mobile agents such as cell phones
+      | or PDA where it's possible to associate the user-agent with the
+      | device that runs on.
+      +-->
+  <deli class="org.apache.cocoon.components.deli.DeliImpl">
+    <parameter name="deli-config-file" value="WEB-INF/deli/config/deliConfig.xml"/>
+  </deli>
+  
+<!--..... End configuration from 'deli' -->&#13;
+<!--..... Start configuration from 'mailsender' -->&#13;
+
+
+    <!--+
+        |  Component for simplified mail sending.
+        +-->
+    <component class="org.apache.cocoon.mail.MailMessageSender" logger="core.mail.MailSender" role="org.apache.cocoon.mail.MailSender">
+      <!--+
+          | SMTP host name, user name, and password.
+      <smtp-host>127.0.0.1</smtp-host>
+      <smtp-user>john</smtp-user>
+      <smtp-password>john</smtp-password>
+          +-->
+    </component>
+
+<!--..... End configuration from 'mailsender' -->&#13;
+<!--..... Start configuration from 'jxpath' -->&#13;
+
+
+  <component class="org.apache.cocoon.jxpath.JXPathCocoonContexts" logger="core.jxpath" role="org.apache.cocoon.jxpath.JXPathCocoonContexts"/>
+<!--..... End configuration from 'jxpath' -->&#13;
+<!--..... Start configuration from 'tag' -->&#13;
+
+
+  <component class="org.apache.cocoon.components.ExtendedComponentSelector" role="org.apache.cocoon.taglib.TagSelector">
+    <taglib class="org.apache.cocoon.components.ExtendedComponentSelector" logger="sitemap.taglib.core" name="urn:apache:taglib:core">
+      <tag class="org.apache.cocoon.taglib.core.SourceTag" logger="sitemap.taglib.core.source" name="source"/>
+    </taglib>
+    <taglib class="org.apache.cocoon.components.ExtendedComponentSelector" logger="sitemap.taglib.datetime" name="urn:apache:taglib:datetime">
+      <tag class="org.apache.cocoon.taglib.datetime.MonthsTag" logger="sitemap.taglib.datetime.months" name="months"/>
+    </taglib>
+    <taglib class="org.apache.cocoon.components.ExtendedComponentSelector" logger="sitemap.taglib.i18n" name="urn:apache:taglib:i18n">
+      <tag class="org.apache.cocoon.taglib.i18n.LocaleTag" logger="sitemap.taglib.i18n.Locale" name="locale"/>
+    </taglib>
+    <taglib class="org.apache.cocoon.components.ExtendedComponentSelector" logger="sitemap.taglib.jxpath" name="urn:apache:taglib:jxpath:core">
+      <tag class="org.apache.cocoon.taglib.jxpath.core.OutTag" logger="sitemap.taglib.jxpath.core.out" name="out"/>
+      <tag class="org.apache.cocoon.taglib.jxpath.core.ForEachTag" logger="sitemap.taglib.jxpath.core.forEach" name="forEach"/>
+    </taglib>
+    <taglib class="org.apache.cocoon.components.ExtendedComponentSelector" logger="sitemap.taglib.string" name="urn:apache:taglib:string">
+      <tag class="org.apache.cocoon.taglib.string.LowerCaseTag" logger="sitemap.taglib.string.lower" name="lower"/>
+      <tag class="org.apache.cocoon.taglib.string.TextRecordingTag" logger="sitemap.taglib.string.textRecording" name="textRecording"/>
+      <tag class="org.apache.cocoon.taglib.string.TrimTag" logger="sitemap.taglib.string.trim" name="trim"/>
+      <tag class="org.apache.cocoon.taglib.string.UpperCaseTag" logger="sitemap.taglib.string.upper" name="upper"/>
+    </taglib>
+    <taglib class="org.apache.cocoon.components.ExtendedComponentSelector" logger="sitemap.taglib.test" name="urn:apache:taglib:test">
+      <tag class="org.apache.cocoon.taglib.test.HelloWorldTag" logger="sitemap.taglib.test.hello" name="hello"/>
+      <tag class="org.apache.cocoon.taglib.test.IterationTestTag" logger="sitemap.taglib.test.iteration" name="iteration"/>
+    </taglib>
+  <!--..... Start configuration from 'faces-taglib' -->&#13;
+
+
+    <taglib class="org.apache.cocoon.components.ExtendedComponentSelector" logger="sitemap.taglib.jsf" name="http://java.sun.com/jsf/core">
+      <tag class="org.apache.cocoon.faces.taglib.ActionListenerTag" logger="sitemap.taglib.jsf" name="actionListener"/>
+      <tag class="org.apache.cocoon.faces.taglib.AttributeTag" logger="sitemap.taglib.jsf" name="attribute"/>
+      <tag class="org.apache.cocoon.faces.taglib.ConvertDateTimeTag" logger="sitemap.taglib.jsf" name="convertDateTime"/>
+      <tag class="org.apache.cocoon.faces.taglib.ConverterTag" logger="sitemap.taglib.jsf" name="converter"/>
+      <tag class="org.apache.cocoon.faces.taglib.ConvertNumberTag" logger="sitemap.taglib.jsf" name="convertNumber"/>
+      <tag class="org.apache.cocoon.faces.taglib.FacetTag" logger="sitemap.taglib.jsf" name="facet"/>
+      <tag class="org.apache.cocoon.faces.taglib.LoadBundleTag" logger="sitemap.taglib.jsf" name="loadBundle"/>
+      <tag class="org.apache.cocoon.faces.taglib.ParameterTag" logger="sitemap.taglib.jsf" name="param"/>
+      <tag class="org.apache.cocoon.faces.taglib.SelectItemTag" logger="sitemap.taglib.jsf" name="selectItem"/>
+      <tag class="org.apache.cocoon.faces.taglib.SelectItemsTag" logger="sitemap.taglib.jsf" name="selectItems"/>
+      <tag class="org.apache.cocoon.faces.taglib.SubviewTag" logger="sitemap.taglib.jsf" name="subview"/>
+      <tag class="org.apache.cocoon.faces.taglib.ValidateDoubleRangeTag" logger="sitemap.taglib.jsf" name="validateDoubleRange"/>
+      <tag class="org.apache.cocoon.faces.taglib.ValidateLengthTag" logger="sitemap.taglib.jsf" name="validateLength"/>
+      <tag class="org.apache.cocoon.faces.taglib.ValidateLongRangeTag" logger="sitemap.taglib.jsf" name="validateLongRange"/>
+      <tag class="org.apache.cocoon.faces.taglib.ValidatorTag" logger="sitemap.taglib.jsf" name="validator"/>
+      <tag class="org.apache.cocoon.faces.taglib.ValueChangeListenerTag" logger="sitemap.taglib.jsf" name="valueChangeListener"/>
+      <tag class="org.apache.cocoon.faces.taglib.VerbatimTag" logger="sitemap.taglib.jsf" name="verbatim"/>
+      <tag class="org.apache.cocoon.faces.taglib.ViewTag" logger="sitemap.taglib.jsf" name="view"/>
+    </taglib>
+    <taglib class="org.apache.cocoon.components.ExtendedComponentSelector" logger="sitemap.taglib.jsf.html" name="http://java.sun.com/jsf/html">
+      <tag class="org.apache.cocoon.faces.taglib.html.ColumnTag" logger="sitemap.taglib.jsf.html" name="column"/>
+      <tag class="org.apache.cocoon.faces.taglib.html.CommandButtonTag" logger="sitemap.taglib.jsf.html" name="commandButton"/>
+      <tag class="org.apache.cocoon.faces.taglib.html.CommandLinkTag" logger="sitemap.taglib.jsf.html" name="commandLink"/>
+      <tag class="org.apache.cocoon.faces.taglib.html.DataTableTag" logger="sitemap.taglib.jsf.html" name="dataTable"/>
+      <tag class="org.apache.cocoon.faces.taglib.html.FormTag" logger="sitemap.taglib.jsf.html" name="form"/>
+      <tag class="org.apache.cocoon.faces.taglib.html.GraphicImageTag" logger="sitemap.taglib.jsf.html" name="graphicImage"/>
+      <tag class="org.apache.cocoon.faces.taglib.html.InputHiddenTag" logger="sitemap.taglib.jsf.html" name="inputHidden"/>
+      <tag class="org.apache.cocoon.faces.taglib.html.InputSecretTag" logger="sitemap.taglib.jsf.html" name="inputSecret"/>
+      <tag class="org.apache.cocoon.faces.taglib.html.InputTextTag" logger="sitemap.taglib.jsf.html" name="inputText"/>
+      <tag class="org.apache.cocoon.faces.taglib.html.InputTextareaTag" logger="sitemap.taglib.jsf.html" name="inputTextarea"/>
+      <tag class="org.apache.cocoon.faces.taglib.html.MessageTag" logger="sitemap.taglib.jsf.html" name="message"/>
+      <tag class="org.apache.cocoon.faces.taglib.html.MessagesTag" logger="sitemap.taglib.jsf.html" name="messages"/>
+      <tag class="org.apache.cocoon.faces.taglib.html.OutputFormatTag" logger="sitemap.taglib.jsf.html" name="outputFormat"/>
+      <tag class="org.apache.cocoon.faces.taglib.html.OutputLabelTag" logger="sitemap.taglib.jsf.html" name="outputLabel"/>
+      <tag class="org.apache.cocoon.faces.taglib.html.OutputLinkTag" logger="sitemap.taglib.jsf.html" name="outputLink"/>
+      <tag class="org.apache.cocoon.faces.taglib.html.OutputTextTag" logger="sitemap.taglib.jsf.html" name="outputText"/>
+      <tag class="org.apache.cocoon.faces.taglib.html.PanelGridTag" logger="sitemap.taglib.jsf.html" name="panelGrid"/>
+      <tag class="org.apache.cocoon.faces.taglib.html.PanelGroupTag" logger="sitemap.taglib.jsf.html" name="panelGroup"/>
+      <tag class="org.apache.cocoon.faces.taglib.html.SelectBooleanCheckboxTag" logger="sitemap.taglib.jsf.html" name="selectBooleanCheckbox"/>
+      <tag class="org.apache.cocoon.faces.taglib.html.SelectManyCheckboxTag" logger="sitemap.taglib.jsf.html" name="selectManyCheckbox"/>
+      <tag class="org.apache.cocoon.faces.taglib.html.SelectManyListboxTag" logger="sitemap.taglib.jsf.html" name="selectManyListbox"/>
+      <tag class="org.apache.cocoon.faces.taglib.html.SelectManyMenuTag" logger="sitemap.taglib.jsf.html" name="selectManyMenu"/>
+      <tag class="org.apache.cocoon.faces.taglib.html.SelectOneListboxTag" logger="sitemap.taglib.jsf.html" name="selectOneListbox"/>
+      <tag class="org.apache.cocoon.faces.taglib.html.SelectOneMenuTag" logger="sitemap.taglib.jsf.html" name="selectOneMenu"/>
+      <tag class="org.apache.cocoon.faces.taglib.html.SelectOneRadioTag" logger="sitemap.taglib.jsf.html" name="selectOneRadio"/>
+    </taglib>
+
+<!--..... End configuration from 'faces-taglib' -->&#13;
+
+
+    <!--
+      - CarStore Demo taglib: Custom components
+      -->
+    <taglib class="org.apache.cocoon.components.ExtendedComponentSelector" logger="sitemap.taglib.jsf.demo" name="http://java.sun.com/jsf/demo/components">
+      <tag class="org.apache.cocoon.faces.samples.components.taglib.AreaTag" logger="sitemap.taglib.jsf.demo" name="area"/>
+      <tag class="org.apache.cocoon.faces.samples.components.taglib.MapTag" logger="sitemap.taglib.jsf.demo" name="map"/>
+    </taglib>
+
+    <!--
+      - CarStore Demo taglib: Custom validator
+      -->
+    <taglib class="org.apache.cocoon.components.ExtendedComponentSelector" logger="sitemap.taglib.jsf.carstore" name="urn:carstoretaglibrary_1.1">
+      <tag class="org.apache.cocoon.faces.samples.carstore.FormatValidatorTag" logger="sitemap.taglib.jsf.carstore" name="format_validator"/>
+    </taglib>
+
+</component>
+  
+<!--..... End configuration from 'tag' -->&#13;
+<!--..... Start configuration from 'portal' -->&#13;
+
+
+ <!-- Event Aspect configuration -->
+ <component class="org.apache.cocoon.components.ExtendedComponentSelector" role="org.apache.cocoon.portal.event.aspect.EventAspectSelector">
+    <aspect class="org.apache.cocoon.portal.event.aspect.impl.ActionCounterEventAspect" name="action-counter"/>
+    <aspect class="org.apache.cocoon.portal.event.aspect.impl.RequestParameterEventAspect" name="request-parameter"/>
+    <aspect class="org.apache.cocoon.portal.event.aspect.impl.FrameEventAspect" name="frame"/>
+    <aspect class="org.apache.cocoon.portal.event.aspect.impl.LinkEventAspect" name="link"/>    
+    <aspect class="org.apache.cocoon.portal.event.aspect.impl.FullScreenCopletEventAspect" name="full-screen-coplet"/>
+
+    <!-- This aspect sets headers on the response that tell the client to not cache the response: -->
+    <aspect class="org.apache.cocoon.portal.event.aspect.impl.NoClientCachingEventAspect" name="no-client-caching"/>
+ </component>
+
+ <component class="org.apache.cocoon.portal.event.impl.DefaultEventManager" logger="portal" role="org.apache.cocoon.portal.event.EventManager">
+    <event-aspects>
+        <aspect type="action-counter"/>
+        <aspect type="frame"/>
+        <aspect type="link"/>
+        <aspect type="full-screen-coplet"/>
+        <aspect type="request-parameter"/>
+    </event-aspects>
+    <!-- add a new instance of each class as a subscriber: -->
+    <subscriber-classes>
+        <class name="org.apache.cocoon.portal.event.subscriber.impl.DefaultChangeAspectDataEventSubscriber"/>
+        <class name="org.apache.cocoon.portal.event.subscriber.impl.DefaultJXPathEventSubscriber"/>
+        <class name="org.apache.cocoon.portal.event.subscriber.impl.DefaulCopletDataEventSubscriber"/>
+    </subscriber-classes>
+    <!-- add each component as a subscriber (the component should be thread safe): -->
+    <subscriber-roles>
+        <!-- <role name="AVALON-ROLE"/> -->
+    </subscriber-roles>
+ </component>
+
+  <!-- This is the portal manager.
+       If you don't need the JSR-168 support uncomment the following line and comment out 
+       the definition below:
+    <component class="org.apache.cocoon.portal.impl.PortalManagerImpl" 
+               logger="portal" role="org.apache.cocoon.portal.PortalManager"/>
+
+  -->
+  <component class="org.apache.cocoon.portal.impl.PortletPortalManager" logger="portal" role="org.apache.cocoon.portal.PortalManager"/>
+
+  <!-- This is the portal service -->
+  <component class="org.apache.cocoon.portal.impl.PortalServiceImpl" logger="portal" role="org.apache.cocoon.portal.PortalService">
+   <portals>
+     <!-- Configure your portals here: -->
+   
+
+ <portal name="portal">
+   <profile-manager>org.apache.cocoon.portal.profile.ProfileManager/Auth</profile-manager>
+ </portal>
+
+</portals>
+ </component>
+
+ <component class="org.apache.cocoon.portal.impl.DefaultLinkService" logger="portal" role="org.apache.cocoon.portal.LinkService"/>
+
+ <component class="org.apache.cocoon.portal.event.impl.DefaultEventConverter" logger="portal" role="org.apache.cocoon.portal.event.EventConverter">
+ </component>
+
+  <!-- Coplet Adapter configuration -->
+  <component class="org.apache.cocoon.components.ExtendedComponentSelector" role="org.apache.cocoon.portal.coplet.adapter.CopletAdapterSelector">
+    <!-- This is the pipeline/uri based adapter -->
+    <coplet-adapter class="org.apache.cocoon.portal.coplet.adapter.impl.URICopletAdapter" logger="portal" name="uri"/>
+    <!-- This is the JSR-168 adapter -->
+    <coplet-adapter class="org.apache.cocoon.portal.coplet.adapter.impl.PortletAdapter" logger="portal" name="portlet"/>
+    <!-- This is an extension of the uri adapter -->
+    <coplet-adapter class="org.apache.cocoon.portal.coplet.adapter.impl.CachingURICopletAdapter" logger="portal" name="caching-uri"/>
+    <!-- This is the application adapter -->
+    <coplet-adapter class="org.apache.cocoon.portal.coplet.adapter.impl.ApplicationCopletAdapter" logger="portal" name="application"/>
+ </component>
+
+
+ <!-- Renderer Aspect configuration -->
+ <component class="org.apache.cocoon.components.ExtendedComponentSelector" role="org.apache.cocoon.portal.layout.renderer.aspect.RendererAspectSelector">
+    <aspect class="org.apache.cocoon.portal.layout.renderer.aspect.impl.CompositeContentAspect" name="composite-content"/>
+    <aspect class="org.apache.cocoon.portal.layout.renderer.aspect.impl.TabContentAspect" name="tab-content"/>
+    <aspect class="org.apache.cocoon.portal.layout.renderer.aspect.impl.WindowAspect" name="window"/>
+    <aspect class="org.apache.cocoon.portal.layout.renderer.aspect.impl.PortletWindowAspect" name="portlet-window"/>
+
+    <!-- This aspect can be used to render the minimize/maximize buttons -->
+    <aspect class="org.apache.cocoon.portal.layout.renderer.aspect.impl.SizingAspect" name="coplet-sizing"/>
+
+    <!-- This aspect can be used to render the remove button -->
+    <aspect class="org.apache.cocoon.portal.layout.renderer.aspect.impl.RemovableAspect" name="coplet-removing"/>
+
+    <!-- This aspect can be used to render a full-screen button -->
+    <aspect class="org.apache.cocoon.portal.layout.renderer.aspect.impl.FullScreenCopletAspect" name="coplet-full-screen"/>
+
+    <!-- This aspect can be used to render cinclude statements that will be used to include the coplet content,
+         use the coplet aspect below to directly stream the content -->
+    <aspect class="org.apache.cocoon.portal.layout.renderer.aspect.impl.CIncludeCopletAspect" name="coplet-cinclude"/>
+
+    <!-- This aspect creates a history of all layout aspect datas,
+         coplet aspect datas and coplet attributes. It can be used by
+         the bookmark action to browse the history -->
+    <aspect class="org.apache.cocoon.portal.layout.renderer.aspect.impl.HistoryAspect" name="history"/>
+    
+    <!-- This aspect can be used to render the content of the coplet -->
+    <aspect class="org.apache.cocoon.portal.layout.renderer.aspect.impl.DefaultCopletAspect" name="coplet"/>
+    <aspect class="org.apache.cocoon.portal.layout.renderer.aspect.impl.FrameAspect" name="frame"/>
+    <aspect class="org.apache.cocoon.portal.layout.renderer.aspect.impl.XSLTAspect" name="xslt"/>
+    <aspect class="org.apache.cocoon.portal.layout.renderer.aspect.impl.ParameterAspect" name="parameter"/>
+    <!-- This is the special basket renderer -->
+    <aspect class="org.apache.cocoon.portal.coplets.basket.AddToBasketAspect" name="basket"/>
+ </component>
+
+ <!-- Aspect Storage configuration -->
+ <component class="org.apache.cocoon.components.ExtendedComponentSelector" role="org.apache.cocoon.portal.aspect.AspectDataStoreSelector">
+    <store class="org.apache.cocoon.portal.aspect.impl.TemporaryAspectDataStore" name="temporary"/>
+    <store class="org.apache.cocoon.portal.aspect.impl.RequestAspectDataStore" name="request"/>
+    <store class="org.apache.cocoon.portal.aspect.impl.SessionAspectDataStore" name="session"/>
+    <store class="org.apache.cocoon.portal.aspect.impl.PersistentAspectDataStore" name="persistent"/>
+    <store class="org.apache.cocoon.portal.aspect.impl.MemoryAspectDataStore" name="memory"/>
+ </component>
+
+<component class="org.apache.cocoon.components.persistence.CastorSourceConverter" role="org.apache.cocoon.components.persistence.CastorSourceConverter">
+ 	<mapping-source source="layout">resource://org/apache/cocoon/portal/layout/layout.xml</mapping-source>
+ 	<mapping-source source="copletbasedata">resource://org/apache/cocoon/portal/coplet/copletbasedata.xml</mapping-source>
+ 	<mapping-source source="copletdata">resource://org/apache/cocoon/portal/coplet/copletdata.xml</mapping-source>
+ 	<mapping-source source="copletinstancedata">resource://org/apache/cocoon/portal/coplet/copletinstancedata.xml</mapping-source>
+ </component>
+ <component class="org.apache.cocoon.portal.profile.impl.MapProfileLS" role="org.apache.cocoon.portal.profile.ProfileLS"/>
+
+ <component class="org.apache.cocoon.components.variables.DefaultVariableResolverFactory" role="org.apache.cocoon.components.variables.VariableResolverFactory"/>
+ <!-- This is the basket manager -->
+ <component class="org.apache.cocoon.portal.coplets.basket.BasketManagerImpl" role="org.apache.cocoon.portal.coplets.basket.BasketManager"/>
+
+<!--..... End configuration from 'portal' -->&#13;
+<!--..... Start configuration from 'ojb-odmg' -->&#13;
+
+  <!-- ODMG Implementation Interface -->
+  <ojb-odmg logger="core.ojb-odmg"/>
+<!--..... End configuration from 'ojb-odmg' -->&#13;
+<!--..... Start configuration from 'ojb-pb' -->&#13;
+
+  <!-- PersistenceBroker Interface -->
+  <ojb-pb logger="core.ojb-pb"/>
+<!--..... End configuration from 'ojb-pb' -->&#13;
+<!--..... Start configuration from 'ojb' -->&#13;
+
+  <!-- Persistent Manager Factory for JDO -->
+  <!-- uncomment in order to set the logger to a category other than core.startup
+  <ojb-jdo class="org.apache.cocoon.ojb.jdo.components.JdoPMFImpl" logger="core.ojb-jdo"/>
+  -->
+<!--..... End configuration from 'ojb' -->&#13;
+
+
+ <!-- THIS IS A SAMPLE PORTAL
+      It demonstrates several features of the portal engine,
+      so it's not optimized for production. Make sure that
+      if you use the portal for your own projects that you
+      remove all unused stuff from the configuration! 
+ -->
+ <component class="org.apache.cocoon.portal.profile.impl.AuthenticationProfileManager" logger="portal" role="org.apache.cocoon.portal.profile.ProfileManager/Auth">
+ </component>
+
+ <!-- Renderer configuration -->
+ <component class="org.apache.cocoon.components.ExtendedComponentSelector" role="org.apache.cocoon.portal.layout.renderer.RendererSelector">
+     <renderer class="org.apache.cocoon.portal.layout.renderer.impl.AspectRenderer" logger="portal" name="column">
+         <aspects>
+             <aspect type="xslt">
+                 <parameter name="style" value="{global:skin}styles/column.xsl"/>
+             </aspect>
+             <aspect type="parameter">
+                 <parameter name="tag-name" value="column-layout"/>
+             </aspect>
+             <aspect type="composite-content">
+                 <parameter name="root-tag" value="false"/>
+             </aspect>
+         </aspects>
+     </renderer>
+     <renderer class="org.apache.cocoon.portal.layout.renderer.impl.AspectRenderer" logger="portal" name="row">
+         <aspects>
+             <aspect type="xslt">
+                 <parameter name="style" value="{global:skin}styles/row.xsl"/>
+             </aspect>
+             <aspect type="parameter">
+                 <parameter name="tag-name" value="row-layout"/>
+             </aspect>
+             <aspect type="composite-content">
+                 <parameter name="root-tag" value="false"/>
+             </aspect>
+         </aspects>
+     </renderer>
+     <renderer class="org.apache.cocoon.portal.layout.renderer.impl.AspectRenderer" logger="portal" name="tab">
+         <aspects>
+             <aspect type="xslt">
+                 <parameter name="style" value="{global:skin}styles/tab.xsl"/>
+             </aspect>
+             <aspect type="parameter">
+                 <parameter name="tag-name" value="tab-layout"/>
+             </aspect>
+             <aspect type="history"/>
+             <aspect type="tab-content">
+                 <parameter name="root-tag" value="false"/>
+                 <parameter name="store" value="session"/>
+             </aspect>
+         </aspects>
+     </renderer>
+     <renderer class="org.apache.cocoon.portal.layout.renderer.impl.AspectRenderer" logger="portal" name="rawtab">
+         <aspects>
+             <aspect type="parameter">
+                 <parameter name="tag-name" value="tab-layout"/>
+             </aspect>
+             <aspect type="history"/>
+             <aspect type="tab-content">
+                 <parameter name="root-tag" value="false"/>
+                 <parameter name="store" value="session"/>
+             </aspect>
+         </aspects>
+     </renderer>
+     <renderer class="org.apache.cocoon.portal.layout.renderer.impl.AspectRenderer" logger="portal" name="linktab">
+         <aspects>
+             <aspect type="xslt">
+                 <parameter name="style" value="{global:skin}styles/linktab.xsl"/>
+             </aspect>
+             <aspect type="parameter">
+                 <parameter name="tag-name" value="linktab-layout"/>
+             </aspect>
+             <aspect type="history"/>
+             <aspect type="tab-content">
+                 <parameter name="root-tag" value="false"/>
+                 <parameter name="store" value="session"/>
+             </aspect>
+         </aspects>
+     </renderer>
+     <renderer class="org.apache.cocoon.portal.layout.renderer.impl.AspectRenderer" logger="portal" name="window">
+         <aspects>
+             <aspect type="xslt">
+                 <parameter name="style" value="{global:skin}styles/window.xsl"/>
+             </aspect>
+             <aspect type="parameter">
+                 <parameter name="tag-name" value="window"/>
+             </aspect>
+             <aspect type="window">
+                 <parameter name="root-tag" value="false"/>
+             </aspect>
+             <aspect type="coplet-removing"/>
+             <aspect type="coplet-full-screen"/>
+             <aspect type="coplet-sizing"/>
+             <aspect type="history"/>
+             <aspect type="basket"/>
+             <aspect type="coplet-cinclude"/>
+         </aspects>
+     </renderer>
+     <renderer class="org.apache.cocoon.portal.layout.renderer.impl.AspectRenderer" logger="portal" name="frame">
+         <aspects>
+             <aspect type="frame">
+                 <parameter name="store" value="request"/>
+             </aspect>
+         </aspects>
+     </renderer>
+     <renderer class="org.apache.cocoon.portal.layout.renderer.impl.AspectRenderer" logger="portal" name="nowindow">
+         <aspects>
+             <aspect type="history"/>
+             <aspect type="coplet"/>
+         </aspects>
+     </renderer>
+     <renderer class="org.apache.cocoon.portal.layout.renderer.impl.AspectRenderer" logger="portal" name="portlet-window">
+         <aspects>
+             <aspect type="xslt">
+                 <parameter name="style" value="{global:skin}styles/window.xsl"/>
+             </aspect>
+             <aspect type="parameter">
+                 <parameter name="tag-name" value="window"/>
+             </aspect>
+             <aspect type="portlet-window">
+                 <parameter name="root-tag" value="false"/>
+             </aspect>
+             <aspect type="coplet-removing"/>
+             <aspect type="history"/>
+             <aspect type="basket"/>
+             <aspect type="coplet-cinclude"/>
+         </aspects>
+     </renderer>
+     <renderer class="org.apache.cocoon.portal.layout.renderer.impl.DefaultLinkRenderer" logger="portal" name="link"/>
+     <renderer class="org.apache.cocoon.portal.layout.renderer.impl.AspectRenderer" logger="portal" name="decorated-frame">
+         <aspects>
+            <aspect type="xslt">
+                <parameter name="style" value="{global:skin}styles/frame.xsl"/>
+            </aspect>
+            <aspect type="parameter">
+                <parameter name="tag-name" value="frame"/>
+            </aspect>
+            <aspect type="frame">
+                <parameter name="store" value="request"/>
+            </aspect>
+         </aspects>
+    </renderer>
+ </component>
+ 
+<!-- Layout factory configuration -->
+<component class="org.apache.cocoon.portal.layout.impl.DefaultLayoutFactory" role="org.apache.cocoon.portal.layout.LayoutFactory">
+    <layouts>
+        <layout class="org.apache.cocoon.portal.layout.impl.CompositeLayoutImpl" name="column">
+            <renderers default="column">
+                <renderer name="column"/>
+            </renderers>
+        </layout>
+        <layout class="org.apache.cocoon.portal.layout.impl.CompositeLayoutImpl" name="row">
+            <renderers default="row">
+                <renderer name="row"/>
+            </renderers>
+        </layout>
+        <layout class="org.apache.cocoon.portal.layout.impl.CompositeLayoutImpl" item-class="org.apache.cocoon.portal.layout.NamedItem" name="tab">
+            <renderers default="tab">
+                <renderer name="tab"/>
+            </renderers>
+        </layout>
+        <layout class="org.apache.cocoon.portal.layout.impl.CompositeLayoutImpl" item-class="org.apache.cocoon.portal.layout.NamedItem" name="rawtab">
+            <renderers default="rawtab">
+                <renderer name="rawtab"/>
+            </renderers>
+        </layout>
+        <layout class="org.apache.cocoon.portal.layout.impl.CompositeLayoutImpl" item-class="org.apache.cocoon.portal.layout.NamedItem" name="linktab">
+            <renderers default="linktab">
+                <renderer name="linktab"/>
+            </renderers>
+        </layout>
+        <layout class="org.apache.cocoon.portal.layout.impl.FrameLayout" create-id="true" name="frame">
+            <renderers default="frame">
+                <renderer name="frame"/>
+            </renderers>
+        </layout>
+        <layout class="org.apache.cocoon.portal.layout.impl.CopletLayout" name="coplet">
+            <renderers default="window">
+                <renderer name="window"/>
+                <renderer name="portlet-window"/>
+                <renderer name="nowindow"/>
+            </renderers>
+        </layout>
+        <layout class="org.apache.cocoon.portal.layout.impl.LinkLayout" create-id="true" name="link">
+            <renderers default="link">
+                <renderer name="link"/>
+            </renderers>
+            <aspects>
+               <aspect auto-create="false" class="java.lang.String" name="link-layout-key" store="session">
+               </aspect>
+               <aspect auto-create="false" class="java.lang.String" name="link-layout-id" store="session">
+               </aspect>
+            <!--
+               <aspect name="static"
+                       class="java.lang.Boolean"
+                       store="persistent"
+                       auto-create="true"
+                       value="false">
+               </aspect>
+             -->
+            </aspects>
+         </layout>
+    </layouts>
+</component>
+
+<!-- Coplet factory configuration -->
+<component class="org.apache.cocoon.portal.coplet.impl.DefaultCopletFactory" role="org.apache.cocoon.portal.coplet.CopletFactory">
+    <coplets>
+        <coplet class="org.apache.cocoon.portal.coplet.CopletData" name="standard">
+            <coplet-data-aspects>
+                <!-- Use only the 'memory' aspect store with aspect datas! -->
+                <aspect auto-create="true" class="java.lang.Boolean" name="sizable" store="memory" value="true"/>
+                <aspect auto-create="true" class="java.lang.Boolean" name="mandatory" store="memory" value="false"/>
+               <!--         
+                <aspect name="maxpageable"
+                        class="java.lang.Boolean"
+                        store="memory"
+                        auto-create="true"
+                        value="true"/>
+               -->
+            </coplet-data-aspects>
+            
+            <coplet-instance-data-aspects>
+                <!-- Choose from tempory, request and session aspect store: -->
+                <aspect auto-create="true" class="java.lang.Integer" name="size" store="session" value="1"/>
+                <aspect auto-create="true" class="java.lang.Boolean" name="fullScreen" store="temporary" value="false"/>
+            </coplet-instance-data-aspects>
+        </coplet>
+    </coplets>
+</component>
+
+<!--..... Start configuration from 'deprecated' -->&#13;
+
+
+  <!--+
+      | URL Factory
+      |
+      | The url factory adds special url protocols to the system, they are then
+      | available inside Cocoon, e.g. as a source argument for one of the sitemap
+      | components.
+      |
+      | THIS COMPONENT IS DEPRECATED AND SHOULD NOT BE USED ANYMORE
+      +-->
+  <url-factory logger="core.url-factory">
+    <!-- Allows access to resources available from the ClassLoader, using getResource() method. -->
+    <protocol class="org.apache.cocoon.components.url.ResourceURLFactory" name="resource"/>
+  </url-factory>
+
+  <!--+
+      | Source Handler
+      |
+      | The source handler adds special url protocols to the system, they are
+      | then available inside Cocoon, e.g. as a source argument for one of the
+      | sitemap components.
+      |
+      | THIS COMPONENT IS DEPRECATED AND SHOULD NOT BE USED ANYMORE
+      +-->
+  <source-handler logger="core.source-handler">
+    <!-- file protocol : this is a WriteableSource -->
+    <protocol class="org.apache.cocoon.components.source.FileSourceFactory" name="file"/>
+    <!-- Allows access to resources available from the servlet context, using getResource() method. -->
+    <protocol class="org.apache.cocoon.components.source.ContextSourceFactory" name="context"/>
+  </source-handler>
+  
+<!--..... End configuration from 'deprecated' -->&#13;
+</cocoon>

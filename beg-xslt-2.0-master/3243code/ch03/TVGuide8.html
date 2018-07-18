@@ -1,0 +1,211 @@
+<html>
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+   
+      <title>TV Guide</title>
+      <link rel="stylesheet" href="TVGuide2.css"><script type="text/javascript">
+        function toggle(element) {
+          if (element.style.display == 'none') {
+            element.style.display = 'block';
+          } else {
+            element.style.display = 'none';
+          }
+        }
+      </script></head>
+   <body>
+      <h1>TV Guide</h1>
+      <h2 class="channel">BBC1</h2>
+      <div>
+         <p><span class="date">2001-07-05T19:00:00</span><br><span class="title">QuestionOfSport</span><br><span onclick="toggle(QuestionOfSportCast);">[Cast]</span></p>
+         <div id="QuestionOfSportCast" style="display: none;">
+            <ul class="castlist"></ul>
+         </div>
+      </div>
+      <div>
+         <p><span class="date">2001-07-05T19:30:00</span><br><span class="title">EastEnders</span><br>
+            <span class="character">Mark</span>'s health scare forces him to reconsider his
+            future with <span class="character">Lisa</span>, while 
+            <a href="http://www.bbc.co.uk/eastenders/characters/jamie_m_biog.shtml">
+               <span class="character">Jamie</span>
+               </a> is torn between <span class="character">Sonia</span> and 
+            <span class="character">Zoe</span>.
+            <span onclick="toggle(EastEndersCast);">[Cast]</span></p>
+         <div id="EastEndersCast" style="display: none;">
+            <ul class="castlist">
+               <li><span class="character"><span class="character">
+                        Zoe Slater
+                        
+                        The youngest Slater girl, <span class="character">Zoe</span> really 
+                        makes the most of the fact she's the baby of the family.
+                        
+                        </span></span><span class="actor">
+                     Michelle Ryan
+                     
+                     For more details, see 
+                     <a href="http://www.ajmanagement.co.uk/michelle-ryan.htm">
+                        Michelle Ryan's Agency
+                        </a>.
+                     
+                     </span></li>
+               <li><span class="character"><span class="character">
+                        Jamie Mitchell
+                        
+                        Jamie's a bit of a heartthrob (who could resist that 
+                        little-boy-lost look?) but until <span class="character">Janine 
+                           Butcher</span> came along he'd steered clear of girls.
+                        
+                        </span></span><span class="actor">
+                     Jack Ryder
+                     
+                     Won Best Newcomer for <span class="character">Jamie Mitchell</span>
+                     in the 1999 TV awards.
+                     
+                     </span></li>
+               <li><span class="character"><span class="character">
+                        Sonia Jackson
+                        
+                        Amongst the Jackson crowd <span class="character">Sonia</span> has 
+                        always been the one with her head screwed on right.
+                        
+                        </span></span><span class="actor">
+                     Natalie Cassidy
+                     
+                     Started training at The Anna Scher Theatre when she was 
+                     eight years old.
+                     
+                     </span></li>
+            </ul>
+         </div>
+      </div>
+      <div>
+         <p><span class="date">2001-07-05T20:00:00</span><br><span class="title"></span><br><span onclick="toggle(Cast);">[Cast]</span></p>
+         <div id="Cast" style="display: none;">
+            <ul class="castlist"></ul>
+         </div>
+      </div>
+      <div>
+         <p><span class="date">2001-07-05T20:45:00</span><br><span class="title">Lottery</span><br><span onclick="toggle(LotteryCast);">[Cast]</span></p>
+         <div id="LotteryCast" style="display: none;">
+            <ul class="castlist"></ul>
+         </div>
+      </div>
+      <div>
+         <p><span class="date">2001-07-05T21:30:00</span><br><span class="title">Panorama</span><br><span onclick="toggle(PanoramaCast);">[Cast]</span></p>
+         <div id="PanoramaCast" style="display: none;">
+            <ul class="castlist"></ul>
+         </div>
+      </div>
+      <h2 class="channel">BBC2</h2>
+      <div>
+         <p><span class="date">2001-07-05T19:00:00</span><br><span class="title">Snooker</span><br><span onclick="toggle(SnookerCast);">[Cast]</span></p>
+         <div id="SnookerCast" style="display: none;">
+            <ul class="castlist"></ul>
+         </div>
+      </div>
+      <div>
+         <p><span class="date">2001-07-05T20:00:00</span><br><span class="title">HomeFront</span><br><span onclick="toggle(HomeFrontCast);">[Cast]</span></p>
+         <div id="HomeFrontCast" style="display: none;">
+            <ul class="castlist"></ul>
+         </div>
+      </div>
+      <div>
+         <p><span class="date">2001-07-05T21:00:00</span><br><span class="title">WildAfrica</span><br><span onclick="toggle(WildAfricaCast);">[Cast]</span></p>
+         <div id="WildAfricaCast" style="display: none;">
+            <ul class="castlist"></ul>
+         </div>
+      </div>
+      <div>
+         <p><span class="date">2001-07-05T21:50:00</span><br><span class="title">Taboo</span><br><span onclick="toggle(TabooCast);">[Cast]</span></p>
+         <div id="TabooCast" style="display: none;">
+            <ul class="castlist"></ul>
+         </div>
+      </div>
+      <h2 class="channel">ITV</h2>
+      <div>
+         <p><span class="date">2001-07-05T19:00:00</span><br><span class="title">Emmerdale</span><br><span onclick="toggle(EmmerdaleCast);">[Cast]</span></p>
+         <div id="EmmerdaleCast" style="display: none;">
+            <ul class="castlist"></ul>
+         </div>
+      </div>
+      <div>
+         <p><span class="date">2001-07-05T19:30:00</span><br><span class="title">CoronationStreet</span><br><span onclick="toggle(CoronationStreetCast);">[Cast]</span></p>
+         <div id="CoronationStreetCast" style="display: none;">
+            <ul class="castlist"></ul>
+         </div>
+      </div>
+      <div>
+         <p><span class="date">2001-07-05T20:00:00</span><br><span class="title">Millionaire</span><br><span onclick="toggle(MillionaireCast);">[Cast]</span></p>
+         <div id="MillionaireCast" style="display: none;">
+            <ul class="castlist"></ul>
+         </div>
+      </div>
+      <div>
+         <p><span class="date">2001-07-05T21:00:00</span><br><span class="title"></span><br><span onclick="toggle(Cast);">[Cast]</span></p>
+         <div id="Cast" style="display: none;">
+            <ul class="castlist"></ul>
+         </div>
+      </div>
+      <h2 class="channel">Channel 4</h2>
+      <div>
+         <p><span class="date">2001-07-05T19:00:00</span><br><span class="title">Channel4News</span><br><span onclick="toggle(Channel4NewsCast);">[Cast]</span></p>
+         <div id="Channel4NewsCast" style="display: none;">
+            <ul class="castlist"></ul>
+         </div>
+      </div>
+      <div>
+         <p><span class="date">2001-07-05T19:55:00</span><br><span class="title">SlotArt</span><br><span onclick="toggle(SlotArtCast);">[Cast]</span></p>
+         <div id="SlotArtCast" style="display: none;">
+            <ul class="castlist"></ul>
+         </div>
+      </div>
+      <div>
+         <p><span class="date">2001-07-05T20:00:00</span><br><span class="title">Brookside</span><br><span onclick="toggle(BrooksideCast);">[Cast]</span></p>
+         <div id="BrooksideCast" style="display: none;">
+            <ul class="castlist"></ul>
+         </div>
+      </div>
+      <div>
+         <p><span class="date">2001-07-05T20:30:00</span><br><span class="title">Brookside</span><br><span onclick="toggle(BrooksideCast);">[Cast]</span></p>
+         <div id="BrooksideCast" style="display: none;">
+            <ul class="castlist"></ul>
+         </div>
+      </div>
+      <div>
+         <p><span class="date">2001-07-05T21:00:00</span><br><span class="title">Swallow</span><br><span onclick="toggle(SwallowCast);">[Cast]</span></p>
+         <div id="SwallowCast" style="display: none;">
+            <ul class="castlist"></ul>
+         </div>
+      </div>
+      <div>
+         <p><span class="date">2001-07-05T22:00:00</span><br><span class="title">AllyMcBeal</span><br><span onclick="toggle(AllyMcBealCast);">[Cast]</span></p>
+         <div id="AllyMcBealCast" style="display: none;">
+            <ul class="castlist"></ul>
+         </div>
+      </div>
+      <h2 class="channel">Channel 5</h2>
+      <div>
+         <p><span class="date">2001-07-05T19:00:00</span><br><span class="title">MovieChartShow</span><br><span onclick="toggle(MovieChartShowCast);">[Cast]</span></p>
+         <div id="MovieChartShowCast" style="display: none;">
+            <ul class="castlist"></ul>
+         </div>
+      </div>
+      <div>
+         <p><span class="date">2001-07-05T19:30:00</span><br><span class="title">FiveNews</span><br><span onclick="toggle(FiveNewsCast);">[Cast]</span></p>
+         <div id="FiveNewsCast" style="display: none;">
+            <ul class="castlist"></ul>
+         </div>
+      </div>
+      <div>
+         <p><span class="date">2001-07-05T20:00:00</span><br><span class="title"></span><br><span onclick="toggle(Cast);">[Cast]</span></p>
+         <div id="Cast" style="display: none;">
+            <ul class="castlist"></ul>
+         </div>
+      </div>
+      <div>
+         <p><span class="date">2001-07-05T21:00:00</span><br><span class="title"></span><br><span onclick="toggle(Cast);">[Cast]</span></p>
+         <div id="Cast" style="display: none;">
+            <ul class="castlist"></ul>
+         </div>
+      </div>
+   </body>
+</html>

@@ -1,0 +1,77 @@
+<?xml version="1.0"?>
+<?xml-stylesheet type="text/xsl" href="RSS2Channel.xsl"?>
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+         xmlns:rss="http://purl.org/rss/1.0/"
+         xmlns:dc="http://purl.org/dc/elements/1.1/"
+         xmlns:sy="http://purl.org/rss/modules/syndication/">
+
+<rss:channel rdf:about="http://www.example.com/bbc1/listing.rss">
+  <rss:title>BBC1</rss:title>
+  <rss:link>http://www.example.com/bbc1/</rss:link>
+  <rss:description>
+    Listings of BBC 1 programs over the next 24 hours
+  </rss:description>
+
+  <sy:updatePeriod>daily</sy:updatePeriod>
+  <sy:updateFrequency>48</sy:updateFrequency>
+
+  <rss:items>
+    <rdf:Seq>
+      <rdf:li rdf:resource="http://www.example.com/bbc1#2001-07-05T21:30:00" />
+      <rdf:li rdf:resource="http://www.example.com/bbc1#2001-07-05T20:45:00" />
+      <rdf:li rdf:resource="http://www.example.com/bbc1#2001-07-05T20:00:00" />
+      <rdf:li rdf:resource="http://www.example.com/bbc1#2001-07-05T19:30:00" />
+      <rdf:li rdf:resource="http://www.example.com/bbc1#2001-07-05T19:00:00" />
+    </rdf:Seq>
+  </rss:items>
+
+</rss:channel>
+
+<rss:item rdf:about="http://www.example.com/bbc1#2001-07-05T21:30:00">
+  <rss:title>Panorama</rss:title>
+  <rss:link>http://www.bbc.co.uk/panorama</rss:link>
+  <rss:description>
+    Today discusses whether cloning pets is morally wrong.
+  </rss:description>
+  <dc:identifier>85674</dc:identifier>
+</rss:item>
+
+<rss:item rdf:about="http://www.example.com/bbc1#2001-07-05T20:45:00">
+  <rss:title>The National Lottery</rss:title>
+  <rss:link>http://www.bbc.co.uk/lottery/</rss:link>
+  <rss:description>
+    Stunning celebrity guests and a grand giveaway.
+  </rss:description>
+  <dc:identifier>7129</dc:identifier>
+</rss:item>
+
+<rss:item rdf:about="http://www.example.com/bbc1#2001-07-05T20:00:00">
+  <rss:title>Get Real with Casualty</rss:title>
+  <rss:link>http://www.bbc.co.uk/</rss:link>
+  <rss:description>
+    Casualty stars get a taste of what real doctors and nurses have to face 
+    every day.
+  </rss:description>
+  <dc:identifier>2781</dc:identifier>
+</rss:item>
+
+<rss:item rdf:about="http://www.example.com/bbc1#2001-07-05T19:30:00">
+  <rss:title>EastEnders</rss:title>
+  <rss:link>http://www.bbc.co.uk/eastenders/</rss:link>
+  <rss:description>
+    Mark's health scare forces him to reconsider his future with Lisa, while 
+    Jamie is torn between Sonia and Zoe.
+  </rss:description>
+  <dc:identifier>2571</dc:identifier>
+</rss:item>
+
+<rss:item rdf:about="http://www.example.com/bbc1#2001-07-05T19:00:00">
+  <rss:title>A Question of Sport</rss:title>
+  <rss:link>http://www.bbc.co.uk/questionofsport</rss:link>
+  <rss:description>
+    Sports quiz hosted by Sue Barker.
+  </rss:description>
+  <dc:identifier>620</dc:identifier>
+</rss:item>
+
+</rdf:RDF>

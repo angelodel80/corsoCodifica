@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Channel>
+  <Name>ITV</Name>
+  <Program rating="4">
+    <Start>2001-07-05T19:00:00</Start>
+    <Duration>PT30M</Duration>
+    <Series>Emmerdale</Series>
+    <Title></Title>
+  </Program>
+  <Program rating="3">
+    <Start>2001-07-05T19:30:00</Start>
+    <Duration>PT30M</Duration>
+    <Series>CoronationStreet</Series>
+    <Title></Title>
+  </Program>
+  <Program rating="5">
+    <Start>2001-07-05T20:00:00</Start>
+    <Duration>PT1H</Duration>
+    <Series>Millionaire</Series>
+    <Title></Title>
+  </Program>
+  <Program type="drama" rating="8">
+    <Start>2001-07-05T21:00:00</Start>
+    <Duration>PT2H</Duration>
+    <Series></Series>
+    <Title>Hot Money</Title>
+  </Program>
+</Channel>
+  

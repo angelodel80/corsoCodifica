@@ -1,0 +1,48 @@
+<html xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xdt="http://www.w3.org/2005/04/xpath-datatypes">
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+   
+      <title>TV Guide</title>
+      <link rel="stylesheet" href="TVGuide.css"><script type="text/javascript">
+        function toggle(element) {
+          if (element.style.display == 'none') {
+            element.style.display = 'block';
+          } else {
+            element.style.display = 'none';
+          }
+        }
+      </script></head>
+   <body>
+      <h1>TV Guide</h1>
+      <p>
+         [<a href="#BBC1">BBC1</a>]
+         
+      </p>
+      <h2 class="channel"><a name="BBC1" id="BBC1">BBC1</a></h2>
+      <div class="interesting">
+         <p><img src="favorite.gif" alt="[Favorite]" width="20" height="20"><span class="date">5/7/2001 07:30</span><br><span class="title">EastEnders</span><br>
+            <span class="character">Mark</span>'s health scare forces him to reconsider his
+            future with <span class="character">Lisa</span>, while 
+            <a href="http://www.bbc.co.uk/eastenders/characters/jamie_m_biog.shtml">
+               <span class="character">Jamie</span>
+               </a> is torn between <span class="character">Sonia</span> and 
+            <span class="character">Zoe</span>.
+            <span onclick="toggle(EastEndersCast);">[Cast]</span></p>
+         <div id="EastEndersCast" style="display: none;">
+            <ul class="castlist">
+               
+               <li><span class="character">Zoe Slater</span><span class="actor">Michelle Ryan</span></li>
+               
+               <li><span class="character">Jamie Mitchell</span><span class="actor">Jack Ryder</span></li>
+               
+               <li><span class="character">Sonia Jackson</span><span class="actor">Natalie Cassidy</span></li>
+               
+            </ul>
+         </div>
+      </div>
+      <p>
+         [<a href="#BBC1">BBC1</a>]
+         
+      </p>
+   </body>
+</html>

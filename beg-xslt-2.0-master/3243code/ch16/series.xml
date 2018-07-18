@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<SeriesList xmlns:xlink="http://www.w3.org/1999/xlink">
+  <Series id="EastEnders" type="soap" xlink:href="http://www.bbc.co.uk/eastenders/">
+    <Title>EastEnders</Title>
+    <Description>Soap set in the East End of London.</Description>
+  </Series>
+  <Series id="BBCNews" type="news" xlink:href="http://news.bbc.co.uk/">
+    <Title>BBC News</Title>
+    <Description>Daily news and sport.</Description>
+  </Series>
+  <Series id="QuestionOfSport" type="quiz" xlink:href="http://news.bbc.co.uk/sport2/hi/question_of_sport/">
+    <Title>A Question Of Sport</Title>
+    <Description>Sport quiz show.</Description>
+  </Series>
+  <Series id="Lottery" type="entertainment" xlink:href="http://www.bbc.co.uk/lottery/">
+    <Title>The National Lottery</Title>
+    <Description>More people waste their money.</Description>
+  </Series>
+  <Series id="Panorama" type="news" xlink:href="http://news.bbc.co.uk/1/hi/programmes/panorama/default.stm">
+    <Title>Panorama</Title>
+    <Description>Current issues.</Description>
+  </Series>
+  <Series id="Snooker" type="sport" xlink:href="http://news.bbc.co.uk/sport1/hi/other_sports/snooker/default.stm">
+    <Title>Snooker</Title>
+    <Description>Snooker.</Description>
+  </Series>
+  <Series id="HomeFront" type="improvement">
+    <Title>Home Front</Title>
+    <Description>Home improvements show.</Description>
+  </Series>
+  <Series id="WildAfrica" type="documentary" xlink:href="http://www.bbc.co.uk/nature/programmes/tv/wildafrica/">
+    <Title>Wild Africa</Title>
+    <Description>Wildlife documentary.</Description>
+  </Series>
+  <Series id="Taboo" type="documentary">
+    <Title>Taboo</Title>
+    <Description>Documentary series on censorship.</Description>
+  </Series>
+  <Series id="Emmerdale" type="soap" xlink:href="http://www.itv.com/emmerdale">
+    <Title>Emmerdale</Title>
+    <Description>Soap set in the countryside.</Description>
+  </Series>
+  <Series id="CoronationStreet" type="soap" xlink:href="http://www.itv.com/page.asp?partid=91">
+    <Title>Coronation Street</Title>
+    <Description>Soap set in the north.</Description>
+  </Series>
+  <Series id="Millionaire" type="quiz" xlink:href="http://millionaire.itv.com/">
+    <Title>Who Wants to Be a Millionaire?</Title>
+    <Description>Quiz show.</Description>
+  </Series>
+  <Series id="Channel4News" type="news" xlink:href="http://www.channel4.com/news/">
+    <Title>Channel 4 News</Title>
+    <Description>News and weather.</Description>
+  </Series>
+  <Series id="SlotArt" type="documentary">
+    <Title>Slot Art</Title>
+    <Description>Short films on art techniques.</Description>
+  </Series>
+  <Series id="Brookside" type="soap" xlink:href="http://www.brookside.com/">
+    <Title>Brookside</Title>
+    <Description>Soap set in Liverpool.</Description>
+  </Series>
+  <Series id="Swallow" type="drama">
+    <Title>Swallow</Title>
+    <Description>Drama about prescription drug use.</Description>
+  </Series>
+  <Series id="AllyMcBeal" type="drama" xlink:href="http://www.foxhome.com/ally/index_frames.html">
+    <Title>Ally McBeal</Title>
+    <Description>Drama about single female lawyer.</Description>
+  </Series>
+  <Series id="5News" type="news">
+    <Title>5 News</Title>
+    <Description>News and sport.</Description>
+  </Series>
+  <Series id="MovieChartShow" type="entertainment">
+    <Title>The Movie Chart Show</Title>
+    <Description>Latest movie news.</Description>
+  </Series>
+  <Series id="Simpsons" type="cartoon" xlink:href="http://www.thesimpsons.com/">
+    <Title>The Simpsons</Title>
+    <Description>Insightful observations on American family life.</Description>
+  </Series>
+  <Series id="StarTrekVoyager" type="drama" xlink:href="http://www.startrek.com/startrek/view/series/VOY/">
+    <Title>Star Trek: Voyager</Title>
+    <Description>Sci-fi series set on a space ship stranded far from earth.</Description>
+  </Series>
+  <Series id="DarkAngel" type="drama">
+    <Title>Dark Angel</Title>
+    <Description>Genetically-engineered soldiers in near-future Seattle.</Description>
+  </Series>
+  <Series id="StarTrekNextGeneration" type="drama" xlink:href="http://www.startrek.com/startrek/view/series/TNG/">
+    <Title>Star Trek: The Next Generation</Title>
+    <Description>Sci-fi series starring <Actor>Patrick Stewart</Actor>.</Description>
+  </Series>
+</SeriesList>

@@ -1,0 +1,86 @@
+BODY, TABLE {
+	font-family: Verdana, sans-serif;
+	font-size: 8pt;
+}
+
+TABLE {
+	width: 100%;
+}
+
+TD, TH {
+	vertical-align: top;
+	margin: 0;
+}
+
+H1 {
+	background: #C00;
+	color: yellow;
+	padding: 0 0.2em;
+	margin: 0;
+}
+
+H2 {
+	background: #C00;
+	color: white;
+	padding: 0 0.2em;
+	margin: 0;
+}
+
+TH {
+	background: black;
+	color: yellow;
+	font-size: 1.2em;
+}
+
+.soap {
+	background: pink;
+}
+
+.news {
+	background: gray;
+}
+
+.entertainment, .quiz {
+	background: green;
+	color: white;
+}
+
+.sport {
+	background: red;
+}
+
+.documentary {
+	background: navy;
+	color: white;
+}
+
+.film {
+	background: black;
+	color: white;
+}
+
+.title {
+	font-size: 1.2em;
+	font-weight: bold;
+}
+
+.castlist {
+	margin: 0em;
+	padding: 0.5em 1em;
+}
+.castlist li {
+	display: list-item;
+	list-style-type: none;
+}
+.character, .actor {
+	display: inline;
+	background: transparent;
+	color: black;
+	margin-bottom: 0em;
+	padding: 0em;
+	font-weight: normal;
+	font-size: 1em;
+}
+.actor {
+	font-weight: bold;
+}

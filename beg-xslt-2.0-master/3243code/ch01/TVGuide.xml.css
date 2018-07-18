@@ -1,0 +1,55 @@
+TVGuide {
+	font-family: Verdana, sans-serif;
+	font-size: small;
+}
+Duration, Writer, Director, Producer {
+	display: none;
+}
+Start {
+    margin-top: 1em;
+	display: block;
+}
+Channel Name, Series, Title {
+	display: block;
+	margin-bottom: 0em;
+	padding: 0.3em;
+}
+Channel Name {
+    margin-top: 1em;
+	background: #C00;
+	color: white;
+	font-weight: bold;
+	font-size: 1.44em;
+}
+Series {
+	background: black;
+	color: yellow;
+	font-weight: bold;
+	font-size: 1.2em;
+}
+Title {
+	background: black;
+	color: white;
+}
+
+
+CastList {
+	display: block;
+	padding: 0.5em 1em;
+}
+CastMember {
+	display: list-item;
+	list-style-type: none;
+}
+Character Name, Actor Name {
+	display: inline;
+	background: transparent;
+	color: black;
+	margin-bottom: 0em;
+	padding: 0em;
+	font-weight: normal;
+	font-size: 1em;
+}
+Actor Name {
+	font-weight: bold;
+}

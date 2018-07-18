@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Channel>
+  <Name>BBC2</Name>
+  <Program rating="2">
+    <Start>2001-07-05T19:00:00</Start>
+    <Duration>PT1H</Duration>
+    <Series>Snooker</Series>
+    <Title></Title>
+  </Program>
+  <Program rating="7">
+    <Start>2001-07-05T20:00:00</Start>
+    <Duration>PT1H</Duration>
+    <Series>HomeFront</Series>
+    <Title></Title>
+  </Program>
+  <Program rating="7">
+    <Start>2001-07-05T21:00:00</Start>
+    <Duration>PT50M</Duration>
+    <Series>WildAfrica</Series>
+    <Title></Title>
+  </Program>
+  <Program flag="interesting" rating="6">
+    <Start>2001-07-05T21:50:00</Start>
+    <Duration>PT40M</Duration>
+    <Series>Taboo</Series>
+    <Title>Nakedness</Title>
+  </Program>
+</Channel>

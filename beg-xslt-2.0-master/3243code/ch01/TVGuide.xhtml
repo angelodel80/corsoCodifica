@@ -1,0 +1,142 @@
+<html>
+<head>
+  <title>TV Guide</title>
+  <link rel="stylesheet" href="TVGuide.css" />
+  <script type="text/javascript">
+    // <![CDATA[
+    function toggle(element) {
+      if (element.style.display == 'none') {
+        element.style.display = 'block';
+      } else {
+        element.style.display = 'none';
+      }
+    }
+    // ]]>
+  </script>
+</head>
+
+<body>
+  <h1>TV Guide</h1>
+  <h2><span class="day">Thursday</span> 5 July</h2>
+  <table width="100%">
+
+    <tr>
+      <th width="16%">Channel</th>
+      <th colspan="6" width="12%">7:00</th>
+      <th colspan="6" width="12%">7:30</th>
+      <th colspan="6" width="12%">8:00</th>
+      <th colspan="6" width="12%">8:30</th>
+      <th colspan="6" width="12%">9:00</th>
+      <th colspan="6" width="12%">9:30</th>
+      <th colspan="6" width="12%">10:00</th>
+    </tr>
+    <tr>
+      <th class="channel">BBC1</th>
+      <td colspan="6" class="quiz">
+        <span class="title">A Question Of Sport</span><br />
+      </td>
+      <td colspan="6" class="soap">
+        <img src="flag.gif" alt="[Flagged]" width="20" height="20" />
+        <span class="title">EastEnders</span><br />
+        Mark's health scare forces him to reconsider his future with Lisa,
+        while Jamie is torn between Sonia and Zoe.
+        <span onclick="toggle(EastEndersCast);">[Cast]</span>
+        <div id="EastEndersCast" style="display: none;">
+          <ul class="castlist">
+            <li>
+              <span class="character">Zo&#235; Slater</span>
+              <span class="actor">Michelle Ryan</span>
+            </li>
+            <li>
+              <span class="character">Jamie Mitchell</span>
+              <span class="actor">Jack Ryder</span>
+            </li>
+            <li>
+              <span class="character">Sonia Jackson</span>
+              <span class="actor">Natalie Cassidy</span>
+            </li>
+          </ul>
+        </div>
+      </td>
+      <td colspan="9" class="documentary">
+        <span class="title">Get Real with Casualty</span><br />
+      </td>
+      <td colspan="9" class="entertainment">
+        <span class="title">The National Lottery</span><br />
+      </td>
+      <td colspan="12" class="news">
+        <span class="title">Panorama</span><br />
+      </td>
+      <td colspan="6"></td>
+    </tr>
+    <tr>
+      <th class="channel">BBC2</th>
+      <td colspan="12" class="sport">
+        <span class="title">Snooker</span><br />
+      </td>
+      <td colspan="12" class="improvement">
+        <span class="title">Home Front</span><br />
+      </td>
+      <td colspan="10" class="documentary">
+        <span class="title">Wild Africa</span><br />
+      </td>
+      <td colspan="8" class="documentary">
+        <img src="flag.gif" alt="[Flagged]" width="20" height="20" />
+        <span class="title">Taboo <span class="subtitle">Nakedness</span></span><br />
+      </td>
+    </tr>      
+    <tr>
+      <th class="channel">ITV</th>
+      <td colspan="6" class="soap">
+        <span class="title">Emmerdale</span><br />
+      </td>
+      <td colspan="6" class="soap">
+        <span class="title">Coronation Street</span><br />
+      </td>
+      <td colspan="12" class="quiz">
+        <span class="title">Who Wants to Be a Millionaire?</span><br />
+      </td>
+      <td colspan="18" class="drama">
+        <span class="title">Hot Money</span><br />
+      </td>
+    </tr>      
+    <tr>
+      <th class="channel">Channel 4</th>
+      <td colspan="11" class="news">
+        <span class="title">Channel 4 News</span><br />
+      </td>
+      <td colspan="1" class="documentary">
+        <span class="title">Slot Art</span><br />
+      </td>
+      <td colspan="6" class="soap">
+        <span class="title">Brookside</span><br />
+      </td>
+      <td colspan="6" class="soap">
+        <span class="title">Brookside</span><br />
+      </td>
+      <td colspan="12" class="drama">
+        <span class="title">Swallow</span><br />
+      </td>
+      <td colspan="6" class="drama">
+        <img src="flag.gif" alt="[Flagged]" width="20" height="20" />
+        <span class="title">Ally McBeal</span><br />
+      </td>
+    </tr>      
+    <tr>
+      <th class="channel">Channel 5</th>
+      <td colspan="6" class="entertainment">
+        <span class="title">The Movie Chart Show</span><br />
+      </td>
+      <td colspan="6" class="news">
+        <span class="title">5 News</span><br />
+      </td>
+      <td colspan="12" class="entertainment">
+        <span class="title">The World's Worst Drivers Caught On Tape</span><br />
+      </td>
+      <td colspan="18" class="film">
+        <span class="title">Black and White</span><br />
+      </td>
+    </tr>
+  </table>
+</body>
+</html>

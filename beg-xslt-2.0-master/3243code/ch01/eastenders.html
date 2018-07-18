@@ -1,0 +1,39 @@
+<html>
+<head>
+  <title>EastEnders</title>
+  <link rel="stylesheet" href="TVGuide.html.css" />
+  <script type="text/javascript">
+    function toggle(element) {
+      if (element.style.display == 'none') {
+        element.style.display = 'block';
+      } else {
+        element.style.display = 'none';
+      }
+    }
+  </script>
+</head>
+
+<body>
+  <img src="flag.gif" alt="[Flagged]" width="20" height="20" />
+  <span class="title">EastEnders</span><br />
+  Mark's health scare forces him to reconsider his future with Lisa,
+  while Jamie is torn between Sonia and Zoe.
+  <span onclick="toggle(EastEndersCast);">[Cast]</span>
+  <div id="EastEndersCast" style="display: none;">
+    <ul class="castlist">
+      <li>
+        <span class="character">Zo&euml; Slater</span>
+        <span class="actor">Michelle Ryan</span>
+      </li>
+      <li>
+        <span class="character">Jamie Mitchell</span>
+        <span class="actor">Jack Ryder</span>
+      </li>
+      <li>
+        <span class="character">Sonia Jackson</span>
+        <span class="actor">Natalie Cassidy</span>
+      </li>
+    </ul>
+  </div>
+</body>
+</html>

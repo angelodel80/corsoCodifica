@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Channel>
+  <Name>Channel 4</Name>
+  <Program rating="7">
+    <Start>2001-07-05T19:00:00</Start>
+    <Duration>PT55M</Duration>
+    <Series>Channel4News</Series>
+    <Title></Title>
+  </Program>
+  <Program rating="4">
+    <Start>2001-07-05T19:55:00</Start>
+    <Duration>PT5M</Duration>
+    <Series>SlotArt</Series>
+    <Title></Title>
+  </Program>
+  <Program rating="5">
+    <Start>2001-07-05T20:00:00</Start>
+    <Duration>PT30M</Duration>
+    <Series>Brookside</Series>
+    <Title></Title>
+  </Program>
+  <Program rating="5">
+    <Start>2001-07-05T20:30:00</Start>
+    <Duration>PT30M</Duration>
+    <Series>Brookside</Series>
+    <Title></Title>
+  </Program>
+  <Program rating="6">
+    <Start>2001-07-05T21:00:00</Start>
+    <Duration>PT1H</Duration>
+    <Series>Swallow</Series>
+    <Title></Title>
+  </Program>
+  <Program flag="favorite" rating="6">
+    <Start>2001-07-05T22:00:00</Start>
+    <Duration>PT1H</Duration>
+    <Series>AllyMcBeal</Series>
+    <Title></Title>
+  </Program>
+</Channel>  

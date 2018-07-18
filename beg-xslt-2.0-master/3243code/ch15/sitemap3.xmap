@@ -1,0 +1,11 @@
+<map:sitemap xmlns:map="http://apache.org/cocoon/sitemap/1.0">
+  <map:pipelines>
+    <map:pipeline>
+      <map:match pattern="listing">
+        <map:generate src="TVGuide.xml" />
+        <map:transform src="TVGuide.xsl" />
+        <map:serialize />
+      </map:match>
+    </map:pipeline>
+  </map:pipelines>
+</map:sitemap>

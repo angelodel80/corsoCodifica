@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<SeriesList xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+            xsi:noNamespaceSchemaLocation="TVGuide.xsd">
+  <Series id="EastEnders" type="soap">
+    <Title>EastEnders</Title>
+    <Description>Soap set in the East End of London.</Description>
+  </Series>
+  <Series id="BBCNews" type="news">
+    <Title>BBC News</Title>
+    <Description>Daily news and sport.</Description>
+  </Series>
+  <Series id="QuestionOfSport" type="quiz">
+    <Title>A Question Of Sport</Title>
+    <Description>Sport quiz show.</Description>
+  </Series>
+  <Series id="Lottery" type="entertainment">
+    <Title>The National Lottery</Title>
+    <Description>More people waste their money.</Description>
+  </Series>
+  <Series id="Panorama" type="news">
+    <Title>Panorama</Title>
+    <Description>Current issues.</Description>
+  </Series>
+  <Series id="Snooker" type="sport">
+    <Title>Snooker</Title>
+    <Description>Snooker.</Description>
+  </Series>
+  <Series id="HomeFront" type="improvement">
+    <Title>Home Front</Title>
+    <Description>Home improvements show.</Description>
+  </Series>
+  <Series id="WildAfrica" type="documentary">
+    <Title>Wild Africa</Title>
+    <Description>Wildlife documentary.</Description>
+  </Series>
+  <Series id="Taboo" type="documentary">
+    <Title>Taboo</Title>
+    <Description>Documentary series on censorship.</Description>
+  </Series>
+  <Series id="Emmerdale" type="soap">
+    <Title>Emmerdale</Title>
+    <Description>Soap set in the countryside.</Description>
+  </Series>
+  <Series id="CoronationStreet" type="soap">
+    <Title>Coronation Street</Title>
+    <Description>Soap set in the north.</Description>
+  </Series>
+  <Series id="Millionaire" type="quiz">
+    <Title>Who Wants to Be a Millionaire?</Title>
+    <Description>Quiz show.</Description>
+  </Series>
+  <Series id="Channel4News" type="news">
+    <Title>Channel 4 News</Title>
+    <Description>News and weather.</Description>
+  </Series>
+  <Series id="SlotArt" type="documentary">
+    <Title>Slot Art</Title>
+    <Description>Short films on art techniques.</Description>
+  </Series>
+  <Series id="Brookside" type="soap">
+    <Title>Brookside</Title>
+    <Description>Soap set in Liverpool.</Description>
+  </Series>
+  <Series id="Swallow" type="drama">
+    <Title>Swallow</Title>
+    <Description>Drama about prescription drug use.</Description>
+  </Series>
+  <Series id="AllyMcBeal" type="drama">
+    <Title>Ally McBeal</Title>
+    <Description>Drama about single female lawyer.</Description>
+  </Series>
+  <Series id="5News" type="news">
+    <Title>5 News</Title>
+    <Description>News and sport.</Description>
+  </Series>
+  <Series id="MovieChartShow" type="entertainment">
+    <Title>The Movie Chart Show</Title>
+    <Description>Latest movie news.</Description>
+  </Series>
+  <Series id="Simpsons" type="cartoon">
+    <Title>The Simpsons</Title>
+    <Description>Insightful observations on American family life.</Description>
+  </Series>
+  <Series id="StarTrekVoyager" type="drama">
+    <Title>Star Trek: Voyager</Title>
+    <Description>Sci-fi series set on a space ship stranded far from earth.</Description>
+  </Series>
+  <Series id="DarkAngel" type="drama">
+    <Title>Dark Angel</Title>
+    <Description>Genetically-engineered soldiers in near-future Seattle.</Description>
+  </Series>
+  <Series id="StarTrekNextGeneration" type="drama">
+    <Title>Star Trek: The Next Generation</Title>
+    <Description>Sci-fi series starring <Actor>Patrick Stewart</Actor>.</Description>
+  </Series>
+</SeriesList>

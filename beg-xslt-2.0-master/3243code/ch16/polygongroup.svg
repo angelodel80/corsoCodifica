@@ -1,0 +1,12 @@
+<?xml version="1.0" standalone="no"?>
+<svg width="12cm" height="4cm" viewBox="0 0 1200 400"
+     xmlns="http://www.w3.org/2000/svg">
+  <g fill="red" stroke="black" stroke-width="25">
+    <polygon points="200,300 300,100 400,300"
+             stroke-linecap="butt" stroke-linejoin="miter" />
+    <polygon points="500,300 600,100 700,300"
+             stroke-linecap="round" stroke-linejoin="round" />
+    <polygon points="800,300 900,100 1000,300" 
+             stroke-linecap="square" stroke-linejoin="bevel" />
+  </g>
+</svg>

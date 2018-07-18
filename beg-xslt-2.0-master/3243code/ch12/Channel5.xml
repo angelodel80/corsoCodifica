@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Channel>
+  <Name>Channel 5</Name>
+  <Program rating="7">
+    <Start>2001-07-05T19:00:00</Start>
+    <Duration>PT30M</Duration>
+    <Series>MovieChartShow</Series>
+    <Title></Title>
+  </Program>
+  <Program rating="5">
+    <Start>2001-07-05T19:30:00</Start>
+    <Duration>PT30M</Duration>
+    <Series>5News</Series>
+    <Title></Title>
+  </Program>
+  <Program type="entertainment" rating="1">
+    <Start>2001-07-05T20:00:00</Start>
+    <Duration>PT1H</Duration>
+    <Series></Series>
+    <Title>The World's Worst Drivers Caught On Tape</Title>
+  </Program>
+  <Program type="film" rating="3">
+    <Start>2001-07-05T21:00:00</Start>
+    <Duration>PT1H55M</Duration>
+    <Series></Series>
+    <Title>Black and White</Title>
+  </Program>
+</Channel>

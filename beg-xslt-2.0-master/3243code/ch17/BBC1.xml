@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<Channel>
+   <Name>BBC1</Name>
+   <Program videoPlus="620">
+      <Start>2001-07-05T19:00:00</Start>
+      <Duration>PT30M</Duration>
+      <Series>A Question of Sport</Series>
+      <Title/>
+      <Description>
+    Sports quiz hosted by Sue Barker.
+  </Description>
+   </Program>
+   <Program videoPlus="2571" rating="5">
+      <Start>2001-07-05T19:30:00</Start>
+      <Duration>PT30M</Duration>
+      <Series>EastEnders</Series>
+      <Title/>
+      <Description>
+    Mark's health scare forces him to reconsider his future with Lisa, while 
+    Jamie is torn between Sonia and Zoe.
+  </Description>
+   </Program>
+   <Program videoPlus="2781">
+      <Start>2001-07-05T20:00:00</Start>
+      <Duration>PT45M</Duration>
+      <Series>Get Real with Casualty</Series>
+      <Title/>
+      <Description>
+    Casualty stars get a taste of what real doctors and nurses have to face 
+    every day.
+  </Description>
+   </Program>
+   <Program videoPlus="7129">
+      <Start>2001-07-05T20:45:00</Start>
+      <Duration>PT45M</Duration>
+      <Series>The National Lottery</Series>
+      <Title/>
+      <Description>
+    Stunning celebrity guests and a grand giveaway.
+  </Description>
+   </Program>
+   <Program videoPlus="85674" rating="6">
+      <Start>2001-07-05T21:30:00</Start>
+      <Series>Panorama</Series>
+      <Title/>
+      <Description>
+    Today discusses whether cloning pets is morally wrong.
+  </Description>
+   </Program>
+</Channel>

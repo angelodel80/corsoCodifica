@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?><CastList xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <CastMember>
+    <Character><Name>Zoe Slater</Name></Character>
+    <Actor><Name>Michelle Ryan</Name></Actor>
+  </CastMember>
+  <CastMember>
+    <Character><Name>Jamie Mitchell</Name></Character>
+    <Actor><Name>Jack Ryder</Name></Actor>
+  </CastMember>
+  <CastMember>
+    <Character><Name>Sonia Jackson</Name></Character>
+    <Actor><Name>Natalie Cassidy</Name></Actor>
+  </CastMember>
+</CastList>

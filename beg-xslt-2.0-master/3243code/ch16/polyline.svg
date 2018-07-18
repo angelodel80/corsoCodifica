@@ -1,0 +1,13 @@
+<?xml version="1.0" standalone="no"?>
+<svg width="12cm" height="4cm" viewBox="0 0 1200 400"
+     xmlns="http://www.w3.org/2000/svg">
+  <polyline points="200,300 300,100 400,300" fill="none" 
+            stroke="black" stroke-width="25" 
+            stroke-linecap="butt" stroke-linejoin="miter" />
+  <polyline points="500,300 600,100 700,300" fill="none" 
+            stroke="black" stroke-width="25" 
+            stroke-linecap="round" stroke-linejoin="round" />
+  <polyline points="800,300 900,100 1000,300" fill="none" 
+            stroke="black" stroke-width="25" 
+            stroke-linecap="square" stroke-linejoin="bevel" />
+</svg>

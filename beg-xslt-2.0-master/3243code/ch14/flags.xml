@@ -1,0 +1,5 @@
+<?xml version="1.0"?>
+<flags>
+  <flag name="favorite" src="favorite.gif" alt="[Favorite]" />
+  <flag name="interesting" src="interest.gif" alt="[Interest]" />
+</flags>

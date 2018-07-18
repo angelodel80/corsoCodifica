@@ -1,0 +1,65 @@
+body {
+	font-family: Verdana, sans-serif;
+	font-size: 8pt;
+}
+
+h1 {
+	background: #C00;
+	color: yellow;
+	padding: 0 0.2em;
+	margin: 0;
+	font-size: 2em;
+}
+
+h2 {
+	background: #C00;
+	color: white;
+	padding: 0 0.2em;
+	margin: 0;
+	font-size: 1.8em;
+}
+
+div.interesting {
+	background: yellow;
+}
+
+.title {
+	font-size: 1.2em;
+	font-weight: bold;
+}
+
+.subtitle {
+	font-weight: normal;
+}
+
+.castlist {
+	margin: 0em;
+	padding: 0.5em 1em;
+}
+.castlist li {
+	display: list-item;
+	list-style-type: none;
+}
+.character, .actor {
+	display: inline;
+	background: transparent;
+	color: black;
+	margin-bottom: 0em;
+	padding: 0em;
+	font-weight: normal;
+	font-size: 1em;
+}
+.actor {
+	font-weight: bold;
+}
+.character {
+	font-size: 1.2em;
+}
+div.nowShowing {
+  font-size: 120%;
+}
+p.average {
+  font-size: 0.8em;
+  margin: 0;
+  text-align: right;
+}

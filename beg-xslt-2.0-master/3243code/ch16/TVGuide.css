@@ -1,0 +1,99 @@
+body {
+  font-family: Verdana, sans-serif;
+  font-size: 8pt;
+}
+
+h1 {
+  background: #C00;
+  color: yellow;
+  padding: 0 0.2em;
+  margin: 0;
+  font-size: 2em;
+}
+
+h2 {
+  background: #C00;
+  color: white;
+  padding: 0 0.2em;
+  margin: 0;
+  font-size: 1.8em;
+}
+
+div.interesting {
+  background: yellow;
+}
+
+div.nowShowing {
+    font-size: 120%;
+}
+
+.title {
+  font-size: 1.2em;
+  font-weight: bold;
+}
+
+.subtitle {
+  font-weight: normal;
+}
+
+table {
+  table-layout: fixed;
+  font-size: 1em;
+  margin-bottom: 2em;
+}
+
+td, th {
+  text-align: left;
+  vertical-align: top;
+  border-left: 1pt solid #C00;
+  border-top: 1pt solid black;
+  padding: 0.1em;
+}
+
+td .title {
+  font-size: 1em;
+  font-weight: normal;
+}
+
+td .subtitle {
+  font-style: italic;
+}
+
+ul.castlist {
+  margin: 0em 1em;
+  padding: 0.5em 1em;
+}
+.castlist li {
+  display: list-item;
+  list-style-type: decimal;
+}
+.character, .actor {
+  display: inline;
+  background: transparent;
+  color: black;
+  margin-bottom: 0em;
+  padding: 0em;
+  font-weight: normal;
+  font-size: 1em;
+}
+.actor {
+  font-weight: bold;
+}
+.character {
+  font-size: 1.2em;
+}
+
+p.average {
+  font-size: 0.8em;
+  margin: 0;
+  text-align: right;
+}
+
+.number {
+  font-style: italic;
+}
+
+.keyword {
+  background: #C00;
+  color: white;
+}
