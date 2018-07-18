@@ -1,0 +1,5 @@
+<fLib xmlns="http://www.tei-c.org/ns/1.0">
+  
+<f name="xxx">A feature may have untyped content</f>
+<f name="yyy"><string>or typed</string></f>
+</fLib>
