@@ -1,1 +1,1 @@
-# here a list of useful links for studing XML ecosystem and deepen into advanced args
+# here a list of useful links for studing XML technologies ecosystem and deepen into advanced args
