@@ -1,0 +1,95 @@
+\documentclass{beamer}
+    
+%    \usepackage[english]{babel}
+    %\usepackage[latin1]{inputenc}
+    %\usepackage[T1]{fontenc}
+
+\mode<presentation>{
+  \setbeamertemplate{background canvas}[vertical shading]
+  \usetheme{Berkeley}
+  \useoutertheme{himinfolines}
+}
+  
+\usepackage{ucs}
+\usepackage[utf8]{inputenc}
+\usepackage[english,polutonikogreek,italian,UKenglish,british]{babel}
+\usepackage{graphicx}
+\usepackage{colortbl}
+\usepackage{multicol}
+\usepackage{ulem}
+\usepackage{verbatim}
+\usepackage{alltt}
+\usepackage{ccicons}
+\usepackage{MnSymbol,wasysym}
+\usepackage{tikzsymbols}
+\usepackage{textcomp}
+\usepackage{xmpincl}
+
+\usepackage{parskip}
+\setcounter{nframes}{100}
+\setcounter{nframe}{1}
+\setbeamercovered{dynamic}
+\newenvironment{grcenv}{\begin{otherlanguage}{greek}}{\end{otherlanguage}}
+\newcommand{\g}[1]{\textgreek{#1}}
+\definecolor{darkgreen}{rgb}{0,0.5,0}
+\definecolor{darkblue}{rgb}{0,0,0.5}
+\definecolor{grey}{rgb}{0.5,0.5,0.5}
+\setcounter{tocdepth}{5}
+
+\makeatletter
+
+\makeatother
+\includexmp{LicencesAndLicensing}
+
+%frame00 metadata
+    \title{Presentazione Corso Codifica del Testo}
+    \author[A.M. Del Grosso]{Angelo Mario Del Grosso}
+    \institute{\texttt{angelo.delgrosso@ilc.cnr.it} \\\bigskip\textit{CNR-ILC-LicoLab} \\\bigskip\url{http://licolab.ilc.cnr.it/}}
+    \date{Istituto di Linguistica Computazionale ``A. Zampolli'', \today}
+    \AtBeginSection[]{
+    \begin{frame}<beamer>
+    \addtocounter{nframe}{1}
+    \footnotesize
+    \frametitle{Progress status}
+    \tableofcontents[currentsection,hideothersubsections]
+    \end{frame}
+    }
+
+\begin{document}
+
+\begin{frame}
+	\maketitle
+\end{frame}
+
+\begin{frame}
+	\frametitle{Piano della presentazione}
+	\tableofcontents
+\end{frame}
+
+\section{Presentazione}
+\begin{frame}
+	\frametitle{Presentazione del Corso}
+	\addtocounter{nframe}{1}
+    
+    \begin{center}
+	    \includegraphics[width=.4\textwidth]{./imgs/tei-r.pdf}
+	\end{center}
+
+	\begin{itemize}
+		\item<1-> parleremo di TEI
+		\item<2-> parleremo anche di TEI
+		\item<3-> \textbf{non} parleremo di altro se non di TEI
+	\end{itemize}
+\end{frame}
+
+\section{Introduzione}
+\input{testinput.tex}
+
+\section{Chi siamo}
+\input{noi.tex}
+
+\section{Interessanti}
+\input{interessante.tex}
+
+
+\end{document}
