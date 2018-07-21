@@ -1,0 +1,47 @@
+\frametitle{Linked Open Data (1/2)}
+    \addtocounter{nframe}{1}
+    \defverbatim{\prohibited}{%
+    \begin{tiny}
+    \begin{verbatim}
+    :myresource dc:creator ``NotOpenDataCompany'' ;
+    dc:subject ``Translation'' ;
+    dc:date ``2018-01-12'' ;
+    dc:license [
+        a odrl:Policy;
+        odrl:prohibition [
+            odrl:action
+            cc:Reproduction
+            ] .
+       ]
+    \end{verbatim}
+    \end{tiny}
+    }
+
+    \defverbatim{\consent}{%
+    \begin{tiny}
+    \begin{verbatim}
+    :myresource dc:creator ``QuiteOpenDataCompany'' ;
+    dc:subject ``Translation'' ;
+    dc:date ``2018-01-12'' ;
+    dc:license [
+        a odrl:Policy;
+        odrl:permission [
+        odrl:action
+            cc:Reproduction ;
+            odrl:duty [
+            odrl:action
+            odrl:obtainConsent ;
+            odrl:consentingParty <mailto:weAreFree@OpenWorld.net>
+                ]
+            ]
+        ] .
+    \end{verbatim}
+    \end{tiny}
+    }
+
+    \begin{block}{XML verbatim}
+        And if we want to provide XML we can use the
+        \href{https://www.w3.org/XML/}{eXtensible Markup Language}
+     \end{block}
+     {\consent}
+

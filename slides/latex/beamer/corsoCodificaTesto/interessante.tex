@@ -1,3 +1,4 @@
+%interessante f01
 \begin{frame}
     \frametitle{Cose interessanti}
     \framesubtitle{il sottotitolo del frame!}
@@ -7,4 +8,146 @@
         Il contenuto del blocco
     \end{block}
     
+\end{frame}
+
+%interessante f02
+\begin{frame}
+    \frametitle{Cose interessanti all'interno della stessa sezione}
+    \framesubtitle{altro sotto titolo}
+    \addtocounter{nframe}{1}
+    
+    \begin{block}{titolo del blocco}
+        \begin{itemize}
+            \item codifica dei catatteri
+            \item \textit{codifica del testo}
+            \item elaborazione
+        \end{itemize}
+
+        \begin{tiny}
+            More details at \url{http://google.it} and \cite{ciotti2011}
+        \end{tiny}
+
+    \end{block}
+
+
+\end{frame}
+
+%interessante f03
+\begin{frame}
+    \frametitle{Altre cose interessanti stessa sezione}
+    \framesubtitle{con sotto titolo}
+    \addtocounter{nframe}{1}
+    
+    \begin{block}{blocco}
+        \begin{itemize}
+            \item \begin{small} testo small \end{small}
+            \item \textbf{testo bold}
+            \item ``testo verbatim di citazione''
+        \end{itemize}
+
+        \begin{tiny}
+            for more details see %\cite{ciotti2011}  \hline
+        \end{tiny}
+    \end{block}
+
+
+\end{frame}
+
+
+%interessante f04
+\begin{frame}
+    \frametitle{Altre cose interessanti stessa sezione}
+    \framesubtitle{con sotto titolo}
+    \addtocounter{nframe}{1}
+    
+    \begin{tiny}
+    %\begin{table}
+   % \begin{tabular}{|||||||}
+   % \hline
+   % \textbf{License} & \textbf{Code Use, Modification \& Distribution} 	& \textbf{User Obligations} &	\textbf{Patent License Grant} 	&\textbf{Linking code to other licenses} & \textbf{Trademark Grants}\\
+   % \hline
+   % Apache 2.0 	& Permissive. Must notify users of code modifications.&	Can’t remove copyright, patent, trademark and attribution notices &	Yes: Explicitly defined &	Permissive &	Not allowed		\\
+   % \hline
+   % MIT 	& Permissive &	Future licensed software must contains a copy of license and copyright notice &	Not explicitly defined &	Permissive &	Not mentioned. Advance permission required\\
+   % \hline
+   % BSD &	Permissive & 	BSD 3-clause: avoid appearance that product is endorsed by the original developers &	Not explicitly defined & 	Permissive 	&Not mentioned\\
+   % \hline
+   % \end{tabular}
+   %\caption{From qui tabella \url{http://google.it}}
+   % \end{table}
+    \end{tiny}
+
+\end{frame}
+
+%interessante f05
+\begin{frame}
+    \frametitle{Open Source Licenses Examples}
+    \framesubtitle{Creative Commons \ccLogo Licenses}
+    \addtocounter{nframe}{1}
+
+    \begin{description}
+    \item [GPL] WordPress, MediaWiki, VLC, MySQL (partially);
+    %\item [MIT] GitLab, JQuery, Ruby on Rails;
+    %\item [BSD] Nginx, Django;
+    %\item [Apache] Bootstrap css, Apache software;
+    %\item [\ldots]
+    \item[Attribution, \ccAttribution] \cite{CCwikiBY2014}. This is also known as TASL (Title, Author, Source, License);
+    \item[Share-Alike, \ccShareAlike] GPL-like licenses;
+    \item[No Derivatives, \ccNoDerivatives]  \textit{verbatim}. You, as licensee, can not crop, expand, translate, extract information from the original work. But you \textbf{might} be payed for showing, \textit{verbatim}, a text from your application \ldots;
+    \item[Non Commercial, \ccNonCommercial] volore blu per i termini e nero per la glossa .
+   % \item \defverbatim{\prohibited}{%
+
+    \end{description}
+    
+\end{frame}
+
+%interessante f06
+\begin{frame}[fragile]
+    \frametitle{Linked Open Data (1/2)}
+    \addtocounter{nframe}{1}
+    \defverbatim{\prohibited}{%
+    \begin{tiny}
+    \begin{verbatim}
+    :myresource dc:creator ``NotOpenDataCompany'' ;
+    dc:subject ``Translation'' ;
+    dc:date ``2018-01-12'' ;
+    dc:license [
+        a odrl:Policy;
+        odrl:prohibition [
+            odrl:action
+            cc:Reproduction
+            ] .
+       ]
+    \end{verbatim}
+    \end{tiny}
+    }
+    
+    \defverbatim{\consent}{%
+    \begin{tiny}
+    \begin{verbatim}
+    :myresource dc:creator ``QuiteOpenDataCompany'' ;
+    dc:subject ``Translation'' ;
+    dc:date ``2018-01-12'' ;
+    dc:license [
+        a odrl:Policy;
+        odrl:permission [
+        odrl:action
+            cc:Reproduction ;
+            odrl:duty [
+            odrl:action
+            odrl:obtainConsent ;
+            odrl:consentingParty <mailto:weAreFree@OpenWorld.net>
+                ]
+            ]
+        ] .
+    \end{verbatim}
+    \end{tiny}
+    }
+        
+    \begin{block}{XML verbatim}
+        And if we want to provide XML we can use the
+        \href{https://www.w3.org/XML/}{eXtensible Markup Language}
+     \end{block}
+     {\consent}
+
 \end{frame}
