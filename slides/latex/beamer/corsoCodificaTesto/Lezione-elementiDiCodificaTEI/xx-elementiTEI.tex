@@ -1,0 +1,110 @@
+\documentclass{beamer}
+    
+%    \usepackage[english]{babel}
+    %\usepackage[latin1]{inputenc}
+    %\usepackage[T1]{fontenc}
+
+\mode<presentation>{
+  \setbeamertemplate{background canvas}[vertical shading]
+  \usetheme{Berkeley}
+  \useoutertheme{himinfolines}
+}
+  
+\usepackage{ucs}
+\usepackage[utf8]{inputenc}
+\usepackage[english,polutonikogreek,italian,UKenglish,british]{babel}
+\usepackage{graphicx}
+\usepackage{colortbl}
+\usepackage{multicol}
+\usepackage{ulem}
+\usepackage{verbatim}
+\usepackage{alltt}
+\usepackage{ccicons}
+\usepackage{MnSymbol,wasysym}
+\usepackage{tikzsymbols}
+\usepackage{textcomp}
+\usepackage{xmpincl}
+
+\usepackage{parskip}
+\setcounter{nframes}{100}
+\setcounter{nframe}{1}
+\setbeamercovered{dynamic}
+\newenvironment{grcenv}{\begin{otherlanguage}{greek}}{\end{otherlanguage}}
+\newcommand{\g}[1]{\textgreek{#1}}
+\definecolor{darkgreen}{rgb}{0,0.5,0}
+\definecolor{darkblue}{rgb}{0,0,0.5}
+\definecolor{grey}{rgb}{0.5,0.5,0.5}
+\setcounter{tocdepth}{5}
+
+\makeatletter
+
+\makeatother
+%\includexmp{LicencesAndLicensing}
+
+%frame00 metadata
+    \title{Elementi Codifica TEI}
+    \author[A.M. Del Grosso]{Angelo Mario Del Grosso}
+    \institute{\texttt{angelo.delgrosso@ilc.cnr.it} \\\bigskip\textit{CNR-ILC-LicoLab} \\\bigskip\url{http://licolab.ilc.cnr.it/}}
+    \date{Istituto di Linguistica Computazionale ``A. Zampolli'', \today}
+    \AtBeginSection[]{
+    \begin{frame}<beamer>
+    \addtocounter{nframe}{1}
+    \footnotesize
+    \frametitle{Progress status}
+    \tableofcontents[currentsection,hideothersubsections]
+    \end{frame}
+    }
+
+\begin{document}
+
+\begin{frame}
+	\maketitle
+\end{frame}
+
+\begin{frame}
+	\frametitle{Sommatio della Lezione}
+	\tableofcontents
+\end{frame}
+
+\section{Intro}
+\begin{frame}
+	\frametitle{Introduzione}
+	\addtocounter{nframe}{1}
+    
+    \begin{center}
+	    \includegraphics[width=.2\textwidth]{../imgs/tei-r.pdf}
+	\end{center}
+
+    \begin{itemize}
+        
+        \item<1-> parleremo del sistema Modulare della TEI
+            \begin{itemize}
+                \item<1-> Moduli
+                \item<1-> Classi     
+            \end{itemize} 
+        \item<2-> parleremo di quest'altro
+            \begin{itemize}
+                \item<2-> quello
+                \item<2-> codesto     
+            \end{itemize} 
+    \end{itemize}
+    
+\end{frame}
+
+\section{Sezione I}
+\input{includes/xx-sezione1.tex}
+
+\section{Sezione II}
+\input{includes/xx-sezione2.tex}
+
+\section{Sezione III}
+\input{includes/xx-sezione3.tex}
+
+\section{Sezione IV}
+\input{includes/xx-sezione4.tex}
+
+\section{Conclusioni}
+\input{includes/xx-conclusioni.tex}
+
+
+\end{document}

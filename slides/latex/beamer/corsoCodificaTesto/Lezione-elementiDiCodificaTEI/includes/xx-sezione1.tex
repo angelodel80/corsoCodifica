@@ -1,0 +1,153 @@
+% xx sezione 1 frame 01
+\begin{frame}
+    \frametitle{Attributi Globali}
+    \framesubtitle{Elenco}
+    \addtocounter{nframe}{1}
+
+
+\textbf{\textrm{att.global} provides attributes common to all elements in the TEI encoding scheme.}
+
+\begin{description}
+    \item [@xml:id]     \textbf{identifier} provides a unique identifier for the element bearing the attribute.
+    \item [@n]          \textbf{number} gives a number (or other label) for an element, which is not necessarily unique within the document.
+    \item [@xml:lang]   \textbf{language} indicates the language of the element content using a ‘tag’ generated according to BCP 47\footnote{see \href{http://google.con}{http://google.com}}.
+\end{description}
+
+\end{frame}
+
+
+% xx sezione 1 frame 02
+\begin{frame}
+    \frametitle{Attributi Globali}
+    \framesubtitle{Elenco cont..}
+    \addtocounter{nframe}{1}
+
+
+\textbf{\textmd{att.global} provides attributes common to all elements in the TEI encoding scheme.}
+
+\begin{description}
+    \item rend [att.global.rendition]	(rendition) indicates how the element in question was rendered or presented in the source text.
+    \item style [att.global.rendition]	contains an expression in some formal style definition language which defines the rendering or presentation used for this element in the source text
+    \item rendition [att.global.rendition]	points to a description of the rendering or presentation used for this element in the source text.
+\end{description}
+
+\end{frame}
+
+% xx sezione 1 frame 03
+\begin{frame}
+    \frametitle{Attributi Globali}
+    \framesubtitle{Elenco cont...}
+    \addtocounter{nframe}{1}
+
+
+\textbf{\textmd{att.global} provides attributes common to all elements in the TEI encoding scheme.}
+
+\begin{description}
+    \item xml:base	provides a base URI reference with which applications can resolve relative URI references into absolute URI references.
+    \item xml:space	signals an intention about how white space should be managed by applications.
+    \item source [att.global.source]	specifies the source from which some aspect of this element is drawn.
+\end{description}
+
+\end{frame}
+
+% xx sezione 1 frame 04
+\begin{frame}
+    \frametitle{Attributi Globali}
+    \framesubtitle{Elenco cont....}
+    \addtocounter{nframe}{1}
+
+
+\textbf{\textmd{att.global} provides attributes common to all elements in the TEI encoding scheme.}
+
+\begin{description}
+    \item  cert [att.global.responsibility]	(certainty) signifies the degree of certainty associated with the intervention or interpretation.
+    \item resp [att.global.responsibility]	(responsible party) indicates the agency responsible for the intervention or interpretation, for example an editor or transcriber.
+\end{description}
+
+\end{frame}
+
+
+% xx sezione 1 frame 05
+
+\begin{frame} [fragile]
+    \frametitle{Attributi Globali}
+    \framesubtitle{Esempio \textrm{@xml:lang}}
+    \addtocounter{nframe}{1}
+
+    \textbf{\textrm{xml:lang} indica la lingua e il sistema di scrittura usato}
+    \defverbatim{\langatt}{%
+        \begin{tiny}
+        \begin{verbatim}
+            <TEI xmlns="http://www.tei-c.org/ns/1.0">
+                <teiHeader xml:lang="en">
+                    <!-- ... -->
+                </teiHeader>
+                <text xml:lang="fr">
+                    <body>
+                        <div>
+                            <!-- chapter one is in French -->
+                        </div>
+                        <div xml:lang="de">
+                            <!-- chapter two is in German -->
+                        </div>
+                        <div>
+                            <!-- chapter three is French -->
+                        </div>
+                        <!-- ... -->
+                    </body>
+                </text>
+            </TEI>
+        \end{verbatim}
+        \end{tiny}
+        }
+        \begin{block}{XML TEI con esempio di uso \textrm{xml:lang} attribute}
+            {\langatt}
+        \end{block}
+\end{frame}
+
+
+% xx sezione 1 frame 06
+\begin{frame}
+    \frametitle{Attributi Globali}
+    \framesubtitle{Stile e Aspetto}
+    \addtocounter{nframe}{1}
+
+    
+    \textbf{In the TEI scheme, it is possible to supply information about the appearance of elements within a source document in the following distinct ways:}
+
+    \begin{itemize}
+        \item One or more properties may be specified as the default for a set of elements (based on an external scheme, by default CSS), using rendition elements and their selector attributes;
+        \item One or more properties may be specified for individual element occurrences, using the rend attribute with any convenient set of one or more sequence-indeterminate tokens;
+    \end{itemize}
+\end{frame}
+
+% xx sezione 1 frame 07
+\begin{frame}
+    \frametitle{Attributi Globali}
+    \framesubtitle{Stile e Aspetto cont..}
+    \addtocounter{nframe}{1}
+    
+    \textbf{Note that these TEI attributes always describe the rendition or appearance of the source document, not intended output renditions, although often the two may be closely related.}
+
+    \begin{itemize}
+        \item One or more properties may be specified for individual element occurrences, using the rendition attribute to point to rendition elements;
+        \item One or more properties may be supplied explicitly for individual element occurrences, using the style attribute.
+    \end{itemize}
+
+\end{frame}
+
+
+% xx sezione 1 frame 08
+
+\begin{frame}
+    \frametitle{Attributi Globali}
+    \framesubtitle{da vari altri Moduli Tabella}
+    \addtocounter{nframe}{1}
+    %fare una tabella 
+class name	module name	see further
+att.global.linking	linking	16 Linking, Segmentation, and Alignment
+att.global.analytic	analysis	17 Simple Analytic Mechanisms
+att.global.facs	transcr	11.1 Digital Facsimiles
+att.global.change	transcr	11.7 Identifying Changes and Revisions
+
+\end{frame}
