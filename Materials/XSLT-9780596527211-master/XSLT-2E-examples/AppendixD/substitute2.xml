@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- substitute2.xml -->
+<person
+  xmlns="http://www.oreilly.com/xslt"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://www.oreilly.com/xslt substitute.xsd">
+  <name>Doug Tidwell</name>
+  <birthday>1965-06-19</birthday>
+  <age>42</age>
+  <businessAddress>4013 Corporate Parkway</businessAddress>
+</person>

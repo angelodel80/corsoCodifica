@@ -1,0 +1,391 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<div type="scene" n="1">
+   
+   <head>The King of Navarre's Park</head>
+   
+   <stage>Enter Holofernes, Sir Nathaniel, and Dull</stage>
+
+   <sp>
+      <speaker>Holofernes</speaker>
+      <l>Satis quod sufficit.</l>
+   </sp>
+
+   <sp>
+      <speaker>Sir Nathaniel</speaker>
+      <l>I praise God for you, sir: your reasons at dinner</l>
+      <l>have been sharp and sententious; pleasant without</l>
+      <l>scurrility, witty without affection, audacious without</l>
+      <l>impudency, learned without opinion, and strange with-</l>
+      <l>out heresy. I did converse this quondam day with</l>
+      <l>a companion of the king's, who is intituled, nomi-</l>
+      <l>nated, or called, Don Adriano de Armado.</l>
+   </sp>
+
+   <sp>
+      <speaker>Holofernes</speaker>
+      <l>Novi hominem tanquam te: his humour is lofty, his</l>
+      <l>discourse peremptory, his tongue filed, his eye</l>
+      <l>ambitious, his gait majestical, and his general</l>
+      <l>behavior vain, ridiculous, and thrasonical. He is</l>
+      <l>too picked, too spruce, too affected, too odd, as it</l>
+      <l>were, too peregrinate, as I may call it.</l>
+   </sp>
+
+   <sp>
+      <speaker>Sir Nathaniel</speaker>
+      <l>A most singular and choice epithet.</l>
+   </sp>
+
+
+   <stage>Draws out his table-book</stage>
+
+   <sp>
+      <speaker>Holofernes</speaker>
+      <l>He draweth out the thread of his verbosity finer</l>
+      <l>than the staple of his argument. I abhor such</l>
+      <l>fanatical phantasimes, such insociable and</l>
+      <l>point-devise companions; such rackers of</l>
+      <l>orthography, as to speak dout, fine, when he should</l>
+      <l>say doubt; det, when he should pronounce debt,--d,</l>
+      <l>e, b, t, not d, e, t: he clepeth a calf, cauf;</l>
+      <l>half, hauf; neighbour vocatur nebor; neigh</l>
+      <l>abbreviated ne. This is abhominable,--which he</l>
+      <l>would call abbominable: it insinuateth me of</l>
+      <l>insanie: anne intelligis, domine? to make frantic, lunatic.</l>
+
+   </sp>
+
+   <sp>
+      <speaker>Sir Nathaniel</speaker>
+      <l>Laus Deo, bene intelligo.</l>
+   </sp>
+
+   <sp>
+      <speaker>Holofernes</speaker>
+      <l>Bon, bon, fort bon, Priscian! a little scratch'd,</l>
+      <l>'twill serve.</l>
+   </sp>
+
+   <sp>
+      <speaker>Sir Nathaniel</speaker>
+      <l>Videsne quis venit?</l>
+   </sp>
+
+   <sp>
+      <speaker>Holofernes</speaker>
+      <l>Video, et gaudeo.</l>
+   </sp>
+
+
+   <stage>Enter Don Adriano, Moth, and Costard</stage>
+
+   <sp>
+      <speaker>Don Adriano</speaker>
+      <l>Chirrah!</l>
+   </sp>
+
+
+   <stage>To Moth</stage>
+
+   <sp>
+      <speaker>Holofernes</speaker>
+      <l>Quare chirrah, not sirrah?</l>
+
+   </sp>
+
+   <sp>
+      <speaker>Don Adriano</speaker>
+      <l>Men of peace, well encountered.</l>
+   </sp>
+
+   <sp>
+      <speaker>Holofernes</speaker>
+      <l>Most military sir, salutation.</l>
+   </sp>
+
+   <sp>
+
+      <speaker>Moth</speaker>
+      <stage>Aside to Costard</stage>
+      <l>They have been at a great feast</l>
+      <l>of languages, and stolen the scraps.</l>
+   </sp>
+
+   <sp>
+      <speaker>Costard</speaker>
+      <l>O, they have lived long on the alms-basket of words.</l>
+      <l>I marvel thy master hath not eaten thee for a word;</l>
+      <l>for thou art not so long by the head as</l>
+      <l>honorificabilitudinitatibus: thou art easier</l>
+      <l>swallowed than a flap-dragon.</l>
+   </sp>
+
+   <sp>
+      <speaker>Moth</speaker>
+      <l>Peace! the peal begins.</l>
+   </sp>
+
+   <sp>
+      <speaker>Don Adriano</speaker>
+      <stage>To Holofernes</stage>
+      <l>Monsieur, are you not lettered?</l>
+   </sp>
+
+   <sp>
+      <speaker>Moth</speaker>
+      <l>Yes, yes; he teaches boys the hornbook. What is a,</l>
+      <l>b, spelt backward, with the horn on his head?</l>
+   </sp>
+
+   <sp>
+      <speaker>Holofernes</speaker>
+      <l>Ba, pueritia, with a horn added.</l>
+   </sp>
+
+   <sp>
+      <speaker>Moth</speaker>
+      <l>Ba, most silly sheep with a horn. You hear his learning.</l>
+   </sp>
+
+   <sp>
+      <speaker>Holofernes</speaker>
+      <l>Quis, quis, thou consonant?</l>
+   </sp>
+
+   <sp>
+      <speaker>Moth</speaker>
+      <l>The third of the five vowels, if you repeat them; or</l>
+      <l>the fifth, if I.</l>
+   </sp>
+
+   <sp>
+      <speaker>Holofernes</speaker>
+      <l>I will repeat them,--a, e, i,--</l>
+   </sp>
+
+   <sp>
+      <speaker>Moth</speaker>
+      <l>The sheep: the other two concludes it,--o, u.</l>
+   </sp>
+
+   <sp>
+      <speaker>Don Adriano</speaker>
+      <l>Now, by the salt wave of the Mediterraneum, a sweet</l>
+      <l>touch, a quick venue of wit! snip, snap, quick and</l>
+      <l>home! it rejoiceth my intellect: true wit!</l>
+   </sp>
+
+   <sp>
+      <speaker>Moth</speaker>
+      <l>Offered by a child to an old man; which is wit-old.</l>
+   </sp>
+
+   <sp>
+      <speaker>Holofernes</speaker>
+      <l>What is the figure? what is the figure?</l>
+   </sp>
+
+   <sp>
+      <speaker>Moth</speaker>
+      <l>Horns.</l>
+   </sp>
+
+   <sp>
+      <speaker>Holofernes</speaker>
+      <l>Thou disputest like an infant: go, whip thy gig.</l>
+   </sp>
+
+   <sp>
+      <speaker>Moth</speaker>
+      <l>Lend me your horn to make one, and I will whip about</l>
+      <l>your infamy circum circa,--a gig of a cuckold's horn.</l>
+   </sp>
+
+   <sp>
+      <speaker>Costard</speaker>
+      <l>An I had but one penny in the world, thou shouldst</l>
+      <l>have it to buy gingerbread: hold, there is the very</l>
+      <l>remuneration I had of thy master, thou halfpenny</l>
+      <l>purse of wit, thou pigeon-egg of discretion. O, an</l>
+      <l>the heavens were so pleased that thou wert but my</l>
+      <l>bastard, what a joyful father wouldst thou make me!</l>
+      <l>Go to; thou hast it ad dunghill, at the fingers'</l>
+      <l>ends, as they say.</l>
+   </sp>
+
+   <sp>
+      <speaker>Holofernes</speaker>
+      <l>O, I smell false Latin; dunghill for unguem.</l>
+   </sp>
+
+   <sp>
+      <speaker>Don Adriano</speaker>
+      <l>Arts-man, preambulate, we will be singled from the</l>
+      <l>barbarous. Do you not educate youth at the</l>
+      <l>charge-house on the top of the mountain?</l>
+   </sp>
+
+   <sp>
+      <speaker>Holofernes</speaker>
+      <l>Or mons, the hill.</l>
+   </sp>
+
+   <sp>
+      <speaker>Don Adriano</speaker>
+      <l>At your sweet pleasure, for the mountain.</l>
+   </sp>
+
+   <sp>
+      <speaker>Holofernes</speaker>
+      <l>I do, sans question.</l>
+   </sp>
+
+   <sp>
+      <speaker>Don Adriano</speaker>
+      <l>Sir, it is the king's most sweet pleasure and</l>
+      <l>affection to congratulate the princess at her</l>
+      <l>pavilion in the posteriors of this day, which the</l>
+      <l>rude multitude call the afternoon.</l>
+   </sp>
+
+   <sp>
+      <speaker>Holofernes</speaker>
+      <l>The posterior of the day, most generous sir, is</l>
+      <l>liable, congruent and measurable for the afternoon:</l>
+      <l>the word is well culled, chose, sweet and apt, I do</l>
+      <l>assure you, sir, I do assure.</l>
+   </sp>
+
+   <sp>
+      <speaker>Don Adriano</speaker>
+      <l>Sir, the king is a noble gentleman, and my familiar,</l>
+      <l>I do assure ye, very good friend: for what is</l>
+      <l>inward between us, let it pass. I do beseech thee,</l>
+      <l>remember thy courtesy; I beseech thee, apparel thy</l>
+      <l>head: and among other important and most serious</l>
+      <l>designs, and of great import indeed, too, but let</l>
+      <l>that pass: for I must tell thee, it will please his</l>
+      <l>grace, by the world, sometime to lean upon my poor</l>
+      <l>shoulder, and with his royal finger, thus, dally</l>
+      <l>with my excrement, with my mustachio; but, sweet</l>
+      <l>heart, let that pass. By the world, I recount no</l>
+      <l>fable: some certain special honours it pleaseth his</l>
+      <l>greatness to impart to Armado, a soldier, a man of</l>
+      <l>travel, that hath seen the world; but let that pass.</l>
+      <l>The very all of all is,--but, sweet heart, I do</l>
+      <l>implore secrecy,--that the king would have me</l>
+      <l>present the princess, sweet chuck, with some</l>
+      <l>delightful ostentation, or show, or pageant, or</l>
+      <l>antique, or firework. Now, understanding that the</l>
+      <l>curate and your sweet self are good at such</l>
+      <l>eruptions and sudden breaking out of mirth, as it</l>
+      <l>were, I have acquainted you withal, to the end to</l>
+      <l>crave your assistance.</l>
+   </sp>
+
+   <sp>
+      <speaker>Holofernes</speaker>
+      <l>Sir, you shall present before her the Nine Worthies.</l>
+      <l>Sir, as concerning some entertainment of time, some</l>
+      <l>show in the posterior of this day, to be rendered by</l>
+      <l>our assistants, at the king's command, and this most</l>
+      <l>gallant, illustrate, and learned gentleman, before</l>
+      <l>the princess; I say none so fit as to present the</l>
+      <l>Nine Worthies.</l>
+   </sp>
+
+   <sp>
+      <speaker>Sir Nathaniel</speaker>
+      <l>Where will you find men worthy enough to present them?</l>
+   </sp>
+
+   <sp>
+      <speaker>Holofernes</speaker>
+      <l>Joshua, yourself; myself and this gallant gentleman,</l>
+      <l>Judas Maccabaeus; this swain, because of his great</l>
+      <l>limb or joint, shall pass Pompey the Great; the</l>
+      <l>page, Hercules,--</l>
+   </sp>
+
+   <sp>
+      <speaker>Don Adriano</speaker>
+      <l>Pardon, sir; error: he is not quantity enough for</l>
+      <l>that Worthy's thumb: he is not so big as the end of his club.</l>
+   </sp>
+
+   <sp>
+      <speaker>Holofernes</speaker>
+      <l>Shall I have audience? he shall present Hercules in</l>
+      <l>minority: his enter and exit shall be strangling a</l>
+      <l>snake; and I will have an apology for that purpose.</l>
+   </sp>
+
+   <sp>
+      <speaker>Moth</speaker>
+      <l>An excellent device! so, if any of the audience</l>
+      <l>hiss, you may cry 'Well done, Hercules! now thou</l>
+      <l>crushest the snake!' that is the way to make an</l>
+      <l>offence gracious, though few have the grace to do it.</l>
+   </sp>
+
+   <sp>
+      <speaker>Don Adriano</speaker>
+      <l>For the rest of the Worthies?--</l>
+   </sp>
+
+   <sp>
+      <speaker>Holofernes</speaker>
+      <l>I will play three myself.</l>
+   </sp>
+
+   <sp>
+
+      <speaker>Moth</speaker>
+      <l>Thrice-worthy gentleman!</l>
+   </sp>
+
+   <sp>
+      <speaker>Don Adriano</speaker>
+      <l>Shall I tell you a thing?</l>
+   </sp>
+
+   <sp>
+      <speaker>Holofernes</speaker>
+      <l>We attend.</l>
+   </sp>
+
+   <sp>
+      <speaker>Don Adriano</speaker>
+      <l>We will have, if this fadge not, an antique. I</l>
+      <l>beseech you, follow.</l>
+   </sp>
+
+   <sp>
+      <speaker>Holofernes</speaker>
+      <l>Via, goodman Dull! thou hast spoken no word all this while.</l>
+   </sp>
+
+   <sp>
+      <speaker>Dull</speaker>
+      <l>Nor understood none neither, sir.</l>
+   </sp>
+
+   <sp>
+      <speaker>Holofernes</speaker>
+      <l>Allons! we will employ thee.</l>
+   </sp>
+
+   <sp>
+      <speaker>Dull</speaker>
+      <l>I'll make one in a dance, or so; or I will play</l>
+      <l>On the tabour to the Worthies, and let them dance the hay.</l>
+   </sp>
+
+   <sp>
+      <speaker>Holofernes</speaker>
+      <l>Most dull, honest Dull! To our sport, away!</l>
+   </sp>
+
+   <stage>Exeunt</stage>
+   
+</div>

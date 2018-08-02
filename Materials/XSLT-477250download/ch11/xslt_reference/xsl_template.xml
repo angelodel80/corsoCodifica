@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<reference xml:id="xsl_template" scheme="xsl" specification="defining-templates">
+   <body>
+      <purpose>
+         <p>Templates are the building blocks of XSLT. This element is used to
+            declare a template for generating nodes in a result tree.</p>
+      </purpose>
+      <usage>
+         <p>Either the <attr>match</attr> attribute or the <attr>name</attr>
+            attribute must be present. The <attr>match</attr> attribute pattern
+            is used to match nodes in the source tree, and is invoked using the
+               <element>xsl:apply-templates</element> instruction. The
+               <attr>name</attr> attribute explicitly names a template to call
+            with the <element>xsl:call-template</element> element.</p>
+         <p>The <attr>mode</attr> and <attr>priority</attr> attributes must not be specified unless a <attr>match</attr> attribute is present.</p>
+      </usage>
+      <contains label="contains" display="inline">
+         <link href="xsl_param"/>
+         <link href="xsl_sequence_constructor_type"/>        
+      </contains>
+      <containedby label="substitution" display="inline">
+         <link href="xsl_declaration"/>
+      </containedby>
+      <properties type="attribute">
+         <property xml:id="name">
+            <name>name</name>
+            <description>The name of the template</description>
+            <type>xsl:QName</type>
+            <required state="optional"/>
+         </property>
+         <property xml:id="match">
+            <name>match</name>
+            <description>Contains a pattern to be matched against nodes in the
+               source tree</description>
+            <type>xsl:pattern</type>
+            <values/>
+            <required state="optional"/>
+         </property>
+         <property xml:id="priority">
+            <name>priority</name>
+            <description>A positive or negative number which sets the priority
+               of the template in cases when multiple templates match the same
+               node.</description>
+            <type>xs:decimal</type>
+            <required state="optional"/>
+         </property>
+         <property xml:id="mode">
+            <name>mode</name>
+            <description>One or more mode names used to select a template rule among those with the same pattern. The value #all matches all
+               modes.</description>
+            <type>xsl:QName | xs:token</type>
+            <values>QName, #default, #all</values>
+            <required state="optional"/>
+         </property>
+         <property xml:id="as">
+            <name>as</name>
+            <description>The datatype of the sequence produced by the template</description>
+            <type>xsl:sequence</type>
+            <required state="optional"/>
+         </property>
+
+      </properties>
+      <properties>
+         <common label="attrgroup" display="inline">
+            <link href="ge_attr"/>
+            <link href="version_attr"/>
+         </common>
+      </properties>
+      <examples>
+         <codeblock><![CDATA[
+<xsl:template match="contains | containedby | common">
+   <xsl:param name="source_id" tunnel="yes"/>
+   <xsl:param name="default_scheme" tunnel="yes"/>
+   <xsl:call-template name="getlinks">
+      <xsl:with-param name="label" select="@label"/>
+      <xsl:with-param name="display" select="@display"/>
+   </xsl:call-template>
+</xsl:template> ]]></codeblock>
+      </examples>
+      <related role="navigation" label="related">
+         <link href="xsl_er"/>
+         <link href="xsl_apply_templates"/>
+         <link href="xsl_call_template"/>
+      </related>
+   </body>
+</reference>

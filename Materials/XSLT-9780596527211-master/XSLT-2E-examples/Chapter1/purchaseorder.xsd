@@ -1,0 +1,51 @@
+<?xml version = "1.0" encoding = "UTF-8"?>
+<!-- purchaseorder.xsd -->
+<xsd:schema xmlns:xsd = "http://www.w3.org/2000/10/XMLSchema">
+	<xsd:element name = "po">
+		<xsd:complexType>
+			<xsd:sequence>
+				<xsd:element ref = "customer-id"/>
+				<xsd:element ref = "item-ordered" maxOccurs = "unbounded"/>
+				<xsd:element ref = "order-date"/>
+			</xsd:sequence>
+		</xsd:complexType>
+	</xsd:element>
+	<xsd:element name = "customer-id" type = "xsd:string"/>
+	<xsd:element name = "item-ordered">
+		<xsd:complexType>
+			<xsd:attribute name = "part-number" use = "required">
+				<xsd:simpleType>
+					<xsd:restriction base = "xsd:string">
+						<xsd:pattern value = "[0-9]{5}-[0-9]{4}-[0-9]{5}"/>
+					</xsd:restriction>
+				</xsd:simpleType>
+			</xsd:attribute>
+			<xsd:attribute name = "quantity" use = "required" type = "xsd:integer"/>
+		</xsd:complexType>
+	</xsd:element>
+	<xsd:element name = "order-date">
+		<xsd:complexType>
+			<xsd:attribute name = "day" use = "required">
+				<xsd:simpleType>
+					<xsd:restriction base = "xsd:integer">
+						<xsd:maxInclusive value = "31"/>
+					</xsd:restriction>
+				</xsd:simpleType>
+			</xsd:attribute>
+			<xsd:attribute name = "month" use = "required">
+				<xsd:simpleType>
+					<xsd:restriction base = "xsd:integer">
+						<xsd:maxInclusive value = "12"/>
+					</xsd:restriction>
+				</xsd:simpleType>
+			</xsd:attribute>
+			<xsd:attribute name = "year" use = "required">
+				<xsd:simpleType>
+					<xsd:restriction base = "xsd:integer">
+						<xsd:maxInclusive value = "2100"/>
+					</xsd:restriction>
+				</xsd:simpleType>
+			</xsd:attribute>
+		</xsd:complexType>
+	</xsd:element>
+</xsd:schema>

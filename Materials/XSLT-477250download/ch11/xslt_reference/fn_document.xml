@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<reference xml:id="fn_document" scheme="xsl">
+   <body>
+      <purpose>
+         <p>Returns the document node of the XML document located at the URI
+            provided in the <code>href</code> argument.</p>
+      </purpose>
+      <syntax>document (href, base)</syntax>
+      <properties type="parameter">
+         <property xml:id="href">
+            <name>href</name>
+            <description>The URI of the file to be loaded</description>
+            <type>xs:string | xs:anyURI</type>
+            <required state="required"/>
+         </property>
+         <property xml:id="base">
+            <name>base</name>
+            <description>The base URI to use for resolving the <code>href</code>
+               parameter</description>
+            <type>node()</type>
+            <required state="optional"/>
+         </property>
+
+      </properties>
+      <examples>
+         <codeblock><![CDATA[
+<xsl:variable name="resourcelist"
+   select="document(concat('../reslist_',site/@scheme,'.xml'))"/>]]></codeblock>
+      </examples>
+      <related label="related">
+         <link href="xsl_functions"/>
+         <link href="fn_unparsed_text"/>
+      </related>
+   </body>
+</reference>

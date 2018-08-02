@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- person3.xml -->
+<person
+  xmlns="http://www.oreilly.com/xslt"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://www.oreilly.com/xslt person3.xsd"
+  eyeColor="brown">
+  <name>Doug Tidwell</name>
+  <age>42</age>
+  <driversLicense>NC-3821-388297</driversLicense>
+</person>

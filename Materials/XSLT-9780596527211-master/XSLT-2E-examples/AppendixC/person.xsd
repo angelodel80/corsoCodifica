@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- person.xsd -->
+<xs:schema 
+  xmlns="http://www.oreilly.com/xslt"
+  targetNamespace="http://www.oreilly.com/xslt"
+  xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+  <xs:element name="person">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="name"/>
+        <xs:element ref="age"/>
+        <xs:element ref="birthday"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+
+  <xs:element name="name" type="xs:string"/>
+  <xs:element name="age" type="xs:positiveInteger"/>
+  <xs:element name="birthday" type="xs:date" nillable="true"/>
+
+</xs:schema>

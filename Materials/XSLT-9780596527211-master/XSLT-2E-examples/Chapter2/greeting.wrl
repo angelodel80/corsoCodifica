@@ -1,0 +1,70 @@
+#VRML V2.0 utf8
+
+Shape 
+{ 
+  geometry ElevationGrid 
+  {
+    xDimension 9
+    zDimension 9
+    xSpacing 1
+    zSpacing 1
+    height 
+    [ 
+      0 0 0 0 0 0 0 0 0
+      0 0 0 0 0 0 0 0 0
+      0 0 0 0 0 0 0 0 0
+      0 0 0 0 0 0 0 0 0
+      0 0 0 0 0 0 0 0 0
+      0 0 0 0 0 0 0 0 0
+      0 0 0 0 0 0 0 0 0
+      0 0 0 0 0 0 0 0 0
+      0 0 0 0 0 0 0 0 0
+    ]
+    colorPerVertex FALSE
+    color Color 
+    { 
+      color 
+      [
+        0 0 0, 1 1 1, 0 0 0, 1 1 1, 0 0 0, 1 1 1, 0 0 0, 1 1 1, 
+        1 1 1, 0 0 0, 1 1 1, 0 0 0, 1 1 1, 0 0 0, 1 1 1, 0 0 0, 
+        0 0 0, 1 1 1, 0 0 0, 1 1 1, 0 0 0, 1 1 1, 0 0 0, 1 1 1, 
+        1 1 1, 0 0 0, 1 1 1, 0 0 0, 1 1 1, 0 0 0, 1 1 1, 0 0 0, 
+        0 0 0, 1 1 1, 0 0 0, 1 1 1, 0 0 0, 1 1 1, 0 0 0, 1 1 1, 
+        1 1 1, 0 0 0, 1 1 1, 0 0 0, 1 1 1, 0 0 0, 1 1 1, 0 0 0, 
+        0 0 0, 1 1 1, 0 0 0, 1 1 1, 0 0 0, 1 1 1, 0 0 0, 1 1 1, 
+        1 1 1, 0 0 0, 1 1 1, 0 0 0, 1 1 1, 0 0 0, 1 1 1, 0 0 0, 
+      ]
+    }
+  }
+}
+
+Transform 
+{
+  translation 4.5 1 4 
+  children 
+  [
+    Shape 
+    {
+      geometry Text 
+      {
+    string"Hello, World!"
+        fontStyle FontStyle 
+        {
+          justify "MIDDLE"
+          style "BOLD"
+        }
+      }
+    }
+  ]
+}
+
+NavigationInfo 
+{
+  type ["EXAMINE","ANY"]
+}
+
+Viewpoint 
+{
+  position 4 1 10
+}
+    

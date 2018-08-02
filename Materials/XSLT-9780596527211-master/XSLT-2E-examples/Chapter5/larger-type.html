@@ -1,0 +1,41 @@
+<html>
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+      <title>Branching and Control Elements</title>
+   </head>
+   <body>
+      
+      
+      <h1>Goals of This Chapter</h1>
+      
+      <h1>Branching Elements of XSLT</h1><pre><span style="font-family:monospace; font-size:20;">
+&lt;xsl:if test="count(zone) &gt; 2"&gt;
+  &lt;xsl:text&gt;Applicable zones: &lt;/xsl:text&gt;
+  &lt;xsl:apply-templates select="zone"/&gt;
+&lt;/xsl:if&gt;</span></pre><pre><span style="font-family:monospace; font-size:20;">
+&lt;xsl:template match="table-row"&gt;
+  &lt;tr&gt;
+    &lt;xsl:attribute name="bgcolor"&gt;
+     &lt;xsl:choose&gt;
+        &lt;xsl:when test="@bgcolor"&gt;
+          &lt;xsl:value-of select="@bgcolor"/&gt;
+        &lt;/xsl:when&gt;
+        &lt;xsl:when test="position() mod 4 = 0"&gt;
+          &lt;xsl:text&gt;black&lt;/xsl:text&gt;
+        &lt;/xsl:when&gt;
+        &lt;xsl:when test="position() mod 4 = 1"&gt;
+          &lt;xsl:text&gt;green&lt;/xsl:text&gt;
+        &lt;/xsl:when&gt;
+        &lt;xsl:when test="position() mod 4 = 2"&gt;
+          &lt;xsl:text&gt;red&lt;/xsl:text&gt;
+        &lt;/xsl:when&gt;
+        &lt;xsl:otherwise&gt;
+          &lt;xsl:text&gt;blue&lt;/xsl:text&gt;
+        &lt;/xsl:otherwise&gt;
+      &lt;/xsl:choose&gt;
+    &lt;/xsl:attribute&gt;
+    &lt;xsl:apply-templates select="*"/&gt;
+  &lt;/tr&gt;
+&lt;/xsl:template&gt;</span></pre>
+      </body>
+</html>

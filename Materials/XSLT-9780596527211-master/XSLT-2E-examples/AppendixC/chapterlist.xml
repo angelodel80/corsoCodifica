@@ -1,0 +1,41 @@
+<?xml version="1.0"?>
+<!-- chapterlist.xml -->
+<book>
+  <title>XSLT</title>
+  <chapter>
+    <title>Getting Started</title>
+    <para>If this chapter had any text, it would appear here.</para>
+  </chapter>
+  <chapter>
+    <title>The Hello World Example</title>
+    <para>If this chapter had any text, it would appear here.</para>
+  </chapter>
+  <chapter>
+    <title>XPath</title>
+    <para>If this chapter had any text, it would appear here.</para>
+  </chapter>
+  <chapter>
+    <title>Stylesheet Basics</title>
+    <para>If this chapter had any text, it would appear here.</para>
+  </chapter>
+  <chapter>
+    <title>Branching and Control Elements</title>
+    <para>If this chapter had any text, it would appear here.</para>
+  </chapter>
+  <chapter>
+    <title>Functions</title>
+    <para>If this chapter had any text, it would appear here.</para>
+  </chapter>
+  <chapter>
+    <title>Creating Links and Cross-References</title>
+    <para>If this chapter had any text, it would appear here.</para>
+  </chapter>
+  <chapter>
+    <title>Sorting and Grouping Elements</title>
+    <para>If this chapter had any text, it would appear here.</para>
+  </chapter>
+  <chapter>
+    <title>Combining XML Documents</title>
+    <para>If this chapter had any text, it would appear here.</para>
+  </chapter>
+</book>

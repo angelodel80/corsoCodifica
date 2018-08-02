@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- parts-list.xsd -->
+<xs:schema 
+  targetNamespace="http://www.oreilly.com/xslt" 
+  xmlns:xs="http://www.w3.org/2001/XMLSchema" 
+  xmlns="http://www.oreilly.com/xslt">
+
+  <xs:element name="parts-list">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="component" minOccurs="1" maxOccurs="unbounded"/>
+        <xs:element ref="part" minOccurs="1" maxOccurs="unbounded"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  
+  <xs:element name="component">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="name" minOccurs="1" maxOccurs="1"/>
+        <xs:element ref="partref" minOccurs="1" maxOccurs="unbounded"/>
+      </xs:sequence>
+      <xs:attribute name="component-id" type="xs:ID" use="required"/>
+    </xs:complexType>
+  </xs:element>
+  
+  <xs:element name="part">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="name" minOccurs="1" maxOccurs="1"/>
+      </xs:sequence>
+      <xs:attribute name="part-id" type="xs:ID" use="required"/>
+    </xs:complexType>
+  </xs:element>
+  
+  <xs:element name="name" type="xs:string"/>
+  
+  <xs:element name="partref">
+    <xs:complexType>
+      <xs:attribute name="refid" type="xs:IDREF" use="required"/>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<reference xml:id="xsl_sequence" scheme="xsl"
+   specification="constructing-sequences">
+   <body>
+      <purpose>
+         <p>An instruction that is commonly used to return the result of a
+            stylesheet function.</p>
+      </purpose>
+      <usage>
+         <p>The instruction also allows template rules to return atomic
+            values.</p>
+      </usage>
+      <contains label="contains" display="inline">
+         <link href="xsl_fallback"/>
+      </contains>
+      <containedby label="substitution" display="inline">
+         <link href="xsl_instruction"/>
+      </containedby>
+      <properties type="attribute">
+         <property xml:id="select">
+            <name>select</name>
+            <description>The value to be returned</description>
+            <type>xsl:expression</type>
+            <required state="required"/>
+         </property>
+      </properties>
+      <properties>
+         <common label="attrgroup" display="inline">
+            <link href="ge_attr"/>
+            <link href="version_attr"/>
+         </common>
+      </properties>
+      <examples>
+         <codeblock><![CDATA[
+<xsl:function name="xm:getentry-by-id">
+   <xsl:param name="id" as="xs:string"/>
+   <xsl:param name="scheme" as="xs:string"/>
+   <xsl:variable name="linklist"
+      select="document(concat('../reslist_',$scheme,'.xml'))"/>
+   <xsl:variable name="linkmeta" select="$linklist//entry[@xml:id=$id]"/>
+   <xsl:sequence select="$linkmeta"/>
+</xsl:function>
+]]></codeblock>
+      </examples>
+      <related role="navigation" label="related">
+         <link href="xsl_er"/>
+      </related>
+   </body>
+</reference>

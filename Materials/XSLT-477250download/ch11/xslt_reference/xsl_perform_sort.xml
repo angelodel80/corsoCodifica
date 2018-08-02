@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<reference xml:id="xsl_perform_sort" scheme="xsl" specification="creating-sorted-sequence">
+   <body>
+      <purpose>
+         <p>Used as a standalone instruction to sort items without any immediate additional processing. The element always contains one or more <element>xsl:sort</element> instructions.</p>
+      </purpose>
+      <usage>
+         <p>You may use either the <attr>select</attr> attribute or a contained sequence constructor to define the sequence to be processed. </p>
+      </usage>
+      <contains label="contains" display="inline">
+         <link href="xsl_sort"/>
+         <link href="xsl_sequence_constructor_type"/>
+      </contains>
+      <properties type="attribute">
+         <property xml:id="select">
+            <name>select</name>
+            <description>The sequence of items to process</description>
+            <type>xsl:expression</type>
+            <required state="optional"/>
+         </property>
+      </properties>
+      <properties>
+         <common label="attrgroup" display="inline">
+            <link href="ge_attr"/>
+            <link href="version_attr"/>
+         </common>
+      </properties>
+      <examples>
+         <codeblock><![CDATA[
+<xsl:variable name="cast">
+   <xsl:perform-sort select="//castItem">
+      <xsl:sort select="."/>
+   </xsl:perform-sort>
+</xsl:variable>]]></codeblock>
+      </examples>
+      <related role="navigation" label="related">
+         <link href="xsl_er"/>
+      </related>
+   </body>
+</reference>

@@ -1,0 +1,34 @@
+<?xml version="1.0"?>
+<!-- po-schema-ns.xml -->
+<purchase-order id="38292" 
+  xmlns="http://www.oreilly.com/xslt"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://www.oreilly.com/xslt 
+                      po.xsd">
+  <date year="2001" month="6" day="19"/>
+  <customer id="4738" level="Platinum">
+    <address type="business">
+      <name>
+        <title>Mr.</title>
+        <first-name>Chester Hasbrouck</first-name>
+        <last-name>Frisby</last-name>
+      </name>
+      <street>1234 Main Street</street>
+      <city>Sheboygan</city>
+      <state>WI</state>
+      <zip>48392</zip>
+    </address>
+  </customer>
+  <items>
+    <item part-no="28392-33-TT">
+      <partname>Turnip Twaddler</partname>
+      <qty>3</qty>
+      <price>9.95</price>
+    </item>
+    <item part-no="28100-38-CT">
+      <partname>Clam Teaser</partname>
+      <qty>7</qty>
+      <price>39.95</price>
+    </item>
+  </items>
+</purchase-order>

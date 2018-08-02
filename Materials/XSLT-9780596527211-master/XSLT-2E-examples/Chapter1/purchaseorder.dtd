@@ -1,0 +1,15 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+
+<!ELEMENT po (customer-id , item-ordered+ , order-date)>
+
+<!ELEMENT customer-id (#PCDATA)>
+
+<!ELEMENT item-ordered EMPTY>
+
+<!ATTLIST item-ordered  part-number CDATA  #REQUIRED
+                          quantity    CDATA  #REQUIRED >
+<!ELEMENT order-date EMPTY>
+
+<!ATTLIST order-date  day   CDATA  #REQUIRED
+                        month CDATA  #REQUIRED
+                        year  CDATA  #REQUIRED >

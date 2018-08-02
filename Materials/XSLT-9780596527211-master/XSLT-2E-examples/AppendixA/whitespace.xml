@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- whitespace.xml -->
+<code-sample>
+  <title>Conditional variable initialization:</title>
+  <listing>
+    <type>int</type><var> y</var><endstmt>;</endstmt>
+    <type>int</type><var> x</var><endstmt>;</endstmt>
+
+    <var>y</var> <op>=</op> <const>23</const><endstmt>;</endstmt>
+
+    <block>
+      <keyword>if</keyword> (<var>y</var> <comp>></comp> <const>10</const>)
+        <var>x</var> <op>=</op> <const>5</const><endstmt>;</endstmt>
+      <keyword>else </keyword> 
+      <keyword>if</keyword> (<var>y</var> <comp>></comp> <const>5</const>)
+        <var>x</var> <op>=</op> <const>3</const><endstmt>;</endstmt>
+      <keyword>else </keyword>
+        <var>x</var> <op>=</op> <const>1</const><endstmt>;</endstmt>
+    </block>
+  </listing>
+</code-sample>

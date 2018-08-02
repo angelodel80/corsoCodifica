@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- empty1.xml -->
+<empty1
+  xmlns="http://www.oreilly.com/xslt"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://www.oreilly.com/xslt empty1.xsd"/>

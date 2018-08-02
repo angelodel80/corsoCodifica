@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<terms xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+   xsi:noNamespaceSchemaLocation="meta.xsd">
+
+   <term xml:id="axisStep">
+      <label>Axis step</label>
+      <definition>An axis step has an axis which specifies a direction of travel
+         in the node tree in relation to the context node, such as
+            <code>parent::</code> or <code>child::</code>. It also specifies a
+         node test, which defines the nodes to select using the node name or
+         type.</definition>
+   </term>
+   <term xml:id="constructorFunction">
+      <label>Constructor function</label>
+      <definition>The constructor function for a given type is used to convert
+         instances of other atomic types into the given type.</definition>
+   </term>
+   <term xml:id="contextItem">
+      <label>Context item</label>
+      <definition>The item, an atomic value or node, currently being processed.
+         When the context item is a node, it is also called the context
+         node.</definition>
+   </term>
+   <term xml:id="contextPosition">
+      <label>Context position</label>
+      <definition>The position of the context item in the sequence of items
+         being processed. The position changes whenever the context item
+         changes, and is used to evaluate a predicate such as
+            <code>para[1]</code>. The <code>position()</code> function may be
+         used to return its value.</definition>
+   </term>
+   <term xml:id="currentDateTime.">
+      <label>Current dateTime.</label>
+      <definition>An implementation-dependent point in time, which can be
+         retrieved by the <code>current-dateTime()</code> function. If called
+         more than once during the execution of a stylesheet, this function
+         always returns the same result.</definition>
+   </term>
+   <term xml:id="emptySequence">
+      <label>Empty sequence</label>
+      <definition>A sequence containing zero items.</definition>
+   </term>
+
+   <term xml:id="filterExpression">
+      <label>Filter expression</label>
+      <definition>A primary expression, such as a literal, variable reference or
+         function call, followed by zero or more predicates. The result consists
+         of the items returned by the primary expression, filtered by applying
+         each predicate in turn.</definition>
+   </term>
+   <term xml:id="implicitTimezone.">
+      <label>Implicit timezone.</label>
+      <definition>An implementation-defined value of type
+            <code>xs:dayTimeDuration</code> to be used when a date, time, or
+         dateTime value that does not have a timezone is used in a comparison or
+         arithmetic operation.</definition>
+   </term>
+   <term xml:id="node">
+      <label>Node</label>
+      <definition>One of the node types defined in XPath 2.0, for example
+         document, element, or attribute.</definition>
+   </term>
+   <term xml:id="pathExpression">
+      <label>Path expression</label>
+      <definition>An expression used to locate nodes within trees, which
+         consists of one or more steps, separated by "/" or "//".</definition>
+   </term>
+   <term xml:id="predicate">
+      <label>Predicate</label>
+      <definition>An expression contained in square brackets [] that filters the
+         nodes selected in an step expression.</definition>
+   </term>
+   <term xml:id="primaryExpression">
+      <label>Primary expressions</label>
+      <definition>Expressions that are the basic primitives of the XPath
+         language such as a literal, variable reference or function
+         call.</definition>
+   </term>
+   <term xml:id="sequence">
+      <label>Sequence</label>
+      <definition>An ordered collection of zero or more items.</definition>
+   </term>
+   <term xml:id="step">
+      <label>Step</label>
+      <definition>Part of a path expression that generates a sequence of items
+         and then filters the sequence by zero or more predicates. A step may be
+         either an axis step or a filter expression.</definition>
+   </term>
+   <term xml:id="variableReference">
+      <label>Variable reference</label>
+      <definition>A variable reference is a QName specified in an
+            <element>xsl:variable</element> or <element>xsl:param</element>
+         element, and referred to in an XPath expression. It is preceded by a $
+         sign to distinguish it from a reference to a source document element
+         name.</definition>
+   </term>
+</terms>

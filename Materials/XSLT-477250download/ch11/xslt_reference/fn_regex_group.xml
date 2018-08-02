@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<reference xml:id="fn_regex_group" scheme="xsl">
+   <body>
+      <purpose><p>Identifies an ordered substring returned as part of a regular
+         expression obtained from matching with
+         <element>xsl:analyze-string</element>.</p></purpose>
+      <syntax>regex-group (group)</syntax>
+      <properties type="parameter">
+         <property xml:id="group">
+            <name>group</name>
+            <description>The substring matched by part of a regular expression, defined by the integer position of a substring contained in parenthesis.</description>
+            <type>xs:integer</type>
+            <required state="required"/>
+         </property>        
+      </properties>
+      <examples>
+         <codeblock><![CDATA[
+ <xsl:analyze-string select="." regex="([0-9]{5})-[0-9]{6})">
+    <xsl:matching-substring>
+       <code>
+          <xsl:value-of select="regex-group(1)"/>
+       </code>
+       <number>
+          <xsl:value-of select="regex-group(2)"/>
+       </number>
+   </xsl:matching-substring>
+</xsl:analyze-string>]]></codeblock>
+      </examples>
+      <related label="related">
+         <link href="xsl_functions"/>
+         <link href="xsl_analyze_string"/>
+      </related>
+   </body>
+</reference>

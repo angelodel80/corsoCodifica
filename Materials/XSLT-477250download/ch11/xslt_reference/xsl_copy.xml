@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<reference xml:id="xsl_copy" scheme="xsl" specification="shallow-copy">
+   <body>
+      <purpose>
+         <p>An instruction that copies the context item to the result
+            sequence.</p>
+      </purpose>
+      <usage>
+         <p>This instruction is often used in transforms when two schemas have some element structures in common.</p>
+         <p>Specified element and attribute nodes in the enclosed
+               <element>xsl:apply-templates</element> instruction are added to
+            the output as if they were created by the
+               <element>xsl:element</element> or
+               <element>xsl:attribute</element> instructions.</p>
+         <p>No child elements of the context node are copied, nor are its existing
+            attributes. To do this you must use
+            <element>xsl:copy-of</element>.</p>
+         <p>The selected text, processing instructions, comment and namespace nodes are
+            copied entirely.</p>
+      </usage>
+
+      <containedby label="substitution" display="inline">
+         <link href="xsl_instruction"/>
+      </containedby>
+      <properties type="attribute">
+         <property xml:id="copy_ns">
+            <name>copy-namespaces</name>
+            <description>Whether or not to copy namespace nodes</description>
+            <type>xs:token</type>
+            <values>yes, no</values>
+            <default>yes</default>
+            <required state="optional"/>
+         </property>
+         <property xml:id="inherit_ns">
+            <name>inherit-namespaces</name>
+            <description>Whether or not children of a copied node will inherit
+               copied namespaces</description>
+            <type>xs:token</type>
+            <values>yes, no</values>
+            <default>yes</default>
+            <required state="optional"/>
+         </property>
+         <property xml:id="use_sets">
+            <name>use-attribute-sets</name>
+            <description>The space-separated list of attributes names to use for
+               elements</description>
+            <type>xsl:QNames</type>
+            <required state="optional"/>
+         </property>
+
+      </properties>
+      <properties>
+         <common label="attrgroup" display="inline">
+            <link href="ge_attr"/>
+            <link href="version_attr"/>
+            <link href="valid_attr"/>
+         </common>
+      </properties>
+      <examples>
+         <codeblock><![CDATA[
+<xsl:template match="@*|node()">
+  <xsl:copy>
+    <xsl:apply-templates select="@*|node()"/>
+  </xsl:copy>
+</xsl:template>]]></codeblock>
+      </examples>
+      <related role="navigation" label="related">
+         <link href="xsl_er"/>
+         <link href="xsl_copy_of"/>
+      </related>
+   </body>
+</reference>

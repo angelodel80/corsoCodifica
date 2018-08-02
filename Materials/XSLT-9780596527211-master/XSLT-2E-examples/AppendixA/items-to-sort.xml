@@ -1,0 +1,33 @@
+<?xml version="1.0"?>
+<!-- items-to-sort.xml -->
+<sample>
+  <numericlist>
+    <listitem>1</listitem>
+    <listitem>3</listitem>
+    <listitem>23</listitem>
+    <listitem>120</listitem>
+    <listitem>2</listitem>
+  </numericlist>
+  <textlist>
+    <listitem category="number">3</listitem>
+    <listitem category="fruit">apple</listitem>
+    <listitem category="fruit">orange</listitem>
+    <listitem category="foreign-fruit">dragonfruit</listitem>
+    <listitem category="foreign-fruit">carambola</listitem>
+  </textlist>
+  <datelist>
+    <listitem>2006-12-25</listitem>
+    <listitem>1995-04-21</listitem>
+    <listitem>1965-06-19</listitem>
+    <listitem>2007-01-01</listitem>
+  </datelist>
+  <spanishlist>
+    <listitem>campo</listitem>
+    <listitem>luna</listitem>
+    <listitem>ciudad</listitem>
+    <listitem>llaves</listitem>
+    <listitem>chihuahua</listitem>
+    <listitem>arroz</listitem>
+    <listitem>limonada</listitem>
+  </spanishlist>
+</sample>

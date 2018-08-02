@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<reference xml:id="xsl_non_matching_substring" scheme="xsl" specification="analyze-string">
+   <body>
+      <purpose>
+         <p>Defines the processing for a substrings that are not matched within the <element>xsl:analyze-string</element> instruction.</p>
+      </purpose>
+      <usage>
+         <p>The output is added to the result of the <element>xsl:analyze-string</element> instruction.</p>
+      </usage>
+      <contains label="contains" display="inline">
+         <link href="xsl_sequence_constructor_type"/>
+      </contains>
+      <containedby label="containedby" display="inline">
+         <link href="xsl_analyze_string"/>      
+      </containedby>
+      <properties>
+         <common label="attrgroup" display="inline">
+            <link href="ge_attr"/>
+            <link href="version_attr"/>
+         </common>
+      </properties>
+      <examples>
+         <codeblock><![CDATA[
+<xsl:analyze-string select="$census" regex="\n">
+   <xsl:non-matching-substring>
+      <row>
+         <xsl:analyze-string select="." regex="," flags="x">
+            <xsl:non-matching-substring>
+               <col>
+                  <xsl:value-of select="normalize-space(.)"/>
+               </col>
+            </xsl:non-matching-substring>
+         </xsl:analyze-string>
+      </row>
+   </xsl:non-matching-substring>
+</xsl:analyze-string>]]></codeblock>
+      </examples>
+      <related role="navigation" label="related">
+         <link href="xsl_er"/>
+         <link href="xsl_matching_substring"/>
+      </related>
+   </body>
+</reference>

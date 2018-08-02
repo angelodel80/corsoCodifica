@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--  -->
+<xs:schema elementFormDefault="qualified" attributeFormDefault="unqualified"
+   xmlns:xs="http://www.w3.org/2001/XMLSchema"
+   xmlns:sch="http://www.ascc.net/xml/schematron">
+
+   <xs:import namespace="http://www.w3.org/XML/1998/namespace"
+      schemaLocation="xml.xsd"/>
+  
+   <xs:include schemaLocation="meta.xsd"/>
+   
+   <xs:element name="collection">
+      <xs:complexType>
+         <xs:sequence>
+            <xs:element name="title" type="xs:string"/>
+            <xs:element ref="entry" maxOccurs="unbounded"/>
+            <xs:element ref="categories" minOccurs="0"/>           
+         </xs:sequence>
+         <xs:attribute name="lang" type="iso_639_3" use="optional"/>
+         <xs:attributeGroup ref="core"/>
+         <xs:attributeGroup ref="metadata"/>
+      </xs:complexType>
+      <xs:unique name="entry_id">
+         <xs:selector xpath="entry"/>
+         <xs:field xpath="@xml:id"/>
+      </xs:unique>
+   </xs:element>
+   
+   <xs:element name="categories">
+      <xs:complexType>
+         <xs:sequence>
+            <xs:element ref="category" minOccurs="0" maxOccurs="unbounded"/>
+         </xs:sequence>
+      </xs:complexType>
+   </xs:element>
+</xs:schema>

@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<reference xml:id="xsl_next_match" scheme="xsl" specification="apply-imports">
+   <body>
+      <purpose>
+         <p>An instruction that allows more than one rule to apply to the same
+            source node, within the same stylesheet module.</p>
+      </purpose>
+      <usage>
+         <p>The processor looks for a rule that matches the current node and
+            mode, and has a lower import precedence or priority than the current
+            template.</p>
+         <p>The instruction provides considerably more flexibility than <element>xsl:apply-imports</element>.</p>
+      </usage>
+      <contains label="contains" display="inline">
+         <link href="xsl_fallback"/>
+         <link href="xsl_with_param"/>
+      </contains>
+      <containedby label="substitution" display="inline">
+         <link href="xsl_instruction"/>
+      </containedby>
+      <properties>
+         <common label="attrgroup" display="inline">
+            <link href="ge_attr"/>
+            <link href="version_attr"/>
+         </common>
+      </properties>
+      <examples>
+         <codeblock><![CDATA[
+<xsl:template match="code" priority="1">
+   xsl:apply-templates select="* | text()"/>
+</xsl:template> 
+<xsl:template match="p/code" priority="2">
+   <code class="black"><xsl:next-match/></code>
+</xsl:template>   
+<xsl:template match="summary/code" priority="2">
+   <code class="blue"><xsl:next-match/></code>
+</xsl:template>]]></codeblock>
+      </examples>
+      <related role="navigation" label="related">
+         <link href="xsl_er"/>
+         <link href="xsl_apply_imports"/>
+      </related>
+   </body>
+</reference>

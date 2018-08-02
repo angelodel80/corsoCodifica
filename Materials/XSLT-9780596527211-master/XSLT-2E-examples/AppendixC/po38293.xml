@@ -1,0 +1,26 @@
+<?xml version="1.0" ?>
+<!-- po38293.xml -->
+<purchase-order id="38293">
+  <date year="2001" month="9" day="8"/>
+  <customer id="4738" level="Basic">
+    <address type="business">
+      <name>
+        <title>Ms.</title>
+        <first-name>Amanda</first-name>
+        <last-name>Reckonwith</last-name>
+      </name>
+      <street>930-A Chestnut Street</street>
+      <city>Lynn</city>
+      <state>MA</state>
+      <zip>02930</zip>
+    </address>
+    <address type="ship-to"/>
+  </customer>
+  <items>
+    <item part-no="23813-03-CDK">
+      <name>Cucumber Decorating Kit</name>
+      <qty>1</qty>
+      <price>29.95</price>
+    </item>
+  </items>
+</purchase-order>

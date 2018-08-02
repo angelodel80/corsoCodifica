@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<reference xml:id="xsl_message" scheme="xsl" specification="analyze-string">
+   <body>
+      <purpose>
+         <p>An instruction that specifies a message to be output.</p>
+      </purpose>
+      <usage>
+         <p>Either the select attribute or a sequence constructor or both may be
+            used to create the message content. If both are used the results are
+            concatenated.</p>
+         <p>Stylesheet execution may be terminated by setting the
+               <attr>terminate</attr> attribute to 'yes'.</p>
+         <p>The output location is implementation dependent, but is typically
+            the console, or a log file.</p>
+      </usage>
+      <contains label="contains" display="inline">
+         <link href="xsl_sequence_constructor_type"/>
+      </contains>
+      <containedby label="substitution" display="inline">
+         <link href="xsl_instruction"/>
+      </containedby>
+      <properties type="attribute">
+         <property xml:id="select">
+            <name>select</name>
+            <description>The expression to evaluate</description>
+            <type>xsl:expression</type>
+            <required state="required"/>
+         </property>
+         <property xml:id="terminate">
+            <name>terminate</name>
+            <description>Whether or not to terminate processing after the
+               message.</description>
+            <type>xsl:avt</type>
+            <values>yes, no</values>
+            <default>no</default>
+            <required state="optional"/>
+         </property>
+      </properties>
+      <properties>
+         <common label="attrgroup" display="inline">
+            <link href="ge_attr"/>
+            <link href="version_attr"/>
+         </common>
+      </properties>
+      <examples>
+         <codeblock><![CDATA[
+<head>
+   <meta http-equiv="Content-Type" content="text/xml;charset=UTF-8"/>
+   <title>
+      <xsl:value-of select="$title"/>
+   </title>
+   <link rel="stylesheet" type="text/css">
+      <xsl:attribute name="href">
+         <xsl:value-of select="$style"/>
+      </xsl:attribute>
+      <xsl:message>Head section link processed</xsl:message>
+   </link>
+</head>]]></codeblock>
+      </examples>
+      <related role="navigation" label="related">
+         <link href="xsl_er"/>
+         <link href="xsl_comment"/>
+      </related>
+   </body>
+</reference>

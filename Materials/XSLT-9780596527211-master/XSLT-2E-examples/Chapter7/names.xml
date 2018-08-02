@@ -1,0 +1,67 @@
+<?xml version="1.0"?>
+<!-- names.xml -->
+<addressbook>
+  <address>
+    <name>
+      <title>Mr.</title>
+      <first-name>Chester Hasbrouck</first-name>
+      <last-name>Frisby</last-name>
+    </name>
+    <street>1234 Main Street</street>
+    <city>Sheboygan</city>
+    <state>WI</state>
+    <zip>48392</zip>
+  </address>
+  <address>
+    <name>
+      <first-name>Mary</first-name>
+      <last-name>Backstayge</last-name>
+    </name>
+    <street>283 First Avenue</street>
+    <city>Skunk Haven</city>
+    <state>MA</state>
+    <zip>02718</zip>
+  </address>
+  <address>
+    <name>
+      <title>Ms.</title>
+      <first-name>Natalie</first-name>
+      <last-name>Attired</last-name>
+    </name>
+    <street>707 Breitling Way</street>
+    <city>Winter Harbor</city>
+    <state>ME</state>
+    <zip>00218</zip>
+  </address>
+  <address>
+    <name>
+      <first-name>Harry</first-name>
+      <last-name>Backstayge</last-name>
+    </name>
+    <street>283 First Avenue</street>
+    <city>Skunk Haven</city>
+    <state>MA</state>
+    <zip>02718</zip>
+  </address>
+  <address>
+    <name>
+      <first-name>Mary</first-name>
+      <last-name>McGoon</last-name>
+    </name>
+    <street>103 Bryant Street</street>
+    <city>Boylston</city>
+    <state>VA</state>
+    <zip>27318</zip>
+  </address>
+  <address>
+    <name>
+      <title>Ms.</title>
+      <first-name>Amanda</first-name>
+      <last-name>Reckonwith</last-name>
+    </name>
+    <street>930-A Chestnut Street</street>
+    <city>Lynn</city>
+    <state>MA</state>
+    <zip>02930</zip>
+  </address>
+</addressbook>

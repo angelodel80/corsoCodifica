@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- content4.xsd -->
+<xs:schema 
+  xmlns="http://www.oreilly.com/xslt"
+  targetNamespace="http://www.oreilly.com/xslt"
+  xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+  <xs:element name="content4a">
+    <xs:complexType>
+      <xs:simpleContent>
+        <xs:extension base="xs:string">
+          <xs:attribute name="color" type="xs:string"/>
+        </xs:extension>
+      </xs:simpleContent>
+    </xs:complexType>
+  </xs:element>
+
+  <xs:complexType name="content4b-type">
+    <xs:simpleContent>
+      <xs:extension base="xs:string">
+        <xs:attribute name="color" type="xs:string"/>
+      </xs:extension>
+    </xs:simpleContent>
+  </xs:complexType>
+
+  <xs:element name="content4b" type="content4b-type"/>
+
+</xs:schema>

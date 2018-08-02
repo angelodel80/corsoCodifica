@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<reference xml:id="xsl_value_of" scheme="xsl" specification="value-of">
+   <body>
+      <purpose>
+         <p>An instruction used to add a text node to the result sequence.</p>
+      </purpose>
+      <usage>
+         <p>The value to output may be obtained from the <attr>select</attr>
+            attribute or from a contained sequence constructor.</p>
+         <p>Disabling the escaping of special characters is deprecated because
+            it may not work in certain cases.</p>
+      </usage>
+      <contains label="contains" display="inline">
+         <link href="xsl_sequence_constructor_type"/>
+      </contains>
+      <containedby label="substitution" display="inline">
+         <link href="xsl_instruction"/>
+      </containedby>
+      <properties type="attribute">
+         <property xml:id="select">
+            <name>select</name>
+            <description>The value to be output</description>
+            <type>xsl:expression</type>
+            <required state="optional"/>
+         </property>
+         <property xml:id="separator">
+            <name>separator</name>
+            <description>A string used to separate atomic values</description>
+            <type>xsl:avt</type>
+            <required state="optional"/>
+         </property>
+         <property xml:id="disable_escaping">
+            <name>disable-output-escaping</name>
+            <description>Whether or not to escape special characters</description>
+            <type>xs:string</type>
+            <values>yes, no</values>
+            <default>no</default>
+            <required state="deprecated"/>
+         </property>
+      </properties>
+      <properties>
+         <common label="attrgroup" display="inline">
+            <link href="ge_attr"/>
+            <link href="version_attr"/>
+         </common>
+      </properties>
+      <examples>
+         <codeblock><![CDATA[
+<h1>
+   <xsl:value-of select="$title"/>
+</h1>]]></codeblock>
+      </examples>
+      <related role="navigation" label="related">
+         <link href="xsl_er"/>
+      </related>
+   </body>
+</reference>

@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<reference xml:id="xsl_include" scheme="xsl" specification="xsl-include">
+   <body>
+      <purpose>
+         <p>A declaration ussed to include one stylesheet module within
+            another.</p>
+      </purpose>
+      <usage>
+         <p>The children of the included <element>xsl:stylesheet</element> element
+            replace the <element>xsl:include</element> element in the including
+            document; in other words they have the same import precedence.</p>
+         <p>Multiple includes are allowed, and included stylesheets may contain
+            further includes.</p>
+         <p>
+            <element>xsl:include</element> is useful for material that is standard
+            content in outputs over a wide range of document types.</p>
+      </usage>
+      <containedby label="substitution" display="inline">
+         <link href="xsl_declaration"/>
+      </containedby>
+      <properties type="attribute">
+         <property xml:id="href">
+            <name>href</name>
+            <description>URI that identifies the stylesheet module to be
+               imported. The way that the reference is resolved is
+               implementation defined.</description>
+            <type>xs:anyURI</type>
+            <required state="required"/>
+         </property>
+      </properties>
+      <properties>
+         <common label="attrgroup" display="inline">
+            <link href="ge_attr"/>
+            <link href="version_attr"/>
+         </common>
+      </properties>
+      <examples>
+         <codeblock><![CDATA[
+<xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform" version="2.0" >	
+   ...
+   <xsl:include href="params.xsl"/>
+   <xsl:include href="head.xsl"/>
+   <xsl:include href="table.xsl"/> 
+	...
+</xsl:stylesheet>]]></codeblock>
+      </examples>
+      <related role="navigation" label="related">
+         <link href="xsl_er"/>
+         <link href="xsl_import"/>
+      </related>
+   </body>
+</reference>

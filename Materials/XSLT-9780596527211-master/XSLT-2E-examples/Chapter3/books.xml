@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- books.xml -->
+<favorite-books>
+  <booklist>
+    <book isbn="0596000537" 
+      favorite="Doug Sheri">XSLT</book>
+    <book isbn="0141439777" 
+      favorite="Doug">Tristram Shandy</book>
+    <book isbn="0142437298" 
+      favorite="Doug">Herzog</book>
+    <book isbn="0679762108" 
+      favorite="Doug Sheri">The Sportswriter</book>
+    <book isbn="0143035479" 
+      favorite="Sheri">The Girls' Guide to Hunting and Fishing</book>
+    <book isbn="0375724443" 
+      favorite="Sheri">Ava's Man</book>
+  </booklist>
+</favorite-books>

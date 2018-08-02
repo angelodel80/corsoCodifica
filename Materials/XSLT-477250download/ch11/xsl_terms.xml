@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<reference xml:id="xsl_terms" scheme="xsl">
+   <body>
+      <p>This is short glossary of terms selected from those published for XSLT and
+         XPath from the W3C glossary.</p>
+      <termtable label="glossary">
+         <dfn term="attributeSet"/>
+         <dfn term="attributeValueTemplate"/>
+         <dfn term="axisStep" scheme="xpath2"/>
+
+         <dfn term="characterMap"/>
+         <dfn term="collation"/>
+         <dfn term="constructorFunction" scheme="xpath2"/>
+         <dfn term="contextItem" scheme="xpath2"/>
+         <dfn term="contextPosition" scheme="xpath2"/>
+         <dfn term="currentDateTime" scheme="xpath2"/>
+         <dfn term="currentGroup"/>
+         <dfn term="currentGroupingKey"/>
+         <dfn term="declaration"/>
+         <dfn term="emptySequence" scheme="xpath2"/>
+
+         <dfn term="extensionFunction"/>
+         <dfn term="filterExpression" scheme="xpath2"/>
+         <dfn term="functionParameter"/>
+         <dfn term="globalVariable"/>
+         <dfn term="groupingKeys"/>
+         <dfn term="implicitTimezone" scheme="xpath2"/>
+         <dfn term="importPrecedence"/>
+         <dfn term="instruction"/>
+
+         <dfn term="lexicalQName"/>
+         <dfn term="literalResultElement"/>
+         <dfn term="localVariable"/>
+         <dfn term="mode"/>
+         <dfn term="namedTemplate"/>
+         <dfn term="node" scheme="xpath2"/>
+
+         <dfn term="parameter"/>
+         <dfn term="pattern"/>
+         <dfn term="pathExpression" scheme="xpath2"/>
+         <dfn term="pictureString"/>
+         <dfn term="population"/>
+         <dfn term="predicate" scheme="xpath2"/>
+         <dfn term="qName"/>
+         <dfn term="resultTree"/>
+
+         <dfn term="sequence" scheme="xpath2"/>
+         <dfn term="sequenceConstructor"/>
+         <dfn term="serialization"/>
+         <dfn term="sortKeyComponent"/>
+         <dfn term="sortKeySpecification"/>
+         <dfn term="sourceTree"/>
+         <dfn term="step" scheme="xpath2"/>
+         <dfn term="stylesheet"/>
+         <dfn term="stylesheetFunction"/>
+         <dfn term="stylesheetModule"/>
+         <dfn term="stylesheetParameter"/>
+         <dfn term="template"/>
+         <dfn term="templateParameter"/>
+         <dfn term="templateRule"/>
+         <dfn term="temporaryTree"/>
+         <dfn term="tunnelParameter"/>
+
+         <dfn term="variable"/>
+         <dfn term="variableReference" scheme="xpath2"/>
+         <dfn term="whitespaceTextNode"/>
+
+      </termtable>
+   </body>
+</reference>

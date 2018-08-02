@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet href="../xsl/dita_topic2html.xsl" type="text/xsl"?>
+<reference xml:id="xsl_er" scheme="xsl">
+   <body>
+      <p>This reference describes the XSLT 2.0 elements described in followed by several
+         functions that are specific to XSLT (as distinct from XPath).</p>
+      <p>The abstract elements <element>xsl:declaration</element> and
+            <element>xsl:instruction</element> are not used in stylesheets. They
+         define two substitution groups for top-level stylesheet declarations
+         and processing instructions respectively.</p>
+
+      <p>The details state the purpose of the element, with a note on usage, a
+         list of attributes, and an example. Rather than repeat common
+         attributes for each element, these attribute sets are listed after all
+         the elements.</p>
+
+      <p>The table below summarizes the purpose of each element, and contains links
+         to individual element details.</p>
+      <reftable>
+         <link href="xsl_analyze_string"/>
+         <link href="xsl_apply_imports"/>
+         <link href="xsl_apply_templates"/>
+         <link href="xsl_attribute"/>
+         <link href="xsl_attribute_set"/>
+         <link href="xsl_call_template"/>
+         <link href="xsl_character_map"/>
+         <link href="xsl_choose"/>
+         <link href="xsl_comment"/>
+         <link href="xsl_copy_of"/>
+         <link href="xsl_copy"/>
+         <link href="xsl_decimal_format"/>
+         <link href="xsl_declaration"/>
+         <link href="xsl_document"/>
+         <link href="xsl_element"/>
+         <link href="xsl_fallback"/>
+         <link href="xsl_for_each"/>
+         <link href="xsl_for_each_group"/>
+         <link href="xsl_function"/>
+         <link href="xsl_if"/>
+         <link href="xsl_import_schema"/>
+         <link href="xsl_import"/>
+         <link href="xsl_include"/>
+         <link href="xsl_instruction"/>
+         <link href="xsl_key"/>
+         <link href="xsl_matching_substring"/>
+         <link href="xsl_message"/>
+         <link href="xsl_namespace"/>
+         <link href="xsl_namespace_alias"/>
+         <link href="xsl_next_match"/>
+         <link href="xsl_non_matching_substring"/>
+         <link href="xsl_number"/>
+         <link href="xsl_otherwise"/>
+         <link href="xsl_output"/>
+         <link href="xsl_output_character"/>
+         <link href="xsl_param"/>
+         <link href="xsl_perform_sort"/>
+         <link href="xsl_preserve_space"/>
+         <link href="xsl_processing_instruction"/>
+         <link href="xsl_result_document"/>
+         <link href="xsl_sequence"/>
+         <link href="xsl_sort"/>
+         <link href="xsl_strip_space"/>
+         <link href="xsl_stylesheet"/>
+         <link href="xsl_template"/>
+         <link href="xsl_text"/>
+         <link href="xsl_transform"/>
+         <link href="xsl_value_of"/>
+         <link href="xsl_variable"/>
+         <link href="xsl_when"/>
+         <link href="xsl_with_param"/>
+         
+      </reftable>
+
+      <p>The next table lists the common attribute groups.</p>
+
+      <reftable>
+         <link href="ge_attr"/>
+         <link href="version_attr"/>
+         <link href="valid_attr"/>
+      </reftable>
+      
+   </body>
+</reference>

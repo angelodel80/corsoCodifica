@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- list.xml -->
+<person
+  xmlns="http://www.oreilly.com/xslt"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://www.oreilly.com/xslt list.xsd">
+  <name>Doug Tidwell</name>
+  <birthday>1965-06-19</birthday>
+  <age>42</age>
+  <priorAddresses states="GA TN NC"/>
+</person>

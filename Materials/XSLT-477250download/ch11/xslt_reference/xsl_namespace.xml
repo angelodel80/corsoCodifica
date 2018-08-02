@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<reference xml:id="xsl_namespace" scheme="xsl" specification="creating-namespace-nodes">
+   <body>
+      <purpose>
+         <p>Creates a named namespace node and writes it to the result tree.</p>
+      </purpose>
+      <usage>
+         <p>You cannot create a namespace using the <element>xsl:attribute</element> instruction. If you need to create a namespace declaration that is not used for any element or attribute nodes, but for example is used in element content, then you can use <element>xsl:namespace</element> for the purpose.</p>
+      </usage>
+      <contains label="contains" display="inline">
+         <link href="xsl_sequence_constructor_type"/>
+      </contains>
+      <containedby label="substitution" display="inline">
+         <link href="xsl_instruction"/>
+      </containedby>
+      <properties type="attribute">
+         <property xml:id="name">
+            <name>name</name>
+            <description>The name of the namespace node to create</description>
+            <type>xsl:avt</type>
+            <required state="required"/>
+         </property>
+         <property xml:id="select">
+            <name>select</name>
+            <description>The expression to compute the namespace URI</description>
+            <type>xsl:expression</type>
+            <required state="optional"/>
+         </property>
+      </properties>
+      <properties>
+         <common label="attrgroup" display="inline">
+            <link href="ge_attr"/>
+            <link href="valid_attr"/>
+         </common>
+      </properties>
+      <examples>
+         <codeblock><![CDATA[
+<xsl:namespace name="xm" namespace="http://xmd.net"/>
+]]></codeblock>
+      </examples>
+      <related role="navigation" label="related">
+         <link href="xsl_er"/>
+      </related>
+   </body>
+</reference>

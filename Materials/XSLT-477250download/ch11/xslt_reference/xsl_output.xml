@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet href="../xsl/wrox_ref.xsl" type="text/xsl"?>
+<reference xml:id="xsl_output" scheme="xsl" specification="xsl-stylesheet">
+   <body>
+      <purpose>
+         <p>A declaration that determines the format of a result document that
+            is written to the output.</p>
+      </purpose>
+      <usage>
+         <p>If multiple outputs are required, the <attr>name</attr> attribute
+            must be used to identify the individual format definitions, and to
+            associate it with a <attr>format</attr> attribute value in a
+               <element>xsl:result-document</element> instance.</p>
+         <p>Unnamed definitions, and definitions with the same name are grouped
+            together for processing.</p>
+      </usage>
+      <containedby label="substitution" display="inline">
+         <link href="xsl_declaration"/>
+      </containedby>
+      <properties type="attribute">
+         <property xml:id="byte_order">
+            <name>byte-order-mark</name>
+            <description>defines whether or not a byte order mark is written at
+               the start of the file</description>
+            <type>xs:token</type>
+            <values>yes, no</values>
+            <required state="optional"/>
+         </property>
+         <property xml:id="cdata">
+            <name>cdata-section-elements</name>
+            <description>Space-separated QNames of the elements whose content is
+               to be output inside CDATA sections</description>
+            <type>xsl:QName</type>
+            <required state="optional"/>
+         </property>
+         <property xml:id="public">
+            <name>doctype-public</name>
+            <description>The public identifier to be used in any DOCTYPE
+               declaration. Ignored unless <attr>doctype-system</attr> is also
+               specified.</description>
+            <type>xs:string</type>
+            <required state="optional"/>
+         </property>
+         <property xml:id="system">
+            <name>doctype-system</name>
+            <description>The system identifier to be used in any DOCTYPE
+               declaration</description>
+            <type>xs:string</type>
+            <required state="optional"/>
+         </property>
+         <property xml:id="encoding">
+            <name>encoding</name>
+            <description>The character encoding of the output</description>
+            <type>xs:string</type>
+            <required state="optional"/>
+         </property>
+         <property xml:id="escape_uri">
+            <name>escape-uri-attributes</name>
+            <description>Whether or not URI attributes should be escaped in HTML
+               and XHTML output</description>
+            <type>xs:token</type>
+            <values>yes, no</values>
+            <required state="optional"/>
+         </property>
+         <property xml:id="include-content-type">
+            <name>include-content-type</name>
+            <description>Whether or not a <element>meta</element> element should
+               be should included when the <attr>method</attr> attribute is
+               HTML</description>
+            <type>xs:token</type>
+            <values>yes, no</values>
+            <required state="optional"/>
+         </property>
+         <property xml:id="indent">
+            <name>indent</name>
+            <description>Whether or not to indent the output</description>
+            <type>xs:token</type>
+            <values>yes, no</values>
+            <required state="optional"/>
+         </property>
+         <property xml:id="media_type">
+            <name>media-type</name>
+            <description>The MIME type of the output file</description>
+            <type>xs:string</type>
+            <required state="optional"/>
+         </property>
+         <property xml:id="method">
+            <name>method</name>
+            <description>The format to be output. If it is not one of the
+               recognized values it must be a prefixed lexical QName.</description>
+            <type>xsl:QName | xs:token</type>
+            <values>Qname, xml, html, xhtml, text</values>
+            <required state="optional"/>
+         </property>
+         <property xml:id="name">
+            <name>name</name>
+            <description>The name of this format</description>
+            <type>xsl:QName</type>
+            <required state="optional"/>
+         </property>
+         <property xml:id="normalize">
+            <name>normalization-form</name>
+            <description>Specifies how Unicode characters with multiple
+               representations should be normalized</description>
+            <type>xs:NMTOKEN</type>
+            <values>NFC, NFD, NFKC, NFKD, fully-normalized, none</values>
+            <required state="optional"/>
+         </property>
+         <property xml:id="omit_xml_declaraction">
+            <name>omit-xml-declaration</name>
+            <description>Whether or not to output an XML
+               declaration</description>
+            <type>xs:token</type>
+            <values>yes, no</values>
+            <required state="optional"/>
+         </property>
+         <property xml:id="standalone">
+            <name>standalone</name>
+            <description>Sets the value of the <attr>standalone</attr> attribute
+               in the XML declaration</description>
+            <type>xs:token</type>
+            <values>yes, no, omit</values>
+            <required state="optional"/>
+         </property>
+         <property xml:id="undeclare_ns">
+            <name>undeclare-prefixes</name>
+            <description>Whether or not namespaces should be undeclared when out
+               of scope. Applies only if the <attr>version</attr> attribute is
+               set to <code>'1.1'</code>.</description>
+            <type>xs:token</type>
+            <values>yes, no</values>
+            <required state="optional"/>
+         </property>
+         <property xml:id="use_char_map">
+            <name>use-character-maps</name>
+            <description>Space-separated names of the
+                  <element>xsl:character-map</element> elements used in
+               character mapping</description>
+            <type>xsl:QNames</type>
+            <required state="optional"/>
+         </property>
+         <property xml:id="version">
+            <name>version</name>
+            <description>The version of XML in the output document</description>
+            <type>xs:NMTOKEN</type>
+            <required state="optional"/>
+         </property>
+      </properties>
+      <properties>
+         <common label="attrgroup" display="inline">
+            <link href="ge_attr"/>
+         </common>
+      </properties>
+      <examples>
+         <codeblock><![CDATA[
+<xsl:output method="html" encoding="UTF-8"
+   doctype-system="http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"
+   doctype-public="-//W3C//DTD XHTML 1.0 Transitional//EN"/>]]></codeblock>
+      </examples>
+      <related role="navigation" label="related">
+         
+         <link href="xsl_er"/>
+      </related>
+   </body>
+</reference>

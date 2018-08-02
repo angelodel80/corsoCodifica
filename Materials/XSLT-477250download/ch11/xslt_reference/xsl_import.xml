@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<reference xml:id="xsl_import" scheme="xsl" specification="import">
+   <body>
+      <purpose>
+         <p>Declaration used to import stylesheet modules, differing from <element>xsl:include</element> in that the declarations and rules in the importing stylesheet have a higher import precedence, than those in the imported stylesheet.</p>
+      </purpose>
+      <usage>
+         <p><element>xsl:import</element> elements must precede <em>all</em> other declarations and user-defined data elements.</p>
+         <p>The declarations and template rules in the importing stylesheet have a higher precedence than those that are imported.</p>
+         <p><element>xsl:apply-imports</element> may be used to partially override the precedence of items in the importing stylesheet.</p>
+      </usage>
+      <containedby label="substitution" display="inline">        
+         <link href="xsl_declaration"/>
+      </containedby>
+      <containedby label="containedby" display="inline">
+         <link href="xsl_transform"/>
+      </containedby>
+      <properties type="attribute">
+         <property xml:id="href">
+            <name>href</name>
+            <description>URI that identifies the stylesheet module to be imported. The way that the reference is resolved is implementation defined.</description>
+            <type>xs:anyURI</type>
+            <required state="required"/>
+         </property>        
+      </properties>
+      <properties>
+         <common label="attrgroup" display="inline">
+            <link href="ge_attr"/>
+            <link href="version_attr"/>
+         </common>
+      </properties>
+      <examples>
+         <codeblock><![CDATA[
+<xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform" version="2.0" >	
+   <xsl:import href="table.xsl"/>
+	...
+</xsl:stylesheet>]]></codeblock>
+      </examples>
+      <related role="navigation" label="related" >
+         <link href="xsl_er"/>
+         <link href="xsl_apply_imports"/>
+         <link href="xsl_include"/>         
+      </related>
+   </body>
+</reference>

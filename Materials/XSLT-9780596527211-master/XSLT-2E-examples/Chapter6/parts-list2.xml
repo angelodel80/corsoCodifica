@@ -1,0 +1,70 @@
+<?xml version="1.0"?>
+<!-- parts-list2.xml -->
+<!DOCTYPE parts-list [
+<!ELEMENT parts-list       (component+, part+)>
+
+<!ELEMENT component        (name, partref)>
+<!ATTLIST component        component-id ID #REQUIRED>
+
+<!ELEMENT name             (#PCDATA)>
+
+<!ELEMENT partref          EMPTY>
+<!ATTLIST partref          refid IDREFS #REQUIRED>
+
+<!ELEMENT part             (name) >
+<!ATTLIST part             part-id ID #REQUIRED>
+]>
+
+<parts-list>
+  <component component-id="C28392-33-TT">
+    <name>Turnip Twaddler</name>
+    <partref 
+      refid="P81952-26-PK P86679-52-SP P81472-68-FD P88107-39-GT"/>
+  </component>
+  <component component-id="C28813-70-PG">
+    <name>Prawn Goader</name>
+    <partref refid="P81952-26-PK P80499-43-MC P86994-25-RC"/>
+  </component>
+  <component component-id="C28100-38-CT">
+    <name>Clam Teaser</name>
+    <partref refid="P81472-68-FD P86994-25-RC P86679-52-SP"/>
+  </component>
+  <component component-id="C23813-03-CDK">
+    <name>Cucumber Decorating Kit</name>
+    <partref 
+      refid="P81952-26-PK P80499-43-MC P86994-25-RC P81472-68-FD"/>
+  </component>
+  <component component-id="C21630-29-LS">
+    <name>Lemon Snubber</name>
+    <partref refid="P81952-26-PK P88107-39-GT P86679-52-SP"/>
+  </component>
+  <component component-id="C28772-63-OB">
+    <name>Olive Bruiser</name>
+    <partref refid="P80228-21-PT P82387-85-PA"/>
+  </component>
+
+  <part part-id="P80228-21-PT">
+    <name>Pitter</name>
+  </part>
+  <part part-id="P82387-85-PA">
+    <name>Patter</name>
+  </part>
+  <part part-id="P86679-52-SP">
+    <name>Spanner</name>
+  </part>
+  <part part-id="P81472-68-FD">
+    <name>Feather Duster</name>
+  </part>
+  <part part-id="P88107-39-GT">
+    <name>Grommet</name>
+  </part>
+  <part part-id="P81952-26-PK">
+    <name>Paring Knife</name>
+  </part>
+  <part part-id="P80499-43-MC">
+    <name>Mucilage</name>
+  </part>
+  <part part-id="P86994-25-RC">
+    <name>Ribbon Curler</name>
+  </part>
+</parts-list>

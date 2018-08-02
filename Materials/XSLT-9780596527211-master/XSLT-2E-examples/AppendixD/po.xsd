@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- po-schema-ns.xsd -->
+<xs:schema 
+  xmlns="http://www.oreilly.com/xslt"
+  targetNamespace="http://www.oreilly.com/xslt"
+  xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+  <xs:element name="purchase-order">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="date" 
+          minOccurs="1" maxOccurs="1"/>
+        <xs:element ref="customer"
+        minOccurs="1" maxOccurs="1"/>
+        <xs:element ref="items"
+          minOccurs="1" maxOccurs="1"/> 
+      </xs:sequence>
+      <xs:attribute name="id" type="xs:string"/>
+    </xs:complexType>
+  </xs:element>
+  
+  <xs:element name="date">
+    <xs:complexType>
+      <xs:attribute name="year" type="xs:integer"/>
+      <xs:attribute name="month" type="xs:integer"/>
+      <xs:attribute name="day" type="xs:integer"/>
+    </xs:complexType>
+  </xs:element>
+  
+  <xs:element name="customer">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="address" minOccurs="1" maxOccurs="1"/>
+      </xs:sequence>
+      <xs:attribute name="id" type="xs:integer"/>
+      <xs:attribute name="level" type="xs:string"/>
+    </xs:complexType>
+  </xs:element>
+  
+  <xs:element name="address">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="name"
+          minOccurs="1" maxOccurs="1"/>
+        <xs:element ref="street"
+          minOccurs="1" maxOccurs="1"/>
+        <xs:element ref="city"
+          minOccurs="1" maxOccurs="1"/>
+        <xs:element ref="state"
+          minOccurs="1" maxOccurs="1"/>
+        <xs:element ref="zip"
+          minOccurs="1" maxOccurs="1"/>
+      </xs:sequence>
+      <xs:attribute name="type" type="xs:string"/>
+    </xs:complexType>
+  </xs:element>
+  
+  <xs:element name="name">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="title"
+          minOccurs="0" maxOccurs="1"/>
+        <xs:element ref="first-name"
+          minOccurs="1" maxOccurs="1"/>
+        <xs:element ref="last-name"
+          minOccurs="1" maxOccurs="1"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  
+  <xs:element name="title" type="xs:string"/>
+  <xs:element name="first-name" type="xs:string"/>
+  <xs:element name="last-name" type="xs:string"/>
+
+  <xs:element name="street" type="xs:string"/>
+  <xs:element name="city" type="xs:string"/>
+  <xs:element name="state" type="xs:string"/>
+  <xs:element name="zip" type="xs:string"/>
+  
+  <xs:element name="items">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="item" minOccurs="1" maxOccurs="unbounded"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  
+  <xs:element name="item">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="partname"
+          minOccurs="1" maxOccurs="1"/>
+        <xs:element ref="qty"
+          minOccurs="1" maxOccurs="1"/>
+        <xs:element ref="price"
+          minOccurs="1" maxOccurs="1"/>
+      </xs:sequence>
+      <xs:attribute name="part-no" type="xs:string"/>
+    </xs:complexType>
+  </xs:element>
+  
+  <xs:element name="partname" type="xs:string"/>
+  <xs:element name="qty" type="xs:integer"/>
+  <xs:element name="price" type="xs:float"/>
+
+</xs:schema>

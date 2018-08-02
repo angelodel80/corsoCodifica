@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<reference xml:id="fn_current_group" scheme="xsl">
+   <body>
+      <purpose>
+         <p>Returns the sequence of items in the current group within an
+               <element>xsl:for-each-group</element> instruction.</p>
+      </purpose>
+      <syntax>current-group()</syntax>
+      <examples>
+         <codeblock><![CDATA[
+<xsl:for-each-group select="*" group-adjacent="if (self::speaker) then 0 else 1">
+   <td class="noborder" width="50%">
+      <xsl:for-each select="current-group()">
+         <xsl:apply-templates select="."/>
+         <xsl:if test="current-group()='0'">
+            <span class="speaker">
+               <xsl:value-of select="."/>
+            </span>
+         </xsl:if>
+         <xsl:if test="position() ne last()">
+            <br/>
+         </xsl:if>
+      </xsl:for-each>
+   </td>
+</xsl:for-each-group>]]></codeblock>
+      </examples>
+      <related label="related">
+         <link href="xsl_functions"/>
+         <link href="xsl_for_each_group"/>
+      </related>
+   </body>
+</reference>

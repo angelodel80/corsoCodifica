@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<reference xml:id="xsl_declaration" scheme="xsl">
+   <body>
+      <purpose>
+         <p>An abstract element for which declaration elements may be
+            substituted.</p>
+      </purpose>
+      <usage>
+         <p>This element is part of the XSLT 2.0 schema, but is never used in a
+            stylesheet.</p>
+      </usage>
+      <contains label="replacedby" display="block">
+         <link href="xsl_attribute_set"/>
+         <link href="xsl_character_map"/>
+         <link href="xsl_decimal_format"/>
+         <link href="xsl_function"/>
+
+         <link href="xsl_import_schema"/>
+         <link href="xsl_include"/>
+         <link href="xsl_key"/>
+         <link href="xsl_namespace_alias"/>
+         <link href="xsl_output"/>
+
+         <link href="xsl_preserve_space"/>
+         <link href="xsl_strip_space"/>
+         <link href="xsl_template"/>
+
+      </contains>
+
+      <related label="related">
+         <link rel="up" href="xsl_er"/>
+      </related>
+   </body>
+</reference>

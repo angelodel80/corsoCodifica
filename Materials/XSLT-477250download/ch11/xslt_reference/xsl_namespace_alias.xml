@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<reference xml:id="xsl_namespace_alias" scheme="xsl"
+   specification="namespace-aliasing">
+   <body>
+      <purpose>
+         <p>Declares a namespace from a stylesheet to be associated with a
+            different namespace in the output.</p>
+      </purpose>
+      <usage>
+         <p>This is typically required in transforms that output XSLT
+            stylesheets.</p>
+      </usage>
+
+      <containedby label="substitution" display="inline">
+         <link href="xsl_declaration"/>
+      </containedby>
+      <properties type="attribute">
+         <property xml:id="stylesheetprefix">
+            <name>stylesheet-prefix</name>
+            <description>A prefix used in the stylesheet</description>
+            <type>xs:NCName | xs:token</type>
+            <required state="required"/>
+         </property>
+         <property xml:id="resultprefix">
+            <name>result-prefix</name>
+            <description>The prefix to output</description>
+            <type>xs:NCName | xs:token</type>
+            <value>NCName, #default</value>
+            <required state="required"/>
+         </property>
+
+      </properties>
+      <properties>
+         <common label="attrgroup" display="inline">
+            <link href="ge_attr"/>
+            <link href="version_attr"/>
+         </common>
+      </properties>
+      <related role="navigation" label="related">
+         <link href="xsl_er"/>
+      </related>
+   </body>
+</reference>

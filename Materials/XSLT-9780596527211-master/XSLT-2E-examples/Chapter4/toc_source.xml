@@ -1,0 +1,12 @@
+<?xml version="1.0"?>
+<!-- toc_source.xml -->
+<article>
+  <title>Creating output</title>
+  <body>
+    <heading1>Generating text</heading1>
+    <heading1>Handling whitespace</heading1>
+    <heading1>Numbering things</heading1>
+    <heading1>Formatting numbers</heading1>
+    <heading1>Copying nodes from the input document to the output</heading1>
+  </body>
+</article>

@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?><?xml-stylesheet href="reference_single.xsl" type="text/xsl"?>
+<reference xml:id="xsl_character_map" scheme="xsl"
+   specification="character-maps">
+   <body>
+      <purpose>
+         <p>Declares a named <dfn class="popup" term="characterMap" scheme="xsl"/> that determines the way characters
+         are serialized.</p>
+      </purpose>
+      <usage>
+         <p>In the map one or more specific characters are replaced by a string,
+            each of which is defined in the contained
+               <element>xsl:output-character</element> element. The character
+            map is applied only when an <element>xsl:output</element> or
+               <element>xsl:result-document </element>declaration refers to the
+            map in a <attr>use-character-maps</attr> attribute.</p>
+         <p>Typically this element is used to create supported character
+            entities in output.</p>
+      </usage>
+      <contains label="contains" display="inline">
+         <link href="xsl_output_character"/>
+      </contains>
+      <containedby label="substitution" display="inline">
+         <link href="xsl_declaration"/>
+      </containedby>
+      <properties type="attribute">
+         <property xml:id="name">
+            <name>name</name>
+            <description>The name of the character map</description>
+            <type>xsl:QName</type>
+            <required state="required"/>
+         </property>
+         <property xml:id="use_maps">
+            <name>use-character-maps</name>
+            <description>Space-separated list of the names of additional
+               character maps to use</description>
+            <type>xsl:QNames</type>
+            <required state="optional"/>
+         </property>
+      </properties>
+      <properties>
+         <common label="attrgroup" display="inline">
+            <link href="ge_attr"/>
+            <link href="version_attr"/>
+         </common>
+      </properties>
+      <examples>
+         <codeblock><![CDATA[
+<xsl:character-map name="nbsp" use-attribute-sets="dimensions spacing">	
+   <xsl:output-character character="&#160;" string="&amp;nbsp"/>
+</xsl:character-map>]]></codeblock>
+      </examples>
+      <related role="navigation" label="related">
+         <link href="xsl_er"/>
+         <link href="xsl_output"/>
+         <link href="xsl_result_document"/>
+      </related>
+   </body>
+</reference>

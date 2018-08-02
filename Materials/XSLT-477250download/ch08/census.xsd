@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified">
+ <xs:element name="census">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element maxOccurs="unbounded" ref="person"/>
+      </xs:sequence>
+      <xs:attribute name="id" use="required"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="person">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="folio"/>
+        <xs:element ref="page"/>
+        <xs:element ref="number"/>
+        <xs:element ref="surname"/>
+        <xs:element ref="firstname"/>
+        <xs:element ref="relation"/>
+        <xs:element ref="condition"/>
+        <xs:element ref="sex"/>
+        <xs:element ref="age"/>
+        <xs:element ref="occupation"/>
+        <xs:element ref="birthplace"/>
+        <xs:element ref="county"/>
+        <xs:element ref="sortkey"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="folio" type="xs:integer"/>
+  <xs:element name="page" type="xs:integer"/>
+  <xs:element name="number" type="xs:integer"/>
+  <xs:element name="surname" type="xs:NCName"/>
+  <xs:element name="firstname" type="xs:string"/>
+  <xs:element name="relation" type="xs:NCName"/>
+  <xs:element name="condition" type="xs:NCName"/>
+  <xs:element name="sex" type="xs:NCName"/>
+  <xs:element name="age" type="xs:integer"/>
+  <xs:element name="occupation" type="xs:string"/>
+  <xs:element name="birthplace" type="xs:string"/>
+  <xs:element name="county" type="xs:NCName"/>
+  <xs:element name="sortkey" type="xs:integer"/>
+</xs:schema>

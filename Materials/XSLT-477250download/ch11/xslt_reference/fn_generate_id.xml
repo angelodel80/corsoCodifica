@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<reference xml:id="fn_generate_id" scheme="xsl">
+   <body>
+      <purpose>
+         <p>Generates an XML Name that uniquely identifies a node.</p>
+      </purpose>
+      <syntax>generate-id (node)</syntax>
+      <properties type="parameter">
+         <property xml:id="node">
+            <name>node</name>
+            <description>The input node. If this parameter is omitted, the
+               context node is identified.</description>
+            <type>node()</type>
+            <required state="optional"/>
+         </property>
+
+      </properties>
+      <examples>
+         <codeblock><![CDATA[
+<xsl:for-each select="//sp/l[1]">
+   <xsl:sort select="."/>
+      <p><a href="#{generate-id()}">
+            <xsl:apply-templates select="." mode="index"/>
+         </a> [<xsl:value-of select="parent::sp/speaker"/>]</p>
+</xsl:for-each>]]></codeblock>
+      </examples>
+
+      <related label="related">
+         <link href="xsl_functions"/>
+      </related>
+   </body>
+</reference>

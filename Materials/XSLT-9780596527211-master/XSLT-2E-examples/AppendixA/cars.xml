@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- cars.xml -->
+<cars>
+  <manufacturer name="Chevrolet">
+    <car>Cavalier</car>
+    <car>Corvette</car>
+    <car>Impala</car>
+    <car>Malibu</car>
+  </manufacturer>
+  <manufacturer name="Ford">
+    <car>Pinto</car>
+    <car>Mustang</car>
+    <car>Taurus</car>
+  </manufacturer>
+  <manufacturer name="Volkswagen">
+    <car>Beetle</car>
+    <car>Jetta</car>
+    <car>Passat</car>
+    <car>Touraeg</car>
+  </manufacturer>
+</cars>

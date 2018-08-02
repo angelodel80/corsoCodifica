@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<reference xml:id="version_attr" scheme="xsl">
+   <body>
+      <purpose>
+         <p>The <attr>version</attr> attribute, typically used on the <element>xsl:stylesheet</element> element. It may be used on XSLT instructions, literal result elements and some declarations.</p>
+      </purpose>
+      <properties type="attribute">
+         <property xml:id="version">
+            <name>version</name>
+            <description>The XSLT version number</description>
+            <type>xs:decimal</type>
+            <required state="optional"/>
+         </property>      
+      </properties>
+      <related>
+            <link href="xsl_er"/>         
+      </related>
+   </body>
+</reference>

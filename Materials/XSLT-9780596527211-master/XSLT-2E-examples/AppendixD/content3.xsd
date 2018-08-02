@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- content3.xsd -->
+<xs:schema 
+  xmlns="http://www.oreilly.com/xslt"
+  targetNamespace="http://www.oreilly.com/xslt"
+  xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+  <xs:element name="content3">
+    <xs:complexType mixed="true">
+      <xs:sequence minOccurs="0" maxOccurs="unbounded">
+        <xs:element ref="emphasis"/>
+      </xs:sequence>
+      <xs:attribute name="color" type="xs:string"/>
+    </xs:complexType>
+  </xs:element>
+
+  <xs:element name="emphasis" type="xs:string"/>
+
+</xs:schema>

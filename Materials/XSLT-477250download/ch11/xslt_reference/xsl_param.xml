@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<reference xml:id="xsl_param" scheme="xsl" specification="parameters">
+   <body>
+      <purpose>
+         <p>A declaration used to define a global parameter to the
+            transformation, or within <element>xsl:template</element>, or
+               <element>xsl:function</element>.</p>
+      </purpose>
+      <usage>
+         <p>The element must appear immediately after the parent element.</p>
+         <p>A parameter supplied to a template, using
+               <element>xsl:call-template</element>,
+               <element>xsl:apply-templates</element>,
+               <element>xsl:apply-imports</element> or
+               <element>xsl:next-match</element> is passed with
+               <element>xsl:with-param</element>. A parameter passed to a
+            stylesheet function, is contained in an XPath expression.</p>
+      </usage>
+      <contains label="contains" display="inline">
+         <link href="xsl_sequence_constructor_type"/>
+      </contains>
+      <containedby label="containedby" display="inline">
+         <link href="xsl_transform"/>
+         <link href="xsl_template"/>
+         <link href="xsl_function"/>
+      </containedby>
+      <properties type="attribute">
+         <property xml:id="select">
+            <name>select</name>
+            <description>The default parameter value</description>
+            <type>xsl:expression</type>
+            <required state="optional"/>
+         </property>
+         <property xml:id="name">
+            <name>name</name>
+            <description>The parameter name</description>
+            <type>xsl:QName</type>
+            <required state="required"/>
+         </property>
+         <property xml:id="as">
+            <name>as</name>
+            <description>The type of the parameter</description>
+            <type>xsl:sequence-type</type>
+            <required state="optional"/>
+         </property>
+         <property xml:id="required">
+            <name>required</name>
+            <description>Whether or not the parameter is required</description>
+            <type>xs:token</type>
+            <values>yes, no</values>
+            <default>no</default>
+            <required state="optional"/>
+         </property>
+         <property xml:id="tunnel">
+            <name>tunnel</name>
+            <description>Whether or not the parameter is is a tunnel
+               parameter</description>
+            <type>xs:token</type>
+            <values>yes, no</values>
+            <default>no</default>
+            <required state="optional"/>
+         </property>
+      </properties>
+      <properties>
+         <common label="attrgroup" display="inline">
+            <link href="ge_attr"/>
+            <link href="version_attr"/>
+         </common>
+      </properties>
+      <examples>
+         <codeblock><![CDATA[
+<xsl:template match="contains | containedby | common">
+   <xsl:param name="source_id" tunnel="yes"/>
+   <xsl:param name="default_scheme" tunnel="yes"/>
+   <xsl:call-template name="getlinks">
+      <xsl:with-param name="label" select="@label"/>
+      <xsl:with-param name="display" select="@display"/>
+   </xsl:call-template>
+</xsl:template> ]]></codeblock>
+      </examples>
+      <related role="navigation" label="related">
+         <link href="xsl_er"/>
+         <link href="xsl_with_param"/>
+      </related>
+   </body>
+</reference>

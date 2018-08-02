@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE listBibl SYSTEM "../schema/dtd/listBibl.dtd">
+<?xml-stylesheet href="biblio-html.xsl" type="text/xsl" ?>
+<listBibl n="1">
+  <bib>
+    <biblInfo>
+      <title>la divina commedia</title>
+      <author>Dante Alighieri</author>
+      <cost>20.00</cost>
+    </biblInfo>
+  </bib>
+  <bib>
+    <biblInfo>
+      <title>gomorra</title>
+      <author>Roberto Saviano</author>
+      <cost>14.00</cost>
+    </biblInfo>
+  </bib>
+</listBibl>

@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+
+<xs:schema elementFormDefault="qualified"
+   xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+   <xs:attributeGroup name="resourceReference">
+      <xs:attribute name="src" type="xs:anyURI" use="required"/>
+      <xs:attribute name="type" use="optional" default="text/xml">
+         <xs:simpleType>
+            <xs:restriction base="xs:string">
+               <xs:enumeration value="text/xml"/>
+               <xs:enumeration value="text/html"/>
+               <xs:enumeration value="image/png"/>
+               <xs:enumeration value="image/gif"/>
+               <xs:enumeration value="image/jpg"/>
+            </xs:restriction>
+         </xs:simpleType>
+      </xs:attribute>
+   </xs:attributeGroup>
+   
+   <xs:attributeGroup name="termReference">
+      <xs:attribute name="term" type="xs:NCName" use="required"/>
+      <xs:attribute name="scheme" type="xs:anyURI" use="optional"/>
+   </xs:attributeGroup>
+   
+   <xs:attributeGroup name="linkattr">
+      <xs:attribute name="href" type="xs:anyURI" use="optional"/>
+      <xs:attribute name="scheme" type="xs:string" use="optional"/>
+      <xs:attribute name="contexts" use="optional"/>
+      <xs:attribute name="rel" use="optional">
+         <xs:simpleType>
+            <xs:restriction base="xs:NMTOKEN">
+               <xs:enumeration value="external"/>
+               <xs:enumeration value="next"/>
+               <xs:enumeration value="previous"/>
+               <xs:enumeration value="start"/>
+               <xs:enumeration value="up"/>
+            </xs:restriction>
+         </xs:simpleType>
+      </xs:attribute>
+   </xs:attributeGroup>
+   
+   <xs:attributeGroup name="cmattr">
+      <xs:attribute name="state" use="optional" default="optional">
+         <xs:simpleType>
+            <xs:restriction base="xs:NMTOKEN">
+               <xs:enumeration value="optional"/>
+               <xs:enumeration value="required"/>
+            </xs:restriction>
+         </xs:simpleType>
+      </xs:attribute>
+   </xs:attributeGroup>
+
+   <xs:complexType name="linklistType">
+      <xs:sequence>
+         <xs:element name="description" type="xs:string" minOccurs="0"/>
+         <xs:element ref="link" maxOccurs="unbounded"/>
+      </xs:sequence>
+      <xs:attribute name="display" use="optional" default="block">
+         <xs:simpleType>
+            <xs:restriction base="xs:NMTOKEN">
+               <xs:enumeration value="block"/>
+               <xs:enumeration value="inline"/>
+            </xs:restriction>
+         </xs:simpleType>
+      </xs:attribute>
+      <xs:attribute name="label" type="xs:string" use="optional"/>
+      <xs:attribute name="role" use="optional">
+         <xs:simpleType>
+            <xs:restriction base="xs:NMTOKEN">
+               <xs:enumeration value="navigation"/>
+            </xs:restriction>
+         </xs:simpleType>
+      </xs:attribute>
+   </xs:complexType>
+
+   <xs:complexType name="linkType" mixed="true">
+      <xs:attributeGroup ref="linkattr"/>
+      <xs:attributeGroup ref="cmattr"/>
+   </xs:complexType>
+
+   <xs:element name="link" type="linkType"/>
+   
+   
+
+</xs:schema>

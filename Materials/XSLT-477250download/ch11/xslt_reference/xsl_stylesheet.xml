@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<reference xml:id="xsl_stylesheet" scheme="xsl" specification="xsl-stylesheet">
+   <body>
+      <purpose>
+         <p>The root element of a stylesheet.</p>
+      </purpose>
+      <usage>
+         <p>The <element>stylesheet</element> is always the root element, even if a stylesheet is included in, or imported into, another. It must have a <attr>version</attr> attribute, indicating the version of XSLT that the stylesheet requires.</p>
+         <p>For a version 2.0 stylesheet, the value should be "2.0". For a stylesheet designed to execute under both XSLT 1.0 and XSLT 2.0, create a core module for each version number; then use <element>xsl:include</element> or <element>xsl:import</element> to incorporate common code, which should specify version="2.0" if it uses XSLT 2.0 features, or version="1.0" otherwise.</p>
+         <p>The <element>xsl:transform</element> element is allowed as a synonym. It is shown in the schema as the substitution group for <element>xsl:stylesheet</element>, so see that section for details of the structure.</p>
+         <p>The namespace declaration <code>xmlns:xsl="http//www.w3.org/1999/XSL/Transform</code> by convention uses the prefix <code>xsl</code>.</p>
+         <p>An element occurring as a child of the <element>stylesheet</element> element is called a declaration. Top-level elements are all optional, and may occur zero or more times.</p>
+      </usage>
+      
+      <containedby label="substitution" display="inline"><link href="xsl_transform"/></containedby>
+      
+      
+      <examples>
+         <codeblock><![CDATA[
+<xsl:stylesheet
+   xmlns:xsl="http//www.w3.org/1999/XSL/Transform"
+   version="2.0"
+	.
+	.
+</xsl:stylesheet>]]></codeblock>
+      </examples>
+      <related role="navigation" label="related" >
+         <link href="xsl_er"/>         
+      </related>
+   </body>
+</reference>

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<listPersName 
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+xsi:noNamespaceSchemaLocation="../schema/xsd/listPersNameDataType.xsd">
+  <persName>
+    <firstName>Angelo</firstName>
+    <secondName>Mario</secondName>
+    <surName>Del Grosso</surName>
+  </persName>
+</listPersName>

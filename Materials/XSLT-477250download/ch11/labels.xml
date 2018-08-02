@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- localised section labels
+     plural forms added on count
+
+     no schema yet
+     consider as a term list--> 
+<labels>
+   
+   <label name="example">Example</label> 
+   <label name="related">Related topic</label>
+   <label name="contains">Contains element</label>
+   <label name="containedby">Contained by element</label>
+   <label name="attrgroup">Attribute group</label>
+   <label name="external">External link</label> 
+   <label name="substitution">In substitution group</label>
+   <label name="replacedby">Substitute</label>
+   
+   <label name="start">Start</label>
+   <label name="previous">Previous</label>
+   <label name="next">Next</label>
+   
+   <label name="references">References</label>
+   <label name="glossary">Glossary</label>
+   
+   <label name="collection">Collection</label>
+   <label name="termlist">Termlist</label>
+   <label name="resource">Resource</label>
+   
+   <label name="sources">Source</label>
+</labels>

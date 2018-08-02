@@ -1,0 +1,551 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<collection>
+   <title>XSLT element reference</title>
+    <entry xml:id="xsl_er">
+      <title>XSLT elements</title>
+      <content src="../xslt_reference/"/>
+      <category term="element_reference" scheme="resource"/>
+    </entry>
+   <entry xml:id="xsl_terms">
+      <title>XSLT glossary</title>
+      <content src="../xslt_reference/"/>
+      <category term="element_reference" scheme="resource"/>
+   </entry>
+   <entry xml:id="xsl_stylesheet">
+      <title>xsl:stylesheet</title>
+      <summary>The root element of a stylesheet.</summary>
+      <content src="../xslt_reference/"/>
+      <category term="element_reference" scheme="resource"/>
+   </entry>
+   <entry xml:id="xsl_declaration">
+      <title>xsl:declaration</title>
+      <summary>The abstract element for which declaration elements may be
+         substituted.</summary>
+      <content src="../xslt_reference/"/>
+      <category term="concept" scheme="resource"/>
+   </entry>
+   <entry xml:id="xsl_output">
+      <title>xsl:output</title>
+      <summary>Determines the format of a result document that is written to the
+         output.</summary>
+      <content src="../xslt_reference/"/>
+      <category term="element_reference" scheme="resource"/>
+      <category term="serialize" scheme="markup"/>
+   </entry>
+
+   <entry xml:id="xsl_attribute_set">
+      <title>xsl:attribute-set</title>
+      <summary>Declares a named set of attributes and values.</summary>
+      <content src="../xslt_reference/"/>
+      <category term="element_reference" scheme="resource"/>
+   </entry>
+   <entry xml:id="xsl_include">
+      <title>xsl:include</title>
+      <summary>Used to include one stylesheet module within another.</summary>
+      <content src="../xslt_reference/"/>
+      <category term="element_reference" scheme="resource"/>
+   </entry>
+   <entry xml:id="xsl_import">
+      <title>xsl:import</title>
+      <summary>Imports a stylesheet module. Differs from
+            <element>xsl:include</element> in that the declarations and rules in
+         the importing stylesheet have a higher import precedence, than those in
+         the imported stylesheet.</summary>
+      <content src="../xslt_reference/"/>
+      <category term="element_reference" scheme="resource"/>
+   </entry>
+   <entry xml:id="xsl_import_schema">
+      <title>xsl:import-schema</title>
+      <summary>Declaration, in a schema-aware processor, that identifies a
+         schema defining the user-defined types, element and attributes. </summary>
+      <content src="../xslt_reference/"/>
+      <category term="element_reference" scheme="resource"/>
+   </entry>
+   <entry xml:id="xsl_key">
+      <title>xsl:key</title>
+      <summary>Declares a named key to be used with the <code>key()</code>
+         function.</summary>
+      <content src="../xslt_reference/"/>
+      <category term="element_reference" scheme="resource"/>
+   </entry>
+   <entry xml:id="xsl_template">
+      <title>xsl:template</title>
+      <summary>The building blocks of XSLT. This element is used to declare a
+         template for generating nodes in a result tree.</summary>
+      <content src="../xslt_reference/"/>
+      <category term="element_reference" scheme="resource"/>
+   </entry>
+   <entry xml:id="xsl_call_template">
+      <title>xsl:call-template</title>
+      <summary>Invokes a named template.</summary>
+      <content src="../xslt_reference/"/>
+      <category term="element_reference" scheme="resource"/>
+   </entry>
+   <entry xml:id="xsl_transform">
+      <title>xsl:transform</title>
+      <summary>The name is a synonym of
+         <element>xsl:stylesheet</element>.</summary>
+      <content src="../xslt_reference/"/>
+      <category term="element_reference" scheme="resource"/>
+   </entry>
+   <entry xml:id="xsl_decimal_format">
+      <summary>Determines the display format of a source data number, that has
+         been converted to a string by the XSLT <code>format-number()</code>
+         function.</summary>
+      <title>xsl:decimal-format</title>
+      <content src="../xslt_reference/"/>
+      <category term="element_reference" scheme="resource"/>
+   </entry>
+   <entry xml:id="xsl_character_map">
+      <title>xsl:character-map</title>
+      <summary>Declares a named character map that determines the way that
+         characters are serialized.</summary>
+      <content src="../xslt_reference/"/>
+      <category term="element_reference" scheme="resource"/>
+      <category term="serialize" scheme="markup"/>
+   </entry>
+   <entry xml:id="xsl_function">
+      <title>xsl:function</title>
+      <summary>Declares the name, parameters, and implementation of a custom
+         stylesheet function.</summary>
+      <content src="../xslt_reference/"/>
+      <category term="element_reference" scheme="resource"/>
+   </entry>
+   <entry xml:id="xsl_preserve_space">
+      <title>xsl:preserve-space</title>
+      <summary>Specifies the elements in which whitespace in text nodes is
+         significant.</summary>
+      <content src="../xslt_reference/"/>
+      <category term="element_reference" scheme="resource"/>
+      <category term="whitespace" scheme="markup"/>
+   </entry>
+   <entry xml:id="xsl_strip_space">
+      <title>xsl:strip-space</title>
+      <summary>Specifies the elements in which whitespace in text nodes is not
+         significant.</summary>
+      <content src="../xslt_reference/"/>
+      <category term="element_reference" scheme="resource"/>
+      <category term="whitespace" scheme="markup"/>
+   </entry>
+   <!--  instructions-->
+   <entry xml:id="xsl_instruction">
+      <title>xsl:instruction</title>
+      <summary>The abstract element for which instruction elements may be
+         substituted.</summary>
+      <content src="../xslt_reference/"/>
+      <category term="concept" scheme="resource"/>
+   </entry>
+   <entry xml:id="xsl_apply_templates">
+      <title>xsl:apply-templates</title>
+      <summary>Defines a set of nodes to process.</summary>
+      <content src="../xslt_reference/"/>
+      <category term="element_reference" scheme="resource"/>
+   </entry>
+   <entry xml:id="xsl_apply_imports">
+      <title>xsl:apply-imports</title>
+      <summary>Overrides an existing global variable or parameter, or a template
+         rule with one of the same name in an imported module.</summary>
+      <content src="../xslt_reference/"/>
+      <category term="element_reference" scheme="resource"/>
+   </entry>
+   <entry xml:id="xsl_attribute">
+      <title>xsl:attribute</title>
+      <summary>Adds attributes to literal result elements or elements created by
+         an instruction like <element>xsl:element</element> or
+            <element>xsl:copy</element>.</summary>
+      <content src="../xslt_reference/"/>
+      <category term="element_reference" scheme="resource"/>
+   </entry>
+   <entry xml:id="xsl_param">
+      <title>xsl:param</title>
+      <summary>Defines a global parameter to a stylesheet, or a local parameter
+         within <element>xsl:template</element> or
+            <element>xsl:function</element>.</summary>
+      <content src="../xslt_reference/"/>
+      <category term="element_reference" scheme="resource"/>
+   </entry>
+   <entry xml:id="xsl_with_param">
+      <title>xsl:with-param</title>
+      <summary>Sets the value of a parameter supplied to a template.</summary>
+      <content src="../xslt_reference/"/>
+      <category term="element_reference" scheme="resource"/>
+   </entry>
+   <entry xml:id="xsl_variable">
+      <title>xsl:variable</title>
+      <summary>Declares a global or local variable and assigns a value to
+         it.</summary>
+      <content src="../xslt_reference/"/>
+      <category term="element_reference" scheme="resource"/>
+   </entry>
+   <entry xml:id="xsl_if">
+      <title>xsl:if</title>
+      <summary>Defines a test condition, and a sequence constructor to perform
+         if the condition evaluates to 'true'. </summary>
+      <content src="../xslt_reference/"/>
+      <category term="element_reference" scheme="resource"/>
+   </entry>
+   <entry xml:id="xsl_choose">
+      <title>xsl:choose</title>
+      <summary>An instruction that specifies a choice between alternatives,
+         which are defined by multiple <element>xsl:when</element> instructions,
+         and an optional, terminal, <element>xsl:otherwise</element>
+         element.</summary>
+      <content src="../xslt_reference/"/>
+      <category term="element_reference" scheme="resource"/>
+   </entry>
+   <entry xml:id="xsl_when">
+      <title>xsl:when</title>
+      <summary>Defines a test condition, and a sequence constructor to perform.
+         At least one element must appear inside
+         <element>xsl:choose</element>.</summary>
+      <content src="../xslt_reference/"/>
+      <category term="element_reference" scheme="resource"/>
+   </entry>
+   <entry xml:id="xsl_otherwise">
+      <title>xsl:otherwise</title>
+      <summary>Defines an action to take if none of the preceding
+            <element>xsl:when</element> tests inside
+            <element>xsl:choose</element> are satisfied.</summary>
+      <content src="../xslt_reference/"/>
+      <category term="element_reference" scheme="resource"/>
+   </entry>
+   <entry xml:id="xsl_for_each">
+      <title>xsl:for-each</title>
+      <summary>selects a sequence of items for uniform processing. The items may
+         be either nodes or atomic values.</summary>
+      <content src="../xslt_reference/"/>
+      <category term="element_reference" scheme="resource"/>
+   </entry>
+   <entry xml:id="xsl_for_each_group">
+      <title>xsl:for-each-group</title>
+      <summary>Selects a sequence of items for uniform processing, and groups
+         them according to common values, adjacency, or in relation to other
+         elements.</summary>
+      <content src="../xslt_reference/"/>
+      <category term="element_reference" scheme="resource"/>
+   </entry>
+   <entry xml:id="xsl_sort">
+      <title>xsl:sort</title>
+      <summary>A sort key component, any number of which may be combined in a
+         sort specification.</summary>
+      <content src="../xslt_reference/"/>
+      <category term="element_reference" scheme="resource"/>
+   </entry>
+   <entry xml:id="xsl_perform_sort">
+      <title>xsl:perform-sort</title>
+      <summary>Standalone instruction to sort items without any immediate
+         additional processing.</summary>
+      <content src="../xslt_reference/"/>
+      <category term="element_reference" scheme="resource"/>
+   </entry>
+
+   <entry xml:id="xsl_number">
+      <title>xsl:number</title>
+      <summary>Numbers nodes sequentially, and formats the numbers.</summary>
+      <content src="../xslt_reference/"/>
+      <category term="element_reference" scheme="resource"/>
+   </entry>
+
+   <entry xml:id="xsl_result_document">
+      <title>xsl:result-document</title>
+      <summary>Creates a new result tree, and optionally associates it with
+         formatting set in <element>xsl:output</element>.</summary>
+      <content src="../xslt_reference/"/>
+      <category term="element_reference" scheme="resource"/>
+      <category term="serialize" scheme="markup"/>
+   </entry>
+   <entry xml:id="xsl_analyze_string">
+      <title>xsl:analyze-string</title>
+      <summary>An instruction that processes a string using a regular
+         expression.</summary>
+      <content src="../xslt_reference/"/>
+      <category term="element_reference" scheme="resource"/>
+   </entry>
+   <entry xml:id="xsl_matching_substring">
+      <title>xsl:matching-substring</title>
+      <summary>Defines the processing for a match within the
+            <element>xsl:analyze-string</element> instruction.</summary>
+      <content src="../xslt_reference/"/>
+      <category term="element_reference" scheme="resource"/>
+   </entry>
+   <entry xml:id="xsl_non_matching_substring">
+      <title>xsl:non-matching-substring</title>
+      <summary>Defines the processing for a substrings that are not matched
+         within the <element>xsl:analyze-string</element> instruction.</summary>
+      <content src="../xslt_reference/"/>
+      <category term="element_reference" scheme="resource"/>
+   </entry>
+   <entry xml:id="xsl_output_character">
+      <title>xsl:output-character</title>
+      <summary>Defines the substitution of a single Unicode character within an
+            <element>xsl:character-map</element> declaration.</summary>
+      <content src="../xslt_reference/"/>
+      <category term="element_reference" scheme="resource"/>
+      <category term="serialize" scheme="markup"/>
+   </entry>
+   <entry xml:id="xsl_comment">
+      <title>xsl:comment</title>
+      <summary>Creates a comment node.</summary>
+      <content src="../xslt_reference/"/>
+      <category term="element_reference" scheme="resource"/>
+      <category term="debug" scheme="markup"/>
+   </entry>
+   <entry xml:id="xsl_copy">
+      <title>xsl:copy</title>
+      <summary>Copies the context item to the result sequence.</summary>
+      <content src="../xslt_reference/"/>
+      <category term="element_reference" scheme="resource"/>
+
+   </entry>
+   <entry xml:id="xsl_copy_of">
+      <title>xsl:copy-of</title>
+      <summary>Copies a sequence of nodes to the result sequence.</summary>
+      <content src="../xslt_reference/"/>
+      <category term="element_reference" scheme="resource"/>
+
+   </entry>
+   <entry xml:id="xsl_document">
+      <summary>Creates a document node and adds it to the result
+         sequence.</summary>
+      <title>xsl:document</title>
+      <content src="../xslt_reference/"/>
+      <category term="element_reference" scheme="resource"/>
+      <category term="valid" scheme="markup"/>
+   </entry>
+   <entry xml:id="xsl_element">
+      <title>xsl:element</title>
+      <summary>Creates a named element node and writes it to the result
+         tree.</summary>
+      <content src="../xslt_reference/"/>
+      <category term="element_reference" scheme="resource"/>
+
+   </entry>
+   <entry xml:id="xsl_fallback">
+      <title>xsl:fallback</title>
+      <summary>Defines fallback behavior when there is no implementation of a
+         containing instruction.</summary>
+      <content src="../xslt_reference/"/>
+      <category term="element_reference" scheme="resource"/>
+
+   </entry>
+   <entry xml:id="xsl_next_match">
+      <title>xsl:next-match</title>
+      <summary>Allows more than one rule to apply to the same
+         source node, within the same stylesheet module.</summary>
+      <content src="../xslt_reference/"/>
+      <category term="element_reference" scheme="resource"/>
+
+   </entry>
+   <entry xml:id="xsl_message">
+      <title>xsl:message</title>
+      <summary>Specifies a message to be output.</summary>
+      <content src="../xslt_reference/"/>
+      <category term="element_reference" scheme="resource"/>
+      <category term="debug" scheme="xsl"/>
+   </entry>
+   <entry xml:id="xsl_namespace">
+      <title>xsl:namespace</title>
+      <summary>Creates a named namespace node and writes it to the result
+         tree.</summary>
+      <content src="../xslt_reference/"/>
+      <category term="element_reference" scheme="resource"/>
+      <category term="namespace" scheme="xml"/>
+   </entry>
+   <entry xml:id="xsl_namespace_alias">
+      <title>xsl:namespace-alias</title>
+      <summary>Declares a namespace from a stylesheet to be associated with a
+         different namespace in the output.</summary>
+      <content src="../xslt_reference/"/>
+      <category term="element_reference" scheme="resource"/>
+      <category term="namespace" scheme="xml"/>
+   </entry>
+   <entry xml:id="xsl_processing_instruction">
+      <title>xsl:processing-instruction</title>
+      <summary>An instruction that outputs a processing instruction
+         node.</summary>
+      <content src="../xslt_reference/"/>
+      <category term="element_reference" scheme="resource"/>
+      <category term="debug" scheme="xsl"/>
+   </entry>
+   <entry xml:id="xsl_sequence">
+      <title>xsl:sequence</title>
+      <summary>An instruction that is commonly used to return the result of a
+         stylesheet function.</summary>
+      <content src="../xslt_reference/"/>
+      <category term="element_reference" scheme="resource"/>
+   </entry>
+   <entry xml:id="xsl_text">
+      <title>xsl:text</title>
+      <summary>Adds literal text to the result sequence.</summary>
+      <content src="../xslt_reference/"/>
+      <category term="element_reference" scheme="resource"/>
+      <category term="whitespace" scheme="markup"/>
+   </entry>
+   <entry xml:id="xsl_value_of">
+      <summary>Adds a text node to the result sequence.</summary>
+      <title>xsl:value-of</title>
+      <content src="../xslt_reference/"/>
+      <category term="element_reference" scheme="resource"/>
+
+   </entry>
+   <!--	attribute groups-->
+   <entry xml:id="ge_attr">
+      <title>Generic element attributes</title>
+      <summary>Generic element attributes, which may be expressed on any XSLT or
+         literal result elements.</summary>
+      <content src="../xslt_reference/"/>
+      <category term="element_reference" scheme="resource"/>
+      <category term="attr" scheme="markup"/>
+   </entry>
+   <entry xml:id="version_attr">
+      <title>Version attributes</title>
+      <summary>The <attr>version</attr> attribute, typically used on the
+            <element>xsl:stylesheet</element> element. It may be used on XSLT
+         instructions, literal result elements and some declarations.</summary>
+      <content src="../xslt_reference/"/>
+      <category term="element_reference" scheme="resource"/>
+      <category term="attr" scheme="markup"/>
+   </entry>
+   <entry xml:id="valid_attr">
+      <title>Validation attributes</title>
+      <summary>Validation attributes on elements.</summary>
+      <content src="../xslt_reference/"/>
+      <category term="element_reference" scheme="resource"/>
+      <category term="attr" scheme="markup"/>
+      <category term="valid" scheme="markup"/>
+   </entry>
+
+   <!--	xslt functions-->
+   <entry xml:id="xsl_functions">
+      <title>XSLT functions</title>
+      <content src="../xslt_reference/"/>
+      <category term="function_reference" scheme="resource"/>
+   </entry>
+   <entry xml:id="fn_current">
+      <title>current</title>
+      <summary>Returns the current context item</summary>
+      <content src="../xslt_reference/"/>
+      <category term="function_reference" scheme="resource"/>
+      <category term="node" scheme="xsl"/>
+   </entry>
+   <entry xml:id="fn_current_group">
+      <title>current-group</title>
+      <summary>Returns the sequence of items in the current group within an
+            <element>xsl:for-each-group</element> instruction</summary>
+      <content src="../xslt_reference/"/>
+      <category term="function_reference" scheme="resource"/>
+      <category term="group" scheme="xsl"/>
+   </entry>
+   <entry xml:id="fn_current_grouping_key">
+      <title>current-grouping-key</title>
+      <content src="../xslt_reference/"/>
+      <summary>Returns the value of the <code>group-by</code> or
+            <code>group-adjacent</code> expression for the group being processed
+         with an <element>xsl:for-each-group</element> instruction. There is no
+         key when grouping by patterns.</summary>
+      <category term="function_reference" scheme="resource"/>
+      <category term="group" scheme="xsl"/>
+      <category term="key" scheme="xsl"/>
+   </entry>
+   <entry xml:id="fn_document">
+      <title>document</title>
+      <summary>Returns the document node of the XML document located at the URI
+         provided in the <code>href</code> argument</summary>
+      <content src="../xslt_reference/"/>
+      <category term="function_reference" scheme="resource"/>
+      <category term="document" scheme="xsl"/>
+   </entry>
+   <entry xml:id="fn_element_available">
+      <title>element-available</title>
+      <summary>Returns true if a named XSLT instruction is available for
+         use.</summary>
+      <content src="../xslt_reference/"/>
+      <category term="function_reference" scheme="resource"/>
+      <category term="test" scheme="xsl"/>
+   </entry>
+   <entry xml:id="fn_format_number">
+      <title>format-number</title>
+      <summary>Formats numbers for display using a picture string.</summary>
+      <content src="../xslt_reference/"/>
+      <category term="function_reference" scheme="resource"/>
+      <category term="number" scheme="xsl"/>
+   </entry>
+   <entry xml:id="fn_format_date">
+      <title>format-date, format-dateTime, format-time</title>
+      <summary>Three functions that format date and time values.</summary>
+      <content src="../xslt_reference/"/>
+      <category term="function_reference" scheme="resource"/>
+      <category term="datetime" scheme="xsl"/>
+   </entry>
+   <entry xml:id="fn_function_available">
+      <title>function-available</title>
+      <summary>Returns true if a named XSLT, user-defined or extension function
+         is available for use.</summary>
+      <content src="../xslt_reference/"/>
+      <category term="function_reference" scheme="resource"/>
+      <category term="test" scheme="xsl"/>
+   </entry>
+   <entry xml:id="fn_generate_id">
+      <title>generate-id</title>
+      <summary>Generates an XML Name that uniquely identifies a node.</summary>
+      <content src="../xslt_reference/"/>
+      <category term="function_reference" scheme="resource"/>
+      <category term="id" scheme="xsl"/>
+   </entry>
+   <entry xml:id="fn_key">
+      <title>key</title>
+      <summary>Returns the nodes with a given value for a named key, which was
+         defined using the <element>xsl:key</element> declaration.</summary>
+      <content src="../xslt_reference/"/>
+      <category term="function_reference" scheme="resource"/>
+      <category term="key" scheme="xsl"/>
+   </entry>
+
+   <entry xml:id="fn_regex_group">
+      <title>regex-group</title>
+      <summary>Identifies an ordered substring returned as part of a regular
+         expression obtained from matching with
+            <element>xsl:analyze-string</element>.</summary>
+      <content src="../xslt_reference/"/>
+      <category term="function_reference" scheme="resource"/>
+      <category term="regex" scheme="xsl"/>
+   </entry>
+   <entry xml:id="fn_system_property">
+      <title>system-property</title>
+      <summary>Returns details about the current processor in a string
+         containing the value of a named environment property.</summary>
+      <content src="../xslt_reference/"/>
+      <category term="function_reference" scheme="resource"/>
+      <category term="system" scheme="xsl"/>
+   </entry>
+   <entry xml:id="fn_type_available">
+      <title>type-available</title>
+      <summary>Tests if a given schema type is available.</summary>
+      <content src="../xslt_reference/"/>
+      <category term="function_reference" scheme="resource"/>
+      <category term="type" scheme="xsl"/>
+   </entry>
+   <entry xml:id="fn_unparsed_entity">
+      <title>unparsed-entity-public-id, unparsed-entity-uri</title>
+      <summary>Two functions that access the public and system identifiers of
+         parsed entities in the DTD of a source document.</summary>
+      <content src="../xslt_reference/"/>
+      <category term="function_reference" scheme="resource"/>
+      <category term="entity" scheme="xsl"/>
+   </entry>
+   <entry xml:id="fn_unparsed_text">
+      <title>unparsed-text, unparsed-text-available</title>
+      <summary>Two functions that test for the existence of a text file, and
+         load it for processing.</summary>
+      <content src="../xslt_reference/"/>
+      <category term="function_reference" scheme="resource"/>
+      <category term="text" scheme="xsl"/>
+   </entry>
+   <!--types-->
+   <entry xml:id="xsl_sequence_constructor_type">
+      <title>sequence-constructor</title>
+      <content src="../xslt_reference/"/>
+      <category term="element_reference" scheme="resource"/>
+      <category term="type" scheme="markup"/>
+   </entry>
+</collection>

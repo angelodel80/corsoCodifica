@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<reference xmlns:xm="http://xm.net/2007/xsl/term" xml:id="xsl_apply_templates"
+   scheme="xsl" specification="xsl-apply-templates">
+   <body>
+      <purpose>
+         <p>An instruction that defines a set of nodes to process.</p>
+      </purpose>
+      <usage>
+         <p>The optional <attr>select</attr> attribute defines the nodes to
+            process. If this attribute is not set, then all the children of the context node will be processed.</p>
+         <p>The <attr>mode</attr> attribute must match a <attr>mode</attr>
+            attribute value on a matching template.</p>
+         <p>The <element>xsl:sort</element> element must follow immediately
+            after the instruction.</p>
+      </usage>
+     <contains label="contains" display="inline">
+         <link href="xsl_with_param"/>
+         <link href="xsl_sort"/>
+      </contains>
+      <containedby label="substitution" display="inline">
+         <link href="xsl_instruction"/>
+      </containedby>
+      <properties type="attribute">
+         <property xml:id="select">
+            <name>select</name>
+            <description>The sequence of items to process. The default is to process the nodes on the <code>child::</code> axis of the element.</description>
+            <type>xsl:expression</type>
+            <required state="optional"/>
+         </property>
+         <property xml:id="mode">
+            <name>mode</name>
+            <description>The processing mode to use</description>
+            <type>xsl:QName | xs:token</type>
+            <values>QName, #default, #current</values>
+            <required state="optional"/>
+         </property>
+      </properties>
+      <properties>
+         <common label="attrgroup" display="inline">
+            <link href="ge_attr"/>
+            <link href="version_attr"/>
+         </common>
+      </properties>
+      <examples>
+         <codeblock><![CDATA[
+<xsl:template match="usage">
+   <h2>Usage</h2>
+   <xsl:apply-templates select="p"/>
+</xsl:template>]]></codeblock>
+      </examples>
+      <related role="navigation" label="related">
+         <link href="xsl_er"/>
+      </related>
+   </body>
+</reference>

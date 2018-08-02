@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<reference xml:id="xsl_choose" scheme="xsl">
+   <body>
+      <title>xsl:choose</title>
+      <purpose>
+         <p>An instruction that specifies a choice between alternatives, which
+            are defined by multiple <element>xsl:when</element> instructions,
+            and an optional, terminal, <element>xsl:otherwise</element> element.
+         </p>
+      </purpose>
+      <usage>
+         <p>Each <element>xsl:when</element> instruction has a <attr>test</attr>
+            attribute containing an expression to evaluate.</p>
+         <p>A single <element>xsl:when</element> has the same result as though
+            you had used <element>xsl:if</element> for a single test.</p>
+         
+      </usage>
+      <contains label="contains">
+         <link href="xsl_when"/>
+         <link href="xsl_otherwise"/>
+      </contains>
+      <containedby label="substitution">
+         <link href="xsl_instruction"/>
+      </containedby>
+   </body>
+</reference>

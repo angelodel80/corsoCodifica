@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<reference xml:id="dcmi_terms" scheme="xsl">
+   <body>     
+      <p>A short glossary of terms selected from <em>DCMI Metadata Terms</em> the vocabulary of the <dfn class="popup" term="dc_dcmi" scheme="dctype"/>.</p>
+      <termtable label="glossary">        
+         <dfn term="dc_available" scheme="dctype"/>
+         <dfn term="dc_subject" scheme="dctype"/>
+         <dfn term="dc_UDC" scheme="dctype"/>
+         <dfn term="dc_W3CDTF"  scheme="dctype"/>
+         <dfn term="dc_identifier" scheme="dctype"/>
+      </termtable>
+   </body>
+</reference>

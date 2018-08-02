@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- phonelist.xml -->
+<phonelist>
+  <phonenumber>919-555-1212</phonenumber>
+  <phonenumber>(919) 555-1212</phonenumber>
+  <phonenumber>212.555.1212</phonenumber>
+  <phonenumber>617-555-1212</phonenumber>
+  <phonenumber>+86 555-1212</phonenumber>
+</phonelist>

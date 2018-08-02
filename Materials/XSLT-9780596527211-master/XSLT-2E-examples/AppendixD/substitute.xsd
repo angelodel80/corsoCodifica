@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- substitute.xsd -->
+<xs:schema 
+  xmlns="http://www.oreilly.com/xslt"
+  targetNamespace="http://www.oreilly.com/xslt"
+  xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+  <xs:element name="person">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="name"/>
+        <xs:element ref="birthday"/>
+        <xs:element ref="age"/> 
+        <xs:element ref="address"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+
+  <xs:element name="name" type="xs:string"/>
+  <xs:element name="birthday" type="xs:date"/>
+  <xs:element name="age" type="xs:positiveInteger"/> 
+
+  <xs:element name="address" type="xs:string"/>
+  <xs:element name="businessAddress" type="xs:string"
+    substitutionGroup="address"/>
+  <xs:element name="residentialAddress" type="xs:string"
+    substitutionGroup="address"/>
+
+</xs:schema>

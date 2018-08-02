@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<reference xml:id="fn_key" scheme="xsl">
+   <body>
+      <purpose><p>Returns the nodes with a given value for a named key, which was
+         defined using the <element>xsl:key</element> declaration.</p></purpose>
+      <syntax>key (name, value, top)</syntax>
+      <properties type="parameter">
+         <property xml:id="name">
+            <name>name</name>
+            <description>The name of the key defined in a declaration</description>
+            <type>xsl:QName</type>
+            <required state="required"/>
+         </property>
+         <property xml:id="value">
+            <name>value</name>
+            <description>The value of the key</description>
+            <type>xs:anyAtomicType</type>
+            <required state="required"/>
+         </property>
+         <property xml:id="top">
+            <name>top</name>
+            <description>The document node to search</description>
+            <type>node()</type>
+            <required state="optional"/>
+         </property>
+      </properties>
+      <examples>
+         <codeblock><![CDATA[
+<xsl:key name="identifier" match="entry" use="@xml:id"/>
+   ...
+<xsl:template match="link">
+   <xsl:variable name="linkID" select="@href"/>
+   <xsl:variable name="linkmeta"
+      select="key('identifier',$linkID,$resourcelist)"/>
+   ...
+</xsl:template>]]></codeblock>
+      </examples>
+      <related label="related">
+         <link href="xsl_functions"/>
+         <link href="xsl_key"/>
+      </related>
+   </body>
+</reference>

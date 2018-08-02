@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<reference xml:id="xsl_variable" scheme="xsl" specification="variables">
+   <body>
+      <purpose>
+         <p>Declares a global or local variable and assigns a value to it.</p>
+      </purpose>
+      <usage>
+         <p>The value to assign may be obtained from the <attr>select</attr>
+            attribute or from a contained sequence constructor.</p>
+      </usage>
+      
+      <containedby label="containedby" display="inline">
+         <link href="xsl_transform"/>
+      </containedby>
+      <properties type="attribute">
+         <property xml:id="select">
+            <name>select</name>
+            <description>The value of the variable</description>
+            <type>xsl:expression</type>
+            <required state="optional"/>
+         </property>
+         <property xml:id="name">
+            <name>name</name>
+            <description>The name of the variable</description>
+            <type>xsl:QName</type>
+            <required state="required"/>
+         </property>
+         <property xml:id="as">
+            <name>as</name>
+            <description>The type of the variable</description>
+            <type>xsl:sequence-type</type>
+            <required state="optional"/>
+         </property>
+      </properties>
+      <properties>
+         <common label="attrgroup" display="inline">
+            <link href="ge_attr"/>
+            <link href="version_attr"/>
+         </common>
+      </properties>
+      <examples>
+         <codeblock><![CDATA[
+<xsl:variable name="tagdate"
+   select="substring-before(published,'T')"/>]]></codeblock>
+      </examples>
+      <related role="navigation" label="related">
+         <link href="xsl_er"/>
+      </related>
+   </body>
+</reference>

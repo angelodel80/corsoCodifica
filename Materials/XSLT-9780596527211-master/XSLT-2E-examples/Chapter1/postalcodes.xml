@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+<!-- postalcodes.xml -->
+<postalcodes>
+  <title>Most-used postal codes in November 2000</title>
+  <item>
+    <city>Schenectady</city>
+    <postalcode>34829</postalcode>
+    <usage-count>2039</usage-count>
+  </item>
+  <item>
+    <city>Kuala Lumpur</city>
+    <postalcode>57000</postalcode>
+    <usage-count>1983</usage-count>
+  </item>
+  <item>
+    <city>London</city>
+    <postalcode>SW1P 4RG</postalcode>
+    <usage-count>1722</usage-count>
+  </item>
+</postalcodes>

@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<reference xml:id="xsl_instruction" scheme="xsl">
+   <body>
+      <purpose>
+         <p>The abstract element for which instruction elements may be substituted.</p>
+      </purpose>
+      <usage>
+         <p>This element is part of the XSLT 2.0 schema, but it is never used in a stylesheet.</p>
+      </usage>
+      <contains label="replacedby" display="block">
+         <link href="xsl_analyze_string"/>
+         <link href="xsl_apply_imports"/>
+         <link href="xsl_apply_templates"/>
+         <link href="xsl_attribute"/>
+         <link href="xsl_call_template"/>
+         <link href="xsl_choose"/>
+         <link href="xsl_comment"/>
+         <link href="xsl_copy"/>
+         <link href="xsl_copy_of"/>
+         <link href="xsl_document"/>
+         <link href="xsl_element"/>
+         <link href="xsl_fallback"/>
+         <link href="xsl_for_each"/>
+         <link href="xsl_for_each_group"/>
+         <link href="xsl_if"/>
+         <link href="xsl_message"/>
+         <link href="xsl_namespace"/>
+         <link href="xsl_next_match"/>
+         <link href="xsl_number"/>
+         <link href="xsl_perform_sort"/>
+         <link href="xsl_processing_instruction"/>
+         <link href="xsl_result_document"/>
+         <link href="xsl_sequence"/>
+         <link href="xsl_text"/>
+         <link href="xsl_value_of"/>
+      </contains>
+      
+      <related label="related" >
+         <link rel="up" href="xsl_er"/>
+      </related>
+   </body>
+</reference>

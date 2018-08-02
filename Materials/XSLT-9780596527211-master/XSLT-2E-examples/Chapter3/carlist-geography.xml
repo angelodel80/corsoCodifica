@@ -1,0 +1,12 @@
+<?xml version="1.0"?>
+<!-- carlist-geography.xml -->
+<cars>
+  <make geography="Europe">Alfa Romeo</make>
+  <make geography="Europe">Bentley</make>
+  <make geography="North America">Chevrolet</make>
+  <make geography="North America">Dodge</make>
+  <make geography="North America">GMC</make>
+  <make geography="Asia">Honda</make>
+  <make geography="Asia">Isuzu</make>
+  <make geography="?">Quantum</make>
+</cars>

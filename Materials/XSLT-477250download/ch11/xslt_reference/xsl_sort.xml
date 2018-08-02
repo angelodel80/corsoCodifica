@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<reference xml:id="xsl_sort" scheme="xsl" specification="xsl-sort">
+   <body>
+      <purpose>
+         <p>A sort key component, any number of which may be combined in a sort specification.</p>
+      </purpose>
+      <usage>
+         <p>Each instruction is treated in order, with the result being processed by the containing instruction.</p>
+      </usage>
+      <contains label="contains" display="inline">
+         <link href="xsl_sequence_constructor_type"/>
+      </contains>
+      <containedby label="containedby" display="inline">
+         <link href="xsl_apply_templates"/>
+         <link href="xsl_for_each"/>
+         <link href="xsl_for_each_group"/>
+         <link href="xsl_perform_sort"/>       
+      </containedby>
+      <properties type="attribute">
+         <property xml:id="select">
+            <name>select</name>
+            <description>The XPath expression to evaluate</description>
+            <type>xsl:expression</type>
+            <required state="optional"/>
+         </property>
+         <property xml:id="order">
+            <name>order</name>
+            <description>whether the items are arranges in ascending or descending order</description>
+            <type>xsl:avt</type>
+            <values>ascending, descending</values>
+            <default>ascending</default>
+            <required state="optional"/>
+         </property>
+         <property xml:id="case_order">
+            <name>case-order</name>
+            <description>Whether upper-case or lowercase letters are collated first. The default is language dependent.</description>
+            <type>xsl:avt</type>
+            <values>upper-first, lower-first</values>
+            <required state="optional"/>
+         </property>
+         <property xml:id="lang">
+            <name>lang</name>
+            <description>Specifies the language of the sort key</description>
+            <type>xsl:avt</type>
+            <required state="optional"/>
+         </property>
+         <property xml:id="datatype">
+            <name>data-type</name>
+            <description>Whether the values are colleated alphabetically or numerically. The default value is 'text'. Primarily or use with XSLT 1.0 stylesheets.</description>
+            <type>xsl:avt</type>
+            <values>text, number</values>
+            <default>text</default>
+            <required state="optional"/>
+         </property>
+         <property xml:id="collation">
+            <name>collation</name>
+            <description>The URI of a collation to use for string comparison</description>
+            <type>xsl:avt</type>
+            <required state="optional"/>
+         </property>
+         <property xml:id="stable">
+            <name>stable</name>
+            <description>Specifies whether or not the original order of equal items should be retained. Applies only to the first <element>xsl:sort</element>. </description>
+            <type>xs:token</type>
+            <values>yes, no</values>
+            <default>yes</default>
+            <required state="optional"/>
+         </property>
+      </properties>
+      <properties>
+         <common label="attrgroup" display="inline">
+            <link href="ge_attr"/>
+            <link href="version_attr"/>
+         </common>
+      </properties>
+      <examples>
+         <codeblock><![CDATA[
+<xsl:for-each select="$archive//entry">
+   <xsl:sort select="xs:dateTime(published)" order="descending"/>
+   <xsl:sort select="xs:dateTime(updated)" order="descending"/>
+   ...
+</xsl:for-each>]]></codeblock>
+      </examples>
+      <related role="navigation" label="related">
+         <link href="xsl_er"/>
+      </related>
+   </body>
+</reference>

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- zip.xsd -->
+<!-- Use this datatype in the as and validate examples... -->
+<xsd:schema 
+  xmlns="http://www.oreilly.com/xslt/zip"
+  targetNamespace="http://www.oreilly.com/xslt/zip"
+  xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+
+  <xsd:simpleType name="zipcode">
+    <xsd:restriction base="xsd:string">
+      <xsd:pattern value="[0-9]{5}(-[0-9]{4})?"/>
+    </xsd:restriction>
+  </xsd:simpleType>
+</xsd:schema>

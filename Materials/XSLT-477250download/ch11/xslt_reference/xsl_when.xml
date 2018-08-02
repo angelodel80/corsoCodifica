@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<reference xml:id="xsl_when" scheme="xsl" specification="xsl-when">
+   <body>
+      <purpose>
+         <p>An instruction that defines a test condition, and a sequence
+            constructor to perform. At least one element must appear inside
+            xsl:choose.</p>
+      </purpose>
+      <usage>
+         <p>Each element is processed in document order. If the test expression
+            evaluates to 'true', subsequent <element>xsl:when</element> elements
+            are ignored. If there is an xsl:otherwise instruction, it will only
+            be processed if all the xsl:when tests fail.</p>
+      </usage>
+      <contains label="contains" display="inline">
+         <link href="xsl_sequence_constructor_type"/>
+      </contains>
+      <containedby label="containedby" display="inline">
+         <link href="xsl_choose"/>
+      </containedby>
+      <properties type="attribute">
+         <property xml:id="test">
+            <name>test</name>
+            <description>The XPath expression to evaluate</description>
+            <type>expression</type>
+            <required state="required"/>
+         </property>
+      </properties>
+      <properties>
+         <common label="attrgroup" display="inline">
+            <link href="ge_attr"/>
+            <link href="version_attr"/>
+         </common>
+      </properties>
+      <examples>
+         <codeblock><![CDATA[
+<xsl:choose>
+   <xsl:when test="@label='contains'">Contains</xsl:when>
+   <xsl:when test="@label='related'">Related topic</xsl:when>
+   <xsl:otherwise>Contained by</xsl:otherwise>
+</xsl:choose>]]></codeblock>
+      </examples>
+      <related role="navigation" label="related">
+         <link href="xsl_er"/>
+         <link href="xsl_otherwise"/>
+      </related>
+   </body>
+</reference>

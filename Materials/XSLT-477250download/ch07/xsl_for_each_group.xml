@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?><?xml-stylesheet href="../xsl/link_reference2html.xsl" type="text/xsl"?>
+<reference xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+   xsi:noNamespaceSchemaLocation="reference.xsd" xml:id="xsl_for_each_group"
+   scheme="xsl" specification="xsl-for-each">
+   <body>
+      <purpose>
+         <p>An instruction that selects a sequence of items for uniform
+            processing, and groups them according to common values, adjacency,
+            or in relation to other elements.</p>
+      </purpose>
+      <usage>
+         <p>Grouping depends on which of the four attributes is specified. The
+            attribute value is known as the group key.</p>
+         <p>The XSLT functions <code>current-group()</code> and
+               <code>current-grouping-key()</code> may be used to process
+            grouped items inside an <element>xsl:for-each</element>
+            instruction.</p>
+      </usage>
+      <contains label="contains" display="inline">
+         <link href="xsl_sort"/>
+         <link href="xsl_sequence_constructor_type"/>
+      </contains>
+      <properties type="attribute">
+         <property xml:id="select">
+            <name>select</name>
+            <description>The sequence of items to group</description>
+            <type>xsl:expression</type>
+            <required state="required"/>
+         </property>
+         <property xml:id="group_by">
+            <name>group-by</name>
+            <description>The common value or values to use</description>
+            <type>xsl:expression</type>
+            <required state="optional"/>
+         </property>
+         <property xml:id="group_adjacent">
+            <name>group-adjacent</name>
+            <description>The common value to use if items are
+               adjacent</description>
+            <type>xsl:expression</type>
+            <required state="optional"/>
+         </property>
+         <property xml:id="starting">
+            <name>group-starting-with</name>
+            <description>The pattern that starts a group of following
+               items</description>
+            <type>xsl:pattern</type>
+            <required state="optional"/>
+         </property>
+         <property xml:id="ending">
+            <name>group-ending-with</name>
+            <description>The pattern that ends a group of preceding
+               items</description>
+            <type>xsl:pattern</type>
+            <required state="optional"/>
+         </property>
+         <property xml:id="collation">
+            <name>collation</name>
+            <description>The URI of a collation to use for string
+               comparison</description>
+            <type>xs:anyURI</type>
+            <required state="optional"/>
+         </property>
+      </properties>
+      <examples>
+         <codeblock>
+            <![CDATA[
+<xsl:for-each-group select="*"
+   group-adjacent="if (self::speaker) then 0 else 1">
+   <td class="noborder" width="50%">
+      <xsl:for-each select="current-group()">
+         <xsl:apply-templates select="."/>
+         <xsl:if test="current-group()='0'">
+            <span class="speaker"><xsl:value-of select="."/></span>
+         </xsl:if>
+         <xsl:if test="position() ne last()">
+            <br/>
+         </xsl:if>
+      </xsl:for-each>
+   </td>
+</xsl:for-each-group>]]></codeblock>
+      </examples>
+     
+   </body>
+</reference>

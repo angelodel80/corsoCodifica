@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+
+<xs:schema elementFormDefault="qualified"
+   xmlns:sch="http://www.ascc.net/xml/schematron"
+   xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+   <xs:annotation>
+      <xs:appinfo>
+         <sch:pattern name="metadata_values">
+            <sch:rule context="reference">
+               <sch:assert test="@xml:id and @scheme">Both attributes must be
+                  present for metadata processing</sch:assert>
+               <sch:assert
+                  test="document(concat('../reslist_',@scheme,'.xml'))//entry[@xml:id=current()/@xml:id]"
+                  >There is no matching identifier in the cited
+                  collection</sch:assert>
+            </sch:rule>
+         </sch:pattern>
+
+         <sch:pattern name="link_values">
+            <sch:rule context="link">
+               <sch:assert
+                  test="document(concat('../reslist_',ancestor::reference/@scheme,'.xml'))//entry[@xml:id=current()/@href] | document(concat('../reslist_',@scheme,'.xml'))//entry[@xml:id=current()/@href]"
+                  >There is no matching identifier in the cited
+                  collection</sch:assert>
+            </sch:rule>
+         </sch:pattern>
+      </xs:appinfo>
+   </xs:annotation>
+
+   <xs:include schemaLocation="common.xsd"/>
+   <xs:include schemaLocation="links.xsd"/>
+
+   <xs:element name="reference">
+      <xs:complexType>
+         <xs:sequence>
+            <xs:element name="body">
+               <xs:complexType>
+                  <xs:sequence>
+                     <xs:element name="purpose" minOccurs="0">
+                        <xs:complexType>
+                           <xs:choice minOccurs="0" maxOccurs="unbounded">
+                              <xs:element ref="p" maxOccurs="unbounded"/>
+                           </xs:choice>
+                        </xs:complexType>
+                     </xs:element>
+                     <xs:element ref="reftable" minOccurs="0"/>
+                     <xs:element ref="termtable" minOccurs="0"/>
+                     <xs:element name="usage" minOccurs="0">
+                        <xs:complexType>
+                           <xs:choice minOccurs="0" maxOccurs="unbounded">
+                              <xs:element ref="p" maxOccurs="unbounded"/>
+                              <xs:element ref="note" minOccurs="0"
+                                 maxOccurs="unbounded"/>
+                              <xs:element ref="codeblock" minOccurs="0"
+                                 maxOccurs="unbounded"/>
+                           </xs:choice>
+                        </xs:complexType>
+                     </xs:element>
+                     <xs:element ref="contains" minOccurs="0"/>
+                     <xs:element ref="containedby" minOccurs="0"/>
+                     <xs:element ref="properties" minOccurs="0"
+                        maxOccurs="unbounded"/>
+
+                     <xs:element ref="examples" minOccurs="0"/>
+                     <xs:element ref="related" minOccurs="0"/>
+                  </xs:sequence>
+               </xs:complexType>
+            </xs:element>
+         </xs:sequence>
+         <xs:attributeGroup ref="core"/>
+         <xs:attributeGroup ref="metadata"/>
+         <xs:attribute name="specification" type="xs:anyURI" use="optional"/>
+      </xs:complexType>
+   </xs:element>
+
+   <xs:element name="properties">
+      <xs:complexType>
+         <xs:sequence maxOccurs="unbounded">
+            <xs:element ref="property" minOccurs="0" maxOccurs="unbounded"/>
+            <xs:element ref="common" minOccurs="0"/>
+         </xs:sequence>
+         <xs:attribute name="type" use="optional">
+            <xs:simpleType>
+               <xs:restriction base="xs:NMTOKEN">
+                  <xs:enumeration value="attribute"/>
+                  <xs:enumeration value="parameter"/>
+               </xs:restriction>
+            </xs:simpleType>
+         </xs:attribute>
+      </xs:complexType>
+   </xs:element>
+
+   <xs:element name="property">
+      <xs:complexType>
+         <xs:sequence>
+            <xs:element ref="name"/>
+            <xs:element ref="description"/>
+            <xs:element ref="type" minOccurs="0"/>
+            <xs:element ref="values" minOccurs="0"/>
+            <xs:element ref="default" minOccurs="0"/>
+            <xs:element ref="required" minOccurs="0"/>
+         </xs:sequence>
+         <xs:attributeGroup ref="core"/>
+      </xs:complexType>
+   </xs:element>
+
+   <xs:element name="required">
+      <xs:complexType>
+         <xs:attribute name="state" use="optional" default="optional">
+            <xs:simpleType>
+               <xs:restriction base="xs:string">
+                  <xs:enumeration value="optional"/>
+                  <xs:enumeration value="required"/>
+                  <xs:enumeration value="deprecated"/>
+               </xs:restriction>
+            </xs:simpleType>
+         </xs:attribute>
+      </xs:complexType>
+   </xs:element>
+  <xs:element name="name" type="xs:string"/>
+   <xs:element name="description">
+      <xs:complexType mixed="true">
+         <xs:choice>
+            <xs:group ref="phrase" minOccurs="0"/>
+         </xs:choice>
+      </xs:complexType>
+   </xs:element>
+   <xs:element name="type">
+      <xs:complexType mixed="true">
+         <xs:choice>
+            <xs:element ref="link" minOccurs="0"/>
+         </xs:choice>
+      </xs:complexType>
+   </xs:element>
+
+   <xs:element name="default" type="xs:string"/> 
+   <xs:element name="values" type="xs:string"/>
+
+   <xs:element name="examples">
+      <xs:complexType>
+         <xs:sequence maxOccurs="unbounded">
+            <xs:choice minOccurs="0">
+               <xs:element ref="p"/>
+               <xs:element ref="note"/>
+            </xs:choice>
+            <xs:element ref="codeblock"/>
+         </xs:sequence>
+      </xs:complexType>
+   </xs:element>
+
+   <xs:element name="codeblock">
+      <xs:complexType>
+         <xs:simpleContent>
+            <xs:extension base="xs:string">
+               <xs:attributeGroup ref="linkattr"/>
+            </xs:extension>
+         </xs:simpleContent>
+      </xs:complexType>
+   </xs:element>
+
+   <!-- link container elements-->
+
+   <xs:element name="reftable" type="linklistType"/>
+   <xs:element name="contains" type="linklistType"/>
+   <xs:element name="containedby" type="linklistType"/>
+   <xs:element name="common" type="linklistType"/>
+   <xs:element name="related" type="linklistType"/>
+
+   <xs:element name="dfn">
+      <xs:complexType>
+         <xs:attributeGroup ref="termReference"/>
+      </xs:complexType>
+   </xs:element>
+
+   <xs:element name="termtable">
+      <xs:complexType>
+         <xs:sequence>
+            <xs:element ref="dfn"/>
+         </xs:sequence>
+      </xs:complexType>
+   </xs:element>
+
+</xs:schema>

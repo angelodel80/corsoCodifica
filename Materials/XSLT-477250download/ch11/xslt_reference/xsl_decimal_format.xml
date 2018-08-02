@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<reference xml:id="xsl_decimal_format" scheme="xsl" specification="defining-decimal-format">
+   <body>
+      <purpose>
+         <p>A declaration that determines the display format of a source data number, which has been converted to a string by the XSLT <code>format-number()</code> function.</p>
+      </purpose>
+      <usage>
+         <p>The element effectively localizes the number format for users, so you could for example have a group of named formats in an imported stylesheet which were used with a locale parameter to determine the formatting for a particular instance.</p>
+      </usage>
+      <containedby label="containedby" display="inline">
+         <link href="xsl_declaration"/>
+      </containedby>
+      <properties type="attribute">
+         <property xml:id="name">
+            <name>name</name>
+            <description>The name of this format</description>
+            <type>xsl:QName</type>
+            <required state="optional"/>
+         </property>
+         <property xml:id="decimal_separator">
+            <name>decimal-separator</name>
+            <description>The character used as the decimal point</description>
+            <type>xsl:char</type>
+            <default>.</default>
+            <required state="optional"/>
+         </property>
+         <property xml:id="group_separator">
+            <name>grouping-separator</name>
+            <description>The character that separates groups (hundreds, thousands, and so on)</description>
+            <type>xsl:char</type>
+            <default>,</default>
+            <required state="optional"/>
+         </property>
+         <property xml:id="infinity">
+            <name>infinity</name>
+            <description>The string used to represent infinity</description>
+            <type>xs:string</type>
+            <default>infinity</default>
+            <required state="optional"/>
+         </property>
+         <property xml:id="minus">
+            <name>minus-sign</name>
+            <description>The character used as the minus sign</description>
+            <type>xsl:char</type>
+            <default>-</default>
+            <required state="optional"/>
+         </property>
+         <property xml:id="nan">
+            <name>NaN</name>
+            <description>The string used to represent "not a number"</description>
+            <type>xs:string</type>
+            <default>NaN</default>
+            <required state="optional"/>
+         </property>
+         <property xml:id="percent">
+            <name>percent</name>
+            <description>The character for the percent sign</description>
+            <type>xsl:char</type>
+            <default>%</default>
+            <required state="optional"/>
+         </property>
+         <property xml:id="per_mille">
+            <name>per-mille</name>
+            <description>The character for the per thousand sign</description>
+            <type>xsl:char</type>
+            <default>&#x2030;</default>
+            <required state="optional"/>
+         </property>
+         <property xml:id="zero_digit">
+            <name>zero_digit</name>
+            <description>The placeholder character for leading and trailing zeros</description>
+            <type>xsl:char</type>
+            <default>0</default>
+            <required state="optional"/>
+         </property>
+         <property xml:id="digit">
+            <name>digit</name>
+            <description>The placeholder character for significant digits </description>
+            <type>xsl:char</type>
+            <default>#</default>
+            <required state="optional"/>
+         </property>
+         <property xml:id="pattern_separator">
+            <name>pattern-separator</name>
+            <description>Character used to separate positive and negative numberpatterns</description>
+            <type>xsl:char</type>
+            <default>;</default>
+            <required state="optional"/>
+         </property>
+         
+      </properties>
+      <properties>
+         <common label="attrgroup" display="inline">
+            <link href="ge_attr"/>
+            <link href="version_attr"/>
+         </common>
+      </properties>
+      <examples>
+         <codeblock><![CDATA[
+<xsl:decimal-format
+   name="eu"
+   decimal-separator=","
+   grouping-separator="."/>]]></codeblock>
+      </examples>
+      <related role="navigation" label="related">
+         <link href="xsl_er"/>
+         <link href="fn_format_number"/>
+      </related>
+   </body>
+</reference>

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- chocolate-by-month.xml -->
+<report year="2006">
+  <title>Chocolate bar sales by month</title>
+  <sales month="08" total="91316"/>
+  <sales month="09" total="82911"/>
+  <sales month="10" total="128587"/>
+  <sales month="11" total="79244"/>
+  <sales month="12" total="113606"/>
+</report>

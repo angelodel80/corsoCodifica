@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+
+<xs:schema elementFormDefault="qualified"
+   xmlns:xs="http://www.w3.org/2001/XMLSchema">
+   <xs:import namespace="http://www.w3.org/XML/1998/namespace"
+      schemaLocation="xml.xsd"/>
+
+   <xs:attributeGroup name="core">
+      <xs:attribute ref="xml:id" use="optional"/>
+      <xs:attribute name="class" type="xs:string" use="optional"/>
+      <xs:attribute name="title" type="xs:string" use="optional"/>
+   </xs:attributeGroup>
+   
+   <xs:attributeGroup name="metadata">
+      <xs:attribute name="scheme" type="xs:string" use="optional"/>
+   </xs:attributeGroup>
+   
+   <xs:element name="p">
+      <xs:complexType mixed="true">
+         <xs:sequence minOccurs="0" maxOccurs="unbounded">
+            <xs:group ref="phrase" minOccurs="0" maxOccurs="unbounded"/>
+         </xs:sequence>
+      </xs:complexType>
+   </xs:element>
+   
+   <xs:element name="note">
+      <xs:complexType mixed="true">
+         <xs:sequence minOccurs="0" maxOccurs="unbounded">
+            <xs:group ref="phrase"/>
+         </xs:sequence>
+         <xs:attribute name="type" use="required">
+            <xs:simpleType>
+               <xs:restriction base="xs:string">
+                  <xs:enumeration value="note"/>
+                  <xs:enumeration value="tip"/>
+                  <xs:enumeration value="caution"/>
+                  <xs:enumeration value="warning"/>
+               </xs:restriction>
+            </xs:simpleType>
+         </xs:attribute>
+      </xs:complexType>
+   </xs:element>
+   
+   
+
+   <xs:group name="phrase">
+      <xs:choice>
+         <xs:element ref="acronym"/>
+         <xs:element ref="attr"/>
+         <xs:element ref="code"/>
+         <xs:element ref="element"/>
+         <xs:element ref="em"/>
+         <xs:element ref="strong"/>
+      </xs:choice>
+   </xs:group>
+   
+   <xs:simpleType name="inline">
+      <xs:restriction base="xs:string"/>
+   </xs:simpleType>
+   
+   <xs:element name="attr" type="inline"/>
+   <xs:element name="strong" type="inline"/>
+   <xs:element name="code" type="inline"/>
+   <xs:element name="element" type="inline"/>
+   <xs:element name="em" type="inline"/>
+   <xs:element name="acronym" type="inline"/>
+ 
+</xs:schema>

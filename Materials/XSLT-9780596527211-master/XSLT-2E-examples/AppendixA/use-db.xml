@@ -1,0 +1,13 @@
+<?xml version="1.0"?>
+<!-- use_db.xml -->
+<report>
+  <title>HR employee listing</title>
+  <section>
+    <title>Employees by department</title>
+    <dbaccess driver="COM.ibm.db2.jdbc.app.DB2Driver"
+      database="jdbc:db2:sample" tablename="employee" where="*"
+      fieldnames='workdept as "Department", lastname as "Last Name", 
+                  firstnme as "First Name"'
+      order-by="workdept" group-by="workdept, lastname, firstnme"/>
+  </section>
+</report>

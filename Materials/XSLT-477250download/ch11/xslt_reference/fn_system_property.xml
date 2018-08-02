@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<reference xml:id="fn_system_property" scheme="xsl">
+   <body>
+      <purpose>
+         <p>Returns details about the current processor in a string containing
+            the value of a named environment property.</p>
+      </purpose>
+      <syntax>system-property (name)</syntax>
+      <properties type="parameter">
+         <property xml:id="name">
+            <name>name</name>
+            <description>The name of the property required.</description>
+            <type>xsl:QName</type>
+            <required state="required"/>
+         </property>
+      </properties>
+      <examples>
+         <codeblock><![CDATA[
+<xsl:comment>Generated with <xsl:value-of select="system-property('xsl:product-name')"/>
+version <xsl:value-of select="system-property('xsl:product-version')"/>.
+</xsl:comment>]]></codeblock>
+      </examples>
+      <related label="related">
+         <link href="xsl_functions"/>
+      </related>
+   </body>
+</reference>

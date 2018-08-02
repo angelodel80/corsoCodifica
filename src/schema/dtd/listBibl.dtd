@@ -1,0 +1,10 @@
+<!ENTITY % biblInfo SYSTEM "biblInfo.dtd" >
+<!ENTITY cp 'ciao'>
+<!ELEMENT listBibl (bib+) >
+%biblInfo;
+
+<!ELEMENT bib (biblInfo) >
+
+<!ATTLIST listBibl n NMTOKEN #REQUIRED>
+
+

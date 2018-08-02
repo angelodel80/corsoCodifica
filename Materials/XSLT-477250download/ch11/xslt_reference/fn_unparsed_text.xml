@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<reference xml:id="fn_unparsed_text" scheme="xsl">
+   <body>   
+      <purpose><p>Two functions that test for the existence of a text file, and
+         load it for processing.</p></purpose>
+      <syntax>unparsed-text (name)</syntax>
+      <properties type="parameter">
+         <property xml:id="href">
+            <name>href</name>
+            <description>The URI of the file to be loaded.</description>
+            <type>xs:string</type>
+            <required state="required"/>
+         </property>
+         <property xml:id="encoding">
+            <name>encoding</name>
+            <description>The character encoding of the text.</description>
+            <type>xs:string</type>
+            <required state="optional"/>
+         </property>
+         
+      </properties>
+      <examples>
+         <codeblock><![CDATA[
+<xsl:variable name="filename" select="'census.csv'" />
+<xsl:if test="unparsed-text-available($filename)">
+   <xsl:value-of select="unparsed-text($filename)"/>
+</xsl:if>
+]]></codeblock>
+      </examples>
+      <related label="related">
+         <link href="xsl_functions"/>
+         <link href="fn_document"/>
+      </related>
+   </body>
+</reference>
+

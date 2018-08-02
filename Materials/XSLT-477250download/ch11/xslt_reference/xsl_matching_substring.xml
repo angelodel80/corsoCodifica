@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<reference xml:id="xsl_matching_substring" scheme="xsl"
+   specification="analyze-string">
+   <body>
+      <purpose>
+         <p>Defines the processing for a match within the
+               <element>xsl:analyze-string</element> instruction.</p>
+      </purpose>
+      <usage>
+         <p>The output is added to the result of the
+               <element>xsl:analyze-string</element> instruction.</p>
+      </usage>
+      <contains label="contains" display="inline">
+         <link href="xsl_sequence_constructor_type"/>
+      </contains>
+      <containedby label="containedby" display="inline">
+         <link href="xsl_analyze_string"/>
+      </containedby>
+      <properties>
+         <common label="attrgroup" display="inline">
+            <link href="ge_attr"/>
+            <link href="version_attr"/>
+         </common>
+      </properties>
+      <related role="navigation" label="related">
+         <link href="xsl_er"/>
+         <link href="xsl_non_matching_substring"/>
+      </related>
+   </body>
+</reference>

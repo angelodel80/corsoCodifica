@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- person3.xsd -->
+<xs:schema 
+  xmlns="http://www.oreilly.com/xslt"
+  targetNamespace="http://www.oreilly.com/xslt"
+  xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+  <xs:element name="person">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="name"/>
+        <xs:element ref="age"/>
+        <xs:element ref="driversLicense"/>
+      </xs:sequence>
+      <xs:attribute name="eyeColor" type="eyeColor-type"/>
+    </xs:complexType>
+  </xs:element>
+
+  <xs:element name="driversLicense" type="driversLicense-type"/>
+
+  <xs:simpleType name="eyeColor-type">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="blue"/>
+      <xs:enumeration value="brown"/>
+      <xs:enumeration value="gray"/>
+      <xs:enumeration value="green"/>
+    </xs:restriction>
+  </xs:simpleType>
+
+  <xs:element name="name" type="xs:string"/>
+
+  <xs:simpleType name="age-type">
+    <xs:restriction base="xs:integer">
+      <xs:minInclusive value="0"/>
+      <xs:maxInclusive value="130"/>
+    </xs:restriction>
+  </xs:simpleType>
+
+  <xs:element name="age" type="age-type"/>
+
+  <xs:simpleType name="driversLicense-type">
+    <xs:restriction base="xs:string">
+      <xs:pattern value="[A-Z]{2}-[0-9]{4}-[0-9]{6}"/>
+    </xs:restriction>
+  </xs:simpleType>
+
+</xs:schema>

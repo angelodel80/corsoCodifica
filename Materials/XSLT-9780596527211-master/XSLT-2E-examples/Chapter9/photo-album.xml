@@ -1,0 +1,6 @@
+<?xml version="1.0"?>
+<!-- photo-album.xml -->
+<photo-album
+  directory="c:\photos"
+  imagesPerRow="5" 
+  includeFilenames="yes"/>

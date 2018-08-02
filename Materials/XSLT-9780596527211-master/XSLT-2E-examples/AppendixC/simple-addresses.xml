@@ -1,0 +1,34 @@
+<?xml version="1.0"?>
+<!-- simple-addresses.xml -->
+<addressbook>
+  <address>
+    <name>Mr. Chester Hasbrouck Frisby</name>
+    <city>Sheboygan</city>
+    <state>WI</state>
+  </address>
+  <address>
+    <name>Mary Backstayge</name>
+    <city>Skunk Haven</city>
+    <state>MA</state>
+  </address>
+  <address>
+    <name>Ms. Natalie Attired</name>
+    <city>Winter Harbor</city>
+    <state>ME</state>
+  </address>
+  <address>
+    <name>Harry Backstayge</name>
+    <city>Skunk Haven</city>
+    <state>MA</state>
+  </address>
+  <address>
+    <name>Mary McGoon</name>
+    <city>Boylston</city>
+    <state>VA</state>
+  </address>
+  <address>
+    <name>Ms. Amanda Reckonwith</name>
+    <city>Lynn</city>
+    <state>MA</state>
+  </address>
+</addressbook>

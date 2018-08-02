@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<reference xml:id="xsl_analyze_string" scheme="xsl" specification="analyze-string"
+   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+   xsi:noNamespaceSchemaLocation="../xsd/reference.xsd">
+   <body>
+      <purpose>
+         <p>An instruction that processes a string using a regular expression.</p>
+      </purpose>
+      <usage>
+         <p>The element is useful in handling structured text that is not marked up using XML.</p>
+         <p>Note that any curly brackets in a regular expression must be escaped by doubling them, since the value of the <attr>regex</attr> attribute is an attribute value template.</p>         
+         
+      </usage>
+      <contains label="contains" display="inline">
+         <link href="xsl_matching_substring"/>
+         <link href="xsl_non_matching_substring"/>
+         <link href="xsl_fallback"/></contains>
+      <containedby label="substitution" display="inline">
+         <link href="xsl_instruction"/>
+      </containedby>
+      <properties type="attribute">
+         <property xml:id="select">
+            <name>select</name>
+            <description>The string to be analyzed</description>
+            <type>xsl:expression</type>
+            <required state="required"/>
+         </property> 
+         <property xml:id="regex">
+            <name>regex</name>
+            <description>The regular expression used to analyze the string</description>
+            <type>xsl:avt</type>
+            <required state="required"/>
+         </property>
+         <property xml:id="flags">
+            <name>flags</name>
+            <description>Flags that determine how the expression is interpreted.</description>
+            <type>xsl:avt</type>
+            <values>i, m, s, x</values>
+            <required state="optional"/>
+         </property>       
+      </properties>
+      <properties>
+         <common label="attrgroup" display="inline">
+            <link href="ge_attr"/>
+            <link href="version_attr"/>
+         </common>
+      </properties>
+      <examples>
+         <codeblock><![CDATA[
+<xsl:analyze-string select="$census" regex="\n">
+   <xsl:non-matching-substring>
+      <row>
+         <xsl:analyze-string select="." regex="," flags="x">
+            <xsl:non-matching-substring>
+               <col>
+                  <xsl:value-of select="normalize-space(.)"/>
+               </col>
+            </xsl:non-matching-substring>
+         </xsl:analyze-string>
+      </row>
+   </xsl:non-matching-substring>
+</xsl:analyze-string>]]></codeblock>
+      </examples>
+      <related role="navigation" label="related" >
+         <link href="xsl_er"/>        
+      </related>
+   </body>
+</reference>

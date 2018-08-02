@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- abstract2.xsd -->
+<xs:schema 
+  xmlns="http://www.oreilly.com/xslt"
+  targetNamespace="http://www.oreilly.com/xslt"
+  xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+  <xs:element name="person">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="name"/>
+        <xs:element ref="birthday"/>
+        <xs:element ref="age"/> 
+        <xs:element ref="state-or-province" 
+          minOccurs="2" maxOccurs="2"/> 
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+
+  <xs:element name="name" type="xs:string"/>
+  <xs:element name="birthday" type="xs:date"/>
+  <xs:element name="age" type="xs:positiveInteger"/> 
+
+  <xs:element name="address" type="xs:string"/>
+
+  <xs:complexType name="state-or-province-type" abstract="true"/>
+ 
+  <xs:complexType name="state-type">
+    <xs:complexContent>
+      <xs:extension base="state-or-province-type">
+        <xs:attribute name="state-abbr">
+          <xs:simpleType>
+            <xs:restriction base="xs:string">
+              <xs:enumeration value="NC"/>
+              <xs:enumeration value="TN"/>
+              <xs:enumeration value="GA"/>
+              <!-- Other states left out -->
+            </xs:restriction>
+          </xs:simpleType>
+        </xs:attribute>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+
+  <xs:complexType name="province-type">
+    <xs:complexContent>
+      <xs:extension base="state-or-province-type">
+        <xs:attribute name="province-abbr">
+          <xs:simpleType>
+            <xs:restriction base="xs:string">
+              <xs:enumeration value="NS"/>
+              <xs:enumeration value="BC"/>
+              <xs:enumeration value="PEI"/>
+              <!-- Other provinces left out -->
+            </xs:restriction>
+          </xs:simpleType>
+        </xs:attribute>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+
+  <xs:element name="state-or-province" type="state-or-province-type"/> 
+
+</xs:schema>

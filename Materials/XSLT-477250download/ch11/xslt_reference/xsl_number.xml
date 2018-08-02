@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<reference xml:id="xsl_number" scheme="xsl" specification="number">
+   <body>
+      <purpose>
+         <p>An instruction that numbers nodes sequentially, and formats the numbers.</p>
+      </purpose>
+      <usage><p>If a node to number is not explicitly selected in the <attr>select</attr> attribute, the context node is numbered.</p>
+         <p>The <attr>level</attr> attribute determines the numbering method. The value 'single' is used for sibling numbering, and 'any' for nodes that can appear anywhere, regardless of hierarchy. The value 'multiple' indicates a hierarchy of numbers typical of legal documents, such as '4.2.7'.</p>
+         <p>The features for formatting numbers are expressed by attribute settings, and are distinct from those in <element>xsl:decimal-format</element> declaration and <code>format-number()</code> function.</p>
+         
+      </usage>
+      <contains label="contains" display="inline">
+         <link href="xsl_sequence_constructor_type"/>
+      </contains>
+      <containedby label="substitution" display="inline">
+         <link href="xsl_instruction"/>
+      </containedby>
+      <properties type="attribute">
+         <property xml:id="select">
+            <name>select</name>
+            <description>The node to number</description>
+            <type>xsl:expression</type>
+            <required state="optional"/>
+         </property>
+         <property xml:id="value">
+            <name>value</name>
+            <description>A user supplied number. If used, the <attr>level</attr>, <attr>count</attr>, and <attr>from</attr> attribute values should be omitted.</description>
+            <type>xsl:expression</type>
+            <required state="optional"/>
+         </property>
+         <property xml:id="level">
+            <name>level</name>
+            <description>The method of numbering</description>
+            <type>xs:NCName</type>
+            <values>single, multiple, any</values>
+            <default>single</default>
+            <required state="optional"/>
+         </property>
+         <property xml:id="count">
+            <name>count</name>
+            <description>Specifies which nodes are counted. The default is the same pattern as the start node.</description>
+            <type>xsl:pattern</type>
+            <required state="optional"/>
+         </property>
+         <property xml:id="from">
+            <name>from</name>
+            <description>Defines the point where numbering starts. The default is the root of the tree containing the start node.</description>
+            <type>xsl:pattern</type>
+            <required state="optional"/>
+         </property>
+         <property xml:id="format">
+            <name>format</name>
+            <description>The output format</description>
+            <type>xsl:avt</type>
+            <default>1</default>
+            <required state="optional"/>
+         </property>
+         <property xml:id="lang">
+            <name>lang</name>
+            <description>Specifies the language to use in formatting</description>
+            <type>xsl:avt</type>
+            <required state="optional"/>
+         </property>
+         <property xml:id="letter">
+            <name>letter-value</name>
+            <description>Defines the numbering scheme</description>
+            <type>xsl:avt</type>
+            <values>alphabetical, traditional</values>
+            <required state="optional"/>
+         </property>
+         <property xml:id="ordinal">
+            <name>ordinal</name>
+            <description>Whether or not ordinal number is used.</description>
+            <type>xsl:avt</type>
+            
+            <required state="optional"/>
+         </property>
+         <property xml:id="group_separator">
+            <name>grouping-separator</name>
+            <description>The character that separates groups (hundreds, thousands, and so on)</description>
+            <type>xsl:avt</type>
+            <required state="optional"/>
+         </property>
+         <property xml:id="group_size">
+            <name>grouping-size</name>
+            <description>The number of digits in each group</description>
+            <type>xsl:avt</type>
+            <required state="optional"/>
+         </property>
+      </properties>
+      <properties>
+         <common label="attrgroup" display="inline">
+            <link href="ge_attr"/>
+            <link href="version_attr"/>
+         </common>
+      </properties>
+      <examples>
+         <codeblock><![CDATA[
+<xsl:template match="l">
+   <tr>
+      <td class="noborder" width="60%">
+         <xsl:apply-templates/>
+      </td>
+      <td class="noborder" width="20%">
+         <xsl:variable name="ln">
+            <xsl:number level="any" from="div[@type='scene']"/>
+         </xsl:variable>
+         <xsl:if test="$ln mod $interval=0">
+            <xsl:value-of select="$ln"/>
+         </xsl:if>
+      </td>
+   </tr>
+</xsl:template>]]></codeblock>
+      </examples>
+      <related role="navigation" label="related">
+         <link href="xsl_er"/>
+         <link href="xsl_decimal_format"/>
+         <link href="fn_format_number"/>
+      </related>
+   </body>
+</reference>

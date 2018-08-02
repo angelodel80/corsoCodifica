@@ -1,0 +1,83 @@
+%slide di introduzione ai fondamenti degli schemi xml
+% Only TYPED xml can be validated with an XML schema
+% When XML documents need to follow a certain structure and the values of attributes and elements need to follow a set of rules
+% A method to describe the XML structure 
+% A method to validate the XML data
+%  get a clear idea about the required XML structure from the schema.
+% Since a schema explains the required XML structure much better than a word document or a document of any other kind, there are no chances of misunderstanding or misinterpreting what is required.
+% Validation of the XML data submitted by the client applications became easier.
+%  define the validation rules.
+%  list of validations that had to be included in the Schema
+
+
+
+% frame 02
+\begin{frame}
+    \frametitle{Elementi per la definizione degli schemi xml}
+    \framesubtitle{principi}
+    \addtocounter{nframe}{1}
+
+    we need to make sure that the data that we receive follows a certain XML structure and should contain values which are coherent. 
+
+    Your function needs to make sure that the caller passes correct XML data. You could make use of an XML Schema to perform this validation.
+
+    Performing such validations without the help of a SCHEMA will be extremely difficult most of the time.
+
+
+\end{frame}
+
+% frame 03
+\begin{frame}
+    \frametitle{Elementi per la definizione degli schemi xml}
+    \framesubtitle{principi}
+    \addtocounter{nframe}{1}
+
+    Make sure that the XML document is structured exactly the way your function expects it to be.
+
+   We need an XML schema when we need to make sure that the XML document that we need to work with is in the expected format.
+   Make sure that the values of elements and attributes are within the accepted range.
+
+   When data is managed and exchanged in XML format, there needs to be clear agreement about the structure of the XML document.
+
+   There needs to be a contract between the caller and the callee about the XML document being exchanged.
+
+   validate the XML document to make sure that it adheres to the format defined in the contract.
+
+
+\end{frame}
+
+
+
+% frame 04
+\begin{frame}
+    \frametitle{Elementi per la definizione degli schemi xml}
+    \framesubtitle{principi}
+    \addtocounter{nframe}{1}
+
+    A Schema provides such the contract. 
+    \\ It defines the structure of the XML document. 
+    \\ It defines rules to validate the value of elements and attributes as well as their formats. 
+    \\ Once a schema is defined, a Schema Validator can validate an XML document against the rules defined in the Schema.
+
+
+\end{frame}
+
+
+% frame 05
+\begin{frame}
+    \frametitle{Elementi per la definizione degli schemi xml}
+    \framesubtitle{Tipi di formalismi per definire schemi XML}
+    \addtocounter{nframe}{1}
+
+   DTD, XDR, SOX, Schematron, DSD, DCD, DDML, RELAX NG
+
+\end{frame}
+
+\subsection{DTD}
+\input{dtd.tex}
+
+\subsection{XSD}
+\input{xsd.tex}
+
+\subsection{RELAXGN}
+\input{relaxng.tex}

@@ -1,0 +1,262 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<terms xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+   xsi:noNamespaceSchemaLocation="meta.xsd">
+   <term xml:id="attributeSet">
+      <label>Attribute set</label>
+      <definition>A named collection of attribute definitions that can be
+         reused, defined by an <element>xsl:attribute-set</element>
+         element.</definition>
+   </term>
+   <term xml:id="attributeValueTemplate">
+      <label>Attribute value template</label>
+      <definition>A type of attribute value that may contain an expression
+         surrounded with curly brackets {}, usually used to set a value with
+         information that is only available at runtime.</definition>
+   </term>
+   <term xml:id="characterMap">
+      <label>Character map</label>
+      <definition>A character map allows a given character in the final result
+         tree to be substituted by a string of characters during
+         serialization.</definition>
+   </term>
+   <term xml:id="collation">
+      <label>Collation</label>
+      <definition>A set of rules, for determining if two string values are
+         equivalent, and how they should be ordered. Collations, which are
+         language or application specific, are specified by a URI.</definition>
+   </term>
+   <term xml:id="contextItem">
+      <label>Context item</label>
+      <definition>The item currently being processed, which can be an atomic
+         value or a node.</definition>
+   </term>
+   <term xml:id="currentGroup">
+      <label>Current group</label>
+      <definition>The collection of related items that are processed by an
+            <element>xsl:for-each-group</element> instruction.</definition>
+   </term>
+   <term xml:id="currentGroupingKey">
+      <label>Current grouping key</label>
+      <definition>The grouping key shared in common by all the items within the
+         current group.</definition>
+   </term> 
+   <term xml:id="declaration">
+      <label>Declaration</label>
+      <definition>Top-level elements in the XSLT namespace, and defined in the
+         XSLT specification are known as declarations. Any top level elements
+         specified by implementers or users are called user-defined data
+         elements.</definition>
+   </term>
+   <term xml:id="extensionFunction">
+      <label>Extension function</label>
+      <definition>A function defined by a user, a vendor, or a third party,
+         distinct from built in functions specified in XSLT or
+         XPath.</definition>   
+   </term>
+   <term xml:id="functionParameter">
+      <label>Function parameter</label>
+      <definition>A parameter defined in an <element>xsl:function</element>
+         element. Its value can be set when the function is called in an XPath
+         expression.</definition>
+   </term>
+   <term xml:id="globalVariable">
+      <label>Global variable</label>
+      <definition>A top-level <element>xsl:variable</element> declares a global
+         variable that is visible everywhere in a stylesheet.</definition>
+   </term>
+   <term xml:id="groupingKeys">
+      <label>Grouping keys</label>
+      <definition>When the <code>group-by</code> attribute or
+            <code>group-adjacent</code> attributes are set on the
+            <element>xsl:for-each-group</element> element, key values are
+         calculated for each item in the population. Those with common values
+         are then grouped together.</definition>
+   </term>
+   <term xml:id="importPrecedence">
+      <label>Import precedence</label>
+      <definition>A stylesheet module loaded using <element>xsl:import</element>
+         has a lower import precedence than a module containing the import
+         declaration. Any matching template rules in the importing module
+         override those in the imported stylesheet.</definition>
+   </term>
+   <term xml:id="instruction">
+      <label>Instruction</label>
+      <definition>An XSLT element, allowed inside a sequence constructor, that
+         causes the processor to create a result tree fragment.</definition>
+   </term>
+   <term xml:id="lexicalQName">
+      <label>Lexical QName</label>
+      <definition>A qualified name with two parts; an optional namespace prefix
+         and a colon, followed by the so called local part of the name. For
+         example in <element>xsl:param</element>, <code>xsl:</code> is the
+         prefix and <code>param</code> is the local name.</definition>
+   </term>
+   <term xml:id="literalResultElement">
+      <label>Literal result element</label>
+      <definition>An element name that is not in the XSLT namespace, written
+         directly in a stylesheet; for example one of the XHTML element
+         names.</definition>
+   </term>
+   <term xml:id="localVariable">
+      <label>Local variable</label>
+      <definition>An variable defined with the <element>xsl:variable</element>
+         element in a sequence constructor.</definition>
+   </term>
+   <term xml:id="mode">
+      <label>Mode</label>
+      <definition>Modes allow a node in a source tree to be processed multiple
+         ways by the same stylesheet. They also allow different sets of template
+         rules to be active when processing different trees.</definition>
+   </term>
+   <term xml:id="named_template">
+      <label>Named template</label>
+      <definition>An <element>xsl:template</element> element identified with a
+            <attr>name</attr> attribute.</definition>
+   </term>
+   <term xml:id="outputStates">
+      <label>Output states</label>
+      <definition>Each instruction in the stylesheet is evaluated in one of two
+         possible output states: final output state or temporary output
+         state</definition>
+   </term>
+   <term xml:id="parameter">
+      <label>Parameter</label>
+      <definition>The <element>xsl:param</element> element declares a parameter,
+         the value of which value can be set by the caller.</definition>
+   </term>
+   <term xml:id="pattern">
+      <label>Pattern</label>
+      <definition>A pattern specifies a set of matching conditions on a
+         node.</definition>
+   </term>
+   <term xml:id="pictureString">
+      <label>Picture string</label>
+      <definition>A sequence of characters used to specify digit, grouping, and
+         separator signs when formatting mumbers.</definition>
+   </term>
+   <term xml:id="population">
+      <label>Population</label>
+      <definition>A sequence of items to be grouped defined in the
+            <attr>select</attr> attribute on an
+            <element>xsl:for-each-group</element> instruction.</definition>
+   </term>
+ 
+   <term xml:id="priority">
+      <label>Priority</label>
+      <definition>Each template rule is allocated a numeric priority value by
+         the processor, based on the match pattern. This value is used to select
+         which rule to evaluate when several rules match the same source node.
+         The default priority may be overridden by explicitly setting the
+            <attr>priority</attr> attribute value on the
+            <element>xsl:template</element> element.</definition>
+   </term>
+   <term xml:id="qName">
+      <label>QName</label>
+      <definition>A name written as a local name optionally preceded by a
+         namespace prefix.</definition>
+   </term>
+
+   <term xml:id="result_tree">
+      <label>Result tree</label>
+      <definition>Any temporary or final result tree constructed as the result
+         of transforming a source tree. The result tree can be either used as a
+         source for another transformation or serialized.</definition>
+   </term>
+   <term xml:id="sequenceConstructor">
+      <label>Sequence constructor</label>
+      <definition>A sequence of zero or more nodes in a stylesheet that can be
+         evaluated to return another sequence.</definition>
+   </term>
+   <term xml:id="serialization">
+      <label>Serialization</label>
+      <definition>The process of outputting a final result tree in XML or other
+         document formats.</definition>
+   </term>
+ 
+   <term xml:id="sortKeyComponent">
+      <label>Sort key component</label>
+      <definition>An <element>xsl:sort</element> element in a sort key
+         specification.</definition>
+   </term>
+   <term xml:id="sortKeySpecification">
+      <label>Sort key specification</label>
+      <definition>A sequence of one or more <element>xsl:sort</element> elements
+         which define the rules for sorting the items.</definition>
+   </term>
+   <term xml:id="sourceTree">
+      <label>Source tree</label>
+      <definition>Any node tree provided as input to the transformation,
+         including the document containing the initial context node, documents
+         containing nodes supplied as parameter values, or documents returned
+         from the results of functions.</definition>
+   </term>
+   <term xml:id="stylesheet">
+      <label>Stylesheet</label>
+      <definition>A transformation in the XSLT language containing one or more
+         modules.</definition>
+   </term>
+   <term xml:id="stylesheetFunction">
+      <label>Stylesheet function</label>
+      <definition>A function that can be called from an XPath expression within
+         the stylesheet, defined in an <element>xsl:function</element>
+         declaration.</definition>
+   </term>
+   <term xml:id="stylesheetModule">
+      <label>Stylesheet module</label>
+      <definition>A stylesheet may consist of one or more modules, each
+         contained by an <element>xsl:stylsheet</element> or
+            <element>xsl:transform</element> element.</definition>
+   </term>
+   <term xml:id="stylesheetParameter">
+      <label>Stylesheet parameter</label>
+      <definition>A global <element>xsl:param</element> element, the value of
+      which can be set when a transformation is invoked.</definition>
+   </term>
+   <term xml:id="targetNamespaceURI">
+      <label>Target namespace URI</label>
+      <definition>The namespace URI that is to be used in the result tree as a
+         substitute for a literal namespace URI is called the target namespace
+         URI.</definition>
+   </term>
+   <term xml:id="template">
+      <label>Template</label>
+      <definition>An <element>xsl:template</element> declaration defines a
+         template, containing a sequence constructor for creating nodes or
+         atomic values in a result document. It can be either a template rule
+         containing a pattern to match, or a named template, invoked by
+         name.</definition>
+   </term>
+   <term xml:id="templateParameter">
+      <label>Template parameter</label>
+      <definition>A local variable defined by an <element>xsl:param</element>
+         element which can be set when the template is called.</definition>
+   </term>
+   <term xml:id="template_rule">
+      <label>Template rule</label>
+      <definition>A stylesheet contains a set of template rules. Each rule has a
+         pattern that is matched against nodes, an optional set of template
+         parameters, and a sequence constructor.</definition>
+   </term>
+   <term xml:id="temporary_tree">
+      <label>Temporary tree</label>
+      <definition>Any node tree, usually constructed inside a variable, other
+         than source tree or a final result tree.</definition>    
+   </term>
+   <term xml:id="tunnelParameter">
+      <label>Tunnel parameter</label>
+      <definition>A parameter that is recursively passed on by a called template
+         to any further called templates.</definition>
+   </term>
+   <term xml:id="variable">
+      <label>Variable</label>
+      <definition>The <element>xsl:variable</element> element declares a
+         variable, which may be a global variable or a local
+         variable.</definition>
+   </term>
+   <term xml:id="whitespaceTextNode">
+      <label>Whitespace text node</label>
+      <definition>A text node consisting entirely the whitespace characters
+         #x09, #x0A, #x0D, or #x20.</definition>
+   </term>
+
+</terms>

@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<reference xml:id="valid_attr" scheme="xsl">
+   <body>
+      <purpose>
+         <p>Validation attributes on elements.</p>
+      </purpose>
+      <usage>
+         <p>Usually these attributes are used on the <element>xsl:stylesheet</element> element. If used on a literal result element they should have the <element>xsl:</element> prefix to distinguish them from attributes in other namespaces.</p>
+      </usage>
+      <properties type="attribute">
+         <property xml:id="validation">
+            <name>validation</name>
+            <description>How any validation should be applied</description>
+            <type>xs:token</type>
+            <values>strict, lax, preserve, strip</values>
+            <required state="optional"/>
+         </property> 
+         <property xml:id="type">
+            <name>type</name>
+            <description>The type declaration to use for validation</description>
+            <type>xs:NCName</type>
+            <required state="optional"/>
+         </property>
+         
+      </properties>
+      <related label="related" >
+         <link rel="up" href="meta_er"/>
+      </related>
+   </body>
+</reference>

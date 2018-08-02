@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet href="../xsl/link_reference2html.xsl" type="text/xsl"?>
+<reference xml:id="xsl_pattern_type" scheme="xsl">
+   <body>
+      <purpose>
+         <p>A match pattern. The syntax is a restricted form of the syntax for
+            XPath 2.0 expressions.</p>
+      </purpose>     
+      <properties>        
+         <property id="type">
+            <name>pattern</name>
+            <description></description>
+            <type>xsl:expression</type>
+         </property>
+     </properties>
+      <related-links>
+         <linklist>
+            <title>Related topic</title>
+            <link href="xsl_simple_type"/>
+         </linklist>
+      </related-links>
+   </body>
+</reference>

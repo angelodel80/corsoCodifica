@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- special-characters.xml -->
+<char-test>
+  <tabs>public class HelloWorld {
+	public static void main(String[] args) {
+		System.out.println("Hello, World!");
+	}
+}</tabs>
+  <special-char>&#x2780;</special-char>
+  <special-char>&#x2781;</special-char>
+</char-test>

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- person-all.xml -->
+<person
+  xmlns="http://www.oreilly.com/xslt"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://www.oreilly.com/xslt person-all.xsd">
+  <age>42</age>
+  <birthday>1965-06-19</birthday>
+  <name>Doug Tidwell</name>
+</person>

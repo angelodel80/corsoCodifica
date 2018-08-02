@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<reference xml:id="xsl_element" scheme="xsl" specification="xsl-element">
+   <body>
+      <purpose>
+         <p>Creates a named element node and writes it to the result tree.</p>
+      </purpose>
+      <usage>
+         <p>Because the name attribute is an attribute value template, it is suitable for the generation of a element when the name is not known until runtime. </p>
+         <p>When multiple namespaces are being used you can use the <attr>namespace</attr> to give the correct URI, without worrying about multiple prefixes getting copied to the output unnecessarily.</p>
+      </usage>
+
+      <containedby label="substitution" display="inline">
+         <link href="xsl_instruction"/>
+      </containedby>
+      <properties type="attribute">
+         <property xml:id="name">
+            <name>name</name>
+            <description>The name of the element to create</description>
+            <type>xsl:avt</type>
+            <required state="required"/>
+         </property>
+         <property xml:id="namespace">
+            <name>namespace</name>
+            <description>The namespace URI of the element</description>
+            <type>xsl:avt</type>
+            <required state="optional"/>
+         </property>
+         <property xml:id="inherit_ns">
+            <name>inherit-namespaces</name>
+            <description>Whether or not children of a copied node will inherit
+               copied namespaces</description>
+            <type>xs:token</type>
+            <values>yes, no</values>
+            <default>yes</default>
+            <required state="optional"/>
+         </property>
+         <property xml:id="use_sets">
+            <name>use-attribute-sets</name>
+            <description>The space-separated list of attribute set names to
+               use for this element</description>
+            <type>xsl:QName</type>
+            <required state="optional"/>
+         </property>
+
+      </properties>
+      <properties>
+         <common label="attrgroup" display="inline">
+            <link href="ge_attr"/>
+            <link href="version_attr"/>
+            <link href="valid_attr"/>
+         </common>
+      </properties>
+      <examples>
+         <codeblock><![CDATA[
+<xsl:element name="term" namespace="http://xmd.net"/>
+]]></codeblock>
+      </examples>
+      <related role="navigation" label="related">
+         <link href="xsl_er"/>
+      </related>
+   </body>
+</reference>

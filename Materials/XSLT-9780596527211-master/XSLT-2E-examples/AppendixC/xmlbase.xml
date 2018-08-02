@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- xmlbase.xml -->
+<cars>
+  <manufacturer name="Chevrolet"
+    xml:base="http://www.chevrolet.com/">
+    <car>Cavalier</car>
+    <car>Corvette</car>
+    <car>Impala</car>
+    <car>Malibu</car>
+  </manufacturer>
+  <manufacturer name="Ford"
+    xml:base="http://www.ford.com/">
+    <car>Pinto</car>
+    <car>Mustang</car>
+    <car>Taurus</car>
+  </manufacturer>
+  <manufacturer name="Volkswagen"
+    xml:base="http://www.vw.com/">
+    <car>Beetle</car>
+    <car>Jetta</car>
+    <car>Passat</car>
+    <car>Touraeg</car>
+  </manufacturer>
+</cars>

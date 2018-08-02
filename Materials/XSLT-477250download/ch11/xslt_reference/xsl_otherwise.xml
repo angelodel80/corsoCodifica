@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<reference xml:id="xsl_otherwise" scheme="xsl" specification="creating-attributes">
+   <body>
+      <purpose>
+         <p>An optional instruction inside an <element>xsl:choose</element> element that defines an action to take if none of the preceding <element>xsl:when</element> tests are satisfied.</p>
+      </purpose>
+      <contains label="contains" display="inline">
+         <link href="xsl_sequence_constructor_type"/>
+      </contains>
+      <containedby label="containedby" display="inline">
+         <link href="xsl_choose"/>
+      </containedby>     
+      <properties>
+         <common label="attrgroup" display="inline">
+            <link href="ge_attr"/>
+            <link href="version_attr"/>
+         </common>
+      </properties>
+      <examples>
+         <codeblock><![CDATA[
+<xsl:choose>
+   <xsl:when test="@label='contains'">Contains</xsl:when>
+   <xsl:when test="@label='related'">Related topic</xsl:when>
+   <xsl:otherwise>Contained by</xsl:otherwise>
+</xsl:choose>]]></codeblock>
+      </examples>
+      <related role="navigation" label="related">
+         <link href="xsl_er"/>
+         <link href="xsl_when"/>
+      </related>
+   </body>
+</reference>

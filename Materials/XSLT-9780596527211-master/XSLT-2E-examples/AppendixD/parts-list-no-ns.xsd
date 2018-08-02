@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- parts-list-no-ns.xsd -->
+<xs:schema 
+  xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+  <xs:element name="parts-list">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="component" minOccurs="1" maxOccurs="unbounded"/>
+        <xs:element ref="part" minOccurs="1" maxOccurs="unbounded"/>
+        <xs:element ref="supplier" minOccurs="1" maxOccurs="unbounded"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  
+  <xs:element name="component">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="name" minOccurs="1" maxOccurs="1"/>
+        <xs:element ref="partref" minOccurs="1" maxOccurs="unbounded"/>
+        <xs:element ref="description" minOccurs="1" maxOccurs="1"/>
+      </xs:sequence>
+      <xs:attribute name="component-id" type="xs:ID" use="required"/>
+    </xs:complexType>
+  </xs:element>
+  
+  <xs:element name="part">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="name" minOccurs="1" maxOccurs="1"/>
+        <xs:element ref="description" minOccurs="1" maxOccurs="1"/>
+      </xs:sequence>
+      <xs:attribute name="part-id" type="xs:ID" use="required"/>
+      <xs:attribute name="supplier" type="xs:string" use="required"/>
+    </xs:complexType>
+  </xs:element>
+
+  <xs:element name="supplier">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="name" minOccurs="1" maxOccurs="1"/>
+      </xs:sequence>
+      <xs:attribute name="country" type="xs:string" use="required"/>
+      <xs:attribute name="vendor-id" type="xs:string" use="required"/>
+    </xs:complexType>
+  </xs:element>
+  
+  <xs:element name="name" type="xs:string"/>
+
+  <xs:element name="description">
+    <xs:complexType mixed="true">
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element ref="partref"/>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+  
+  <xs:element name="partref">
+    <xs:complexType>
+      <xs:attribute name="refid" type="xs:IDREF" use="required"/>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

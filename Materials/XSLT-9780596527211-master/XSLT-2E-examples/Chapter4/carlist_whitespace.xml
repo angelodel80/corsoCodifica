@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- carlist_whitespace.xml -->
+<cars>
+  <manufacturer name="          Chevrolet
+
+">
+    <car>Cavalier</car>
+    <car>Corvette</car>
+    <car>Impala</car>
+    <car>Monte
+
+
+
+Carlo</car>
+  </manufacturer>
+</cars>

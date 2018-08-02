@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- content3.xml -->
+<content3
+  xmlns="http://www.oreilly.com/xslt"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://www.oreilly.com/xslt content3.xsd"
+  color="blue">
+Our element <emphasis>now</emphasis> contains some text!  
+It's getting <emphasis>more useful</emphasis> all the time.
+</content3>

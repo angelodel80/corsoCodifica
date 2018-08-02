@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<reference xml:id="xsl_with_param" scheme="xsl" specification="with-param">
+   <body>
+      <purpose>
+         <p>Sets the value of a parameter supplied to a template.</p>
+      </purpose>
+      <usage>
+         <p>The value to assign may be obtained from the <attr>select</attr>
+            attribute or from a contained sequence constructor.</p>
+      </usage>
+      <contains label="contains" display="inline">
+         <link href="xsl_sequence_constructor_type"/>
+      </contains>
+      <containedby label="containedby" display="inline">
+         <link href="xsl_apply_imports"/>
+         <link href="xsl_apply_templates"/>
+         <link href="xsl_call_template"/>
+         <link href="xsl_next_match"/>
+      </containedby>
+
+      <properties type="attribute">
+         <property xml:id="select">
+            <name>select</name>
+            <description>The value of the parameter</description>
+            <type>xsl:expression</type>
+            <required state="optional"/>
+         </property>
+         <property xml:id="name">
+            <name>name</name>
+            <description>The name of the parameter</description>
+            <type>xsl:QName</type>
+            <required state="required"/>
+         </property>
+         <property xml:id="as">
+            <name>as</name>
+            <description>The type of the parameter</description>
+            <type>xsl:sequence-type</type>
+
+            <required state="optional"/>
+         </property>
+         <property xml:id="tunnel">
+            <name>tunnel</name>
+            <description>Whether or not the parameter is is a tunnel
+               parameter</description>
+            <type>xs:token</type>
+            <values>yes, no</values>
+            <default>no</default>
+            <required state="optional"/>
+         </property>
+      </properties>
+      <properties>
+         <common label="attrgroup" display="inline">
+            <link href="ge_attr"/>
+            <link href="version_attr"/>
+         </common>
+      </properties>
+      <examples>
+         <codeblock><![CDATA[
+<xsl:call-template name="head">
+   <xsl:with-param name="title" select="$title"/>
+   <xsl:with-param name="style" select="$style"/>
+</xsl:call-template>]]></codeblock>
+      </examples>
+      <related role="navigation" label="related">
+         <link href="xsl_er"/>
+         <link href="xsl_param"/>
+      </related>
+   </body>
+</reference>

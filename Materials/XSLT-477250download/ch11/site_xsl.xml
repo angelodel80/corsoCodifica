@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<site id="xsl" scheme="xsl" sitetitle="XSLT 2.0 Elements &amp; Functions">
+ 
+   <map id="map_xsl_ref" folder="xslt_reference" scheme="xsl" tab="Overview">
+      <section label="Introduction">
+         <topicref href="xsl_er"/>        
+         <topicref href="xsl_functions"/>
+         <topicref href="xsl_terms"/>
+      </section>
+   </map>
+   <map id="map_elements" folder="xslt_reference" scheme="xsl" tab="XSLT Elements">
+      <section label="Elements A-Z">
+         <topicref href="xsl_analyze_string"/>
+         <topicref href="xsl_apply_imports"/>
+         <topicref href="xsl_apply_templates"/>
+         <topicref href="xsl_attribute"/>
+         <topicref href="xsl_attribute_set"/>
+         <topicref href="xsl_call_template"/>
+         <topicref href="xsl_character_map"/>
+         <topicref href="xsl_choose"/>
+         <topicref href="xsl_comment"/>
+         <topicref href="xsl_copy_of"/>
+         <topicref href="xsl_copy"/>
+         <topicref href="xsl_decimal_format"/>
+         <topicref href="xsl_declaration"/>
+         <topicref href="xsl_document"/>
+         <topicref href="xsl_element"/>
+         <topicref href="xsl_fallback"/>
+         <topicref href="xsl_for_each"/>
+         <topicref href="xsl_for_each_group"/>
+         <topicref href="xsl_function"/>
+         <topicref href="xsl_if"/>
+         <topicref href="xsl_import_schema"/>
+         <topicref href="xsl_import"/>
+         <topicref href="xsl_include"/>
+         <topicref href="xsl_instruction"/>
+         <topicref href="xsl_key"/>
+         <topicref href="xsl_matching_substring"/>
+         <topicref href="xsl_message"/>
+         <topicref href="xsl_namespace"/>
+         <topicref href="xsl_namespace_alias"/>
+         <topicref href="xsl_next_match"/>
+         <topicref href="xsl_non_matching_substring"/>
+         <topicref href="xsl_number"/>
+         <topicref href="xsl_otherwise"/>
+         <topicref href="xsl_output"/>
+         <topicref href="xsl_output_character"/>
+         <topicref href="xsl_param"/>
+         <topicref href="xsl_perform_sort"/>
+         <topicref href="xsl_preserve_space"/>
+         <topicref href="xsl_processing_instruction"/>
+         <topicref href="xsl_result_document"/>
+         <topicref href="xsl_sequence"/>
+         <topicref href="xsl_sort"/>
+         <topicref href="xsl_strip_space"/>
+         <topicref href="xsl_stylesheet"/>
+         <topicref href="xsl_template"/>
+         <topicref href="xsl_text"/>
+         <topicref href="xsl_transform"/>
+         <topicref href="xsl_value_of"/>
+         <topicref href="xsl_variable"/>
+         <topicref href="xsl_when"/>
+         <topicref href="xsl_with_param"/>
+         
+      </section>
+      <section label="Attribute groups">
+         <topicref href="ge_attr"/>
+         <topicref href="version_attr"/>
+         <topicref href="valid_attr"/>
+      </section>
+      <section label="Types">
+         <topicref href="xsl_sequence_constructor_type"/>
+      </section>
+      
+   </map>
+   
+   <map id="map_xsl_functions" folder="xslt_reference" scheme="xsl" tab="XSLT Functions">
+      <section label="Functions A-Z">
+         <topicref href="fn_current"/>
+         <topicref href="fn_current_group"/>
+         <topicref href="fn_current_grouping_key"/>
+         <topicref href="fn_document"/>
+         <topicref href="fn_element_available"/>
+         <topicref href="fn_format_date"/><!--covers 3 functions-->
+         <topicref href="fn_format_number"/>
+         <topicref href="fn_function_available"/>
+         <topicref href="fn_generate_id"/>
+         <topicref href="fn_key"/>
+         <topicref href="fn_regex_group"/>
+         <topicref href="fn_system_property"/>
+         <topicref href="fn_type_available"/>
+         <topicref href="fn_unparsed_text"/><!--covers 2 functions-->
+         <topicref href="fn_unparsed_entity"/><!--covers 2 functions-->
+      </section>
+   </map>
+  
+</site>

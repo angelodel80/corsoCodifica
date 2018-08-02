@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<reference xml:id="xsl_strip_space" scheme="xsl" specification="strip">
+   <body>
+      <purpose>
+         <p>An declaration that determines how whitespace nodes are handled.</p>
+      </purpose>
+      <usage>
+         <p>The <attr>elements</attr> attribute lists the elements in which whitespace in text nodes is not significant, and can be removed.</p>
+      </usage>
+
+      <containedby label="substitution" display="inline">
+         <link href="xsl_declaration"/>
+      </containedby>
+      <properties type="attribute">
+         <property xml:id="elements">
+            <name>elements</name>
+            <description>A space separated list of element names</description>
+            <type>xsl:nametests</type>
+            <required state="required"/>
+         </property>
+      </properties>
+      <properties>
+         <common label="attrgroup" display="inline">
+            <link href="ge_attr"/>
+            <link href="version_attr"/>
+         </common>
+      </properties>
+      <examples>
+         <codeblock><![CDATA[
+<xsl:strip-space elements = "*"/>
+<xsl:preserve-space elements = "atom:content"/>]]></codeblock>
+      </examples>
+      <related role="navigation" label="related">
+         <link href="xsl_er"/>
+         <link href="xsl_preserve_space"/>
+      </related>
+   </body>
+</reference>

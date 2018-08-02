@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<reference xml:id="xsl_key" scheme="xsl" specification="xsl-key">
+   <body>
+      <purpose><p>Declares a named key to be used with the <code>key()</code> function.</p></purpose>
+         <usage>
+            <p>Using the <element>xsl:key</element> declaration simplifies code and can increase performance, since most implementations build an index the first time the key is processed.</p>
+            <p>Keys may be of any data type, and values can be evaluated in a sequence constructor inside the <element>xsl:key</element> instead of using a <attr>use</attr> attribute setting.</p>
+      </usage>
+      <contains label="contains" display="inline">
+         <link href="xsl_sequence_constructor_type"/>
+      </contains>
+      <containedby label="substitution" display="inline">
+         <link href="xsl_declaration"/>
+      </containedby>
+      <properties type="attribute">
+         <property xml:id="name">
+            <name>name</name>
+            <description>The name of the key</description>
+            <type>xs:QName</type>
+            <required state="required"/>
+         </property>        
+         <property xml:id="match">
+            <name>match</name>
+            <description>The pattern to match</description>
+            <type>xsl:pattern</type>
+            <required state="required"/>
+         </property>
+         <property xml:id="use">
+            <name>use</name>
+            <description>An expression used to determine the key value(s)</description>
+            <type>xsl:expression</type>
+            <required state="optional"/>
+         </property>
+         <property xml:id="collation">
+            <name>collation</name>
+            <description>The name of a collation used to compare the value of keys</description>
+            <type>xs:anyURI</type>
+            <required state="optional"/>
+         </property>
+      </properties>
+      <properties>
+         <common label="attrgroup" display="inline">
+            <link href="ge_attr"/>
+            <link href="version_attr"/>
+         </common>
+      </properties>
+      <examples>
+         <codeblock><![CDATA[
+<xsl:key name="identifier" match="entry" use="@xml:id"/>
+   ...
+<xsl:template match="link">
+   <xsl:variable name="linkID" select="@href"/>
+   <xsl:variable name="linkmeta"
+      select="key('identifier',$linkID,$resourcelist)"/>
+   ...
+</xsl:template>]]></codeblock>
+      </examples>
+      <related role="navigation" label="related" >
+         <link href="xsl_er"/>
+         <link href="fn_key"/>         
+      </related>
+   </body>
+</reference>

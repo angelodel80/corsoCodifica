@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<reference xml:id="xsl_copy_of" scheme="xsl" specification="copy-of">
+   <body>
+      <purpose>
+         <p>An instruction that copies a sequence of nodes to the result
+            sequence.</p>
+      </purpose>
+      <usage>
+         <p>This instruction creates a deep copy of the current node and its
+            descendants. It is useful for copying the content of a temporary
+            tree to a result document or for copying a subtree of a source
+            document to the output directly.</p>
+      </usage>
+      <containedby label="substitution" display="inline">
+         <link href="xsl_instruction"/>
+      </containedby>
+      <properties type="attribute">
+         <property xml:id="select">
+            <name>select</name>
+            <description>The sequence of items to process</description>
+            <type>xsl:expression</type>
+            <required state="required"/>
+         </property>
+         <property xml:id="copy_ns">
+            <name>copy-namespaces</name>
+            <description>Whether or not to copy namespace nodes</description>
+            <type>xs:token</type>
+            <values>yes, no</values>
+            <default>yes</default>
+            <required state="optional"/>
+         </property>
+      </properties>
+      <properties>
+         <common label="attrgroup" display="inline">
+            <link href="ge_attr"/>
+            <link href="version_attr"/>
+            <link href="valid_attr"/>
+         </common>
+      </properties>
+      <examples>
+         <codeblock><![CDATA[
+<xsl:template match="codeblock">
+   <pre class="code">
+      <xsl:copy-of select="."/>
+   </pre>
+</xsl:template>]]></codeblock>
+      </examples>
+      <related role="navigation" label="related">
+         <link href="xsl_er"/>
+         <link href="xsl_copy"/>
+      </related>
+   </body>
+</reference>

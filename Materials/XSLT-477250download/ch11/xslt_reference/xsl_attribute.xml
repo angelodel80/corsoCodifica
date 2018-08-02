@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<reference xml:id="xsl_attribute" scheme="xsl"
+   specification="creating-attributes">
+   <body>
+      <purpose>
+         <p>An instruction that adds attributes to literal result elements or
+            elements created by an instruction like
+               <element>xsl:element</element> or
+            <element>xsl:copy</element>.</p>
+      </purpose>
+      <usage>
+         <p>This instruction must precede other instructions used to construct
+            an element.</p>
+         <p>The node to be added is made up of the required name and the
+            optional namespace attributes, each of which may be expressed as
+            attribute value templates.</p>
+         <p>Either the <attr>select</attr> attribute or the element content
+            should be used to define the attribute value.</p>
+         <p>Use this instruction, rather than an attribute on a literal result
+            element, when you want the value be determined at runtime.</p>
+         <p>Use the optional <attr>type</attr> attribute when you need to
+            validate the value's datatype against a schema with a schema aware
+            processor.</p>
+      </usage>
+      <contains label="contains" display="inline">
+         <link href="xsl_sequence_constructor_type"/>
+      </contains>
+      <containedby label="substitution" display="inline">
+         <link href="xsl_instruction"/>
+      </containedby>
+      <properties type="attribute">
+         <property xml:id="name">
+            <name>name</name>
+            <description>The name of the attribute set</description>
+            <type>xsl:avt</type>
+            <required state="required"/>
+         </property>
+         <property xml:id="namespace">
+            <name>namespace</name>
+            <description>The namespace URI</description>
+            <type>xsl:avt</type>
+            <required state="optional"/>
+         </property>
+         <property xml:id="select">
+            <name>select</name>
+            <description>The sequence of items to process</description>
+            <type>xsl:expression</type>
+            <required state="optional"/>
+         </property>
+         <property xml:id="separator">
+            <name>separator</name>
+            <description>Separator to be inserted between items generated in the
+               value sequence. The default is a single space.</description>
+            <type>xsl:avt</type>
+            <required state="optional"/>
+         </property>
+      </properties>
+      <properties>
+         <common label="attrgroup" display="inline">
+            <link href="ge_attr"/>
+            <link href="version_attr"/>
+            <link href="valid_attr"/>
+         </common>
+      </properties>
+      <examples>
+         <codeblock><![CDATA[
+<xsl:attribute name="href" select="{$url}"/>]]></codeblock>
+      </examples>
+      <related role="navigation" label="related">
+         <link href="xsl_er"/>
+      </related>
+   </body>
+</reference>

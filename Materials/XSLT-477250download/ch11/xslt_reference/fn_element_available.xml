@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<reference xml:id="fn_element_available" scheme="xsl">
+   <body>
+      <purpose><p>Returns true if a named XSLT instruction is available for
+         use.</p></purpose>
+      <syntax>element-available(name)</syntax>
+      <properties type="parameter">
+         <property xml:id="name">
+            <name>name</name>
+            <description>The name of the element being tested</description>
+            <type>xsl:QName</type>
+            <required state="required"/>
+         </property>       
+      </properties>
+      <examples>
+         <codeblock><![CDATA[
+<xsl:when test="element-available('saxon:ouput')">
+...
+</xsl:when>
+]]></codeblock>
+      </examples>
+      <related label="related">
+         <link href="xsl_functions"/>
+      </related>
+   </body>
+</reference>

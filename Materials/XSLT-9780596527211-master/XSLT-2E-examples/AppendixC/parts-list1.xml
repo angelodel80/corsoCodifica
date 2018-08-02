@@ -1,0 +1,83 @@
+<?xml version="1.0"?>
+<!-- parts-list1.xml -->
+<!DOCTYPE parts-list [
+<!ELEMENT parts-list       (component+, part+)>
+
+<!ELEMENT component        (name, partref+)>
+<!ATTLIST component        component-id ID #REQUIRED>
+
+<!ELEMENT name             (#PCDATA)>
+
+<!ELEMENT partref          EMPTY>
+<!ATTLIST partref          refid IDREF #REQUIRED>
+
+<!ELEMENT part             (name)>
+<!ATTLIST part             part-id ID #REQUIRED
+                           price CDATA #REQUIRED
+                           source CDATA #REQUIRED>
+]>
+
+<parts-list>
+  <component component-id="C28392-33-TT">
+    <name>Turnip Twaddler</name>
+    <partref refid="P81952-26-PK"/>
+    <partref refid="P86679-52-SP"/>
+    <partref refid="P81472-68-FD"/>
+    <partref refid="P88107-39-GT"/>
+  </component>
+  <component component-id="C28813-70-PG">
+    <name>Prawn Goader</name>
+    <partref refid="P81952-26-PK"/>
+    <partref refid="P80499-43-MC"/>
+    <partref refid="P86994-25-RC"/>
+  </component>
+  <component component-id="C28100-38-CT">
+    <name>Clam Teaser</name>
+    <partref refid="P81472-68-FD"/>
+    <partref refid="P86994-25-RC"/>
+    <partref refid="P86679-52-SP"/>
+  </component>
+  <component component-id="C23813-03-CDK">
+    <name>Cucumber Decorating Kit</name>
+    <partref refid="P81952-26-PK"/>
+    <partref refid="P80499-43-MC"/>
+    <partref refid="P86994-25-RC"/>
+    <partref refid="P81472-68-FD"/>
+  </component>
+  <component component-id="C21630-29-LS">
+    <name>Lemon Snubber</name>
+    <partref refid="P81952-26-PK"/>
+    <partref refid="P88107-39-GT"/>
+    <partref refid="P86679-52-SP"/>
+  </component>
+  <component component-id="C28772-63-OB">
+    <name>Olive Bruiser</name>
+    <partref refid="P80228-21-PT"/>
+    <partref refid="P82387-85-PA"/>
+  </component>
+
+  <part part-id="P80228-21-PT" price="3.28" source="us">
+    <name>Pitter</name>
+  </part>
+  <part part-id="P82387-85-PA" price="6.92" source="us">
+    <name>Patter</name>
+  </part>
+  <part part-id="P86679-52-SP" price="0.39" source="gb">
+    <name>Spanner</name>
+  </part>
+  <part part-id="P81472-68-FD" price="2.76" source="it">
+    <name>Feather Duster</name>
+  </part>
+  <part part-id="P88107-39-GT" price="0.11" source="gb">
+    <name>Grommet</name>
+  </part>
+  <part part-id="P81952-26-PK" price="9.64" source="de">
+    <name>Paring Knife</name>
+  </part>
+  <part part-id="P80499-43-MC" price="0.68" source="za">
+    <name>Mucilage</name>
+  </part>
+  <part part-id="P86994-25-RC" price="4.28" source="gb">
+    <name>Ribbon Curler</name>
+  </part>
+</parts-list>

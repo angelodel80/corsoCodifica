@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<reference xml:id="xsl_function" scheme="xsl" specification="defining-templates">
+   <body>
+      <purpose>
+         <p>Declares the name, parameters, and implementation of a custom
+            stylesheet function.</p>
+      </purpose>
+      <usage>
+         <p>The function may be invoked from any XPath expression.</p>
+      </usage>
+      <contains label="contains" display="inline">
+         <link href="xsl_param"/>
+         <link href="xsl_sequence_constructor_type"/>
+      </contains>
+      <containedby label="substitution" display="inline">
+         <link href="xsl_declaration"/>
+      </containedby>
+      <properties type="attribute">
+         <property xml:id="name">
+            <name>name</name>
+            <description>The name of the function</description>
+            <type>xsl:QName</type>
+            <required state="required"/>
+         </property>
+         <property xml:id="as">
+            <name>as</name>
+            <description>The datatype of the sequence produced by the
+               function</description>
+            <type>xsl:sequence-type</type>
+            <default>item()</default>
+            <required state="optional"/>
+         </property>
+         <property xml:id="override">
+            <name>override</name>
+            <description>Whether or not the function overrides a vendor specific
+               function of the same name</description>
+            <type>xs:token</type>
+            <values>yes,no</values>
+            <default>yes</default>
+            <required state="optional"/>
+         </property>
+      </properties>
+      <properties>
+         <common label="attrgroup" display="inline">
+            <link href="ge_attr"/>
+            <link href="version_attr"/>
+         </common>
+      </properties>
+      <examples>
+         <codeblock><![CDATA[
+<xsl:function name="xm:getentry-by-id">
+   <xsl:param name="id" as="xs:string"/>
+   <xsl:param name="scheme" as="xs:string"/>
+   <xsl:variable name="linklist"
+      select="document(concat('../reslist_',$scheme,'.xml'))"/>
+   <xsl:variable name="linkmeta" select="$linklist//entry[@xml:id=$id]"/>
+   <xsl:sequence select="$linkmeta"/>
+</xsl:function>
+]]></codeblock>
+      </examples>
+      <related role="navigation" label="related">
+         <link href="xsl_er"/>
+      </related>
+   </body>
+</reference>

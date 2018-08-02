@@ -1,0 +1,12 @@
+<?xml version="1.0"?>
+<!-- albums.xml -->
+<list xml:lang="en">
+  <title>Albums I've bought recently:</title>
+  <listitem>The Sacred Art of Dub</listitem>
+  <listitem>Only the Poor Man Feel It</listitem>
+  <listitem>Excitable Boy</listitem>
+  <listitem xml:lang="sw">Aki Special</listitem>
+  <listitem xml:lang="en-gb">Combat Rock</listitem>
+  <listitem xml:lang="zu">Talking Timbuktu</listitem>
+  <listitem xml:lang="jz">The Birth of the Cool</listitem>
+</list>

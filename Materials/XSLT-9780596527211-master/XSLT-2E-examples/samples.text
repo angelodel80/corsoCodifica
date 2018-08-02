@@ -1,0 +1,709 @@
+Sample files from XSLT, Second Edition 
+
+Last updated 21 July 2008
+
+This is a list of all the files used in the book.  All of the files in a 
+given chapter or appendix are in the same directory. 
+
+Chapter 1: Getting Started
+
+p.   5: postalcodes.xml
+p.   6: greeting.xml
+p.   7: illegal_greeting.xml
+p.   8: purchaseorder.dtd
+p.   9: purchaseorder.xsd
+
+Chapter 2: The Obligatory Hello World Example
+
+p.  25: greeting.xml
+p.  26: greeting.xsl
+p.  27: greeting.html
+p.  34: greeting2.xsl
+        greetings.xml
+        multiple-greetings.xsl
+p.  35: greeting3.xsl
+p.  36: svg-greeting.xsl
+p.  37: greeting.svg 
+p.  38: fo-greeting.xsl
+        greeting.fo (and greeting.pdf)
+p.  39: java-greeting.xsl
+p.  40: Greeting.java (and Greeting.class)
+p.  41: vrml-greeting.xsl (and greeting.wrl)
+
+Chapter 3: XPath: A Syntax for Describing Needles and Haystacks
+
+p.  47: sonnet.xml
+p.  52: sequences1.xsl
+p.  53: sequences2.xsl
+        names.xml
+p.  54: sequences3.xsl
+p.  71: addition-1_0.xsl
+p.  72: addition-2_0.xsl
+p.  74: addition-datesTimesDurations.xsl
+p.  75: subtraction-1_0.xsl
+p.  76: subtraction-2_0.xsl 
+        multiplication-1_0.xsl
+        multiplication-2_0.xsl
+p.  77: multiplication-datesTimesDurations.xsl
+        div-1_0.xsl
+p.  78: div-2_0.xsl
+        div-datesTimesDurations.xsl
+p.  79: idiv.xsl
+p.  80: mod-1_0.xsl
+        mod-2_0.xsl
+p.  81: unary-minus.xsl
+        unary-plus.xsl
+p.  85: chocolate.xml
+        compare-sequences.xsl
+p.  88: if-1_0.xsl
+        if-2_0.xsl
+p.  89: for.xsl
+p.  90: some-every.xsl
+p.  91: to.xsl
+p.  93: instance-of.xsl
+p.  94: cast-as.xsl
+p.  95: castable-as.xsl
+p.  96: treat-as.xsl
+p.  97: books.xml
+p.  98: except.xsl
+p.  99: intersect.xsl
+        union.xsl
+p. 100: is.xsl
+p. 101: node-after.xsl
+p. 102: node-before.xsl
+        comments.xsl
+p. 103: carlist-geography.xml
+p. 108: xpath-1_0-tree-diagram.xsl
+
+Chapter 4: Creating Output
+
+p. 113: toc_source.xml
+p. 116: cars.xml
+p. 117: value-of_2.0.xsl
+        value-of_1.0.xsl
+p. 118: value-of_sequences.xsl
+p. 119: number1.xsl (and number1.html)
+p. 120: number2.xsl (and number2.html)
+p. 121: number3.xsl
+p. 122: number4.xsl
+p. 123: number5.xsl
+p. 124: number6.xsl
+p. 125: number7.xsl
+p. 126: number8.xsl
+p. 127: decimal-format.xsl
+p. 130: dateTime1.xsl
+p. 131: dateTime2.xsl
+p. 133: copy-of.xsl
+        sonnet.xml
+p. 135: copy1.xsl
+        copy2.xsl 
+p. 136: copy3.xsl
+p. 137: copy4.xsl
+p. 138: copy5.xsl
+p. 140: carlist_whitespace.xml
+        copy-of.xsl
+p. 141: copy-of-whitespace.xsl
+p. 143: normalize-space.xsl
+
+Chapter 5: Branching and Control Elements
+
+p. 149: tutorial.xsl
+p. 150: tutorial.xml
+p. 155: params.xsl
+p. 156: GlobalParameters.java (and GlobalParameters.class)
+p. 157: XsltGlobalParameters.cs
+        * Note: All of the files for the VisualStudio project
+        * are in the file GlobalParametersExample.zip.
+
+p. 159: parameters-1_0.xsl
+p. 161: required_parameters.xsl
+p. 162: datatype_parameters.xsl
+p. 163: normal_parameters.xsl
+p. 165: regular-type.html
+        larger-type.html
+        * Note: sample.xml is the XML file used to generate the two
+        * HTML files. 
+
+p. 166: tunnel_parameters.xsl
+p. 171: string_replace-1_0.xsl
+p. 173: testlines.xml
+        string_replace-2_0.xsl
+p. 176: for-loop.xsl
+
+Chapter 6: Creating Links and Cross-References
+
+p. 181: parts-list1.xml
+p. 182: parts-list.xsd
+p. 183: parts-list1.xml
+p. 184: id1.xsl
+p. 185: parts-list2.xml
+p. 186: id2.xsl
+p. 188: idref.xsl
+p. 189: parts-list3.xml
+p. 190: id-html.xsl
+p. 195: key.xsl
+p. 199: parts-list4.xml
+p. 201: generate-id.xsl 
+
+Chapter 7: Sorting and Grouping Elements
+
+p. 205: names.xml
+p. 207: namesorter1.xsl
+p. 208: namesorter2.xsl
+p. 210: namesorter3.xsl
+p. 211: numberlist.xml
+        sort-datatype-text.xsl
+p. 212: sort-datatype-number1.xsl
+        badnumberlist.xml
+p. 213: sort-datatype-number2.xsl
+p. 214: namesorter4.xsl
+p. 216: perform-sort1.xsl
+        perform-sort2.xsl
+p. 217: perform-sort3.xsl
+p. 218: perform-sort4.xsl
+p. 219: namegrouper1.xsl
+p. 221: namegrouper2a.xsl
+p. 222: namegrouper2b.xsl
+        namegrouper3.xsl
+p. 226: namegrouper4.xsl
+p. 230: for-each-group_group-by.xsl
+p. 232: group-adjacent_input.html 
+        for-each-group_group-adjacent.xsl
+p. 234: group-adjacent_input2.html
+p. 235: for-each-group_group-adjacent2.xsl
+p. 239: for-each-group_group-starting-with.xsl
+p. 241: carlist.xml
+        for-each-group_group-ending-with.xsl
+
+Chapter 8: Combining Documents
+
+p. 245: po38295.xml, po38292.xml, po38293.xml and po38294.xml
+p. 246: polist.xml
+p. 247: masterdox1.xsl
+p. 254: masterdox2.xsl
+p. 255: masterdox3.xsl
+p. 259: masterdox4.xsl
+p. 265: masterdox5.xsl
+p. 270: doc.xsl 
+        doc-available.xsl
+p. 271: polist.xml
+p. 272: collection.xsl
+p. 273: unparsed-text.xsl
+
+Chapter 9: Extending XSLT
+
+p. 280: simple-function.xsl
+p. 281: chapters.xml
+p. 283: multiple-output-files.xsl
+p. 288: words.xml
+        custom-collation1.xsl
+
+        * Note: The following two files and everything else from
+        * their Eclipse project are in the file 
+        * Chapter9\Eclipse\CollationProject.zip.
+p. 289: com.oreilly.xslt.SpanishCollation.java 
+p. 291: com.oreilly.xslt.GermanCollation.java
+
+p. 292: custom-collation2.xsl 
+p. 293: hidden-word-test.xsl
+
+        * Note: The Eclipse project for the Hidden Word extension is
+        * in the file Chapter9\Eclipse\HiddenWordFunctionProject.zip.
+p. 295: com.oreilly.xslt.HiddenWord.java
+
+        * Note: The following three files and everything else from 
+        * their VisualStudio project are in the file 
+        * Chapter9\DotNet\HiddenWordExample.zip.
+p. 299: Main.cs 
+p. 301: HiddenWord.cs
+        HiddenWordExample.exe
+
+p. 303: chocolate-sales.xml
+p. 318: piechart.xsl
+p. 327: piechart-jython.xsl
+p. 328: piechart-jruby.xsl
+p. 329: piechart-javascript.xsl 
+        piechart-jacl.xsl
+p. 331: piechart-exslt.xsl
+p. 333: * Note: All of the SQL statements on this page are in the
+        * file books.xsl.
+p. 334: saxon-sql.xsl
+p. 336: saxon-sql2.xsl
+p. 337: xalan-sql.xsl
+p. 339: xalan-sql2.xsl
+p. 340: photo-album.xml
+p. 341: xalan-photo-album.xsl
+
+        * Note: The following two files and everything else from
+        * their Eclipse project are in the file 
+        * Chapter9\Eclipse\XalanExtensionsProject.zip.
+p. 342: com.oreilly.xslt.xalan.XalanPhotoAlbumExtension.java
+p. 346: com.oreilly.xslt.xalan.GraphicsFilenameFilter.java
+ 
+        * Note: The following two files and everything else from 
+        * their Eclipse project are in the file
+        * Chapter9\Eclipse\SaxonExtensionsProject.zip.
+p. 347: com.oreilly.xslt.saxon.PhotoAlbumElementFactory.java 
+        com.oreilly.xslt.saxon.SaxonPhotoAlbum.java
+
+        * Note: The following three files and everything else from 
+        * their VisualStudio project are in the file
+        * Chapter9\DotNet\PhotoAlbumExample.zip.
+p. 354: PhotoAlbum.cs 
+p. 358: PhotoAlbum.xsl
+        Main.cs
+
+Appendix A: XSLT Reference
+
+p. 365: analyze-string1.xsl
+        phonelist.xml
+p. 366: analyze-string2.xsl
+p. 367: analyze-string3.xsl
+        analyze-string4.xsl
+p. 369: codelisting.xml
+        apply-imports.xsl
+p. 370: imported.xsl
+        codelisting.html
+p. 373: cars.xml
+        apply-templates1.xsl
+p. 374: apply-templates2.xsl
+p. 379: albums.xml
+        attribute1.xsl
+p. 380: attribute.html
+p. 381: attribute2.xsl
+p. 382: attribute3.xsl
+        zip.xsd (used by attribute3.xsl)
+        postcodes.xml
+p. 384: attribute-set.xsl
+p. 385: albums.xml
+p. 386: attribute-set.html 
+p. 387: chocolate.xml
+p. 388: call-template.xsl
+p. 389: call-template.html
+p. 392: special-characters.xml
+        character-map1.xsl
+p. 393: character-map1.html
+p. 394: character-map2.xsl
+p. 395: jsp-test.xml
+        sample.jsp
+p. 396: albums.xml
+        choose.xsl
+p. 397: choose.html
+p. 399: comment.xsl
+        albums.xml
+p. 400: comment.html
+p. 401: comment2.xsl
+        comment2.html
+p. 403: copy1.xsl
+        albums.xml
+        copy2.xsl
+p. 404: chocolate.xml
+        copy3.xsl
+p. 405: copy3.xml
+p. 407: copy-of.xsl
+        albums.xml
+p. 410: decimal-format.xsl
+        chocolate.xml
+p. 411: decimal-format2.xsl
+p. 413: po.xsd
+p. 414: document.xsl
+p. 415: document2.xsl
+p. 418: element.xsl
+        albums.xml
+p. 419: create-po.xml
+        element2.xsl
+p. 423: fallback.xsl
+        use-db.xml
+p. 424: fallback.html
+p. 425: for-each.xsl
+        albums.xml
+p. 427: simplified-names.xml
+p. 428: for-each-group1.xsl
+p. 429: grouping-input.html
+p. 430: for-each-group2.xsl
+p. 431: for-each-group3.xsl 
+p. 432: carlist.xml
+p. 433: for-each-group4.xsl
+p. 436: function.xsl
+p. 437: albums.xml
+p. 439: if.xsl
+p. 440: albums.xml
+p. 441: listitem.xsl
+p. 442: albums.xml
+        import.xsl
+p. 444: good-po.xml
+p. 445: import-schema.xsl  
+        import-schema2.xsl
+p. 447: include.xsl
+p. 448: included-stylesheet.xsl
+p. 449: simplified-names.xml
+p. 450: key.xsl
+p. 452: analyze-string1.xsl
+        phonelist.xml
+p. 453: albums.xml
+p. 454: message.xsl
+p. 456: namespace.xsl
+        namespace2.xsl
+p. 457: namespace3.xsl
+p. 458: namespace-alias.xsl
+p. 459: namespace-alias-2.xsl 
+p. 460: namespace-alias-3.xsl
+p. 461: element-discussion.html
+p. 462: next-match.xsl
+p. 464: non-matching-substring.xsl
+p. 465: phonelist.xml
+p. 468: items-to-number.xml
+p. 469: number1.xsl
+p. 470: number2.xsl
+p. 471: number3.xsl
+p. 472: number4.xsl
+        number5.xsl
+p. 473: number6.xsl
+p. 474: number7.xsl
+        number8.xsl
+p. 475: number9.xsl
+        number10.xsl
+p. 476: number11.xsl
+p. 478: albums.xml
+        otherwise.xsl
+p. 483: albums.xml
+        output1.xsl
+p. 484: output2.xsl
+p. 485: output3.xsl
+p. 486: output4.xsl
+p. 487: character-map2.xsl
+p. 488: special-characters2.xml
+p. 490: param.xsl
+p. 491: albums.xml
+p. 492: param2.xsl
+p. 494: perform-sort4.xsl
+p. 495: chocolate.xml
+p. 496: perform-sort5.xsl
+        perform-sort6.xsl
+p. 497: perform-sort7.xsl
+p. 499: preserve-space.xsl
+        whitespace.xml
+p. 501: processing-instruction.xsl
+        greeting.xml
+        processing-instruction-doesnt-work.xsl
+p. 505: chapters.xml
+p. 506: result-document.xsl
+p. 509: sequence.xsl
+        chocolate.xml
+p. 510: sequence2.xsl
+p. 512: sort.xsl
+p. 514: items-to-sort.xml
+p. 515: sort2.xsl
+p. 518: strip-space.xsl
+p. 519: whitespace.xml
+p. 522: greeting.xml
+        stylesheet.xsl
+        chocolate-default-namespace.xml
+p. 523: stylesheet2.xsl
+p. 525: greeting.xml
+        stylesheet.xsl
+p. 527: text.xsl
+        albums.xml
+p. 529: value-of.xsl
+p. 530: albums.xml
+        value-of2.xsl
+p. 532: variable.xsl
+p. 533: albums.xml
+p. 534: variable2.xsl
+p. 537: albums.xml
+        when.xsl
+p. 540: with-param.xsl
+p. 541: albums.xml
+p. 542: zip.xsd
+        with-param2.xsl
+p. 543: good-po.xml
+
+Appendix B: XPath Reference
+
+[no samples, reference information only]
+
+Appendix C: XSLT, XPath, and XQuery Function Reference
+
+p. 570: abs.xsl
+p. 571: adjust-date-to-timezone.xsl
+p. 573: adjust-datetime-to-timezone.xsl
+p. 575: adjust-time-to-timezone.xsl
+p. 578: avg.xsl
+p. 582: xmlbase.xml
+        base-uri.xsl
+p. 583: base-uri2.xsl
+p. 585: chocolate.xml
+p. 586: boolean.xsl
+p. 587: boolean2.xsl
+p. 588: chocolate.xml
+p. 589: ceiling.xsl
+p. 590: codepoint-equal.xsl
+p. 592: codepoints-to-string.xsl
+p. 593: polist.xml
+        po38293.xml [po38292, po38294 and po38295 also]
+p. 594: collection.xsl
+p. 595: compare1.xsl
+p. 596: compare2.xsl
+p. 598: albums.xml
+        concat.xsl
+p. 599: concat2.xsl
+p. 600: contains1.xsl
+p. 601: replace2.xsl
+        contains2.xsl
+p. 603: chocolate.xml
+        count.xsl
+p. 604: count2.xsl
+p. 606: chocolate-by-month.xml
+        current.xsl
+p. 610: current-date.xsl
+p. 611: current-datetime.xsl
+p. 612: simple-addresses.xml
+p. 613: current-group.xsl
+p. 614: simple-addresses.xml
+p. 615: current-grouping-key.xsl
+p. 616: current-time.xsl
+p. 617: data.xsl
+p. 620: data2.xsl
+p. 621: datetime.xsl
+p. 622: day-from-date.xsl
+p. 624: day-from-datetime.xsl
+p. 625: days-from-duration.xsl
+p. 627: chocolate.xml
+p. 628: deep-equal.xsl
+p. 632: default-collation.xsl
+p. 633: simple-addresses.xml
+p. 634: distinct-values1.xsl
+        distinct-values2.xsl
+p. 636: distinct-values3.xsl
+p. 637: polist.xml
+        doc.xsl
+p. 639: doc-available.xsl
+p. 640: polist.xml
+        po38293.xml [po38292, po38294 and po38295 also]
+p. 641: document.xsl
+p. 642: document-uri.xsl
+p. 643: chapterlist.xml
+p. 644: element-available.xsl
+p. 647: empty.xsl
+p. 649: encode-for-uri.xsl
+p. 651: ends-with1.xsl
+        ends-with2.xsl
+p. 653: error1.xsl
+        error2.xsl
+p. 654: error3.xsl
+        error4.xsl
+p. 655: escape-html-uri.xsl
+p. 657: exactly-one.xsl
+p. 658: exists.xsl
+p. 660: false.xsl
+p. 661: floor.xsl
+p. 663: format-date.xsl
+p. 667: formt-dateTime.xsl
+p. 669: format-number.xsl
+p. 671: chocolate.xml
+p. 673: format-time.xsl
+p. 675: favorites.xml
+        function-available.xsl
+p. 678: chocolate.xml
+p. 679: generate-id.xml
+p. 680: hours-from-datetime.xsl
+p. 682: hours-from-duration.xsl
+p. 683: hours-from-time.xsl
+p. 686: parts-list1.xml
+        id.xsl
+p. 688: parts-list2.xml
+p. 690: parts-list1.xml 
+p. 691: idref.xsl
+p. 692: parts-list2.xml
+p. 694: implicit-timezone.xsl
+p. 695: sonnet.xml
+        in-scope-prefixes.xsl
+p. 697: index-of.xsl
+p. 700: insert-before.xsl
+p. 703: iri-to-uri.xsl
+p. 705: simplified-names.xml
+p. 706: key-function.xsl
+p. 708: albums.xml
+        lang.xsl
+p. 709: albums.xml
+p. 710: last.xsl
+p. 711: sonnet.xml
+        local-name.xsl
+p. 713: local-name-from-qname.xsl
+p. 714: lower-case.xsl
+p. 717: matches.xsl
+p. 720: max.xsl
+p. 722: max2.xsl
+p. 725: min.xsl
+p. 727: min2.xsl
+p. 729: minutes-from-datetime.xsl
+p. 730: minutes-from-duration.xsl
+p. 731: minutes-from-time.xsl
+p. 733: month-from-date.xsl
+p. 734: month-from-datetime.xsl
+p. 735: months-from-duration.xsl
+p. 737: sonnet.xml
+p. 738: name.xsl
+p. 739: name2.xsl
+p. 741: sonnet-namespace.xml
+        namespace-uri.xsl
+p. 743: sonnet.xml
+        namespace-uri-for-prefix.xsl
+p. 745: sonnet.xml
+p. 746: namespace-uri-from-QName.xsl
+p. 747: sonnet-default-namespace.xml
+        namespace-uri-from-QName2.xsl
+p. 748: namespace-uri-from-QName3.xsl
+p. 750: person.xml
+        person.xsd
+        nilled.xsl
+p. 751: node-name.xsl
+p. 753: sonnet-pi.xml
+p. 756: normalize-space1.xsl
+p. 757: normalize-space2.xsl
+p. 758: normalize-unicode.xsl
+p. 759: chocolate.xml
+p. 760: not.xsl
+p. 762: chocolate.xml
+p. 763: number.xsl
+        number2.xsl
+p. 765: one-or-more.xsl
+p. 767: albums.xml
+        position.xsl
+p. 770: sonnet.xml
+        prefix-from-qname.xsl
+p. 772: qname.xsl
+p. 774: regex-group.xsl
+p. 775: simple-phonelist.xml
+p. 776: remove1.xsl
+p. 777: remove2.xsl
+p. 780: remove3.xsl
+p. 784: replace.xsl
+p. 786: sonnet.xml
+p. 787: resolve-qname.xsl
+p. 789: resolve-uri.xsl
+p. 790: reverse.xsl
+p. 792: favorites.xml
+        root.xsl
+p. 796: chocolate.xml
+        round1.xsl
+p. 797: round2.xsl
+p. 798: round-half-to-even.xsl
+p. 800: seconds-from-datetime.xsl
+p. 801: seconds-from-duration.xsl
+p. 803: seconds-from-time.xsl
+p. 804: favorites.xml
+        starts-with.xsl
+p. 805: starts-with2.xsl
+p. 806: xmlbase.xml
+p. 807: static-base-uri.xsl
+p. 810: chocolate.xml
+p. 811: string.xsl
+p. 812: string2.xsl
+p. 813: string-join.xsl
+p. 815: chocolate.xml
+p. 816: string-length.xsl
+p. 817: string-to-codepoints.xsl
+p. 818: subsequence.xsl
+p. 822: substring.xsl
+p. 824: substring-after1.xsl
+p. 825: substring-after2.xsl
+p. 827: substring-before1.xsl
+p. 828: substring-before2.xsl
+p. 830: chocolate.xml
+        sum.xsl
+        sum2.xsl
+p. 834: system-property1.xsl
+p. 835: system-property2.xsl
+p. 837: system-property3.xsl
+p. 838: timezone-from-date.xsl
+p. 839: timezone-from-datetime.xsl
+p. 841: timezone-from-time.xsl
+p. 844: tokenize.xsl
+p. 846: trace.xsl
+p. 849: translate.xsl
+p. 851: true.xsl
+p. 852: type-avalable.xsl
+p. 853: type-available2.xsl
+p. 854: po38293.xml
+        unordered.xsl
+p. 856: unparsed-entity.xml
+        unparsed-entity-public-id.xsl
+p. 857: unparsed-entity.xml
+        unparsed-entity-uri.xsl
+p. 858: chocolate.xml
+p. 859: unparsed-text.xsl
+p. 860: header.html (and footer.html)
+p. 862: unparsed-text-available.xsl
+p. 863: upper-case.xsl
+p. 864: year-from-date.xsl
+p. 866: year-from-datetime.xsl
+p. 867: years-from-duration.xsl
+p. 869: zero-or-one.xsl
+
+Appendix D: XML Schema Overview 
+
+p. 871: empty1.xsd
+p. 872: empty1.xml
+        empty2.xsd
+p. 873: empty2.xml
+        content1.xsd
+        content1.xml
+        content2.xsd
+p. 874: content2.xml
+        content3.xsd
+p. 875: content3.xml
+p. 876: content4.xsd (and content4.xml)
+p. 877: paragraph.xsd (and paragraph.xml)
+p. 878: person.xsd (and person.xml)
+p. 879: person-all.xsd
+        person-all.xml
+p. 880: person1.xsd
+p. 881: person1.xml
+        person2.xsd (and person2.xml)
+p. 882: person3.xsd
+        person3.xml
+        extension.xsd
+p. 883: extension.xml
+        typecasting.xsl
+p. 884: list.xsd
+p. 885: list.xml
+        union.xsd
+p. 886: union.xml
+        substitute.xsd
+p. 887: substitute.xml
+        substitute2.xml
+        substitute3.xml
+p. 888: abstract1.xsd
+        abstract1.xml
+p. 889: abstract2.xsd
+p. 890: abstract2.xml
+p. 891: import-schema.xsl
+p. 892: import-schema2.xsl
+        * Note: The input file for the two import-schema samples
+        * is po-schema-ns.xml.
+
+p. 893: parts-list-schema-no-ns.xml
+        parts-list-no-ns.xsd
+        id-schema-no-ns.xsl
+p. 894: parts-list-schema-ns.xml
+        parts-list-schema-ns.xsd
+        id-schema-ns.xsl
+p. 895: id-schema-ns2.xsl
+p. 896: id-schema-ns3.xsl
+
+Appendix E: Regular Expressions
+
+p. 898: subexpressions1.xsl
+p. 899: subexpressions2.xsl
+p. 901: reluctant.xsl
+p. 903: anchors.xsl
+p. 904: back-reference.xsl
+
+Appendix F: XSLT Formatting Codes
+
+[no samples, reference information only]
+
+Appendix G: XSLT 2.0 Migration Guide
+
+p. 927: divide-by-zero.xsl

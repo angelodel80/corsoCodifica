@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<reference xml:id="xsl_transform" scheme="xsl" specification="xsl-stylesheet">
+   <body>
+      <purpose>
+         <p>The name is a synonym of <element>xsl:stylesheet</element>.</p>
+      </purpose>
+      <usage>
+         <p>In the XSLT schema, <element>xsl:stylesheet</element> element is in this substitution group, and the structure is documented under this element.</p>
+         <p><element>xsl:import</element> should always be the first contained declaration if present.</p>
+      </usage>
+      
+      <contains label="contains" display="inline">
+         <link href="xsl_import"/>
+         <link href="xsl_declaration"/>
+         <link href="xsl_param"/>
+         <link href="xsl_variable"/>
+      </contains>
+      
+      <properties type="attribute">
+         <property xml:id="id">
+            <name>id</name>
+            <description>Identifies an embedded stylesheet</description>
+            <type>xs:ID</type>
+            <required state="optional"/>
+         </property>
+         <property xml:id="default_valid">
+            <name>default-validation</name>
+            <description>The validation applied to new elements and attributes when <attr>validation</attr> or <attr>type</attr> attributes are not set on an instruction</description>
+            <type>xs:token</type>
+            <values>strip, preserve</values>
+            <default>strip</default>
+            <required state="optional"/>
+         </property>
+         <property xml:id="input">
+            <name>input-type-annotations</name>
+            <description>The method of handling type annotations on input documents</description>
+            <type>xs:token</type>
+            <values>strip, preserve, unspecified</values>
+            <default>unspecified</default>
+            <required state="optional"/>
+         </property>
+        
+         
+      </properties>
+      <properties>
+         <common label="attrgroup" display="inline">
+            <link href="ge_attr"/>
+            <link href="version_attr"/>
+         </common>
+      </properties>
+      <examples>
+         <codeblock><![CDATA[
+<xsl:transform
+   xmlns:xsl="http//www.w3.org/1999/XSL/Transform"
+   version="2.0"
+	.
+	.
+</xsl:transform>]]></codeblock>
+      </examples>
+      <related role="navigation" label="related" >
+         <link href="xsl_er"/>         
+      </related>
+   </body>
+</reference>

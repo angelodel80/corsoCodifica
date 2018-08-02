@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <xsd:element name="listPersName" type="listPersName-type"/>
+  <xsd:complexType name="listPersName-type">
+    <xsd:sequence>
+      <xsd:element name="persName" type="persName-type"/>
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="persName-type">
+    <xsd:sequence>
+      <xsd:element name="firstName" type="xsd:string"/>
+      <xsd:element name="secondName" type="xsd:string"/>
+      <xsd:element name="surName" type="xsd:string"/>
+    </xsd:sequence>
+  </xsd:complexType>
+</xsd:schema>
+

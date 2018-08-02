@@ -1,0 +1,407 @@
+body {
+    font-family: Verdana, Arial, sans-serif;
+    
+	font-size: 10pt;
+	line-height: 11pt;	
+	margin: 0px;
+	padding: 0px;
+	background-color: white;
+    
+}
+/******* header styles *******/
+
+table.header {
+   background-image: url('graphics/top_grad2.png');
+   width: 100%;
+   border-width:0px;
+   font-weight: normal;
+   color: #000000;
+   padding:0px;
+   white-space:nowrap;
+ 
+}
+
+table.header a{
+	display: block; 
+}
+td.links{
+   padding-top:20px;
+   padding-right:20px;
+   border-width:0px;
+   width: 180px;
+}
+
+
+#site_title {
+   font-size: 14pt;
+   font-weight:normal;
+ color:#999;
+   position: absolute;
+   left: 287px;
+   top: 36px;
+}
+
+td.logo{
+   border-width:0px;
+   width: 280px;
+   padding:0px;
+
+}
+
+
+.navcontainer{
+ border-width:0px;
+ text-align: left;
+ white-space: nowrap;
+ padding:0px;
+}
+
+.navlist {
+    border-bottom: 1px solid #ccc;	
+    margin-top:79px;
+    padding-bottom: 19px;
+    padding-left: 5px;
+	 white-space: nowrap;
+}
+
+
+
+.navlist ul, .navlist li {
+    display: inline;
+	text-align: left;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+	
+}
+
+.navlist a:link, .navlist a:visited {
+    background-color: #EBEBEB;
+    border: 1px solid #ccc;
+    color: #000000;
+    float: left;
+    font-size: small;
+    font-weight: normal;
+    line-height: 14px;
+    margin-right: 8px;
+    padding: 2px 10px 2px 10px;
+    text-decoration: none;
+}
+
+
+.navlist a:hover{
+    background-color: #FAFDB9;
+    border: 1px solid #ccc;
+    color: black;
+    float: left;
+    font-size: small;
+    font-weight: normal;
+    line-height: 14px;
+    margin-right: 8px;
+    padding: 2px 10px 2px 10px;
+    text-decoration: none;
+}
+
+
+.navlist a:link.current, .navlist a:visited.current {
+    background: #fff;
+    border-bottom: 1px solid #fff;
+    color: #000;
+}
+/***toc***/
+#pageNav{
+	float: left;
+	width:265px;
+	padding: 0px;
+	background-color: #F5f7f7;
+	border-right: 1px solid #cccccc;
+	border-bottom: 1px solid #cccccc;
+	margin-top:0px;
+}
+a.currentref{
+   background-color: #ffffff;
+	background-repeat: no-repeat;
+	background-position: right center;
+}
+a.currentref:hover{
+   background-color: inherit;
+	background-repeat: no-repeat;
+	background-position: right center;
+}
+
+
+
+h1{
+ font-family: Swiss, Arial,sans-serif;
+ font-size: 18pt;
+ font-weight:bold;
+ line-height: 20pt;
+ color: black;
+ margin-top: 10pt;
+ padding:0px 20px 0px 0px; 
+
+}
+
+h2{
+ font-family: Swiss, Arial,sans-serif;
+ font-size: 12pt;
+ color: #00547a;
+ margin-top: 5px;
+ padding: 0px;
+}
+
+
+h3{
+ font-family: Verdana, Arial, sans-serif;
+ font-size: 10pt;
+ color: #00547a;
+ margin-top: 10px;
+}
+
+
+
+
+.taskhead {
+   color: Gray;
+   background-color: inherit;
+   font-weight: bold;
+}
+
+.ri {
+   font-weight: bold;
+}
+
+ul{
+ list-style-type: disc;
+}
+
+dt {
+   font-weight : bold;
+   margin-bottom : 2pt;
+}
+dd {
+   font-weight : normal;
+   margin-bottom : 2pt;
+}
+
+.command {
+   color: black;
+   background-color: inherit;
+   font-weight: bold;
+}
+
+.shade {
+   background-color: #D0D0D0;
+   color: inherit;
+}
+.required {
+   background-color: #FFFCCC;
+   color: inherit;
+}
+.uicontrol {
+   font-style: italic;
+}
+.filepath, .code, .attr, .element, cli{
+   font-size: 10pt;
+   font-family: "Lucida Console","Courier New", Courier, monospace;
+ }
+
+pre, .note{
+   background-color: #F5f7f7;
+    padding: 5px;
+	border-right: 1px solid #cccccc;
+	border-bottom: 1px solid #cccccc;
+	margin-bottom: 6pt;	
+}
+
+pre {
+   font-family: "Lucida Console","Courier New", Courier, monospace;
+   font-size: 9pt;
+}
+p.quote {
+margin-left: 1em;
+   margin-top: 3pt;
+   margin-bottom: 5pt;
+}
+
+.taskhead {
+   color: Gray;
+   background-color: inherit;
+   font-weight: bold;
+}
+
+#content{
+	padding: 0px 10px 0px 0px;
+	margin: 0px 0px -10px 275px;
+	
+}
+
+#pageName{
+	padding: 0px 0px 14px 10px;
+	margin-top: -0px;
+	
+}
+#siteInfo{
+ background-color: #F5f7f7;
+   padding: 5px 5px 5px 10px; 
+	border-right: 1px solid #cccccc;
+	border-bottom: 1px solid #cccccc;
+   font-size: 8pt;
+    margin: 0px 10px 0px 285px;
+   white-space:nowrap;
+}
+
+
+.relatedLinks{
+	margin: 0px;
+	padding: 0px 0px 10px 10px;
+	border-bottom: 0px solid #cccccc;
+}
+
+.relatedLinks a{
+	display: block; 
+}
+/*******  normal link styles *******/
+
+
+a {
+   color: #00547a;
+   background-color: inherit;
+    
+}
+a:hover {
+   color: black;
+   background-color: inherit;
+    
+}
+
+table{
+	font-family: Verdana, Arial, sans-serif;
+	color: black;
+	font-size: 10pt;
+	line-height: 11pt;	
+	margin: 0px;
+	padding: 0px;
+	
+}
+
+
+.gloss {
+   background-color: white;
+   color: inherit;
+   border: none;
+}
+
+th {
+   vertical-align: top;
+   text-align: left;
+   border-left-width: 0px;
+   border-top-width: 1px;
+   border-right-width: 1px;
+   border-bottom-width: 1px;
+   border-color: #E6E6E6;
+   border-style: solid;
+   background-color: #AAC7E4;
+   color: inherit;
+   padding: 2px;
+}
+
+th.firsthdr {
+   border-left-width: 1px;
+   width: 30%;
+}
+
+
+td {
+   vertical-align: top;
+   text-align: left;
+   border-left-width: 0px;
+   border-top-width: 0px;
+   border-right-width: 1px;
+   border-bottom-width: 1px;
+   border-color: #E6E6E6;
+   border-style: solid;
+   padding: 2px;
+}
+
+td.middle {
+   vertical-align: middle;
+   
+}
+td.firstcell {
+   width: 30%;
+}
+th.firstcell {
+   border-left-width: 1px;
+   border-top-width: 0px;
+   background-color: white;
+   color: inherit;
+   font-weight: normal;
+   width: 30%;
+}
+
+/*browsers won't do multiple classes*/
+th.firstcellrequired {
+   border-left-width: 1px;
+   border-top-width: 0px;
+   background-color: white;
+   color: inherit;
+   font-weight: bold;
+   width: 20%;
+}
+th.firstcelldeprecated {
+   border-left-width: 1px;
+   border-top-width: 0px;
+   background-color: white;
+   color: gray;
+   font-weight: normal;
+   width: 30%;
+}
+td.label {
+	border-top-width: 0px;
+	border-right-width: 0px;
+	border-bottom-width: 0px;
+	border-left-width: 0px;
+}
+.noborder {
+   border: none;
+}
+
+/* tree listings */
+table.tree     {
+   width: 80%;
+   border-collapse: collapse;
+   border-spacing: 0;
+   margin: 0;
+   padding: 0;
+   border-right: 1px solid #cccccc;
+border-bottom: 1px solid #cccccc; }
+table.tree td{
+   font-size: 14px;
+   vertical-align:
+   middle; padding: 0;
+   border: none;
+   white-space: nowrap;
+   } 
+ table.tree img {
+   float: left;
+ }
+
+ /* image legend */
+table.key     {
+   border-collapse: collapse;
+   border-spacing: 0;
+   margin: 0;
+ } 
+   
+table.key td{
+font-family:arial, helvetica, sans-serif;
+   font-size: 13pt;
+   vertical-align: middle;
+   border: none;
+   white-space: nowrap;
+   } 
+ table.key img {
+   float: left;
+  vertical-align: middle;
+ }

@@ -1,0 +1,13 @@
+<?xml version="1.0"?>
+<!-- unparsed-entity.xml -->
+<!DOCTYPE book [
+  <!ENTITY author-picture PUBLIC "-//OReilly//Author Images//DT"
+    "dougtidwell.jpg" NDATA JPEG>
+]>
+
+<book>
+  <prolog cover-image="author-picture"/>
+  <body>
+    <p>Pretend that lots of useful content appears here.</p>
+  </body>
+</book>

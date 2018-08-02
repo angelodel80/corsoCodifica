@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet href="step1.xsl" type="text/xsl"?>
+<reference xml:id="xsl_stylesheet">
+   <body>
+      <title>xsl:stylesheet</title>
+      <purpose>
+         <p>The root element of a stylesheet.</p>
+      </purpose>
+      <usage>
+         <p>The <element>xsl:stylesheet</element> is always the root element,
+            even if a stylesheet is included in, or imported into another. It
+            must have a <attr>version</attr> attribute, indicating the version
+            of XSLT that the stylesheet requires.</p>
+         <p>For this version of XSLT, the value should normally be
+               <code>"2.0"</code>. For a stylesheet designed to execute under
+            either XSLT 1.0 or XSLT 2.0, create a core module for each version
+            number; then use <element>xsl:include</element> or
+               <element>xsl:import</element> to incorporate common code. which
+            should specify <code>version="2.0"</code> if it uses XSLT 2.0
+            features, or <code>version="1.0"</code> otherwise.</p>
+         <p>The <element>xsl:transform</element> element is allowed as a
+            synonym.</p>
+         <p>The namespace declaration
+               <code>xmlns:xsl="http//www.w3.org/1999/XSL/Transform</code> by
+            convention uses the prefix <code>xsl</code>.</p>
+         <p>An element occurring as a child of the
+               <element>xsl:stylesheet</element> element is called a
+            declaration. These top-level elements are all optional, and may
+            occur zero or more times.</p>
+      </usage>
+   </body>
+</reference>

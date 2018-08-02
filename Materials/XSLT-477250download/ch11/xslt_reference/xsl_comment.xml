@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<reference xml:id="xsl_comment" scheme="xsl" specification="creating-comments">
+   <body>
+      <purpose>
+         <p>An instruction that renders a comment node.</p>
+      </purpose>
+      <usage>
+         <p>The comment may be either the value of the <attr>select</attr>
+            attribute, or contained in the constructed sequence.</p>
+      </usage>
+
+      <containedby label="substitution" display="inline">
+         <link href="xsl_instruction"/>
+      </containedby>
+      <properties type="attribute">
+         <property xml:id="select">
+            <name>select</name>
+            <description>The comment text</description>
+            <type>xsl:expression</type>
+            <required state="optional"/>
+         </property>
+      </properties>
+      <properties>
+         <common label="attrgroup" display="inline">
+            <link href="ge_attr"/>
+            <link href="version_attr"/>
+         </common>
+      </properties>
+      <examples>
+         <codeblock><![CDATA[
+<xsl:comment>Date created: <xsl:value-of
+   select="format-date(current-date(),'[Y]-[M01]-[D01]')"/>
+</xsl:comment>]]></codeblock>
+      </examples>
+      <related role="navigation" label="related">
+         <link href="xsl_er"/>
+      </related>
+   </body>
+</reference>

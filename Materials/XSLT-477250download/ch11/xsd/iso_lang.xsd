@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+   
+   <xs:annotation><xs:documentation>Defines two subsets of ISO 639 language codes covering the 23 official European Union languages. The iso_639_3 type is from the most recent 3-alpha version.</xs:documentation></xs:annotation>
+   
+   <xs:simpleType name="iso_639_1">
+      <xs:restriction base="xs:string">
+         <xs:enumeration value="bg"/>
+         <xs:enumeration value="cs"/>
+         <xs:enumeration value="da"/>
+         <xs:enumeration value="de"/>
+         <xs:enumeration value="el"/>
+         <xs:enumeration value="en"/>
+         <xs:enumeration value="et"/>
+         <xs:enumeration value="fi"/>
+         <xs:enumeration value="fr"/>
+         <xs:enumeration value="ga"/>
+         <xs:enumeration value="hu"/>
+         <xs:enumeration value="it"/>
+         <xs:enumeration value="lv"/>
+         <xs:enumeration value="lt"/>
+         <xs:enumeration value="nl"/>
+         <xs:enumeration value="mt"/>
+         <xs:enumeration value="pl"/>
+         <xs:enumeration value="pt"/>
+         <xs:enumeration value="ro"/>
+         <xs:enumeration value="sk"/>
+         <xs:enumeration value="sl"/>
+         <xs:enumeration value="es"/>
+         <xs:enumeration value="sv"/>        
+      </xs:restriction>
+   </xs:simpleType>
+   <xs:simpleType name="iso_639_3">
+      <xs:restriction base="xs:string">
+         <xs:enumeration value="bul"/>
+         <xs:enumeration value="ces"/>
+         <xs:enumeration value="dan"/>
+         <xs:enumeration value="deu"/>
+         <xs:enumeration value="ell"/>
+         <xs:enumeration value="eng"/>
+         <xs:enumeration value="est"/>
+         <xs:enumeration value="fin"/>
+         <xs:enumeration value="fra"/>
+         <xs:enumeration value="gle"/>
+         <xs:enumeration value="hun"/>
+         <xs:enumeration value="ita"/>
+         <xs:enumeration value="lav"/>
+         <xs:enumeration value="lit"/>
+         <xs:enumeration value="nld"/>
+         <xs:enumeration value="mlt"/>
+         <xs:enumeration value="pol"/>
+         <xs:enumeration value="por"/>
+         <xs:enumeration value="ron"/>
+         <xs:enumeration value="slk"/>
+         <xs:enumeration value="slv"/>
+         <xs:enumeration value="spa"/>
+         <xs:enumeration value="swe"/>        
+      </xs:restriction>
+   </xs:simpleType>
+</xs:schema>

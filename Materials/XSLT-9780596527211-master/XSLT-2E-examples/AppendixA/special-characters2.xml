@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- special-characters2.xml -->
+<char-test>
+  <special-char>&#x2780;</special-char>
+  <special-char>&#x2781;</special-char>
+</char-test>

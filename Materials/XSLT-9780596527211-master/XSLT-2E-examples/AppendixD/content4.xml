@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- content4.xml -->
+<content4b
+  xmlns="http://www.oreilly.com/xslt"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://www.oreilly.com/xslt content4.xsd"
+  color="blue">
+Our element now contains some text!  It's getting more useful 
+all the time.
+</content4b>
+

@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<reference xml:id="xsl_document" scheme="xsl"
+   specification="creating-document-nodes">
+   <body>
+      <purpose>
+         <p>An instruction that explicitly creates a document node and adds it
+            to the result sequence.</p>
+      </purpose>
+      <usage>
+         <p>You should use this instruction when you need to validate a document
+            structure in a temporary tree. In contrast, the
+               <element>xsl:result-document</element> instruction creates a
+            distinct output.</p>
+      </usage>
+      <containedby label="substitution" display="inline">
+         <link href="xsl_instruction"/>
+      </containedby>
+
+      <properties>
+         <common label="attrgroup" display="inline">
+            <link href="ge_attr"/>
+            <link href="version_attr"/>
+            <link href="valid_attr"/>
+         </common>
+      </properties>
+      <examples>
+         <codeblock><![CDATA[
+<xsl:variable name="tree" as="document-node()">
+  <xsl:document validation="strict">
+    <xsl:apply-templates/>
+  </xsl:document>
+</xsl:variable>
+]]></codeblock>
+      </examples>
+      <related role="navigation" label="related">
+         <link href="xsl_er"/>
+         <link href="xsl_result_document"/>
+      </related>
+   </body>
+</reference>

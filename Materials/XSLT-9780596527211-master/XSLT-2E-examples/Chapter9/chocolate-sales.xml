@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- chocolate-sales.xml -->
+<report month="8" year="2006">
+  <caption>
+    <heading>Chocolate bar sales</heading>
+    <subheading>(units)</subheading>
+  </caption>
+  <store>
+    <name>Carrboro</name>
+    <brand name="Lindt">27408</brand>
+    <brand name="Callebaut">8203</brand>
+    <brand name="Valrhona">22101</brand>
+    <brand name="Perugina">14336</brand>
+    <brand name="Ghirardelli">19268</brand>
+  </store>
+  <store>
+    <name>Chapel Hill</name>
+    <brand name="Lindt">28503</brand>
+    <brand name="Valrhona">7287</brand>
+    <brand name="Perugina">12077</brand>
+    <brand name="Ghirardelli">8392</brand>
+    <brand name="Callebaut">17294</brand>
+  </store>
+  <store>
+    <name>Durham</name>
+    <brand name="Lindt">17382</brand>
+    <brand name="Callebaut">4306</brand>
+    <brand name="Valrhona">15002</brand>
+    <brand name="Perugina">2214</brand>
+    <brand name="Ghirardelli">3820</brand>
+  </store>
+  <store>
+    <name>Pittsboro</name>
+    <brand name="Lindt">12058</brand>
+    <brand name="Callebaut">2268</brand>
+    <brand name="Valrhona">14986</brand>
+    <brand name="Perugina">8647</brand>
+    <brand name="Ghirardelli">23042</brand>
+  </store>
+  <store>
+    <name>Boone</name>
+    <brand name="Lindt">19302</brand>
+    <brand name="Callebaut">6734</brand>
+    <brand name="Valrhona">20018</brand>
+    <brand name="Perugina">7244</brand>
+    <brand name="Ghirardelli">18344</brand>
+  </store>
+</report>

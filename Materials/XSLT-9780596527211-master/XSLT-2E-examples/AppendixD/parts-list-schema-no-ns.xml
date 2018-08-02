@@ -1,0 +1,137 @@
+<?xml version="1.0"?>
+<!-- parts-list-schema-no-ns.xml -->
+<parts-list 
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:noNamespaceSchemaLocation="parts-list-no-ns.xsd">
+  <component component-id="C28392-33-TT">
+    <name>Turnip Twaddler</name>
+    <partref refid="P81952-26-PK"/>
+    <partref refid="P86679-52-SP"/>
+    <partref refid="P81472-68-FD"/>
+    <partref refid="P88107-39-GT"/>
+    <description>
+      If you've got turnips to twaddle, this is the tool for you!
+      Comes with a <partref refid="P81472-68-FD"/>.
+    </description>
+  </component>
+  <component component-id="C28813-70-PG">
+    <name>Prawn Goader</name>
+    <partref refid="P81952-26-PK"/>
+    <partref refid="P80499-43-MC"/>
+    <partref refid="P86994-25-RC"/>
+    <description>
+      Unruly prawns?  With this handy tool, you'll have the most
+      well-behaved seafood in town.
+    </description>
+  </component>
+  <component component-id="C28100-38-CT">
+    <name>Clam Teaser</name>
+    <partref refid="P81472-68-FD"/>
+    <partref refid="P86994-25-RC"/>
+    <partref refid="P86679-52-SP"/>
+    <description>
+      Everyone knows they're proverbially happy, but what to 
+      do with a shy clam?  Bring recalcitrant mollusks out of 
+      their shells with this entertaining gadget.  Includes a
+      festive <partref refid="P86994-25-RC"/>.
+    </description>
+  </component>
+  <component component-id="C23813-03-CDK">
+    <name>Cucumber Decorating Kit</name>
+    <partref refid="P81952-26-PK"/>
+    <partref refid="P80499-43-MC"/>
+    <partref refid="P86994-25-RC"/>
+    <partref refid="P81472-68-FD"/>
+    <description>
+      Cucumbers are a staple of summertime entertaining, but
+      it's unlikely they'll be the most beautiful thing on 
+      your table.  Rescue them from blandness with this 
+      exciting tool.
+    </description>
+  </component>
+  <component component-id="C21630-29-LS">
+    <name>Lemon Snubber</name>
+    <partref refid="P81952-26-PK"/>
+    <partref refid="P88107-39-GT"/>
+    <partref refid="P86679-52-SP"/>
+    <description>
+      What's more annoying than an unsnubbed lemon?
+      With this tool and a quick flick of the wrist, you'll 
+      never have that problem again.  Includes a replacement
+      <partref refid="P86679-52-SP"/> for years of use.
+    </description>
+  </component>
+  <component component-id="C28772-63-OB">
+    <name>Olive Bruiser</name>
+    <partref refid="P80228-21-PT"/>
+    <partref refid="P82387-85-PA"/>
+    <description>
+      Few things are more elegant than a bowl full of bruised
+      olives.  Unfortunately, few of us have the time to 
+      hand-bruise them unless it's a special occasion.  With
+      this tool, you'll have bruised olives every night!
+      Includes both a <partref refid="P80228-21-PT"/> and a 
+      <partref refid="P82387-85-PA"/>.
+    </description>
+  </component>
+
+  <part part-id="P80228-21-PT" supplier="4839">
+    <name>Pitter</name>
+    <description>
+      Removes pits from olives and cherries in no time at all.
+    </description>
+  </part>
+  <part part-id="P82387-85-PA" supplier="2983">
+    <name>Patter</name>
+    <description>
+      We're not sure what these things do, but people seem 
+      to like 'em.
+    </description>
+  </part>
+  <part part-id="P86679-52-SP" supplier="5910">
+    <name>Spanner</name>
+    <description>
+      You can't fix anything without one.
+    </description>
+  </part>
+  <part part-id="P81472-68-FD" supplier="4839">
+    <name>Feather Duster</name>
+    <description>
+      Dust be gone!  (Note: This part is not hypoallergenic.)
+    </description>
+  </part>
+  <part part-id="P88107-39-GT" supplier="2983">
+    <name>Grommet</name>
+    <description>
+      Gives everything a finished, professional look.
+    </description>
+  </part>
+  <part part-id="P81952-26-PK" supplier="5910">
+    <name>Paring Knife</name>
+    <description>
+      Every home should have one.
+    </description>
+  </part>
+  <part part-id="P80499-43-MC" supplier="4839">
+    <name>Mucilage</name>
+    <description>
+      It's an adhesive, a salad dressing, and so much more!
+    </description>
+  </part>
+  <part part-id="P86994-25-RC" supplier="5910">
+    <name>Ribbon Curler</name>
+    <description>
+      Endless hours of fun, even if you're not wrapping a gift.
+    </description>
+  </part>
+
+  <supplier country="Great Britain" vendor-id="4839">
+    <name>Acme Products, Inc.</name>
+  </supplier>
+  <supplier country="Germany" vendor-id="2983">
+    <name>Deutschland Excelsior Gmbh</name>
+  </supplier>
+  <supplier country="Great Britain" vendor-id="5910">
+    <name>Unlimited Spanners Ltd.</name>
+  </supplier>
+</parts-list>

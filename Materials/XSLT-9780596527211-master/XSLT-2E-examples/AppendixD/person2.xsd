@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- person2.xsd -->
+<xs:schema 
+  xmlns="http://www.oreilly.com/xslt"
+  targetNamespace="http://www.oreilly.com/xslt"
+  xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+  <xs:element name="person">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="name"/>
+        <xs:element ref="age"/>
+      </xs:sequence>
+      <xs:attribute name="eyeColor" type="eyeColor-type"/>
+    </xs:complexType>
+  </xs:element>
+
+  <xs:simpleType name="eyeColor-type">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="blue"/>
+      <xs:enumeration value="brown"/>
+      <xs:enumeration value="gray"/>
+      <xs:enumeration value="green"/>
+    </xs:restriction>
+  </xs:simpleType>
+
+  <xs:element name="name" type="xs:string"/>
+
+  <xs:simpleType name="age-type">
+    <xs:restriction base="xs:integer">
+      <xs:minInclusive value="0"/>
+      <xs:maxInclusive value="130"/>
+    </xs:restriction>
+  </xs:simpleType>
+
+  <xs:element name="age" type="age-type"/>
+
+</xs:schema>

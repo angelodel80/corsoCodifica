@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<reference xml:id="xsl_text" scheme="xsl" specification="xsl-text">
+   <body>
+      <purpose>
+         <p>An instruction used to add literal text to the result sequence.</p>
+      </purpose>
+      <usage>
+         <p>The instruction may be used to control the use of whitespace. You
+            can also disable escaping of special characters, though this usage is now deprecated because it may not work in certain cases.</p>
+      </usage>
+      <containedby label="substitution" display="inline">
+         <link href="xsl_instruction"/>
+      </containedby>
+      <properties type="attribute">
+         <property xml:id="disable_escaping">
+            <name>disable-output-escaping</name>
+            <description>Whether or not to escape special characters</description>
+            <type>xs:token</type>
+            <values>yes, no</values>
+            <default>no</default>
+            <required state="deprecated"/>
+         </property>
+      </properties>
+      <properties>
+         <common label="attrgroup" display="inline">
+            <link href="ge_attr"/>
+            <link href="version_attr"/>
+         </common>
+      </properties>
+      <examples>
+         <codeblock><![CDATA[
+<xsl:if test="position() ne last()">
+   <xsl:text> | </xsl:text>
+</xsl:if>]]></codeblock>
+      </examples>
+      <related role="navigation" label="related">
+         <link href="xsl_er"/>
+      </related>
+   </body>
+</reference>

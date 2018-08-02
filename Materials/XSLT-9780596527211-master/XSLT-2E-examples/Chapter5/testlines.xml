@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- testlines.xml -->
+<ul>
+  <li>This is a test &amp; I hope it works | fails gracefully</li>
+  <li>Some techniques are simpler &amp; easier than recursion</li>
+  <li>Will I enjoy next Tuesday's meeting?</li>
+</ul>

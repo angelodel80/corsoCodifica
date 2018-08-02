@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<collection stable="true">
+   <doc href="element.xml"/>
+   <doc href="namespace.xml"/>
+   <doc href="css.xml"/>
+   <doc href="attr.xml"/>
+</collection>

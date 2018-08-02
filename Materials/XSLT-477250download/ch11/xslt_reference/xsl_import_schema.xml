@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<reference xml:id="xsl_import_schema" scheme="xsl" specification="import-schema">
+   <body>
+      <purpose>
+         <p>Declaration, available only in a schema-aware processor that
+            identifies a schema defining the user-defined types, element and
+            attributes.</p>
+      </purpose>
+      <usage>
+         <p>Schema modules that are imported or included in the referenced
+            schema must be explicitly declared if those definitions are
+            required.</p>
+         <p>This element may include an inline XML schema, in which case the
+               <attr>schema-location</attr> attribute must not be used.</p>
+      </usage>
+      <containedby label="substitution" display="inline">
+         <link href="xsl_declaration"/>
+      </containedby>
+      <properties type="attribute">
+         <property xml:id="namespace">
+            <name>namespace</name>
+            <description>The namespace URI of the schema to be imported. This
+               information may be enough on its own to enable an implementation
+               to locate the required schema components.</description>
+            <type>xs:anyURI</type>
+            <required state="optional"/>
+         </property>
+         <property xml:id="location">
+            <name>schema-location</name>
+            <description>Indicates where the schema document is located. It is
+               likely that a schema-aware XSLT processor will be able to process
+               a schema document found at this location.</description>
+            <type>xs:anyURI</type>
+            <required state="optional"/>
+         </property>
+      </properties>
+      <properties>
+         <common label="attrgroup" display="inline">
+            <link href="ge_attr"/>
+            <link href="version_attr"/>
+         </common>
+      </properties>
+      <examples>
+         <codeblock><![CDATA[
+<xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform" version="2.0" >	
+   <xsl:import-schema schema-location="products.xsd"/>
+	...
+</xsl:stylesheet>]]></codeblock>
+      </examples>
+      <related role="navigation" label="related">
+         <link href="xsl_er"/>
+      </related>
+   </body>
+</reference>

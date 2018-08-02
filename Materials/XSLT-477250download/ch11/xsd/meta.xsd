@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<xs:schema elementFormDefault="qualified"
+   xmlns:xs="http://www.w3.org/2001/XMLSchema">
+   
+<!--   <xs:import namespace="http://www.w3.org/XML/1998/namespace"
+   schemaLocation="xml.xsd"/>-->
+   
+   <xs:include schemaLocation="common.xsd"/>
+   <xs:include schemaLocation="links.xsd"/>
+   <xs:include schemaLocation="iso_lang.xsd"/>
+   
+    <!--resource metadata-->
+   
+    <xs:simpleType name="empty">
+      <xs:restriction base="xs:string">
+         <xs:enumeration value=""/>
+      </xs:restriction>
+   </xs:simpleType>
+   
+   <xs:complexType name="summaryType" mixed="true">
+      <xs:sequence>
+         <xs:group ref="phrase" minOccurs="0" maxOccurs="unbounded"/>
+      </xs:sequence>
+   </xs:complexType>
+   
+   <xs:element name="summary" type="summaryType"/>
+
+   <xs:element name="entry">
+      <xs:complexType>
+         <xs:choice minOccurs="0" maxOccurs="unbounded">
+            <xs:element ref="agent" minOccurs="0" maxOccurs="unbounded"/>
+            <xs:element name="title" type="xs:string"/>
+            <xs:element name="summary" type="summaryType"/>
+            <xs:element ref="content" minOccurs="0"/>
+            <xs:element ref="category" minOccurs="0" maxOccurs="unbounded"/>
+            <xs:element name="published" type="xs:string" minOccurs="0"/>
+            <xs:element name="updated" type="xs:date" minOccurs="0"/>
+         </xs:choice>
+         <xs:attributeGroup ref="core"/>
+         <xs:attribute name="lang" type="iso_639_3" use="optional"/>
+
+      </xs:complexType>
+   </xs:element>
+   <xs:element name="agent">
+      <xs:annotation>
+         <xs:documentation>Individual or organization responsible for
+            production, for example the author, contributor, or publisher. The
+            contained role elements define the
+            responsibility.</xs:documentation>
+      </xs:annotation>
+      <xs:complexType>
+         <xs:sequence>
+            <xs:element ref="role" minOccurs="1" maxOccurs="unbounded"/>
+         </xs:sequence>
+         <xs:attributeGroup ref="termReference"/>
+      </xs:complexType>
+   </xs:element>
+   
+   <xs:element name="role">
+      <xs:complexType>
+         <xs:attributeGroup ref="termReference"/>
+      </xs:complexType>
+   </xs:element>
+   
+   <xs:element name="content">
+      <xs:complexType>
+         <xs:simpleContent>
+            <xs:extension base="empty">
+               <xs:attributeGroup ref="resourceReference"/>
+            </xs:extension>
+         </xs:simpleContent>
+      </xs:complexType>
+   </xs:element>
+   
+   <xs:element name="category">
+      <xs:complexType>
+         <xs:simpleContent>
+            <xs:extension base="empty">
+               <xs:attributeGroup ref="termReference"/>
+            </xs:extension>
+         </xs:simpleContent>
+      </xs:complexType>
+   </xs:element>   
+   
+<!--   subject metadata  -->
+      
+   <xs:simpleType name="positionType">
+      <xs:list itemType="xs:double"/>
+   </xs:simpleType>
+   
+   <xs:element name="terms">
+      <xs:complexType>
+         <xs:sequence>
+            <xs:element ref="p" minOccurs="0"/>
+            <xs:sequence>
+               <xs:element ref="term" minOccurs="0" maxOccurs="unbounded"/>
+            </xs:sequence>
+            <xs:element ref="related" minOccurs="0"/>
+         </xs:sequence>
+         <xs:attributeGroup ref="core"/>
+         <xs:attribute name="fixed" default="no">
+            <xs:simpleType>
+               <xs:restriction base="xs:string">
+                  <xs:enumeration value="yes"/>
+                  <xs:enumeration value="no"/>
+               </xs:restriction>
+            </xs:simpleType>
+         </xs:attribute>
+         <xs:attribute name="scheme" type="xs:anyURI"/>
+         <xs:attribute name="lang" type="iso_639_3" use="optional"/>
+      </xs:complexType>
+      <xs:unique name="term_id">
+         <xs:selector xpath="term"/>
+         <xs:field xpath="@xml:id"/>
+      </xs:unique>
+      <xs:keyref name="term_ref" refer="term_id">
+         <xs:selector xpath="term/broader"/>
+         <xs:field xpath="@term"/>
+      </xs:keyref>
+   </xs:element>
+   
+   <xs:element name="term">
+      <xs:complexType>
+         <xs:sequence>
+            <xs:element ref="label"/>
+            <xs:element ref="altlabel" minOccurs="0" maxOccurs="unbounded"/>
+            <xs:element ref="object" minOccurs="0"/>
+            <xs:element ref="definition"/>
+            <xs:element ref="note" minOccurs="0"/>
+            <xs:element ref="broader" minOccurs="0"/>
+            <xs:element ref="relatedterm" minOccurs="0" maxOccurs="unbounded"/>
+         </xs:sequence>
+         <xs:attributeGroup ref="core"/>
+         <xs:attribute name="type" type="xs:string" use="optional"/>
+      </xs:complexType>
+      <xs:unique name="alt_lang">
+         <xs:selector xpath="altlabel"/>
+         <xs:field xpath="@lang"/>
+      </xs:unique>
+   </xs:element>
+   
+   <xs:element name="label">
+      <xs:complexType>
+         <xs:simpleContent>
+            <xs:extension base="xs:string"/>
+         </xs:simpleContent>
+      </xs:complexType>
+   </xs:element>
+   
+   <xs:element name="altlabel">
+      <xs:complexType>
+         <xs:simpleContent>
+            <xs:extension base="xs:string">
+               <xs:attributeGroup ref="termReference"/>
+               <xs:attribute name="lang" type="iso_639_3"/>
+            </xs:extension>
+         </xs:simpleContent>
+      </xs:complexType>
+   </xs:element>
+   
+   <xs:element name="object">
+      <xs:complexType>
+         <xs:attribute name="src" type="xs:anyURI" use="required">
+            <xs:annotation>
+               <xs:documentation>Refers to a image resource
+                  ID</xs:documentation>
+            </xs:annotation>
+         </xs:attribute>
+      </xs:complexType>
+   </xs:element>
+   
+   <xs:element name="definition" type="summaryType"/>
+   
+   <xs:element name="broader">
+      <xs:complexType>
+         <xs:attributeGroup ref="termReference"/>
+      </xs:complexType>
+   </xs:element>
+   
+   <xs:element name="relatedterm">
+      <xs:complexType>
+         <xs:attributeGroup ref="termReference"/>
+      </xs:complexType>
+   </xs:element>     
+
+   <xs:element name="related" type="linklistType"/>
+   
+</xs:schema>

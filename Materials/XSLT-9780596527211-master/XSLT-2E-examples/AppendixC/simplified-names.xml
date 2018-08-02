@@ -1,0 +1,40 @@
+<?xml version="1.0"?>
+<!-- simplified-names.xml -->
+<addressbook>
+  <address>
+    <first-name>Chester Hasbrouck</first-name>
+    <last-name>Frisby</last-name>
+    <city>Sheboygan</city>
+    <state>WI</state>
+  </address>
+  <address>
+    <first-name>Mary</first-name>
+    <last-name>Backstayge</last-name>
+    <city>Skunk Haven</city>
+    <state>MA</state>
+  </address>
+  <address>
+    <first-name>Natalie</first-name>
+    <last-name>Attired</last-name>
+    <city>Winter Harbor</city>
+    <state>ME</state>
+  </address>
+  <address>
+    <first-name>Harry</first-name>
+    <last-name>Backstayge</last-name>
+    <city>Skunk Haven</city>
+    <state>MA</state>
+  </address>
+  <address>
+    <first-name>Mary</first-name>
+    <last-name>McGoon</last-name>
+    <city>Boylston</city>
+    <state>VA</state>
+  </address>
+  <address>
+    <first-name>Amanda</first-name>
+    <last-name>Reckonwith</last-name>
+    <city>Lynn</city>
+    <state>MA</state>
+  </address>
+</addressbook>

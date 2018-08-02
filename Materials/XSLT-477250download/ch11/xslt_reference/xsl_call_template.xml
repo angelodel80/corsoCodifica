@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<reference xml:id="xsl_call_template"
+   scheme="xsl" specification="named-templates">
+   <body>
+      <purpose>
+         <p>An instruction that invokes a named template.</p>
+      </purpose>
+      <usage>
+         <p>The <attr>name</attr> attribute must match the value of the <attr>name</attr> attribute on an <element>xsl:template</element> element. The context remains in the node from which the template is called, rather than moving to the called template.</p>
+         <p>The <element>xsl:with-param</element> instruction may be used to supply parameter values.</p>
+      </usage>
+      
+      <contains label="contains" display="inline">
+         <link href="xsl_with_param"/>
+      </contains>
+      <containedby label="substitution" display="inline">
+         <link href="xsl_instruction"/>
+      </containedby>
+      <properties type="attribute">
+         <property xml:id="name">
+            <name>name</name>
+            <description>The name of the template to call</description>
+            <type>xsl:QName</type>
+            <required state="required"/>
+         </property>        
+         
+      </properties>
+      <properties>
+         <common label="attrgroup" display="inline">
+            <link href="ge_attr"/>
+            <link href="version_attr"/>
+         </common>
+      </properties>
+      <examples>
+         <codeblock><![CDATA[
+<xsl:call-template name="head">
+   <xsl:with-param name="title" select="$title"/>
+   <xsl:with-param name="style" select="$style"/>
+</xsl:call-template>]]></codeblock>
+      </examples>
+      <related role="navigation" label="related" display="block">
+         <link href="xsl_er"/>
+         <link href="xsl_template"/>
+      </related>
+   </body>
+</reference>

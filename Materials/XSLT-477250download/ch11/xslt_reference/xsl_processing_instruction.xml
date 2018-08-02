@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<reference xml:id="xsl_processing_instruction" scheme="xsl" specification="creating-processing-instructions">
+   <body>
+      <purpose>
+         <p>An instruction that outputs a processing instruction node.</p>
+      </purpose>
+      <usage>
+         <p>The instruction is often useful for constructing <code>xml-stylesheet</code> processing instructions for visual checking of XHTML output.</p>
+      </usage>     
+      <containedby label="substitution" display="inline">
+         <link href="xsl_instruction"/>        
+      </containedby>
+      <properties type="attribute">
+         <property xml:id="select">
+            <name>select</name>
+            <description>The data part of the instruction</description>
+            <type>xsl:expression</type>
+            <required state="optional"/>
+         </property>
+         <property xml:id="name">
+            <name>name</name>
+            <description>The target of the processing instruction</description>
+            <type>xsl:avt</type>
+            <required state="required"/>
+         </property>         
+      </properties>
+      <properties>
+         <common label="attrgroup" display="inline">
+            <link href="ge_attr"/>
+            <link href="version_attr"/>
+         </common>
+      </properties>
+      <examples>
+         <codeblock><![CDATA[
+<xsl:processing-instruction name="xsl-stylesheet">
+   <xsl:text>href="step1.xsl" type="text/xsl"</xsl:text>
+</xsl:processing-instruction>
+]]></codeblock>
+      </examples>
+      <related role="navigation" label="related">
+         <link href="xsl_er"/>
+      </related>
+   </body>
+</reference>

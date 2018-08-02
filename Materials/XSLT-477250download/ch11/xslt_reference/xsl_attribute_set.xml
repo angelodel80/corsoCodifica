@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<reference xml:id="xsl_attribute_set" scheme="xsl"
+   specification="attribute-sets">
+   <body>
+      <purpose>
+         <p>Declares a named set of attributes and values.</p>
+      </purpose>
+      <usage>
+         <p>To use the named set, you refer to it in the
+               <attr>use-attribute-sets</attr> attribute on the
+               <element>xsl:element</element> element, the
+               <element>xsl:copy</element> elements, or on a literal result
+            element.</p>
+         <p>A common use is to apply a set of fixed property values to an
+            element, but you can also use the contained
+               <element>xsl:attribute</element> elements to select values or
+            construct sequences.</p>
+      </usage>
+      <contains label="contains" display="inline">
+         <link href="xsl_attribute"/>
+      </contains>
+      <containedby label="substitution">
+         <link href="xsl_declaration"/>
+      </containedby>
+      <properties type="attribute">
+         <property xml:id="name">
+            <name>name</name>
+            <description>The name of the attribute set</description>
+            <type>xsl:QName</type>
+            <required state="required"/>
+         </property>
+         <property xml:id="use_sets">
+            <name>use-attribute-sets</name>
+            <description>Used to combine other sets from the same stylesheet.
+               The value is a space-separated list of QNames.</description>
+            <type>xsl:QNames</type>
+            <required state="optional"/>
+         </property>
+      </properties>
+      <properties>
+         <common label="attrgroup" display="inline">
+            <link href="ge_attr"/>
+            <link href="version_attr"/>
+            
+         </common>
+      </properties>
+      <examples>
+         <codeblock><![CDATA[
+<xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform" version="2.0">
+   <xsl:attribute-set name="col">
+      <xsl:attribute name="scope">col</xsl:attribute>
+   </xsl:attribute-set>
+   <xsl:attribute-set name="row">
+      <xsl:attribute name="scope">row</xsl:attribute>
+   </xsl:attribute-set>
+   <xsl:attribute-set name="th_first" use-attribute-sets="col">
+      <xsl:attribute name="class">firsthdr</xsl:attribute>
+   </xsl:attribute-set>
+   <xsl:attribute-set name="td_first" use-attribute-sets="row">
+      <xsl:attribute name="class">firstcell</xsl:attribute>
+   </xsl:attribute-set>
+</xsl:stylesheet>
+]]></codeblock>
+      </examples>
+      <related role="navigation" label="related">
+         <link href="xsl_er"/>
+      </related>
+   </body>
+</reference>

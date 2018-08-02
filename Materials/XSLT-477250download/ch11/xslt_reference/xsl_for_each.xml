@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<reference xml:id="xsl_for_each" scheme="xsl" specification="xsl-for-each">
+   <body>
+      <purpose>
+         <p>An instruction that selects a sequence of items for uniform
+            processing. The items may be either nodes or atomic values.</p>
+      </purpose>
+      <usage>
+         <p>Each iteration through the selected sequence changes the context, so you need to remember to use appropriate expressions when construction the sequence.</p>
+      </usage>
+      <contains label="contains" display="inline">
+         <link href="xsl_sort"/>
+         <link href="xsl_sequence_constructor_type"/>
+      </contains>
+      <containedby label="substitution" display="inline">        
+         <link href="xsl_instruction"/>
+      </containedby>
+      <properties type="attribute">
+         <property xml:id="select">
+            <name>select</name>
+            <description>The sequence of items to process</description>
+            <type>xsl:expression</type>
+            <required state="required"/>
+         </property>
+      </properties>
+      <properties>
+         <common label="attrgroup" display="inline">
+            <link href="ge_attr"/>
+            <link href="version_attr"/>
+         </common>
+      </properties>
+      <examples>
+         <codeblock><![CDATA[
+<xsl:for-each select="link">
+   <xsl:apply-templates select="."/>
+   <xsl:if test="position() ne last()">
+      <xsl:text> | </xsl:text>
+   </xsl:if>         
+</xsl:for-each>]]></codeblock>
+      </examples>
+      <related role="navigation" label="related">
+         <link href="xsl_er"/>
+      </related>
+   </body>
+</reference>

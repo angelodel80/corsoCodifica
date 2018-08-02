@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- extension.xsd -->
+<xs:schema 
+  xmlns="http://www.oreilly.com/xslt"
+  targetNamespace="http://www.oreilly.com/xslt"
+  xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+  <xs:element name="price" type="price-type"/>
+
+  <xs:simpleType name="currency-type">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="USD"/>
+      <xs:enumeration value="GBP"/>
+      <xs:enumeration value="CNY"/>
+      <xs:enumeration value="EUR"/>
+    </xs:restriction>
+  </xs:simpleType>
+
+  <xs:complexType name="price-type">
+    <xs:simpleContent>
+      <xs:extension base="xs:decimal">
+        <xs:attribute name="currency" type="currency-type"/>
+      </xs:extension>
+    </xs:simpleContent>
+  </xs:complexType>
+  
+</xs:schema>

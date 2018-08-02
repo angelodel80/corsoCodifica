@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<products>
+   <product sku="gdk943-46298r" color="red" units="50" store="Center"/>
+   <product sku="gdk943-46298w" color="white" units="851" store="West"/>
+   <product sku="gdk943-46298g" color="green" units="143" store="North"/>
+   <product sku="gdk943-46298b" color="blue" units="19" store="North"/>
+   <product sku="gdk943-46298p" color="purple" units="23" store="South"/>
+   <product sku="gdk943-46298r" color="red" units="70" store="Center"/>
+   <product sku="gdk943-46298g" color="green" units="29" store="East"/>
+   <product sku="gdk943-46298w" color="white" units="203" store="South"/>
+</products>

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- paragraph.xml -->
+<p
+  xmlns="http://www.oreilly.com/xslt"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://www.oreilly.com/xslt paragraph.xsd">
+
+This is some text <i>inside</i> a paragraph.  It was defined
+with <code>mixed="true"</code>, so we can mix all of these
+<b>elements</b> in with <br/>
+the text around them.  You can find the XML Schema Primer
+at <a href="http://www.w3.org/tr/xmlschema-0/">the W3C</a>.
+</p>
+

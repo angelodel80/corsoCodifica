@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- tutorial.xml -->
+<tutorial>
+  <section>
+    <title>Gene Splicing for Young People</title>
+    <panel>
+      <title>Introduction</title>
+      <!-- ... -->
+    </panel>
+    <panel>
+      <title>Discovering the secrets of life and creation</title>
+      <!-- ... -->
+    </panel>
+    <panel>
+      <title>"I created him for good, but he's turned out evil!"</title>
+      <!-- ... -->
+    </panel>
+    <panel>
+      <title>When angry mobs storm your castle</title>
+      <!-- ... -->
+    </panel>
+  </section>
+</tutorial>

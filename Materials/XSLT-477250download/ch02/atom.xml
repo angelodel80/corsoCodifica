@@ -1,0 +1,879 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet href="http://feeds.oreilly.com/~d/styles/atom10full.xsl" type="text/xsl" media="screen"?><?xml-stylesheet href="http://feeds.oreilly.com/~d/styles/itemcontent.css" type="text/css" media="screen"?>
+<feed xmlns="http://www.w3.org/2005/Atom"
+    xmlns:feedburner="http://rssnamespace.org/feedburner/ext/1.0">
+    <title>O'Reilly News: XML</title>
+    <link rel="alternate" type="text/html" href="http://news.oreilly.com/"/>
+
+    <id>tag:news.oreilly.com,2008-08-01://44</id>
+    <updated>2008-12-17T18:05:12Z</updated>
+    <subtitle>O'Reilly News - Spreading the knowledge of innovators</subtitle>
+
+    <generator uri="http://www.sixapart.com/movabletype/">Movable Type Pro
+        4.21-en</generator>
+
+    <link rel="self" href="http://feeds.oreilly.com/oreilly/xml"
+        type="application/atom+xml"/>
+    <entry>
+        <title>XForms, a pause for reflection</title>
+        <link rel="alternate" type="text/html"
+            href="http://feeds.oreilly.com/~r/oreilly/xml/~3/487860677/xforms-a-pause-for-reflection.html"/>
+        <id>tag:broadcast.oreilly.com,2008://53.34667</id>
+
+        <published>2008-12-17T22:07:30Z</published>
+
+        <updated>2008-12-17T18:05:12Z</updated>
+
+        <summary>The other day I had what could only be described as a 'Roy
+            Scheider moment', you know the bit in the film Jaws where the camera
+            tracks-in whilst zooming-out at the same time. Well, whilst
+            debugging an XForms enabled application, the Mozilla XForms plug-in
+            had exposed the host document, XForms and all, as the content of the
+            empty xf:instance. How odd. I mean, what good is that? That's when
+            it struck me in a Roy Scheider sort of way; this was Reflection, the
+            ability of a program to look at itself and change its
+            behaviour.</summary>
+        <author>
+            <name>Philip Fennell</name>
+
+        </author>
+
+        <category term="xforms" label="xforms"
+            scheme="http://www.sixapart.com/ns/types#tag"/>
+        <category term="xml" label="xml"
+            scheme="http://www.sixapart.com/ns/types#tag"/>
+
+        <category term="xrx" label="xrx"
+            scheme="http://www.sixapart.com/ns/types#tag"/>
+
+        <content type="html" xml:lang="en"
+            xml:base="http://broadcast.oreilly.com/"> The other day I had what
+            could only be described as a 'Roy Scheider moment', you know the bit
+            in the film Jaws where the camera tracks-in whilst zooming-out at
+            the same time. Well, whilst debugging an XForms enabled application,
+            the Mozilla XForms plug-in had exposed the host document, XForms and
+            all, as the content of the empty xf:instance. How odd. I mean, what
+            good is that? That's when it struck me in a Roy Scheider sort of
+            way; this was Reflection, the ability of a program to look at itself
+            and change its behaviour. &lt;img
+            src="http://feeds.oreilly.com/~r/oreilly/xml/~4/487860677"
+            height="1" width="1"/&gt;</content>
+        <feedburner:origLink>http://broadcast.oreilly.com/2008/12/xforms-a-pause-for-reflection.html</feedburner:origLink>
+    </entry>
+
+    <entry>
+        <title>Defining markup languages using Unicode properties</title>
+        <link rel="alternate" type="text/html"
+            href="http://feeds.oreilly.com/~r/oreilly/xml/~3/487372046/defining-markup-languages-usin.html"/>
+
+        <id>tag:broadcast.oreilly.com,2008://53.34679</id>
+
+        <published>2008-12-17T03:01:23Z</published>
+        <updated>2008-12-18T06:11:13Z</updated>
+
+        <summary>Can we define a family of markup languages that used the
+            Unicode properties and which could accept a fair imitation of XML
+            and produce a SAX-like event stream?</summary>
+        <author>
+            <name>Rick Jelliffe</name>
+
+
+        </author>
+
+        <category term="xml" label="xml"
+            scheme="http://www.sixapart.com/ns/types#tag"/>
+
+        <content type="html" xml:lang="en"
+            xml:base="http://broadcast.oreilly.com/"> Can we define a family of
+            markup languages that used the Unicode properties and which could
+            accept a fair imitation of XML and produce a SAX-like event stream?
+            &lt;img
+            src="http://feeds.oreilly.com/~r/oreilly/xml/~4/487372046"
+            height="1" width="1"/&gt;</content>
+        <feedburner:origLink>http://broadcast.oreilly.com/2008/12/defining-markup-languages-usin.html</feedburner:origLink>
+    </entry>
+
+
+    <entry>
+        <title>Converting XML Schemas to Schematron (#13): Identify
+            constraints</title>
+
+        <link rel="alternate" type="text/html"
+            href="http://feeds.oreilly.com/~r/oreilly/xml/~3/482827113/converting-xml-schemas-to-sche.html"/>
+        <id>tag:broadcast.oreilly.com,2008://53.34620</id>
+
+        <published>2008-12-12T07:08:50Z</published>
+        <updated>2008-12-12T16:07:40Z</updated>
+
+        <summary>This article sketches out how to implement the same
+            functionality as XSD's integrity constraints in Schematron. </summary>
+        <author>
+
+            <name>Rick Jelliffe</name>
+
+        </author>
+
+        <category term="schematron" label="schematron"
+            scheme="http://www.sixapart.com/ns/types#tag"/>
+        <category term="xml" label="xml"
+            scheme="http://www.sixapart.com/ns/types#tag"/>
+        <category term="xmlschemas" label="xml schemas"
+            scheme="http://www.sixapart.com/ns/types#tag"/>
+        <category term="xsd" label="xsd"
+            scheme="http://www.sixapart.com/ns/types#tag"/>
+
+        <content type="html" xml:lang="en"
+            xml:base="http://broadcast.oreilly.com/"> This article sketches out
+            how to implement the same functionality as XSD's integrity
+            constraints in Schematron. &lt;img
+            src="http://feeds.oreilly.com/~r/oreilly/xml/~4/482827113"
+            height="1" width="1"/&gt;</content>
+
+        <feedburner:origLink>http://broadcast.oreilly.com/2008/12/converting-xml-schemas-to-sche.html</feedburner:origLink>
+    </entry>
+
+
+
+    <entry>
+        <title>Reviewing document applications without conclusions</title>
+        <link rel="alternate" type="text/html"
+            href="http://feeds.oreilly.com/~r/oreilly/xml/~3/475058621/reviewing-document-applications.html"/>
+        <id>tag:broadcast.oreilly.com,2008://53.34524</id>
+
+        <published>2008-12-04T11:33:05Z</published>
+
+        <updated>2008-12-04T19:01:54Z</updated>
+
+        <summary>I've been doing some reviews of desktop applications recently,
+            so I have been thinking about what criteria I would use to judge
+            them.</summary>
+        <author>
+            <name>Rick Jelliffe</name>
+
+        </author>
+
+        <category term="dtp" label="dtp"
+            scheme="http://www.sixapart.com/ns/types#tag"/>
+        <category term="wordprocessing" label="word processing"
+            scheme="http://www.sixapart.com/ns/types#tag"/>
+
+        <category term="xml" label="xml"
+            scheme="http://www.sixapart.com/ns/types#tag"/>
+
+        <content type="html" xml:lang="en"
+            xml:base="http://broadcast.oreilly.com/"> I've been doing some
+            reviews of desktop applications recently, so I have been thinking
+            about what criteria I would use to judge them. &lt;img
+            src="http://feeds.oreilly.com/~r/oreilly/xml/~4/475058621"
+            height="1" width="1"/&gt;</content>
+        <feedburner:origLink>http://broadcast.oreilly.com/2008/12/reviewing-document-applications.html</feedburner:origLink>
+    </entry>
+
+    <entry>
+        <title>Converting Schematron to XML Schemas, part 2</title>
+        <link rel="alternate" type="text/html"
+            href="http://feeds.oreilly.com/~r/oreilly/xml/~3/473876775/converting-schematron-to-xml-schemas-part-2.html"/>
+
+        <id>tag:broadcast.oreilly.com,2008://53.34508</id>
+
+        <published>2008-12-03T09:25:35Z</published>
+        <updated>2008-12-03T19:01:48Z</updated>
+
+        <summary>I have not written anything about converting Schematron schemas
+            to XML Schemas in the 12 months since the last little article. So
+            here is another approach for schemas that were not written to be
+            XSD-conversion friendly: it is just brute force and ignorance (BFI)
+            pattern matching.</summary>
+        <author>
+            <name>Rick Jelliffe</name>
+
+
+        </author>
+
+        <category term="schematron" label="schematron"
+            scheme="http://www.sixapart.com/ns/types#tag"/>
+        <category term="xml" label="xml"
+            scheme="http://www.sixapart.com/ns/types#tag"/>
+        <category term="xmlschemas" label="xml schemas"
+            scheme="http://www.sixapart.com/ns/types#tag"/>
+        <category term="xsd" label="xsd"
+            scheme="http://www.sixapart.com/ns/types#tag"/>
+
+        <content type="html" xml:lang="en"
+            xml:base="http://broadcast.oreilly.com/"> I have not written
+            anything about converting Schematron schemas to XML Schemas in the
+            12 months since the last little article. So here is another approach
+            for schemas that were not written to be XSD-conversion friendly: it
+            is just brute force and ignorance (BFI) pattern matching.
+            &lt;img
+            src="http://feeds.oreilly.com/~r/oreilly/xml/~4/473876775"
+            height="1" width="1"/&gt;</content>
+        <feedburner:origLink>http://broadcast.oreilly.com/2008/12/converting-schematron-to-xml-schemas-part-2.html</feedburner:origLink>
+    </entry>
+
+    <entry>
+        <title>More super-styling</title>
+        <link rel="alternate" type="text/html"
+            href="http://feeds.oreilly.com/~r/oreilly/xml/~3/472810200/more-super-styling.html"/>
+        <id>tag:broadcast.oreilly.com,2008://53.34493</id>
+
+        <published>2008-12-02T09:24:43Z</published>
+        <updated>2008-12-02T19:13:06Z</updated>
+
+        <summary>In yesterday's blog I suggested the idea of super-styles. These
+            are properties of elements which sit above the kinds of typesetting
+            mechanisms our current generation of typesetting and office
+            applications provide. They specify the rhetorical characteristics of
+            an element that the rendering should expose. So what might these
+            super-style properties be?</summary>
+        <author>
+            <name>Rick Jelliffe</name>
+
+        </author>
+
+        <category term="typesetting" label="typesetting"
+            scheme="http://www.sixapart.com/ns/types#tag"/>
+        <category term="xml" label="xml"
+            scheme="http://www.sixapart.com/ns/types#tag"/>
+
+        <content type="html" xml:lang="en"
+            xml:base="http://broadcast.oreilly.com/"> In yesterday's blog I
+            suggested the idea of super-styles. These are properties of elements
+            which sit above the kinds of typesetting mechanisms our current
+            generation of typesetting and office applications provide. They
+            specify the rhetorical characteristics of an element that the
+            rendering should expose. So what might these super-style properties
+            be? &lt;img
+            src="http://feeds.oreilly.com/~r/oreilly/xml/~4/472810200"
+            height="1" width="1"/&gt;</content>
+        <feedburner:origLink>http://broadcast.oreilly.com/2008/12/more-super-styling.html</feedburner:origLink>
+    </entry>
+
+    <entry>
+        <title>Super-styling: Are our current page-breaking hints too low-level
+            for acceptable interoperability?</title>
+        <link rel="alternate" type="text/html"
+            href="http://feeds.oreilly.com/~r/oreilly/xml/~3/471591012/super-styling-are-our-current.html"/>
+        <id>tag:broadcast.oreilly.com,2008://53.34480</id>
+
+        <published>2008-12-01T09:21:24Z</published>
+        <updated>2008-12-02T09:23:48Z</updated>
+
+        <summary>Can our ideas of page-break styling, derived as they are from
+            the mechanisms of quite ancient WP systems, be replaced by some more
+            high level styling concepts that would allow greater
+            mechanism-independence for typeset output?</summary>
+        <author>
+            <name>Rick Jelliffe</name>
+
+        </author>
+
+
+        <category term="styling" label="styling"
+            scheme="http://www.sixapart.com/ns/types#tag"/>
+        <category term="typsetting" label="typsetting"
+            scheme="http://www.sixapart.com/ns/types#tag"/>
+        <category term="xml" label="xml"
+            scheme="http://www.sixapart.com/ns/types#tag"/>
+
+        <content type="html" xml:lang="en"
+            xml:base="http://broadcast.oreilly.com/"> Can our ideas of
+            page-break styling, derived as they are from the mechanisms of quite
+            ancient WP systems, be replaced by some more high level styling
+            concepts that would allow greater mechanism-independence for typeset
+            output? &lt;img
+            src="http://feeds.oreilly.com/~r/oreilly/xml/~4/471591012"
+            height="1" width="1"/&gt;</content>
+        <feedburner:origLink>http://broadcast.oreilly.com/2008/12/super-styling-are-our-current.html</feedburner:origLink>
+    </entry>
+
+    <entry>
+        <title>XForms for Prototyping</title>
+
+        <link rel="alternate" type="text/html"
+            href="http://feeds.oreilly.com/~r/oreilly/xml/~3/471591013/xforms-for-prototyping.html"/>
+        <id>tag:broadcast.oreilly.com,2008://53.34202</id>
+
+        <published>2008-12-01T08:27:29Z</published>
+        <updated>2008-12-01T18:19:42Z</updated>
+
+        <summary>A high-fidelity prototype provides the engineers and QA
+            organization with a rich, interactive description of the product's
+            intended functionality and design to be used as a reference basis
+            for implementation and test. Whenever this subject is raised my
+            thoughts turn immediately to XForms. The advantage of prototyping
+            with XForms is that it is quick, declarative, readable and is well
+            defined.</summary>
+        <author>
+
+            <name>Philip Fennell</name>
+
+        </author>
+
+        <category term="prototyping" label="prototyping"
+            scheme="http://www.sixapart.com/ns/types#tag"/>
+        <category term="xforms" label="xforms"
+            scheme="http://www.sixapart.com/ns/types#tag"/>
+        <category term="xml" label="xml"
+            scheme="http://www.sixapart.com/ns/types#tag"/>
+        <category term="xrx" label="xrx"
+            scheme="http://www.sixapart.com/ns/types#tag"/>
+
+        <content type="html" xml:lang="en"
+            xml:base="http://broadcast.oreilly.com/"> A high-fidelity prototype
+            provides the engineers and QA organization with a rich, interactive
+            description of the product's intended functionality and design to be
+            used as a reference basis for implementation and test. Whenever this
+            subject is raised my thoughts turn immediately to XForms. The
+            advantage of prototyping with XForms is that it is quick,
+            declarative, readable and is well defined. &lt;img
+            src="http://feeds.oreilly.com/~r/oreilly/xml/~4/471591013"
+            height="1" width="1"/&gt;</content>
+
+        <feedburner:origLink>http://broadcast.oreilly.com/2008/12/xforms-for-prototyping.html</feedburner:origLink>
+    </entry>
+
+
+
+    <entry>
+        <title>Where are the XML Editors?</title>
+        <link rel="alternate" type="text/html"
+            href="http://feeds.oreilly.com/~r/oreilly/xml/~3/466510818/where-are-the-xml-editors.html"/>
+        <id>tag:broadcast.oreilly.com,2008://53.34294</id>
+
+        <published>2008-11-25T18:46:55Z</published>
+
+        <updated>2008-11-29T07:21:59Z</updated>
+
+        <summary>A generic XML editor that works reasonably well for
+            non-technical users seems to be a myth. Would a simple generic XML
+            editor for end users be a valuable tool? What would it look
+            like?</summary>
+        <author>
+            <name>Eric Larson</name>
+            <uri>http://ionrock.org/blog/</uri>
+        </author>
+
+
+        <category term="ui" label="ui"
+            scheme="http://www.sixapart.com/ns/types#tag"/>
+        <category term="xml" label="xml"
+            scheme="http://www.sixapart.com/ns/types#tag"/>
+        <category term="xslt" label="xslt"
+            scheme="http://www.sixapart.com/ns/types#tag"/>
+
+        <content type="html" xml:lang="en"
+            xml:base="http://broadcast.oreilly.com/"> A generic XML editor that
+            works reasonably well for non-technical users seems to be a myth.
+            Would a simple generic XML editor for end users be a valuable tool?
+            What would it look like? &lt;img
+            src="http://feeds.oreilly.com/~r/oreilly/xml/~4/466510818"
+            height="1" width="1"/&gt;</content>
+        <feedburner:origLink>http://broadcast.oreilly.com/2008/11/where-are-the-xml-editors.html</feedburner:origLink>
+    </entry>
+
+    <entry>
+        <title>Using Schematron to declare and report implementation
+            limitations</title>
+
+        <link rel="alternate" type="text/html"
+            href="http://feeds.oreilly.com/~r/oreilly/xml/~3/465356967/using-schematron-to-declare-an.html"/>
+        <id>tag:broadcast.oreilly.com,2008://53.34285</id>
+
+        <published>2008-11-25T03:28:52Z</published>
+        <updated>2008-11-25T19:04:45Z</updated>
+
+        <summary>Implementation schemas are used to test documents that they
+            only contain structures or values that can be accepted by a
+            particular implementation of a standard schema.</summary>
+        <author>
+
+            <name>Rick Jelliffe</name>
+
+        </author>
+
+        <category term="schematron" label="schematron"
+            scheme="http://www.sixapart.com/ns/types#tag"/>
+        <category term="xml" label="xml"
+            scheme="http://www.sixapart.com/ns/types#tag"/>
+
+        <content type="html" xml:lang="en"
+            xml:base="http://broadcast.oreilly.com/"> Implementation schemas are
+            used to test documents that they only contain structures or values
+            that can be accepted by a particular implementation of a standard
+            schema. &lt;img
+            src="http://feeds.oreilly.com/~r/oreilly/xml/~4/465356967"
+            height="1" width="1"/&gt;</content>
+        <feedburner:origLink>http://broadcast.oreilly.com/2008/11/using-schematron-to-declare-an.html</feedburner:origLink>
+    </entry>
+
+    <entry>
+        <title>Are Computer Languages Irrelevant?</title>
+        <link rel="alternate" type="text/html"
+            href="http://feeds.oreilly.com/~r/oreilly/xml/~3/464315562/are-computer-languages-irrelev.html"/>
+        <id>tag:broadcast.oreilly.com,2008://53.34273</id>
+
+        <published>2008-11-24T20:00:00Z</published>
+        <updated>2008-11-25T19:06:09Z</updated>
+
+        <summary>I spend a significant amount of my working day staring at a web
+            window pane within a browser. That browser may be written in C++ but
+            is increasingly likely to be written in JavaScript or Python of even
+            Java, not necessarily because these languages are any faster, but
+            because these languages are generally easier to work with.</summary>
+        <author>
+            <name>Kurt Cagle</name>
+
+        </author>
+
+        <category term="cloudcomputing" label="cloud computing"
+            scheme="http://www.sixapart.com/ns/types#tag"/>
+        <category term="programminglanguages" label="programming languages"
+            scheme="http://www.sixapart.com/ns/types#tag"/>
+        <category term="softwaredesign" label="software design"
+            scheme="http://www.sixapart.com/ns/types#tag"/>
+
+        <category term="virtualization" label="virtualization"
+            scheme="http://www.sixapart.com/ns/types#tag"/>
+        <category term="xml" label="xml"
+            scheme="http://www.sixapart.com/ns/types#tag"/>
+
+        <content type="html" xml:lang="en"
+            xml:base="http://broadcast.oreilly.com/"> I spend a significant
+            amount of my working day staring at a web window pane within a
+            browser. That browser may be written in C++ but is increasingly
+            likely to be written in JavaScript or Python of even Java, not
+            necessarily because these languages are any faster, but because
+            these languages are generally
+            &lt;i&gt;easier&lt;/i&gt; to work with. &lt;img
+            src="http://feeds.oreilly.com/~r/oreilly/xml/~4/464315562"
+            height="1" width="1"/&gt;</content>
+        <feedburner:origLink>http://broadcast.oreilly.com/2008/11/are-computer-languages-irrelev.html</feedburner:origLink>
+    </entry>
+
+    <entry>
+        <title>Interview with Jason Hunter of MarkMail.org</title>
+        <link rel="alternate" type="text/html"
+            href="http://feeds.oreilly.com/~r/oreilly/xml/~3/464156013/interview-with-jason-hunter-of.html"/>
+        <id>tag:broadcast.oreilly.com,2008://53.34266</id>
+
+        <published>2008-11-24T16:00:00Z</published>
+        <updated>2008-11-25T15:17:58Z</updated>
+
+        <summary>At OSCON 2008, Mike Hendrickson interviewed Jason Hunter about
+            MarkMail.org a site which archives 34 million email messages from
+            6,470 open source mailing lists. Mike asks Jason about the
+            technology behind Markmail.org and how MarkLogic's products can
+            scale to handle Petabyte-scale data</summary>
+        <author>
+            <name>Timothy M. O'Brien</name>
+
+        </author>
+
+        <category term="java" label="java"
+            scheme="http://www.sixapart.com/ns/types#tag"/>
+        <category term="opensource" label="open source"
+            scheme="http://www.sixapart.com/ns/types#tag"/>
+        <category term="xml" label="xml"
+            scheme="http://www.sixapart.com/ns/types#tag"/>
+
+
+        <content type="html" xml:lang="en"
+            xml:base="http://broadcast.oreilly.com/"> At OSCON 2008, Mike
+            Hendrickson interviewed Jason Hunter about &lt;a
+            href="http://www.markmail.org"&gt;MarkMail.org&lt;/a&gt;
+            a site which archives 34 million email messages from 6,470 open
+            source mailing lists. Mike asks Jason about the technology behind
+            Markmail.org and how MarkLogic's products can scale to handle
+            Petabyte-scale data &lt;img
+            src="http://feeds.oreilly.com/~r/oreilly/xml/~4/464156013"
+            height="1" width="1"/&gt;</content>
+        <feedburner:origLink>http://broadcast.oreilly.com/2008/11/interview-with-jason-hunter-of.html</feedburner:origLink>
+    </entry>
+
+    <entry>
+        <title>A sketch on recasting XBRL in Schematron</title>
+
+        <link rel="alternate" type="text/html"
+            href="http://feeds.oreilly.com/~r/oreilly/xml/~3/464156014/a-sketch-on-recasting-xbrl-in.html"/>
+        <id>tag:broadcast.oreilly.com,2008://53.34274</id>
+
+        <published>2008-11-24T09:53:54Z</published>
+        <updated>2008-11-25T02:41:13Z</updated>
+
+        <summary>In the next few years a lot of people will be generating XBRL
+            documents, in particular for financial filings to regulators. And a
+            few years later a lot of people will be figuring out what to do with
+            all that data too... I decided to take a look at whether XBRL could,
+            keeping the same instance syntax and concepts, have a schema
+            language transplant so that Schematron was used instead of
+            XSD.</summary>
+        <author>
+
+            <name>Rick Jelliffe</name>
+
+        </author>
+
+        <category term="schematron" label="schematron"
+            scheme="http://www.sixapart.com/ns/types#tag"/>
+        <category term="xbrl" label="xbrl"
+            scheme="http://www.sixapart.com/ns/types#tag"/>
+        <category term="xml" label="xml"
+            scheme="http://www.sixapart.com/ns/types#tag"/>
+
+        <content type="html" xml:lang="en"
+            xml:base="http://broadcast.oreilly.com/"> In the next few years a
+            lot of people will be generating XBRL documents, in particular for
+            financial filings to regulators. And a few years later a lot of
+            people will be figuring out what to do with all that data too... I
+            decided to take a look at whether XBRL could, keeping the same
+            instance syntax and concepts, have a schema language transplant so
+            that Schematron was used instead of XSD. &lt;img
+            src="http://feeds.oreilly.com/~r/oreilly/xml/~4/464156014"
+            height="1" width="1"/&gt;</content>
+
+        <feedburner:origLink>http://broadcast.oreilly.com/2008/11/a-sketch-on-recasting-xbrl-in.html</feedburner:origLink>
+    </entry>
+
+    <entry>
+        <title>Test Driving MarkLogic 4.0 XML Server</title>
+        <link rel="alternate" type="text/html"
+            href="http://feeds.oreilly.com/~r/oreilly/xml/~3/463877095/test-driving-marklogic-40-xml.html"/>
+        <id>tag:broadcast.oreilly.com,2008://53.34269</id>
+
+        <published>2008-11-23T20:35:17Z</published>
+        <updated>2008-11-24T19:07:15Z</updated>
+
+        <summary><![CDATA[XML databases have long been something of a niche category in the database world, trying with varying degrees of success to provide the level of ease and accessibility for semi-structured content that is a hallmark of SQL databases, while at the same time providing as much of the sophisticated processing that XPath enables for stand-alone documents. The need is certainly there &ndash; a significant amount of the total &quot;data&quot; in the world does not necessarily fall neatly into Ted Codd's relational table structures without significant shredding &ndash; yet XML databases have had a hard road to acceptance, in great part because each one offered their own (typically very distinct) mechanism for getting at that data.]]></summary>
+        <author>
+            <name>Kurt Cagle</name>
+
+        </author>
+
+        <category term="marklogic" label="marklogic"
+            scheme="http://www.sixapart.com/ns/types#tag"/>
+        <category term="xml" label="xml"
+            scheme="http://www.sixapart.com/ns/types#tag"/>
+        <category term="xmldatabase" label="xml database"
+            scheme="http://www.sixapart.com/ns/types#tag"/>
+        <category term="xquery" label="xquery"
+            scheme="http://www.sixapart.com/ns/types#tag"/>
+
+
+        <content type="html" xml:lang="en"
+            xml:base="http://broadcast.oreilly.com/"> XML databases have long
+            been something of a niche category in the database world, trying
+            with varying degrees of success to provide the level of ease and
+            accessibility for semi-structured content that is a hallmark of SQL
+            databases, while at the same time providing as much of the
+            sophisticated processing that XPath enables for stand-alone
+            documents. The need is certainly there &amp;ndash; a significant
+            amount of the total &amp;quot;data&amp;quot; in the world
+            does not necessarily fall neatly into Ted Codd's relational table
+            structures without significant shredding &amp;ndash; yet XML
+            databases have had a hard road to acceptance, in great part because
+            each one offered their own (typically very distinct) mechanism for
+            getting at that data. &lt;img
+            src="http://feeds.oreilly.com/~r/oreilly/xml/~4/463877095"
+            height="1" width="1"/&gt;</content>
+        <feedburner:origLink>http://broadcast.oreilly.com/2008/11/test-driving-marklogic-40-xml.html</feedburner:origLink>
+    </entry>
+
+    <entry>
+        <title>ISO standard 'office' formats overpromise compatability?</title>
+
+        <link rel="alternate" type="text/html"
+            href="http://feeds.oreilly.com/~r/oreilly/xml/~3/462431242/iso-standard-office-formats-ov.html"/>
+        <id>tag:broadcast.oreilly.com,2008://53.34260</id>
+
+        <published>2008-11-22T12:13:00Z</published>
+        <updated>2008-11-23T02:49:18Z</updated>
+
+        <summary>A friend in the industry who works with ODF gave me a heads-up
+            about a new Gartner report, available on Microsoft's site which he
+            describes as "delusional". Of the three pages, I pretty much agree
+            with their first and third pages. Towards the middle it gets a
+            little, err, nutty to me.</summary>
+        <author>
+
+            <name>Rick Jelliffe</name>
+
+        </author>
+
+        <category term="odf" label="odf"
+            scheme="http://www.sixapart.com/ns/types#tag"/>
+        <category term="ooxml" label="ooxml"
+            scheme="http://www.sixapart.com/ns/types#tag"/>
+        <category term="standards" label="standards"
+            scheme="http://www.sixapart.com/ns/types#tag"/>
+        <category term="xml" label="xml"
+            scheme="http://www.sixapart.com/ns/types#tag"/>
+
+        <content type="html" xml:lang="en"
+            xml:base="http://broadcast.oreilly.com/"> A friend in the industry
+            who works with ODF gave me a heads-up about a new Gartner report,
+            available on Microsoft's site which he describes as "delusional". Of
+            the three pages, I pretty much agree with their first and third
+            pages. Towards the middle it gets a little, err, nutty to me.
+            &lt;img
+            src="http://feeds.oreilly.com/~r/oreilly/xml/~4/462431242"
+            height="1" width="1"/&gt;</content>
+
+        <feedburner:origLink>http://broadcast.oreilly.com/2008/11/iso-standard-office-formats-ov.html</feedburner:origLink>
+    </entry>
+
+    <entry>
+        <title>Fake real-time blog from JTC1 Meeting, Nara, Japan</title>
+        <link rel="alternate" type="text/html"
+            href="http://feeds.oreilly.com/~r/oreilly/xml/~3/461108543/fake-real-time-blog-from-jtc1.html"/>
+        <id>tag:broadcast.oreilly.com,2008://53.34247</id>
+
+        <published>2008-11-21T08:12:59Z</published>
+        <updated>2008-11-21T19:24:53Z</updated>
+
+        <summary>ISO/IEC JTC1 (the international standards body that looks after
+            Information Technology standards) has just published two documents
+            from its recent meetings in Nara, Japan. Along with the publication
+            of IS29500 today, these represent a kind of line being drawn
+            underneath the OOXML episode. JTC1 also addresses the "one standard"
+            issue but needs to go further on reform of accelerated processes
+            like the contentious "fast-track" submission. </summary>
+        <author>
+            <name>Rick Jelliffe</name>
+
+        </author>
+
+        <category term="iso" label="iso"
+            scheme="http://www.sixapart.com/ns/types#tag"/>
+        <category term="jtc1" label="jtc1"
+            scheme="http://www.sixapart.com/ns/types#tag"/>
+        <category term="ooxml" label="ooxml"
+            scheme="http://www.sixapart.com/ns/types#tag"/>
+
+        <category term="standards" label="standards"
+            scheme="http://www.sixapart.com/ns/types#tag"/>
+        <category term="xml" label="xml"
+            scheme="http://www.sixapart.com/ns/types#tag"/>
+
+        <content type="html" xml:lang="en"
+            xml:base="http://broadcast.oreilly.com/"> ISO/IEC JTC1 (the
+            international standards body that looks after Information Technology
+            standards) has just published two documents from its recent meetings
+            in Nara, Japan. Along with the publication of IS29500 today, these
+            represent a kind of line being drawn underneath the OOXML episode.
+            JTC1 also addresses the "one standard" issue but needs to go further
+            on reform of accelerated processes like the contentious "fast-track"
+            submission. &lt;img
+            src="http://feeds.oreilly.com/~r/oreilly/xml/~4/461108543"
+            height="1" width="1"/&gt;</content>
+        <feedburner:origLink>http://broadcast.oreilly.com/2008/11/fake-real-time-blog-from-jtc1.html</feedburner:origLink>
+    </entry>
+
+    <entry>
+        <title>OOXML standards finally published and available free!</title>
+
+        <link rel="alternate" type="text/html"
+            href="http://feeds.oreilly.com/~r/oreilly/xml/~3/461108544/ooxml-standards-finally-publis.html"/>
+        <id>tag:broadcast.oreilly.com,2008://53.34246</id>
+
+        <published>2008-11-21T05:03:38Z</published>
+        <updated>2008-11-21T19:24:32Z</updated>
+
+        <summary>I am delighted to see that the free site for ISO publicly
+            available standards finally has the OOXML standards
+            available:</summary>
+        <author>
+
+            <name>Rick Jelliffe</name>
+
+        </author>
+
+        <category term="iso" label="iso"
+            scheme="http://www.sixapart.com/ns/types#tag"/>
+        <category term="ooxml" label="ooxml"
+            scheme="http://www.sixapart.com/ns/types#tag"/>
+        <category term="standards" label="standards"
+            scheme="http://www.sixapart.com/ns/types#tag"/>
+        <category term="xml" label="xml"
+            scheme="http://www.sixapart.com/ns/types#tag"/>
+
+        <content type="html" xml:lang="en"
+            xml:base="http://broadcast.oreilly.com/"> I am delighted to see that
+            the free site for ISO publicly available standards finally has the
+            OOXML standards available: &lt;img
+            src="http://feeds.oreilly.com/~r/oreilly/xml/~4/461108544"
+            height="1" width="1"/&gt;</content>
+
+        <feedburner:origLink>http://broadcast.oreilly.com/2008/11/ooxml-standards-finally-publis.html</feedburner:origLink>
+    </entry>
+
+    <entry>
+        <title>Schemas: stereotypes, archetypes or prototypes?</title>
+        <link rel="alternate" type="text/html"
+            href="http://feeds.oreilly.com/~r/oreilly/xml/~3/456357420/schemas-stereotypes-archetypes.html"/>
+        <id>tag:broadcast.oreilly.com,2008://53.34159</id>
+
+        <published>2008-11-17T07:32:37Z</published>
+        <updated>2008-11-17T19:37:02Z</updated>
+
+        <summary>The problem with schemas is this: sometimes we need prototypes,
+            sometimes we need archetypes, sometimes we need stereotypes, but
+            transitioning between them is not trivial in any schema language,
+            which may be optimised for particular cases.</summary>
+        <author>
+            <name>Rick Jelliffe</name>
+
+        </author>
+
+        <category term="schemas" label="schemas"
+            scheme="http://www.sixapart.com/ns/types#tag"/>
+        <category term="schematron" label="schematron"
+            scheme="http://www.sixapart.com/ns/types#tag"/>
+        <category term="xml" label="xml"
+            scheme="http://www.sixapart.com/ns/types#tag"/>
+
+
+        <content type="html" xml:lang="en"
+            xml:base="http://broadcast.oreilly.com/"> The problem with schemas
+            is this: sometimes we need prototypes, sometimes we need archetypes,
+            sometimes we need stereotypes, but transitioning between them is not
+            trivial in any schema language, which may be optimised for
+            particular cases. &lt;img
+            src="http://feeds.oreilly.com/~r/oreilly/xml/~4/456357420"
+            height="1" width="1"/&gt;</content>
+        <feedburner:origLink>http://broadcast.oreilly.com/2008/11/schemas-stereotypes-archetypes.html</feedburner:origLink>
+    </entry>
+
+    <entry>
+        <title>Open Comparability: against anti-benchmarking EULAs</title>
+        <link rel="alternate" type="text/html"
+            href="http://feeds.oreilly.com/~r/oreilly/xml/~3/456357421/open-comparability-boycott-and.html"/>
+        <id>tag:broadcast.oreilly.com,2008://53.34158</id>
+
+        <published>2008-11-17T04:27:07Z</published>
+        <updated>2008-11-17T19:36:31Z</updated>
+
+        <summary>It is time that legislators, regulators and procurement
+            officials put an end to end-user license agreements (EULA) that
+            prevent publication of comparative benchmarks. </summary>
+        <author>
+            <name>Rick Jelliffe</name>
+
+        </author>
+
+
+        <category term="eula" label="eula"
+            scheme="http://www.sixapart.com/ns/types#tag"/>
+        <category term="openness" label="openness"
+            scheme="http://www.sixapart.com/ns/types#tag"/>
+        <category term="standards" label="standards"
+            scheme="http://www.sixapart.com/ns/types#tag"/>
+        <category term="xml" label="xml"
+            scheme="http://www.sixapart.com/ns/types#tag"/>
+
+        <content type="html" xml:lang="en"
+            xml:base="http://broadcast.oreilly.com/"> It is time that
+            legislators, regulators and procurement officials put an end to
+            end-user license agreements (EULA) that prevent publication of
+            comparative benchmarks. &lt;img
+            src="http://feeds.oreilly.com/~r/oreilly/xml/~4/456357421"
+            height="1" width="1"/&gt;</content>
+        <feedburner:origLink>http://broadcast.oreilly.com/2008/11/open-comparability-boycott-and.html</feedburner:origLink>
+    </entry>
+
+    <entry>
+        <title>Warning: x = x + 1 May Be Hazardous to Your Brain</title>
+        <link rel="alternate" type="text/html"
+            href="http://feeds.oreilly.com/~r/oreilly/xml/~3/457462057/warning-x-x-1-may-be-hazardous.html"/>
+        <id>tag:broadcast.oreilly.com,2008://53.34155</id>
+
+        <published>2008-11-16T23:56:23Z</published>
+        <updated>2008-11-18T13:18:47Z</updated>
+
+        <summary>Many people that are just starting in their software career
+            have not been exposed to the contrast between two very different
+            approaches to solving server side scalability issues. And although
+            efficiently using 100 CPUs is not critical today, in the next five
+            years it will become critical for a projects success. In this
+            article we look at how the cognitive styles of functional and
+            imperative software will shape the computing industry.</summary>
+        <author>
+            <name>Dan McCreary</name>
+            <uri>http://www.danmccreary.com</uri>
+        </author>
+
+        <category term="concurrency" label="concurrency"
+            scheme="http://www.sixapart.com/ns/types#tag"/>
+        <category term="xml" label="xml"
+            scheme="http://www.sixapart.com/ns/types#tag"/>
+
+        <category term="xquery" label="xquery"
+            scheme="http://www.sixapart.com/ns/types#tag"/>
+        <category term="xrx" label="xrx"
+            scheme="http://www.sixapart.com/ns/types#tag"/>
+        <category term="xslt" label="xslt"
+            scheme="http://www.sixapart.com/ns/types#tag"/>
+
+        <content type="html" xml:lang="en"
+            xml:base="http://broadcast.oreilly.com/"> Many people that are just
+            starting in their software career have not been exposed to the
+            contrast between two very different approaches to solving server
+            side scalability issues. And although efficiently using 100 CPUs is
+            not critical today, in the next five years it will become critical
+            for a projects success. In this article we look at how the cognitive
+            styles of functional and imperative software will shape the
+            computing industry. &lt;img
+            src="http://feeds.oreilly.com/~r/oreilly/xml/~4/457462057"
+            height="1" width="1"/&gt;</content>
+        <feedburner:origLink>http://broadcast.oreilly.com/2008/11/warning-x-x-1-may-be-hazardous.html</feedburner:origLink>
+    </entry>
+
+
+    <entry>
+
+        <title>Validating Code Lists with Schematron</title>
+        <link rel="alternate" type="text/html"
+            href="http://feeds.oreilly.com/~r/oreilly/xml/~3/452157848/validating-code-lists-with-sch.html"/>
+        <id>tag:broadcast.oreilly.com,2008://53.34125</id>
+
+        <published>2008-11-13T09:44:21Z</published>
+        <updated>2008-11-17T04:09:34Z</updated>
+
+        <summary>How happy the man whose documents are clearly divided into
+            variant and invariant: data versus schemas. But in the real world,
+            often there are data values or structures which have fixed choices,
+            but not completely fixed: a twilight zone. Here is a summary of
+            various ways of validating lists using Schematron, including how to
+            validate data values that are drawn from multiple external
+            glossaries.</summary>
+
+        <author>
+            <name>Rick Jelliffe</name>
+
+        </author>
+
+        <category term="schematron" label="schematron"
+            scheme="http://www.sixapart.com/ns/types#tag"/>
+        <category term="validation" label="validation"
+            scheme="http://www.sixapart.com/ns/types#tag"/>
+        <category term="xml" label="xml"
+            scheme="http://www.sixapart.com/ns/types#tag"/>
+
+        <content type="html" xml:lang="en"
+            xml:base="http://broadcast.oreilly.com/"> How happy the man whose
+            documents are clearly divided into variant and invariant: data
+            versus schemas. But in the real world, often there are data values
+            or structures which have fixed choices, but not completely fixed: a
+            twilight zone. Here is a summary of various ways of validating lists
+            using Schematron, including how to validate data values that are
+            drawn from multiple external glossaries. &lt;img
+            src="http://feeds.oreilly.com/~r/oreilly/xml/~4/452157848"
+            height="1" width="1"/&gt;</content>
+
+        <feedburner:origLink>http://broadcast.oreilly.com/2008/11/validating-code-lists-with-sch.html</feedburner:origLink>
+    </entry>
+
+
+
+
+</feed>

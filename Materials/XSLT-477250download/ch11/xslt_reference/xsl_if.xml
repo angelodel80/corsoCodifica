@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<reference xml:id="xsl_if" scheme="xsl" specification="xsl-if">
+   <body>
+      <purpose>
+         <p>An instruction that defines a test condition, and a sequence
+            constructor to perform if the conditon evaluates to 'true'.</p>
+      </purpose>
+      <usage>
+         <p>An empty sequence is returned if the test fails.</p>
+         <p>It is equivalent to 'if-then' statements in other languages. If there are multiple conditions to test, you should use <element>xsl:choose</element>.</p>
+      </usage>
+      <contains label="contains" display="inline">       
+         <link href="xsl_sequence_constructor_type"/>
+      </contains>
+      <containedby label="substitution" display="inline">        
+         <link href="xsl_instruction"/>
+      </containedby>
+      <properties type="attribute">
+         <property xml:id="test">
+            <name>test</name>
+            <description>The XPath expression to evaluate</description>
+            <type>xsl:expression</type>
+            <required state="required"/>
+         </property>
+      </properties>
+      <properties>
+         <common label="attrgroup" display="inline">
+            <link href="ge_attr"/>
+            <link href="version_attr"/>
+         </common>
+      </properties>
+      <examples>
+         <codeblock><![CDATA[
+<h2>Attribute<xsl:if test="count(//property) gt 1">s</xsl:if>
+</h2>]]></codeblock>
+      </examples>
+      <related role="navigation" label="related">
+         <link href="xsl_er"/>
+         <link href="xsl_choose"/>
+      </related>
+   </body>
+</reference>

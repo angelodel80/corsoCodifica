@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- create-po.xml -->
+<po order-num="38292">
+  <customer id="4738" standing="Platinum">
+    <address>
+      <name>
+        <courtesy>Mr.</courtesy>
+        <given-name>Chester Hasbrouck</given-name>
+        <surname>Frisby</surname>
+      </name>
+      <street>1234 Main Street</street>
+      <city>Sheboygan</city>
+      <state>WI</state>
+      <zip>48392</zip>
+    </address>
+  </customer>
+  <line-items>
+    <line-item>
+      <partnum>28392-33-TT</partnum>
+      <partname>Turnip Twaddler</partname>
+      <quantity>3</quantity>
+      <price>9.95</price>
+    </line-item>
+    <line-item>
+      <partnum>28100-38-CT</partnum>
+      <partname>Clam Teaser</partname>
+      <quantity>7</quantity>
+      <price>39.95</price>
+    </line-item>
+  </line-items>
+</po>

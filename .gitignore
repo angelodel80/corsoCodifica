@@ -10,3 +10,5 @@ slides/latex/beamer/corsoCodificaTesto/Lezione-introduzione/l2l.tex
 *.snm
 *.toc
 *.vrb
+.DS_Store
+**/.DS_Store

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<reference xml:id="xsl_sequence_constructor_type" scheme="xsl">
+   <body>
+      <purpose>
+         <p>The group of elements used to construct sequences, which also includes literal result elements.</p>
+      </purpose>     
+      <contains label="contains" display="inline">
+         <link href="xsl_instruction"/>        
+         <link href="xsl_variable"/>
+      </contains>
+      <related role="navigation" label="related">        
+            <link href="xsl_er"/>
+      </related>
+   </body>
+</reference>

@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet href="../xsl/dita_topic2html.xsl" type="text/xsl"?>
+<reference xml:id="xsl_functions" scheme="xsl">
+   <body>
+      <purpose>
+         <p>This section provides details of functions that may only be used with XSLT stylesheets. These are distinct from XPath functions and user defined functions defined with the <element>xsl:function</element> instruction.</p>        
+      </purpose>
+      <reftable>
+         <link href="fn_current"/>
+         <link href="fn_current_group"/>
+         <link href="fn_current_grouping_key"/>
+         <link href="fn_document"/>
+         <link href="fn_element_available"/>
+         <link href="fn_format_date"/>
+         <link href="fn_format_number"/>
+         <link href="fn_function_available"/>
+         <link href="fn_generate_id"/>
+         <link href="fn_key"/>
+         <link href="fn_regex_group"/>
+         <link href="fn_system_property"/>
+         <link href="fn_type_available"/>
+         <link href="fn_unparsed_text"/>
+         <link href="fn_unparsed_entity"/>
+      </reftable>    
+   </body>
+</reference>

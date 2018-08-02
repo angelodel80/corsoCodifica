@@ -1,0 +1,5 @@
+<!ENTITY % biblinfo "(title,author?,cost?)">
+<!ELEMENT biblInfo %biblinfo;>
+<!ELEMENT title (#PCDATA)>
+<!ELEMENT author (#PCDATA)>
+<!ELEMENT cost (#PCDATA)>

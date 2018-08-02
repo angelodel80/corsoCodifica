@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- sample.xml -->
+<chapter>
+  <title>Branching and Control Elements</title>
+  <sect1>
+    <title>Goals of This Chapter</title>
+    <para>By the end of this chapter, you should:</para>
+    <itemizedlist>
+      <listitem>
+        <para>Know the XSLT elements used for branching and control</para>
+      </listitem>
+      <!-- ... -->
+    </itemizedlist>
+  </sect1>
+  <sect1>
+    <title>Branching Elements of XSLT</title>
+    <!-- ... -->
+    <programlisting>
+&lt;xsl:if test="count(zone) &gt; 2"&gt;
+  &lt;xsl:text&gt;Applicable zones: &lt;/xsl:text&gt;
+  &lt;xsl:apply-templates select="zone"/&gt;
+&lt;/xsl:if&gt;</programlisting>
+     <!-- ... -->
+        <programlisting>
+&lt;xsl:template match="table-row"&gt;
+  &lt;tr&gt;
+    &lt;xsl:attribute name="bgcolor"&gt;
+     &lt;xsl:choose&gt;
+        &lt;xsl:when test="@bgcolor"&gt;
+          &lt;xsl:value-of select="@bgcolor"/&gt;
+        &lt;/xsl:when&gt;
+        &lt;xsl:when test="position() mod 4 = 0"&gt;
+          &lt;xsl:text&gt;black&lt;/xsl:text&gt;
+        &lt;/xsl:when&gt;
+        &lt;xsl:when test="position() mod 4 = 1"&gt;
+          &lt;xsl:text&gt;green&lt;/xsl:text&gt;
+        &lt;/xsl:when&gt;
+        &lt;xsl:when test="position() mod 4 = 2"&gt;
+          &lt;xsl:text&gt;red&lt;/xsl:text&gt;
+        &lt;/xsl:when&gt;
+        &lt;xsl:otherwise&gt;
+          &lt;xsl:text&gt;blue&lt;/xsl:text&gt;
+        &lt;/xsl:otherwise&gt;
+      &lt;/xsl:choose&gt;
+    &lt;/xsl:attribute&gt;
+    &lt;xsl:apply-templates select="*"/&gt;
+  &lt;/tr&gt;
+&lt;/xsl:template&gt;</programlisting>
+    <!-- ... -->
+  </sect1>
+</chapter>

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+
+<term xml:id="css">
+   <label>CSS</label>
+   <altlabel>Cascading Style Sheet</altlabel>
+   <definition>A mechanism for adding style properties such as fonts, colors, spacing to marked up content.</definition>
+   <broader term="theme"/>
+</term>

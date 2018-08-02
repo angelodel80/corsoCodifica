@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- list.xsd -->
+<xs:schema 
+  xmlns="http://www.oreilly.com/xslt"
+  targetNamespace="http://www.oreilly.com/xslt"
+  xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+  <xs:element name="person">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="name"/>
+        <xs:element ref="birthday"/>
+        <xs:element ref="age"/> 
+        <xs:element ref="priorAddresses"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+
+  <xs:simpleType name="state-abbr-type">
+    <xs:restriction base="xs:string">
+      <xs:length value="2"/>
+    </xs:restriction>
+  </xs:simpleType>
+
+  <xs:simpleType name="state-abbr-list-type">
+    <xs:list itemType="state-abbr-type"/>
+  </xs:simpleType>
+
+  <xs:element name="name" type="xs:string"/>
+  <xs:element name="birthday" type="xs:date"/>
+  <xs:element name="age" type="xs:positiveInteger"/> 
+  <xs:element name="priorAddresses">
+    <xs:complexType>
+      <xs:attribute name="states" type="state-abbr-list-type"/>
+    </xs:complexType>
+  </xs:element>
+
+</xs:schema>

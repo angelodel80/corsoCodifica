@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- paragraph.xsd -->
+<xs:schema 
+  xmlns="http://www.oreilly.com/xslt"
+  targetNamespace="http://www.oreilly.com/xslt"
+  xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+  <xs:element name="a">
+    <xs:complexType>
+      <xs:simpleContent>
+        <xs:extension base="xs:string">
+          <xs:attribute name="href" type="xs:string"/>
+        </xs:extension>
+      </xs:simpleContent>
+    </xs:complexType>
+  </xs:element>
+
+  <xs:element name="b">
+    <xs:complexType mixed="true">
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element ref="a"/>
+        <xs:element ref="br"/>
+        <xs:element ref="code"/>
+        <xs:element ref="i"/>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+
+  <xs:element name="br"/>
+
+  <xs:element name="code">
+    <xs:complexType mixed="true">
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element ref="a"/>
+        <xs:element ref="b"/>
+        <xs:element ref="br"/>
+        <xs:element ref="i"/>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+ 
+  <xs:element name="i">
+    <xs:complexType mixed="true">
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element ref="a"/>
+        <xs:element ref="b"/>
+        <xs:element ref="br"/>
+        <xs:element ref="code"/>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+
+  <xs:element name="img">
+    <xs:complexType>
+      <xs:attribute name="href" type="xs:string"/>
+    </xs:complexType>
+  </xs:element>
+
+  <xs:element name="p">
+    <xs:complexType mixed="true">
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element ref="a"/>
+        <xs:element ref="b"/>
+        <xs:element ref="br"/>
+        <xs:element ref="code"/>
+        <xs:element ref="i"/>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+  
+</xs:schema>

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- codelisting.xml -->
+<chapter>
+  <title>Some really great code</title>
+  <para>Here is one of my favorite code listings:</para>
+  <programlisting>
+public class HelloWorld
+{
+  public static void main(String[] args)
+  {
+    System.out.println("Hello, World!");
+  }
+}
+  </programlisting>
+  <para>I wrote that code all by myself!</para>
+</chapter>

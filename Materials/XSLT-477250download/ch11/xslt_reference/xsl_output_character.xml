@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<reference xml:id="xsl_output_character" scheme="xsl" specification="character-maps">
+   <body>
+      <purpose>
+         <p>Defines the substitution of a single Unicode character within an <element>xsl:character-map</element> declaration.</p>
+      </purpose>     
+      <containedby label="containedby" display="inline">
+         <link href="xsl_character_map"/>
+      </containedby>
+      <properties type="attribute">
+         <property xml:id="character">
+            <name>character</name>
+            <description>The Unicode character to be replaced</description>
+            <type>xsl:char</type>
+            <required state="required"/>
+         </property> 
+         <property xml:id="string">
+            <name>string</name>
+            <description>The replacement string to output</description>
+            <type>xs:string</type>
+            <required state="required"/>
+         </property>       
+      </properties>
+      <properties>
+         <common label="attrgroup" display="inline">
+            <link href="ge_attr"/>
+            <link href="version_attr"/>
+         </common>
+      </properties>
+      <examples>
+         <codeblock><![CDATA[
+<xsl:character-map name="nbsp">	
+   <xsl:output-character character="&#160;" string="&amp;nbsp"/>
+</xsl:character-map>]]></codeblock>
+      </examples>
+      <related role="navigation" label="related" >
+         <link href="xsl_er"/> 
+      </related>
+   </body>
+</reference>

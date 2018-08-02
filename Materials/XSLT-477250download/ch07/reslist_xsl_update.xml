@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<collection xml:id="xsl">
+   <title>XSLT elements</title>
+   <entry xml:id="xsl_stylesheet">
+      <title>xsl:stylesheet</title>
+      <content src="../xslt_reference/"/>
+      <category term="element_reference" scheme="resource"/>
+      <published>2008-11-04T06:58:28Z</published>
+   </entry>
+   <entry xml:id="xsl_declaration">
+      <title>xsl:declaration</title>
+      <content src="../xslt_reference/"/>
+      <category term="element_reference" scheme="resource"/>
+      <published>2008-11-04T06:58:28Z</published>
+   </entry>
+   <entry xml:id="xsl_output">
+      <title>xsl:output</title>
+      <content src="../xslt_reference/"/>
+      <category term="element_reference" scheme="resource"/>
+      <published>2008-12-19T20:13:28Z</published>
+   </entry>
+   <entry xml:id="xsl_attribute_set">
+      <title>xsl:attribute-set</title>
+      <content src="../xslt_reference/"/>
+      <category term="element_reference" scheme="resource"/>
+      <published>2008-11-04T06:58:28Z</published>
+   </entry>
+   <entry xml:id="xsl_include">
+      <title>xsl:include</title>
+      <content src="../xslt_reference/"/>
+      <category term="element_reference" scheme="resource"/>
+      <published>2008-11-04T06:58:28Z</published>
+   </entry>
+   <entry xml:id="xsl_import">
+      <title>xsl:import</title>
+      <content src="../xslt_reference/"/>
+      <category term="element_reference" scheme="resource"/>
+      <published>2008-11-04T06:58:28Z</published>
+   </entry>
+   <entry xml:id="xsl_key">
+      <title>xsl:key</title>
+      <content src="../xslt_reference/"/>
+      <category term="element_reference" scheme="resource"/>
+      <published>2008-11-04T06:58:28Z</published>
+   </entry>
+   <entry xml:id="xsl_template">
+      <title>xsl:template</title>
+      <content src="../xslt_reference/"/>
+      <category term="element_reference" scheme="resource"/>
+      <published>2008-11-04T06:58:28Z</published>
+   </entry>
+   <entry xml:id="xsl_transform">
+      <title>xsl:transform</title>
+      <content src="../xslt_reference/"/>
+      <category term="element_reference" scheme="resource"/>
+      <published>2008-11-04T06:58:28Z</published>
+   </entry>
+   <entry xml:id="xsl_instruction">
+      <title>xsl:instruction</title>
+      <content src="../xslt_reference/"/>
+      <category term="concept" scheme="resource"/>
+      <published>2008-11-04T06:58:28Z</published>
+   </entry>
+   <entry xml:id="xsl_apply_imports">
+      <title>xsl:apply-imports</title>
+      <content src="../xslt_reference/"/>
+      <category term="element_reference" scheme="resource"/>
+      <published>2008-11-04T06:58:28Z</published>
+   </entry>
+   <entry xml:id="xsl_attribute">
+      <title>xsl:attribute</title>
+      <content src="../xslt_reference/"/>
+      <category term="element_reference" scheme="resource"/>
+      <published>2008-11-04T06:58:28Z</published>
+   </entry>
+   <entry xml:id="xsl_param">
+      <title>xsl:param</title>
+      <content src="../xslt_reference/"/>
+      <category term="element_reference" scheme="resource"/>
+      <published>2008-11-04T06:58:28Z</published>
+   </entry>
+   <entry xml:id="xsl_with_param">
+      <title>xsl:with-param</title>
+      <content src="../xslt_reference/"/>
+      <category term="element_reference" scheme="resource"/>
+      <published>2008-11-04T06:58:28Z</published>
+   </entry>
+   <entry xml:id="xsl_variable">
+      <title>xsl:variable</title>
+      <content src="../xslt_reference/"/>
+      <category term="element_reference" scheme="resource"/>
+      <published>2008-11-04T06:58:28Z</published>
+   </entry>
+   <entry xml:id="xsl_if">
+      <title>xsl:if</title>
+      <content src="../xslt_reference/"/>
+      <category term="element_reference" scheme="resource"/>
+      <published>2008-11-04T06:58:28Z</published>
+   </entry>
+   <entry xml:id="xsl_choose">
+      <title>xsl:choose</title>
+      <content src="../xslt_reference/"/>
+      <category term="element_reference" scheme="resource"/>
+      <published>2008-11-04T06:58:28Z</published>
+   </entry>
+   <entry xml:id="xsl_when">
+      <title>xsl:when</title>
+      <content src="../xslt_reference/"/>
+      <category term="element_reference" scheme="resource"/>
+      <published>2008-11-04T06:58:28Z</published>
+   </entry>
+   <entry xml:id="xsl_otherwise">
+      <title>xsl:otherwise</title>
+      <content src="../xslt_reference/"/>
+      <category term="element_reference" scheme="resource"/>
+      <published>2008-11-04T06:58:28Z</published>
+   </entry>
+   <entry xml:id="xsl_for_each">
+      <title>xsl:for-each</title>
+      <content src="../xslt_reference/"/>
+      <category term="element_reference" scheme="resource"/>
+      <published>2008-11-04T06:58:28Z</published>
+   </entry>
+   <entry xml:id="xsl_result_document">
+      <title>xsl:result-document</title>
+      <content src="../xslt_reference/"/>
+      <category term="element_reference" scheme="resource"/>
+   </entry>
+</collection>

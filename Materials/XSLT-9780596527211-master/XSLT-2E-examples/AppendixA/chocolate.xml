@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- chocolate.xml -->
+<report month="8" year="2006">
+  <title>Chocolate bar sales</title>
+  <brand>
+    <name>Lindt</name>
+    <units>27408</units>
+  </brand>
+  <brand>
+    <name>Callebaut</name>
+    <units>8203</units>
+  </brand>
+  <brand>
+    <name>Valrhona</name>
+    <units>22101</units>
+  </brand>
+  <brand>
+    <name>Perugina</name>
+    <units>14336</units>
+  </brand>
+  <brand>
+    <name>Ghirardelli</name>
+    <units>19268</units>
+  </brand>
+</report>

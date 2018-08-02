@@ -1,0 +1,32 @@
+<?xml version="1.0"?>
+<!-- items-to-number.xml -->
+<book>
+  <chapter><title>Alfa Romeo</title>
+    <sect1><title>Bentley</title></sect1>
+    <sect1><title>Chevrolet</title>
+      <sect2><title>Dodge</title>
+        <sect3><title>Eagle</title></sect3>
+      </sect2>
+    </sect1>
+  </chapter>
+  <chapter><title>Ford</title>
+    <sect1><title>GMC</title>
+      <sect2><title>Honda</title>
+        <sect3><title>Isuzu</title></sect3>
+        <sect3><title>Javelin</title></sect3>
+        <sect3><title>K-Car</title></sect3>
+        <sect3><title>Lincoln</title></sect3>
+      </sect2>
+      <sect2><title>Mercedes</title></sect2>
+      <sect2><title>Nash</title>
+        <sect3><title>Opel</title></sect3>
+        <sect3><title>Pontiac</title></sect3>
+      </sect2>
+      <sect2><title>Quantum</title>
+        <sect3><title>Rambler</title></sect3>
+        <sect3><title>Studebaker</title></sect3>
+      </sect2>
+    </sect1>
+    <sect1><title>Toyota</title></sect1>
+  </chapter>
+</book>

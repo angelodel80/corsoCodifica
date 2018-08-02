@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+<!-- carlist.xml -->
+<cars>
+  <make>Alfa Romeo</make>
+  <make>Bentley</make>
+  <make>Chevrolet</make>
+  <make>Dodge</make>
+  <make>Eagle</make>
+  <make>Ford</make>
+  <make>GMC</make>
+  <make>Honda</make>
+  <make>Isuzu</make>
+  <model>Javelin</model>
+  <model>K-Car</model>
+  <make>Lincoln</make>
+  <make>Mercedes</make>
+  <make>Nash</make>
+  <make>Opel</make>
+  <make>Pontiac</make>
+  <model>Quantum</model>
+  <model>Rambler</model>
+  <make>Studebaker</make>
+</cars>

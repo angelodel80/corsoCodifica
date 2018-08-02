@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<reference xml:id="fn_current_grouping_key" scheme="xsl">
+   <body>
+      <purpose>
+         <p>Returns the value of the <code>group-by</code> or
+               <code>group-adjacent</code> expression for the group being
+            processed with an <element>xsl:for-each-group</element> instruction.
+            There is no key when grouping by patterns.</p>
+      </purpose>
+      <syntax>current-grouping-key()</syntax>
+      <examples>
+         <codeblock><![CDATA[
+<xsl:for-each-group select="//product" group-by="@store">
+   <h2>
+      <xsl:value-of select="current-grouping-key()"/>
+   </h2>
+   <table cellspacing="0" width="50%">
+      <tr>
+         <th xsl:use-attribute-sets="th_first">SKU</th>
+         <th xsl:use-attribute-sets="col">Color</th>
+         <th xsl:use-attribute-sets="col">Units</th>
+      </tr>
+      <xsl:for-each select="current-group()">
+         <tr>
+            <th xsl:use-attribute-sets="td_first">
+               <xsl:value-of select="@sku"/>
+            </th>
+            <td xsl:use-attribute-sets="row">
+               <xsl:value-of select="@colour"/>
+            </td>
+            <td xsl:use-attribute-sets="row">
+               <xsl:value-of select="@units"/>
+            </td>
+         </tr>
+      </xsl:for-each>
+      <tr>
+         <th xsl:use-attribute-sets="td_first">
+            <strong>Total</strong>
+         </th>
+         <td xsl:use-attribute-sets="row">&#160;</td>
+         <td xsl:use-attribute-sets="row">
+            <xsl:value-of select="sum(current-group()/@units)"/>
+         </td>
+      </tr>
+   </table>
+</xsl:for-each-group>]]></codeblock>
+      </examples>
+      <related label="related">
+         <link href="xsl_functions"/>
+         <link href="xsl_for_each_group"/>
+      </related>
+   </body>
+</reference>

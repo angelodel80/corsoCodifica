@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<reference xml:id="xsl_fallback" scheme="xsl" specification="xsl-fallback">
+   <body>
+      <purpose>
+         <p>An instruction that defines fallback behavior when there is no
+            implementation of a containing instruction.</p>
+      </purpose>
+      <usage>
+         <p>Typically this element is useful when it is uncertain whether or not
+            a particular vendor implemented extension is available, or to define
+            alternative processing when a version 1.0 processor encounters the
+            version 2.0 instructions <element>xsl:next-match</element> or
+               <element>xsl:analyze-string</element>.</p>
+      </usage>
+
+      <containedby label="substitution" display="inline">
+         <link href="xsl_instruction"/>
+      </containedby>
+      
+      <related role="navigation" label="related">
+         <link href="xsl_er"/>
+         <link href="xsl_next_match"/>
+         <link href="xsl_analyze_string"/>
+      </related>
+   </body>
+</reference>

@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?><?xml-stylesheet href="../xsl/reference2html.xsl" type="text/xsl"?>
+<reference xml:id="ge_attr" scheme="xsl">
+   <body>
+      <purpose>
+         <p>Generic element attributes, which may be expressed on any XSLT or literal result elements.</p>
+      </purpose>
+      <usage>They are typically used on the <element>xsl:stylesheet</element> element.</usage>
+      <properties type="attribute">
+         <property xml:id="default_collation">
+            <name>default-collation</name>
+            <description>Used to apply styling to the element</description>
+            <type>xs:anyURI</type>
+            <required state="optional"/>
+         </property>
+         <property xml:id="exclude_result_prefixes">
+            <name>exclude-result-prefixes</name>
+            <description>A space-separated list of namespace prefixes to exclude from the output</description>
+            <type>xs:NCName</type>
+            <required state="optional"/>
+         </property>
+         <property xml:id="extension_element_prefixes">
+            <name>extension-element-prefixes</name>
+            <description>A space-separated list of namespace prefixes which identify extension elements</description>
+            <type>xs:NCName</type>
+            <required state="optional"/>
+         </property>
+         <property xml:id="use_when">
+            <name>use-when</name>
+            <description>Whether or not this element and its children should be included in the stylesheet.</description>
+            <type>xsl:expression</type>
+            <required state="optional"/>
+         </property>
+         <property xml:id="xpath_default_namespace">
+            <name>xpath_default_namespace</name>
+            <description>The namespace URI to be assumed for unprefixed names</description>
+            <type>xs:anyURI</type>
+            <required state="optional"/>
+         </property>
+      </properties>
+      <related>
+            <link href="xsl_er"/></related>
+   </body>
+</reference>

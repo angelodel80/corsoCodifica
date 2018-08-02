@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<reference xml:id="xsl_apply_imports" scheme="xsl"
+   specification="xsl-apply-imports">
+   <body>
+      <purpose>
+         <p>An instruction, used within a template body, to override an existing
+            global variable or parameter, or a template rule with one of the
+            same name in an imported module.</p>
+      </purpose>
+      <usage>
+         <p><element>xsl:apply-imports</element> is useful when you want to
+            partially override a rule rather than replace it entirely.</p>
+         <p><element>xsl:next-match</element> provides an alternative method of
+            achieving the same result.</p>
+      </usage>
+      <contains label="contains" display="inline">
+         <link href="xsl_with_param"/>
+      </contains>
+      <containedby label="substitution" display="inline">
+         <link href="xsl_instruction"/>
+      </containedby>
+      <properties>
+         <common label="attrgroup" display="inline">
+            <link href="ge_attr"/>
+            <link href="version_attr"/>
+         </common>
+      </properties>
+      <examples>
+         <codeblock><![CDATA[
+<xsl:variable name="prod">product_name</xsl:variable>        
+<xsl:variable name="log">jlog.xml</xsl:variable>
+<xsl:variable name="root">[root]/$prod</xsl:variable>
+<xsl:variable name="bin">[root]/$prod/bin</xsl:variable>
+     
+<xsl:template match="filepath">
+   <span class="filepath">
+      <xsl:choose>
+         <xsl:when test="@type='log'">
+            <xsl:value-of select="$log"/>
+         </xsl:when>
+         <xsl:when test="@type='root'">
+            <xsl:value-of select="$root"/>
+         </xsl:when>
+         <xsl:when test="@type='bin'">
+            <xsl:value-of select="$bin"/>
+         </xsl:when>           
+         <xsl:otherwise>
+            <xsl:apply-imports/>
+         </xsl:otherwise>
+      </xsl:choose>
+   </span>
+</xsl:template>]]></codeblock>
+      </examples>
+      <related role="navigation" label="related">
+         <link href="xsl_er"/>
+         <link href="xsl_next_match"/>
+      </related>
+   </body>
+</reference>
