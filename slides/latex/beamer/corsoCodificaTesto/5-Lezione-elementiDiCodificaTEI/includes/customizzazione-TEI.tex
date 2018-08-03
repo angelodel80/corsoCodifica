@@ -1,1 +1,77 @@
 % ODD document, Selezione dei Moduli per lo schema, nuovi elementi, profilo personalizzato TEI, capitolo 22 delle linee guida (Documentation Elements), capitolo 23 delle linee guida (Using the TEI)
+
+% Almost no-one needs everything defined by the TEI, yet every one of its elements is of use or interest to someone. How should you go about choosing just the parts of the TEI you need?
+
+% serious use of the TEI requires careful consideration of exactly which of its elements is appropriate to the of things which the project needs to specify more exactly than the TEI does.
+
+% The TEI provides a special set of elements which can be used to create such a schema specification.
+
+% a document using these elements is provides information for a computer to process along with documentation of that information for a human being to read in a single integrated XML document.
+
+% tei_ all tei_lite epidoc
+
+%% esempio da Exemplars tei_lite.odd
+% A quick glance at the XML source code for the TEI Lite ODD shows that it appears to be a typical TEI document
+
+% <schemaSpec ident="tei_lite" start="TEI teiCorpus">
+%    <moduleRef key="analysis" include="interp interpGrp pc s w" />
+%    <moduleRef key="linking" include="anchor seg" />
+%    <moduleRef key=" tagdocs " include="att code eg gi ident val "/> 
+%    <moduleRef key="tei "/> 
+%    <moduleRef key="textstructure " include="TEI argument back body byline closer dateline div docAuthor docDate docEdition docImprint docTitle epigraph front group imprimatur opener postscript salute signed text titlePage titlePart trailer "/> 
+% </schemaSpec>
+
+% attributi @include e @exclude
+
+% TEI currently defines 22 modules
+% foto con la tabella
+
+% definizione degli elementi, degli attributi, dei datatype e dei valori di default 
+
+% modifica agli elementi e attributi dei Moduli
+% <classSpec type="atts" ident="att.datable.w3c" module="tei" mode="change">
+%    <attList> mode="delete"/>
+%        <attDef ident="notAfter" mode="delete" />
+%        <attDef ident="from" mode="delete" />
+%        <attDef ident="to" mode="delete" /> 
+%    </attList>
+% </classSpec>
+
+
+%% esempio epidoc
+
+% <elementSpec   ident="div"   mode="change"   module="textstructure">
+%    <attList>
+%        <attDef ident="type"     mode="replace"     usage="req">
+%            <valList type="closed">
+%                <valItem ident="apparatus">
+%                    <desc>to contain apparatus criticus or textual notes</desc>
+%                    </valItem>
+%                    <valItem ident="bibliography">
+%                        <desc>to contain bibliographical information, previous publications,            etc.
+%                        </desc>
+%                        </valItem>
+%                        <valItem ident="commentary">
+%                            <desc>to contain all editorial commentary, historical/prosopographical            discussion, etc.</desc>
+%                            </valItem>
+%                            <valItem ident="edition">
+%                                <desc>to contain the text of the edition itself; may include multiple            text-parts
+%                                </desc>
+%                                </valItem>
+%                                <valItem ident="textpart">
+%                                    <desc>used to divide a div[type=edition] into multiple parts (fragments,            columns,
+%                                        faces, etc.)</desc>
+%                                    </valItem>
+%                                    <valItem ident="translation">
+%                                        <desc>to contain a translation of the text into one or more modern            languages
+%                                        </desc>
+%                                        </valItem>
+%                                       </valList>
+%        </attDef>
+%    </attList>
+% </elementSpec>
+
+% esempio aggiunta nuovo elemento: <SpaciesName />
+
+%  Choices can be made explicit in a customized schema, and hence tell us which of the many very different approaches to tagging an individual’s name has been adopted in a given set of documents.
+

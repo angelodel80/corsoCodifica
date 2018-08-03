@@ -1,0 +1,87 @@
+% Encoding descsription (<encodingDesc />) is used to supply information about almost any aspect of the encoding process itself
+
+%% esempio descrizione della codifica
+% <encodingDesc>
+%    <projectDesc>
+%        <p>Texts collected for use in the Claremont Shakespeare Clinic, June 1990.</p>
+%    </projectDesc>
+%    <samplingDecl>
+%        <p>Each text contains a sample of up to 2000 words, running from the start of the document to the end of the sentence
+%            after the 2000 word mark. For the purposes of word counting, hyphens and apostrophes were treated as spaces.
+%            </p>
+%    </samplingDecl>
+%    <editorialDecl>
+%        <normalization>
+%            <p>Word forms broken by end of line hyphenation have been reconstructed without comment. The hyphen has been removed
+%                except for hyphenated forms attested elsewhere in the text. </p>
+%        </normalization>
+%        <quotation marks="all" form="std">
+%            <p>All quotation marks have been removed. Direct speech is represented by the use of the
+%                <gi>said</gi> tag; other quoted material is represented by means of the
+%                <gi>q</gi> tag. </p>
+%        </quotation>
+%    </editorialDecl>
+% </encodingDesc>
+
+%% for human reader and for automated process
+
+% esempio charDecl
+% <charDecl>
+%    <glyph xml:id="z103">
+%        <glyphName>LATIN LETTER Z WITH TWO STROKES</glyphName>
+%        <mapping type="standardized">z</mapping>
+%        <mapping type="PUA">U+E304</mapping>
+%    </glyph>
+% </charDecl>
+
+% segue nel testo 
+% <p> ... mulct<g ref="#z103"/> ... </p>
+
+% tassonomia
+
+% <classDecl>
+%    <taxonomy xml:id="size">
+%        <category xml:id="large">
+%            <catDesc>story occupies more than half a page</catDesc>
+%        </category>
+%        <category xml:id="medium">
+%            <catDesc>story occupies between quarter and a half page</catDesc>
+%        </category>
+%        <category xml:id="small">
+%            <catDesc>story occupies less than a quarter page</catDesc>
+%        </category>
+%        <!-- etc -->
+%    </taxonomy>
+%    <taxonomy xml:id="topic">
+%        <category xml:id="politics-domestic">
+%            <catDesc>Refers to domestic political events</catDesc>
+%        </category>
+%        <category xml:id="politics-foreign">
+%            <catDesc>Refers to foreign political events</catDesc>
+%        </category>
+%        <category xml:id="social-women">
+%            <catDesc>refers to role of women in society</catDesc>
+%        </category>
+%        <category xml:id="social-servants">
+%            <catDesc>refers to role of servants in society</catDesc>
+%        </category>
+%        <!-- etc -->
+%    </taxonomy>
+% </classDecl>
+
+% uso nel testo 
+% <catRef target="#small #social-women"/>
+
+%% esempio dichiarazione dei tag
+% <tagsDecl>
+%    <rendition xml:id="IT" scheme="css">font-style:italic</rendition>
+%    <rendition xml:id="FontRoman" scheme="css">font-family: serif</rendition>
+%    <namespace name="http://www.tei-c.org/ns/1.0">
+%        <tagUsage gi="emph" render="#IT" />
+%        <tagUsage gi="hi" render="#IT" />
+%        <tagUsage gi="text" render="#FontRoman" />
+%    </namespace>
+% </tagsDecl>
+
+% uso nel testo
+% @rendition attribute
