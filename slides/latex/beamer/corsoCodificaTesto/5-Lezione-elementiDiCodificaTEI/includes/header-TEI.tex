@@ -1,0 +1,83 @@
+%% frame 01
+% Every TEI document must have a TEI Header, represented by a <teiHeader> element.
+% The TEI header has four main components,
+% file description, encoding description, profile description, revision description
+
+% esempio TEI header Minimale
+% <teiHeader>
+%    <fileDesc>
+%        <titleStmt>
+%            <title>Title of the work</title>
+%        </titleStmt>
+%        <publicationStmt>
+%            <p>Information about the publication of the work</p>
+%        </publicationStmt>
+%        <sourceDesc>
+%            <p>Information about the source from which the work was derived</p>
+%        </sourceDesc>
+%    </fileDesc>
+% </teiHeader>
+
+% Rifarsi al capitolo due delle linee guida per una descrizione esaustiva e sistematica
+
+% esempio TEI descrizione file
+% tre componenti obbligatorie: title statement, publication statement, descrizione della fonte.
+
+% <titleStmt>
+%    <title xml:lang="sk">Yogadarśanam (arthāt yogasūtrapūphah).</title>
+%    <title>The Yoga sūtras of Patañjali: a digital edition.</title>
+%    <author>Patañjali</author>
+%    <funder>Wellcome Institute for the History of Medicine</funder>
+%    <principal>Dominik Wujastyk</principal>
+%    <respStmt>
+%        <name>Wieslaw Mical</name>
+%        <resp>data entry and proof</resp>
+%    </respStmt>
+%    <respStmt> 
+%        <name>Jan Hajic</name> 
+%        <resp>conversion to TEI-conformant markup</resp> 
+%    </respStmt>
+% </titleStmt>
+
+% esempio publication statement
+
+%% Descrizione della fonte
+% document formally the object or objects from which the TEI document has been derived, using traditional bibliographic
+% Born Digital
+% Printed Source
+% sbobbinatura
+% manoscritto (msDesc)
+
+%% Esempio di sourceDesc
+% <sourceDesc>
+%    <bibl xml:id="Sue1846">
+%        <author>
+%            <surname>Sue</surname>,
+%            <forename>Eugène</forename>
+%        </author>
+%        <title level="m">Martin, l’enfant trouvé : Mémoires d’un valet de chambre</title>
+%        <imprint>
+%            <publisher>C. Muquardt</publisher>
+%            <pubPlace>Bruxelles</pubPlace>
+%            <pubPlace>Leipzig</pubPlace>
+%            <date when="1846">MDCCCXLVI</date>
+%        </imprint>
+%    </bibl>
+% </sourceDesc>
+
+
+% file description 
+\subsection{File Description}
+\input{filedesc.tex}
+
+% encoding description
+\subsection{Encoding Description}
+\input{encoding.tex}
+
+% profile description
+\subsection{Profile Description}
+\input{profile.tex}
+
+% revision description
+\subsection{Revision Description}
+\input{revision.tex}
