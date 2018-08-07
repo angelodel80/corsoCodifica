@@ -5,11 +5,126 @@
 % libro ciotti aracne Testo e automi: https://core.ac.uk/download/pdf/53833252.pdf
 % Domenico Fiormonte (slide)
 
-% introdurre alcuni problemi teorici generali, che costituiscono lo sfondo delle nostre ricerche.
+% introdurre alcuni problemi teorici generali, che costituiscono la base delle nostre ricerche.
 
 % definizione di Codifica Informatica/digitale dei testi (Ciotti):
 %codifica informatica dei testi intendiamo la rappresentazione formale di un testo ad un qualche livello descrittivo, su di un supporto digitale, in un formato utilizzabile da un elaboratore (Machine Readable Form) mediante un opportuno linguaggio informatico
 
+% L’informatica allo stato attuale è in grado di fornire allo studioso di scienze umane una serie di tecnologie per implementare dei sistemi di rappresentazione testuale.
+% Non poteva dunque rimanere immune da tale pervasiva influenza il sapere umanistico e letterario.
+
+% la discussione sulla rappresentazione digitale dei testi ha rivelato un intreccio di complesse questioni teoriche e pratiche
+
 % modello OHCO e altro (What text really is, inadequacy of markup)
 % linguaggi di Markup
 % prospettiva documento centrica e prospettiva data centrica
+
+
+\documentclass{beamer}
+    
+%    \usepackage[english]{babel}
+    %\usepackage[latin1]{inputenc}
+    %\usepackage[T1]{fontenc}
+
+\mode<presentation>{
+  \setbeamertemplate{background canvas}[vertical shading]
+  \usetheme{Berkeley}
+  \useoutertheme{himinfolines}
+}
+  
+\usepackage{ucs}
+\usepackage[utf8]{inputenc}
+\usepackage[english,polutonikogreek,italian,UKenglish,british]{babel}
+\usepackage{graphicx}
+\usepackage{colortbl}
+\usepackage{multicol}
+\usepackage{ulem}
+\usepackage{verbatim}
+\usepackage{alltt}
+\usepackage{ccicons}
+\usepackage{MnSymbol,wasysym}
+\usepackage{tikzsymbols}
+\usepackage{textcomp}
+\usepackage{xmpincl}
+
+\usepackage{parskip}
+\setcounter{nframes}{100}
+\setcounter{nframe}{1}
+\setbeamercovered{dynamic}
+\newenvironment{grcenv}{\begin{otherlanguage}{greek}}{\end{otherlanguage}}
+\newcommand{\g}[1]{\textgreek{#1}}
+\definecolor{darkgreen}{rgb}{0,0.5,0}
+\definecolor{darkblue}{rgb}{0,0,0.5}
+\definecolor{grey}{rgb}{0.5,0.5,0.5}
+\setcounter{tocdepth}{5}
+
+\makeatletter
+
+\makeatother
+%\includexmp{LicencesAndLicensing}
+
+%frame00 metadata
+    \title{Presentazione Corso Codifica del Testo}
+    \author[A.M. Del Grosso]{Angelo Mario Del Grosso}
+    \institute{\texttt{angelo.delgrosso@ilc.cnr.it} \\\bigskip\textit{CNR-ILC-LicoLab} \\\bigskip\url{http://licolab.ilc.cnr.it/}}
+    \date{Istituto di Linguistica Computazionale ``A. Zampolli'', \today}
+    \AtBeginSection[]{
+    \begin{frame}<beamer>
+    \addtocounter{nframe}{1}
+    \footnotesize
+    \frametitle{Progress status}
+    \tableofcontents[currentsection,hideothersubsections]
+    \end{frame}
+    }
+
+\begin{document}
+
+\begin{frame}
+	\maketitle
+\end{frame}
+
+\begin{frame}
+	\frametitle{Contenuto della lezione}
+	\tableofcontents
+\end{frame}
+
+\section{Elementi Teorici e Metodologici della codifica}
+\begin{frame}
+	\frametitle{Codifica e Modellizzazione}
+	\addtocounter{nframe}{1}
+    
+    \begin{center}
+	    %\includegraphics[width=.5\textwidth]{../imgs/tei-r.pdf}
+        Gli studi umanistici hanno come oggetto privilegiato i testi.
+        \\ L'avvento delle tecnologie informatiche ha cambiato la produzione, la trasmissione e lo studio del sapere.
+        \\ Si sono determinate profonde trasformazioni nelle pratiche scientifiche che hanno per oggetto o fine i testi.
+        \\ Rapporto con il testo che diventa elettronico o digitale.
+        \\ Determinare lo studio dei problemi connessi alla codifica informatica dei testi
+	\end{center}
+
+	%\begin{itemize}
+	%	\item<1-> Cosa significa Testo
+	%	\item<2-> Cosa significa Codifica 
+    %   \item<3-> Cosa significa Codifica del Testo
+    %   \item<4-> Vantaggi nella Codifica dei Testi
+    %   \item<5-> Approfondimenti e Conclusioni
+    %\end{itemize}
+    
+\end{frame}
+
+\section{Modello del Testo}
+\input{includes/2-modelloTesto.tex}
+
+\section{Codifica del Testo}
+\input{includes/2-codificaTesto.tex}
+
+\section{Importanza della Codifica}
+\input{includes/2-importanzaCodifica.tex}
+
+\section{Approfondimenti}
+\input{includes/2-approfondimenti.tex}
+
+\section{Conclusioni}
+\input{includes/2-conclusion.tex}
+
+\end{document}
