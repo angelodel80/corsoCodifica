@@ -41,6 +41,53 @@
 % OHCO: La ragione di tanto attaccamento all’idea di struttura gerarchica ovviamente non è immotivata. Il fatto è che XML (e SGML) può esse- re considerato sia un formalismo sia un modello di dati espresso da quel formalismo, e tale (meta)modello è appunto un albero ordinato etichettato.
 % Il prezzo costituito dall’adozione di un modello di dati così vinco- lante, d’altra parte, paga il vantaggio di potere validare in modo auto- matico ogni istanza di dati rispetto al modello mediante algoritmi ge- nerali ben conosciuti e computazionalmente trattabili, ciò che a sua volta consente di costruire sistemi di elaborazione degli stessi dati consistenti ed efficaci (al netto dei costrutti ID/IDREF)
 
-% Le manifestazioni di queste difficoltà sono state comu- nemente rubricate come il problema delle gerarchie sovrapposte (over- lapping hierarchies, OH d’ora in poi)
+% Le manifestazioni di queste difficoltà sono state comunemente rubricate come il problema delle gerarchie sovrapposte (overlapping hierarchies)
 % In termini semplici il problema OH dal punto di vista sintattico consiste nel fatto che, dati due oggetti logici presenti in un testo, le coppie di tag bilanciati che li rappresentano non si annidano propriamente ma si sovrappongono.
 %Tale situazione è sintatticamente e semanticamente vietata in XML
+
+% esempio con codice XML e grafico/immagine
+
+% problema della complessità testuale
+%% Se esistono proprietà dei testi irriducibili a qualsiasi forma- lizzazione anche minimale, allora queste non possono per definizione essere rappresentate e trattate con metodi computazionali.
+% nella categoria delle gerarchie sovrapposte si possono di- stinguere diversi sottoproblemi di complessità crescente
+% distinguere una “gerarchia delle gerarchie sovrapposte”.
+% 1. Il caso più semplice e comune è quello della compresenza di due o più strutture (livelli) gerarchiche i cui elementi si sovrappongono.
+% 2. concettualmente più complicato è quello di un ele- mento appartenente a una gerarchia che si estende oltre i confini dell’elemento in cui inizia o persino di uno dei suoi predecessori
+% 3. Tecnicamente simile ma concettualmente distinto il caso di e- lementi composti da segmenti discontinui e non contigui 
+% 4. Infine il caso più complesso che si verifica quando un dato e- lemento può auto-sovrapporsi illimitatamente.
+
+% ipotetiche soluzioni
+% Non è un caso che negli ultimi dieci anni, proprio in parallelo con l’inarrestabile diffusione di XML nel mondo dell’elaborazione testua- le (e non solo) e della TEI nella comunità umanistica si sono moltipli- cati i tentativi di trovare delle soluzioni definitive al problema.
+% soluzioni interne e soluzioni esterne al paradigma XML. Per questo alla completezza e congruenza va affiancata una serie di ulteriori criteri valutativi di natura teorica, tecnica e pragmatica
+
+% Leggibilità e facilità di comprensione da parte di un utente u- mano (sono esclusi dunque tutti i formati binari)
+% Facilità di manutenzione e modifica
+% Disponibilità di implementazioni software
+% Compatibilità sintattica con XML
+% Facilità di validazione (eventualmente sopravanzando le capa- cità di validazione di un parser XML standard)
+% Possibilità di validazione incrociata tra gerarchie diverse Possibilità di formattazione ed elaborazione grafica e presenta- zionale
+% Possibilità di estrapolare molteplici viste basate su uno o più tra le gerarchie presenti
+% Possibilità di estrapolare sottoinsiemi gerarchici delle caratteri- stiche testuali
+% Continuità del contenuto testuale serializzato
+
+% Soluzioni interne al paradigma XML rientrano artifici sintattici che mantengono la conformità a XML
+% XML come puro formalismo di serializzazione per modelli di dati non gerarchici
+% Segmentazione: Un elemento logico che si sovrappone ai confini di un’altro (o di più altri) viene diviso in due (o n) elementi XML dello stesso tipo cor- relati mediante apposti attributi.
+% Questa soluzione permetterebbe di risolvere sovrapposizioni di tipo (1) , (2) e (3), e può essere parzialmente validata mediante un oculato uso di attributi ID/IDREF.
+% Elementi di congiunzione: Consiste nell’introduzione di un elemento XML (elemento di con- giunzione) con la funzione metatestuale di esprimere l’unità logica di un fenomeno testuale rappresentato da più elementi XML distinti. Questa tecnica consente di trattare in linea teorica ogni caso di so- vrapposizione e di non contiguità, di ordinamento inverso e di relazio- ne n-aria tra oggetti testuali. Questo ultimo problema può essere risolto parzialmente adottando gli schemi di puntamento basati su range di caratteri previsto nello standard XPointer ma in questo caso l’elaborazione dei riferimenti ri- chiederebbe l’uso di software ad hoc.
+% Markup esterno (stand-off markup): Le tecniche basate su markup esterno sono di fatto identiche a quelle basate su elementi join. La differenza consiste nel fatto che in questo caso gli elementi che esprimono il collegamento di segmenti testuali nel documento XML base sono in un documento XML ester- no. Il fatto di poter collocare i collegamenti in un documento autono- mo consente di adottare un linguaggio XML per descrivere una strut- tura principale del documento base e uno diverso per la rappresenta- zione dei livelli di descrizione ulteriori.
+
+% Ad esempio si può usare la TEI per la codifica del documento e XTM (XML Topic Maps) o RDF per esprimere le relazioni tra gli oggetti testuali. (interessante). Questa tecnica ha il vantaggio di poter disporre di modelli di dati e di sistemi di elabora- zione complessi.
+
+% Elementi Milestone: Un elemento milestone è un elemento XML vuoto che segnala un punto monodimensionale in un documento XML. si possono collocare liberamente sintatticamente in un documento XML. Questa strategia è ampiamente utilizzata nella TEI per veicolare le indicazioni sulla messa in pagina di un testo nel documento fonte da cui è stato memorizzato. Gli elementi milestone possono essere usati in coppie virtuali per segnalare i confini di segmenti arbitrari di testo che si sovrappongono agli elementi standard. Insieme a elementi di congiunzione o stand- off markup possono rappresentare virtualmente ogni genere di sovrap- posizione, auto-sovrapposizione e segmentazione non contigua. 
+Gli elementi milestone offrono la massima flessibilità sintattica senza costringere a separare markup e contenuto. un parser XML può validare la corretta colloca- zione di un elemento vuoto rispetto a un modello di contenuto, o veri- ficare che due elementi vuoti siano stati correlati mediante coppie di ID/IDREF. ma non può in alcun modo attribuire funzione strutturale alla sequenza di caratteri contenuta tra due elementi vuoti. non è accessibile come tale a una applicazione XML standard.
+
+% In generale tutte le soluzioni pro- poste finora hanno grossi limiti per quel che concerne la facilità di ge- stione e manutenzione
+
+% Per questo negli ultimi anni la ricerca teorica sullo sviluppo di si- stemi di markup non gerarchici ha avuto un notevole stimolo
+
+% L’ostacolo maggiore consiste nella individuazione di un modello di dati e di un formalismo a esso associato che possa essere validato ed elaborato mediante algoritmi generali e computazionalmente trattabili come avviene per il modello ad albero di XML.
+%% rappresentazione di alberi concorrenti in un medesimo documento XML (Xconcur, JIITs)
+%% In LMNL la soluzione del problema OH viene trovata uscendo de- finitivamente fuori dal paradigma gerarchico di XML
+%% TexMECS e GODDAD: Markup Languages for Complex Documents. una notazione non molto dissimile da XML (provvede infatti anche strutture come gli attributi) la quale tut- tavia permette di esprimere facilmente strutture sovrapposte, auto- sovrapposte e non contigue. In linea teorica questo grafo può esprimere tutte le possibili rela- zioni tra oggetti testuali linearizzati sottoforma di stringhe di caratteri etichettate mediante markup, inclusi i più complessi casi di auto- sovrapposizione o di frammentazione non contigua e non linearmente ordinata. 
+
