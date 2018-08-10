@@ -106,7 +106,7 @@ Elements that do not have child elements or attributes are simple type elements.
     \end{tiny}
     }
 
-     \defverbatim{\xmlfirst}{%
+    \defverbatim{\xmlfirst}{%
     \begin{tiny}
     \begin{verbatim}
              <text>Il primo documento XML Validato</text>
@@ -129,5 +129,11 @@ Elements that do not have child elements or attributes are simple type elements.
 \end{frame}
 
 
-% slide 05 perform validation
+% frame 05 perform validation
 %   xmllint xmlfirst.xml --schema ../schema/xsd/xsdfirst.xsd
+
+% If an element contains child elements or attributes, it has a complex type.
+% esempio:
+% <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+%   <xsd:element name="Employee">
+% <xsd:complexType
