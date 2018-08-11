@@ -1,5 +1,5 @@
 %slide relative ad introdurre gli elementi di XML Schema Definition (XSD) 
-
+% Description and validation of the XML elements and attributes are written in XSD using element declarations and attribute declarations.
 %  XSD is a grammar language
 % building blocks of an XSD Schema at the most granular level are elements and attributes
 % bigger blocks are built using basic components: elements and attributes.
@@ -136,4 +136,55 @@ Elements that do not have child elements or attributes are simple type elements.
 % esempio:
 % <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema">
 %   <xsd:element name="Employee">
-% <xsd:complexType
+%     <xsd:complexType>
+%        <xsd:attribute name="FirstName"/>
+%     </xsd:complexType>
+%   </xsd:element>
+% </xsd:schema>
+
+% Il documento XML istanza dello schema: 
+% <Employee FirstName="Jacob"/>
+
+% A complex type can have attributes, child elements or both. Here is another example that shows a complex type having child elements.
+
+% Attribute Group, Element Group
+
+% Order Indicators: all, sequence, choice
+
+% Occurrence Indicators: minOccurs and maxOccurrs
+
+% Data types: Built-in
+%% FACETS per consentire una validazione più oculata dei valori che può assumenere un elemento o un attributo.
+%% Restriction on base attribute
+%% Numeric e String Data Type
+%% Pattern facet
+
+% Element Declaration 
+%% An XSD element declaration represents an element in the XML instance document
+%% An element is said to have a Simple Type if it does not have any attributes and does not have child elements.
+%% esempio element declaration
+
+%% An XSD schema may contain Global and Local element declarations.
+%% The advantage of using a global element declaration is that it can be reused (referred) at other locations from within the same schema.
+%% esempio global element declaration vs local elementi (pag 92 libro xsd)
+%% When you have a global element declaration, you can refer it in multiple locations in your schema (level of reusability).
+%% Attributi della dichiarazione di elementi: The only mandatory attribute that an element declaration should take is the "name" attribute.
+
+%% tabella con gli attributi nella dichiarazione degli elementi
+%% 􏰀name (g-l) the only mandatory attribute (give meaningful names to the elements)
+􏰀%% type (g-l) adds data type related validations to the declaration of an element (XSD has buint-in data types)
+􏰀%% id (g-l) uniquely identifies the given element (non ha effetti sull'istanza XML)
+􏰀%% default (g-l) specify the default value of an element (solo de l'elemento è opzionale)
+􏰀%% fixed (g-l) valore di un elemento predefinito ("fixed" and "default" are mutually exclusive)
+􏰀%% nillable (g-l) indica che l'elemento è vuoto (xsd:nil nell'istanza XML del documento)
+􏰀%% block (g-l)
+%% final (g)
+􏰀%% abstract (g)
+%% substitutionGroup (g)
+􏰀%% minOccurs (l)
+􏰀%% maxOccurs (l)
+􏰀%% ref (l)
+􏰀%% form (l)
+
+
+
