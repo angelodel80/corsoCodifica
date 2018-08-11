@@ -171,20 +171,119 @@ Elements that do not have child elements or attributes are simple type elements.
 %% Attributi della dichiarazione di elementi: The only mandatory attribute that an element declaration should take is the "name" attribute.
 
 %% tabella con gli attributi nella dichiarazione degli elementi
-%% 􏰀name (g-l) the only mandatory attribute (give meaningful names to the elements)
+%% name (g-l) the only mandatory attribute (give meaningful names to the elements)
 􏰀%% type (g-l) adds data type related validations to the declaration of an element (XSD has buint-in data types)
-􏰀%% id (g-l) uniquely identifies the given element (non ha effetti sull'istanza XML)
-􏰀%% default (g-l) specify the default value of an element (solo de l'elemento è opzionale)
+􏰀%% id (g-l) uniquely identifies the given element (non ha effetti sull'istanza XML
+􏰀%% default (g-l) specify the default value of an element (solo de l'elemento opzionale
 􏰀%% fixed (g-l) valore di un elemento predefinito ("fixed" and "default" are mutually exclusive)
 􏰀%% nillable (g-l) indica che l'elemento è vuoto (xsd:nil nell'istanza XML del documento)
-􏰀%% block (g-l)
-%% final (g)
-􏰀%% abstract (g)
-%% substitutionGroup (g)
-􏰀%% minOccurs (l)
-􏰀%% maxOccurs (l)
-􏰀%% ref (l)
-􏰀%% form (l)
+􏰀%% block (g-l) It is used to control substitution (4 different vales, namely: substitution, extension, restriction and #all)
+%% final (g) limits the declaration of substitution groups in schemas (can take values: #all, restriction and extension.)
+􏰀%% abstract (g) When an element is declared as abstract, it cannot be instantiated (force an element substitution)
+%% substitutionGroup (g) is highly extensible (could easily add new types derived) esempio SG
+􏰀%% minOccurs (l) control the occurrence of the elements: minimum number of times the element should appear in the XML instance (minOccurs=0 -> Optional).
+􏰀%% maxOccurs (l) control the occurrence of the elements: The maximum number of times the element can appear within its parent.
+􏰀%% ref (l) Refer to other elements declared globally in the same schema (certain level of reusability)
+􏰀%% form (l) specifies whether the element needs to be qualified with a namespace prefix (be "qualified" or "unqualified")
+
+%% Esempio SG
+% <xsd:element name="Employees">
+%   <xsd:complexType>
+%     <xsd:sequence maxOccurs="unbounded">
+%       <xsd:element ref="Employee"/>
+%     </xsd:sequence>
+%   </xsd:complexType>
+% </xsd:element>
 
 
+% Attribute Declaration
+% simple example
+% <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+%   <xsd:element name="Employee">
+%     <xsd:complexType>
+%       <xsd:attribute name="status" />
+%     </xsd:complexType>
+%   </xsd:element>
+% </xsd:schema>
+
+% An attribute is declared with <xsd:attribute> element. The only mandatory attribute of an attribute declaration is "name".
+
+% "attributes of an attribute declaration"
+% Global and Local Attribute Declaration
+%% When an attribute is declared right under the "<xsd:schema>" element, it is called global attribute declaration. When it is declared within a Complex Type, it is called Local attribute declaration.
+%% esempio GA
+%<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+%  <xsd:attribute name="status" />
+%   <xsd:element name="Employee">
+%     <xsd:complexType>
+%       <xsd:attribute ref="status"/>
+%     </xsd:complexType>
+%   </xsd:element>
+%  </xsd:schema>
+
+% Global attribute declarations are useful when an attribute is declared with several validations.
+%% Esempio da img GlobalAttribute
+%% global attribute declarations provide some sort of re-usability.
+
+% tabella con gli attributi nella dichiarazione degli attributi
+%% name (g-l) the name of the attribute as it should appear in the XML instance (Mandatory)
+%% id (g-l) used by the schema processor to uniquely identify the XSD components within a given schema.
+%% type (g-l) associates a data type with an attribute (facilitates validation on the value). make sure that only valid values are accepted.
+%% default (g-l) The default attribute assigns a default value to an attribute declaration (solo se l'attributo non è presente)
+%% fixed (g-l) It prevents the attribute from taking any value other than the pre-defined one.
+%% ref (l) A globally declared attribute can be inserted into a complex type by using the "ref" attribute.
+%% use (l) specifies whether the attribute is optional or mandatory (values optional or required, prohibited).
+%% form (l) specifies whether the attribute needs to be qualified by a namespace prefix or not, in the XML instance. (può assumere due valori: qualified e unqualified)
+
+%% esempio type:
+% <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+%   <xsd:element name="Employee">
+%     <xsd:complexType>
+%       <xsd:attribute name="Age" type="xsd:positiveInteger"/>
+%     </xsd:complexType>
+%   </xsd:element>
+% </xsd:schema>
+
+%% Attribute Groups
+% Attribute Groups provide a convenient means to reuse attribute declarations in multiple complex types. Attribute Groups provide a better level of reusability by grouping one or more attribute declarations into a named group. By using an attribute group, you can avoid this repetition of code. Chain of attribute group hierarchies.
+
+%% Esempio Attribute Groups
+%<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+%   <xsd:attributeGroup name="EmpAttributes">
+%     <!-- Declaration of attribute "name" -->
+%     <xsd:attribute name="name">
+%       <xsd:simpleType>
+%         <xsd:restriction base="xsd:string">
+%           <xsd:maxLength value="20"/>
+%         </xsd:restriction>
+%       </xsd:simpleType>
+%     </xsd:attribute>
+%     <!-- Declaration of attribute "department" -->
+%     <xsd:attribute name="department">
+%       <xsd:simpleType>
+%         <xsd:restriction base="xsd:string">
+%           <xsd:length value="2"/>
+%         </xsd:restriction>
+%       </xsd:simpleType>
+%     </xsd:attribute>
+%     </xsd:attributeGroup>
+% <!-- Declaration of root element "Employees" --> <xsd:element name="Employees">
+%     <xsd:complexType>
+%       <xsd:sequence>
+%         <!-- Declaration of "Manager" element -->
+%         <xsd:element name="Manager">
+%           <xsd:complexType>
+%             <xsd:attributeGroup ref="EmpAttributes"/>
+%           </xsd:complexType>
+%         </xsd:element>
+%         <!-- Declaration of "department" element -->
+%         <xsd:element name="TechLead">
+%           <xsd:complexType>
+%             <xsd:attributeGroup ref="EmpAttributes"/>
+%           </xsd:complexType>
+%         </xsd:element>
+%       </xsd:sequence>
+%     </xsd:complexType>
+%   </xsd:element>
+% </xsd:schema>
 

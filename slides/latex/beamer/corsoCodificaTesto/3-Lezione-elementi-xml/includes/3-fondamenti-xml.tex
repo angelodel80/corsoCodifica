@@ -9,5 +9,10 @@
 % IDE/Editor Management Studio comes with a nice XML/XSD editor. It has a number of features that makes schema writing lot easier. Intellisense, auto-completion, real-time syntax checks, etc., are a few of those features.
 
 % XML document is primarily composed of elements and attributes
+% Attributes can only exist within an element. An attribute declaration really does not make sense without an element.
+% Attributes can only store a value, while elements can also store child elements and attributes.
+% An element can appear more than once within a parent node, but an attribute can appear only once. The order of attributes is not significant and there is no way to control the order of attributes in XSD. If the attribute is present the default value is not assigned, even if the value of the attribute is an empty string.
+% the default value of elements is assigned only when the element is present and is empty
+% Elements are mandatory by default while attributes are optional by default.
 
 % slide su XML lint
