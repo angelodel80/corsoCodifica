@@ -1,8 +1,6 @@
 % elementi raccolti dai primi capitoli delle linee guida e dal libro What is the text encoding initiative (Lou Burnard)
 % what is the Text Encoding Initiative
-% The TEI as an organization is committed to improving the accessibility and comprehensibility of the TEI as a technical system.
 
-% la TEI rappresenta un punto di riferimento per tutte le imprese volte a digitalizzare risorse testuali in ambito umanistico per fini di ricerca e di conservazione digitale.
 \documentclass{beamer}
     
 %    \usepackage[english]{babel}
@@ -67,18 +65,38 @@
 \end{frame}
 
 \begin{frame}
-	\frametitle{Sommatio della Lezione}
+	\frametitle{Sommario della Lezione}
 	\tableofcontents
 \end{frame}
 
 \section{Intro}
+
 \begin{frame}
 	\frametitle{Introduzione}
 	\addtocounter{nframe}{1}
     
-    \begin{center}
-	    \includegraphics[width=.2\textwidth]{../imgs/tei-r.pdf}
-	\end{center}
+    %\begin{center}
+	%    \includegraphics[width=.2\textwidth]{../imgs/tei-r.pdf}
+	%\end{center}
+
+    \begin{block}{Cos'è la TEI}
+        la TEI - \textit{acronimo di Text Encoding Initiative} - rappresenta un punto di riferimento per tutte le iniziative in cui scopo principale è quello di digitalizzare risorse testuali in ambito umanistico per fini di ricerca e di conservazione.
+    \end{block}
+
+    \begin{block}{Qual è l'obiettivo della TEI}
+        L'obiettivo della TEI è quello di fornire linee guida per la creazione e la gestione in forma digitale di qualsiasi tipo di dato creato e usato in ambito umanistico.
+        \\ E per questo motivo investe molto nella accessibilità e nella divulgazione del sistema tecnologico che da anni sviluppa.
+    \end{block}
+    
+\end{frame}
+
+\begin{frame}
+	\frametitle{Modularità della TEI}
+	\addtocounter{nframe}{1}
+    
+   % \begin{center}
+    % \includegraphics[width=.2\textwidth]{../imgs/tei-r.pdf}
+    % \end{center}
 
     \begin{itemize}
         
@@ -92,9 +110,29 @@
         \item<2-> parleremo degli elementi basilari
             \begin{itemize}
                 \item<2-> Intestazione TEI (TEIHeader)
-                \item<2-> Elementi e attributi globali
-                \item<2-> Esempi di codifica     
+                \item<2-> Elementi e attributi presenti in tutti i documenti TEI
+                \item<2-> Esempi di codifica
             \end{itemize} 
+    \end{itemize}
+    
+\end{frame}
+
+\begin{frame}
+	\frametitle{I principi fondamentali della TEI}
+	\addtocounter{nframe}{1}
+    
+    \begin{center}
+	    \includegraphics[width=.2\textwidth]{../imgs/tei-r.pdf}
+	\end{center}
+
+    \begin{itemize}
+        
+        \item<1-> Le linee guida della TEI privilegiano il "significato" (meaning) del testo piuttosto che l'"aspetto" (layout); privileggia il modello del testo, piuttosto che il formato.
+          
+        \item<2-> La TEI è stata progettata per essere indipendente dagli strumenti software che la usano per la creazione oppure per l'elaborazione dei documenti elettronici.
+
+        \item<3-> La TEI cresce, matura, si evolve sulla base delle indicazioni e delle ricerche dalla propria comunità di riferimento (community-driven).
+           
     \end{itemize}
     
 \end{frame}
