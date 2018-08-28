@@ -1,4 +1,254 @@
-% capitoli 3 e 4 delle linee guida e estratti dal libro what is TEI (The structural organization, Varieties of textual structure, parte della TEI cornucopia part 1)
+% capitoli 3 e 4 delle linee guida 
+% estratti dal libro what is TEI (The structural organization, Varieties of textual structure, parte della TEI cornucopia part 1)
 % fare esempio facsimile e codifica dei fenomeni (vedere anche slide del turco e fiormonte-ciotti)
 % Elements available in All TEI Documents
+
 % esplicitare le informazioni implicite all'interno del testo.
+
+% i documenti TEI sono organizzati in modo molto simile tra loro: esistono elementi presenti in quasi tutti i testi codificati in TEI.
+
+% Un testo codificato in TEI inizia sempre con l'elemento <text>, suddiviso a sua volta in frontespizio (<front>), corpo del testo (<body>) e appendice (<back>).
+
+% Documento TEI Minimale.
+
+%<TEI xmlns="http://www.tei-c.org/ns/1.0">
+%    <teiHeader>
+%        <fileDesc>
+%            <titleStmt>
+%                <title>The life and opinions of Tristram Shandy, Gentleman: TEI edition</title>
+%            </titleStmt>
+%            <publicationStmt>
+%                <publisher>Web Head Press</publisher>
+%                <date>2013</date> edition, 1708</p>
+%                </sourceDesc>
+%        </fileDesc>
+%    </teiHeader>
+%   <text>
+%       <front>frontespizio qui</front>
+%
+%        <body>
+%            <div type="volume" xml:id="TS01">
+%                <div type="chapter" xml:id="TS0101">
+%
+%                    <head>Chap. I</head>
+%                    <p>I wish either my father or my mother, or indeed both of them, as they were in duty both equally bound
+%                        to it, had minded what they were about when they begot me; ...</p>
+%                    <!-- remainder of chapter 1 here -->
+%                </div>
+%                <div type="chapter" xml:id="TS0102">
+%
+%                    <head>Chap. II</head>
+%                    <p> — Then, positively, there is nothing in the question, that I can see, either good or bad. — Then let
+%                        me tell you, Sir, it was a very unseasonable question at least ...</p>
+%                    <!-- remainder of chapter 2 here -->
+%                </div>
+%                <!-- remaining chapters of volume 1 here -->
+%            </div>
+%            <!-- remaining volumes of work here -->
+%        </body>
+
+%        <back>appendice qui</back>
+%    </text>
+% </TEI>
+
+%% gruppi principali:
+% Paragrafi
+% Punteggiatura
+% Evidenziazione e Citazione (quotation)
+% Principali elementi editoriali
+% Nomi, Numeri, Date, Abbreviazioni, Indirizzi
+% Collegamenti e Riferimenti
+% Liste
+% Note, Annotazioni e Indici
+% Grafici e altre componenti non testuali
+% Sistema bibliografico
+% Poesia e teatro
+
+% tra gli elementi di uso generico nella codifica dei testi più comuni, l'elemento paragrafo (<p>), insime all'elemento divisione (<div>), è di sicuro il più impiegato. L'elemento paragrafo è un elemento di classe chunk, quindi non può annidarsi.
+
+%% Punteggiatura
+
+%% Evidenziazione
+% due classi: model.hiLike e model.emphLike.
+% sono elementi phrase-level che possono comparire in paragraph level
+% elementi in model.emphLike: <foreign> <emph> <distinct>
+% esempio <foreign>:
+% John eats a <foreign xml:lang="fr">croissant</foreign> every morning.
+% esempio <emph>.
+
+%<q>
+% <emph rend="italic">What does Christopher Robin do in the morning
+%   nowadays?</emph>
+%</q>
+
+%<q>
+% <emph style="font-style: italic">What does Christopher Robin do in
+%   the morning nowadays?</emph>
+%</q>
+
+%<l>Doth sometimes Counsel take —
+% and sometimes <emph rendition="#italic">Tea</emph>.</l>
+%<!-- in the header ... -->
+%<rendition xml:id="italic" scheme="css">font-style: italic</rendition>
+
+% esempio <destinct>
+
+%Next morning a boy in that dormitory confided to his
+% bosom friend, a
+% <distinct time="1900" space="GB"
+% social="publicschool">fag</distinct>
+% of Macrea's, that there was trouble in their midst which
+% King <distinct time="archaic">would fain</distinct> keep
+% secret
+
+% esempio <hi>
+%<hi rend="gothic">And this Indenture further witnesseth</hi>
+% that the said <hi rend="italic">Walter Shandy</hi>, merchant,
+% in consideration of the said intended marriage ...
+
+%% Quotation
+% <q> <said> <quote> <cit> <mentioned> <soCalled>
+% esempio <q>
+% <q rendition="#quoteBefore #quoteAfter">Four score and seven years ago...</q>
+
+
+% esempio <said>
+%<said rend="pre(‘) post(’)">Who-e debel
+% you?</said> — he at last said —
+%<said rend="pre(‘) post(’)">you no speak-e,
+% damme, I kill-e.</said> And so saying,
+% the lighted tomahawk began flourishing
+% about me in the dark.
+
+% Attributi @who e @toWhom
+% esempio:
+%Adolphe se tourna vers lui :
+%<said who="#Adolphe">— Alors, Albert, quoi de neuf?</said>
+%<said who="#Albert">— Pas grand-chose.</said>
+%<said who="#Robert">— Il fait beau,</said> dit Robert.
+%
+%<!-- ... elsewhere in the document -->
+%<list type="speakers">
+% <item xml:id="Adolphe"/>
+% <item xml:id="Albert"/>
+% <item xml:id="Robert"/>
+%</list>
+
+%% esempio <quote> e <cit>
+
+% <div xml:id="mm01" type="chapter">
+% <head>Chapter 1</head>
+% <epigraph>
+%  <cit>
+%   <quote>
+%    <l>Since I can do no good because a woman</l>
+%    <l>Reach constantly at something that is near it.</l>
+%   </quote>
+%   <bibl>
+%    <title>The Maid's Tragedy</title>
+%    <author>Beaumont and Fletcher</author>
+%   </bibl>
+%  </cit>
+% </epigraph>
+% <p>Miss Brooke had that kind of beauty which seems to be thrown into
+%   relief by poor dress...</p>
+% </div>
+%%%%
+% <bibl xml:id="tlk_36">Tolkien (1936)</bibl> tells us that
+% <quote source="#tlk_36">
+% <title>Beowulf</title> is in fact so interesting as
+% poetry, in places poetry so powerful, that this quite
+% overshadows the historical content
+% </quote>.
+
+% esempio <soCalled>
+%He hated <soCalled>good</soCalled> books.
+
+%% Terms, Glosses, Equivalents, and Descriptions
+% <term> <gloss> membri della classe model.emphLike
+% esempio:
+% <gloss rend="unmarked" target="#PRSR">A computational device that infers
+% structure from grammatical strings of words</gloss> is known as a
+% <term xml:id="PRSR">parser</term>, and much of the history of NLP over the
+% last 20 years has been occupied with the design of parsers.
+
+% l'elemento <term> ha anche l'attributo @ref usato per collegare un termine ad un entrata di vocabolario/glossario.
+
+% esempio enfasi e funzione dell'enfasi:
+
+%%% controllare italico nel testo.. %%%
+%A pretty common case, I believe; in all vehement debatings. She says I am too witty; Anglicé, too pert; I, that she is %too wise; that is to say, being likewise put into English, not so young as she has been: in short, she is grown so much %into a mother, that she had forgotten she ever was a daughter. ...
+
+%A pretty common case, I believe; in all <emph>vehement</emph>
+%debatings. She says I am <q rend="italic">too witty</q>;
+%<foreign xml:lang="la" rend="roman">Anglicé</foreign>,
+%<gloss rend="italic">too pert</gloss>; I, that she is
+%<q rend="italic"> too wise</q>; that is to say, being likewise
+% put into English, <gloss rend="italic">not so young as she has
+% been</gloss>: in short, she is grown so much into a
+%<hi rend="italic">mother</hi>, that she had forgotten she ever
+% was a <hi rend="italic">daughter</hi>.
+ 
+% Editorial changes
+% attributi di att.global.responsibility, attributi di classe att.global.source, att.editLike e attributi di classe att.dimensions.
+
+% elemento <choice>
+% gli elementi di classe model.choicePart possono essere utilizzati per codificare diverse forme del testo.
+% correzioni, normalizzazioni, aggiunte, espunzioni e omissioni
+
+% Errori
+% esempio:
+% ... marginal comments which indicate that the
+%<choice>
+% <corr resp="#msm" cert="high">dates</corr>
+% <sic>date's</sic>
+%</choice> mentioned in the main body of the text are
+% incorrect.
+%
+%<!-- within the header for this document ... -->
+%<respStmt xml:id="msm">
+% <resp>editor</resp>
+% <name>C.M. Sperberg-McQueen</name>
+%</respStmt>
+
+% quando l'errore è stato corretto direttamente sulla fonte si utilizzano gli elementi <add> e <del>, se l'elemento viene corretto perché illeggibile si utilizza l'elemento <supplied>, mentre se se scioglie una abbreviazione si utilizza l'elemento <ex>
+
+%% Normalizzazione
+% esempio:
+
+%<p>...how godly a <choice>
+%  <orig>dede</orig>
+%  <reg>deed</reg>
+% </choice> it is to
+%<choice>
+%  <orig>overthrowe</orig>
+%  <reg>overthrow</reg>
+% </choice> so wicked a race the
+% world may judge: for my part I <choice>
+%  <orig>thinke</orig>
+%  <reg>think</reg>
+% </choice>
+% there <choice>
+%  <orig>canot</orig>
+%  <reg>cannot</reg>
+%</choice> be a greater
+%<choice>
+%  <orig>sacryfice</orig>
+%  <reg resp="#AMDG" cert="high">sacrifice</reg>
+% </choice> to God.</p>
+
+%% Aggiunte, cancellazioni, omissioni
+% gli elementi definiti dalla TEI per codificare tali fenomeni sono l'elemento <gap>, l'elemento <unclear>, l'elemento <add> e l'elemento <del>
+% esempi <gap>
+% <gap reason="illegible" unit="word" quantity="2"/>
+% <gap reason="overwriting illegible" extent="several characters"/>
+% <gap reason="sampling" quantity="120" unit="lines">
+ %<desc>irrelevant commentary</desc>
+%</gap>
+
+% esempio add / deletion
+% <l>
+%  <del rend="overstrike">Inviolable</del>
+%  <add place="below">Inexplicable</add>
+%  splendour of Corinthian white and gold
+% </l>
