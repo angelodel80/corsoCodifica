@@ -6,7 +6,7 @@
 	\addtocounter{nframe}{1}
 
 	\begin{block}{Rappresentare il testo in formato digitale}
-		L’adozione di metodologie informatiche per il trattamento dei testi richiede in primo luogo di fornire un'adeguata  rappresentazione dei dati testuali in formato digitale.
+		L’adozione di metodologie informatiche per il trattamento dei testi richiede in primo luogo la disponibilità di un'adeguata rappresentazione dei dati testuali in formato digitale.
 	\end{block}
 
 \end{frame}
@@ -17,17 +17,17 @@
 	\framesubtitle{Definizioni}
 	\addtocounter{nframe}{1}
 
-	\begin{block}{Perché è importante}
-		La codifica dei caratteri costituisce il grado zero della rappresentazione di testi su supporto digitale.
-		\\ Essa costituisce la base di tutti gli ulteriori sistemi di codifica testuale.
+	\begin{block}{Perché è importante la codifica dei caratteri}
+		La codifica dei caratteri costituisce il grado zero (basso livello) della rappresentazione di testi su supporto digitale.
+		\begin{center}
+			\textit{Le codifiche dei caratteri sono la base di qualsiasi schema di codifica testuale}.
+		\end{center}
 	\end{block}
 
 
 
-	\begin{block}{Codifica dei caratteri}
-		%Capitolo sul character encoding e modulo Ganji 
-		Come qualsiasi altro tipo di dato, anche i caratteri vengono rappresentati all’interno di un elaboratore mediante una codifica numerica binaria.
-		\\Le codifiche dei caratteri sono la base di qualsiasi schema di codifica testuale.
+	\begin{block}{Rappresentazione digitale dei caratteri}
+		I caratteri vengono rappresentati all’interno di un elaboratore mediante una sequenza di codici binari formati da opportune disposizioni di cifre composte da 0 e 1: 01100001 \textit{lettera a}
 	\end{block}
 
 \end{frame}
@@ -46,12 +46,43 @@
 	% \end{block}
 
 	\begin{description}
-		\item [Character set] spiega ...
-		\item [Code Set] spiega ...
-		\item [Character encoding] spiega ...
-		\item [Tabella del Code page] spiega ...
-		\item [Unicode] spiega
+		\item [Character set] Per le discipline che studiano i sistemi di scrittura e l'analisi del linguaggio naturale, un insieme di caratteri astratti è detto Character set (unità alfabetiche). Astratto perché non riguarda la rappresentazione materiale della forma sul supporto, ma è relativo alla forma mentale, fatta di simboli di codifica (referenti).
+		\item [Coded Char Set] Per poter trattare un insieme di unità alfabetiche in formato digitale bisogna assegnare a ciascun carattere un numero intero non negativo detto code point.
+		
 	\end{description}
+
+\end{frame}
+
+% frame 02b
+\begin{frame}
+	\frametitle{Elementi di Codifica dei Caratteri}
+	\framesubtitle{Definizioni}
+	\addtocounter{nframe}{1}
+
+	% \begin{block}{Character set, Code Set}
+	%  - Character set
+	%  - Code Set
+	%  - Character encoding
+	%  - Tabella del Code page
+	% \end{block}
+
+	\begin{description}
+		\item [Character encoding]  Il fine ultimo della codifica è quello di rappresentare una sequenza di caratteri in una sequenza di byte. La codifica di un carattere utilizza uno ``encoding schema'' che a sua volta mappa o trasforma ciascun code point in una sequenza di byte e quindi in ultima istanza in una sequanza di bit. 
+		\item [Tabella del code page] Generalmente i code points sono espressi attraverso un sistema numerico esadecimale e disposti in una tabella di associazione.
+	\end{description}
+
+\end{frame}
+
+% frame 02c
+\begin{frame}
+	\frametitle{Elementi di Codifica dei Caratteri}
+	\framesubtitle{In sintesi}
+	\addtocounter{nframe}{1}
+
+
+	\begin{block}{Codifica dei caratteri}
+		Quindi trasformare una sequanza di caratteri appartenenti ad un char set in una sequenza di byte (bit) significa prima di tutto trasformare/mappare ciascun carattere nel proprio corrispettivo code point e successivamente codificare/serializzare questo code point nella relativa sequenza di byte (bit).
+	\end{block}
 
 \end{frame}
 
@@ -124,7 +155,28 @@
 	\addtocounter{nframe}{1}
 
 	\begin{block}{Complessità di rappresentazione universale}
-		Cenno al consorzio Unicode
+		Ad oggi, lo standard de facto per la codifica dei caratteri è lo UNICODE. Esso è in grado di codificare più di un milione di differenti unità alfabetiche, segni di interpunzione e diacritici, appartenenti a centinaia di diverse lingue.
+	\end{block}
+
+	\begin{block}{Complessità di rappresentazione universale}
+		%(1.114.111)
+		Unicode assegna i propri code point in un range che va da $0x0$ a $0x10FFFF$. In Unicode il code point viene  indicato con una ``U'' seguita da un segno ``+'' seguito a sua volta dall'esadecimale con padding del codice (es: U+0041 lettera a).
+	\end{block}
+
+\end{frame}
+
+\begin{frame}
+	\frametitle{Elementi di Codifica dei Caratteri}
+	\framesubtitle{Unicode}
+	\addtocounter{nframe}{1}
+
+	\begin{block}{Unicode Transformation Format}
+		Lo Unicode è un Coded Char Set e per essere concretamente serializzato su un supporto elettronico deve essere trasformato attraverso qualche tipo di schema di codifica.
+		L'UTF (Unicode Transformation Format) mappa i code point Unicode in sequenze di byte (bit).
+	\end{block}
+
+	\begin{block}{UTF standards}
+		Esistono tre tipi di schemi di codifica che vanno sotto il nome di UTF, ciascuno è identificato dal minimo numero di bit necessario a codificare ciascun code point: UTF-8; UTF-16; UTF-32. 
 	\end{block}
 
 \end{frame}
