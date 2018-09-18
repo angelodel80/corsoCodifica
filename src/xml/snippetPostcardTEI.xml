@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<!DOCTYPE div SYSTEM "divTEIsnippet.dtd">
+<divTEIsnippet>
+    <div type="destination">
+        <ab>
+            <stamp type="postmark">
+                <placeName>El Paso</placeName>
+                - TX 799 -
+                <date notBefore="1980-07-26">
+                    <unclear>PM JUL</unclear>
+                </date>
+            </stamp>
+            <stamp type="postage">
+                Profil masculin, avec un avion et un radar au second
+                plan:
+                <mentioned>US Airmail 21 c.</mentioned>
+            </stamp>
+        </ab>
+        <ab>
+            <address>
+                <addrLine>
+                    Madame
+                    <name>Lefrère</name>
+                </addrLine>
+                <addrLine>4, allée George Rouault</addrLine>
+                <addrLine>75020 Paris</addrLine>
+                <addrLine>France</addrLine>
+            </address>
+        </ab>
+    </div>
+</divTEIsnippet>
