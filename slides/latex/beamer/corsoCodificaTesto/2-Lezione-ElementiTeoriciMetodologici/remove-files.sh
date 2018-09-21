@@ -1,0 +1,2 @@
+#!/bin/bash
+rm 2-elementiTeoriciMetodologici.aux 2-elementiTeoriciMetodologici.log 2-elementiTeoriciMetodologici.nav 2-elementiTeoriciMetodologici.out 2-elementiTeoriciMetodologici.pdf 2-elementiTeoriciMetodologici.snm 2-elementiTeoriciMetodologici.toc

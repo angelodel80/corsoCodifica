@@ -7,13 +7,9 @@
 
 %introdurre alcuni problemi teorici generali, che costituiscono la base delle nostre ricerche.
 
-% definizione di Codifica Informatica/digitale dei testi (Ciotti):
-%codifica informatica dei testi intendiamo la rappresentazione formale di un testo ad un qualche livello descrittivo, su di un supporto digitale, in un formato utilizzabile da un elaboratore (Machine Readable Form) mediante un opportuno linguaggio informatico
 
-% L’informatica allo stato attuale è in grado di fornire allo studioso di scienze umane una serie di tecnologie per implementare dei sistemi di rappresentazione testuale.
 % Non poteva dunque rimanere immune da tale pervasiva influenza il sapere umanistico e letterario.
 
-% la discussione sulla rappresentazione digitale dei testi ha rivelato un intreccio di complesse questioni teoriche e pratiche
 % Modello della comunicazione dell'informazione (vedere libro google play)
 % modello OHCO e altro (What text really is, inadequacy of markup)
 % linguaggi di Markup
@@ -64,9 +60,9 @@
 %\includexmp{LicencesAndLicensing}
 
 %frame00 metadata
-    \title{Presentazione Corso Codifica del Testo}
+    \title{Codifica di Testi - Introduzione Teorica \\a.a. 2018-2019}
     \author[A.M. Del Grosso]{Angelo Mario Del Grosso}
-    \institute{\texttt{angelo.delgrosso@ilc.cnr.it} \\\bigskip\textit{CNR-ILC-LicoLab} \\\bigskip\url{http://licolab.ilc.cnr.it/}}
+    \institute{\texttt{angelo.delgrosso@ilc.cnr.it} \\\bigskip\textit{CNR-ILC-LicoLab}}
     \date{Istituto di Linguistica Computazionale ``A. Zampolli'', \today}
     \AtBeginSection[]{
     \begin{frame}<beamer>
@@ -91,40 +87,96 @@
 \section{Elementi Teorici e Metodologici della codifica}
 \begin{frame}
 	\frametitle{Codifica e Modellizzazione}
+	\framesubtitle{Problemi e opportunità}
 	\addtocounter{nframe}{1}
-    
-    \begin{center}
-	    %\includegraphics[width=.5\textwidth]{../imgs/tei-r.pdf}
-        Gli studi umanistici hanno come oggetto privilegiato i testi.
-        \\ L'avvento delle tecnologie informatiche ha cambiato la produzione, la trasmissione e lo studio del sapere.
-        \\ Si sono determinate profonde trasformazioni nelle pratiche scientifiche che hanno per oggetto o fine i testi.
-        \\ Rapporto con il testo che diventa elettronico o digitale.
-        \\ Determinare lo studio dei problemi connessi alla codifica informatica dei testi
-	\end{center}
 
-	%\begin{itemize}
-	%	\item<1-> Cosa significa Testo
-	%	\item<2-> Cosa significa Codifica 
-    %   \item<3-> Cosa significa Codifica del Testo
-    %   \item<4-> Vantaggi nella Codifica dei Testi
-    %   \item<5-> Approfondimenti e Conclusioni
-    %\end{itemize}
-    
+	\begin{block}{il testo come oggetto di studio}
+		%\includegraphics[width=.5\textwidth]{../imgs/tei-r.pdf}
+		Le discipline umanistiche hanno come oggetto di studio privilegiato i testi.
+		\\ L'avvento delle tecnologie informatiche ha cambiato la produzione, la trasmissione e lo studio del sapere e della conoscenza (quindi anche il testo).
+	\end{block}
+
+	\begin{block}{Il testo in ambiente digitale}
+		Il nuovo formato digitale ha determinato profonde trasformazioni nelle pratiche scientifiche che hanno per oggetto o fine i testi.
+	\end{block}
+
+
 \end{frame}
 
-\section{Modello del Testo}
-\input{includes/2-modelloTesto.tex}
+\begin{frame}
+	\frametitle{Codifica e Modellizzazione}
+	\framesubtitle{Problemi e opportunità}
+	\addtocounter{nframe}{1}
+
+	\begin{block}{Vero e proprio cambio di paradigma}
+		Gli studiosi si sono interrogati sul nuovo rapporto che le discipline umanistiche devono avere con il testo che diventa elettronico o digitale.
+	\end{block}
+
+	\begin{block}{Nuove sfide}
+		La natura del formato digitale ha aperto nuove sfide  al fine di determinare e trovare soluzioni ai problemi connessi alla rappresentazione formale dei testi.
+	\end{block}
+
+
+\end{frame}
+
+
+\begin{frame}
+	\frametitle{Codifica e Modellizzazione}
+	\framesubtitle{Problemi e opportunità}
+	\addtocounter{nframe}{1}
+
+	\begin{block}{Discussione nella comunità}
+		L'informatica allo stato attuale è in grado di fornire allo studioso di scienze umane una serie di tecnologie per implementare dei sistemi di rappresentazione testuale.
+	\end{block}
+
+	\begin{block}{Nuove sfide}
+		La discussione sulla rappresentazione digitale dei testi ha rivelato un intreccio di complesse questioni teoriche e pratiche
+	\end{block}
+
+\end{frame}
+
+\begin{frame}
+	\frametitle{Definizione di codifica informatica dei testi}
+	\framesubtitle{Fabio Ciotti 2007}
+	\addtocounter{nframe}{1}
+
+	\begin{block}{Definizione}
+		Per \textbf{codifica} informatica dei testi intendiamo la \textit{rappresentazione formale} di un \textbf{testo} ad un qualche livello descrittivo, su di un supporto digitale, in un formato utilizzabile da un elaboratore (\textit{Machine Readable Form}) mediante un opportuno \textbf{linguaggio informatico}
+	\end{block}
+
+\end{frame}
+
+
+\begin{frame}
+	\frametitle{Concetti alla base della codifica di testi}
+	\framesubtitle{Gli elementi}
+	\addtocounter{nframe}{1}
+
+    \begin{itemize}
+        \item Cosa significa Codifica
+        \item Cosa significa Testo
+        \item Cosa significa Codifica del Testo
+        \item Cosa significa Linguaggio Informatico
+    \end{itemize}
+
+\end{frame}
 
 \section{Codifica del Testo}
 \input{includes/2-codificaTesto.tex}
 
+\section{Modello del Testo}
+%\input{includes/2-modelloTesto.tex}
+
 \section{Importanza della Codifica}
-\input{includes/2-importanzaCodifica.tex}
+%\input{includes/2-importanzaCodifica.tex}
 
 \section{Approfondimenti}
-\input{includes/2-approfondimenti.tex}
+%\input{includes/2-approfondimenti.tex}
 
 \section{Conclusioni}
-\input{includes/2-conclusion.tex}
+%\input{includes/2-conclusion.tex}
+
+\section{Bibliografia}
+%\input{includes/2-bibliografia.tex}
 
 \end{document}
