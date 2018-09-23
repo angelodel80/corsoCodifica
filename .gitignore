@@ -12,3 +12,6 @@ slides/latex/beamer/corsoCodificaTesto/Lezione-introduzione/l2l.tex
 *.vrb
 .DS_Store
 **/.DS_Store
+*.fdb_latexmk
+*.fls
+*.synctex.gz
