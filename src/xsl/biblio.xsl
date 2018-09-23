@@ -9,7 +9,7 @@
     </xsl:template>
 
     <xsl:template match="title">
-        titoli: <xsl:value-of select="." />
+        titoli: <xsl:value-of select="." /> -
     </xsl:template>
 
     <xsl:template match="author">
