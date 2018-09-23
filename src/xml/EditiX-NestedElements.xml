@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+
+<elementoRadice>
+	<elementoPrimoFiglio>
+		<elementoPrimoNipote>
+			<elementoPrimoPronipote>
+				Contenuto dell'elemento Primo Pronipote
+			</elementoPrimoPronipote>
+		</elementoPrimoNipote>
+	</elementoPrimoFiglio>
+</elementoRadice>

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE elementoRadice SYSTEM "../schema/dtd/testEditiXDTD.dtd">
+<elementoRadice test="yes">
+	<primoElemento>
+		Ciao
+	</primoElemento>
+</elementoRadice>
+

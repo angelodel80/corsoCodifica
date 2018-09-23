@@ -1,0 +1,8 @@
+<!-- DTD created at Sat Sep 22 18:31:19 CEST 2018 with EditiX XML Editor (http://www.editix.com). Please insert an encoding attribute header for converting any DTD  -->
+
+<!ELEMENT  elementoRadice  (primoElemento )>
+<!ATTLIST elementoRadice   
+		test	CDATA		#REQUIRED>
+
+<!ELEMENT primoElemento (#PCDATA)>
+

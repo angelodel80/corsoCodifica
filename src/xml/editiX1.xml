@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<elementoRadice>
+	<!-- Questo è il contenuto di un commento -->
+	<primoElemento/>
+	<secondoElemento>
+		contenuto del secondo elemento &amp; della radice
+	</secondoElemento>
+	<terzoElemento conAttributo="valoreAttributo"/>
+	<quartoElemento>
+		<![CDATA[
+			il contenuto di questo elemento è tutto testo, anche se inserisco elementi xml come
+			<ciao>
+				come stai?
+			</ciao>
+			potrei anche aggiungere elementi con sintassi errata:
+			<ciao>
+			</Ciao>
+			
+		]]>
+	</quartoElemento>
+</elementoRadice>
