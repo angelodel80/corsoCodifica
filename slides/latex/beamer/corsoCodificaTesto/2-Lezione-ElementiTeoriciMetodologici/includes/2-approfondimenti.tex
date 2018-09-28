@@ -70,7 +70,7 @@
 	\addtocounter{nframe}{1}
 
 	\begin{block}{problemi teorici}
-		La codifica è un processo assai più complesso delle semplice e meccanica correlazione biunivoca di strutture rappresentazionali.
+		La codifica è un processo assai più complesso della semplice e meccanica correlazione biunivoca di strutture rappresentazionali.
 	\end{block}
 
 \end{frame}
@@ -110,7 +110,7 @@
 	\addtocounter{nframe}{1}
 
 	\begin{block}{Codifica come interpretazione}
-		Conseguentemente ogni processo di codifica (inclusi quelli di codifica informatica del testo) è il risultato di una interpretazione.
+		Conseguentemente ogni processo di codifica (inclusi quelli di codifica informatica del testo) è il risultato di una interpretazione.
     \end{block}
     
     \begin{block}{Rappresentazione e interpretazione}
@@ -129,7 +129,7 @@
     \end{block}
     
     \begin{block}{Rappresentazione e interpretazione}
-        In linea di principio non è sempre possibile dire in modo non ambiguo che una traccia su un supporto fisico appartiene a una certa classe di iscrizioni che chiamiamo carattere.
+        In linea di principio non è sempre possibile dire in modo non ambiguo che una traccia su un supporto fisico appartiene a una certa classe di iscrizioni che chiamiamo carattere.
     \end{block}
 
 \end{frame}
@@ -141,7 +141,7 @@
 	\addtocounter{nframe}{1}
 
 	\begin{block}{Certezza e soggettività}
-		\textbf{Ogni interpretazione può godere di diversi gradi di certezza e di soggettività. In ogni caso non esiste nessun genere di rappresentazione di un testo che si possa definire libera da processi interpretativi.}
+		\textbf{Ogni interpretazione può godere di diversi gradi di certezza e di soggettività. In ogni caso non esiste nessun genere di rappresentazione di un testo che si possa definire libera da processi interpretativi.}
     \end{block}
    
 \end{frame}
@@ -152,7 +152,7 @@
 	\addtocounter{nframe}{1}
 
 	\begin{block}{Linguaggio teorico}
-		Lo schema di codifica è un linguaggio teorico usato per costruire teorie o modelli di fenomeni testuali
+		Lo schema di codifica è un linguaggio teorico usato per costruire teorie o modelli di fenomeni testuali
     \end{block}
 
     \begin{block}{Linguaggio teorico}
@@ -177,34 +177,73 @@
    
 \end{frame}
 
+\begin{frame}
+	\frametitle{Approfondimenti e Conclusioni}
+	\framesubtitle{per comprendere la codifica}
+	\addtocounter{nframe}{1}
 
+	\begin{block}{OHCO}
+		 Il modello di struttura gerarchica del testo si sposa perfettamente con XML, il quale può essere considerato sia un formalismo sia un modello di dati espresso da quel formalismo, e tale meta-modello è appunto un albero ordinato etichettato.
+	
+    \end{block}
+   
+\end{frame}
 
-% OHCO: La ragione di tanto attaccamento all’idea di struttura gerarchica ovviamente non è immotivata. Il fatto è che XML (e SGML) può essere considerato sia un formalismo sia un modello di dati espresso da quel formalismo, e tale (meta)modello è appunto un albero ordinato etichettato.
+\begin{frame}
+	\frametitle{Approfondimenti e Conclusioni}
+	\framesubtitle{per comprendere la codifica}
+	\addtocounter{nframe}{1}
 
-% Il prezzo costituito dall’adozione di un modello di dati così vincolante, d’altra parte, paga il vantaggio di potere validare in modo automatico ogni istanza di dati rispetto al modello mediante algoritmi generali ben conosciuti e computazionalmente trattabili, ciò che a sua volta consente di costruire sistemi di elaborazione degli stessi dati consistenti ed efficaci (al netto dei costrutti ID/IDREF).
+	\begin{block}{OHCO: modello di dati così vincolante}
+		Il modello OHCO presenta dei vincoli, che vanno sotto il nome di ``problema delle gerarchie sovrapposte'' (overlapping hierarchies).
+	 \end{block}
+	 
+	 \begin{block}{Gerarchie Sovrapposte}
+		Dati due oggetti logici presenti in un testo, le coppie di tag bilanciati che li rappresentano non si annidano propriamente ma si sovrappongono. \textit{Tale situazione è sintatticamente e semanticamente vietata in XML}.
+ 	\end{block}
+   
+\end{frame}
 
-% Le manifestazioni di queste difficoltà sono state comunemente rubricate come il problema delle gerarchie sovrapposte (overlapping hierarchies)
-% In termini semplici il problema OH dal punto di vista sintattico consiste nel fatto che, dati due oggetti logici presenti in un testo, le coppie di tag bilanciati che li rappresentano non si annidano propriamente ma si sovrappongono.
-%Tale situazione è sintatticamente e semanticamente vietata in XML
+\begin{frame}
+	\frametitle{Approfondimenti e Conclusioni}
+	\framesubtitle{per comprendere la codifica}
+	\addtocounter{nframe}{1}
+
+	\begin{block}{Modelli Gerarchici}
+		Vantaggio di potere validare in modo automatico ogni istanza di dati rispetto al modello mediante algoritmi generali ben conosciuti e computazionalmente trattabili, ciò che a sua volta consente di costruire sistemi di elaborazione degli stessi dati consistenti ed efficaci (al netto dei costrutti ID/IDREF).
+	 \end{block}
+	 
+   
+\end{frame}
+
+\begin{frame}
+	\frametitle{Approfondimenti e Conclusioni}
+	\framesubtitle{per comprendere la codifica}
+	\addtocounter{nframe}{1}
+
+	\begin{block}{Modelli non gerarchici}
+		Negli ultimi anni la ricerca teorica sullo sviluppo di sistemi di markup non gerarchici ha avuto un notevole stimolo
+	 \end{block}
+
+	 \begin{block}{Modelli non gerarchici}
+		Tutte le soluzioni proposte finora hanno grossi limiti per quel che concerne la facilità di gestione e manutenzione
+
+	 \end{block}
+	 
+   
+\end{frame}
+
 
 % ipotetiche soluzioni
 % Non è un caso che negli ultimi dieci anni, proprio in parallelo con l’inarrestabile diffusione di XML nel mondo dell’elaborazione testuale (e non solo) e della TEI nella comunità umanistica si sono moltiplicati i tentativi di trovare delle soluzioni definitive al problema.
 % soluzioni interne e soluzioni esterne al paradigma XML. Per questo alla completezza e congruenza va affiancata una serie di ulteriori criteri valutativi di natura teorica, tecnica e pragmatica
 
-% In generale tutte le soluzioni proposte finora hanno grossi limiti per quel che concerne la facilità di gestione e manutenzione
 
 % La visione pluralista del testo portata alle sue estreme conseguenze, eccede i limiti sintattici di un formalismo di codifica come XML. Lo standard, infatti, non è dotato di costrutti sintattici adeguati alla rappresentazione di molteplici sottoprospettive gerarchiche concorrenti che si sovrappongono ma che possono anche collegarsi e interrelarsi.
 
 % Ogni modello descrive le caratteristiche del testo a un determinato livello, in base al punto di vista dell’osservatore, ma non coincide con esse.
 
 % esempio con codice XML e grafico/immagine
-
-
-
-
-
-
-
 
 % problema della complessità testuale
 %% Se esistono proprietà dei testi irriducibili a qualsiasi formalizzazione anche minimale, allora queste non possono per definizione essere rappresentate e trattate con metodi computazionali.
@@ -239,9 +278,6 @@
 
 %Gli elementi milestone offrono la massima flessibilità sintattica senza costringere a separare markup e contenuto. un parser XML può validare la corretta collocazione di un elemento vuoto rispetto a un modello di contenuto, o verificare che due elementi vuoti siano stati correlati mediante coppie di ID/IDREF. ma non può in alcun modo attribuire funzione strutturale alla sequenza di caratteri contenuta tra due elementi vuoti. non è accessibile come tale a una applicazione XML standard.
 
-
-
-% Per questo negli ultimi anni la ricerca teorica sullo sviluppo di si- stemi di markup non gerarchici ha avuto un notevole stimolo
 
 % L’ostacolo maggiore consiste nella individuazione di un modello di dati e di un formalismo a esso associato che possa essere validato ed elaborato mediante algoritmi generali e computazionalmente trattabili come avviene per il modello ad albero di XML.
 %% rappresentazione di alberi concorrenti in un medesimo documento XML (Xconcur, JIITs)
