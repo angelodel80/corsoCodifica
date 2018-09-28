@@ -1,106 +1,253 @@
 % l’applicazione di metodologie computazionali nell’ambito della ricerca umanistica comporta due tipi, o meglio due fasi di formalizzazione:
 % definizione e implementazione di strutture dati adeguate alla cattura dei fenomeni di interesse dell’umanista, e in particolare alla rappresentazione formale dei testi;
 % specificazione di algoritmi che, applicati alle strutture dati, siano in grado di simulare i processi di manipolazione dei testi tipici della ricerca umanistica o in generale delle pratiche sociali che hanno a che fare in vario modo con i testi.
-%Il problema della codifica testuale rientra in generale nel primo tipo di formalizzazione,
 
+%% lo schema di codifica TEI impone al responsabile della codifica di effettuare delle scelte teoriche e interpretative che non sono pertinenti alla sua opera di semplice trascrittore.
 
-% analizzare alcuni problemi teorici implicati dalla codifica informatica dei testi.
-% La codifica infatti è un processo assai più complesso delle semplice e meccanica correlazione biunivoca di strutture rappresentazionali.
-% problema del testo: la determinazione di «cosa sia un testo» e di quale legame sussista tra questa determinazione, i processi dell’interpretazione e i linguaggi con i quali essa viene enunciata.
-%  uno di carattere epistemologico, riguarda la natu- ra della codifica come processo di rappresentazione.
-% carattere ontologico, e concerne il concet- to generale di testo che «emerge» dalle teorie dei sistemi di codifica.
+%  uno di carattere epistemologico, riguarda la natura della codifica come processo di rappresentazione.
+% carattere ontologico, e concerne il concetto generale di testo che «emerge» dalle teorie dei sistemi di codifica.
 
 % domanda: codifica è un processo interpretativo oppure un processo riproduttivo?
 %% lo schema di codifica TEI impone al responsabile della codifica di effettuare delle scelte teoriche e interpretative che non sono pertinenti alla sua opera di semplice trascrittore.
 
-% La distinzione tra sistemi procedurali e sistemi dichiarativi non è parallela ma orto- gonale a quella tra codifica presentazionale e codifica analitica o strut- turale.
-
-% Naturalmente questo è possibile se tale descrizione del supporto fi- sico di un testo è riducibile a un struttura gerarchica.
-
-% I problemi e le difficoltà determinati dagli schemi SGML per una codifica presenta- zionale in effetti, sono determinati proprio da questa metastruttura
-
-% indagare più a fondo la natura della codifica e dell’idea di testo che la codifica presuppone.
-
-% Si può infatti veramente sostenere che la codifica sia un semplice processo di trascrizione?
 
 % la rappresentazione informatica è un processo semiotico: Ogni atto rappresentazionale o semiotico implica dei processi interpretativi 
 
-% Conseguentemente sosteniamo che ogni processo di codifica (inclusi quelli di cui ci occupiamo in questa sede) è il risultato di una interpretazione.
+% indagare più a fondo la natura della codifica e dell’idea di testo che la codifica presuppone.
 
-%% esempio trascrizione caratteri: l’assunzione che una data traccia grafica «A» sia un token di un data classe astratta di tracce che identifichiamo come il carattere «a». Richiesti molti sforzi interpretativi
 
-% in linea di principio non è sempre possibile predicare in modo non ambiguo l’appartenenza di una certa «traccia» su un supporto testuale fisico a una certa classe di iscrizioni che chiamiamo «carattere»
+% Naturalmente questo è possibile se tale descrizione del supporto fisico di un testo è riducibile a un struttura gerarchica.
 
-% problema: utilizzazione dei simboli del linguaggio informatico in funzione di representamen dei caratteri alfanumerici del testo
+% I problemi e le difficoltà determinati dagli schemi SGML per una codifica presentazionale in effetti, sono determinati proprio da questa metastruttura
 
-%% Ogni interpretazione può godere di diversi gradi di certezza e di sog- gettività. In ogni caso non esiste nessun genere di rappresentazione di un testo che si possa definire libera da processi interpretativi.
+% problema: utilizzazione dei simboli del linguaggio informatico in funzione di representare dei caratteri alfanumerici del testo
 
-% lo schema di codifica è un linguaggio teorico usato per costruire teorie o modelli di fenomeni testuali.
+\begin{frame}
+	\frametitle{Approfondimenti e Conclusioni}
+	\framesubtitle{per comprendere la codifica}
+	\addtocounter{nframe}{1}
 
-% la stessa “costruzione” di un linguaggio teorico ri- flette un determinato modello del mondo.
+	\begin{block}{Codifica del testo}
+		L’applicazione di metodologie computazionali nell’ambito della ricerca umanistica comporta due aspetti di formalizzazione
+	\end{block}
 
-% il linguaggio di codifica informatica del testo, implica una teoria ontologica del testo
+	\begin{block}{Due elementi}
+		Formalizzazione dei dati e formalizzazione dell'elaborazione
+	\end{block}
 
-% obiettivo: 1) sviluppare teorie e modelli formali del testo (o di alcuni suoi livelli descrittivi)
-2) individuare formalismi atti a esprimerli in modo computazionalmente accettabile
+\end{frame}
 
-% OHCO: La ragione di tanto attaccamento all’idea di struttura gerarchica ovviamente non è immotivata. Il fatto è che XML (e SGML) può esse- re considerato sia un formalismo sia un modello di dati espresso da quel formalismo, e tale (meta)modello è appunto un albero ordinato etichettato.
-% Il prezzo costituito dall’adozione di un modello di dati così vinco- lante, d’altra parte, paga il vantaggio di potere validare in modo auto- matico ogni istanza di dati rispetto al modello mediante algoritmi ge- nerali ben conosciuti e computazionalmente trattabili, ciò che a sua volta consente di costruire sistemi di elaborazione degli stessi dati consistenti ed efficaci (al netto dei costrutti ID/IDREF)
+\begin{frame}
+	\frametitle{Approfondimenti e Conclusioni}
+	\framesubtitle{per comprendere la codifica}
+	\addtocounter{nframe}{1}
+
+	\begin{block}{Formalizzazione dei dati}
+		Definizione e implementazione di strutture dati adeguate alla cattura dei fenomeni di interesse dell’umanista, e in particolare alla rappresentazione formale dei testi;
+	\end{block}
+
+	\begin{block}{Formalizzazione dell'elaborazione}
+		specificazione di algoritmi che, applicati alle strutture dati, siano in grado di simulare i processi di manipolazione dei testi tipici della ricerca umanistica o in generale delle pratiche sociali che hanno a che fare in vario modo con i testi.
+	\end{block}
+
+\end{frame}
+
+
+\begin{frame}
+	\frametitle{Approfondimenti e Conclusioni}
+	\framesubtitle{per comprendere la codifica}
+	\addtocounter{nframe}{1}
+
+	\begin{block}{Codifica del testo}
+		Il problema della codifica testuale rientra in generale nel primo tipo di formalizzazione (Dati).
+	\end{block}
+
+\end{frame}
+
+\begin{frame}
+	\frametitle{Approfondimenti e Conclusioni}
+	\framesubtitle{per comprendere la codifica}
+	\addtocounter{nframe}{1}
+
+	\begin{block}{problemi teorici}
+		La codifica è un processo assai più complesso delle semplice e meccanica correlazione biunivoca di strutture rappresentazionali.
+	\end{block}
+
+\end{frame}
+
+\begin{frame}
+	\frametitle{Approfondimenti e Conclusioni}
+	\framesubtitle{per comprendere la codifica}
+	\addtocounter{nframe}{1}
+
+	\begin{block}{problema del testo}
+		la specificazione di cosa sia un testo e di quale legame sussista tra questa specificazione, i processi dell’interpretazione e i linguaggi formali con i quali essa viene descritta.
+	\end{block}
+
+\end{frame}
+
+\begin{frame}
+	\frametitle{Approfondimenti e Conclusioni}
+	\framesubtitle{per comprendere la codifica}
+	\addtocounter{nframe}{1}
+
+	\begin{block}{Norme TEI}
+		Le linee guida di codifica TEI impongono a chi codifica di effettuare delle scelte teoriche e interpretative che non sono imputabili alla semplice trascrizione.
+    \end{block}
+    
+    \begin{block}{Processo di codifica}
+        La codifica è un processo interpretativo non solo un processo riproduttivo.
+        \\Non è quindi un semplice processo di trascrizione!
+    \end{block}
+    
+
+\end{frame}
+
+
+\begin{frame}
+	\frametitle{Approfondimenti e Conclusioni}
+	\framesubtitle{per comprendere la codifica}
+	\addtocounter{nframe}{1}
+
+	\begin{block}{Codifica come interpretazione}
+		Conseguentemente ogni processo di codifica (inclusi quelli di codifica informatica del testo) è il risultato di una interpretazione.
+    \end{block}
+    
+    \begin{block}{Rappresentazione e interpretazione}
+        In ogni caso non esiste nessun genere di rappresentazione di un testo che si possa definire libera da processi interpretativi.
+    \end{block}
+
+\end{frame}
+
+\begin{frame}
+	\frametitle{Approfondimenti e Conclusioni}
+	\framesubtitle{per comprendere la codifica}
+	\addtocounter{nframe}{1}
+
+	\begin{block}{Esempio}
+		L’assunzione che una data traccia grafica ``A'' sia una istanza di un data classe astratta di tracce che identifichiamo come il carattere ``a''. Richiesti molti sforzi interpretativi.
+    \end{block}
+    
+    \begin{block}{Rappresentazione e interpretazione}
+        In linea di principio non è sempre possibile dire in modo non ambiguo che una traccia su un supporto fisico appartiene a una certa classe di iscrizioni che chiamiamo carattere.
+    \end{block}
+
+\end{frame}
+
+
+\begin{frame}
+	\frametitle{Approfondimenti e Conclusioni}
+	\framesubtitle{per comprendere la codifica}
+	\addtocounter{nframe}{1}
+
+	\begin{block}{Certezza e soggettività}
+		\textbf{Ogni interpretazione può godere di diversi gradi di certezza e di soggettività. In ogni caso non esiste nessun genere di rappresentazione di un testo che si possa definire libera da processi interpretativi.}
+    \end{block}
+   
+\end{frame}
+
+\begin{frame}
+	\frametitle{Approfondimenti e Conclusioni}
+	\framesubtitle{per comprendere la codifica}
+	\addtocounter{nframe}{1}
+
+	\begin{block}{Linguaggio teorico}
+		Lo schema di codifica è un linguaggio teorico usato per costruire teorie o modelli di fenomeni testuali
+    \end{block}
+
+    \begin{block}{Linguaggio teorico}
+        La stessa costruzione di un linguaggio teorico riflette un determinato modello del mondo (soggettivo o condiviso).
+        \\ \textit{si presuppone una teoria ontologica del testo}.
+    \end{block}
+   
+\end{frame}
+
+\begin{frame}
+	\frametitle{Approfondimenti e Conclusioni}
+	\framesubtitle{per comprendere la codifica}
+	\addtocounter{nframe}{1}
+
+	\begin{block}{Obiettivo}
+		\begin{itemize}
+			\item Sviluppare teorie e modelli formali del testo (o di alcuni suoi livelli descrittivi)
+			\item Individuare formalismi atti a esprimerli in modo computazionalmente accettabile
+		\end{itemize}
+	
+    \end{block}
+   
+\end{frame}
+
+
+
+% OHCO: La ragione di tanto attaccamento all’idea di struttura gerarchica ovviamente non è immotivata. Il fatto è che XML (e SGML) può essere considerato sia un formalismo sia un modello di dati espresso da quel formalismo, e tale (meta)modello è appunto un albero ordinato etichettato.
+
+% Il prezzo costituito dall’adozione di un modello di dati così vincolante, d’altra parte, paga il vantaggio di potere validare in modo automatico ogni istanza di dati rispetto al modello mediante algoritmi generali ben conosciuti e computazionalmente trattabili, ciò che a sua volta consente di costruire sistemi di elaborazione degli stessi dati consistenti ed efficaci (al netto dei costrutti ID/IDREF).
 
 % Le manifestazioni di queste difficoltà sono state comunemente rubricate come il problema delle gerarchie sovrapposte (overlapping hierarchies)
 % In termini semplici il problema OH dal punto di vista sintattico consiste nel fatto che, dati due oggetti logici presenti in un testo, le coppie di tag bilanciati che li rappresentano non si annidano propriamente ma si sovrappongono.
 %Tale situazione è sintatticamente e semanticamente vietata in XML
 
-% esempio con codice XML e grafico/immagine
-
-% problema della complessità testuale
-%% Se esistono proprietà dei testi irriducibili a qualsiasi forma- lizzazione anche minimale, allora queste non possono per definizione essere rappresentate e trattate con metodi computazionali.
-% nella categoria delle gerarchie sovrapposte si possono di- stinguere diversi sottoproblemi di complessità crescente
-% distinguere una “gerarchia delle gerarchie sovrapposte”.
-% 1. Il caso più semplice e comune è quello della compresenza di due o più strutture (livelli) gerarchiche i cui elementi si sovrappongono.
-% 2. concettualmente più complicato è quello di un ele- mento appartenente a una gerarchia che si estende oltre i confini dell’elemento in cui inizia o persino di uno dei suoi predecessori
-% 3. Tecnicamente simile ma concettualmente distinto il caso di e- lementi composti da segmenti discontinui e non contigui 
-% 4. Infine il caso più complesso che si verifica quando un dato e- lemento può auto-sovrapporsi illimitatamente.
-
 % ipotetiche soluzioni
-% Non è un caso che negli ultimi dieci anni, proprio in parallelo con l’inarrestabile diffusione di XML nel mondo dell’elaborazione testua- le (e non solo) e della TEI nella comunità umanistica si sono moltipli- cati i tentativi di trovare delle soluzioni definitive al problema.
+% Non è un caso che negli ultimi dieci anni, proprio in parallelo con l’inarrestabile diffusione di XML nel mondo dell’elaborazione testuale (e non solo) e della TEI nella comunità umanistica si sono moltiplicati i tentativi di trovare delle soluzioni definitive al problema.
 % soluzioni interne e soluzioni esterne al paradigma XML. Per questo alla completezza e congruenza va affiancata una serie di ulteriori criteri valutativi di natura teorica, tecnica e pragmatica
 
-% Leggibilità e facilità di comprensione da parte di un utente u- mano (sono esclusi dunque tutti i formati binari)
+% In generale tutte le soluzioni proposte finora hanno grossi limiti per quel che concerne la facilità di gestione e manutenzione
+
+% La visione pluralista del testo portata alle sue estreme conseguenze, eccede i limiti sintattici di un formalismo di codifica come XML. Lo standard, infatti, non è dotato di costrutti sintattici adeguati alla rappresentazione di molteplici sottoprospettive gerarchiche concorrenti che si sovrappongono ma che possono anche collegarsi e interrelarsi.
+
+% Ogni modello descrive le caratteristiche del testo a un determinato livello, in base al punto di vista dell’osservatore, ma non coincide con esse.
+
+% esempio con codice XML e grafico/immagine
+
+
+
+
+
+
+
+
+% problema della complessità testuale
+%% Se esistono proprietà dei testi irriducibili a qualsiasi formalizzazione anche minimale, allora queste non possono per definizione essere rappresentate e trattate con metodi computazionali.
+% nella categoria delle gerarchie sovrapposte si possono distinguere diversi sottoproblemi di complessità crescente
+% distinguere una “gerarchia delle gerarchie sovrapposte”.
+% 1. Il caso più semplice e comune è quello della compresenza di due o più strutture (livelli) gerarchiche i cui elementi si sovrappongono.
+% 2. concettualmente più complicato è quello di un elemento appartenente a una gerarchia che si estende oltre i confini dell’elemento in cui inizia o persino di uno dei suoi predecessori
+% 3. Tecnicamente simile ma concettualmente distinto il caso di elementi composti da segmenti discontinui e non contigui 
+% 4. Infine il caso più complesso che si verifica quando un dato elemento può auto-sovrapporsi illimitatamente.
+
+
+% Leggibilità e facilità di comprensione da parte di un utente umano (sono esclusi dunque tutti i formati binari)
 % Facilità di manutenzione e modifica
 % Disponibilità di implementazioni software
 % Compatibilità sintattica con XML
-% Facilità di validazione (eventualmente sopravanzando le capa- cità di validazione di un parser XML standard)
-% Possibilità di validazione incrociata tra gerarchie diverse Possibilità di formattazione ed elaborazione grafica e presenta- zionale
+% Facilità di validazione (eventualmente sopravanzando le capacità di validazione di un parser XML standard)
+% Possibilità di validazione incrociata tra gerarchie diverse Possibilità di formattazione ed elaborazione grafica e presentazionale
 % Possibilità di estrapolare molteplici viste basate su uno o più tra le gerarchie presenti
 % Possibilità di estrapolare sottoinsiemi gerarchici delle caratteri- stiche testuali
 % Continuità del contenuto testuale serializzato
 
 % Soluzioni interne al paradigma XML rientrano artifici sintattici che mantengono la conformità a XML
 % XML come puro formalismo di serializzazione per modelli di dati non gerarchici
-% Segmentazione: Un elemento logico che si sovrappone ai confini di un’altro (o di più altri) viene diviso in due (o n) elementi XML dello stesso tipo cor- relati mediante apposti attributi.
+% Segmentazione: Un elemento logico che si sovrappone ai confini di un’altro (o di più altri) viene diviso in due (o n) elementi XML dello stesso tipo correlati mediante apposti attributi.
 % Questa soluzione permetterebbe di risolvere sovrapposizioni di tipo (1) , (2) e (3), e può essere parzialmente validata mediante un oculato uso di attributi ID/IDREF.
-% Elementi di congiunzione: Consiste nell’introduzione di un elemento XML (elemento di con- giunzione) con la funzione metatestuale di esprimere l’unità logica di un fenomeno testuale rappresentato da più elementi XML distinti. Questa tecnica consente di trattare in linea teorica ogni caso di so- vrapposizione e di non contiguità, di ordinamento inverso e di relazio- ne n-aria tra oggetti testuali. Questo ultimo problema può essere risolto parzialmente adottando gli schemi di puntamento basati su range di caratteri previsto nello standard XPointer ma in questo caso l’elaborazione dei riferimenti ri- chiederebbe l’uso di software ad hoc.
-% Markup esterno (stand-off markup): Le tecniche basate su markup esterno sono di fatto identiche a quelle basate su elementi join. La differenza consiste nel fatto che in questo caso gli elementi che esprimono il collegamento di segmenti testuali nel documento XML base sono in un documento XML ester- no. Il fatto di poter collocare i collegamenti in un documento autono- mo consente di adottare un linguaggio XML per descrivere una strut- tura principale del documento base e uno diverso per la rappresenta- zione dei livelli di descrizione ulteriori.
+% Elementi di congiunzione: Consiste nell’introduzione di un elemento XML (elemento di congiunzione) con la funzione metatestuale di esprimere l’unità logica di un fenomeno testuale rappresentato da più elementi XML distinti. Questa tecnica consente di trattare in linea teorica ogni caso di sovrapposizione e di non contiguità, di ordinamento inverso e di relazione n-aria tra oggetti testuali. Questo ultimo problema può essere risolto parzialmente adottando gli schemi di puntamento basati su range di caratteri previsto nello standard XPointer ma in questo caso l’elaborazione dei riferimenti richiederebbe l’uso di software ad hoc.
+% Markup esterno (stand-off markup): Le tecniche basate su markup esterno sono di fatto identiche a quelle basate su elementi join. La differenza consiste nel fatto che in questo caso gli elementi che esprimono il collegamento di segmenti testuali nel documento XML base sono in un documento XML esterno. Il fatto di poter collocare i collegamenti in un documento autonomo consente di adottare un linguaggio XML per descrivere una struttura principale del documento base e uno diverso per la rappresentazione dei livelli di descrizione ulteriori.
 
-% Ad esempio si può usare la TEI per la codifica del documento e XTM (XML Topic Maps) o RDF per esprimere le relazioni tra gli oggetti testuali. (interessante). Questa tecnica ha il vantaggio di poter disporre di modelli di dati e di sistemi di elabora- zione complessi.
+% Ad esempio si può usare la TEI per la codifica del documento e XTM (XML Topic Maps) o RDF per esprimere le relazioni tra gli oggetti testuali. (interessante). Questa tecnica ha il vantaggio di poter disporre di modelli di dati e di sistemi di elaborazione complessi.
 
-% Elementi Milestone: Un elemento milestone è un elemento XML vuoto che segnala un punto monodimensionale in un documento XML. si possono collocare liberamente sintatticamente in un documento XML. Questa strategia è ampiamente utilizzata nella TEI per veicolare le indicazioni sulla messa in pagina di un testo nel documento fonte da cui è stato memorizzato. Gli elementi milestone possono essere usati in coppie virtuali per segnalare i confini di segmenti arbitrari di testo che si sovrappongono agli elementi standard. Insieme a elementi di congiunzione o stand- off markup possono rappresentare virtualmente ogni genere di sovrap- posizione, auto-sovrapposizione e segmentazione non contigua. 
-Gli elementi milestone offrono la massima flessibilità sintattica senza costringere a separare markup e contenuto. un parser XML può validare la corretta colloca- zione di un elemento vuoto rispetto a un modello di contenuto, o veri- ficare che due elementi vuoti siano stati correlati mediante coppie di ID/IDREF. ma non può in alcun modo attribuire funzione strutturale alla sequenza di caratteri contenuta tra due elementi vuoti. non è accessibile come tale a una applicazione XML standard.
+% Elementi Milestone: Un elemento milestone è un elemento XML vuoto che segnala un punto monodimensionale in un documento XML. si possono collocare liberamente sintatticamente in un documento XML. Questa strategia è ampiamente utilizzata nella TEI per veicolare le indicazioni sulla messa in pagina di un testo nel documento fonte da cui è stato memorizzato. Gli elementi milestone possono essere usati in coppie virtuali per segnalare i confini di segmenti arbitrari di testo che si sovrappongono agli elementi standard. Insieme a elementi di congiunzione o stand-off markup possono rappresentare virtualmente ogni genere di sovrapposizione, auto-sovrapposizione e segmentazione non contigua. 
 
-% In generale tutte le soluzioni pro- poste finora hanno grossi limiti per quel che concerne la facilità di ge- stione e manutenzione
+%Gli elementi milestone offrono la massima flessibilità sintattica senza costringere a separare markup e contenuto. un parser XML può validare la corretta collocazione di un elemento vuoto rispetto a un modello di contenuto, o verificare che due elementi vuoti siano stati correlati mediante coppie di ID/IDREF. ma non può in alcun modo attribuire funzione strutturale alla sequenza di caratteri contenuta tra due elementi vuoti. non è accessibile come tale a una applicazione XML standard.
+
+
 
 % Per questo negli ultimi anni la ricerca teorica sullo sviluppo di si- stemi di markup non gerarchici ha avuto un notevole stimolo
 
 % L’ostacolo maggiore consiste nella individuazione di un modello di dati e di un formalismo a esso associato che possa essere validato ed elaborato mediante algoritmi generali e computazionalmente trattabili come avviene per il modello ad albero di XML.
 %% rappresentazione di alberi concorrenti in un medesimo documento XML (Xconcur, JIITs)
-%% In LMNL la soluzione del problema OH viene trovata uscendo de- finitivamente fuori dal paradigma gerarchico di XML
-%% TexMECS e GODDAD: Markup Languages for Complex Documents. una notazione non molto dissimile da XML (provvede infatti anche strutture come gli attributi) la quale tut- tavia permette di esprimere facilmente strutture sovrapposte, auto- sovrapposte e non contigue. In linea teorica questo grafo può esprimere tutte le possibili rela- zioni tra oggetti testuali linearizzati sottoforma di stringhe di caratteri etichettate mediante markup, inclusi i più complessi casi di auto- sovrapposizione o di frammentazione non contigua e non linearmente ordinata. 
-
-%La visione pluralista del testo portata alle sue estreme conseguenze, eccede i limiti sintattici di un formalismo di codifica come XML. Lo standard, infatti, non è dotato di costrutti sintattici adeguati alla rappresentazione di molteplici sottoprospettive gerarchiche concorrenti che si sovrappongono ma che possono anche collegarsi e interrelarsi.
+%% In LMNL la soluzione del problema OH viene trovata uscendo definitivamente fuori dal paradigma gerarchico di XML
+%% TexMECS e GODDAD: Markup Languages for Complex Documents. una notazione non molto dissimile da XML (provvede infatti anche strutture come gli attributi) la quale tuttavia permette di esprimere facilmente strutture sovrapposte, auto- sovrapposte e non contigue. In linea teorica questo grafo può esprimere tutte le possibili relazioni tra oggetti testuali linearizzati sottoforma di stringhe di caratteri etichettate mediante markup, inclusi i più complessi casi di auto- sovrapposizione o di frammentazione non contigua e non linearmente ordinata. 
 
 
 
 % non possiamo dire apriori che uno schema di codifica testuale coglie l’essenza del testo più e meglio di un altro in base a un qualche assunto metafisico. Ma neppure si può affermare che ogni rappresentazione è vera in quanto costituisce il suo oggetto testo secondo esigenze specifiche e locali.
-
-%Ogni modello descrive le caratteristiche del testo a un determinato livello, in base al punto di vista dell’osservatore, ma non coincide con esse.
