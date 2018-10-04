@@ -63,105 +63,322 @@
         \end{frame}
         }
     
-    \begin{document}
-    
-    \begin{frame}
-        \maketitle
-    \end{frame}
-    
-    \begin{frame}
-        \frametitle{Contenuto della lezione}
-        \tableofcontents
-    \end{frame}
-    
-    \section{I linguaggi di codifica}
-    \begin{frame}
-        \frametitle{I linguaggi di codifica}
-        \framesubtitle{introduzione}
-        \addtocounter{nframe}{1}
-    
-        \begin{block}{Definizione di codifica digitale del testo}
-            Per \textbf{codifica} digitale dei testi intendiamo la \textit{rappresentazione formale} di un \textbf{testo} ad un qualche livello descrittivo, su di un supporto digitale, in un formato utilizzabile da un elaboratore (\textit{Machine Readable Form}) mediante un opportuno \textbf{linguaggio informatico} (F. Ciotti).
-        \end{block}
-    
-    \end{frame}
-    
-    \begin{frame}
-        \frametitle{I linguaggi di codifica}
-        \framesubtitle{Riassumendo}
-        \addtocounter{nframe}{1}
-    
-        \begin{block}{Impostazione teorico-pratica}
-           
-            \begin{itemize}
-                \item  un testo è molto di più della sequenza di caratteri che lo
-                compongono
-                \item per mezzo della codifica vogliamo rendere esplicite le
-                caratteristiche che vogliamo analizzare
-                \item  solo quello che è esplicito può essere interpretato ed
-                elaborato dal computer
-                \item vogliamo codificare il testo per quello che è, non per quello che
-                sembra
-                \item codifica da effettuare mediante linguaggio di markup
-            \end{itemize}
-            
-        \end{block}
-    
-    \end{frame}
-    
-    
-    \begin{frame}
-        \frametitle{I linguaggi di codifica}
-        \framesubtitle{Linguaggi di marcatura}
-        \addtocounter{nframe}{1}
-    
-        \begin{block}{Il markup}
-            Il termine markup è stato utilizzato in passato per descrivere i segni grafici che accompagnavano  un testo per indicare correzioni o come stampare un particolare passaggio.
-        \end{block}
-    
-        \begin{block}{Nuove sfide}
-            La discussione sulla rappresentazione digitale dei testi ha rivelato un intreccio di complesse questioni teoriche e pratiche.
-        \end{block}
-    
-    \end{frame}
+\begin{document}
 
-    \begin{frame}
-        \frametitle{I linguaggi di codifica}
-        \framesubtitle{Linguaggi di marcatura}
-        \addtocounter{nframe}{1}
-    
-        \begin{center}
-            \includegraphics[width=.8\textwidth]{imgs/dtd.png}
-        \end{center}
-        
-    \end{frame}
-    
-    
-    
-    \section{Fondamenti del linguaggio XML}
-    %\input{includes/2-codificaTesto.tex}
-    
-    \section{Validare XML }
-    %\input{includes/2-modelloTesto.tex}
-    
-    \section{Document Typed Definition - DTD}
-    %\input{includes/2-importanzaCodifica.tex}
-    
-    %\section{Linguaggi di marcatura}
-    %\input{include/2-linguaggiMarcatura.tex}
-    
-    \section{XML Schema Definition - XSD}
-    %\input{includes/2-approfondimenti.tex}
-    %\input{includes/2-conclusioni.tex}
-    
-    \section{Conclusioni}
-    %\input{includes/2-conclusion.tex}
-    
-    \section*{Bibliografia}
-    %\input{includes/3-bibliografia.tex}
-    
-    \end{document}
-    
+\begin{frame}
+	\maketitle
+\end{frame}
+
+\begin{frame}
+	\frametitle{Contenuto della lezione}
+	\tableofcontents
+\end{frame}
+
+\section{I linguaggi di codifica}
+\begin{frame}
+	\frametitle{I linguaggi di codifica}
+	\framesubtitle{introduzione}
+	\addtocounter{nframe}{1}
+
+	\begin{block}{Definizione di codifica digitale del testo}
+		Per \textbf{codifica} digitale dei testi intendiamo la \textit{rappresentazione formale} di un \textbf{testo} ad un qualche livello descrittivo, su di un supporto digitale, in un formato utilizzabile da un elaboratore (\textit{Machine Readable Form}) mediante un opportuno \textbf{linguaggio informatico} (F. Ciotti).
+	\end{block}
+
+\end{frame}
+
+\begin{frame}
+	\frametitle{I linguaggi di codifica}
+	\framesubtitle{Riassumendo}
+	\addtocounter{nframe}{1}
+
+	\begin{block}{Impostazione teorico-pratica}
+
+		\begin{itemize}
+			\item  un testo è molto di più della sequenza di caratteri che lo
+			      compongono
+			\item per mezzo della codifica vogliamo rendere esplicite le
+			      caratteristiche che vogliamo analizzare
+			\item  solo quello che è esplicito può essere interpretato ed
+			      elaborato dal computer
+			\item vogliamo codificare il testo per quello che è, non per quello che
+			      sembra
+			\item codifica da effettuare mediante linguaggio di markup
+		\end{itemize}
+
+	\end{block}
+
+\end{frame}
+
+
+\begin{frame}
+	\frametitle{I linguaggi di codifica}
+	\framesubtitle{Linguaggi di marcatura}
+	\addtocounter{nframe}{1}
+
+	\begin{block}{Il markup}
+		Il termine markup è stato utilizzato in passato per denotare i segni grafici che accompagnavano un testo apposti sul documento per indicare correzioni o modalità grafiche di stampa.
+	\end{block}
+
+\end{frame}
+
+\begin{frame}
+	\frametitle{I linguaggi di codifica}
+	\framesubtitle{Linguaggi di marcatura}
+	\addtocounter{nframe}{1}
+
+	\begin{center}
+		\includegraphics[width=.7\textwidth]{imgs/markup001.jpg}
+	\end{center}
+
+\end{frame}
+
+\begin{frame}
+	\frametitle{I linguaggi di codifica}
+	\framesubtitle{Linguaggi di marcatura}
+	\addtocounter{nframe}{1}
+
+	\begin{center}
+		\includegraphics[width=.8\textwidth]{imgs/MarkupConvention.png}
+	\end{center}
+
+\end{frame}
+
+\begin{frame}
+	\frametitle{I linguaggi di codifica}
+	\framesubtitle{Linguaggi di marcatura}
+	\addtocounter{nframe}{1}
+
+	\begin{block}{Il markup}
+		La codifica con linguaggi di marcatura (markup) è in definitiva un insieme di convenzioni, rese attraverso specifiche sequenze di caratteri, etichette, codici, (detti tags) intercalati nel testo per permettere agli elaboratori elettronici di distinguere le varie parti di un documento.
+	\end{block}
+
+	\begin{block}{Il markup formale}
+		Un linguaggio di markup è un sistema formale per scambiare e pubblicare informazioni in formato testo in modo strutturato.
+	\end{block}
+
+
+\end{frame}
+
+\begin{frame}
+	\frametitle{I linguaggi di codifica}
+	\framesubtitle{Linguaggi di marcatura}
+	\addtocounter{nframe}{1}
+
+	\begin{block}{Il markup formale}
+		Markup formale: costituito da un sistema ben preciso di istruzioni, ognuna delle quali è dotata di una specifica semantica e sintassi.
+	\end{block}
+
+
+\end{frame}
+
+\begin{frame}
+	\frametitle{I linguaggi di codifica}
+	\framesubtitle{Linguaggi di marcatura}
+	\addtocounter{nframe}{1}
+
+	\begin{block}{Diversi tipi di markup}
+		Esistono diversi linguaggi di markup, per rappresentare diversi tipi di documenti.
+		\begin{itemize}
+			\item Linguaggi procedurali (specific markup languages)
+			\item Linguaggi dichiarativi (generic markup languages)
+		\end{itemize}
+	\end{block}
+\end{frame}
+
+\begin{frame}
+	\frametitle{I linguaggi di codifica}
+	\framesubtitle{Linguaggi di marcatura procedurale}
+	\addtocounter{nframe}{1}
+
+	\begin{block}{Linguaggi procedurali}
+		\begin{itemize}
+			\item Orientati al documento, indicano come deve essere elaborato e
+			      disposto il testo
+			\item Istruzioni da inserire nel testo per specificarne specifiche
+			      caratteristiche
+			\item Font, dimensione, spaziatura del carattere, posizionamento
+			      nella pagina, colore, etc.
+		\end{itemize}
+	\end{block}
+
+	\textit{Esempi: TeX e LaTeX, RTF}
+
+\end{frame}
+
+\begin{frame}[fragile]
+	\frametitle{I linguaggi di codifica}
+	\framesubtitle{Linguaggi di marcatura procedurale}
+	\addtocounter{nframe}{1}
+
+	\defverbatim{\rtf}{%
+		\begin{tiny}
+			\begin{verbatim}
+
+{\rtf1\ansi\deff0\adeflang1025
+{\fonttbl{\f0\froman\fprq2\fcharset0 Times New Roman;}
+{\f1\froman\fprq2\fcharset0 Times New Roman;}
+{\f2\fnil\fprq2\fcharset0 Lucida Sans Unicode;}
+{\colortbl;\red0\green0\blue0;\red128\green128\blue128;}
+{\stylesheet{\s1\cf0{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}
+\rtlch\af5\afs24\lang255\ltrch\dbch\af2\afs24\langfe255\loch\f0\fs24\lang1040\snext1 Standard;}
+
+        \end{verbatim}
+		\end{tiny}
+	}
+
+	\begin{block}{Esempio RTF}
+		{\rtf}
+	\end{block}
+
+\end{frame}
+
+\begin{frame}
+	\frametitle{I linguaggi di codifica}
+	\framesubtitle{Linguaggi di marcatura procedurale}
+	\addtocounter{nframe}{1}
+
+	\begin{block}{Esempio LaTex}
+        \begin{tiny}
+            Ciao
+			% \backslash documentclass[a4paper,10pt]$\{article\}$\\
+			% \backslash usepackage[utf8]$\{inputenc\}$\\
+			% \backslash usepackage[T1]$\{fontenc\}$\\
+			% \backslash usepackage[italian]$\{babel\}$\\
+			% \backslash title$\{Il mio primo documento\}$\\
+			% \backslash author$\{Angelo Mario Del Grosso\}$\\
+			% \backslash begin$\{document\}$\\
+			% \backslash maketitle\\
+			% \backslash begin$\{abstract\}$\\
+			% Primo tentativo di scrivere in \backslash LaTeX .\\
+			% \backslash end$\{abstract\}$\\
+			% \backslash section$\{titolo della sezione\}$\\
+			% Questo documento è vuoto.\\
+			% \backslash footnote$\{nota a piè di pagina.\}$\\
+			% \backslash end$\{document\}$\\
+		\end{tiny}
+	\end{block}
+
+\end{frame}
+
+\begin{frame}
+	\frametitle{I linguaggi di codifica}
+	\framesubtitle{Linguaggi di marcatura}
+	\addtocounter{nframe}{1}
+
+	\begin{block}{Il markup procedurale}
+		L’unico utilizzo di un testo codificato tramite un linguaggio procedurale è la creazione di un output orientato alla visualizzazione.
+	\end{block}
+\end{frame}
+
+\begin{frame}
+	\frametitle{I linguaggi di codifica}
+	\framesubtitle{Linguaggi di marcatura procedurale}
+	\addtocounter{nframe}{1}
+
+	\begin{center}
+		\includegraphics[width=.8\textwidth]{imgs/LatexDoc.jpg}
+	\end{center}
+
+\end{frame}
+
+\begin{frame}
+	\frametitle{I linguaggi di codifica}
+	\framesubtitle{Linguaggi di marcatura dichiarativi}
+	\addtocounter{nframe}{1}
+
+	\begin{block}{Linguaggi dichiarativi}
+		Orientati al testo, annotano la struttura, la funzione ed il significato degli elementi costitutivi
+		del testo, tralasciandone l’aspetto.
+		\begin{itemize}
+			\item la posizione che il brano in questione occupa all’interno del documento (markup strutturale)
+			\item peculiarità del testo stesso (markup semantico)
+			\item I fogli di stile definiscono la formattazione dell’output
+			\item Molteplici usi del medesimo testo
+		\end{itemize}
+	\end{block}
+	\textit{Esempio: famiglia SGML, XML}
+\end{frame}
+
+\begin{frame}
+	\frametitle{I linguaggi di codifica}
+	\framesubtitle{Linguaggi di marcatura dichiarativi}
+	\addtocounter{nframe}{1}
+
+	\begin{block}{Markup dichiarativi: contenuto e presentazione}
+		La separazione tra contenuto e presentazione non solo è intenzionale, ma è la caratteristica principale di questi sistemi di marcatura: essa permette di concentrarsi sull'annotazione logica-semantica per funzioni di ricerca e di analisi, lasciando ad altro (ai fogli di stile) la resa grafica.
+	\end{block}
+
+	\begin{block}{Unico testo più usi}
+		In questo modo si ha inoltre la possibilità di utilizzare uno stesso testo codificato con
+		finalità o formattazioni differenti, a seconda delle varie esigenze.
+	\end{block}
+
+\end{frame}
+
+\begin{frame}
+	\frametitle{I linguaggi di codifica}
+	\framesubtitle{Markup dichiarativi: esempio SGML}
+	\addtocounter{nframe}{1}
+
+	\begin{center}
+		\includegraphics[width=.8\textwidth]{imgs/testo-sgml.png}
+	\end{center}
+
+\end{frame}
+
+\begin{frame}
+	\frametitle{I linguaggi di codifica}
+	\framesubtitle {Markup dichiarativi vs Markup procedurali}
+	\addtocounter{nframe}{1}
+
+	\begin{center}
+		\includegraphics[width=.8\textwidth]{imgs/Procedurale-Dichiarativo.png}
+	\end{center}
+
+\end{frame}
+
+\begin{frame}
+	\frametitle{I linguaggi di codifica}
+	\framesubtitle{Linguaggi di marcatura}
+	\addtocounter{nframe}{1}
+
+	\begin{block}{linguaggi semi-dichiarativi e/o semi-procedurali}
+		Esistono anche linguaggi che possono essere definiti
+		semi-procedurali, o semi-dichiarativi, che come si intuisce utilizzano le istruzioni sia
+		per una codifica di tipo procedurale, sia per una codifica di tipo descrittivo o
+		dichiarativo. Uno degli esempi più famosi è HTML che tra le sue etichette mescola
+		istruzioni di tipo procedurale per indicare come devono essere rese determinate
+		porzioni di testo, a istruzioni di tipo dichiarativo che hanno una base semantica e
+		vengono rese in modo differente a seconda del browser utilizzato.
+	\end{block}
+
+\end{frame}
+
+
+\section{Fondamenti del linguaggio XML}
+%\input{includes/2-codificaTesto.tex}
+
+\section{Validare XML }
+%\input{includes/2-modelloTesto.tex}
+
+\section{Document Typed Definition - DTD}
+%\input{includes/2-importanzaCodifica.tex}
+
+%\section{Linguaggi di marcatura}
+%\input{include/2-linguaggiMarcatura.tex}
+
+\section{XML Schema Definition - XSD}
+%\input{includes/2-approfondimenti.tex}
+%\input{includes/2-conclusioni.tex}
+
+\section{Conclusioni}
+%\input{includes/2-conclusion.tex}
+
+\section*{Bibliografia}
+%\input{includes/3-bibliografia.tex}
+
+\end{document}
+
 
 
 

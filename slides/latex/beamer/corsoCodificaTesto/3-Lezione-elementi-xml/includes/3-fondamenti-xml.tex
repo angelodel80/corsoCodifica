@@ -8,6 +8,257 @@
 
 % IDE/Editor Management Studio comes with a nice XML/XSD editor. It has a number of features that makes schema writing lot easier. Intellisense, auto-completion, real-time syntax checks, etc., are a few of those features.
 
+XML was originally created to structure, store, and transport information
+
+XML has its roots in Standard Generalized Markup Language (SGML), a language
+introduced in the 1980s that describes the structure and content of any machine-
+readable information.
+
+XML can be
+thought of as a lightweight version of SGML
+
+Like SGML, XML is a language used to
+create vocabularies for other markup languages
+
+XML is a markup language that is extensible, so it can be m­odified
+to match the needs of the document author and the data being recorded
+
+he ­standards
+for XML are developed and maintained by the World Wide Web Consortium (W3C),
+an organization created in 1994 to develop common protocols and standards for
+sharing information on the World Wide Web
+
+XML, or eXtensible Markup Language, is a
+specification for storing information. It is also
+a specification for describing the structure of
+that information. And while XML is a markup
+language (just like HTML), XML has no tags
+of its own
+
+The syntax rules of XML are easy
+to learn and easy to use
+
+
+Every XML element must have a closing tag. Every element must have a closing tag. A self-closing tag is
+permitted.
+
+XML tags are case sensitive. Opening and closing tags (or start and end tags) must be ­written
+with the same case.
+
+XML elements must be ­properly nested. All elements can have child (sub) elements. Child elements must
+be in pairs and be correctly nested within their respective parent
+element.
+
+Every XML document must have a root element. Every XML document must contain a single tag pair that defines
+the root element. All other elements must be nested within the
+root element.
+
+XML elements can have attributes in name-value pairs. Each attribute name within the same element can occur only once.
+Each attribute value must be quoted.
+
+Some characters have a ­special meaning in XML. The use of certain characters is restricted. If these characters are
+needed, entity references or character references may be used.
+References always begin with the character “&” (which is ­specially
+reserved) and end with the character “;”.
+
+XML allows for comments. Comments cannot occur prior to the XML Declaration. Comments
+cannot be nested.
+
+XML is based on hierarchical trees in
+which order is significant 
+In XML, hierarchy and sequence are the main methods
+used to represent information.
+
+Both HTML and XML use tags in
+similar ways, often creating distinctly hierarchical structures to present data to users.
+
+
+Like SGML,
+XML can be used to create XML applications or vocabularies, which are markup
+languages tailored to contain specific pieces of information.
+
+Like HTML documents, XML documents can be created and viewed with a basic text
+editor such as Notepad or TextEdit. More sophisticated XML editors are available, and
+using them can make it easier to design and test documents.
+
+
+You can think of a standard vocabulary as a set of XML tags for a particular
+industry or business function. As XML has grown in popularity, standard vocabularies
+continue to be developed across a wide range of disciplines.
+
+
+To meet the need of textual scholars, an XML ­vocabulary
+called Text Encoding Initiative (TEI) was developed, which codes text
+i­nformation.
+
+SEMPLICE ESEMPIO XML TEI
+
+
+tanti vocabolari XML
+Bioinformatic Sequence Markup
+Language (BSML) Coding of bioinformatic data
+Extensible Hypertext Markup Language
+(XHTML) HTML written as an XML application
+Mathematical Markup Language
+(MathML) Presentation and evaluation of mathematical equations
+and operations
+Music Markup Language (MML) Display and organization of music notation and lyrics
+Weather Observation Definition
+Format (OMF) Distribution of weather observation reports, forecasts, and
+advisories
+Really Simple Syndication (RSS) Distribution of news headlines and syndicated columns
+Synchronized Multimedia Integration
+Language (SMIL) Editing of interactive audiovisual presentations ­involving
+streaming audio, video, text, and any other media type
+Voice Extensible Markup Language
+(VoiceXML) Creation of audio dialogues that feature synthesized
+speech, digitized audio, and speech recognition
+Wireless Markup Language (WML) Coding of information for smaller-screened devices, such
+as PDAs and cell phones
+
+
+For different users to share a vocabulary effectively, rules must be developed that
+specifically control what code and content a document from that vocabulary might
+contain. This is done by attaching either a Document Type Definition (DTD) or a
+schema to the XML document containing the data. Both DTDs and schemas contain
+rules for how data in a document vocabulary should be structured. A DTD defines the
+structure of the data and, very broadly, the types of data allowable. A schema more
+precisely defines the structure of the data and specific data restrictions.
+
+To ensure a document’s compliance with XML rules, it can be tested against two
+standards—whether it’s well formed, and whether it’s valid. A well-formed document
+contains no syntax errors and satisfies the general specifications for XML code as laid
+out by the W3C. At a minimum, an XML document must be well formed or it will not
+be readable by programs that process XML code.
+
+If an XML document is part of a vocabulary with a defined DTD or schema, it also
+must be tested to ensure that it satisfies the rules of that vocabulary. A well-formed XML
+document that satisfies the rules of a DTD or schema is said to be a valid document.
+
+Because XML focuses on
+communicating the data, the overall structure is simple and easy to design and
+maintain.
+
+An XML document consists of three parts—the prolog, the document body, and the
+epilog. The prolog includes the following parts:
+• XML declaration: indicates that the document is written in the XML language
+• Processing instructions (optional): provide additional instructions to be run by
+programs that read the XML document
+• Comment lines (optional): provide additional information about the document
+contents
+• Document type declaration (DTD) (optional): provides information about the rules
+used in the XML document’s vocabulary
+
+ESEMPIO CUSTOM
+
+
+The document body, found immediately after the prolog, contains the document’s
+c ­ ontent in a hierarchical tree structure. Following the document body is an optional
+e­pilog, which contains any final comments or processing instructions.
+
+Il prologo di XML: XML declaration 
+<?xml version=”version number” encoding=”encoding type”
+standalone=”yes|no” ?>
+
+Creating an XML Declaration
+• To create an XML declaration, enter the code
+<?xml ?>
+in the first line of an XML document.
+• To specify a version of XML to use, enter the code
+version=”version number”
+after the opening <?xml tag, where version number is either 1.0 or 1.1.
+• To specify a character encoding, enter the code
+encoding=”encoding type”
+after the version attribute-value pair, where encoding type identifies the ­character
+set used in the document.
+• To indicate whether the document is a standalone document, enter the code
+standalone=”yes|no”
+after the encoding attribute-value pair, where the value yes or no ­indicates whether
+access to external files will be needed when processing the document.
+
+
+ERRORI:
+<?XML VERSION=”1.0” ENCODING=”ISO-8859-1” STANDALONE=”YES” ?>
+<?xml version=1.0 encoding=ISO-8859-1 standalone=yes ?>
+<?xml version=”1.0” standalone=”yes” encoding=”ISO-8859-1” ?>
+
+Generally speaking, comments are ignored by programs reading the document and
+do not affect the document’s contents or structure.
+To insert a comment in an XML document, enter
+<!-- comment -->
+
+If you have a comment that will occupy more than one line, you can
+continue the ­comment on as many lines as you need
+
+
+ESERCIZIO
+
+<!--
+This document contains data on SJB Pet Boutique
+holiday specials
+Filename: project.xml
+Author:
+your name
+Date:
+today's date
+-->
+
+
+A program that reads and interprets an XML document is called an XML processor or XML parser, or simply a processor or parser.
+
+First well-formed
+A second function of a parser is to interpret PCDATA in a document and resolve any character or
+entity references found within the document
+finally, an XML document might contain
+processing instructions that tell a parser exactly how the document should be read and
+interpreted
+
+The current versions of all major web browsers include an XML parser of some type.
+
+To test for well-formedness, you’ll use an XML parser to compare the XML document against the
+rules established by the W3C.
+INTRODURRE XMLLINT
+
+
+The document body in an XML document is made up of elements that contain data
+
+to be stored in the document. Elements are the basic building blocks of XML files.
+
+An ­element can have text content and child element content.
+
+<element>content</element>
+The opening tag is <element> , and </element> is the closing
+tag.
+
+Element names might be established already if an author is using a particular XML
+vocabulary, such as TEI-XML
+
+
+There are a few important points to remember about XML elements:
+• Element names are case sensitive, which means that, for example, itemnumber,
+itemNumber, and ItemNumber are unique elements.
+• Element names must begin with a letter or the underscore character ( _ ) and may not
+contain blank spaces. Thus, you cannot name an element Item Number , but you can
+name it Item_Number .
+• Element names cannot begin with the string xml because that group of ­characters is
+reserved for special XML commands.
+• The name in an element’s closing tag must exactly match the name in the ­opening tag.
+• Element names can be used more than once, so the element names can mean
+different things at different points in the hierarchy of an XML document.
+
+Creating XML Elements
+XML 24
+• To create an XML element, use the syntax
+<element>content</element>
+where element is the name given to the element, content represents the text
+content of the element, <element> is the opening tag, and <
+­ /element> is the
+closing tag.
+• To create an empty XML element with a single tag, use the following syntax:
+<element />
+• To create an empty XML element with a pair of tags, use the syntax
+<element></element>
+
 % XML document is primarily composed of elements and attributes
 % Attributes can only exist within an element. An attribute declaration really does not make sense without an element.
 % Attributes can only store a value, while elements can also store child elements and attributes.
@@ -16,3 +267,4 @@
 % Elements are mandatory by default while attributes are optional by default.
 
 % slide su XML lint
+

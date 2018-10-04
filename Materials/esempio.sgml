@@ -1,0 +1,11 @@
+<!DOCTYPE testo [
+<!ELEMENT testo (titolo?, paragrafo+)>
+<!ELEMENT titolo (#PCDATA)>
+<!ELEMENT paragrafo (#PCDATA)>
+]>
+<testo>
+   <titolo> Questo è il titolo del documento</titolo>
+   <paragrafo> Questo è un paragrafo </paragrafo>
+</testo>
+
+
