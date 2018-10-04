@@ -5,6 +5,151 @@
 
 %% slide premesse
 
-\section{Fondamenti del linguaggio XML}
-\input{}
+
+\documentclass{beamer}
+    
+    %    \usepackage[english]{babel}
+        %\usepackage[latin1]{inputenc}
+        %\usepackage[T1]{fontenc}
+    
+    \mode<presentation>{
+      \setbeamertemplate{background canvas}[vertical shading]
+      \usetheme{Berkeley}
+      \useoutertheme{himinfolines}
+    }
+      
+    \usepackage{ucs}
+    \usepackage[utf8]{inputenc}
+    \usepackage[english,polutonikogreek,italian,UKenglish,british]{babel}
+    \usepackage{graphicx}
+    \usepackage{colortbl}
+    \usepackage{multicol}
+    \usepackage{ulem}
+    \usepackage{verbatim}
+    \usepackage{alltt}
+    \usepackage{ccicons}
+    \usepackage{MnSymbol,wasysym}
+    \usepackage{tikzsymbols}
+    \usepackage{textcomp}
+    \usepackage{xmpincl}
+    
+    \usepackage{parskip}
+    \setcounter{nframes}{100}
+    \setcounter{nframe}{1}
+    \setbeamercovered{dynamic}
+    \newenvironment{grcenv}{\begin{otherlanguage}{greek}}{\end{otherlanguage}}
+    \newcommand{\g}[1]{\textgreek{#1}}
+    \definecolor{darkgreen}{rgb}{0,0.5,0}
+    \definecolor{darkblue}{rgb}{0,0,0.5}
+    \definecolor{grey}{rgb}{0.5,0.5,0.5}
+    \setcounter{tocdepth}{5}
+    
+    \makeatletter
+    
+    \makeatother
+    %\includexmp{LicencesAndLicensing}
+    
+    %frame00 metadata
+        \title{Codifica di Testi - Introduzione XML Markup \\a.a. 2018-2019}
+        \author[A.M. Del Grosso]{Angelo Mario Del Grosso}
+        \institute{\texttt{angelo.delgrosso@ilc.cnr.it} \\\bigskip\textit{CNR-ILC-LicoLab}}
+        \date{Istituto di Linguistica Computazionale ``A. Zampolli'', \today}
+        \AtBeginSection[]{
+        \begin{frame}<beamer>
+        \addtocounter{nframe}{1}
+        \footnotesize
+        \frametitle{Progress status}
+        \tableofcontents[currentsection,hideothersubsections]
+        \end{frame}
+        }
+    
+    \begin{document}
+    
+    \begin{frame}
+        \maketitle
+    \end{frame}
+    
+    \begin{frame}
+        \frametitle{Contenuto della lezione}
+        \tableofcontents
+    \end{frame}
+    
+    \section{I linguaggi di codifica}
+    \begin{frame}
+        \frametitle{I linguaggi di codifica}
+        \framesubtitle{introduzione}
+        \addtocounter{nframe}{1}
+    
+        \begin{block}{Definizione di codifica digitale del testo}
+            Per \textbf{codifica} digitale dei testi intendiamo la \textit{rappresentazione formale} di un \textbf{testo} ad un qualche livello descrittivo, su di un supporto digitale, in un formato utilizzabile da un elaboratore (\textit{Machine Readable Form}) mediante un opportuno \textbf{linguaggio informatico} (F. Ciotti).
+        \end{block}
+    
+    \end{frame}
+    
+    \begin{frame}
+        \frametitle{I linguaggi di codifica}
+        \framesubtitle{Riassumendo}
+        \addtocounter{nframe}{1}
+    
+        \begin{block}{Impostazione teorico-pratica}
+           
+            \begin{itemize}
+                \item  un testo è molto di più della sequenza di caratteri che lo
+                compongono
+                \item per mezzo della codifica vogliamo rendere esplicite le
+                caratteristiche che vogliamo analizzare
+                \item  solo quello che è esplicito può essere interpretato ed
+                elaborato dal computer
+                \item vogliamo codificare il testo per quello che è, non per quello che
+                sembra
+                \item codifica da effettuare mediante linguaggio di markup
+            \end{itemize}
+            
+        \end{block}
+    
+    \end{frame}
+    
+    
+    \begin{frame}
+        \frametitle{I linguaggi di codifica}
+        \framesubtitle{Linguaggi di marcatura}
+        \addtocounter{nframe}{1}
+    
+        \begin{block}{Il markup}
+            Il termine markup è stato utilizzato in passato per descrivere i segni grafici che accompagnavano  un testo per indicare correzioni o come stampare un particolare passaggio.
+        \end{block}
+    
+        \begin{block}{Nuove sfide}
+            La discussione sulla rappresentazione digitale dei testi ha rivelato un intreccio di complesse questioni teoriche e pratiche.
+        \end{block}
+    
+    \end{frame}
+    
+    
+    \section{Fondamenti del linguaggio XML}
+    \input{includes/2-codificaTesto.tex}
+    
+    \section{Modello del Testo}
+    \input{includes/2-modelloTesto.tex}
+    
+    \section{Importanza della Codifica}
+    \input{includes/2-importanzaCodifica.tex}
+    
+    %\section{Linguaggi di marcatura}
+    %\input{include/2-linguaggiMarcatura.tex}
+    
+    \section{Approfondiamo e concludiamo}
+    \input{includes/2-approfondimenti.tex}
+    \input{includes/2-conclusioni.tex}
+    
+    %\section{Conclusioni}
+    %\input{includes/2-conclusion.tex}
+    
+    \section*{Bibliografia}
+    \input{includes/2-bibliografia.tex}
+    
+    \end{document}
+    
+
+
 
