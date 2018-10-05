@@ -214,13 +214,14 @@
 		\begin{tiny}
 			\begin{verbatim}
 
-{\rtf1\ansi\deff0\adeflang1025
-{\fonttbl{\f0\froman\fprq2\fcharset0 Times New Roman;}
-{\f1\froman\fprq2\fcharset0 Times New Roman;}
-{\f2\fnil\fprq2\fcharset0 Lucida Sans Unicode;}
-{\colortbl;\red0\green0\blue0;\red128\green128\blue128;}
-{\stylesheet{\s1\cf0{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}
-\rtlch\af5\afs24\lang255\ltrch\dbch\af2\afs24\langfe255\loch\f0\fs24\lang1040\snext1 Standard;}
+    {\rtf1\ansi\deff0\adeflang1025
+    {\fonttbl{\f0\froman\fprq2\fcharset0 Times New Roman;}
+    {\f1\froman\fprq2\fcharset0 Times New Roman;}
+    {\f2\fnil\fprq2\fcharset0 Lucida Sans Unicode;}
+    {\colortbl;\red0\green0\blue0;\red128\green128\blue128;}
+    {\stylesheet{\s1\cf0{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}
+    \rtlch\af5\afs24\lang255\ltrch\dbch\af2\afs24\langfe255
+    \loch\f0\fs24\lang1040\snext1 Standard;}
 
         \end{verbatim}
 		\end{tiny}
@@ -238,9 +239,9 @@
 	\addtocounter{nframe}{1}
 
 	\begin{block}{Esempio LaTex}
-        \begin{tiny}
-            Ciao
-			% \backslash documentclass[a4paper,10pt]$\{article\}$\\
+		\begin{tiny}
+			Ciao
+			%\backslash documentclass$\[a4paper,10pt\]$$\{article\}$\\
 			% \backslash usepackage[utf8]$\{inputenc\}$\\
 			% \backslash usepackage[T1]$\{fontenc\}$\\
 			% \backslash usepackage[italian]$\{babel\}$\\
@@ -276,7 +277,7 @@
 	\addtocounter{nframe}{1}
 
 	\begin{center}
-		\includegraphics[width=.8\textwidth]{imgs/LatexDoc.jpg}
+		\includegraphics[width=.7\textwidth]{imgs/LatexDoc.jpg}
 	\end{center}
 
 \end{frame}
@@ -290,13 +291,14 @@
 		Orientati al testo, annotano la struttura, la funzione ed il significato degli elementi costitutivi
 		del testo, tralasciandone l’aspetto.
 		\begin{itemize}
-			\item la posizione che il brano in questione occupa all’interno del documento (markup strutturale)
-			\item peculiarità del testo stesso (markup semantico)
+			\item La posizione che il brano in questione occupa all’interno del documento (markup strutturale)
+			\item Peculiarità del testo stesso (markup semantico)
 			\item I fogli di stile definiscono la formattazione dell’output
 			\item Molteplici usi del medesimo testo
 		\end{itemize}
 	\end{block}
-	\textit{Esempio: famiglia SGML, XML}
+    \textit{Esempio: famiglia SGML, XML}
+	
 \end{frame}
 
 \begin{frame}
@@ -320,9 +322,11 @@
 	\framesubtitle{Markup dichiarativi: esempio SGML}
 	\addtocounter{nframe}{1}
 
-	\begin{center}
-		\includegraphics[width=.8\textwidth]{imgs/testo-sgml.png}
-	\end{center}
+	\begin{block}{Standard Generalized Markup Language}
+		\begin{center}
+			\includegraphics[width=.9\textwidth]{imgs/testo-sgml.png}
+		\end{center}
+	\end{block}
 
 \end{frame}
 
@@ -330,10 +334,16 @@
 	\frametitle{I linguaggi di codifica}
 	\framesubtitle {Markup dichiarativi vs Markup procedurali}
 	\addtocounter{nframe}{1}
+	\begin{block}{resa a video della frase}
+		Le \textit{Guidelines for Electronic Text Encoding and Interchange} sono \textit{molto} complete e descrivono uno standard di \textit{markup} del testo basato su XML.
+	\end{block}
 
 	\begin{center}
-		\includegraphics[width=.8\textwidth]{imgs/Procedurale-Dichiarativo.png}
+		\includegraphics[width=.85\textwidth]{imgs/Procedurale-Dichiarativo.png}
 	\end{center}
+    \begin{center}
+    \textbf{LaTex vs SGML}
+    \end{center}
 
 \end{frame}
 
@@ -346,17 +356,21 @@
 		Esistono anche linguaggi che possono essere definiti
 		semi-procedurali, o semi-dichiarativi, che come si intuisce utilizzano le istruzioni sia
 		per una codifica di tipo procedurale, sia per una codifica di tipo descrittivo o
-		dichiarativo. Uno degli esempi più famosi è HTML che tra le sue etichette mescola
-		istruzioni di tipo procedurale per indicare come devono essere rese determinate
-		porzioni di testo, a istruzioni di tipo dichiarativo che hanno una base semantica e
-		vengono rese in modo differente a seconda del browser utilizzato.
+		dichiarativo.
 	\end{block}
+
+	\begin{block}{HTML}
+		HTML ha tra le sue etichette istruzioni di tipo procedurale per indicare come devono essere rese determinate
+		porzioni di testo, e istruzioni di tipo dichiarativo che hanno una base semantica.
+	\end{block}
+
+
 
 \end{frame}
 
 
 \section{Fondamenti del linguaggio XML}
-%\input{includes/2-codificaTesto.tex}
+\input{includes/3-fondamenti-xml.tex}
 
 \section{Validare XML }
 %\input{includes/2-modelloTesto.tex}
