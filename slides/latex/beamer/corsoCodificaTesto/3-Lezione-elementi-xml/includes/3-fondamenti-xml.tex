@@ -230,7 +230,7 @@ maintain.
 	\addtocounter{nframe}{1}
 
 	\begin{center}
-		\includegraphics[width=1.1\textwidth]{imgs/TEI-PerseusExample.png}
+		\includegraphics[width=0.95\textwidth]{imgs/TEI-PerseusExample.png}
 	\end{center}
 
 \end{frame}
@@ -349,10 +349,10 @@ An ­element can have text content and child element content.
 The opening tag is <element> , and </element> is the closing
 tag.
 
-▪ Gli elementi XML possono avere diversi tipi di contenuto:
-▫ contenuto strutturale: solo altri elementi, non testo
-▫ contenuto misto: testo e anche altri elementi
-▫ contenuto testuale: solo testo, non altri elementi
+- Gli elementi XML possono avere diversi tipi di contenuto:
+-- contenuto strutturale: solo altri elementi, non testo
+-- contenuto misto: testo e anche altri elementi
+-- contenuto testuale: solo testo, non altri elementi
 
 Element names might be established already if an author is using a particular XML
 vocabulary, such as TEI-XML
@@ -361,9 +361,9 @@ vocabulary, such as TEI-XML
 There are a few important points to remember about XML elements:
 • Element names are case sensitive, which means that, for example, itemnumber,
 itemNumber, and ItemNumber are unique elements.
-• Element names must begin with a letter or the underscore character ( _ ) and may not
+• Element names must begin with a letter or the underscore character ( \_ ) and may not
 contain blank spaces. Thus, you cannot name an element Item Number , but you can
-name it Item_Number .
+name it Item\_Number .
 • Element names cannot begin with the string xml because that group of ­characters is
 reserved for special XML commands.
 • The name in an element’s closing tag must exactly match the name in the ­opening tag.
@@ -490,7 +490,7 @@ Esempio:
 (preso dalla TEI)
 
 name for an attribute as long as it meets the following rules:
-• An attribute name must begin with a letter or an underscore ( _ ).
+• An attribute name must begin with a letter or an underscore ( \_ ).
 • Spaces are not allowed in attribute names.
 • Like an element name, an attribute name should not begin with the text string xml.
 
@@ -524,7 +524,7 @@ there’s no right answer.
 Using Character and Entity References
 a numeric character reference, also known simply as a ­character
 reference. The syntax for a character reference is
-&#nnn;
+\&\#nnn;
 where nnn is a character number from the ISO/IEC character set
 
 the character numbers for different symbols,
@@ -535,17 +535,17 @@ conjunction with entity
 references to display
 specific characters or
 symbols.
-&entity;
+\&entity;
 
 Immagine
 
 
 Inserting Character and Entity References
 • To insert a character reference into an XML document, use
-&#nnn;
+\&\#nnn;
 where nnn is a character reference number from the ISO/IEC character set.
 • To insert an entity reference, use
-&entity;
+\&entity;
 where entity is a recognized entity name.
 
 
@@ -563,7 +563,7 @@ of the code of an XML document.
 • comments
 
 The presence of PCDATA can cause unexpected errors to occur within a document
-This means that symbols such as &, <, or >, which are all used in ­creating
+This means that symbols such as \&, <, or >, which are all used in ­creating
 markup tags or entity references, are extracted and the appropriate content is used in your
 program.
 
