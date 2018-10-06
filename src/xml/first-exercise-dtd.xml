@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Primo esercizio XML document validabile con prima DTD -->
+
+<TEI>
+<header>questo è la sezione di intestazione del documento</header>
+</TEI>

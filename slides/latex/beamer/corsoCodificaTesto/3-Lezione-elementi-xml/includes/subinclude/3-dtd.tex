@@ -1,5 +1,4 @@
 %slide di introduzione ai fondamenti di Document Type Definition
-
 %frame 01
 \begin{frame}
     \frametitle{Elementi per la definizione degli schemi xml}
@@ -9,7 +8,56 @@
     \begin{block}{Esempio DTD}
         \includegraphics[width=.5\textwidth]{imgs/dtd_1.pdf}
     \end{block}
+\end{frame}
 
+\begin{frame}
+    \frametitle{Elementi per la definizione degli schemi xml}
+    \framesubtitle{Principi Document Type Definition}
+    \addtocounter{nframe}{1}
+
+    \begin{block}{Document Type Definition (DTD)}
+        A document type definition describes the rule for an xml document structure, declaring the elements, attributes and entities that are part of the xml document
+    \end{block}
+
+\end{frame}
+
+\begin{frame}
+    \frametitle{Elementi per la definizione degli schemi xml}
+    \framesubtitle{Principi Document Type Definition}
+    \addtocounter{nframe}{1}
+
+    \begin{block}{Document Type Definition (DTD)}
+         For an xml document to be valid, it must be well formed and also satisfies the document type definitions specified by the document type declaration.
+    \end{block}
+\end{frame}
+
+\begin{frame}
+    \frametitle{Elementi per la definizione degli schemi xml}
+    \framesubtitle{Principi Document Type Definition}
+    \addtocounter{nframe}{1}
+
+    \begin{block}{Document Type Definition (DTD)}
+         For an xml document to be valid, it must be well formed and also satisfies the document type definitions specified by the document type declaration.
+    \end{block}
+
+    \begin{block}{well-formed document != valid document}
+          any document that lacks a document type declaration may be well formed but cannot be valid.
+    \end{block}
+   
+\end{frame}
+
+\begin{frame}
+    \frametitle{Elementi per la definizione degli schemi xml}
+    \framesubtitle{Principi Document Type Definition}
+    \addtocounter{nframe}{1}
+
+    \begin{block}{Document Type Definition (DTD)}
+          Document validation also aids file sharing since different applications that are
+aware of the generally agreed upon document type definition can produce xml
+document of similar structure and therefore easily communicate with each
+other through data exchange.
+    \end{block}
+   
 \end{frame}
 
 
@@ -19,254 +67,429 @@
     \addtocounter{nframe}{1}
 
     \begin{block}{Document Type Definition (DTD)}
-        A document type definition describes the rule for an xml document structure,
-declaring the elements, attributes and entities that are part of the xml
-document
+         included in the document’ prolog
+    \end{block}
+
+    \begin{block}{Root element and content}
+        declare the root element and its content model (children elements)
+    \end{block}
+   
+\end{frame}
+
+\begin{frame}
+    \frametitle{Elementi per la definizione degli schemi xml}
+    \framesubtitle{Principi Document Type Definition}
+    \addtocounter{nframe}{1}
+
+    \begin{block}{Element Declaration (con figli)}
+        \begin{center}\texttt{<!ELEMENT element-name (child-element1, child-element-2 ...)>}\end{center}
+    \end{block}
+
+    \begin{block}{Element Declaration (solo testo)}
+    \begin{center}\texttt{<!ELEMENT element-name (\#PCDATA)>}\end{center}
+    \end{block}
+    \textit{Parsed character contents are plain texts with no child elements}
+\end{frame}
+
+\begin{frame}
+    \frametitle{Elementi per la definizione degli schemi xml}
+    \framesubtitle{Principi Document Type Definition}
+    \addtocounter{nframe}{1}
+
+    \begin{block}{Child Element Declaration}
+        A child element declaration is done in the same way as the root element declaration using the <!ELEMENT > tag
+    \end{block}
+
+    \begin{block}{Element Declaration (root)}
+     root element declaration must always come first.
+    \end{block}
+\end{frame}
+
+
+\begin{frame}
+    \frametitle{Elementi per la definizione degli schemi xml}
+    \framesubtitle{Principi Document Type Definition}
+    \addtocounter{nframe}{1}
+
+    \begin{block}{Modificatori}
+        Optional modifiers can also be used in element declarations to specify the
+        number of times a child element may appear.
+    \end{block}
+
+    \begin{block}{Modificatori}
+     + One or more occurrences\\ 
+     ? Zero or one occurrence\\
+     * Zero or more occurrences\\
+    \end{block}
+\end{frame}
+
+\begin{frame}
+    \frametitle{Elementi per la definizione degli schemi xml}
+    \framesubtitle{Principi Document Type Definition}
+    \addtocounter{nframe}{1}
+
+    \begin{block}{Modificatori}
+        \begin{center} \texttt{<!ELEMENT element-name (B, C)+ >} \end{center}
+        \begin{center} \texttt{<!ELEMENT element-name (B+, C) >} \end{center}
+        \begin{center} \texttt{<!ELEMENT element-name (B, C+) >} \end{center}
+        \begin{center} \texttt{<!ELEMENT element-name (B+, C+) >} \end{center}
+    \end{block}
+
+    \begin{block}{Modificatori}
+     If a child element must appear once then leave out the modifier.
+    \end{block}
+\end{frame}
+
+\begin{frame}
+    \frametitle{Elementi per la definizione degli schemi xml}
+    \framesubtitle{Principi Document Type Definition}
+    \addtocounter{nframe}{1}
+
+    \begin{block}{Esercizio}
+        - root: TEI
+        - figli: header (obbligatorio una occorrenza); facsimile (opzionale una occorrenza); text (obbligatorio almeno una occorrenza)
+        - header, facsimile, text hanno un content model testuale
     \end{block}
 
 \end{frame}
 
-For an xml document to be valid, it must be well formed and also satisfies the
-document type definitions specified by the document type declaration.
 
-included in the document’ prolog
+\begin{frame}
+    \frametitle{Elementi per la definizione degli schemi xml}
+    \framesubtitle{Principi Document Type Definition}
+    \addtocounter{nframe}{1}
+
+    \begin{block}{choice declaration}
+    \begin{center} \texttt{<!ELEMENT element_name (child_a | child_b) >} \end{center}
+    \end{block}
 
-Document validation also aids file sharing since different applications that are
-aware of the generally agreed upon document type definition can produce xml
-document of similar structure and therefore easily communicate with each
-other through data exchange.
+    \begin{block}{Dichiarazione di Choice}
+        indicating a choice of just one, out of the list
+    \end{block}
 
-any document that lacks a document type declaration may be well formed but
-cannot be valid.
+\end{frame}
 
+\begin{frame}
+    \frametitle{Elementi per la definizione degli schemi xml}
+    \framesubtitle{Principi Document Type Definition}
+    \addtocounter{nframe}{1}
 
-following steps:
-declare the root element and its children elements
+    \begin{block}{Attributi}
+    \begin{center} an attribute is declared with \texttt{<!ATTLIST >} element \end{center}
+    \end{block}
 
-<!ELEMENT element_name (child-element1, child-element-2 ...) >
-<!ELEMENT element_name (#PCDATA) >
+    \begin{block}{Attributi}
+        An attribute is the property of an element that describes the element’s content.
+    \end{block}
 
-Parsed character contents are plain texts with no child elements.
+\end{frame}
 
-Optional modifiers can also be used in element declarations to specify the
-number of times a child element may appear.
+\begin{frame}
+    \frametitle{Elementi per la definizione degli schemi xml}
+    \framesubtitle{Principi Document Type Definition}
+    \addtocounter{nframe}{1}
 
-+ One or more occurrences 
-? Zero or one occurrence 
-* Zero or more occurrences
+    \begin{block}{Attributi}
+    \begin{center} \texttt{<!ATTLIST Element-name Attr-name Attr-type Attr-state? default-value?>} \end{center}
+    \end{block}
 
-If a child element must appear once then leave out the modifier.
+    \begin{block}{Attributi}
+        ``Element-name'' is the name of the element
+        ``Attr-name'' is the attribute to be declared.
+        ``Attr-type'' specifies the expected attribute’s data type
+        The ``Attr-state'' denota una tra i tre stati possibili di un attributo 
+        ``default-value'' if provided is the value to be used if the attribute is not supplied
+    \end{block}
 
-<!ELEMENT element_name (B, C)+ >
-<!ELEMENT element_name (B+, C) >
-<!ELEMENT element_name (B, C+) >
-<!ELEMENT element_name (B+, C+) >
-If a child element must appear once then leave out the modifier.
+\end{frame}
 
-A child element declaration is done in the same way as the root element
-declaration using the <!ELEMENT > tag
+\begin{frame}
+    \frametitle{Elementi per la definizione degli schemi xml}
+    \framesubtitle{TABELLA dei tipi}
+    \addtocounter{nframe}{1}
 
-root element declaration must always come first.
+    \begin{block}{Tipi di attributi}
+    
+    \end{block}
+\end{frame}
 
-Esempio TEI:
-- root: TEI
-- figli: header - facsimile - text
 
-choice declaration
-<!ELEMENT element_name (child_a | child_b) >
-indicating a choice of just one, out of the list
 
+\begin{frame}
+    \frametitle{Elementi per la definizione degli schemi xml}
+    \framesubtitle{}
+    \addtocounter{nframe}{1}
 
-Attribute
-An attribute is the property of an element that describes the element’s content.
+    \begin{block}{Stato di attributi}
+     The state can be any of #IMPLIED (an optional attribute), #REQUIRED (a compulsory attribute) or #FIXED (a fixed value attribute that may not be changed) the value is provided as the default value. You cannot use the default-value with the #REQUIRED state as you must supply a value for the attribute.
+    \end{block}
+\end{frame}
 
-an attribute is declared with <!ATTLIST > element.
+% slide con choice per gli attributi
 
-<!ATTLIST Element-name Attr-name Attr-type Attr-state? default-value? >
+\begin{frame}
+    \frametitle{Elementi per la definizione degli schemi xml}
+    \framesubtitle{}
+    \addtocounter{nframe}{1}
 
-``Element-name'' is the name of the element
-``Attr-name'' is the attribute to be declared.
-``Attr-type'' specifies the expected attribute’s data type
-The Attr-state denota una tra i tre stati possibili di un attributo 
-``default-value'' if provided is the value to be used if the attribute is not
-supplied
+    \begin{block}{Mixed content - DTD}
+    \begin{center}\texttt{<!ELEMENT element_name (#PCDATA|child_element)* >}\end{center}
+    \end{block}
 
-TABELLA dei tipi
+    \begin{block}{Mixed content XML}
+    \begin{center}\texttt{<p>Ieri pomeriggio sono andato a <placeName>Pisa<placeName>, per un giro<p>}\end{center}
+    \end{block}
 
-The state can be any of #IMPLIED (an optional attribute), #REQUIRED (a compulsory attribute) or #FIXED (a fixed value
-attribute that may not be changed) the value is provided as the default value. You cannot use the default-value with the #REQUIRED state as you must
-supply a value for the attribute.
+\end{frame}
 
-Esempio:
-root: TEI
-figli: header(obbligatorio una volta sola) - facsimile(opzionale una volta sola) - testo(obbligatorio una o più volte)
-attributi: 
-- header: type:(fixed, CDATA ``intestazione''); lang(opzional, NMTOKEN)
-- facsimile: source:(obbligatorio)
-- testo: id(obbligatorio, contenuto id) type(opzionale contenuto testuale)
 
-MIXED CONTENT
-The declaration syntax for mixed content is as follows: <!ELEMENT
-element_name (#PCDATA|child_element)* >
+\begin{frame}
+    \frametitle{Elementi per la definizione degli schemi xml}
+    \framesubtitle{}
+    \addtocounter{nframe}{1}
 
-Empty elements 
-the only difference is that the child element name is
-substituted with the keyword “EMPTY” like this <!ELEMENT element_name
-EMPTY>
+    \begin{block}{Esercizio}
+        root: TEI
+         figli: header(obbligatorio una volta sola) - facsimile(opzionale una volta sola) - testo(obbligatorio una o più volte)
+         - testo è un mixed content con possibile elemento <seg>
+         attributi: 
+         - header: type:(fixed, CDATA ``intestazione''); lang(opzional, NMTOKEN)
+         - facsimile: source:(obbligatorio)
+         - testo: id(obbligatorio, contenuto id) type(opzionale contenuto testuale)
+    \end{block}
+\end{frame}
+
+
+
+\begin{frame}
+    \frametitle{Elementi per la definizione degli schemi xml}
+    \framesubtitle{Principi Document Type Definition}
+    \addtocounter{nframe}{1}
+
+    \begin{block}{Empty elements}
+    The only difference is that the child element name is substituted with the keyword “EMPTY”  
+    \end{block}
+
+    \begin{block}{Empy content}
+    \begin{center}\texttt{<!ELEMENT element_name EMPTY>}\end{center}
+    \end{block}
+
+
+    \begin{block}{Empy content}
+    \begin{center}\texttt{<lb />}\end{center}
+    \end{block}
+    
+    
+
+\end{frame}
+
+
+\begin{frame}
+    \frametitle{Elementi per la definizione degli schemi xml}
+    \framesubtitle{Principi Document Type Definition}
+    \addtocounter{nframe}{1}
+
+    \begin{block}{Any elements}
+ The content specification ``ANY'' when used in a declaration implies that any element as well as texts can be the child or content of the declared element.
+
+    \end{block}
+
+    \begin{block}{Any content}
+    \begin{center}\texttt{<!ELEMENT element_name ANY >}\end{center}
+    \end{block}
+    
+\end{frame}
 
-Any Element
-The content specification “ANY” when used in a declaration implies that any
-element as well as texts can be the child or content of the declared element.
-The syntax of usage for content specification “ANY” is as described below:
-<!ELEMENT element_name ANY >
 
-Esercizio: includere all'interno di un documento XML la dichiarazione del tipo.
+\begin{frame}
+    \frametitle{Elementi per la definizione degli schemi xml}
+    \framesubtitle{Principi Document Type Definition}
+    \addtocounter{nframe}{1}
 
-The document type declaration contains or points to the location of the
-document type definition.
+    \begin{block}{Dichiarare il tipo del documento XML}
+        The document type declaration is placed in the xml document prolog; between
+         the xml declaration and the root element.
 
-The document type declaration is placed in the xml document prolog; between
-the xml declaration and the root element.
+    \end{block}
 
-<!DOCTYPE root_element SYSTEM “External DTD’s URL“ [
-Internal DTD ]>
+    \begin{block}{Dichiarare il tipo del documento XML}
+        re-usability reasons, and then link it to the xml document and any other xml document through its URL
+    \end{block}
 
-<!DOCTYPE root_element [Internal DTD] >
-<!DOCTYPE root_element SYSTEM “External_DTD’s URL” >
-re-usability reasons, and then link it to the xml document and any other xml
-document through its URL
+\end{frame}
 
-Esercizio: inserire all'interno di un file XML la dichiarazione degli elementi del documento istanziare un documento valido.
-Alla fine creare un file esterno con estensione .dtd e includerlo nel prologo XML.
+\begin{frame}
+    \frametitle{Elementi per la definizione degli schemi xml}
+    \framesubtitle{Principi Document Type Definition}
+    \addtocounter{nframe}{1}
 
+    \begin{block}{DOCTYPE}
+    \begin{center}\texttt{<!DOCTYPE root_element SYSTEM ``External DTD’s URL'' [Internal DTD ]>}\end{center}
+    \begin{center}\texttt{<!DOCTYPE root_element [Internal DTD] >}\end{center}
+    \begin{center}\texttt{<!DOCTYPE root_element SYSTEM “External_DTD’s URL” >}\end{center}
+        
+    \end{block}
+    
+\end{frame}
 
-ENTITY:
+\begin{frame}
+    \frametitle{Elementi per la definizione degli schemi xml}
+    \framesubtitle{Principi Document Type Definition}
+    \addtocounter{nframe}{1}
 
+    \begin{block}{Esercizi}
+    \begin{itemize}
+        \item includere all'interno di un documento XML la dichiarazione del tipo e validare
+        \item inserire nel prologo di un documento XML la dichiarazione del tipo di documento e validare.
+    \end{itemize}
+    \end{block}
+    \textit{creare un file esterno con estensione .dtd e includerlo nel prologo XML.}
+    
+\end{frame}
 
-An xml document may include other xml documents and data from different
-sources, these sources are termed entities and an entity can be external or
-internal entity.
+\begin{frame}
+    \frametitle{Elementi per la definizione degli schemi xml}
+    \framesubtitle{Principi Document Type Definition}
+    \addtocounter{nframe}{1}
 
+    \begin{block}{Entity}
+        per includere dati da diverse fonti DTD prevede l'uso di entità. Due tipologie di entità sono state definite: general entities e parameter entities.
+    \end{block}
 
-Internal general entities help include special characters in an xml document,
-that would otherwise make an xml document become malformed if included
-literally.
+    \begin{block}{Entity: generiche e parametriche}
+    \begin{itemize}
+        \item le general entities vengono espanse nel documento XML
+        \item parameter entities vengono espanse nel documento DTD
+    \end{itemize}
+    \end{block}
+    \textit{creare un file esterno con estensione .dtd e includerlo nel prologo XML.}
+    
+\end{frame}
 
+\begin{frame}
+    \frametitle{Elementi per la definizione degli schemi xml}
+    \framesubtitle{Principi Document Type Definition}
+    \addtocounter{nframe}{1}
 
-The syntax of usage is as described below:
+    \begin{block}{Entity}
+    \begin{itemize}
+        \item  Le general entities si possono classificare in interne ed esterne; che a loro volta possono essere parsed oppure unparsed.
+        \item Le parameter entities si possono classificare in interne ed esterne; che  possono essere solo parsed.
+    \end{itemize}
+    \end{block}
+    \textit{creare un file esterno con estensione .dtd e includerlo nel prologo XML.}
+    
+\end{frame}
 
 
-https://leggi.amazon.it/notebook?ref_=kcr_notebook_lib
-18/4410/3/2018
-Kindle: Your Notes and Highlights
-<!ENTITY entity_name “replacement_string” or “hexadecimal_code” >
+% An xml document may include other xml documents and data from different
+% sources, these sources are termed entities and an entity can be external or
+% internal entity.
 
+% Internal general entities help include special characters in an xml document,
+% that would otherwise make an xml document become malformed if included
+% literally.
 
-To use the entity name in the element content simply attach the ampersand to
-the beginning of the entity name and append the semi colon to the end like
-this; &entity_name;
 
+% The syntax of usage is as described below:
 
-may include well formed xml elements.
 
+% <!ENTITY entity_name “replacement_string” or “hexadecimal_code” >
 
-An xml document may be developed from other xml document located in
-different places and from different applications. This is made possible through
-the use of external general entities. Through which the external entities are
-inserted into the main xml document. The syntax for an external general entity
-is as described below: <!ENTITY entity_name SYSTEM “URL” > The URL
-points to the location of the external entity to be drawn into the main
-document.
 
+% To use the entity name in the element content simply attach the ampersand to
+% the beginning of the entity name and append the semi colon to the end like
+% this; &entity_name;
 
-<!ENTITY External_fruits SYSTEM "fruits.xml" >
 
+% may include well formed xml elements.
 
-Please note that an external entity cannot contain a document type declaration
-as it will conflict with the main xml document type declaration, but you may
-include a text declaration in an external parsed entity, if not the parser will
-naturally assume a “UTF-8” encoding for the external entity. General entities
-though declared in the DTD, must be used in the document and not in the
-DTD itself. Also for now, Mozilla, Netscape, Safari and Opera do not resolve
-entity references except the latest version of internet explorer.
 
+% An xml document may be developed from other xml document located in
+% different places and from different applications. This is made possible through
+% the use of external general entities. Through which the external entities are
+% inserted into the main xml document. The syntax for an external general entity
+% is as described below: <!ENTITY entity_name SYSTEM “URL” > The URL
+% points to the location of the external entity to be drawn into the main
+% document.
 
-https://leggi.amazon.it/notebook?ref_=kcr_notebook_lib
-19/4410/3/2018
-Kindle: Your Notes and Highlights
-General entities defined in the document type definition must appear in the xml
-document content, becoming a part of the xml document. This is a limitation of
-general entities as they cannot be exclusively used as parameters in the
-document type definition.
 
+% <!ENTITY External_fruits SYSTEM "fruits.xml" >
 
-This is however addressed by parameter entities. Parameter entity usage
-syntax is as described below: <!ENTITY % entity_name “replacement_string”
->
 
+% Please note that an external entity cannot contain a document type declaration
+% as it will conflict with the main xml document type declaration, but you may
+% include a text declaration in an external parsed entity, if not the parser will
+% naturally assume a “UTF-8” encoding for the external entity. General entities
+% though declared in the DTD, must be used in the document and not in the
+% DTD itself. Also for now, Mozilla, Netscape, Safari and Opera do not resolve
+% entity references except the latest version of internet explorer.
 
-In other words parameter entity references are part of the DTD but may not
-appear in the document content.
+% General entities defined in the document type definition must appear in the xml
+% document content, becoming a part of the xml document. This is a limitation of
+% general entities as they cannot be exclusively used as parameters in the
+% document type definition.
 
 
-More, a parameter entity reference is started with a percentage sign
+% This is however addressed by parameter entities. Parameter entity usage
+% syntax is as described below: <!ENTITY % entity_name “replacement_string”
+% >
 
 
-(%) and not with the ampersand, and terminated with a semi colon like shown
-below: %parameterEntityName;
+% In other words parameter entity references are part of the DTD but may not
+% appear in the document content.
 
 
-There are two types of parameter entity; the internal and the external
-parameter entities.
+% More, a parameter entity reference is started with a percentage sign
 
 
-Internal parameter entities are used much in the same way that the general
-entity references are used but they remain parts of the dtd and never appear
-in the document’s content. An internal parameter entity reference is
-represented as shown below: <!ENTITY % parameter_entity_name
-“replacement_content” >
-Note:
-https://leggi.amazon.it/notebook?ref_=kcr_notebook_lib
-20/4410/3/2018
-Kindle: Your Notes and Highlights
-Yellow highlight | Location: 786
-When a parameter entity is inserted in the dtd, the parameter entity is replaced
-with the replacement content at execution time.
+% (%) and not with the ampersand, and terminated with a semi colon like shown
+% below: %parameterEntityName;
 
 
-Internal parameter entities are declared in the dtd external subset
+% There are two types of parameter entity; the internal and the external
+% parameter entities.
 
 
-This would make the dtd easier to develop and later maintained, if there are
-any changes to be made.
+% Internal parameter entities are used much in the same way that the general
+% entity references are used but they remain parts of the dtd and never appear
+% in the document’s content. An internal parameter entity reference is
+% represented as shown below: <!ENTITY % parameter_entity_name
+% “replacement_content” >
 
+% When a parameter entity is inserted in the dtd, the parameter entity is replaced
+% with the replacement content at execution time.
 
-A parameter entity that is only a part of a complete declaration like above
-cannot appear in the internal definition subset of a dtd and must be placed in
-the external definition subset and referred to.
 
+% Internal parameter entities are declared in the dtd external subset
 
-Note that the parameter entity reference ”%Event_info;” was declared before it
-was used, and that “sport_calendar.dtd” was referred to in the external dtd
-subset as described in document 5.3 below:
 
+% This would make the dtd easier to develop and later maintained, if there are
+% any changes to be made.
 
-External parameter entities enable the modularization and linking of document
-type definitions.
 
+% A parameter entity that is only a part of a complete declaration like above
+% cannot appear in the internal definition subset of a dtd and must be placed in
+% the external definition subset and referred to.
 
-with external parameter entities you can embed modularized document type
-definitions from different locations to form a single and more complete
-document type definition.
-Note:
-https://leggi.amazon.it/notebook?ref_=kcr_notebook_lib
-21/4410/3/2018
-Kindle: Your Notes and Highlights
-Yellow highlight | Location: 876
-The syntax for an external parameter entity is as described below:
 
+% Note that the parameter entity reference ”%Event_info;” was declared before it
+% was used, and that “sport_calendar.dtd” was referred to in the external dtd
+% subset as described in document 5.3 below:
 
-<!ENTITY % parameter_name SYSTEM “URL” > %parameter_name;
 
+% External parameter entities enable the modularization and linking of document
+% type definitions.
 
-using an external parameter entity reference as shown
+
+% with external parameter entities you can embed modularized document type
+% definitions from different locations to form a single and more complete
+% document type definition.
+
+% The syntax for an external parameter entity is as described below:
+
+
+% <!ENTITY % parameter_name SYSTEM “URL” > %parameter_name;
+
+
+% using an external parameter entity reference as shown
