@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<!DOCTYPE test-entity [
+    <!ELEMENT test-entity (#PCDATA)>
+    <!ENTITY amaiuscola "&#65;">
+]>
+<test-entity>
+    ciao come stai? &amaiuscola; casa!
+</test-entity>

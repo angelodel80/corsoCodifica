@@ -86,7 +86,7 @@
 	\addtocounter{nframe}{1}
 
 	\begin{center}
-		\includegraphics[width=.8\textwidth]{imgs/intro-doc-xml.png}
+		\includegraphics[width=.8\textwidth]{imgs/xml-intro-doc-xml.png}
 	\end{center}
 
 	\begin{tiny}\textit{immagine dal libro New Perspectives on XML, 3rd Edition}\end{tiny}
@@ -175,7 +175,7 @@
 	\addtocounter{nframe}{1}
 
 	\begin{center}
-		\includegraphics[width=.9\textwidth]{imgs/TEI-Example.png}
+		\includegraphics[width=.9\textwidth]{imgs/xml-TEI-Example.png}
 	\end{center}
 
 	\begin{tiny}
@@ -229,7 +229,7 @@ maintain.
 	\addtocounter{nframe}{1}
 
 	\begin{center}
-		\includegraphics[width=0.95\textwidth]{imgs/TEI-PerseusExample.png}
+		\includegraphics[width=0.95\textwidth]{imgs/xml-TEI-PerseusExample.png}
 	\end{center}
 
 \end{frame}
@@ -294,67 +294,161 @@ maintain.
 % after the encoding attribute-value pair, where the value yes or no ­indicates whether
 % access to external files will be needed when processing the document.
 
+\begin{frame}
+	\frametitle{Fondamenti XML}
+	\framesubtitle{eXtensible Markup Language: Prologo}
+	\addtocounter{nframe}{1}
 
-% ERRORI:
-% <?XML VERSION=”1.0” ENCODING=”ISO-8859-1” STANDALONE=”YES” ?>
-% <?xml version=1.0 encoding=ISO-8859-1 standalone=yes ?>
-% <?xml version=”1.0” standalone=”yes” encoding=”ISO-8859-1” ?>
+	\begin{block}{XML declaration: ERRORI}
+	\begin{center}\texttt{<?XML VERSION=”1.0” ENCODING=”ISO-8859-1” STANDALONE=”YES” ?>}\end{center}
+	\begin{center}\texttt{<?xml version=1.0 encoding=ISO-8859-1 standalone=yes ?>}\end{center}
+	\begin{center}\texttt{<?xml version=”1.0” standalone=”yes” encoding=”ISO-8859-1” ?>}\end{center}
+	\end{block}
 
-% Generally speaking, comments are ignored by programs reading the document and
-% do not affect the document’s contents or structure.
-% To insert a comment in an XML document, enter
-% <!-- comment -->
+\end{frame}
 
-% If you have a comment that will occupy more than one line, you can
-% continue the ­comment on as many lines as you need
+\begin{frame}
+	\frametitle{Fondamenti XML}
+	\framesubtitle{eXtensible Markup Language: Prologo}
+	\addtocounter{nframe}{1}
+
+	\begin{block}{XML comments}
+		comments are ignored by programs reading the document and
+		do not affect the document's contents or structure.
+	\end{block}
+
+	\begin{block}{XML comments: sintassi}
+	\begin{center}\texttt{
+		<!-- all'interno di questi segni il parser XML non entra -->
+	}\end{center}
+	\end{block}
+
+	\textit{METTERE TESTO COMMENTATO}
+	% If you have a comment that will occupy more than one line, you can continue the ­comment on as many lines as you need
+
+\end{frame}
+
+\begin{frame}
+	\frametitle{Fondamenti XML}
+	\framesubtitle{eXtensible Markup Language}
+	\addtocounter{nframe}{1}
+
+	\begin{center}
+		mettere immagine XML-Prologo
+
+		\includegraphics[width=0.95\textwidth]{imgs/xml-TEI-PerseusExample.png}
+	\end{center}
+
+\end{frame}
+
+\begin{frame}
+	\frametitle{Fondamenti XML}
+	\framesubtitle{eXtensible Markup Language}
+	\addtocounter{nframe}{1}
+
+	\begin{block}{Esercizio prologo}
+		Creare un fine con estensione .xml ed inserire un prologo con la dichiarazione XML e un commento con le seguenti informazioni
+	\end{block}
+
+	\begin{block}{Esercizio prologo}
+		\texttt{
+		 <!--
+		 \\This document contains data on Corso di Codifica di Testi.
+		 \\Filename: project.xml
+		 \\Author: your name
+		 \\Date: today's date
+		 \\-->
+		}
+	\end{block}
+
+	\textit{Salvare il file su github nel repository del progetto}
+
+\end{frame}
+
+\begin{frame}
+	\frametitle{Fondamenti XML}
+	\framesubtitle{eXtensible Markup Language}
+	\addtocounter{nframe}{1}
+
+	\begin{block}{XML parser}
+		A program that reads and interprets an XML document is called an XML processor or XML parser, or simply a processor or parser.
+	\end{block}
+	\begin{block}{Cosa fa un XML parser}
+		\begin{itemize}
+			\item Verifica che il documento rispetti le rigole di sintassi XML (well-formed)
+			\item Interpret PCDATA in a document and resolve any character or entity references found within the document
+			\item Gestisce le processing instructions per interpretare eventuali dati
+		\end{itemize}
+	\end{block}
+
+\end{frame}
+
+\begin{frame}
+	\frametitle{Fondamenti XML}
+	\framesubtitle{eXtensible Markup Language}
+	\addtocounter{nframe}{1}
+
+	\begin{block}{XMLLINT}
+		INTRODURRE XMLLINT
+		Mettere immagine dell'uscita dell'help
+	\end{block}
+
+\end{frame}
 
 
-% ESERCIZIO
+\begin{frame}
+    \frametitle{Fondamenti XML}
+    \framesubtitle{eXtensible Markup Language}
+    \addtocounter{nframe}{1}
 
-% <!--
-% This document contains data on SJB Pet Boutique
-% holiday specials
-% Filename: project.xml
-% Author:
-% your name
-% Date:
-% today's date
-% -->
+	\begin{block}{XML body}
+	XML document is primarily composed of elements and attributes\\
+	   The document body in an XML document is made up of elements that contain data.
+	   \\ Elements are the basic building blocks of XML files.
+    \end{block}
+
+    \begin{block}{Elementi: Sintassi}
+    \begin{center}\texttt{<element>content</element>}\end{center}
+    \begin{center}\texttt{opening tag: <element>;\\ closing tag: </element>}\end{center}
+    \end{block}
+	\textit{METTERE TESTO COMMENTATO}
+	% An ­element can have text content and child element content
+\end{frame}
+
+\begin{frame}
+    \frametitle{Fondamenti XML}
+    \framesubtitle{eXtensible Markup Language}
+    \addtocounter{nframe}{1}
+
+	\begin{block}{XML Element}
+		\textit{Gli elementi XML possono avere diversi tipi di contenuto}:
+		\begin{itemize}
+			\item contenuto strutturale: solo altri elementi, non testo
+			\item contenuto misto: testo e anche altri elementi
+			\item contenuto testuale: solo testo, non altri elementi
+		\end{itemize}
+	\end{block}
+	
+\end{frame}
+
+\begin{frame}
+    \frametitle{Fondamenti XML}
+    \framesubtitle{eXtensible Markup Language}
+    \addtocounter{nframe}{1}
+
+	\begin{block}{XML Element: note importanti}
+		\begin{itemize}
+			\item Element names are case sensitive
+			\item Element names must begin with a letter or the underscore character
+			\item Element names cannot begin with the string xml
+			\item The name in an element closing tag must exactly match the name in the opening tag
+			\item Element names can be used more than once (anche a diversi livelli gerarchici)
+			\item Element names might be established already (es.: vabolario TEI-XML)
+		\end{itemize}
+	\end{block}
+\end{frame}
 
 
-% A program that reads and interprets an XML document is called an XML processor or XML parser, or simply a processor or parser.
-
-% First well-formed
-% A second function of a parser is to interpret PCDATA in a document and resolve any character or
-% entity references found within the document
-% finally, an XML document might contain
-% processing instructions that tell a parser exactly how the document should be read and
-% interpreted
-
-% The current versions of all major web browsers include an XML parser of some type.
-
-% To test for well-formedness, you’ll use an XML parser to compare the XML document against the
-% rules established by the W3C.
-% INTRODURRE XMLLINT
-
-
-% The document body in an XML document is made up of elements that contain data
-
-% to be stored in the document. Elements are the basic building blocks of XML files.
-
-% An ­element can have text content and child element content.
-
-% <element>content</element>
-% The opening tag is <element> , and </element> is the closing
-% tag.
-
-% - Gli elementi XML possono avere diversi tipi di contenuto:
-% -- contenuto strutturale: solo altri elementi, non testo
-% -- contenuto misto: testo e anche altri elementi
-% -- contenuto testuale: solo testo, non altri elementi
-
-% Element names might be established already if an author is using a particular XML
-% vocabulary, such as TEI-XML
 
 
 % There are a few important points to remember about XML elements:
@@ -369,6 +463,9 @@ maintain.
 % • Element names can be used more than once, so the element names can mean
 % different things at different points in the hierarchy of an XML document.
 
+% Element names might be established already if an author is using a particular XML
+% vocabulary, such as TEI-XML
+
 % Creating XML Elements
 % XML 24
 % • To create an XML element, use the syntax
@@ -382,24 +479,28 @@ maintain.
 % • To create an empty XML element with a pair of tags, use the syntax
 % <element></element>
 
+\begin{frame}
+    \frametitle{Fondamenti XML}
+    \framesubtitle{eXtensible Markup Language}
+    \addtocounter{nframe}{1}
 
-% An open element or empty element is an element
-% with no content.
+	\begin{block}{XML Element: empty e nested}
+		\begin{itemize}
+			\item An open element or empty element is an element with no content (empty element).
+			\item In addition to text content, elements also can contain other elements (nested element)
+		\end{itemize}
+	\end{block}
 
-% <element />
-% where element is the name of the empty element
+	\begin{block}{XML esempi: empty e nested element}
+		\begin{itemize}
+			\item \texttt{<element />} \texttt{<element></element>}
+			\item \texttt{<choice><sic>testo con errore</sic><cor> testo corretto</cor></choice>}
+		\end{itemize}
+		
+	\end{block}
+	
+\end{frame}
 
-% <element></element>
-% a two-sided tag with no content
-
-
-% Empty
-% elements can also contain attributes that can be used to store ­information
-
-% Nesting Elements
-% In addition to text content, elements also can contain other elements.
-% An element
-% contained within another element is said to be a nested element.
 
 % ESEMPIO
 % <product>
@@ -412,37 +513,104 @@ maintain.
 % </productItems>
 % </product>
 
-% hierarchical relationships between
-% elements
-% A nested element is a child element of the element in which it is nested—
-% its parent element
-% Elements that are side-by-side in a document’s ­hierarchy are
-% sibling ­elements
+\begin{frame}
+    \frametitle{Fondamenti XML}
+    \framesubtitle{eXtensible Markup Language}
+    \addtocounter{nframe}{1}
 
-% syntax error in creating an XML document is improperly nesting
+	\begin{block}{XML Element: empty e nested}
+		\begin{itemize}
+			\item An open element or empty element is an element with no content (empty element).
+			\item In addition to text content, elements also can contain other elements (nested element)
+		\end{itemize}
+	\end{block}
 
-% XML does not allow the opening and ­closing
-% tags of parent and child elements to overlap
+	\begin{block}{XML esempi: empty e nested element}
+		\begin{itemize}
+			\item \texttt{<element />} \texttt{<element></element>}
+			\item \texttt{<choice><sic>testo con errore</sic><cor> testo corretto</cor></choice>}
+		\end{itemize}
+		
+	\end{block}
+	
+\end{frame}
 
-% Esercizio: scrivere e fare il check di un xml non opportunamente annidato
+\begin{frame}
+    \frametitle{Fondamenti XML}
+    \framesubtitle{eXtensible Markup Language}
+    \addtocounter{nframe}{1}
 
-% The Element Hierarchy
-% All elements in the body are children of a single element called the
-% root element or document element.
+	\begin{block}{XML Element: hierarchical relationship}
+		\begin{itemize}
+			\item Nested %element is a child element of the element in which it is nested: its parent element
+			\item Elements %that are side by side in a document ­hierarchy are sibling elements
+		\end{itemize}
+	\end{block}
 
-% hierarchy represented in a tree diagram
+\end{frame}
 
-% Note that the XML declaration and comments are not included
-% in the tree structure of the document body
+\begin{frame}
+	\frametitle{Fondamenti XML}
+	\framesubtitle{eXtensible Markup Language}
+	\addtocounter{nframe}{1}
 
-% An XML document must include a root element to be considered well formed
+	\begin{center}
+		mettere immagine parent - sibling
+		\includegraphics[width=0.95\textwidth]{imgs/xml-TEI-PerseusExample.png}
+	\end{center}
+
+\end{frame}
+
+\begin{frame}
+    \frametitle{Fondamenti XML}
+    \framesubtitle{eXtensible Markup Language}
+    \addtocounter{nframe}{1}
+
+	\begin{block}{XML Element: hierarchical relationship}
+		\begin{itemize}
+			\item All %elements in the body are children of a single element called the root element or document element.
+			\item An %XML document must include a root element to be considered well formed
+			\item hierarchy %represented in a tree diagram
+			\item XML % declaration and comments are not included in the tree structure of the document body
+			\item Syntax %error in creating an XML document is improperly nesting
+			\item XML does % not allow the opening and ­closing tags of parent and child elements to overlap
+		\end{itemize}
+	\end{block}
+
+\end{frame}
+
+
+\begin{frame}
+    \frametitle{Fondamenti XML}
+    \framesubtitle{eXtensible Markup Language}
+    \addtocounter{nframe}{1}
+
+	\begin{block}{XML Element: hierarchical relationship - Esercizio}
+		\begin{center}
+			Scrivere e fare il check di un xml non opportunamente annidato
+		\end{center}
+	\end{block}
+
+\end{frame}
+
+
 
 % However, by indenting the code and placing siblings on their own lines, you can visually
 % reveal the hierarchy relationships and add a dimension of visual communication to your
 % code.
 
-% A quick way to view the overall structure of a document body is to chart the ­elements
-% in a tree structure
+\begin{frame}
+    \frametitle{Fondamenti XML}
+    \framesubtitle{eXtensible Markup Language}
+    \addtocounter{nframe}{1}
+
+	\begin{block}{XML Element: hierarchical relationship as tree structure}
+		A% quick way to view the overall structure of a document body is to chart the ­elements in a tree structure	
+	\end{block}
+
+\end{frame}
+
+
 
 % It would be useful to have a general tree diagram that indicates whether a particular
 % child element can occur zero times, once, or several times within a parent
@@ -450,53 +618,133 @@ maintain.
 % The symbols ?, *, and + are part of the code used in creating DTDs to validate XML
 % documents.
 
-% MIXED CONTENT
-% Mixed content elements are ideal for
-% descriptive, text-based chunks of infor-
-% mation. They are not very common in
-% database-type applications.
 
-% In some cases, you may want an element to
-% contain both content and child elements.
-% This is referred to as mixed content
+\begin{frame}
+	\frametitle{Fondamenti XML}
+	\framesubtitle{eXtensible Markup Language}
+	\addtocounter{nframe}{1}
 
-% ESEMPIO
-% <wonder>
-% Temple of Artemis at Ephesus
-% <city>Ephesus</city>
-% <country>Turkey</country>
-% </wonder>
+	\begin{center}
+		mettere immagine xml-parent-child-quantifier
 
-% Esercizio:
-% aprire il file XML non ben formato nella cartella xml e:
-% - correggerlo (mettendo come commenti la correzione fatta e brevente spiegarla)
-% -- nested, case sensitive
-% - aggiungere un figlio (child) all'elemento XYZ1
-% - aggiungere un fratello (sibling) all'elemento XYZ2
+		\includegraphics[width=0.95\textwidth]{imgs/xml-TEI-PerseusExample.png}
+	\end{center}
 
-% Working with Attributes
-% Every element in an XML document can contain one or more attributes
-% An attribute
-% describes a feature or characteristic of an element
+\end{frame}
 
-% <element attribute=”value”> ... </element>
-% <element attribute=”value” />
+\begin{frame}
+	\frametitle{Fondamenti XML}
+	\framesubtitle{eXtensible Markup Language}
+	\addtocounter{nframe}{1}
 
-% Attribute values are text strings. Therefore, an attribute value always must be enclosed
-% within either single or double quotes.
+	\begin{center}
+		mettere immagine xml-parent-child-quantifier2
 
-% Esempio:
+		\includegraphics[width=0.95\textwidth]{imgs/xml-TEI-PerseusExample.png}
+	\end{center}
+
+\end{frame}
+
+
+\begin{frame}
+    \frametitle{Fondamenti XML}
+    \framesubtitle{eXtensible Markup Language}
+    \addtocounter{nframe}{1}
+
+	\begin{block}{XML Element: Mixed Content}
+		%An element  can contain both content and child elements.\\
+		%Mixed content elements are ideal for descriptive, text-based chunks of information. 
+	\end{block}
+
+	\begin{block}{XML Element: Mixed Content}
+		\texttt{
+			%<p><salutation>Salve</salutation> il mio nome è <persName>Angelo</persName></p>
+			} 
+	\end{block}
+
+
+\end{frame}
+
+\begin{frame}
+    \frametitle{Fondamenti XML}
+    \framesubtitle{eXtensible Markup Language}
+    \addtocounter{nframe}{1}
+
+	\begin{block}{XML Element: Esercizio}
+ aprire il file XML non ben formato nella cartella xml del repository github e:
+ - validarlo con XMLLINT
+ - correggerlo (mettendo come commenti le correzioni fatte e brevente spiegarle)
+ -- (nested, case sensitive)
+ - aggiungere un figlio (child) all'elemento XYZ1
+ - aggiungere un fratello (sibling) all'elemento XYZ2 
+	\end{block}
+
+\end{frame}
+
+
+\begin{frame}
+    \frametitle{Fondamenti XML}
+    \framesubtitle{eXtensible Markup Language}
+    \addtocounter{nframe}{1}
+
+	\begin{block}{XML Attributi}
+		Every element in an XML document can contain one or more attributes.
+		\\An attribute describes a feature or characteristic of an element
+	\end{block}
+
+	\begin{block}{XML Attributi}
+		Attributes can only exist within an element. An attribute declaration really does not make sense without an element.
+	\end{block}
+
+\end{frame}
+
+
+\begin{frame}
+    \frametitle{Fondamenti XML}
+    \framesubtitle{eXtensible Markup Language}
+    \addtocounter{nframe}{1}
+
+	\begin{block}{XML Attributi}
+		Attribute values are text strings. Therefore, an attribute value always must be enclosed within either single or double quotes.
+	\end{block}
+
+	\begin{block}{XML Attributi}
+		\begin{center}
+			\texttt{<element attribute=``value''> ... </element>}
+			\texttt{<element attribute=``value'' />}
+			\texttt{<element attribute=``value'', attribute2=``value2'' />}
+		\end{center}
+	\end{block}
+
+\end{frame}
+
+\begin{frame}
+    \frametitle{Fondamenti XML}
+    \framesubtitle{eXtensible Markup Language}
+    \addtocounter{nframe}{1}
+
+	\begin{block}{XML Attributi: restrizioni ai nomi}
+		\begin{itemize}
+			\item An attribute name must begin with a letter or an underscore ( \_ ).
+			\item Spaces are not allowed in attribute names.
+			\item Like an element name, an attribute name should not begin with the text string xml.
+		\end{itemize}
+	\end{block}
+
+	\begin{block}{XML Attributi}
+		\begin{itemize}
+			\item attribute names are case sensitive
+			\item The order of attributes is not significant
+		\end{itemize}
+	\end{block}
+
+\end{frame}
+
+
+
+% Esercizio con gli attributi:
 % (preso dalla TEI)
 
-% name for an attribute as long as it meets the following rules:
-% • An attribute name must begin with a letter or an underscore ( \_ ).
-% • Spaces are not allowed in attribute names.
-% • Like an element name, an attribute name should not begin with the text string xml.
-
-% An attribute name can appear only once within an element. Like all other aspects of
-% XML, attribute names are case sensitive, and incorrect case is a common syntax error
-% found in attributes.
-% The order of attributes is not significant and there is no way to control the order of attributes
 
 % Adding an Attribute to an Element
 % • To add an attribute to an element, use the syntax
@@ -511,6 +759,8 @@ maintain.
 % attribute2 is the second attribute’s name, value2 is the second ­attribute’s
 % value, and so on. Each attribute is separated by a space.
 
+
+
 % It’s not always clear when to use an attribute value rather than inserting a new element.
 % A general rule of thumb is that if all of the XML tags and their attributes were
 % removed from a document, the remaining text should comprise the document’s content
@@ -520,24 +770,26 @@ maintain.
 % Different developers have different preferences, and
 % there’s no right answer.
 
-% Using Character and Entity References
-% a numeric character reference, also known simply as a ­character
-% reference. The syntax for a character reference is
-% \&\#nnn;
-% where nnn is a character number from the ISO/IEC character set
+\begin{frame}
+    \frametitle{Fondamenti XML}
+    \framesubtitle{eXtensible Markup Language}
+    \addtocounter{nframe}{1}
 
-% the character numbers for different symbols,
-% some symbols also can be identified using a character entity reference—also known
-% si­mply as an entity reference—using the syntax
-% Unicode can be used in
-% conjunction with entity
-% references to display
-% specific characters or
-% symbols.
-% \&entity;
+	\begin{block}{XML Character and Entity References}
+		\begin{itemize}
+			\item a numeric character reference syntax  is \&\#nnn;
+			\item identified using a character entity reference by \&entity;
+		\end{itemize}
+	\end{block}
 
-% Immagine
+	\begin{block}{XML References}
+		\begin{itemize}
+			\item \texttt{\&\#61;}
+			\item \texttt{\&amp;}
+		\end{itemize}
+	\end{block}
 
+\end{frame}
 
 % Inserting Character and Entity References
 % • To insert a character reference into an XML document, use
@@ -547,80 +799,191 @@ maintain.
 % \&entity;
 % where entity is a recognized entity name.
 
+% Immagine
+\begin{frame}
+	\frametitle{Fondamenti XML}
+	\framesubtitle{eXtensible Markup Language}
+	\addtocounter{nframe}{1}
 
-% text characters fall into three categories—parsed
-% character data, character data, and white space.
+	\begin{center}
+		mettere immagine xml-Character-Entity
+		\includegraphics[width=0.95\textwidth]{imgs/xml-TEI-PerseusExample.png}
+	\end{center}
+
+\end{frame}
 
 
-% Parsed Character Data
-% Parsed character data (PCDATA) consists of all those characters that XML treats as parts
-% of the code of an XML document.
-% • the XML declaration
-% • the opening and closing tags of an element
-% • empty element tags
-% • character or entity references
-% • comments
+
+\begin{frame}
+    \frametitle{Fondamenti XML}
+    \framesubtitle{eXtensible Markup Language}
+    \addtocounter{nframe}{1}
+
+	\begin{block}{Text Character Parsing}
+		text characters fall into three categories: parsed character data, character data, and white space.
+	\end{block}
+
+	\begin{block}{Text Character Parsing}
+		\begin{itemize}
+			\item \texttt{PCDATA}
+			\item \texttt{CDATA}
+			\item \texttt{White Space}
+		\end{itemize}
+	\end{block}
+
+\end{frame}
+
+
+
+
+\begin{frame}
+    \frametitle{Fondamenti XML}
+    \framesubtitle{eXtensible Markup Language}
+    \addtocounter{nframe}{1}
+
+	\begin{block}{Parsed Character Data}
+		Parsed character data (PCDATA) consists of all those characters that XML treats as parts of the code of an XML document.
+	\end{block}
+
+	\begin{block}{PCDATA}
+		\begin{itemize}
+			\item XML declaration
+			\item Opening tag e  closing tag
+			\item Character or entity references
+			\item Commenti
+		\end{itemize}
+	\end{block}
+
+\end{frame}
 
 % The presence of PCDATA can cause unexpected errors to occur within a document
 % This means that symbols such as \&, <, or >, which are all used in ­creating
-% markup tags or entity references, are extracted and the appropriate content is used in your
-% program.
+% markup tags or entity references, are extracted and the appropriate content is used in your program.
+
+\begin{frame}
+    \frametitle{Fondamenti XML}
+    \framesubtitle{eXtensible Markup Language}
+    \addtocounter{nframe}{1}
+
+	\begin{block}{Parsed Character Data}
+		The presence of PCDATA can cause unexpected errors to occur within a document
+	\end{block}
+
+	\begin{block}{XML PCDATA}
+		%symbols such as \&, <, or >, which are all used in ­creating markup tags or entity references, are extracted
+	\end{block}
+
+\end{frame}
+
 
 % Character Data
-% Character data is not processed,
-% but instead is treated as pure data content.
 
-% As an alternative to using character references, you can place text into a CDATA section.
-% A CDATA section is a block of text that XML treats as character data only. The syntax for
-% creating a CDATA section is
-% <![CDATA [
-% 		character data
-% 	]]>
+\begin{frame}
+    \frametitle{Fondamenti XML}
+    \framesubtitle{eXtensible Markup Language}
+    \addtocounter{nframe}{1}
 
-% In a
-% CDATA section, these characters are interpreted by XML parsers or XML editors as text
-% rather than as markup commands. A CDATA section
+	\begin{block}{Character Data}
+		Character data is not processed, but instead is treated as pure data content.
+		\\A CDATA section is a block of text that XML treats as character data only
+	\end{block}
+
+	\begin{block}{XML CDATA: sintassi}
+		\begin{center}
+			\texttt{
+				 <![CDATA [
+					 character data
+					 ]]>
+			}
+		\end{center}
+	\end{block}
+
+\end{frame}
+
+
+
+
+
+%A CDATA section
 % • may be placed anywhere within a document.
-% • cannot be nested within other CDATA sections.
-% • cannot be empty.
+% • 
+% • 
 
 % The only sequence of symbols that may not occur within a CDATA section is ]]
 % because this is the marker ending a CDATA section.
 
-% Esempio:
-% The following example shows an element named htmlCode containing a CDATA
-% section used to store several HTML tags:
-% <htmlCode>
-% <![CDATA[
-% 		<h1>SJB Pet Boutique</h1>
-% 		<h2>Fashion for Pets and Their Humans</h2>
-% 	]]>
-% </htmlCode>
+\begin{frame}
+    \frametitle{Fondamenti XML}
+    \framesubtitle{eXtensible Markup Language}
+    \addtocounter{nframe}{1}
 
-% You can use CDATA blocks when you want to include large blocks of special
-% characters as character data
+	\begin{block}{Character Data}
+		You can use CDATA blocks when you want to include large blocks of special
+		characters as character data
+	\end{block}
 
-% You cannot use XML comments in a CDATA section.
+	\begin{block}{CDATA: qualche vincolo}
+		\begin{itemize}
+			\item You cannot use XML comments in a CDATA section.
+			\item You cannot nest a CDATA section inside another CDATA section
+			\item (cannot be nested within other CDATA sections).
+			\item cannot be empty.
+			\item i simboli ``]]'' non sono ammess because this is the marker ending a CDATA section.
+		\end{itemize}
+	\end{block}
 
-% You cannot nest a CDATA section inside another CDATA section
+\end{frame}
+
+\begin{frame}
+    \frametitle{Fondamenti XML}
+    \framesubtitle{eXtensible Markup Language}
+    \addtocounter{nframe}{1}
+
+	\begin{block}{Esempio ed esercizio:}
+		Inserire all'interno di un tag un frammento di codice HTML
+	\end{block}
+
+	\begin{block}{CDATA: esempio}
+		\begin{center}
+			\texttt{
+			<htmlCode>
+			 <![CDATA[
+			 		<h1>Capitolo Primo</h1>
+			 		<h2>Sezione Seconda</h2>
+			 	]]>
+			 </htmlCode>
+			 }
+		\end{center}
+	\end{block}
+
+\end{frame}
+
 
 % White Space
 
-% White space refers to nonprintable characters such as spaces, new lines, tabs.
-% Technically, no white space ­stripping
-% occurs for element content, which means that the content of the XML element
+\begin{frame}
+    \frametitle{Fondamenti XML}
+    \framesubtitle{eXtensible Markup Language}
+    \addtocounter{nframe}{1}
 
-% When white space appears in places other than element content, XML treats it in the
-% following manner:
-% • White space is ignored when it is the only character data between element tags; this
-% allows XML authors to format their documents to be readable without affecting the
-% content or structure.
-% • White space is ignored within a document’s prolog and epilog, and within any
-% element tags.
-% • White space within an attribute value is treated as part of the attribute value.
+	\begin{block}{White Space}
+		White space refers to nonprintable characters
+	\end{block}
 
-% Esercizio:
-% inserire attributi e CDATA section
+	\begin{block}{White Space: esempio}
+		\begin{itemize}
+			\item White% space is ignored when it is the only character data between element tags
+			\item White% space is ignored within a document prolog and epilog, and within any element tags
+			\item White% space within an attribute value is treated as part of the attribute value
+			\item no% white space ­stripping occurs for element content, which means that the content of the XML element
+		\end{itemize}
+	\end{block}
+
+\end{frame}
+
+
+
+
 
 
 % Inserting a Processing Instruction
@@ -638,6 +1001,10 @@ maintain.
 % <?xml-stylesheet type=”text/css” href=”main.css” media=”all” ?>
 % Multiple processing instructions can exist within the same XML document for different
 % media types
+
+
+
+
 
 % Working with Namespaces
 % A namespace is a defined collection of element and attribute names.
@@ -697,8 +1064,15 @@ maintain.
 
 
 
-% XML document is primarily composed of elements and attributes
-% Attributes can only exist within an element. An attribute declaration really does not make sense without an element.
+
+
+
+
+
+
+
+
+
 % Attributes can only store a value, while elements can also store child elements and attributes.
 % An element can appear more than once within a parent node, but an attribute can appear only once. The order of attributes is not significant and there is no way to control the order of attributes in XSD. If the attribute is present the default value is not assigned, even if the value of the attribute is an empty string.
 % the default value of elements is assigned only when the element is present and is empty
@@ -710,7 +1084,6 @@ maintain.
 % Like HTML documents, XML documents can be created and viewed with a basic text editor such as Notepad or TextEdit. More sophisticated XML editors are available, and using them can make it easier to design and test documents.
 
 
-% slide su XML lint
 
 
 % tanti vocabolari XML

@@ -97,7 +97,7 @@ other through data exchange.
     \addtocounter{nframe}{1}
 
     \begin{block}{Child Element Declaration}
-        A child element declaration is done in the same way as the root element declaration using the <!ELEMENT > tag
+        A child element declaration is done in the same way as the root element declaration using the \texttt{<!ELEMENT >} tag
     \end{block}
 
     \begin{block}{Element Declaration (root)}
@@ -119,7 +119,7 @@ other through data exchange.
     \begin{block}{Modificatori}
      + One or more occurrences\\ 
      ? Zero or one occurrence\\
-     * Zero or more occurrences\\
+     * Zero or more occurrences
     \end{block}
 \end{frame}
 
@@ -160,7 +160,7 @@ other through data exchange.
     \addtocounter{nframe}{1}
 
     \begin{block}{choice declaration}
-    \begin{center} \texttt{<!ELEMENT element_name (child_a | child_b) >} \end{center}
+    \begin{center} \texttt{<!ELEMENT element-name (child-a | child-b) >} \end{center}
     \end{block}
 
     \begin{block}{Dichiarazione di Choice}
@@ -221,7 +221,7 @@ other through data exchange.
     \addtocounter{nframe}{1}
 
     \begin{block}{Stato di attributi}
-     The state can be any of #IMPLIED (an optional attribute), #REQUIRED (a compulsory attribute) or #FIXED (a fixed value attribute that may not be changed) the value is provided as the default value. You cannot use the default-value with the #REQUIRED state as you must supply a value for the attribute.
+     The state can be any of \#IMPLIED (an optional attribute), \#REQUIRED (a compulsory attribute) or \#FIXED (a fixed value attribute that may not be changed) the value is provided as the default value. You cannot use the default-value with the \#REQUIRED state as you must supply a value for the attribute.
     \end{block}
 \end{frame}
 
@@ -233,7 +233,7 @@ other through data exchange.
     \addtocounter{nframe}{1}
 
     \begin{block}{Mixed content - DTD}
-    \begin{center}\texttt{<!ELEMENT element_name (#PCDATA|child_element)* >}\end{center}
+    \begin{center}\texttt{<!ELEMENT element-name (\#PCDATA|child-element)* >}\end{center}
     \end{block}
 
     \begin{block}{Mixed content XML}
@@ -251,14 +251,12 @@ other through data exchange.
     \begin{block}{Esercizio}
         root: TEI
          figli: header(obbligatorio una volta sola) - facsimile(opzionale una volta sola) - testo(obbligatorio una o più volte)
-         - testo è un mixed content con possibile elemento <seg>
-         attributi: 
+         - testo è un mixed content con possibile elemento \texttt{<seg>} attributi: 
          - header: type:(fixed, CDATA ``intestazione''); lang(opzional, NMTOKEN)
          - facsimile: source:(obbligatorio)
          - testo: id(obbligatorio, contenuto id) type(opzionale contenuto testuale)
     \end{block}
 \end{frame}
-
 
 
 \begin{frame}
@@ -271,15 +269,13 @@ other through data exchange.
     \end{block}
 
     \begin{block}{Empy content}
-    \begin{center}\texttt{<!ELEMENT element_name EMPTY>}\end{center}
+    \begin{center}\texttt{<!ELEMENT element-name EMPTY>}\end{center}
     \end{block}
 
 
     \begin{block}{Empy content}
     \begin{center}\texttt{<lb />}\end{center}
     \end{block}
-    
-    
 
 \end{frame}
 
@@ -295,7 +291,7 @@ other through data exchange.
     \end{block}
 
     \begin{block}{Any content}
-    \begin{center}\texttt{<!ELEMENT element_name ANY >}\end{center}
+    \begin{center}\texttt{<!ELEMENT element-name ANY >}\end{center}
     \end{block}
     
 \end{frame}
@@ -324,12 +320,13 @@ other through data exchange.
     \addtocounter{nframe}{1}
 
     \begin{block}{DOCTYPE}
-    \begin{center}\texttt{<!DOCTYPE root_element SYSTEM ``External DTD’s URL'' [Internal DTD ]>}\end{center}
-    \begin{center}\texttt{<!DOCTYPE root_element [Internal DTD] >}\end{center}
-    \begin{center}\texttt{<!DOCTYPE root_element SYSTEM “External_DTD’s URL” >}\end{center}
+    \begin{center}\texttt{<!DOCTYPE root-element SYSTEM ``External DTD’s URL'' [Internal DTD ]>}\end{center}
+    \begin{center}\texttt{<!DOCTYPE root-element [Internal DTD] >}\end{center}
+    \begin{center}\texttt{<!DOCTYPE root-element SYSTEM ``Ext-DTD URL'' >}\end{center}
         
     \end{block}
-    
+
+
 \end{frame}
 
 \begin{frame}
@@ -343,8 +340,9 @@ other through data exchange.
         \item inserire nel prologo di un documento XML la dichiarazione del tipo di documento e validare.
     \end{itemize}
     \end{block}
-    \textit{creare un file esterno con estensione .dtd e includerlo nel prologo XML.}
-    
+
+    \textit{creare un file esterno con estensione .dtd prima di includerlo nel prologo XML.}
+
 \end{frame}
 
 \begin{frame}
@@ -353,16 +351,15 @@ other through data exchange.
     \addtocounter{nframe}{1}
 
     \begin{block}{Entity}
-        per includere dati da diverse fonti DTD prevede l'uso di entità. Due tipologie di entità sono state definite: general entities e parameter entities.
+        Per includere dati da diverse fonti, DTD prevede l'uso di entità. Due tipologie di entità sono state definite: general entities e parameter entities.
     \end{block}
 
     \begin{block}{Entity: generiche e parametriche}
     \begin{itemize}
         \item le general entities vengono espanse nel documento XML
-        \item parameter entities vengono espanse nel documento DTD
+        \item le parameter entities vengono espanse nel documento DTD
     \end{itemize}
     \end{block}
-    \textit{creare un file esterno con estensione .dtd e includerlo nel prologo XML.}
     
 \end{frame}
 
@@ -377,119 +374,178 @@ other through data exchange.
         \item Le parameter entities si possono classificare in interne ed esterne; che  possono essere solo parsed.
     \end{itemize}
     \end{block}
-    \textit{creare un file esterno con estensione .dtd e includerlo nel prologo XML.}
     
 \end{frame}
 
+\begin{frame}
+    \frametitle{Elementi per la definizione degli schemi xml}
+    \framesubtitle{Principi Document Type Definition}
+    \addtocounter{nframe}{1}
 
-% An xml document may include other xml documents and data from different
-% sources, these sources are termed entities and an entity can be external or
-% internal entity.
+    \begin{block}{Entity}
+     Internal general entities help include special characters in an xml document,
+     that would otherwise make an xml document become malformed if included
+     literally.
+    \end{block}
 
-% Internal general entities help include special characters in an xml document,
-% that would otherwise make an xml document become malformed if included
-% literally.
+\end{frame}
+
+\begin{frame}
+    \frametitle{Elementi per la definizione degli schemi xml}
+    \framesubtitle{Principi Document Type Definition}
+    \addtocounter{nframe}{1}
+
+    \begin{block}{Internal General Entity: Sintassi}
+    \begin{center}\texttt{<!ENTITY entity-name ``replacement-string'' or ``hexadecimal-code'' >}\end{center}
+    \end{block}
+
+\end{frame}
+
+\begin{frame}
+    \frametitle{Elementi per la definizione degli schemi xml}
+    \framesubtitle{Principi Document Type Definition}
+    \addtocounter{nframe}{1}
+
+    \begin{block}{Internal General Entity: Sintassi}
+        To use the entity name in the element content simply attach the ampersand to
+        the beginning of the entity name and append the semi colon to the end like
+        this; \&entity-name;
+        \\ may include well formed xml elements.
+    \end{block}
+
+    \begin{block}{Internal General Entity: Sintassi}
+    \begin{center}\texttt{<!ENTITY firma ``Angelo Mario Del Grosso''>}\end{center}
+    \begin{center}\texttt{<p><salutation>\&firma;<salutation></p>}\end{center}
+    \end{block}
+
+\end{frame}
+
+\begin{frame}
+    \frametitle{Elementi per la definizione degli schemi xml}
+    \framesubtitle{Principi Document Type Definition}
+    \addtocounter{nframe}{1}
+
+    \begin{block}{Internal General Entity: Esempio con UNICODE}
+        Spesso le entità vengono utlizzate per dare un nome ai riferimenti a carattere.
+    \end{block}
+
+    \begin{block}{Internal General Entity: Sintassi}
+    \begin{center}\texttt{<!ENTITY amaiuscola ``\&\#65;''>}\end{center}
+    \begin{center}\texttt{<!ENTITY amaiuscola ``\&\#x0041;''>}\end{center}
+    \begin{center}\texttt{<p><salutation>\&amaiuscola;ddio<salutation></p>}\end{center}
+    \end{block}
+
+\end{frame}
+
+\begin{frame}
+    \frametitle{Elementi per la definizione degli schemi xml}
+    \framesubtitle{Principi Document Type Definition}
+    \addtocounter{nframe}{1}
+
+    \begin{block}{External General Entity}
+        An xml document may be developed from other xml document located in different places. Grazie alle entità generiche esterne, questa eventualità diviene possibile.
+    \end{block}
+
+    \begin{block}{External General Entity: Sintassi}
+    \begin{center}\texttt{<!ENTITY entity-name SYSTEM ``URL'' >}\end{center}
+    \begin{center}\texttt{<!ENTITY salutation SYSTEM ``salut.xml.ent'' >}\end{center}
+    \end{block}
+    \textit{The URL points to the location of the external entity}
+\end{frame}
+
+\begin{frame}
+    \frametitle{Elementi per la definizione degli schemi xml}
+    \framesubtitle{Principi Document Type Definition}
+    \addtocounter{nframe}{1}
+
+    \begin{block}{External General Entity}
+        External entities cannot contain a document type declaration as it will conflict with the main xml document type declaration. E' possibile utilizzare altre entità all'interno delle entità esterne. 
+    \end{block}
+
+    \begin{block}{General Entity}
+     though declared in the DTD, must be used in the document and not in the DTD itself. 
+    \end{block}
+\end{frame}
+
+\begin{frame}
+    \frametitle{Elementi per la definizione degli schemi xml}
+    \framesubtitle{Principi Document Type Definition}
+    \addtocounter{nframe}{1}
+
+    \begin{block}{Parameter Entity}
+        Sono entità impiegabili all'interno del documento DTD. Ma non possono essere utilizzate all'interno del documento XML.
+        \\ There are two types of parameter entity; the internal and the external parameter entities.
+    \end{block}
+
+    \begin{block}{Parameter Entity: Sintassi}
+        \begin{center}\texttt{<!ENTITY \% entity-name ``replacement-string''>}\end{center}
+        \begin{center}\texttt{<!ENTITY \% parameter-name SYSTEM ``URL'' >}\end{center}
+    \end{block}
+\end{frame}
+
+\begin{frame}
+    \frametitle{Elementi per la definizione degli schemi xml}
+    \framesubtitle{Principi Document Type Definition}
+    \addtocounter{nframe}{1}
+
+    \begin{block}{Parameter Entity: Impiego}
+    \begin{center}\texttt{<!ENTITY \% biblinfo ``(title,author?,cost?)''>}\end{center}
+    \begin{center}\texttt{<!ELEMENT biblInfo \%biblinfo;>}\end{center}
+    \end{block}
+
+    \begin{block}{Parameter Entity: Impiego}
+        \begin{center}\texttt{<!ENTITY \% biblInfo SYSTEM ``biblInfo.dtd'' >}\end{center}
+        \begin{center}\texttt{<!ELEMENT listBibl (bib+) >}\end{center}
+        \begin{center}\texttt{\%biblInfo;}\end{center}
+    \end{block}
+\end{frame}
 
 
-% The syntax of usage is as described below:
+\begin{frame}
+    \frametitle{Elementi per la definizione degli schemi xml}
+    \framesubtitle{Principi Document Type Definition}
+    \addtocounter{nframe}{1}
 
+    \begin{block}{Parameter Entity: utilità}
+     When a parameter entity is inserted in the dtd, the parameter entity is replaced with the replacement content at execution time.
+    \end{block}
 
-% <!ENTITY entity_name “replacement_string” or “hexadecimal_code” >
+    \begin{block}{Parameter Entity: utilità}
+        This would make the dtd easier to develop and later maintained, if there are
+        any changes to be made.
+    \end{block}
+\end{frame}
 
+\begin{frame}
+    \frametitle{Elementi per la definizione degli schemi xml}
+    \framesubtitle{Principi Document Type Definition}
+    \addtocounter{nframe}{1}
 
-% To use the entity name in the element content simply attach the ampersand to
-% the beginning of the entity name and append the semi colon to the end like
-% this; &entity_name;
+    \begin{block}{Parameter Entity: utilità}
+        External parameter entities enable the modularization and linking of document
+        type definitions.
+    \end{block}
 
-
-% may include well formed xml elements.
-
-
-% An xml document may be developed from other xml document located in
-% different places and from different applications. This is made possible through
-% the use of external general entities. Through which the external entities are
-% inserted into the main xml document. The syntax for an external general entity
-% is as described below: <!ENTITY entity_name SYSTEM “URL” > The URL
-% points to the location of the external entity to be drawn into the main
-% document.
-
-
-% <!ENTITY External_fruits SYSTEM "fruits.xml" >
-
-
-% Please note that an external entity cannot contain a document type declaration
-% as it will conflict with the main xml document type declaration, but you may
-% include a text declaration in an external parsed entity, if not the parser will
-% naturally assume a “UTF-8” encoding for the external entity. General entities
-% though declared in the DTD, must be used in the document and not in the
-% DTD itself. Also for now, Mozilla, Netscape, Safari and Opera do not resolve
-% entity references except the latest version of internet explorer.
-
-% General entities defined in the document type definition must appear in the xml
-% document content, becoming a part of the xml document. This is a limitation of
-% general entities as they cannot be exclusively used as parameters in the
-% document type definition.
-
-
-% This is however addressed by parameter entities. Parameter entity usage
-% syntax is as described below: <!ENTITY % entity_name “replacement_string”
-% >
-
-
-% In other words parameter entity references are part of the DTD but may not
-% appear in the document content.
-
-
-% More, a parameter entity reference is started with a percentage sign
-
-
-% (%) and not with the ampersand, and terminated with a semi colon like shown
-% below: %parameterEntityName;
-
-
-% There are two types of parameter entity; the internal and the external
-% parameter entities.
-
-
-% Internal parameter entities are used much in the same way that the general
-% entity references are used but they remain parts of the dtd and never appear
-% in the document’s content. An internal parameter entity reference is
-% represented as shown below: <!ENTITY % parameter_entity_name
-% “replacement_content” >
-
-% When a parameter entity is inserted in the dtd, the parameter entity is replaced
-% with the replacement content at execution time.
-
-
-% Internal parameter entities are declared in the dtd external subset
-
-
-% This would make the dtd easier to develop and later maintained, if there are
-% any changes to be made.
+    \begin{block}{Parameter Entity: utilità}
+        with external parameter entities you can embed modularized document type
+        definitions from different locations to form a single and more complete
+        document type definition.
+    \end{block}
+\end{frame}
 
 
 % A parameter entity that is only a part of a complete declaration like above
 % cannot appear in the internal definition subset of a dtd and must be placed in
 % the external definition subset and referred to.
 
-
-% Note that the parameter entity reference ”%Event_info;” was declared before it
-% was used, and that “sport_calendar.dtd” was referred to in the external dtd
+% Note that the parameter entity reference ”%Event-info;” was declared before it
+% was used, and that “sport-calendar.dtd” was referred to in the external dtd
 % subset as described in document 5.3 below:
 
+% Internal parameter entities are declared in the dtd external subset
 
-% External parameter entities enable the modularization and linking of document
-% type definitions.
-
-
-% with external parameter entities you can embed modularized document type
-% definitions from different locations to form a single and more complete
-% document type definition.
-
-% The syntax for an external parameter entity is as described below:
-
-
-% <!ENTITY % parameter_name SYSTEM “URL” > %parameter_name;
-
-
-% using an external parameter entity reference as shown
+% Internal parameter entities are used much in the same way that the general
+% entity references are used but they remain parts of the dtd and never appear
+% in the document’s content. An internal parameter entity reference is
+% represented as shown below: <!ENTITY % parameter-entity-name
+% “replacement-content” >
