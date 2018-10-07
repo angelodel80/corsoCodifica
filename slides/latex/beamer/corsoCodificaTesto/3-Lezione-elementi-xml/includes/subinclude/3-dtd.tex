@@ -132,7 +132,7 @@
     \begin{block}{Esercizio}
         \textit{Definire i seguenti elementi:}
         \begin{itemize}
-            \item elemento root: TEI
+            \item elemento root: \textbf{TEI}
             \item elementi figli:
             \begin{itemize}
                 \item header (obbligatorio una occorrenza)
@@ -140,7 +140,7 @@
                 \item text (obbligatorio almeno una occorrenza)
             \end{itemize}
         \end{itemize}
-        \textit{header, facsimile, text hanno un content model testuale}
+        \textit{Gli elementi header, facsimile e text hanno tutti un content model testuale}
     \end{block}
 \end{frame}
 
@@ -155,7 +155,8 @@
     \end{block}
 
     \begin{block}{Dichiarazione di Choice}
-        indicating a choice of just one, out of the list
+        La sintassi della DTD consente di dichiarare una scelta (\textit{choice}) tra due o più elementi come content model di un elemento. 
+        \\ \textit{Il choice indica una scelta tra una lista di possibilità}
     \end{block}
 
 \end{frame}
@@ -165,12 +166,12 @@
     \framesubtitle{Principi Document Type Definition}
     \addtocounter{nframe}{1}
 
-    \begin{block}{Attributi}
-    \begin{center} an attribute is declared with \texttt{<!ATTLIST >} element \end{center}
+    \begin{block}{Attributi degli elementi XML}
+    \begin{center} Un attributo è dichiarato sfruttando l'elemento \texttt{<!ATTLIST >} \end{center}
     \end{block}
 
-    \begin{block}{Attributi}
-        An attribute is the property of an element that describes the element’s content.
+    \begin{block}{Cos'è un attributo di un elemento XML}
+        Un attributo è una proprietà, una caratteristica di un elemento e descrive il contenuto dell'elemento stesso.
     \end{block}
 
 \end{frame}
@@ -180,16 +181,18 @@
     \framesubtitle{Principi Document Type Definition}
     \addtocounter{nframe}{1}
 
-    \begin{block}{Attributi}
+    \begin{block}{Attributi: sintassi}
     \begin{center} \texttt{<!ATTLIST Element-name Attr-name Attr-type Attr-state? default-value?>} \end{center}
     \end{block}
 
-    \begin{block}{Attributi}
-        ``Element-name'' is the name of the element
-        ``Attr-name'' is the attribute to be declared.
-        ``Attr-type'' specifies the expected attribute’s data type
-        The ``Attr-state'' denota una tra i tre stati possibili di un attributo 
-        ``default-value'' if provided is the value to be used if the attribute is not supplied
+    \begin{block}{Attributi: sintassi}
+        \begin{itemize}
+            \item ``Element-name'' è il nome dell'elemento a cui l'atteibuto si riferisce
+            \item ``Attr-name'' è il nome dell'attributo dichiarato
+            \item ``Attr-type'' è il tipo di dato atteso dell'attributo
+            \item ``Attr-state'' indica uno tra i tre stati possibili di un attributo 
+            \item ``default-value'' indica il valore di default per quell'attributo, se non fornito.
+        \end{itemize}
     \end{block}
 
 \end{frame}
@@ -199,11 +202,10 @@
     \framesubtitle{TABELLA dei tipi}
     \addtocounter{nframe}{1}
 
-    \begin{block}{Tipi di attributi}
-    
-    \end{block}
+    \begin{center}
+        \includegraphics[width=.8\textwidth]{imgs/xml-TipiAttributoXML.png}
+    \end{center}
 \end{frame}
-
 
 
 \begin{frame}
@@ -212,11 +214,43 @@
     \addtocounter{nframe}{1}
 
     \begin{block}{Stato di attributi}
-     The state can be any of \#IMPLIED (an optional attribute), \#REQUIRED (a compulsory attribute) or \#FIXED (a fixed value attribute that may not be changed) the value is provided as the default value. You cannot use the default-value with the \#REQUIRED state as you must supply a value for the attribute.
+        Lo stato di un attributo può essere uno tra:
+        \begin{itemize}
+            \item \#IMPLIED (attributo opzionale)
+            \item \#REQUIRED (attributo obbligatorio)
+            \item \#FIXED (valore fisso dell'attributo)
+        \end{itemize}
     \end{block}
+    \textit{Il valore di un attributo fisso viene fornito come valore di default}
 \end{frame}
 
-% slide con choice per gli attributi
+% slide con choice per gli attributi Enumerated Type
+
+\begin{frame}
+    \frametitle{Elementi per la definizione degli schemi xml}
+    \framesubtitle{}
+    \addtocounter{nframe}{1}
+
+    \begin{block}{Choice attributi}
+     \texttt{<!ATTLIST element attribute (value1 | value2 | value3 | ...) default >}
+    \\\texttt{<!ATTLIST name title (Mr. | Mrs. | Ms.) \#IMPLIED Mr.>}
+    \end{block}
+    \textit{Attenzione non è possibile avere un valore di default se un attributo è marcato \#REQUIRED}
+\end{frame}
+
+% slide con esempio ID IDREF e IDREFS
+\begin{frame}
+    \frametitle{Elementi per la definizione degli schemi xml}
+    \framesubtitle{}
+    \addtocounter{nframe}{1}
+
+    \begin{block}{Attributi ID IDREF IDREFS}
+     \texttt{<!ATTLIST element attribute  >}
+    \\\texttt{<!ATTLIST >}
+    \\\texttt{<!ATTLIST >}
+    \\\texttt{<!ATTLIST >}
+    \end{block}
+\end{frame}
 
 \begin{frame}
     \frametitle{Elementi per la definizione degli schemi xml}
@@ -241,14 +275,17 @@
 
     \begin{block}{Esercizio}
         root: TEI
-         figli: header(obbligatorio una volta sola) - facsimile(opzionale una volta sola) - testo(obbligatorio una o più volte)
-         - testo è un mixed content con possibile elemento \texttt{<seg>} attributi: 
-         - header: type:(fixed, CDATA ``intestazione''); lang(opzional, NMTOKEN)
-         - facsimile: source:(obbligatorio)
-         - testo: id(obbligatorio, contenuto id) type(opzionale contenuto testuale)
+         \\Figli: 
+         \\- header(obbligatorio una volta sola) 
+         \\- facsimile(opzionale una volta sola) 
+         \\- testo(obbligatorio una o più volte)
+         \\ * testo è un mixed content con possibile elemento \texttt{<seg>} 
+         \\Attributi: 
+         \\- header: type:(fixed, CDATA ``intestazione''); lang(opzionale, NMTOKEN)
+         \\- facsimile: source:(obbligatorio); ref(optionale, IDREFS)
+         \\- testo: id(obbligatorio, ID) type(opzionale contenuto testuale)
     \end{block}
 \end{frame}
-
 
 \begin{frame}
     \frametitle{Elementi per la definizione degli schemi xml}
@@ -256,16 +293,19 @@
     \addtocounter{nframe}{1}
 
     \begin{block}{Empty elements}
-    The only difference is that the child element name is substituted with the keyword “EMPTY”  
+        Un elemento XML può essere vuoto (empty).
+        \\ La dichiarazione di un elemento vuoto è simile alla dichiarazione di un elemento standard, ma con la parola chiave \textbf{EMPTY} come content model.
     \end{block}
 
     \begin{block}{Empy content}
     \begin{center}\texttt{<!ELEMENT element-name EMPTY>}\end{center}
     \end{block}
 
-
     \begin{block}{Empy content}
-    \begin{center}\texttt{<lb />}\end{center}
+        \begin{center}
+            \texttt{<!ELEMENT lb EMPTY>}
+            \texttt{<lb />}
+        \end{center}
     \end{block}
 
 \end{frame}
@@ -277,8 +317,8 @@
     \addtocounter{nframe}{1}
 
     \begin{block}{Any elements}
- The content specification ``ANY'' when used in a declaration implies that any element as well as texts can be the child or content of the declared element.
-
+        E' possibile dichiarare anche elementi che hanno qualsiasi tipo di content model.
+        \\ A tal proposito viene impiegata la parola chiave  ``ANY''.
     \end{block}
 
     \begin{block}{Any content}
@@ -287,20 +327,17 @@
     
 \end{frame}
 
-
 \begin{frame}
     \frametitle{Elementi per la definizione degli schemi xml}
     \framesubtitle{Principi Document Type Definition}
     \addtocounter{nframe}{1}
 
     \begin{block}{Dichiarare il tipo del documento XML}
-        The document type declaration is placed in the xml document prolog; between
-         the xml declaration and the root element.
-
+        La dichiarazione della DTD viene inserita attraverso una URL nel prologo del documento XML, tra la dichiarazione del documento XML e l'elemento radice.
     \end{block}
 
     \begin{block}{Dichiarare il tipo del documento XML}
-        re-usability reasons, and then link it to the xml document and any other xml document through its URL
+        Grazie al sistema di dichiarazione della DTD è possibile massimizzare il riuso e collegare lo schema a tutti i documenti che si vuole validare.
     \end{block}
 
 \end{frame}
@@ -317,6 +354,21 @@
         
     \end{block}
 
+\end{frame}
+
+% includere DTD pubbliche
+
+\begin{frame}
+    \frametitle{Elementi per la definizione degli schemi xml}
+    \framesubtitle{Principi Document Type Definition}
+    \addtocounter{nframe}{1}
+
+    \begin{block}{DOCTYPE PUBLIC}
+    \begin{center}\texttt{<!DOCTYPE root PUBLIC “id” “uri”>}\end{center}
+    \begin{center}\texttt{standard//owner//description//language}\end{center}
+    \begin{center}\texttt{-//W3C//DTD XHTML 1.0 Strict//EN}\end{center}
+        
+    \end{block}
 
 \end{frame}
 
@@ -335,6 +387,7 @@
     \textit{creare un file esterno con estensione .dtd prima di includerlo nel prologo XML.}
 
 \end{frame}
+
 
 \begin{frame}
     \frametitle{Elementi per la definizione degli schemi xml}
@@ -361,7 +414,7 @@
 
     \begin{block}{Entity}
     \begin{itemize}
-        \item  Le general entities si possono classificare in interne ed esterne; che a loro volta possono essere parsed oppure unparsed.
+        \item  Le general entities si possono classificare in interne ed esterne, a loro volta possono essere parsed oppure unparsed.
         \item Le parameter entities si possono classificare in interne ed esterne; che  possono essere solo parsed.
     \end{itemize}
     \end{block}
@@ -374,17 +427,8 @@
     \addtocounter{nframe}{1}
 
     \begin{block}{Entity}
-     Internal general entities help include special characters in an xml document,
-     that would otherwise make an xml document become malformed if included
-     literally.
+     Le entità generiche interne aiutano ad includere nel documento XML quei caratteri speciali che altrimenti causerebbero errori al passaggio del parser.
     \end{block}
-
-\end{frame}
-
-\begin{frame}
-    \frametitle{Elementi per la definizione degli schemi xml}
-    \framesubtitle{Principi Document Type Definition}
-    \addtocounter{nframe}{1}
 
     \begin{block}{Internal General Entity: Sintassi}
     \begin{center}\texttt{<!ENTITY entity-name ``replacement-string'' or ``hexadecimal-code'' >}\end{center}
@@ -392,20 +436,19 @@
 
 \end{frame}
 
+
 \begin{frame}
     \frametitle{Elementi per la definizione degli schemi xml}
     \framesubtitle{Principi Document Type Definition}
     \addtocounter{nframe}{1}
 
     \begin{block}{Internal General Entity: Sintassi}
-        To use the entity name in the element content simply attach the ampersand to
-        the beginning of the entity name and append the semi colon to the end like
-        this; \&entity-name;
-        \\ may include well formed xml elements.
+        Per usare le entità all'interno del documento XML basta prefissare al nome dell'entità una ``e commerciale'' \textbf{(\&)} e aggiungere alla fine come suffisso un ``punto e virgola'' \textbf{(;)}:  \texttt{\&entity-name;}.
+        \\ \textit{Una entità può contenere un frammento XML ben formato}
     \end{block}
 
     \begin{block}{Internal General Entity: Sintassi}
-    \begin{center}\texttt{<!ENTITY firma ``Angelo Mario Del Grosso''>}\end{center}
+    \begin{center}\texttt{<!ENTITY firma ``<i>Angelo Mario Del Grosso</i>''>}\end{center}
     \begin{center}\texttt{<p><salutation>\&firma;<salutation></p>}\end{center}
     \end{block}
 
@@ -434,14 +477,15 @@
     \addtocounter{nframe}{1}
 
     \begin{block}{External General Entity}
-        An xml document may be developed from other xml document located in different places. Grazie alle entità generiche esterne, questa eventualità diviene possibile.
+        Un documento XML può essere composto da altri pezzi di XML distribuiti in diversi luoghi. 
+        \\Grazie alle entità generiche esterne è stata implementata questa caratteristica.
     \end{block}
 
     \begin{block}{External General Entity: Sintassi}
     \begin{center}\texttt{<!ENTITY entity-name SYSTEM ``URL'' >}\end{center}
     \begin{center}\texttt{<!ENTITY salutation SYSTEM ``salut.xml.ent'' >}\end{center}
     \end{block}
-    \textit{The URL points to the location of the external entity}
+    \textit{L'URL punta al luogo dove risiede la external entity}
 \end{frame}
 
 \begin{frame}
@@ -450,11 +494,12 @@
     \addtocounter{nframe}{1}
 
     \begin{block}{External General Entity}
-        External entities cannot contain a document type declaration as it will conflict with the main xml document type declaration. E' possibile utilizzare altre entità all'interno delle entità esterne. 
+        Le entità esterne non possono contenere una DTD per ovvi motivi di gestione dei potenziali conflitti.
+        \\E' possibile utilizzare altre entità all'interno delle entità esterne. 
     \end{block}
 
     \begin{block}{General Entity}
-     though declared in the DTD, must be used in the document and not in the DTD itself. 
+     \textbf{Le entità generiche vengono dichiarate nella DTD, ma possono essere utilizzate solo all'interno di un documento XML e non nella DTD stessa.}
     \end{block}
 \end{frame}
 
@@ -464,8 +509,9 @@
     \addtocounter{nframe}{1}
 
     \begin{block}{Parameter Entity}
-        Sono entità impiegabili all'interno del documento DTD. Ma non possono essere utilizzate all'interno del documento XML.
-        \\ There are two types of parameter entity; the internal and the external parameter entities.
+        Le Parameter Entity sono entità sfruttabili all'interno del documento DTD. Ma non possono essere utilizzate all'interno del documento XML.
+        \\ Esestono due tipi di entità parametriche: 
+        \\1) \textbf{internal}  parameter entities 2) the \textbf{external} parameter entities.
     \end{block}
 
     \begin{block}{Parameter Entity: Sintassi}
@@ -498,12 +544,11 @@
     \addtocounter{nframe}{1}
 
     \begin{block}{Parameter Entity: utilità}
-     When a parameter entity is inserted in the dtd, the parameter entity is replaced with the replacement content at execution time.
+     Quando una entità parametrica viene inserita in una DTD, essa viene rimpiazzata dal suo contenuto a tempo di esecuzione.
     \end{block}
 
     \begin{block}{Parameter Entity: utilità}
-        This would make the dtd easier to develop and later maintained, if there are
-        any changes to be made.
+        Ciò permette di facilitare lo sviluppo della DTD e di ottimizzarne la manutenibilità.
     \end{block}
 \end{frame}
 
@@ -513,15 +558,48 @@
     \addtocounter{nframe}{1}
 
     \begin{block}{Parameter Entity: utilità}
-        External parameter entities enable the modularization and linking of document
-        type definitions.
+       Le entità parametriche esterne facilitano la modularità di grandi DTD e permettono un linking dinamico ai vari documenti di definizione.
     \end{block}
 
     \begin{block}{Parameter Entity: utilità}
-        with external parameter entities you can embed modularized document type
-        definitions from different locations to form a single and more complete
-        document type definition.
+        Grazie a questi tipi di entità è possibile includere pezzi di DTD residenti in posizioni remote e formare un completo e unico documento DTD a tempo di esecuzione.
     \end{block}
+\end{frame}
+
+
+\begin{frame}
+    \frametitle{Elementi per la definizione degli schemi xml}
+    \framesubtitle{Principi Document Type Definition}
+    \addtocounter{nframe}{1}
+
+    \begin{block}{DTD: Pros}
+        \begin{itemize}
+            \item sono compatte e facilmente comprensibili
+            \item sono definibili inline all'interno del documento XML
+            \item possono definire entità
+            \item sono utilizzate da quasi tutti i vocabolari esistenti
+            \item sono supportate da quasi tutti i parser esistenti
+        \end{itemize}
+    \end{block}
+
+\end{frame}
+
+\begin{frame}
+    \frametitle{Elementi per la definizione degli schemi xml}
+    \framesubtitle{Principi Document Type Definition}
+    \addtocounter{nframe}{1}
+
+    \begin{block}{DTD: Cons}
+        \begin{itemize}
+            \item non sono scritte con una sintassi XML
+            \item richiedono parser specifici
+            \item non supportano i namespaces
+            \item non hanno un vero meccanismo per i tipi di dati
+            \item la validazione del contenuto di un elemento è molto limitato e limitante
+            \item non ci sono meccanismi per indicare esattamente il numero di figli che può contenere un elemento.
+        \end{itemize}
+    \end{block}
+
 \end{frame}
 
 
