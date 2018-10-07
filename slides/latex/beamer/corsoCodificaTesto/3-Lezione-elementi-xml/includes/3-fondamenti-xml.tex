@@ -659,12 +659,13 @@
     \addtocounter{nframe}{1}
 
 	\begin{block}{XML Element: Esercizio}
- aprire il file XML non ben formato nella cartella xml del repository github e:
- - validarlo con XMLLINT
- - correggerlo (mettendo come commenti le correzioni fatte e brevente spiegarle)
- -- (nested, case sensitive)
- - aggiungere un figlio (child) all'elemento XYZ1
- - aggiungere un fratello (sibling) all'elemento XYZ2 
+		Aprire il file XML non ben formato presente nel repository github:
+		\begin{itemize}
+			\item validarlo con XMLlint
+			\item correggerlo (commentando gli errori e le modifiche)
+			\item aggiungere un figlio (child) ad un elemento
+			\item aggiungere un fratello (sibling) ad un elemento
+		\end{itemize}
 	\end{block}
 
 \end{frame}
@@ -676,12 +677,12 @@
     \addtocounter{nframe}{1}
 
 	\begin{block}{XML Attributi}
-		Every element in an XML document can contain one or more attributes.
-		\\An attribute describes a feature or characteristic of an element
+		Gli elementi in un documento XML puossono avere uno o più attributi.
+		\\ Un attributo descrive una caratteristica dell'elemento in cui appare.
 	\end{block}
 
 	\begin{block}{XML Attributi}
-		Attributes can only exist within an element. An attribute declaration really does not make sense without an element.
+		Un attributo ha senso solo all'interno del proprio elemento e non è possibile separarlo da esso in alcun modo.
 	\end{block}
 
 \end{frame}
@@ -692,11 +693,12 @@
     \framesubtitle{eXtensible Markup Language}
     \addtocounter{nframe}{1}
 
-	\begin{block}{XML Attributi}
-		Attribute values are text strings. Therefore, an attribute value always must be enclosed within either single or double quotes.
+	\begin{block}{XML Attributi: valore}
+		Un attributo ha due componenti: nome - valore.
+		Il valore di un attributo è una stringa e deve essere sempre racchiusa tra apici (singoli o doppi).
 	\end{block}
 
-	\begin{block}{XML Attributi}
+	\begin{block}{XML Attributi: valore}
 		\begin{center}
 			\texttt{<element attribute=``value''> ... </element>}
 			\texttt{<element attribute=``value'' />}
@@ -713,21 +715,20 @@
 
 	\begin{block}{XML Attributi: restrizioni ai nomi}
 		\begin{itemize}
-			\item An attribute name must begin with a letter or an underscore ( \_ ).
-			\item Spaces are not allowed in attribute names.
-			\item Like an element name, an attribute name should not begin with the text string xml.
+			\item Il nome di un attributo può iniziare con una lettera oppure underscore.
+			\item Gli spazi non sono consentiti in un nome di un attibuto.
+			\item Il nome di un attributo non pò iniziare con la stringa \textit{xml}.
 		\end{itemize}
 	\end{block}
 
 	\begin{block}{XML Attributi}
 		\begin{itemize}
-			\item attribute names are case sensitive
-			\item The order of attributes is not significant
+			\item Il nome degli attributi è \textit{case sensitive}.
+			\item L'ordine degli attributi non è significante.
 		\end{itemize}
 	\end{block}
 
 \end{frame}
-
 
 
 % Esercizio con gli attributi:
@@ -772,8 +773,8 @@
 
 	\begin{block}{XML References}
 		\begin{itemize}
-			\item \texttt{\&\#61;}
-			\item \texttt{\&amp;}
+			\item \texttt{\&\#61;} (\textit{carattere A})
+			\item \texttt{\&amp;} (\textit{carattere \&})
 		\end{itemize}
 	\end{block}
 
@@ -795,11 +796,10 @@
 
 	\begin{center}
 		mettere immagine xml-Character-Entity
-		\includegraphics[width=0.95\textwidth]{imgs/xml-TEI-PerseusExample.png}
+		\includegraphics[width=0.95\textwidth]{imgs/xml-Character-Entity.png}
 	\end{center}
 
 \end{frame}
-
 
 
 \begin{frame}
@@ -808,7 +808,8 @@
     \addtocounter{nframe}{1}
 
 	\begin{block}{Text Character Parsing}
-		text characters fall into three categories: parsed character data, character data, and white space.
+		Il contenuto testuale di un elemento XML può essere diviso in tre categorie:
+		parsed character data, character data, and white space.
 	\end{block}
 
 	\begin{block}{Text Character Parsing}
@@ -822,15 +823,13 @@
 \end{frame}
 
 
-
-
 \begin{frame}
     \frametitle{Fondamenti XML}
     \framesubtitle{eXtensible Markup Language}
     \addtocounter{nframe}{1}
 
 	\begin{block}{Parsed Character Data}
-		Parsed character data (PCDATA) consists of all those characters that XML treats as parts of the code of an XML document.
+		Parsed character data (PCDATA) si riferisce a tutti quei caratteri che XML tratta come parte del codice e quindi vengono interpretati dai parser.
 	\end{block}
 
 	\begin{block}{PCDATA}
@@ -854,11 +853,11 @@
     \addtocounter{nframe}{1}
 
 	\begin{block}{Parsed Character Data}
-		The presence of PCDATA can cause unexpected errors to occur within a document
+		La presenza di contenuti di tipo PCDATA può causare errori inaspettati.
 	\end{block}
 
 	\begin{block}{XML PCDATA}
-		%symbols such as \&, <, or >, which are all used in ­creating markup tags or entity references, are extracted
+		Caratteri speciali che sono utilizzati dalla specifica XML come \&, <, > non possono essere utilizzati come contenuto testuale.
 	\end{block}
 
 \end{frame}
@@ -872,16 +871,17 @@
     \addtocounter{nframe}{1}
 
 	\begin{block}{Character Data}
-		Character data is not processed, but instead is treated as pure data content.
-		\\A CDATA section is a block of text that XML treats as character data only
+		I dati di tipo ``Character Data'' non vengono interpretati dal parser XML.
+		\\ La sequenza di caratteri viene trattata come puro contenuto.
+		\\In definitiva una sezione \textit{CDATA} è un blocco di testo.
 	\end{block}
 
 	\begin{block}{XML CDATA: sintassi}
 		\begin{center}
 			\texttt{
 				 <![CDATA [
-					 character data
-					 ]]>
+					 \\character data
+					 \\]]>
 			}
 		\end{center}
 	\end{block}
@@ -889,16 +889,7 @@
 \end{frame}
 
 
-
-
-
 %A CDATA section
-% • may be placed anywhere within a document.
-% • 
-% • 
-
-% The only sequence of symbols that may not occur within a CDATA section is ]]
-% because this is the marker ending a CDATA section.
 
 \begin{frame}
     \frametitle{Fondamenti XML}
@@ -906,17 +897,16 @@
     \addtocounter{nframe}{1}
 
 	\begin{block}{Character Data}
-		You can use CDATA blocks when you want to include large blocks of special
-		characters as character data
+		Le sezioni di testo CDATA possono essere inserite in qualsiasi parte del documento XML.
+		\\ Utile per inserire una sezione di testo com molti caratteri speciali.
 	\end{block}
 
 	\begin{block}{CDATA: qualche vincolo}
 		\begin{itemize}
-			\item You cannot use XML comments in a CDATA section.
-			\item You cannot nest a CDATA section inside another CDATA section
-			\item (cannot be nested within other CDATA sections).
-			\item cannot be empty.
-			\item i simboli ``]]'' non sono ammess because this is the marker ending a CDATA section.
+			\item Non è possibile inserire commenti in una sezione CDATA.
+			\item Non è possibile annidare sezioni CDATA. 
+			\item Non possono essere vuote.
+			\item i simboli ``]]'' non sono ammessi.
 		\end{itemize}
 	\end{block}
 
@@ -927,7 +917,7 @@
     \framesubtitle{eXtensible Markup Language}
     \addtocounter{nframe}{1}
 
-	\begin{block}{Esempio ed esercizio:}
+	\begin{block}{Esempio ed esercizio}
 		Inserire all'interno di un tag un frammento di codice HTML
 	\end{block}
 
@@ -960,52 +950,91 @@
 
 	\begin{block}{White Space: esempio}
 		\begin{itemize}
-			\item White% space is ignored when it is the only character data between element tags
-			\item White% space is ignored within a document prolog and epilog, and within any element tags
-			\item White% space within an attribute value is treated as part of the attribute value
-			\item no% white space ­stripping occurs for element content, which means that the content of the XML element
+			\item Gli spazi bianchi sono ignorati quando sono tra i tag.
+			%White space is ignored when it is the only character data between element tags
+			\item Gli spazi bianchi sono ignorati all'interno del prologo e dell'epilogo e all'interno dei tag. 
+			%White% space is ignored within a document prolog and epilog, and within any element tags
+			\item Gli spazi bianchi inseriti nel valore di un attributo sono trattati come parte del contenuto.
+			%White space within an attribute value is treated as part of the attribute value
+			\item Non vengono strippati gli spazi all'interno del contentuto testuale degli elementi.
+			%no white space ­stripping occurs for element content, which means that the content of the XML element
 		\end{itemize}
 	\end{block}
 
 \end{frame}
 
-
-
-
-
-
 % Inserting a Processing Instruction
-% A processing instruction is a command that tells an XML parser how to process the
-% document.
-% <?target instruction ?>
 
-% where target identifies the program (or object) to which the processing instruction is
-% directed and instruction is information that the document passes on to the parser for
-% processing.
+\begin{frame}
+    \frametitle{Fondamenti XML}
+    \framesubtitle{eXtensible Markup Language}
+    \addtocounter{nframe}{1}
 
-% Usually the instruction takes the form of attributes and attribute values
+	\begin{block}{Processing Instruction}
+		Una \textit{processing instruction} è un comando, una direttiva, che indica al parser XML in che modo elaborare e trattare tutto o parte del documento XML.
+	\end{block}
 
-% Esempio:
-% <?xml-stylesheet type=”text/css” href=”main.css” media=”all” ?>
-% Multiple processing instructions can exist within the same XML document for different
+	\begin{block}{Processing Instruction: sintassi}
+		\begin{center}
+			\texttt{<?target instruction ?>}
+			\texttt{<?xml-stylesheet type=”text/css” href=”main.css” media=”all” ?>}
+		\end{center}
+	\end{block}
+\textit{Molteplici processing instruction possono co-esistere all'interno di un unico documento XML.}
+	% Multiple processing instructions can exist within the same XML document for different
 % media types
 
+\end{frame}
 
 
 
+\begin{frame}
+    \frametitle{Fondamenti XML}
+    \framesubtitle{eXtensible Markup Language}
+    \addtocounter{nframe}{1}
+
+	\begin{block}{Processing Instruction: sintassi}
+		\begin{center}
+			\texttt{<?target instruction ?>}
+			\\\texttt{<?xml-stylesheet type=”text/css” href=”main.css” media=”all” ?>}
+		\end{center}
+	\end{block}
+
+
+	\begin{block}{Processing Instruction}
+		 \textit{target}: identifica il tool al quale la processing instruction è diretta.
+		 \\\textit{instruction}: identifica le informazioni che il documento passa al parser per essere elaborate. Le istuzioni hanno la forma degli attributi (nome-valore).
+	\end{block}
+
+\end{frame}
 
 % Working with Namespaces
-% A namespace is a defined collection of element and attribute names.
-% An XML vocabulary could define a single namespace.
 
 % involves two steps:
 % 1. Declare the namespace.
 % 2. Identify the elements and attributes within the document that belong to that
 % namespace.
 
-% Add an attribute
-% within the opening tag for the element using the syntax
-% <element xmlns:prefix=”uri”> ... </element>
+
+\begin{frame}
+    \frametitle{Fondamenti XML}
+    \framesubtitle{eXtensible Markup Language}
+    \addtocounter{nframe}{1}
+
+	\begin{block}{Namespaces}
+		Un namespace può essere visto come una collezione di elementi e attributi e un insieme di regole che ne determinano la struttura e il contenuto.
+	\end{block}
+
+	\begin{block}{Namespaces}
+		\begin{center}
+			\texttt{<element xmlns:prefix=”uri”> ... </element>}
+			\\\texttt{<<element xmlns=”uri”> ... </element>}
+			\\\texttt{<tei:TEI xmlns:tei=``http://www.tei-c.org/ns/1.0''>}
+			\\\texttt{<TEI xmlns=``http://www.tei-c.org/ns/1.0''>}
+		\end{center}
+	\end{block}
+
+\end{frame}
 
 % (URI)—a text string that uniquely identifies a resource.
 % The purpose of a URI is simply to provide a
@@ -1017,10 +1046,6 @@
 % documentation at the site identified by a URI so users can go there to learn more
 % about the XML vocabulary being referenced.
 
-% Esempio TEI ns.
-
-% In addition, a namespace that has been declared within an element can
-% be applied to any descendant of the element.
 
 % The number of namespace attributes that can be declared within an element is
 % unlimited.
@@ -1033,10 +1058,22 @@
 % different namespace is declared within one of the child elements.
 
 
-% <element xmlns=”uri”> ... </element>
+\begin{frame}
+    \frametitle{Fondamenti XML}
+    \framesubtitle{eXtensible Markup Language}
+    \addtocounter{nframe}{1}
 
-% Esempio TEI
+	\begin{block}{Namespaces}
+		Un namespace viene ereditato da tutti gli elementi discendenti dell'elemento in cui esso è stato dichiarato.
+	\end{block}
 
+	\begin{block}{Namespaces}
+		Generalmente si dichiarano tutti i namespace nell'elemento root così da avere a disposizione tutti gli elementi dei vari namespace in tutto il documento XML
+	\end{block}
+
+\end{frame}
+
+% esempio di dichiarazione di vari namespace in un documento XML
 
 % Declaring a Namespace
 % • To declare a namespace for an element within an XML document, add the
@@ -1048,7 +1085,7 @@
 % as follows:
 % <element xmlns=”uri”> ... </element>
 
-
+% immagini di riepilogo
 
 
 

@@ -6,7 +6,7 @@
     \addtocounter{nframe}{1}
 
     \begin{block}{Esempio DTD}
-        \includegraphics[width=.5\textwidth]{imgs/dtd_1.pdf}
+        \includegraphics[width=.8\textwidth]{imgs/dtd.png}
     \end{block}
 \end{frame}
 
@@ -16,34 +16,24 @@
     \addtocounter{nframe}{1}
 
     \begin{block}{Document Type Definition (DTD)}
-        A document type definition describes the rule for an xml document structure, declaring the elements, attributes and entities that are part of the xml document
+        Una document type definition (DTD) descrive le regole relative alla struttura di un documento XML.
+    \end{block}
+
+    \begin{block}{Document Type Definition (DTD)}
+        Una DTD dichiara gli elementi, gli attributi, le entità e le notazioni ammessi in un documento XML.
     \end{block}
 
 \end{frame}
+
 
 \begin{frame}
     \frametitle{Elementi per la definizione degli schemi xml}
     \framesubtitle{Principi Document Type Definition}
     \addtocounter{nframe}{1}
-
-    \begin{block}{Document Type Definition (DTD)}
-         For an xml document to be valid, it must be well formed and also satisfies the document type definitions specified by the document type declaration.
-    \end{block}
-\end{frame}
-
-\begin{frame}
-    \frametitle{Elementi per la definizione degli schemi xml}
-    \framesubtitle{Principi Document Type Definition}
-    \addtocounter{nframe}{1}
-
-    \begin{block}{Document Type Definition (DTD)}
-         For an xml document to be valid, it must be well formed and also satisfies the document type definitions specified by the document type declaration.
-    \end{block}
 
     \begin{block}{well-formed document != valid document}
-          any document that lacks a document type declaration may be well formed but cannot be valid.
+         Se un documento XML manca di riferirsi ad una DTD oppure non rispetta le regole di una DTD, esso può essere tutt'al più ben formato, ma sicuramente non può essere valido.
     \end{block}
-   
 \end{frame}
 
 \begin{frame}
@@ -52,14 +42,10 @@
     \addtocounter{nframe}{1}
 
     \begin{block}{Document Type Definition (DTD)}
-          Document validation also aids file sharing since different applications that are
-aware of the generally agreed upon document type definition can produce xml
-document of similar structure and therefore easily communicate with each
-other through data exchange.
+        La validazione dei documenti XML è alla base della condivisione e scambio dati in quanto è possibile confidare sulla natura dei dati trasmessi.
     \end{block}
-   
+   \textit{Attenzione: non possiamo validare la correttezza della semantica dei dati!}
 \end{frame}
-
 
 \begin{frame}
     \frametitle{Elementi per la definizione degli schemi xml}
@@ -67,11 +53,11 @@ other through data exchange.
     \addtocounter{nframe}{1}
 
     \begin{block}{Document Type Definition (DTD)}
-         included in the document’ prolog
+         L'associazione tra documento XML e DTD viene realizzata tramite una dichiarazione inclusa nel prologo all'inizio del documento.
     \end{block}
 
     \begin{block}{Root element and content}
-        declare the root element and its content model (children elements)
+        La DTD dichiara l'elemento radice del vocabolario e il suo \textit{content model} (children elements).
     \end{block}
    
 \end{frame}
@@ -88,7 +74,7 @@ other through data exchange.
     \begin{block}{Element Declaration (solo testo)}
     \begin{center}\texttt{<!ELEMENT element-name (\#PCDATA)>}\end{center}
     \end{block}
-    \textit{Parsed character contents are plain texts with no child elements}
+    \textit{Il Parsed Character Content designa contenuto testuale piano senza figli}
 \end{frame}
 
 \begin{frame}
@@ -97,14 +83,13 @@ other through data exchange.
     \addtocounter{nframe}{1}
 
     \begin{block}{Child Element Declaration}
-        A child element declaration is done in the same way as the root element declaration using the \texttt{<!ELEMENT >} tag
+        La dichiarazione di un elemento figlio, è analoga in tutto e per tutto alla dichiarazione dell'elemento radice. Cioè utilizzando l'etichetta \texttt{<!ELEMENT >}
     \end{block}
 
     \begin{block}{Element Declaration (root)}
-     root element declaration must always come first.
+     \textbf{La dichiarazione dell'elemento radice deve sempre essere la prima}
     \end{block}
 \end{frame}
-
 
 \begin{frame}
     \frametitle{Elementi per la definizione degli schemi xml}
@@ -112,14 +97,13 @@ other through data exchange.
     \addtocounter{nframe}{1}
 
     \begin{block}{Modificatori}
-        Optional modifiers can also be used in element declarations to specify the
-        number of times a child element may appear.
+        Nella dichiarazione di un elemento possono essere inclusi opzionalmente dei modificatori, per stabilire il numero di occorrenze degli elementi figli.
     \end{block}
 
     \begin{block}{Modificatori}
-     + One or more occurrences\\ 
-     ? Zero or one occurrence\\
-     * Zero or more occurrences
+     + Una o più occorrenze\\ 
+     ? Zero o una occorrenza\\
+     * Zero o più occorrenze
     \end{block}
 \end{frame}
 
@@ -135,9 +119,9 @@ other through data exchange.
         \begin{center} \texttt{<!ELEMENT element-name (B+, C+) >} \end{center}
     \end{block}
 
-    \begin{block}{Modificatori}
-     If a child element must appear once then leave out the modifier.
-    \end{block}
+     \textit{Se un elemento figlio deve presentarsi solo una volta, allora non c'è bisogno di modificatori}.
+     \\\textit{Attenzione l'ordine dei figli nella dichiarazione è rilevante}
+    
 \end{frame}
 
 \begin{frame}
@@ -146,11 +130,18 @@ other through data exchange.
     \addtocounter{nframe}{1}
 
     \begin{block}{Esercizio}
-        - root: TEI
-        - figli: header (obbligatorio una occorrenza); facsimile (opzionale una occorrenza); text (obbligatorio almeno una occorrenza)
-        - header, facsimile, text hanno un content model testuale
+        \textit{Definire i seguenti elementi:}
+        \begin{itemize}
+            \item elemento root: TEI
+            \item elementi figli:
+            \begin{itemize}
+                \item header (obbligatorio una occorrenza)
+                \item facsimile (opzionale una occorrenza)
+                \item text (obbligatorio almeno una occorrenza)
+            \end{itemize}
+        \end{itemize}
+        \textit{header, facsimile, text hanno un content model testuale}
     \end{block}
-
 \end{frame}
 
 
