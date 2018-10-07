@@ -1,9 +1,10 @@
 %slide relative ad introdurre gli elementi di XML Schema Definition (XSD) 
 
 % Description and validation of the XML elements and attributes are written in XSD using element declarations and attribute declarations.
+
 %  XSD is a grammar language
-% building blocks of an XSD Schema at the most granular level are elements and attributes
-% bigger blocks are built using basic components: elements and attributes.
+
+
 % declaring elements and attributes, adding child elements, defining occurrence and order of child elements
 % XSD data types and see how to perform basic data validation using XSD.
 
@@ -27,14 +28,8 @@
 %   </xsd:element>
 % </xsd:schema>
 
-%% Element Types
-% An element may have a simple type or complex type based on its structure/content.
-% It has a simple type if it does not have any child element or attribute 
-% If it has an attribute or contains other child elements, it has a complex type.
-
-
 %% Simple Types
-Elements that do not have child elements or attributes are simple type elements.
+%%Elements that do not have child elements or attributes are simple type elements.
 
 %% Complex Type
 
@@ -42,16 +37,17 @@ Elements that do not have child elements or attributes are simple type elements.
 %frame 01
 \begin{frame}
     \frametitle{Elementi per la definizione degli schemi xml}
-    \framesubtitle{principi}
+    \framesubtitle{principi XML Schema Definition}
     \addtocounter{nframe}{1}
 
     \begin{block}{Cos'è uno schema XML}
-     
-    Uno schema XSD è un document XML standard.
-
-    An XML Schema is a document which describes another XML document. 
-    \\ XML Schemas are used to validate XML documents. 
-    \\ An XML schema itself is an XML document which contains the rules to be validated against a given XML instance document
+        Uno schema XML è un documento XML standard che descrive come deve essere realizzato un altro documento XML.
+        \\ Ci riferiamo a questa tecnologia con l'acronimo XSD.
+    \end{block}
+    
+    \begin{block}{A cosa serve uno Schema XML}
+    \\ I documenti XSD sono usati per validare documenti XML. 
+    \\ Tuttavia un documento XSD viene realizzato tramite l'uso di un vocabolario predefinito riferibile attraverso un namespave ad un URI standard.
     \end{block}
 
 \end{frame}
@@ -62,17 +58,12 @@ Elements that do not have child elements or attributes are simple type elements.
     \framesubtitle{principi XSD}
     \addtocounter{nframe}{1}
 
-    \begin{block}{XSD esempio}
-        Grazie agli schemi XSD è possibile definire tutte gli elementi e le regole per la corretta strutturazione e la validazione di un documento XML.
-    \end{block}
-
     \begin{block}{XSD Schema}
-        Il termine XSD o XML schema si riferisce ad un documento XML che descrive e valida la struttura e il contenuto di un altro documento XML.
-        (dichiarazione del documento (declaration) e istanza del documento (instance))
+        Il termine XSD o XML Schema denota un documento XML che descrive e valida la struttura e il contenuto di un altro documento XML.
+        \textbf{Dichiarazione del documento (declaration) e istanza del documento (instance).}
     \end{block}
     
 \end{frame}
-
 
 %frame 03
 \begin{frame}
@@ -80,12 +71,63 @@ Elements that do not have child elements or attributes are simple type elements.
     \framesubtitle{principi XSD}
     \addtocounter{nframe}{1}
 
-    \begin{block}{XSD esempio}
-         The root element of an XML schema should always be the ``<schema>'' element. All definitions should appear under the root element ``<schema>''.
+    \begin{block}{XSD elemento root}
+        L'elemento radice di uno schema XSD è sempre l'elemento ``\texttt{<schema>}''. 
+        \\ Tutte le definizione devono seguire quindi l'elemento ``\texttt{<schema>}''.
     \end{block}
 
     \begin{block}{XSD Schema}
-        All elements and attributes of XML Schema are declared in the namespace ``http://www.w3.org/2001/XMLSchema.'' Hence, every XML schema document should contain the above namespace declaration.
+        Tutti gli elementi e gli attributi dello schema sono dichiarati all'interno del namespace ``\texttt{http://www.w3.org/2001/XMLSchema.}''. 
+        \\ Tutti i documenti XSD contengono la dichiarazione a questo namespace con prefisso convenzionale \textbf{xsd} oppoure \textbf{xs}.
+    \end{block}
+    
+\end{frame}
+
+\begin{frame}
+    \frametitle{Elementi per la definizione degli schemi xml}
+    \framesubtitle{principi XSD}
+    \addtocounter{nframe}{1}
+
+    \begin{block}{XSD componenti di base}
+       I componenti di base di uno Schema XSD sono le dichiarazioni degli elementi e le dichiarazioni degli attributi.
+    \end{block}
+
+    \begin{block}{XSD Schema}
+        \textbf{Le dichiarazioni più complesse si poggiano su queste unità: elementi e attributi.}    
+    \end{block}
+    
+\end{frame}
+
+\begin{frame}
+    \frametitle{Elementi per la definizione degli schemi xml}
+    \framesubtitle{principi XSD}
+    \addtocounter{nframe}{1}
+
+    \begin{block}{XSD dichiarazioni}
+       Scrivere un pezzo di codice XSD per descrivere e validare un elemento per un documento XML è detto \textit{element declaration}.
+    \end{block}
+
+    \begin{block}{XSD dichiarazioni di base}
+        XSD permette di dichiarare elementi, attributi e di spcificare il numero di figli, le occorrenze, l'ordine di apparizione, e i tipi di dati del content model.
+    \end{block}
+    
+\end{frame}
+
+
+\begin{frame}
+    \frametitle{Elementi per la definizione degli schemi xml}
+    \framesubtitle{principi XSD}
+    \addtocounter{nframe}{1}
+
+    \begin{block}{Element Types: simple and complex}
+        La dichiarazione di un elemento può avere un tipo semplice (simple type) oppure un tipo complesso (comples type) a seconda della sua struttura e del suo contenuto.
+
+
+    \end{block}
+
+    \begin{block}{Simple Type e Complex Type}
+        La dichiarazione di un elemento ha un tipo semplice se non possiede \textbf{né figli né attributi}.
+        \\ La dichiarazione di un elemento ha un tipo complesso in tutti gli altri casi.
     \end{block}
     
 \end{frame}
@@ -97,54 +139,83 @@ Elements that do not have child elements or attributes are simple type elements.
     \framesubtitle{principi XSD}
     \addtocounter{nframe}{1}
 
-    \defverbatim{\xsdfirst}{%
-    \begin{tiny}
-    \begin{verbatim}
-        <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema">
-            <xsd:element name="text"/>
-        </xsd:schema>
-    \end{verbatim}
-    \end{tiny}
-    }
+    %\defverbatim{\xsdfirst}{%
+    %\begin{tiny}
+    %\begin{verbatim}
+    %    <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+    %        <xsd:element name="text"/>
+    %    </xsd:schema>
+    %\end{verbatim}
+%    \end{tiny}
+ %   }
 
-    \defverbatim{\xmlfirst}{%
-    \begin{tiny}
-    \begin{verbatim}
-             <text>Il primo documento XML Validato</text>
-    \end{verbatim}
-    \end{tiny}
-    }
+  %  \defverbatim{\xmlfirst}{%
+   % \begin{tiny}
+    %\begin{verbatim}
+    %         <text>Il primo documento XML Validato</text>
+   % \end{verbatim}
+   % \end{tiny}
+   % }
 
 
     \begin{block}{XSD esempio}
-        {\xsdfirst}
+       % {\xsdfirst}
+\texttt{<xsd:schema xmlns:xsd=``http://www.w3.org/2001/XMLSchema''>
+            <xsd:element name=``text''/>
+        </xsd:schema>}
     \end{block}
+
+    \begin{block}{XSD esempio}
+        % {\xsdfirst}
+ \texttt{<text>Il primo documento XML Validato</text>}
+     \end{block}
 
     \begin{block}{XML XSD esempio}
         
-        The XML Instance Document of this schema should contain a root element named text. Here is a valid XML instance document which successfully validates against this schema.
-        {\xmlfirst}
+        Il documento XML istanza dello schema XSD per essere valido deve contenere un elemento radice.
+        Validare il documento XML con il relativo XSD con XMLlint:
+        \texttt{xmllint xmlfirst.xml --schema ../schema/xsd/xsdfirst.xsd}
+       % {\xmlfirst}
 
     \end{block}
     
 \end{frame}
 
+\begin{frame}
+    \frametitle{Elementi per la definizione degli schemi xml}
+    \framesubtitle{principi XSD}
+    \addtocounter{nframe}{1}
+
+    \begin{block}{Element Complex Types: esempio}
+         
+        %If an element contains child elements or attributes, it has a complex type.
+        \texttt{
+            <xsd:schema xmlns:xsd=``http://www.w3.org/2001/XMLSchema''>
+            <xsd:element name=``Employee''>
+                <xsd:complexType>
+                    <xsd:attribute name=``FirstName''/>
+                </xsd:complexType>
+            </xsd:element>
+            </xsd:schema>
+        }
+    \end{block}
+
+    \begin{block}{Element Complex Types: esempio}
+         Il documento XML istanza dello schema: 
+         \\\texttt{<Employee FirstName="Jacob"/>}
+    \end{block}
+    
+\end{frame}
 
 % frame 05 perform validation
 %   xmllint xmlfirst.xml --schema ../schema/xsd/xsdfirst.xsd
 
-% If an element contains child elements or attributes, it has a complex type.
-% esempio:
-% <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema">
-%   <xsd:element name="Employee">
-%     <xsd:complexType>
-%        <xsd:attribute name="FirstName"/>
-%     </xsd:complexType>
-%   </xsd:element>
-% </xsd:schema>
 
-% Il documento XML istanza dello schema: 
-% <Employee FirstName="Jacob"/>
+
+
+
+
+
 
 % A complex type can have attributes, child elements or both. Here is another example that shows a complex type having child elements.
 
