@@ -187,7 +187,7 @@
 		Al fine di soddisfare i requisiti degli studiosi del testo il vocabolario TEI-XML è stato sviluppato nel corso degli ultimi decenni con lo scopo e l'obiettivo di permettere la codifica di qualsiasi informazione testuale.
 	\end{block}
 	
-	\textit{Un vocabolario XML è un insieme di tag XML implementato per una particolare esigenza di codifica}
+	\textit{Un vocabolario XML è un insieme di tag XML sviluppato per una particolare esigenza di codifica}
 
 \end{frame}
 
@@ -352,6 +352,7 @@
 	\framesubtitle{eXtensible Markup Language}
 	\addtocounter{nframe}{1}
 
+	%correggere l'immagine.
 	\begin{center}
 		\includegraphics[width=0.95\textwidth]{imgs/XML-Prologo.png}
 	\end{center}
@@ -370,14 +371,17 @@
 	\begin{block}{Esercizio prologo}
 		\texttt{
 		 <!--
-		 \\This document contains data on Codifica di Testi.
-		 \\Filename: project.xml
-		 \\Author: your name
-		 \\Date: today's date
-		 \\-->
+		 	\\This document contains data on Codifica di Testi.
+		 	\\Filename: project.xml
+		 	\\Author: your name
+		 	\\Date: today's date
+		\\-->
 		}
 	\end{block}
-	\textit{Salvare il file su github nel repository del progetto}
+
+	\begin{tiny}
+		\textit{Salvare il file su github nel repository del progetto}
+	\end{tiny}
 
 \end{frame}
 
@@ -391,7 +395,7 @@
 	\end{block}
 	\begin{block}{Cosa fa un XML parser}
 		\begin{itemize}
-			\item Verifica che il documento rispetti le rigole della sintassi XML
+			\item Verifica che il documento rispetti la  XML
 			\item Interpreta i dati con tipo PCDATA 
 			\item Risolve character or entity references
 			\item Gestisce le processing instructions per interpretare i dati
@@ -420,15 +424,18 @@
     \addtocounter{nframe}{1}
 
 	\begin{block}{XML body}
-		Un documento XML è composto essenzialmente da elementi e attributi. 
+		Un documento XML è composto da elementi e attributi. 
 	   \\ Gli elementi sono la base, le unità fondamentali di qualsiasi documento XML.
     \end{block}
 
     \begin{block}{Elementi: Sintassi}
     \begin{center}\texttt{<element>content</element>}\end{center}
     \begin{center}\texttt{opening tag: <element>;\\ closing tag: </element>}\end{center}
-    \end{block}
-	\textit{Un elemento può contenere testo e/o ulteriori elementi}
+	\end{block}
+	\begin{tiny}
+		\textit{Un elemento può contenere testo e/o ulteriori elementi}
+	\end{tiny}
+	
 \end{frame}
 
 \begin{frame}
@@ -455,11 +462,11 @@
 	\begin{block}{XML Element: note importanti sul nome}
 		\begin{itemize}
 			\item Gli elementi sono case sensitive.
-			\item Gli elementi possono iniziare con una lettere o con un undersore.
+			\item Gli elementi possono iniziare con una lettera o con un ``\_''.
 			\item Un elemento non può iniziare con la stringa \textit{xml}. 
-			\item Il tag di apertura deve essere consistente con il relativo tag di chiusura.
-			\item Un tag può essere usato più di una volta (anche a diversi livelli gerarchici).
-			\item Un insieme di elementi formano un vocabolario (es.: vabolario TEI-XML)
+			\item Il tag di apertura e di chiusura devono avere lo stesso nome.
+			\item Un tag può essere usato più di una volta.
+			\item Un insieme di elementi costituiscono un vocabolario
 		\end{itemize}
 	\end{block}
 \end{frame}
@@ -547,7 +554,7 @@
 	\frametitle{Fondamenti XML}
 	\framesubtitle{eXtensible Markup Language}
 	\addtocounter{nframe}{1}
-
+	% aggiustare immagine
 	\begin{center}
 		\includegraphics[width=0.95\textwidth]{imgs/XML-Parent-Child-Sibling.png}
 	\end{center}
@@ -564,7 +571,19 @@
 			\item Tutti gli elementi nel body del documento sono figli di uno stesso elemento, chiamato radice (\textit{root}).
 			\item Un documento XML deve contenere un elemento root per essere considerato ben formato.
 			\item Una gerarchia XML può essere rappresentata tramite un diagramma ad albero.
-			\item Il prologo e i commenti non fanno parte dell'albero del doby.
+		\end{itemize}
+	\end{block}
+
+\end{frame}
+
+\begin{frame}
+    \frametitle{Fondamenti XML}
+    \framesubtitle{eXtensible Markup Language}
+    \addtocounter{nframe}{1}
+
+	\begin{block}{XML Element: hierarchical relationship cont.}
+		\begin{itemize}
+			\item Il prologo e i commenti non fanno parte dell'albero del body.
 			\item Elementi non annidati correttamente implicano un errore di sintassi nei parser.
 			\item Le specifiche XML non consentono di sovrapporre i tag di apertura e di chiusura degli elementi annidati (\textit{no overlap}).
 		\end{itemize}
@@ -596,7 +615,7 @@
     \addtocounter{nframe}{1}
 
 	\begin{block}{XML Element: hierarchical relationship as tree structure}
-		Un modo rapido e comodo per visualizzare la struttura completa di un documento XML è di disegnare attraverso un diagramma ad albero gli elementi del documento XML.
+		Un modo rapido e comodo per visualizzare la struttura completa di un documento XML è quello di disegnare attraverso un diagramma ad albero gli elementi del documento XML.
 	\end{block}
 
 \end{frame}
@@ -613,7 +632,7 @@
 	\addtocounter{nframe}{1}
 
 	\begin{center}
-		mettere immagine xml-parent-child-quantifier
+		%aggiornare immagine
 
 		\includegraphics[width=0.95\textwidth]{imgs/xml-parent-child-quantifier.png}
 	\end{center}
@@ -626,8 +645,7 @@
 	\addtocounter{nframe}{1}
 
 	\begin{center}
-		mettere immagine xml-parent-child-quantifier2
-
+		% aggiornare immagine
 		\includegraphics[width=0.95\textwidth]{imgs/xml-parent-child-quantifier2.png}
 	\end{center}
 
@@ -795,7 +813,8 @@
 	\addtocounter{nframe}{1}
 
 	\begin{center}
-		mettere immagine xml-Character-Entity
+		%aggiornare immagine
+
 		\includegraphics[width=0.95\textwidth]{imgs/xml-Character-Entity.png}
 	\end{center}
 
@@ -857,7 +876,7 @@
 	\end{block}
 
 	\begin{block}{XML PCDATA}
-		Caratteri speciali che sono utilizzati dalla specifica XML come \&, <, > non possono essere utilizzati come contenuto testuale.
+		Caratteri speciali che sono utilizzati dalla specifica XML come \texttt{\&, <, >} non possono essere utilizzati come contenuto testuale.
 	\end{block}
 
 \end{frame}
@@ -901,6 +920,13 @@
 		\\ Utile per inserire una sezione di testo com molti caratteri speciali.
 	\end{block}
 
+\end{frame}
+
+\begin{frame}
+    \frametitle{Fondamenti XML}
+    \framesubtitle{eXtensible Markup Language}
+    \addtocounter{nframe}{1}
+
 	\begin{block}{CDATA: qualche vincolo}
 		\begin{itemize}
 			\item Non è possibile inserire commenti in una sezione CDATA.
@@ -911,6 +937,7 @@
 	\end{block}
 
 \end{frame}
+
 
 \begin{frame}
     \frametitle{Fondamenti XML}
@@ -944,10 +971,6 @@
     \framesubtitle{eXtensible Markup Language}
     \addtocounter{nframe}{1}
 
-	\begin{block}{White Space}
-		White space refers to nonprintable characters
-	\end{block}
-
 	\begin{block}{White Space: esempio}
 		\begin{itemize}
 			\item Gli spazi bianchi sono ignorati quando sono tra i tag.
@@ -960,6 +983,11 @@
 			%no white space ­stripping occurs for element content, which means that the content of the XML element
 		\end{itemize}
 	\end{block}
+
+	\begin{tiny}
+		I white space sono caratteri non stampabili
+	\end{tiny}
+
 
 \end{frame}
 

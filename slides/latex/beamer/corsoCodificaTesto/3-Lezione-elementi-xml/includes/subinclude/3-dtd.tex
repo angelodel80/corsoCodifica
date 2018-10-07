@@ -1,14 +1,14 @@
 %slide di introduzione ai fondamenti di Document Type Definition
 %frame 01
-\begin{frame}
-    \frametitle{Elementi per la definizione degli schemi xml}
-    \framesubtitle{Principi Document Type Definition}
-    \addtocounter{nframe}{1}
-
-    \begin{block}{Esempio DTD}
-        \includegraphics[width=.8\textwidth]{imgs/dtd.png}
-    \end{block}
-\end{frame}
+%\begin{frame}
+%    \frametitle{Elementi per la definizione degli schemi xml}
+%    \framesubtitle{Principi Document Type Definition}
+%    \addtocounter{nframe}{1}
+%
+%    \begin{block}{Esempio DTD}
+%        \includegraphics[width=.8\textwidth]{imgs/dtd.png}
+%    \end{block}
+% \end{frame}
 
 \begin{frame}
     \frametitle{Elementi per la definizione degli schemi xml}
@@ -185,6 +185,14 @@
     \begin{center} \texttt{<!ATTLIST Element-name Attr-name Attr-type Attr-state? default-value?>} \end{center}
     \end{block}
 
+\end{frame}
+
+
+\begin{frame}
+    \frametitle{Elementi per la definizione degli schemi xml}
+    \framesubtitle{Principi Document Type Definition}
+    \addtocounter{nframe}{1}
+
     \begin{block}{Attributi: sintassi}
         \begin{itemize}
             \item ``Element-name'' è il nome dell'elemento a cui l'atteibuto si riferisce
@@ -197,13 +205,15 @@
 
 \end{frame}
 
+
+
 \begin{frame}
     \frametitle{Elementi per la definizione degli schemi xml}
     \framesubtitle{TABELLA dei tipi}
     \addtocounter{nframe}{1}
 
     \begin{center}
-        \includegraphics[width=.8\textwidth]{imgs/xml-TipiAttributoXML.png}
+        \includegraphics[width=.95\textwidth]{imgs/xml-TipiAttributoXML.png}
     \end{center}
 \end{frame}
 
@@ -233,7 +243,7 @@
 
     \begin{block}{Choice attributi}
      \texttt{<!ATTLIST element attribute (value1 | value2 | value3 | ...) default >}
-    \\\texttt{<!ATTLIST name title (Mr. | Mrs. | Ms.) \#IMPLIED Mr.>}
+    \\\texttt{<!ATTLIST name title (Mr. | Mrs. | Ms.) \#IMPLIED ``Mr.''>}
     \end{block}
     \textit{Attenzione non è possibile avere un valore di default se un attributo è marcato \#REQUIRED}
 \end{frame}
@@ -245,10 +255,10 @@
     \addtocounter{nframe}{1}
 
     \begin{block}{Attributi ID IDREF IDREFS}
-     \texttt{<!ATTLIST element attribute  >}
-    \\\texttt{<!ATTLIST >}
-    \\\texttt{<!ATTLIST >}
-    \\\texttt{<!ATTLIST >}
+     \texttt{<!ATTLIST element attribute ID  >}
+    \\\texttt{<!ATTLIST order orderID ID \#REQUIRED>}
+    \\\texttt{<!ATTLIST customer orders IDREFS>}
+    \\\texttt{<!ATTLIST package orderRef IDREF>}
     \end{block}
 \end{frame}
 
@@ -293,8 +303,7 @@
     \addtocounter{nframe}{1}
 
     \begin{block}{Empty elements}
-        Un elemento XML può essere vuoto (empty).
-        \\ La dichiarazione di un elemento vuoto è simile alla dichiarazione di un elemento standard, ma con la parola chiave \textbf{EMPTY} come content model.
+        Un elemento XML può essere vuoto (empty). La dichiarazione di un elemento vuoto si realizza con la parola chiave \textbf{EMPTY} come content model.
     \end{block}
 
     \begin{block}{Empy content}
@@ -304,7 +313,7 @@
     \begin{block}{Empy content}
         \begin{center}
             \texttt{<!ELEMENT lb EMPTY>}
-            \texttt{<lb />}
+            \\\texttt{<lb />}
         \end{center}
     \end{block}
 
@@ -509,7 +518,7 @@
     \addtocounter{nframe}{1}
 
     \begin{block}{Parameter Entity}
-        Le Parameter Entity sono entità sfruttabili all'interno del documento DTD. Ma non possono essere utilizzate all'interno del documento XML.
+        Le parameter entity sono entità sfruttabili all'interno del documento DTD. Ma non possono essere utilizzate all'interno del documento XML.
         \\ Esestono due tipi di entità parametriche: 
         \\1) \textbf{internal}  parameter entities 2) the \textbf{external} parameter entities.
     \end{block}
