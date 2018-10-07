@@ -13,15 +13,13 @@
 	\framesubtitle{eXtensible Markup Language}
 	\addtocounter{nframe}{1}
 
-	\begin{block}{XXXXXXXXXXXX}
-		XML has its roots in Standard Generalized Markup Language (SGML), a language
-		introduced in the 1980s that describes the structure and content of any machine-readable information.
+	\begin{block}{XML origini}
+		XML affonda le proprie origini nel linguaggio Standard Generalized Markup Language (SGML).
+		\\ SGML è stato introdotto negli anni ottanta con il fine di descrivere la struttura e il contenuto di qualsiasi informazione ``machine readable''.
 	\end{block}
 
-	\begin{block} {XXXXXXXXXXXXXXXXx}
-		XML can be
-		thought of as a lightweight version of SGML. Like SGML, XML is a language used to create vocabularies for other markup languages
-
+	\begin{block} {XML è una semplificazione di SGML}
+		XML può essere pensato come una versione semplificata di SGML. Infatti, come SGML, XML è un meta-linguaggio, usato per create linguaggi di marcatura (detti vocabolari).
 	\end{block}
 \end{frame}
 
@@ -30,36 +28,13 @@
 	\framesubtitle{eXtensible Markup Language}
 	\addtocounter{nframe}{1}
 
-	\begin{block}{XXXXXXXXXXXXXXXX}
-		It is a set of rules for defining custom-built markup languages
+	\begin{block}{XML come meta-linguaggio}
+		XML è un insieme di regole per definire linguaggi di marcatura personalizzati e personalizzabili (\textit{custom-built vocabolaries}).
 	\end{block}
 
-	\begin{block} {XXXXXXXXXXXXXXXXXX}
-
-		XML was originally created to structure, store, and transport information.
-		Like SGML,XML can be used to create XML applications or vocabularies, which are markup
-		languages tailored to contain specific pieces of information.
-
-	\end{block}
-\end{frame}
-
-
-\begin{frame}
-	\frametitle{Fondamenti XML}
-	\framesubtitle{eXtensible Markup Language}
-	\addtocounter{nframe}{1}
-
-	\begin{block}{XXXXXXXXXXXXXXXX}
-		XML is a markup language that is extensible
-		% so it can be m­odified to match the needs of the document author and the data being recorded
-	\end{block}
-
-	\begin{block} {XXXXXXXXXXXXXXXXXX}
-
-		developed and maintained by the World Wide Web Consortium (W3C),
-		an organization created in 1994 to develop common protocols and standards for
-		sharing information on the World Wide Web.
-
+	\begin{block} {Applicazioni XML}
+		Allo stesso modo di SGML, XML è nato per strutturare, conservare e trasportare informazioni.
+		\\ I linguaggi di marcatura derivati da XML per strutturare e descrivere specifiche informazioni vengono chiamati \textit{XML applications} oltre a \textit{vocabolario XML}.
 	\end{block}
 \end{frame}
 
@@ -68,13 +43,29 @@
 	\framesubtitle{eXtensible Markup Language}
 	\addtocounter{nframe}{1}
 
-	\begin{block}{XXXXXXXXXXXXXXXX}
-		XML, or eXtensible Markup Language, is a
-		specification for storing information. It is also
-		a specification for describing the structure of
-		that information. And while XML is a markup
-		language (just like HTML), XML has no tags
-		of its own
+	\begin{block}{XML: eXtensible}
+		XML è estensibile: è pensato per essere modificato ed esteso al fine di soddisfare le varie necessità di rappresentazione dell'informazione.
+		\textbf{XML non contempla un vocabolario predefinito!}
+	\end{block}
+
+	\begin{block} {XML: standard W3C}
+		XML è sviluppato e manutenuto dal W3C (World Wide Web Consortium), il quale sviluppa protocolli e standard riconosciuti dalla comunità scientifica e tecnica al fine di condividere informazioni sul Web..
+	\end{block}
+\end{frame}
+
+\begin{frame}
+	\frametitle{Fondamenti XML}
+	\framesubtitle{eXtensible Markup Language}
+	\addtocounter{nframe}{1}
+
+	\begin{block}{XML: riassumendo}
+		XML, eXtensible Markup Language, derivato dal SGML, , 
+		è una specificazione, un formalismo, per conservare informazioni in formato machine redable (digitale).
+	\end{block}
+
+	\begin{block}{XML: riassumendo}
+		XML è anche una specificazione per descrivere la struttura dell'informazione seguendo un modello dei dati gerarchico.
+		\\ XML è simile al HTML, ma a differenza di questo non ha etichette predefinite.
 	\end{block}
 
 \end{frame}
@@ -97,45 +88,66 @@
 %The syntax rules of XML are easy to learn and easy to use
 \begin{frame}
 	\frametitle{Fondamenti XML}
-	\framesubtitle{eXtensible Markup Language: Syntax Rules}
+	\framesubtitle{eXtensible Markup Language: regole sintattiche}
 	\addtocounter{nframe}{1}
 
 	\begin{itemize}
 
-		\item Every %XML element must have a closing tag.
+		\item Ciascun elemento XML deve avere un tag di chiusura.
+			%Every XML element must have a closing tag.
 		      %Every element must have a closing tag. A self-closing tag is permitted.
 
-		\item XML %tags are case sensitive.
+		\item I tag XML sono \textit{case sensitive}.
+			%XML tags are case sensitive.
 		      % Opening and closing tags (or start and end tags) must be ­written with the same case.
 
-		\item XML %elements must be ­properly nested.
+		\item Gli elementi XML devono essere annidati in modo rigoroso.
+			%XML elements must be ­properly nested.
 		      %All elements can have child (sub) elements. Child elements must be in pairs and be correctly nested within their respective parent element.
 
-		\item Every %XML document must have a root element.
-		      %Every XML document must contain a single tag pair that defines	the root element. All other elements must be nested within the root element.
+		\item Tutti i documenti XML deveno avere un elemento radice (root) che contiene tutti gli altri elementi opportunamente annidati.
+			%Every XML document must have a root element.
+		      %Every XML document must contain a single tag pair that defines the root element. All other elements must be nested within the root element.
 
-		\item XML %elements can have attributes in name-value pairs.
-		      %Each attribute name within the same element can occur only once.% Each attribute value must be quoted.
-
-		\item Some %characters have a ­special meaning in XML.
-		      %The use of certain characters is restricted. If these characters are needed, entity references or character references may be used. References always begin with the character “&” (which is ­specially reserved) and end with the character “;”.
-
-		      %XML allows for comments. 
-		\item Comments %cannot occur prior to the XML Declaration. Comments cannot be nested.
-
+		\item Gli elementi XML possono avere attributi con stile nome-valore.
+		
 	\end{itemize}
 
 \end{frame}
 
+
+%The syntax rules of XML are easy to learn and easy to use 2
+\begin{frame}
+	\frametitle{Fondamenti XML}
+	\framesubtitle{eXtensible Markup Language: regole sintattiche cont.}
+	\addtocounter{nframe}{1}
+
+	\begin{itemize}
+		\item Un attributo all'interno dell'elemento può apparire una sola volta
+		
+		\item Il valore degli attributi è una stringa e deve essere inserita tra apici
+			%XML elements can have attributes in name-value pairs.
+		      %Each attribute name within the same element can occur only once.% Each attribute value must be quoted.
+
+		\item Esistono alcuni caratteri spciali che non possono essere usati. 
+			%Some characters have a ­special meaning in XML.
+		      %The use of certain characters is restricted. If these characters are needed, entity references or character references may be used. References always begin with the character “&” (which is ­specially reserved) and end with the character “;”.
+
+		      %XML allows for comments. 
+		\item I commenti non possono essere inseriti prima della dichiarazione XML e non possono essere annidati.
+			%Comments cannot occur prior to the XML Declaration. Comments cannot be nested.
+
+	\end{itemize}
+
+\end{frame}
 
 \begin{frame}
 	\frametitle{Fondamenti XML}
 	\framesubtitle{eXtensible Markup Language}
 	\addtocounter{nframe}{1}
 
-	\begin{block}{XML vista ad albero}
-		XML is based on hierarchical trees in which order is significant.
-		In XML, hierarchy and sequence are the main methods used to represent information.
+	\begin{block}{Manutenibilità}
+		Data la semplicità delle regole e della sintassi XML incentrata sulla memorizzazione e scambio dei dati, la struttura generale di un documento XML è semplice sia dal punto di vista della progettazione sia dal punto di vista della manutenibilità.
 	\end{block}
 
 \end{frame}
@@ -143,6 +155,19 @@
 \begin{frame}
 	\frametitle{Fondamenti XML}
 	\framesubtitle{eXtensible Markup Language}
+	\addtocounter{nframe}{1}
+
+	\begin{block}{XML vista ad albero}
+		XML ha un modello dei dati gerarchico e può quindi essere visto come un albero ordinato.
+		\\Per questo motivo le informazioni sono rappresentate in modo ottimale se sono gerarchiche e sequenziali.
+	\end{block}
+
+\end{frame}
+
+
+\begin{frame}
+	\frametitle{Fondamenti XML}
+	\framesubtitle{eXtensible Markup Language: vista ad albero}
 	\addtocounter{nframe}{1}
 
 	\begin{center}
@@ -159,12 +184,10 @@
 	\addtocounter{nframe}{1}
 
 	\begin{block}{TEI-XML vocabulary}
-		To meet the need of textual scholars,% an XML ­vocabulary called Text Encoding Initiative (TEI) was developed, which codes text i­nformation.
+		Al fine di soddisfare i requisiti degli studiosi del testo il vocabolario TEI-XML è stato sviluppato nel corso degli ultimi decenni con lo scopo e l'obiettivo di permettere la codifica di qualsiasi informazione testuale.
 	\end{block}
-
-	\begin{block}{XML Vocabularies}
-		XML vocabularies%:  set of XML tags for a particular business function.
-	\end{block}
+	
+	\textit{Un vocabolario XML è un insieme di tag XML implementato per una particolare esigenza di codifica}
 
 \end{frame}
 
@@ -184,17 +207,6 @@
 
 \end{frame}
 
-\begin{frame}
-	\frametitle{Fondamenti XML}
-	\framesubtitle{eXtensible Markup Language}
-	\addtocounter{nframe}{1}
-
-	\begin{block}{Manutenibilità}
-		Because XML focuses on communicating the data, the overall structure is simple and easy to design and
-maintain.
-	\end{block}
-
-\end{frame}
 
 \begin{frame}
 	\frametitle{Fondamenti XML}
@@ -202,10 +214,9 @@ maintain.
 	\addtocounter{nframe}{1}
 
 	\begin{block}{Documento ben formato (well-formed)}
-        A well-formed document contains no syntax errors and satisfies the general specifications for XML code as laid
-        out by the W3C. At a minimum, an XML document must be well formed or it will not
-        be readable by programs that process XML code.
+		Un documento XML deve essere ben formato (well-formed), cioè non deve contenere errori sintattiti e soddisfare le regole generali della specifica.
 	\end{block}
+	\textit{Un documento non ben formato non può essere letto dalle applicazioni che elaborano codice XML}.
 
 \end{frame}
 
@@ -216,8 +227,12 @@ maintain.
 	\addtocounter{nframe}{1}
 
 	\begin{block}{Parti principali di un documento XML}
-        An XML document consists of three parts—the prolog, the document body, and the
-        epilog. 
+		Un documento XML consiste di tre parti:
+		\begin{itemize}
+			\item il prologo
+			\item il corpo (body)
+			\item l'epilogo
+		\end{itemize}
 	\end{block}
 
 \end{frame}
@@ -240,16 +255,18 @@ maintain.
 	\framesubtitle{eXtensible Markup Language}
 	\addtocounter{nframe}{1}
 
-	\begin{block}{Parti principali di un documento XML}
-        The prolog includes the following parts:
+	\begin{block}{Documento XML: prologo}
+		\begin{itemize}
+			\item XML declaration (obbligatorio)
+			\item Processing instructions (opzionale)
+			\item Commenti (opzionale)
+			\item Document type declaration (opzionale)
+		\end{itemize}
         
-        • XML declaration: indicates that the document is written in the XML language
-        • Processing instructions (optional): provide additional instructions to be run by
-        programs that read the XML document
-        • Comment lines (optional): provide additional information about the document
-        contents
-        • Document type declaration (DTD) (optional): provides information about the rules
-        used in the XML document’s vocabulary
+        % XML declaration: indicates that the document is written in the XML language
+        % Processing instructions (optional): provide additional instructions to be run by programs that read the XML document
+        % Comment lines (optional): provide additional information about the document contents
+        % Document type declaration (DTD) (optional): provides information about the rules used in the XML document’s vocabulary
 	\end{block}
 
 \end{frame}
@@ -259,11 +276,14 @@ maintain.
 	\framesubtitle{eXtensible Markup Language}
 	\addtocounter{nframe}{1}
 
-	\begin{block}{Parti principali di un documento XML}
-        The document body, %found immediately after the prolog, contains the document’s
-        %content in a hierarchical tree structure. Following the document body is an optional
-        %e­pilog, which contains any final comments or processing instructions.
+	\begin{block}{Documento XML: corpo}
+		Il corpo del documento XML segue immediatamente il prologo. Questa parte del documento contiene il contenuto vero e proprio in una struttura ad albero ordinata.
 	\end{block}
+
+	\begin{block}{Documento XML: epilogo}
+		Opzionalmente, al corpo del documento XML segue un epilogo il quale può contenere commenti finale e processing instructions.
+	\end{block}
+	
 
 \end{frame}
 
@@ -313,19 +333,18 @@ maintain.
 	\addtocounter{nframe}{1}
 
 	\begin{block}{XML comments}
-		comments are ignored by programs reading the document and
-		do not affect the document's contents or structure.
+		I commenti XML vengono ignorati dei programmi che elaborano il documento.
+		\\I commenti quindi non influenzano i contenuti e la sruttura del documento.
 	\end{block}
 
 	\begin{block}{XML comments: sintassi}
 	\begin{center}\texttt{
-		<!-- all'interno di questi segni il parser XML non entra -->
+		<!-- il parser XML qui non entra -->
 	}\end{center}
 	\end{block}
 
-	\textit{METTERE TESTO COMMENTATO}
-	% If you have a comment that will occupy more than one line, you can continue the ­comment on as many lines as you need
-
+	\textit{Un commento può occupare anche più righe}
+	
 \end{frame}
 
 \begin{frame}
@@ -334,9 +353,7 @@ maintain.
 	\addtocounter{nframe}{1}
 
 	\begin{center}
-		mettere immagine XML-Prologo
-
-		\includegraphics[width=0.95\textwidth]{imgs/xml-TEI-PerseusExample.png}
+		\includegraphics[width=0.95\textwidth]{imgs/XML-Prologo.png}
 	\end{center}
 
 \end{frame}
@@ -347,20 +364,19 @@ maintain.
 	\addtocounter{nframe}{1}
 
 	\begin{block}{Esercizio prologo}
-		Creare un fine con estensione .xml ed inserire un prologo con la dichiarazione XML e un commento con le seguenti informazioni
+		Creare un file \textit{.xml} ed inserire un prologo con la dichiarazione XML e un commento con le vostre informazioni.
 	\end{block}
 
 	\begin{block}{Esercizio prologo}
 		\texttt{
 		 <!--
-		 \\This document contains data on Corso di Codifica di Testi.
+		 \\This document contains data on Codifica di Testi.
 		 \\Filename: project.xml
 		 \\Author: your name
 		 \\Date: today's date
 		 \\-->
 		}
 	\end{block}
-
 	\textit{Salvare il file su github nel repository del progetto}
 
 \end{frame}
@@ -371,13 +387,14 @@ maintain.
 	\addtocounter{nframe}{1}
 
 	\begin{block}{XML parser}
-		A program that reads and interprets an XML document is called an XML processor or XML parser, or simply a processor or parser.
+		Un programma che legge ed interpreta un documento XML è chiamato XML parser ( o processor).
 	\end{block}
 	\begin{block}{Cosa fa un XML parser}
 		\begin{itemize}
-			\item Verifica che il documento rispetti le rigole di sintassi XML (well-formed)
-			\item Interpret PCDATA in a document and resolve any character or entity references found within the document
-			\item Gestisce le processing instructions per interpretare eventuali dati
+			\item Verifica che il documento rispetti le rigole della sintassi XML
+			\item Interpreta i dati con tipo PCDATA 
+			\item Risolve character or entity references
+			\item Gestisce le processing instructions per interpretare i dati
 		\end{itemize}
 	\end{block}
 
@@ -388,9 +405,10 @@ maintain.
 	\framesubtitle{eXtensible Markup Language}
 	\addtocounter{nframe}{1}
 
-	\begin{block}{XMLLINT}
-		INTRODURRE XMLLINT
-		Mettere immagine dell'uscita dell'help
+	\begin{block}{XMLlint}
+		\begin{center}
+			\includegraphics[width=0.95\textwidth]{imgs/xml-XMLlint-man.png}
+		\end{center}
 	\end{block}
 
 \end{frame}
@@ -402,17 +420,15 @@ maintain.
     \addtocounter{nframe}{1}
 
 	\begin{block}{XML body}
-	XML document is primarily composed of elements and attributes\\
-	   The document body in an XML document is made up of elements that contain data.
-	   \\ Elements are the basic building blocks of XML files.
+		Un documento XML è composto essenzialmente da elementi e attributi. 
+	   \\ Gli elementi sono la base, le unità fondamentali di qualsiasi documento XML.
     \end{block}
 
     \begin{block}{Elementi: Sintassi}
     \begin{center}\texttt{<element>content</element>}\end{center}
     \begin{center}\texttt{opening tag: <element>;\\ closing tag: </element>}\end{center}
     \end{block}
-	\textit{METTERE TESTO COMMENTATO}
-	% An ­element can have text content and child element content
+	\textit{Un elemento può contenere testo e/o ulteriori elementi}
 \end{frame}
 
 \begin{frame}
@@ -436,14 +452,14 @@ maintain.
     \framesubtitle{eXtensible Markup Language}
     \addtocounter{nframe}{1}
 
-	\begin{block}{XML Element: note importanti}
+	\begin{block}{XML Element: note importanti sul nome}
 		\begin{itemize}
-			\item Element names are case sensitive
-			\item Element names must begin with a letter or the underscore character
-			\item Element names cannot begin with the string xml
-			\item The name in an element closing tag must exactly match the name in the opening tag
-			\item Element names can be used more than once (anche a diversi livelli gerarchici)
-			\item Element names might be established already (es.: vabolario TEI-XML)
+			\item Gli elementi sono case sensitive.
+			\item Gli elementi possono iniziare con una lettere o con un undersore.
+			\item Un elemento non può iniziare con la stringa \textit{xml}. 
+			\item Il tag di apertura deve essere consistente con il relativo tag di chiusura.
+			\item Un tag può essere usato più di una volta (anche a diversi livelli gerarchici).
+			\item Un insieme di elementi formano un vocabolario (es.: vabolario TEI-XML)
 		\end{itemize}
 	\end{block}
 \end{frame}
@@ -486,8 +502,8 @@ maintain.
 
 	\begin{block}{XML Element: empty e nested}
 		\begin{itemize}
-			\item An open element or empty element is an element with no content (empty element).
-			\item In addition to text content, elements also can contain other elements (nested element)
+			\item Un elemento vuoto (\textit{empty}) è un elemento senza contenuto.
+			\item Un elemento può contenere altri elementi opportunamente annidati (\textit{nested element}).
 		\end{itemize}
 	\end{block}
 
@@ -518,32 +534,10 @@ maintain.
     \framesubtitle{eXtensible Markup Language}
     \addtocounter{nframe}{1}
 
-	\begin{block}{XML Element: empty e nested}
-		\begin{itemize}
-			\item An open element or empty element is an element with no content (empty element).
-			\item In addition to text content, elements also can contain other elements (nested element)
-		\end{itemize}
-	\end{block}
-
-	\begin{block}{XML esempi: empty e nested element}
-		\begin{itemize}
-			\item \texttt{<element />} \texttt{<element></element>}
-			\item \texttt{<choice><sic>testo con errore</sic><cor> testo corretto</cor></choice>}
-		\end{itemize}
-		
-	\end{block}
-	
-\end{frame}
-
-\begin{frame}
-    \frametitle{Fondamenti XML}
-    \framesubtitle{eXtensible Markup Language}
-    \addtocounter{nframe}{1}
-
 	\begin{block}{XML Element: hierarchical relationship}
 		\begin{itemize}
-			\item Nested %element is a child element of the element in which it is nested: its parent element
-			\item Elements %that are side by side in a document ­hierarchy are sibling elements
+			\item Un elemento annidato (\textit{nested}) è un elemento \textit{figlio}, cioè contenuto (annidato) in un ulteriore elemento detto padre/genitore (\textit{parent}).
+			\item Gli elementi che sono presenti su uno stesso livello gerarchiso (\textit{side by side}) sono detti \textit{sibling element}.
 		\end{itemize}
 	\end{block}
 
@@ -555,8 +549,7 @@ maintain.
 	\addtocounter{nframe}{1}
 
 	\begin{center}
-		mettere immagine parent - sibling
-		\includegraphics[width=0.95\textwidth]{imgs/xml-TEI-PerseusExample.png}
+		\includegraphics[width=0.95\textwidth]{imgs/XML-Parent-Child-Sibling.png}
 	\end{center}
 
 \end{frame}
@@ -568,12 +561,12 @@ maintain.
 
 	\begin{block}{XML Element: hierarchical relationship}
 		\begin{itemize}
-			\item All %elements in the body are children of a single element called the root element or document element.
-			\item An %XML document must include a root element to be considered well formed
-			\item hierarchy %represented in a tree diagram
-			\item XML % declaration and comments are not included in the tree structure of the document body
-			\item Syntax %error in creating an XML document is improperly nesting
-			\item XML does % not allow the opening and ­closing tags of parent and child elements to overlap
+			\item Tutti gli elementi nel body del documento sono figli di uno stesso elemento, chiamato radice (\textit{root}).
+			\item Un documento XML deve contenere un elemento root per essere considerato ben formato.
+			\item Una gerarchia XML può essere rappresentata tramite un diagramma ad albero.
+			\item Il prologo e i commenti non fanno parte dell'albero del doby.
+			\item Elementi non annidati correttamente implicano un errore di sintassi nei parser.
+			\item Le specifiche XML non consentono di sovrapporre i tag di apertura e di chiusura degli elementi annidati (\textit{no overlap}).
 		\end{itemize}
 	\end{block}
 
@@ -593,8 +586,6 @@ maintain.
 
 \end{frame}
 
-
-
 % However, by indenting the code and placing siblings on their own lines, you can visually
 % reveal the hierarchy relationships and add a dimension of visual communication to your
 % code.
@@ -605,19 +596,16 @@ maintain.
     \addtocounter{nframe}{1}
 
 	\begin{block}{XML Element: hierarchical relationship as tree structure}
-		A% quick way to view the overall structure of a document body is to chart the ­elements in a tree structure	
+		Un modo rapido e comodo per visualizzare la struttura completa di un documento XML è di disegnare attraverso un diagramma ad albero gli elementi del documento XML.
 	\end{block}
 
 \end{frame}
-
-
 
 % It would be useful to have a general tree diagram that indicates whether a particular
 % child element can occur zero times, once, or several times within a parent
 
 % The symbols ?, *, and + are part of the code used in creating DTDs to validate XML
 % documents.
-
 
 \begin{frame}
 	\frametitle{Fondamenti XML}
@@ -627,7 +615,7 @@ maintain.
 	\begin{center}
 		mettere immagine xml-parent-child-quantifier
 
-		\includegraphics[width=0.95\textwidth]{imgs/xml-TEI-PerseusExample.png}
+		\includegraphics[width=0.95\textwidth]{imgs/xml-parent-child-quantifier.png}
 	\end{center}
 
 \end{frame}
@@ -640,7 +628,7 @@ maintain.
 	\begin{center}
 		mettere immagine xml-parent-child-quantifier2
 
-		\includegraphics[width=0.95\textwidth]{imgs/xml-TEI-PerseusExample.png}
+		\includegraphics[width=0.95\textwidth]{imgs/xml-parent-child-quantifier2.png}
 	\end{center}
 
 \end{frame}
@@ -652,13 +640,13 @@ maintain.
     \addtocounter{nframe}{1}
 
 	\begin{block}{XML Element: Mixed Content}
-		%An element  can contain both content and child elements.\\
-		%Mixed content elements are ideal for descriptive, text-based chunks of information. 
+		Un elemento può contenere contemporaneamente sia testo sia altri elementi. 
+		\\Questo modello di contenuto si chiama Mixed Content ed è ideale per descrivere informazioni text-based (\textbf{dati semi-strutturati)}.
 	\end{block}
 
 	\begin{block}{XML Element: Mixed Content}
 		\texttt{
-			%<p><salutation>Salve</salutation> il mio nome è <persName>Angelo</persName></p>
+			<p><salutation>Salve</salutation> il mio nome è <persName>Angelo</persName></p>
 			} 
 	\end{block}
 
