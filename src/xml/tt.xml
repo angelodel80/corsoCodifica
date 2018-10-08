@@ -1,4 +1,15 @@
-<?xml version="1.0" ?>
-<ciao>
-	<cc></cc>
-</ciao>
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<!-- 
+ fileproject: tt.xml
+ name: Angelo 
+-->
+<test>
+	<ciao>
+		<cc>
+	</ciao>
+		</cc>
+	<choice>
+		<sic>testo con errore</sic>
+		<cor> testo corretto</cor>
+	</choice>
+</test>
