@@ -60,12 +60,12 @@
 
 	\begin{block}{XML: riassumendo}
 		XML, eXtensible Markup Language, derivato dal SGML, , 
-		è una specificazione, un formalismo, per conservare informazioni in formato machine redable (digitale).
+		è una specificazione, un formalismo, per conservare e scambiare informazioni in formato machine redable (digitale).
 	\end{block}
 
 	\begin{block}{XML: riassumendo}
 		XML è anche una specificazione per descrivere la struttura dell'informazione seguendo un modello dei dati gerarchico.
-		\\ XML è simile al HTML, ma a differenza di questo non ha etichette predefinite.
+		\\ XML è simile ad HTML, ma a differenza di questo non ha etichette predefinite.
 	\end{block}
 
 \end{frame}
@@ -333,7 +333,7 @@
 	\addtocounter{nframe}{1}
 
 	\begin{block}{XML comments}
-		I commenti XML vengono ignorati dei programmi che elaborano il documento.
+		I commenti XML vengono ignorati dai programmi che elaborano il documento.
 		\\I commenti quindi non influenzano i contenuti e la sruttura del documento.
 	\end{block}
 
@@ -352,10 +352,10 @@
 	\framesubtitle{eXtensible Markup Language}
 	\addtocounter{nframe}{1}
 
-	%correggere l'immagine.
 	\begin{center}
 		\includegraphics[width=0.95\textwidth]{imgs/XML-Prologo.png}
-	\end{center}
+    \end{center}
+\begin{tiny}\textit{immagine dal libro New Perspectives on XML, 3rd Edition}\end{tiny}
 
 \end{frame}
 
@@ -371,11 +371,11 @@
 	\begin{block}{Esercizio prologo}
 		\texttt{
 		 <!--
-		 	\\This document contains data on Codifica di Testi.
+		 	This document contains data on Codifica di Testi.
 		 	\\Filename: project.xml
 		 	\\Author: your name
 		 	\\Date: today's date
-		\\-->
+		-->
 		}
 	\end{block}
 
@@ -554,10 +554,11 @@
 	\frametitle{Fondamenti XML}
 	\framesubtitle{eXtensible Markup Language}
 	\addtocounter{nframe}{1}
-	% aggiustare immagine
+
 	\begin{center}
 		\includegraphics[width=0.95\textwidth]{imgs/XML-Parent-Child-Sibling.png}
-	\end{center}
+    \end{center}
+\begin{tiny}\textit{immagine dal libro New Perspectives on XML, 3rd Edition}\end{tiny}
 
 \end{frame}
 
@@ -615,7 +616,7 @@
     \addtocounter{nframe}{1}
 
 	\begin{block}{XML Element: hierarchical relationship as tree structure}
-		Un modo rapido e comodo per visualizzare la struttura completa di un documento XML è quello di disegnare attraverso un diagramma ad albero gli elementi del documento XML.
+		Un modo rapido e comodo per visualizzare la struttura completa di un documento XML è quello di disegnare attraverso un diagramma ad albero ordinato gli elementi del documento XML.
 	\end{block}
 
 \end{frame}
@@ -634,8 +635,10 @@
 	\begin{center}
 		%aggiornare immagine
 
-		\includegraphics[width=0.95\textwidth]{imgs/xml-parent-child-quantifier.png}
-	\end{center}
+		\includegraphics[width=0.8\textwidth]{imgs/xml-parent-child-quantifier.png}
+    \end{center}
+    
+\begin{tiny}\textit{immagine dal libro New Perspectives on XML, 3rd Edition}\end{tiny}
 
 \end{frame}
 
@@ -645,10 +648,10 @@
 	\addtocounter{nframe}{1}
 
 	\begin{center}
-		% aggiornare immagine
-		\includegraphics[width=0.95\textwidth]{imgs/xml-parent-child-quantifier2.png}
+		
+		\includegraphics[width=0.8\textwidth]{imgs/xml-parent-child-quantifier2.png}
 	\end{center}
-
+\begin{tiny}\textit{immagine dal libro New Perspectives on XML, 3rd Edition}\end{tiny}
 \end{frame}
 
 
@@ -719,8 +722,8 @@
 	\begin{block}{XML Attributi: valore}
 		\begin{center}
 			\texttt{<element attribute=``value''> ... </element>}
-			\texttt{<element attribute=``value'' />}
-			\texttt{<element attribute=``value'', attribute2=``value2'' />}
+			\\\texttt{<element attribute=``value'' />}
+			\\\texttt{<element attribute=``value'', attribute2=``value2'' />}
 		\end{center}
 	\end{block}
 
@@ -742,7 +745,7 @@
 	\begin{block}{XML Attributi}
 		\begin{itemize}
 			\item Il nome degli attributi è \textit{case sensitive}.
-			\item L'ordine degli attributi non è significante.
+			\item L'ordine degli attributi non è significativo.
 		\end{itemize}
 	\end{block}
 
@@ -784,14 +787,14 @@
 
 	\begin{block}{XML Character and Entity References}
 		\begin{itemize}
-			\item a numeric character reference syntax  is \&\#nnn;
-			\item identified using a character entity reference by \&entity;
+			\item numeric character reference: \&\#nnn;
+			\item character entity reference: \&entity;
 		\end{itemize}
 	\end{block}
 
 	\begin{block}{XML References}
 		\begin{itemize}
-			\item \texttt{\&\#61;} (\textit{carattere A})
+			\item \texttt{\&\#65;} (\textit{carattere A})
 			\item \texttt{\&amp;} (\textit{carattere \&})
 		\end{itemize}
 	\end{block}
@@ -813,11 +816,9 @@
 	\addtocounter{nframe}{1}
 
 	\begin{center}
-		%aggiornare immagine
-
-		\includegraphics[width=0.95\textwidth]{imgs/xml-Character-Entity.png}
+			\includegraphics[width=0.95\textwidth]{imgs/xml-Character-Entity.png}
 	\end{center}
-
+\begin{tiny}\textit{immagine dal libro New Perspectives on XML, 3rd Edition}\end{tiny}
 \end{frame}
 
 
@@ -1005,10 +1006,13 @@
 	\begin{block}{Processing Instruction: sintassi}
 		\begin{center}
 			\texttt{<?target instruction ?>}
-			\texttt{<?xml-stylesheet type=”text/css” href=”main.css” media=”all” ?>}
+			\\\texttt{<?xml-stylesheet type=”text/css” href=”main.css” media=”all” ?>}
 		\end{center}
 	\end{block}
-\textit{Molteplici processing instruction possono co-esistere all'interno di un unico documento XML.}
+\begin{tiny}
+    \textit{Molteplici processing instruction possono co-esistere all'interno di un unico documento XML.}
+\end{tiny}
+    
 	% Multiple processing instructions can exist within the same XML document for different
 % media types
 
@@ -1030,8 +1034,8 @@
 
 
 	\begin{block}{Processing Instruction}
-		 \textit{target}: identifica il tool al quale la processing instruction è diretta.
-		 \\\textit{instruction}: identifica le informazioni che il documento passa al parser per essere elaborate. Le istuzioni hanno la forma degli attributi (nome-valore).
+		 \textbf{Target}: identifica il tool al quale la processing instruction è diretta.
+		 \\\textbf{Instruction}: identifica le informazioni che il documento passa al parser per essere elaborate. Le istuzioni hanno la forma degli attributi (nome-valore).
 	\end{block}
 
 \end{frame}
@@ -1056,7 +1060,7 @@
 	\begin{block}{Namespaces}
 		\begin{center}
 			\texttt{<element xmlns:prefix=”uri”> ... </element>}
-			\\\texttt{<<element xmlns=”uri”> ... </element>}
+			\\\texttt{<element xmlns=”uri”> ... </element>}
 			\\\texttt{<tei:TEI xmlns:tei=``http://www.tei-c.org/ns/1.0''>}
 			\\\texttt{<TEI xmlns=``http://www.tei-c.org/ns/1.0''>}
 		\end{center}
