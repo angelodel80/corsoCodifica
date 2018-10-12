@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+    <xsd:element name="Employee">
+        <xsd:complexType>
+            <xsd:attribute name="FirstName"/>
+        </xsd:complexType>
+    </xsd:element>
+</xsd:schema>
+
+<!-- <Employee FirstName="Jacob"/> -->

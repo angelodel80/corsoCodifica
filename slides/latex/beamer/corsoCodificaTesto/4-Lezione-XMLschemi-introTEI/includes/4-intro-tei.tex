@@ -1,0 +1,1112 @@
+%%Codifica di testi
+
+% Le norme TEI
+% Roberto Rosselli Del Turco
+% Dipartimento di Studi Umanistici
+% Università di Torino
+% roberto.rossellidelturco@fileli.unipi.it
+% roberto.rossellidelturco@unito.itLa codifica di testi – Le norme TEI
+% La Text Encoding Initiative
+% Sito WWW: http://www.tei-c.org/
+
+% il motto: TEI: Yesterday's information tomorrow
+% “an international and interdisciplinary standard that
+% enables libraries, museums, publishers, and individual
+% scholars to represent a variety of literary and linguistic
+% texts for online research, teaching, and preservation”
+
+% testo di riferimento: Guidelines for Electronic Text
+% Encoding and Interchange ( http://www.tei-c.org/Guidelines/ )
+% 2La codifica di testi – Le norme TEI
+% Un po’ di storia
+% 1987: necessità di standard che permetta la creazione e
+% l’interscambio di documenti per mezzo di archivi informatici
+% (convegno NY)
+% 1990: prima versione delle Guidelines (TEI P1)
+% 1990-94: fondi garantiti da enti quali NEH, Mellon Foundation, la
+% Comunità Europea; supporto di ACH (Association for Computers
+% and the Humanities), ACL (Association for Computational
+% Linguistics), ALLC (Association for Literary and Linguistic
+% Computing)
+% 2000: nascita del TEI Consortium, associazione non profit per lo
+% sviluppo dello standard TEI
+% 2002: passaggio da SGML a XML con la v. P4
+% 2007: nuova versione TEI P5, continuamente aggiornata
+% 3La codifica di testi – Le norme TEI
+% Le TEI Guidelines
+% versioni P1 – P3 basate su SGML
+% versione P4
+% lo standard precedente, ancora impiegata
+% basata su XML, DTD tradizionale
+% pubblicata in forma definitiva nel 2002
+% http://www.tei-c.org/Guidelines/P4/
+% versione P5
+% basata su XML, schema RelaxNG (e DTD tradizionale)
+% pubblicata alla fine del 2007, aggiornata due volte l’anno, v.
+% attuale 3.0.0 (marzo 2016)
+% molte novità interessanti (in particolare: maggior modularità)
+% http://www.tei-c.org/Guidelines/P5/
+% 4La codifica di testi – Le norme TEI
+% Obiettivi della TEI
+% better interchange and integration of scholarly data
+% support for all texts, in all languages, from all periods
+% guidance for the perplexed: what to encode --- hence, a user-
+% driven codification of existing best practice
+% assistance for the specialist: how to encode --- hence, a
+% loose framework into which unpredictable extensions can be
+% fitted
+% These apparently incompatible goals result in a highly flexible,
+% modular, environment for DTD customization.
+% Lou Burnard, TEI and XML: a marriage made in heaven?
+% (http://www.tei-c.org/Talks/marriage.xml?style=printable)
+% 5La codifica di testi – Le norme TEI
+% Che cosa offre la TEI
+% un ricco (e complesso) manuale di codifica, le Guidelines
+% for Electronic Text Encoding and Interchange, che
+% comprende un numero elevato di elementi, sia di tipo
+% strutturale sia semantico, definiti per mezzo di
+% un certo numero di schemi di codifica (DTD o schema
+% language) che sono
+% organizzati in una struttura altamente modulare e
+% personalizzabile:
+% è possibile scegliere soltanto i moduli necessari
+% è possibile modificare le definizioni degli elementi
+% 6La codifica di testi – Le norme TEI
+% Supporto per gli utenti
+% il sito del consorzio (http://www.tei-c.org/), in particolare le
+% pagine relative alle varie versioni delle Guidelines
+% altre sezioni del sito contengono software, tutorial, etc.
+% utile in particolare il wiki:
+% http://www.tei-c.org/wiki/index.php/Main_Page
+% la mailing list TEI-L ( web form di iscrizione:
+% http://listserv.brown.edu/archives/cgi-bin/wa?SUBED1=tei-l&A=1 )
+% il sito su Sourceforge: http://sourceforge.net/projects/tei/
+% sta per migrare su Github: https://github.com/TEIC
+% TEI by example: http://teibyexample.org/ progetto
+% indipendente ma molto ben curato (tutorial, esercizi, etc.)
+% 7La codifica di testi – Le norme TEI
+% Novità della versione P5
+% la versione P5 offre numerose e importanti novità:
+% modulo di descrizione dei manoscritti
+% grafica e multimedia
+% standoff markup
+% supporto per i namespace XML
+% miglioramenti nel modulo feature structure
+% miglioramenti (limitati ...) nella gestione di varianti testuali
+% nuovi meccanismi di linking
+% personalizzazione semplificata
+% varie migliorie tecniche
+% 8La codifica di testi – Le norme TEI
+% Struttura modulare 1
+% si scelgono soltanto i moduli che corrispondono alle proprie
+% esigenze, in modo da realizzare rapidamente uno schema di
+% codifica appropriato
+% ogni modulo contiene un certo numero di elementi
+% gli elementi sono organizzati in classi:
+% classi strutturali: elementi che hanno un ruolo a livello strutturale
+% (paragrafi, strofe, etc.)
+% classi semantiche: elementi descrittivi del testo (aggiunte,
+% correzioni, nomi di persona, etc.)
+% anche gli attributi sono organizzati in classi
+% attributi globali: disponibili per tutti gli elementi
+% attributi specifici: solo per alcuni elementi
+% 9La codifica di testi – Le norme TEI
+% Struttura modulare 2
+% moduli essenziali:
+% tei
+% header
+% textstructure
+% core
+% definisce le classi di elementi, le macro e i
+% datatype che verranno usati per tutti i moduli
+% l’intestazione contenente i metadati relativi al
+% documento TEI XML
+% elementi strutturali per qualsiasi tipo di testo
+% elementi utili in qualsiasi tipo di documento
+% più dettagli nel capitolo 2 (The TEI Infrastructure
+% http://www.tei-c.org/release/doc/tei-p5-doc/en/html/ST.html) delle
+% Guidelines
+% 10La codifica di testi – Le norme TEI
+% Struttura modulare 3
+% alcuni moduli facoltativi:
+% analysis
+% corpus
+% drama
+% gaiji
+% msdescription
+% spoken
+% textcrit
+% transcr
+% verse
+% strumenti per analisi (linguistica etc.) del testo
+% gestione di corpora linguistici
+% elementi per testi teatrali e drammatici
+% rappresentazione di caratteri e glifi non standard
+% metadati relativi a manoscritti
+% trascrizione del parlato
+% apparato critico
+% trascrizione di fonti primarie (manoscritti)
+% elementi supplementari per testi poetici
+% 11La codifica di testi – Le norme TEI
+% 12La codifica di testi – Le norme TEI
+% TEI Lite
+% una specifica ‘personalizzazione’ della TEI versione P4/5
+% “a simple demonstration of how the TEI encoding scheme
+% might be adopted to meet 90% of the needs of 90% of the
+% TEI user community” (dalla Prefatory Note: http://www.tei-
+% c.org/Lite/)
+% la versione P4 è stata tradotta anche in italiano: TEI Lite:
+% introduzione alla codifica dei testi, a cura di F. Ciotti (
+% http://www.tei-c.org/Lite/teiu5_it.html)
+% molto usata, ma presenta varie limitazioni
+% con la versione P5 è più semplice produrre una versione
+% semplificata o personalizzata
+% 13La codifica di testi – Le norme TEI
+% TEI Pizza chef
+% la TEI P4 poteva essere modificata usando un programma su
+% web chiamato Pizza chef
+% http://www.tei-c.org.uk/pizza.html
+% metafora della base e dei condimenti (toppings),
+% corrispondenti ai moduli indispensabili e a quelli facoltativi
+% meccanismo efficace, soprattutto considerando l’alternativa
+% (modifica manuale delle DTD TEI), ma obsoleto
+% necessaria comunque modifica manuale per nuovi elementi
+% per la P5 si è deciso di proporre una modularizzazione più
+% efficace, e uno strumento di personalizzazione più potente
+% 14La codifica di testi – Le norme TEI
+% TEI Roma 1
+% uno script simile a Pizza chef, ma più sofisticato
+% disponibile sul web (http://www.tei-c.org/Roma/) o come shell
+% script sotto Unix; basato sul nuovo formato ODD
+% il metodo da seguire per la versione P5 (quella che
+% useremo) fino all’arrivo del successore (Byzantium)
+% possibilità di scegliere, escludere, modificare sia gli elementi
+% (e le classi di elementi), sia gli attributi (e le classi di attributi)
+% possibilità di aggiungere elementi (eventualmente inserendoli
+% nelle classi preesistenti)
+% possibilità di salvare lo schema in tre formati diversi: DTD
+% tradizionale, W3C e RelaxNG (anche in forma compatta)
+% 15La codifica di testi – Le norme TEI
+% TEI Roma 2
+% per motivi vari, la manutenzione di TEI Roma lascia a
+% desiderare (per non parlare dello sviluppo di un successore)
+% nel passato recente la componente di “controllo” dello
+% schema (Sanity checker) non funzionava
+% in tal caso è possibile andare sul sito TEI di Oxford dove è in
+% esecuzione una versione più vecchia:
+% http://tei.it.ox.ac.uk/Roma/
+% Roma, in ogni caso, è solo un front-end per il linguaggio ODD
+% (cfr. infra)
+% 16La codifica di testi – Le norme TEI
+% Il formato ODD
+% le versioni P1 – P4 delle DTD TEI erano nel formato DTD
+% language e dipendevano dalla sintassi SGML per molti aspetti
+% ODD = One Document Does it all
+% set di specifiche in base alle quali un semplice documento TEI
+% XML “defines a schema in terms of the modules it requires,
+% together with any possible modifications, such as the desired
+% root element”
+% risultato finale: lo schema nel linguaggio desiderato e la
+% relativa documentazione
+% tutorial: Getting Started with P5 ODDs
+% http://www.tei-c.org/Guidelines/Customization/odds.xml
+% 17La codifica di testi – Le norme TEI
+% Il futuro della TEI
+% negli ultimi anni gli schemi TEI sono stati oggetto di alcune
+% critiche, alcune manifestamente false:
+% la TEI è troppo grande / complicata / piccola
+% la TEI è basata su XML e questo formato è in declino
+% la TEI/XML non supporta le gerarchie multiple
+% la TEI non supporta il markup di tipo stand-off
+% la cosa importante da ricordare è che il formato XML non è
+% la TEI (in passato SGML, in futuro chissà → abstraction level)
+% al contrario, se c’è una discrepanza fra Guidelines e schemi,
+% la precedenza va alle Guidelines
+% 18La codifica di testi – Le norme TEI
+% Conclusioni
+% è caldamente raccomandato usare direttamente la
+% versione più recente della P5
+% la flessibilità della P5 permette di definire uno schema di
+% codifica che corrisponda precisamente al modello
+% per chi ha del materiale già codificato usando la versione
+% stabile precedente (P4 o ... gasp ... P3) esistono fogli di
+% stile per effettuare la conversione
+% la comunità di utenti e sviluppatori TEI offre un buon
+% supporto → evoluzione basata su idee, contributi
+% 19
+
+%%%%%%%%%%%%%%%%%%%%%%
+% Codifica di testi
+% I moduli base della TEI
+% Roberto Rosselli Del Turco
+% Dipartimento di Studi Umanistici
+% Università di Torino
+% roberto.rossellidelturco@fileli.unipi.it
+% roberto.rossellidelturco@unito.itSchemi di codifica TEI – Moduli base
+% Elementi disponibili per tutti i documenti TEI
+% un documento TEI P5 ‘minimo’ è composto da :
+% intestazione XML
+% intestazione TEI
+% elementi strutturali
+% elementi semantici dei moduli base (non indispensabili)
+% anche usando soltanto i moduli essenziali si ha a disposizione
+% uno schema adatto alla marcatura di numerosi tipi di testi
+% moduli di base: tei, header, textstructure, core
+% schemi ‘leggeri’ consigliati: la TEI Lite, o se necessario una
+% versione personalizzata e ancora più ridotta della P5 (TEI
+% Absolutely Bare)
+% 2Schemi di codifica TEI – Moduli base
+% Nota sugli elementi spiegati
+% punto di riferimento per il corso: la TEI P5 “completa”
+% iniziamo con la TEI Lite (= versione “leggera”)
+% proposti elementi di uso generale e di uso specifico
+% per cominciare, la TEI Lite è più semplice da gestire
+% elementi non presenti di default evidenziati in rosso scuro
+% in caso di dubbio consultare le liste degli elementi:
+% TEI Lite: http://www.tei-c.org/release/doc/tei-p5-exemplars/html/teilite.doc.html
+% TEI P5: http://www.tei-c.org/release/doc/tei-p5-doc/en/html/REF-ELEMENTS.html
+% NB: quando si crea lo schema controllare che gli elementi
+% siano effettivamente inclusi nei moduli prescelti
+% 3Schemi di codifica TEI – Moduli base
+% Caratteristiche degli elementi spiegati
+% gli elementi TEI rientrano nelle categorie generali di
+% elementi XML che abbiamo visto in precedenza:
+% elementi che possono contenere solo altri elementi (=
+% elementi strutturali)
+% elementi che possono contenere altri elementi e testo
+% elementi che possono contenere solo testo
+% elementi vuoti (es. <pb/>)
+% gli elementi vuoti marcano una gerarchia differente
+% NB: inserire il contenuto sbagliato (ad es. testo in un
+% elemento strutturale) significa rendere non valido il
+% documento TEI
+% 4Schemi di codifica TEI – Moduli base
+% Gerarchie multiple 1
+% <?xml version="1.0" encoding="utf-8"?>
+% <text>
+% <titolo>Gli assassinii della Rue Morgue</titolo>
+% <intestazione> I </intestazione>
+% <pagina n="5">
+% <p>Le facoltà mentali che si sogliono chiamare analitiche sono, di
+% per se stesse, poco suscettibili di analisi. Le conosciamo soltanto negli
+% effetti. [...]</p>
+% <p>La facoltà di risolvere è probabilmente molto rinfor-
+% </pagina>
+% <pagina n="6">
+% zata dallo studio delle matematiche e in modo particolare
+% dell’altissimo ramo di questa scienza che – impropriamente e solo in
+% ragione delle sue operazioni in senso retrogrado – è stata chiamata
+% analisi [...] </p>
+% </pagina>
+% </text>
+% 5Schemi di codifica TEI – Moduli base
+% Gerarchie multiple 2: elementi vuoti
+% <?xml version="1.0" encoding="utf-8"?>
+% <text>
+% <titolo>Gli assassinii della Rue Morgue</titolo>
+% <intestazione> I </intestazione>
+% <pagina n="5"/>
+% <p>Le facoltà mentali che si sogliono chiamare analitiche sono, di
+% per se stesse, poco suscettibili di analisi. Le conosciamo soltanto negli
+% effetti. [...]</p>
+% <p>La facoltà di risolvere è probabilmente molto rinfor-
+% <pagina n="6"/>
+% zata dallo studio delle matematiche e in modo particolare
+% dell’altissimo ramo di questa scienza che – impropriamente e solo in
+% ragione delle sue operazioni in senso retrogrado – è stata chiamata
+% analisi [...] </p>
+% </text>
+% 6Schemi di codifica TEI – Moduli base
+% Struttura di un documento TEI
+% struttura fondamentale all’interno della radice (<TEI>):
+% una intestazione TEI (<teiHeader>)
+% un testo: <text> (o più testi, cfr. infra)
+% contenuto del TEI header:
+% metadati relativi al documento (utili per collezioni di testi
+% codificati)
+% descrizione del file usando <fileDesc> (obbligatoria)
+% descrizioni relative al tipo di codifica, al contenuto del
+% documento, alle sue revisioni (facoltative)
+% è possibile includere testi introduttivi e spiegazioni relative alla
+% codifica effettuata (preziosi per l’interscambio!)
+% 7Schemi di codifica TEI – Moduli base
+% Esempio 1
+% <?xml version="1.0" encoding="utf-8"?>
+% <!DOCTYPE TEI SYSTEM "tei_lite.dtd">
+% <TEI xmlns="http://www.tei-c.org/ns/1.0">
+% <teiHeader>...</teiHeader>
+% <text>
+% <div>
+% <p></p>
+% </div>
+% </text>
+% </TEI>
+% 8Schemi di codifica TEI – Moduli base
+% Esempio 2
+% <?xml version="1.0" encoding="utf-8"?>
+% <?xml-model href="tei-lite.rng"?>
+% <TEI xmlns="http://www.tei-c.org/ns/1.0">
+% <teiHeader>...</teiHeader>
+% <text>
+% <div>
+% <p></p>
+% </div>
+% </text>
+% </TEI>
+% 9Schemi di codifica TEI – Moduli base
+% Struttura di un documento TEI
+% schema di intestazione TEI minima:
+% <teiHeader>
+% <fileDesc>
+% <titleStmt>...</titleStmt>
+% <publicationStmt>...</publicationStmt>
+% <sourceDesc>...</sourceDesc>
+% </fileDesc>
+% </teiHeader>
+% metadati essenziali riguardo il titolo, la modalità di diffusione e
+% la fonte originaria di un testo codificato
+% permettono classificazione, archiviazione ed elaborazione
+% bibliografica
+% 10Schemi di codifica TEI – Moduli base
+% Esempio di intestazione TEI
+% <teiHeader>
+% <fileDesc>
+% <titleStmt>
+% <title>La Divina Commedia: versione elettronica</title>
+% <respStmt>
+% <resp>Conversione TEI P5 a cura di</resp><name>M. Rossi</name>
+% </respStmt>
+% </titleStmt>
+% <publicationStmt>
+% <publisher>Università di Pisa</publisher>
+% <date>2002-11-07</date>
+% <availability status="restricted"><p>Contattare il responsabile del
+% progetto, vietata la riproduzione.</p></availability>
+% </publicationStmt>
+% <sourceDesc>
+% <bibl><title>La Divina Commedia</title><author>Dante Alighieri
+% </author><publisher>Mondadori</publisher><date>1988</date></bibl>
+% </sourceDesc>
+% </fileDesc>
+% </teiHeader>
+% 11Schemi di codifica TEI – Moduli base
+% Struttura di un documento TEI
+% le altre componenti dell’intestazione TEI:
+% <encodingDesc> informazioni riguardo lo schema (e il
+% modello di codifica) utilizzato
+% <profileDesc>
+% descrizione del testo: quando è stato
+% creato, da chi, usando quali lingue etc.
+% <revisionDesc> informazioni sulle versioni del file
+% stesso livello di <fileDesc>, vedremo con più dettagli
+% i metadati sono una componente essenziale di qualsiasi
+% progetto di digitalizzazione
+% 12Schemi di codifica TEI – Moduli base
+% Elementi strutturali
+% <text>
+% un singolo testo di qualsiasi tipo
+% punto di partenza della gerarchia riguardo il contenuto
+% può essere affiancato o sostituito da <facsimile>
+% all’interno di <text> possiamo trovare quattro elementi:
+% <front> materiale che precede il testo (se presente)
+% <body> il testo stesso
+% <back> materiale che segue il testo (se presente)
+% <group> alternativo a <body>, raggruppa testi diversi
+% 13Schemi di codifica TEI – Moduli base
+% Struttura di un documento TEI
+% esempio schematico di documento TEI unitario:
+% <TEI>
+% <teiHeader> [informazioni del TEI Header]
+% </teiHeader>
+% <text>
+% <front> [premessa, dedica ...] </front>
+% <body> [corpo del testo ...] </body>
+% <back> [postfazione, appendice ...]</back>
+% </text>
+% </TEI>
+% 14Schemi di codifica TEI – Moduli base
+% Struttura di un documento TEI
+% è possibile costruire documenti compositi:
+% rimpiazzando il <body> con un gruppo (<group>) di testi si
+% ottiene un documento composito
+% ciascuno di questi testi è rappresentato secondo la struttura
+% vista prima
+% un’altra possibilità è creare un corpus con <teiCorpus>:
+% intestazioni (<teiHeader>) separate per il corpus e per
+% ciascun gruppo di testi
+% struttura più complessa, su più livelli
+% 15Schemi di codifica TEI – Moduli base
+% Schema di testo composito
+% <TEI>
+% <teiHeader> [ intestazione del testo composito ] </teiHeader>
+% <text>
+% <front> [ front matter del composito ] </front>
+% <group>
+% <text>
+% <front> [ front matter del primo testo ] </front>
+% <body> [ body del primo testo ]
+% </body>
+% <back> [ back matter del primo testo ] </back>
+% </text>
+% <text>
+% <front> [ front matter del secondo testo] </front>
+% <body> [ body del secondo testo ]
+% </body>
+% <back> [ back matter del secondo testo ] </back>
+% </text>
+% ...
+% [ altri testi o gruppi di testi ]
+% ...
+% </group>
+% <back>
+% [ back matter del composito ]
+% </back>
+% </text>
+% </TEI>
+% 16Schemi di codifica TEI – Moduli base
+% Costruzione di corpora TEI
+% esempio schematico di TEI Corpus:
+% <teiCorpus>
+% <teiHeader> [metadati per il corpus] </teiHeader>
+% <TEI>
+% <teiHeader> [metadati relativi al I testo]</teiHeader>
+% <text> [primo testo del corpus] </text>
+% </TEI>
+% <TEI>
+% <teiHeader>[metadati relativi al II testo]</teiHeader>
+% <text> [secondo testo del corpus] </text>
+% </TEI>
+% </teiCorpus>
+% 17Schemi di codifica TEI – Moduli base
+% 18Schemi di codifica TEI – Moduli base
+% Altri elementi strutturali fondamentali
+% suddivisioni del testo:
+% non numerati: <div> (nessun limite di nidificazione)
+% numerati: <div1> ... <div7> (massimo 7 livelli)
+% paragrafi: <p>
+% testo riferito: <q> (discorso diretto, citazioni, etc.)
+% versi: strofe <lg> e singoli versi <l>
+% testi teatrali: discorsi <sp> che possono contenere paragrafi
+% <p> o versi <l>, oltre a direzioni di scena <stage>
+% milestone tags: <pb/>, <lb/>, <cb/>, <milestone/>
+% notare che un <div> può contenere un <floatingText>:
+% possibilità di introdurre gerarchie complesse
+% 19Schemi di codifica TEI – Moduli base
+% Apertura e chiusura di un <div>
+% <head>
+% qualunque tipo di intestazione: il titolo di un opera,
+% l’intestazione di un paragrafo, di una sezione, etc.
+% type
+% permette di classificare in base a una tipologia
+% <epigraph> citazione all’inizio del testo, o nella pagina del titolo,
+% eventualmente con riferimento bibliografico
+% <opener> raggruppa un serie di elementi (data, luogo, saluti,
+% etc.) all’inizio del <div>, specie di una lettera
+% <argument> lista degli argomenti trattati nel <div>
+% <trailer>
+% frase che compare alla fine del <div> (ad esempio
+% “Fine del capitolo 1”)
+% <closer>
+% raggruppa un serie di elementi (data, luogo, saluti,
+% etc.) alla fine del <div>, specie di una lettera
+% 20Schemi di codifica TEI – Moduli base
+% Esempio di <div> con apertura/chiusura
+% <div type="lettera”>
+% <opener>
+% <dateline>
+% <name type="place">Pisa</name>
+% <date>20 marzo 2015</date>
+% </dateline>
+% <salute>Gentilissima Prof.ssa Scannagatti,</salute>
+% </opener>
+% <p>sono spiacente di doverle comunicare che un’invasione di cavallette si
+% è abbattuta sui miei quaderni incautamente lasciati in giardino, e li ha
+% divorati interamente.</p>
+% <p>Questo purtroppo significa che non posso mostrare i compiti svolti,
+% come sempre, con solerzia e assiduo impegno.</p>
+% <closer>
+% <salute>Certo di poter contare sulla sua comprensione le porgo i miei
+% migliori saluti,</salute>
+% <signed>Pierino Rossi</signed>
+% </closer>
+% </div>
+% 21Schemi di codifica TEI – Moduli base
+% Errori frequenti 1
+% molto spesso nell’intestazione si fraintende il significato
+% dell’elemento <fileDesc>
+% questo elemento serve in primo luogo a dare informazioni
+% sul file stesso, non sul testo originale
+% il riferimento alla fonte dalla quale è tratto il testo codificato
+% deve essere inserito nel <sourceDesc>
+% i titoli sono codificati con <title> soltanto nel caso di
+% riferimenti bibliografici
+% i titoli del testo, dei capitoli etc. si marcano con <head>
+% 22Schemi di codifica TEI – Moduli base
+% Nota sugli errori possibili
+% gli errori che si possono commettere durante la codifica
+% di un testo ricadono più o meno in tre categorie:
+% errori sintattici: un elemento inserito in un punto sbagliato
+% della gerarchia, o che non può contenere testo etc.
+% errori di marcatura semantica: usare un elemento inadatto
+% allo scopo, ad esempio marcare un titolo con <emph>
+% errori di interpretazione del testo (che portano al II tipo o
+% all’assenza del markup che andrebbe inserito)
+% gli errori del primo tipo sono i più facili da individuare e
+% correggere, quelli del terzo i più difficili
+% 23Schemi di codifica TEI – Moduli base
+% A proposito di <div>
+% domanda che ricorre periodicamente: perché non usare nomi
+% più significativi invece di un contenitore generico come <div>
+% (= ‘suddivisione, parte di un testo’)?
+% perché non usare <book>, <chapter>, <section>, etc. come
+% fa, ad esempio, lo schema DOCBOOK?
+% troppa variabilità nell’uso comune, meglio usare un termine
+% generico che possa poi essere specificato usando l’attributo
+% type (es. <div type=”chapter”>)
+% i <div>, numerati o meno, possono essere ‘nidificati’, nessun
+% problema nel riproporre la struttura editoriale visibile
+% 24Schemi di codifica TEI – Moduli base
+% Attributi globali
+% alcuni attributi possono essere usati con qualsiasi
+% elemento (v. la classe att.global), in particolare:
+% n
+% un numero o un nome non univoco, possibilmente breve,
+% per identificare un elemento
+% rend informazioni relative all’aspetto (originale!) del testo
+% rendition simile a @rend, ma fa riferimento a elementi
+% <rendition> inseriti nell’<encodingDesc> (dentro <tagsDecl>)
+% xml:lang la lingua del testo contenuto da un elemento
+% xml:id un identificatore univoco per l’elemento
+% NB: in base ai moduli usati nello schema sono disponibili ulteriori attributi globali
+% 25Schemi di codifica TEI – Moduli base
+% Esempio 1
+% <text>
+% <body>
+% <div n="ch1" type="chapter">
+% <pb n="1"/>[...]
+% <p>[...] risulta chiaro se avete letto <title
+% rend="underline" xml:lang="fra">Les fleurs du
+% mal</title> [...]</p>
+% <p>[...] un grande esempio di <foreign
+% xml:lang="fra">savoir faire</foreign> [...]</p>
+% [...]
+% </div>
+% [ altri div ... ]
+% </body>
+% </text>
+% 26Schemi di codifica TEI – Moduli base
+% Esempio 2
+% <text>
+% <body>
+% <div n="ch1" type="chapter"> <pb n="1"/> [...]
+% <p n="1">[...] descritto altrove (si veda ad
+% esempio <ref target="#Rossi94">Rossi 1994</ref>)
+% [...] </p> [...]
+% </div>
+% [ altri div ... ]
+% <div n="bib" type="bibliography">
+% [...]
+% <bibl xml:id="Rossi94">
+% <author>Rossi, M.</author>[...]</bibl>
+% [...]
+% </div>
+% </body>
+% </text>
+% 27Schemi di codifica TEI – Moduli base
+% Esercizio 1
+% marcare il testo (file ese01.txt) come segue:
+% editor da usare: XML Copy Editor
+% inserire intestazione XML
+% marcare la struttura usando gli elementi fin qui descritti
+% in particolare marcare tutti i paragrafi usando <p>
+% verificare che sia ben formato premendo F2
+% salvare il file XML come ese01-Cognome.xml
+% file nominati diversamente non saranno accettati
+% testi tratti da http://www.liberliber.it/
+% 28Schemi di codifica TEI – Moduli base
+% Suggerimenti riguardo gli esercizi
+% non fate copia e incolla da Wordpad o Notepad, aprite
+% direttamente i testi usando XML Copy editor
+% i documenti XML hanno come estensione .xml, quindi
+% salvate subito una copia con tale estensione
+% aprite le Guidelines TEI nel navigatore
+% per prima cosa marcare la struttura: cominciare la
+% marcatura semantica come secondo passo
+% ogni esercizio ha degli obiettivi da raggiungere:
+% controllate prima di spedire
+% non lasciate accumulare gli errori
+% 29Schemi di codifica TEI – Moduli base
+% Errori frequenti 2
+% <div> non può essere usato allo stesso livello gerarchico
+% di <p>, in altre parole non si può alternare <div> con
+% <p>:
+% <div> [...] </div>
+% <p> [...] </p>
+% <div> [...] </div>
+% ← INVALID!!!
+% <div> e tutti gli altri elementi strutturali “puri” non
+% possono contenere testo:
+% <div>Pippo</div>
+% ← INVALID!!!
+% <person>Pippo</person> ← INVALID!!!
+% 30Schemi di codifica TEI – Moduli base
+% Enfasi e termini particolari 1
+% <emph>
+% parole o frasi enfatizzate nel testo
+% questo è il <emph>mio</emph> computer!
+% <foreign>
+% parola o frase in una lingua diversa
+% In quel punto entrò il bidello a dare il <foreign
+% xml:lang="lat">finis</foreign>.
+% <distinct>
+% “diverso” dal testo (arcaico, gergale, etc.)
+% saltò in groppa al <distinct>fido destriero</distinct>
+% <hi>
+% elemento generico
+% <hi rend="double">N</hi>el mezzo del cammin di nostra vita
+% il suo nome è <hi rend="italic">Mario Rossi</hi>
+% 31Schemi di codifica TEI – Moduli base
+% Enfasi e termini particolari 2
+% <mentioned> parola o frase menzionata ma non usata
+% il termine corretto è <mentioned>epigrafe</mentioned>
+% <soCalled>
+% parola o espressione da cui ci si distanzia
+% il cosiddetto <soCalled>darwinismo sociale</soCalled>
+% <term>
+% una o più parole considerate termine tecnico
+% possiamo definire il <term xml:id="NPL"
+% rend="italic">neopositivismo logico</term>
+% <gloss>
+% una spiegazione o glossa riguardo il testo
+% come <gloss target="#NPL">una corrente filosofica basata
+% sul principio che la filosofia debba aspirare al rigore
+% proprio della scienza</gloss>
+% 32Schemi di codifica TEI – Moduli base
+% Citazioni 1
+% <q>
+% testo citato da altre fonti: discorso diretto, esempi
+% (nei dizionari), etc.
+% La mia maestra della prima superiore mi salutò di
+% sulla porta della classe e mi disse: <q rend="PRE
+% mdash">Enrico, tu vai al piano di sopra, quest'anno;
+% non ti vedrò nemmen più passare!</q>
+% <quote>
+% frase o brano attribuito a fonte esterna
+% <p>E allora disse: <q rend="PRE lsquo POST
+% rsquo">Ecco come comincia la Divina Commedia:
+% <quote>Nel mezzo del cammin di nostra vita / Mi
+% ritrovai per una selva oscura</quote>.</q></p>
+% 33Schemi di codifica TEI – Moduli base
+% Citazioni 2
+% <said> testo pronunciato ad alta voce o pensato
+% <cit> citazione con riferimento bibliografico
+% Lexicography has shown little sign of being affected by the work
+% of followers of J.R. Firth, probably best summarized in his
+% slogan, <cit>
+% <quote>You shall know a word by the company it keeps.</quote>
+% <ref>(Firth, 1957)</ref>
+% </cit>
+% semplice riferimento bibliografico nell’esempio, possibile
+% aggiungere un collegamento (a capitolo/sezione o a una
+% specifica entrata bibliografica) usando l’attributo @target
+% 34Schemi di codifica TEI – Moduli base
+% A proposito di <q> e <quote>
+% possono contenere non solo altri elementi simili (<q> e
+% <quote>) ma anche elementi come <p>, <l>, etc.:
+% <p>
+% <q>The Lord! The Lord! It is Sakya Muni himself,</q> the lama half
+% sobbed; and under his breath began the wonderful Buddhist invocation:­<q>
+% <quote>
+% <l>To Him the Way — the Law — Apart —</l>
+% <l>Whom Maya held beneath her heart</l>
+% <l>Ananda's Lord — the Bodhisat</l>
+% </quote>
+% And He is here! The Most Excellent Law is here also. My
+% pilgrimage is well begun. And what work! What work!</q>
+% </p>
+% possibili problemi relativi alla gerarchia (tag overlap, gerarchie
+% sovrapposte):
+% <p>Allora disse: <q>Sarò breve.</p><p>Ho finito.</q></p>
+% 35Schemi di codifica TEI – Moduli base
+% Nomi, numeri e date 1
+% <rs>
+% lett. referring string, nome o etichetta generica
+% <q>Mio caro <rs type="person">Filippo</rs></q>,
+% gli disse <rs type="person">sua moglie</rs>...
+% <name>
+% nome proprio (di persona, luogo, etc.)
+% <q>Mio caro <name type="person">Filippo</name></q>,
+% <num>
+% un numero in qualsiasi formato
+% <num value="23">XXIII</num>
+% <date>
+% una data in qualsiasi formato
+% nato il <date when="1868­02­10">10 febb. 1868</date>
+% <time>
+% l’ora in qualsiasi formato
+% alle <time when="8.00">otto del mattino</time>
+% 36Schemi di codifica TEI – Moduli base
+% Nomi, numeri e date 2
+% se gli elementi dei moduli di base risultassero insufficienti per
+% la codifica è possibile usare un modulo specifico:
+% 13 Names, Dates, People, and Places (
+% http://www.tei-c.org/release/doc/tei-p5-doc/en/html/ND.html )
+% questo modulo permette una granularità molto maggiore
+% grazie agli elementi specifici che mette a disposizione
+% (<persName>, <forename>, <surname>, <roleName>,
+% <addName>, etc.)
+% possibile creare sistema prosopografico
+% ricchezza degli attributi (anche nella versione base)
+% 37Schemi di codifica TEI – Moduli base
+% La pagina del titolo
+% elemento <titlePage> può contenere:
+% <docTitle> e (o direttamente) <titlePart>: titolo anche in più
+% parti
+% <docEdition>: informazioni riguardo l’edizione
+% <byline> e (o direttamente) <docAuthor>: autore
+% <docImprint>: informazioni di stampa, a sua volta include
+% <publisher>: editore
+% <pubPlace>: luogo di stampa
+% <date>: data
+% <docDate>: data
+% 38Schemi di codifica TEI – Moduli base
+% Esempio di pagina del titolo
+% <titlePage>
+% <titlePart>Cuore</titlePart>
+% <byline>di <docAuthor>E. de
+% Amicis</docAuthor></byline>
+% <docEdition>Edizione integrale</docEdition>
+% <docImprint>
+% <publisher>Newton Compton editori</publisher>
+% <pubPlace>Roma</pubPlace>
+% <date>1994</date>
+% </docImprint>
+% </titlePage>
+% 39Schemi di codifica TEI – Moduli base
+% Esempio di pagina del titolo
+% <titlePage>
+% <docAuthor>E. DE AMICIS</docAuthor>
+% <docTitle>
+% <titlePart type= " main " >CUORE</titlePart>
+% <titlePart>Libro per i ragazzi</titlePart>
+% </docTitle>
+% <docEdition>98.a edizione</docEdition>
+% <graphic url= "publisher.png" >
+% <docImprint>
+% <pubPlace>MILANO</pubPlace>
+% <publisher>FRATELLI TREVES, EDITORI</publisher>
+% <date>1889</date>
+% </docImprint>
+% </titlePage>
+% 40Schemi di codifica TEI – Moduli base
+% Associare uno schema di codifica
+% per qualsiasi progetto anche mediamente impegnativo è
+% preferibile creare un proprio schema TEI
+% cominciamo a validare sulla base di uno schema a partire
+% dall’esercizio ese02.txt
+% associazione di uno schema al documento TEI XML:
+% XML Copy Editor: XML → Associa → DTD di sistema
+% Oxygen: Document → Schema → Associate Schema...
+% altri editor: inserire manualmente il <!DOCTYPE> nel
+% caso si usi una DTD, o la processing instruction <?xml-
+% model> descritta nel capitolo A Gentle Introduction to XML
+% 41Schemi di codifica TEI – Moduli base
+% Nota su XML Copy Editor
+% XCE non supporta ancora l’uso di schemi di codifica nel
+% formato RelaxNG, necessario ricorrere alla vecchia DTD
+% XCE controlla anche la coerenza interna dello schema
+% un messaggio come quello che segue può essere
+% ignorato, l’informazione essenziale è se il documento è
+% valido oppure no (riportato in cima):
+% ese02-*******.xml is valid
+% Attenzione at line 2, column 37: element
+% '_DUMMY_model.resourceLike' is referenced in a content
+% model but was never declared
+% Attenzione at line 2, column 37: element
+% '_DUMMY_model.gLike' is referenced in a content model but
+% was never declared
+% 42Schemi di codifica TEI – Moduli base
+% Esercizio 2
+% marcare il testo (file ese02.txt) come segue:
+% editor da usare: XML Copy Editor
+% aprire il sito delle norme TEI P5
+% marcare la struttura per prima cosa
+% marcare tutte le espressioni enfatizzate (underscore =
+% corsivo), i discorsi diretti, le citazioni, i nomi, etc.
+% verificare che sia ben formato premendo F2 e validare
+% salvare il file XML come ese02-Cognome.xml
+% testi tratti da http://www.gutenberg.org/
+% 43Schemi di codifica TEI – Moduli base
+% Collegamenti interni ed esterni
+% <ptr/>
+% specifica un puntatore a un altro “luogo” (un altro
+% punto dello stesso testo o di un altro testo)
+% <p>Il sistema di puntatori è basato sul meccanismo W3C
+% Xpointer. Per maggiori informazioni si veda il
+% capitolo <ptr target="#SA­id"/>; per le specifiche si
+% veda <ptr target="http://www.w3.org/TR/xptr­xpointer/
+% "/>; v. anche <ptr type="image" target="#fig22"/>.</p>
+% <ref>
+% specifica un puntatore a un altro “luogo”, può
+% includere del testo
+% Si veda il <ref>terzo capitolo, p. 24</ref>.
+% Si veda il <ref target="#cap3.24">terzo capitolo,
+% par. 24</ref>
+% 44Schemi di codifica TEI – Moduli base
+% Liste e tabelle
+% <list> qualsiasi tipo di lista (type per specificare)
+% <head> intestazione (titolo) della lista
+% <item> un elemento della lista
+% <label> numero o esponente associato all’<item>
+% <headLabel> intestazione per gli esponenti della lista
+% <headItem> intestazione per gli elementi della lista
+% 45Schemi di codifica TEI – Moduli base
+% Liste e tabelle
+% agli item può essere associata o no una label, ma in caso
+% affermativo deve essere presente per tutti
+% il testo non deve essere necessariamente ordinato come lista
+% per essere marcato in quanto tale:
+% <list><head>Ingredienti:</head> <item>un cucchiaio di
+% zucchero;</item> <item>mezzo chilo di farina;</item>
+% <item>due uova.</item></list>
+% usare l’attributo type per specificare il tipo di lista
+% gli elementi per tabelle sono <table>, <row>, <cell> disponibili
+% con il modulo figures, v. il cap. 14 Tables, Formulae and
+% Graphics ( http://www.tei-c.org/release/doc/tei-p5-doc/en/html/FT.html )
+% 46Schemi di codifica TEI – Moduli base
+% Lista semplice
+% <list type="simple">
+% <head>Lista della spesa:</head>
+% <item>pane;</item>
+% <item>frutta;</item>
+% <item>verdura;</item>
+% <item>latte;</item>
+% <item>farina;</item>
+% <item>uova;</item>
+% <item>tovaglioli;</item>
+% <item>bicchieri;</item>
+% <item>piatti.</item>
+% </list>
+% 47Schemi di codifica TEI – Moduli base
+% Glossario
+% <list type="gloss">
+% <head>Tecnologie XML:</head>
+% <label>XSL</label>
+% <item>eXtensible Stylesheet Language</item>
+% <label>XSL­T</label>
+% <item>XSL ­ Transformations</item>
+% <label>XSL­FO</label>
+% <item>XSL – Formatting Objects</item>
+% <label>XQuery</label>
+% <item>XML Query Language</item>
+% <label>XPAth</label>
+% <item>XML Path Language</item>
+% </list>
+% 48Schemi di codifica TEI – Moduli base
+% Tabella
+% <table rows="3" cols="2">
+% <row>
+% <cell>HTML</cell>
+% <cell>Derivato da SGML (come applicazione), il
+% linguaggio del World Wide Web.</cell>
+% </row>
+% <row>
+% <cell>XML</cell>
+% <cell>Derivato da SGML (per semplificazione).</cell>
+% </row>
+% <row>
+% <cell>XSL­T</cell>
+% <cell>Fogli di stile per XML.</cell>
+% </row>
+% </table>
+% 49Schemi di codifica TEI – Moduli base
+% Note
+% l’elemento <note> permette di inserire una nota di
+% qualsiasi tipo (attributi type e place)
+% la nota può appartenere al testo codificato, o può essere
+% opera di chi lo codifica (attributo resp)
+% se non nel flusso del testo usare gli attributi target e
+% targetEnd per stabilire collegamento preciso
+% Le <title>Guidelines</title><note n="2" place="foot"
+% resp="rrdt">C.M. Sperberg­McQueen and Lou Burnard,
+% <title>Guidelines for Electronic Text Encoding and
+% Interchange</title> (Chicago, Oxford: Text Encoding
+% initiative, 2002).</note> sono nate con lo scopo di [...]
+% 50Schemi di codifica TEI – Moduli base
+% Esercizio 3
+% marcare il testo del file ese03.jpg come segue:
+% editor da usare: XML Copy Editor o Editix
+% marcare tutto quello che si vede nella pagina
+% marcare come glossario usando <list> oppure
+% in alternativa: marcare come glossario <term> + <gloss>
+% usare identificatori e puntatori/riferimenti
+% inserire un paio di note a piè di pagina
+% verificare costantemente che il documento sia valido
+% salvare il file XML come ese03-Cognome.xml
+% 51Schemi di codifica TEI – Moduli base
+% Bibliografia
+% i riferimenti bibliografici, compresa la bibliografia vera e
+% propria, sono codificati usando i seguenti elementi:
+% <bibl>
+% citazione bibliografica di tipo “flessibile”: possono
+% essere presenti solo alcuni elementi; usata anche
+% nel corpo del testo (NB: stessi elementi del succ.)
+% <biblStruct>
+% citazione bibliografica di tipo strutturato: gli
+% elementi devono seguire uno schema fisso
+% <biblFull > citazione bibliografica di tipo strutturato completo:
+% gli elementi devono seguire uno schema fisso e
+% devono essere tutti presenti
+% <listBibl> lista di citazioni bibliografiche in uno qualsiasi
+% dei formati citati sopra
+% 52Schemi di codifica TEI – Moduli base
+% Tipi di pubblicazione
+% ogni voce bibliografica può essere codificata sulla base di
+% tre possibili tipi di pubblicazione:
+% <analytic> “analitico”: informazioni su un titolo che
+% non costituisce una pubblicazione autonoma
+% (articolo di rivista o in una miscellanea)
+% <monogr> “monografico”: informazioni su una
+% pubblicazione, anche di tipo periodico (rivista)
+% <series> “serie”: informazioni su di una serie
+% editoriale
+% tipicamente impiegati con gli elementi <biblStruct> e
+% (meno di frequente) <biblFull>, più flessibilità con <bibl>
+% 53Schemi di codifica TEI – Moduli base
+% Titolo, autore, curatore
+% <title> il titolo della pubblicazione; più livelli (attr. level):
+% level=”a”
+% articolo (article)
+% level=”j”
+% rivista (journal)
+% level=”m”
+% monografia (monograph)
+% level=”s”
+% serie (series)
+% level=”u”
+% non pubblicato (unpublished)
+% <author> autore della pubblicazione; può contenere
+% direttamente il nome dell’autore o elementi più
+% complessi (<persName> e sub-elementi)
+% <editor> curatore della pubblicazione; vedi sopra
+% 54Schemi di codifica TEI – Moduli base
+% Elementi descrittivi
+% <imprint> raggruppa informazioni relative alla stampa
+% o diffusione di una pubblicazione
+% <publisher> l’editore responsabile della produzione a
+% stampa o diffusione
+% <pubPlace> il luogo di pubblicazione
+% <date> la data di pubblicazione
+% <biblScope> l’estensione (in pagine, volumi) della
+% pubblicazione;
+% permette di specificare il tipo di estensione
+% ad es. se si tratta di pagine
+% type
+% <biblScope> può essere usato anche all’interno di <series>
+% 55Schemi di codifica TEI – Moduli base
+% Esempio semplice
+% il caso di una monografia con autore unico:
+% <biblStruct xml:id="Robinson1993d">
+% <monogr>
+% <author>Robinson, P.</author>
+% <title level="m">The Digitization of Primary Textual
+% Sources</title>
+% <imprint>
+% <pubPlace>Oxford</pubPlace>
+% <publisher>Office for Humanities
+% Communication</publisher>
+% <date>1993</date>
+% </imprint>
+% </monogr>
+% </biblStruct>
+% 56Schemi di codifica TEI – Moduli base
+% un articolo di miscellanea con due autori:
+% <biblStruct xml:id="Mohler2001">
+% <analytic>
+% <author>Mohler, Peter Ph.</author>
+% <author>Zuell, Cornelia</author>
+% <title level="a">Applied Text Theory: Qualitative Analysis of
+% Answers to Open Ended Questions</title>
+% </analytic>
+% <monogr>
+% <editor>Mark D. West</editor>
+% <title level="m">Application of Computer Content Analysis</title>
+% <imprint>
+% <pubPlace>Westport CN</pubPlace>
+% <publisher>Ablex</publisher>
+% <date>2001</date>
+% <biblScope type="pages">1­16</biblScope>
+% </imprint>
+% </monogr>
+% </biblStruct>
+% 57Schemi di codifica TEI – Moduli base
+% un articolo su rivista di un solo autore:
+% <biblStruct xml:id="Ester1994">
+% <analytic>
+% <author>Ester, Michael</author>
+% <title level="a">Digital Images in the Context of Visual
+% Collections and Scholarship</title>
+% </analytic>
+% <monogr>
+% <title level="j">Visual Resources</title>
+% <imprint>
+% <date>1994</date>
+% </imprint>
+% <biblScope type="vol">X, 1</biblScope>
+% <biblScope type="pages">23</biblScope>
+% </monogr>
+% <note type="key">iproc</note>
+% </biblStruct>
+% 58Schemi di codifica TEI – Moduli base
+% Componenti non testuali: immagini
+% possibile includere nella marcatura immagini in formato XML
+% (SVG, il formato TEI) e in formato binario (TIFF, JPEG, PNG)
+% <graphic/>
+% contiene un puntatore a una immagine
+% url
+% può essere locale o esterna
+% <binaryObject> dati binari che costituiscono una immagine
+% <media>
+% riferimento a file audio, video etc.
+% <figure>
+% raggruppa informazioni relative a un’immagine
+% <head>
+% titolo o didascalia relativa all’immagine
+% <figDesc>
+% descrizione dell’immagine
+% <graphic>
+% puntatore a un’immagine
+% NB <figure> nella P5 fa parte del modulo figures ( http://www.tei-
+% c.org/release/doc/tei-p5-doc/en/html/FT.html#FTGRA )
+% 59Schemi di codifica TEI – Moduli base
+% Esempio TEI P4
+% NB: nella TEI P4 è indispensabile inserire dichiarazioni
+% relative alle immagini nell’intestazione del documento
+% <?xml version='1.0' encoding='utf­8'?>
+% ...
+% <!NOTATION JPEG PUBLIC
+% 'ISO DIS 10918//NOTATION JPEG Graphics Format//EN' >
+% <!ENTITY PDatabase SYSTEM "support/PDatabase.png" NDATA PNG>
+% ]>
+% ...
+% <p>The system is build around a relational database, called the
+% <soCalled>palaeographical database</soCalled>, that contains all
+% the information the application produces and processes:</p>
+% <figure entity="PDatabase">
+% <figDesc>Schematic of the SPI system.</figDesc>
+% </figure>
+% 60Schemi di codifica TEI – Moduli base
+% Esempi TEI P5
+% inserimento di un’immagine in un documento P5:
+% <p>Questo fenomeno è chiaramente visibile nella figura che
+% segue:
+% <graphic url="diagramma.png"/>
+% Altre variazioni delle crescite trimestrali sono
+% disponibili nel rapporto allegato alla relazione.</p>
+% immagine impiegata come intestazione in un documento P5:
+% <head>
+% <graphic
+% url="http://www.iath.virginia.edu/gants/Ornaments/Heads/hp­
+% ral02.gif"/>
+% </head>
+% 61

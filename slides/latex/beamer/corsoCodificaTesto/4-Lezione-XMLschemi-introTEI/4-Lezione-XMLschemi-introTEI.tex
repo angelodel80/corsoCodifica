@@ -1,0 +1,93 @@
+% slide di panoramica sulla tecnologia XML
+% % Panoramica XML: definizione, sintassi, documento ben formato, documento valido
+% cos'è XML
+% XML is used when you want to mark up a textual resource and to store data in a suitable and recognized standard way.
+
+%% slide premesse
+
+
+\documentclass{beamer}
+    
+    %    \usepackage[english]{babel}
+        %\usepackage[latin1]{inputenc}
+        %\usepackage[T1]{fontenc}
+    
+    \mode<presentation>{
+      \setbeamertemplate{background canvas}[vertical shading]
+      \usetheme{Berkeley}
+      \useoutertheme{himinfolines}
+    }
+      
+    \usepackage{ucs}
+    \usepackage[utf8]{inputenc}
+    \usepackage[english,polutonikogreek,italian,UKenglish,british]{babel}
+    \usepackage{graphicx}
+    \usepackage{colortbl}
+    \usepackage{multicol}
+    \usepackage{ulem}
+    \usepackage{verbatim}
+    \usepackage{alltt}
+    \usepackage{ccicons}
+    \usepackage{MnSymbol,wasysym}
+    \usepackage{tikzsymbols}
+    \usepackage{textcomp}
+    \usepackage{xmpincl}
+    
+    \usepackage{parskip}
+    \setcounter{nframes}{100}
+    \setcounter{nframe}{1}
+    \setbeamercovered{dynamic}
+    \newenvironment{grcenv}{\begin{otherlanguage}{greek}}{\end{otherlanguage}}
+    \newcommand{\g}[1]{\textgreek{#1}}
+    \definecolor{darkgreen}{rgb}{0,0.5,0}
+    \definecolor{darkblue}{rgb}{0,0,0.5}
+    \definecolor{grey}{rgb}{0.5,0.5,0.5}
+    \setcounter{tocdepth}{5}
+    
+    \makeatletter
+    
+    \makeatother
+    %\includexmp{LicencesAndLicensing}
+    
+    %frame00 metadata
+        \title{Codifica di Testi - XML Schema e Intro TEI \\a.a. 2018-2019}
+        \author[A.M. Del Grosso]{Angelo Mario Del Grosso}
+        \institute{\texttt{angelo.delgrosso@ilc.cnr.it} \\\bigskip\textit{CNR-ILC-LicoLab}}
+        \date{Istituto di Linguistica Computazionale ``A. Zampolli'', \today}
+        \AtBeginSection[]{
+        \begin{frame}<beamer>
+        \addtocounter{nframe}{1}
+        \footnotesize
+        \frametitle{Progress status}
+        \tableofcontents[currentsection,hideothersubsections]
+        \end{frame}
+        }
+    
+\begin{document}
+
+\begin{frame}
+	\maketitle
+\end{frame}
+
+\begin{frame}
+	\frametitle{Contenuto della lezione}
+	\tableofcontents
+\end{frame}
+
+\section{XML Schema Definition (XSD)}
+\input{includes/4-xsd.tex}
+
+\section{Introduzione Text Encoding Initiative}
+\input{includes/4-intro-tei.tex}
+
+\section{Conclusioni}
+\input{includes/4-conclusion.tex}
+
+\section*{Bibliografia}
+%\input{includes/3-bibliografia.tex}
+
+\end{document}
+
+
+
+
