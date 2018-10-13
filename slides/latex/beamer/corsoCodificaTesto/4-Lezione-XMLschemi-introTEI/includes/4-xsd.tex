@@ -1080,16 +1080,16 @@
 
 	\begin{block}{simple types: deriving by Union}
 		\texttt{<xsd:simpleType name=``ZipCityUnion''>
-		  <xsd:union>
-		    <xsd:simpleType>
-		      <xsd:restriction base="ZipType"/>
-		    </xsd:simpleType>
-		    <xsd:simpleType>
-		      <xsd:restriction base="CityType"/>
-		    </xsd:simpleType>
-		  </xsd:union>
-		 </xsd:simpleType>}
-		
+			<xsd:union>
+			<xsd:simpleType>
+			<xsd:restriction base="ZipType"/>
+			</xsd:simpleType>
+			<xsd:simpleType>
+			<xsd:restriction base="CityType"/>
+			</xsd:simpleType>
+			</xsd:union>
+			</xsd:simpleType>}
+
 	\end{block}
 
 \end{frame}
@@ -1120,7 +1120,7 @@
 	\addtocounter{nframe}{1}
 
 	\begin{block}{simple types: deriving}
-		 The value will be accepted only if it validates successfully with one of the base types.
+		The value will be accepted only if it validates successfully with one of the base types.
 	\end{block}
 
 	\begin{block}{simple types: deriving}
@@ -1157,7 +1157,7 @@
 
 	\begin{block}{Simple types: controllare la derivazione}
 		XSD provides a way to protect your Simple Type so that no other Types can inherit from it.
-		
+
 	\end{block}
 
 	\begin{block}{controllare la derivazione: l'attributo final}
@@ -1289,26 +1289,26 @@
 
 	\begin{block}{Named Complex Type Esempio}
 		\texttt{
-			  <xsd:complexType name=``addressType''>
-     			<xsd:all>
-       				<xsd:element name="address"/>
-       				<xsd:element name="street"/>
-       				<xsd:element name="settlment"/>
-       				<xsd:element name="country"/>
-				 </xsd:all>
-			 </xsd:complexType>
+			<xsd:complexType name=``addressType''>
+			<xsd:all>
+			<xsd:element name="address"/>
+			<xsd:element name="street"/>
+			<xsd:element name="settlment"/>
+			<xsd:element name="country"/>
+			</xsd:all>
+			</xsd:complexType>
 		}
 	\end{block}
 
 	\begin{block}{Named Complex types Esempio}
 		\texttt{
 			<xsd:element name=``AddressDivision''>
-    			<xsd:complexType>
-      			<xsd:sequence>
-        			<xsd:element name="addresseer"/>
-					<xsd:element name="address" type="addressType"/>
-				</xsd:sequence>
-				</xsd:complexType>
+			<xsd:complexType>
+			<xsd:sequence>
+			<xsd:element name="addresseer"/>
+			<xsd:element name="address" type="addressType"/>
+			</xsd:sequence>
+			</xsd:complexType>
 			</xsd:element>
 		}
 	\end{block}
@@ -1323,15 +1323,15 @@
 
 	\begin{block}{Complex Type}
 		Named Complex Types provide a great deal of reusability.
- Anonymous types appears within the complex type that owns the element.
+		Anonymous types appears within the complex type that owns the element.
 
 	\end{block}
 
 	\begin{block}{Anonymous Complex types}
 		\texttt{
 			<xsd:element name=``Customer''>
-			     <xsd:complexType>
-			       <xsd:sequence>
+			<xsd:complexType>
+			<xsd:sequence>
 		}
 	\end{block}
 	\textit{Such declarations cannot be reused}
@@ -1431,13 +1431,13 @@
 	\begin{block}{Complex type: simple content esempio}
 		\texttt{
 			<xsd:element name=``name''>
-				<xsd:complexType>
-				<xsd:simpleContent>
-					<xsd:extension base=``xsd:string''>
-					<xsd:attribute name="type" type="xsd:string"/>
-					</xsd:extension>
-				</xsd:simpleContent>
-				</xsd:complexType>
+			<xsd:complexType>
+			<xsd:simpleContent>
+			<xsd:extension base=``xsd:string''>
+			<xsd:attribute name="type" type="xsd:string"/>
+			</xsd:extension>
+			</xsd:simpleContent>
+			</xsd:complexType>
 			</xsd:element>
 		}
 	\end{block}
@@ -1474,20 +1474,20 @@
 	\begin{block}{Complex type: element-only content - esempio}
 		\texttt{
 			<xsd:group name=``fileDesc''>
-     <xsd:sequence>
-       <xsd:element name="titleStmt"/>
-	   <xsd:element name="publicationStmt"/>
-	   <xsd:element name="sourceDesc" />
-     </xsd:sequence>
-   </xsd:group>
-   <xsd:element name=``teiHeader''>
-     <xsd:complexType>
-       <xsd:sequence>
-         <xsd:group ref=``fileDesc''/>
-       </xsd:sequence>
-     </xsd:complexType>
-   </xsd:element>
- </xsd:schema>
+			<xsd:sequence>
+			<xsd:element name="titleStmt"/>
+			<xsd:element name="publicationStmt"/>
+			<xsd:element name="sourceDesc" />
+			</xsd:sequence>
+			</xsd:group>
+			<xsd:element name=``teiHeader''>
+			<xsd:complexType>
+			<xsd:sequence>
+			<xsd:group ref=``fileDesc''/>
+			</xsd:sequence>
+			</xsd:complexType>
+			</xsd:element>
+			</xsd:schema>
 		}
 	\end{block}
 \end{frame}
@@ -1504,7 +1504,7 @@
 	\end{block}
 
 	\begin{block}{Complex type: mixed content}
-		 Mixed content type makes text values more meaningful. The Mixed content type XML is more meaningful to an XML parser then simple text, because the information can be extracted more accurately from it.
+		Mixed content type makes text values more meaningful. The Mixed content type XML is more meaningful to an XML parser then simple text, because the information can be extracted more accurately from it.
 	\end{block}
 \end{frame}
 
@@ -1515,15 +1515,15 @@
 
 	\begin{block}{Complex type: mixed content - esempio}
 		\texttt{
-  <xsd:element name=``seg''>
-    <xsd:complexType \textit{mixed=``true''}>
-      <xsd:all>
-        <xsd:element name="name"/>
-        <xsd:element name="quote"/>
-      </xsd:all>
-    </xsd:complexType>
-  </xsd:element>
-</xsd:schema>
+			<xsd:element name=``seg''>
+			<xsd:complexType \textit{mixed=``true''}>
+			<xsd:all>
+			<xsd:element name="name"/>
+			<xsd:element name="quote"/>
+			</xsd:all>
+			</xsd:complexType>
+			</xsd:element>
+			</xsd:schema>
 		}
 	\end{block}
 
@@ -1547,14 +1547,14 @@
 
 	\begin{block}{Complex type: mixed content}
 		\texttt{<xsd:element name=``seg''>
-		<xsd:complexType \textit{mixed=``true''}>
-		  <xsd:all>
+			<xsd:complexType \textit{mixed=``true''}>
+			<xsd:all>
 			<xsd:element name="quote"/>
-		  </xsd:all>
-		<xsd:attribute name="part"/>
-		</xsd:complexType>
-	  </xsd:element>
-	</xsd:schema>}
+			</xsd:all>
+			<xsd:attribute name="part"/>
+			</xsd:complexType>
+			</xsd:element>
+			</xsd:schema>}
 	\end{block}
 \end{frame}
 
@@ -1566,7 +1566,7 @@
 
 	\begin{block}{Elementi e Attributi: ordering}
 		Attributes of an element can appear in any order. The order/position is not significant for attributes.
-		
+
 	\end{block}
 
 	\begin{block}{Elementi e Attributi: ordering}
@@ -1581,13 +1581,13 @@
 	\addtocounter{nframe}{1}
 
 	\begin{block}{Elementi e Attributi: ordering}
-		 XSD uses order indicators to specify the order in which elements should appear inside an XML node.
+		XSD uses order indicators to specify the order in which elements should appear inside an XML node.
 	\end{block}
 
 	\begin{block}{Elementi e Attributi: ordering}
 		\begin{itemize}
 			\item sequence: is used to specify that the elements should appear in exactly the same order as they are defined in the schema (<xsd:sequence />).
-			\item all: is used to specify that the child elements can appear in any order (<xsd:all>). 
+			\item all: is used to specify that the child elements can appear in any order (<xsd:all>).
 			\item choice: is used when only one element from a list of child elements should appear in the XML instance (<xsd:choice />).
 		\end{itemize}
 	\end{block}
@@ -1603,7 +1603,7 @@
 	\end{block}
 
 	\begin{block}{Elementi e Attributi: ordering}
-		We can control the occurrence of elements by using minOccurs and maxOccurs attributes of element declaration. 
+		We can control the occurrence of elements by using minOccurs and maxOccurs attributes of element declaration.
 	\end{block}
 \end{frame}
 
@@ -1614,11 +1614,11 @@
 	\addtocounter{nframe}{1}
 
 
-% esempio: The following table shows a few examples that demonstrate how to control the occurrences of elements by using minOccurs and maxOccurs.
-% (immagine:TabellaMinMaxOccurs).
+	% esempio: The following table shows a few examples that demonstrate how to control the occurrences of elements by using minOccurs and maxOccurs.
+	% (immagine:TabellaMinMaxOccurs).
 
 	\begin{center}
-	 \includegraphics[width=.95\textwidth]{imgs/TabellaMinMaxOccurs.png}
+		\includegraphics[width=.95\textwidth]{imgs/TabellaMinMaxOccurs.png}
 	\end{center}
 
 \end{frame}
@@ -1657,7 +1657,7 @@
 	\addtocounter{nframe}{1}
 
 	\begin{block}{Content Model: Deriving}
-		 New Complex Types can be derived from Complex Types having Simple Content. It is not allowed to derive Complex Content from Simple Content.
+		New Complex Types can be derived from Complex Types having Simple Content. It is not allowed to derive Complex Content from Simple Content.
 	\end{block}
 
 	\begin{block}{Content Model: Complex Content}
@@ -1695,16 +1695,16 @@
 		\texttt{
 			<xsd:complexType name=``divTypeEx''>
 			<xsd:simpleContent>
-				<xsd:extension base=``divType''>
-				<xsd:attribute name=``type'' use=``required''/>
-				</xsd:extension>
+			<xsd:extension base=``divType''>
+			<xsd:attribute name=``type'' use=``required''/>
+			</xsd:extension>
 			</xsd:simpleContent>
 			</xsd:complexType>
 		}
 	\end{block}
 \end{frame}
 
- 
+
 
 \begin{frame}
 	\frametitle{Elementi per la definizione degli schemi xml}
@@ -1736,22 +1736,22 @@
 
 	\begin{block}{Complex Type derivation: esempio}
 		\texttt{
-			<xsd:complexType name=``RestrictedPhoneType''>
-  				\emph{<xsd:simpleContent>}
-    				<xsd:restriction base=``PhoneType''>
-      				<xsd:pattern value="[0-9]{3}-[0-9]{3}-[0-9]{4}"/>
-      				<xsd:attribute name=``Type''>
-        				<xsd:simpleType>
-          					<xsd:restriction base=``xsd:string''>
-          					<xsd:enumeration value="Home"/>
-            				<xsd:enumeration value="Work"/>
-         					</xsd:restriction>
-        				</xsd:simpleType>
-      				</xsd:attribute>
-      				\textit{<xsd:attribute name="CallOnWeekend" type="xsd:boolean" use="prohibited"/> }
-    				</xsd:restriction>
-  				</xsd:simpleContent>
-			</xsd:complexType>
+		<xsd:complexType name=``RestrictedPhoneType''>
+		\emph{<xsd:simpleContent>}
+		<xsd:restriction base=``PhoneType''>
+		<xsd:pattern value="[0-9]{3}-[0-9]{3}-[0-9]{4}"/>
+		<xsd:attribute name=``Type''>
+		<xsd:simpleType>
+		<xsd:restriction base=``xsd:string''>
+		<xsd:enumeration value="Home"/>
+		<xsd:enumeration value="Work"/>
+		</xsd:restriction>
+		</xsd:simpleType>
+		</xsd:attribute>
+		\textit{<xsd:attribute name="CallOnWeekend" type="xsd:boolean" use="prohibited"/> }
+		</xsd:restriction>
+		</xsd:simpleContent>
+		</xsd:complexType>
 		}
 	\end{block}
 \end{frame}
@@ -1821,8 +1821,8 @@
 
 	\begin{block}{Complex Type derivation}
 		\begin{itemize}
-			\item If the elements in the base type are declared within a sequence group, the derived type cannot change it to all or choice groups. 
-			\item If the base type has all, the derived type can change it to sequence. 
+			\item If the elements in the base type are declared within a sequence group, the derived type cannot change it to all or choice groups.
+			\item If the base type has all, the derived type can change it to sequence.
 			\item If the base type has choice, the derived type must also have choice.
 		\end{itemize}
 	\end{block}
@@ -1838,68 +1838,128 @@
 	\end{block}
 
 	\begin{block}{Complex Type derivation}
-\begin{itemize}
-	\item if you want to remove an attribute you need to re-declare it in the derived type as \textit{prohibited}.
-	\item A derived type cannot eliminate an attribute declared as mandatory in the base type.
-	\item You need to redefine an attribute in the derived type only if you want to restrict the value space of the attribute.
-\end{itemize}
+		\begin{itemize}
+			\item if you want to remove an attribute you need to re-declare it in the derived type as \textit{prohibited}.
+			\item A derived type cannot eliminate an attribute declared as mandatory in the base type.
+			\item You need to redefine an attribute in the derived type only if you want to restrict the value space of the attribute.
+		\end{itemize}
 	\end{block}
 \end{frame}
 
 
 
 % Esempio:
+\begin{frame}
+	\frametitle{Elementi per la definizione degli schemi xml}
+	\framesubtitle{principi XSD}
+	\addtocounter{nframe}{1}
 
-% <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema">
-%   <!-- Contact Element -->
-%   <xsd:element name="Contact" type="RestrictedContactType"/>
+	\begin{block}{Complex Type derivation: esempio}
+		\texttt{
+		<xsd:complexType name=``RestrictedPhoneType''>
+		\emph{<xsd:simpleContent>}
+		<xsd:restriction base=``PhoneType''>
+		<xsd:pattern value="[0-9]{3}-[0-9]{3}-[0-9]{4}"/>
+		<xsd:attribute name=``Type''>
+		<xsd:simpleType>
+		<xsd:restriction base=``xsd:string''>
+		<xsd:enumeration value="Home"/>
+		<xsd:enumeration value="Work"/>
+		</xsd:restriction>
+		</xsd:simpleType>
+		</xsd:attribute>
+		\textit{<xsd:attribute name="CallOnWeekend" type="xsd:boolean" use="prohibited"/> }
+		</xsd:restriction>
+		</xsd:simpleContent>
+		</xsd:complexType>
+		}
+	\end{block}
+\end{frame}
 
-%   <!-- Contact Type -->
-%   <xsd:complexType name="ContactType">
-%     <xsd:sequence>
-%       <xsd:element name="Phone" minOccurs="0"/>
-%       <xsd:element name="Email" minOccurs="0"/>
-%     </xsd:sequence>
-%     <xsd:attribute name="Name" />
-%     <xsd:attribute name="Title"/>
-%   </xsd:complexType>
-%
-%
-%   <!-- Restricted Contact Type -->
-%   <xsd:complexType name="RestrictedContactType">
-%     <xsd:complexContent>
-%       <xsd:restriction base="ContactType">
-%         <xsd:sequence>
-%           <xsd:element name="Phone">
-%             <xsd:simpleType>
-%               <xsd:restriction base="xsd:string">
-%                 <xsd:pattern value="[0-9]{3}-[0-9]{3}-[0-9]{4}"/>
-%               </xsd:restriction>
-%             </xsd:simpleType>
-%            </xsd:element>
-%          </xsd:sequence>
-%         <xsd:attribute name="Title" use="prohibited"/>
-%         <xsd:attribute name="Name">
-%           <xsd:simpleType>
-%             <xsd:restriction base="xsd:string">
-%               <xsd:maxLength value="20"/>
-%             </xsd:restriction>
-%           </xsd:simpleType>
-%         </xsd:attribute>
-%       </xsd:restriction>
-%     </xsd:complexContent>
-%   </xsd:complexType>
-% </xsd:schema>
+\begin{frame}
+	\frametitle{Elementi per la definizione degli schemi xml}
+	\framesubtitle{principi XSD}
+	\addtocounter{nframe}{1}
+
+	\begin{block}{Complex Type derivation: esempio}
+		%   <!-- Contact Element -->
+		\texttt{\emph{<xsd:element name="Contact" type="RestrictedContactType"/>}}
+
+		%   <!-- Contact Type -->
+		\\\texttt{   <xsd:complexType name=``ContactType''>
+			<xsd:sequence>
+			<xsd:element name="Phone" minOccurs="0"/>
+			<xsd:element name="Email" minOccurs="0"/>
+			</xsd:sequence>
+			<xsd:attribute name="Name" />
+			<xsd:attribute name="Title"/>
+			</xsd:complexType>}
+	\end{block}
+\end{frame}
+
+\begin{frame}
+	\frametitle{Elementi per la definizione degli schemi xml}
+	\framesubtitle{principi XSD}
+	\addtocounter{nframe}{1}
+
+	\begin{block}{Complex Type derivation: esempio}
+		%<!-- Restricted Contact Type -->
+		\\\texttt{   <xsd:complexType name=``RestrictedContactType''>
+		<xsd:complexContent>
+		<xsd:restriction base=``ContactType''>
+		<xsd:sequence>
+		<xsd:element name=``Phone''>
+		<xsd:simpleType>
+		<xsd:restriction base=``xsd:string''>
+		<xsd:pattern value="[0-9]{3}-[0-9]{3}-[0-9]{4}"/>
+		</xsd:restriction>
+		</xsd:simpleType>
+		</xsd:element>
+		</xsd:sequence>
+		<xsd:attribute name="Title" use="prohibited"/>
+		<xsd:attribute name=``Name''>
+		<xsd:simpleType>
+		<xsd:restriction base=``xsd:string''>
+		<xsd:maxLength value="20"/>
+		</xsd:restriction>
+		</xsd:simpleType>
+		</xsd:attribute>
+		</xsd:restriction>
+		</xsd:complexContent>
+		</xsd:complexType>}
+	\end{block}
+\end{frame}
 
 
+\begin{frame}
+	\frametitle{Elementi per la definizione degli schemi xml}
+	\framesubtitle{principi XSD}
+	\addtocounter{nframe}{1}
+
+	\begin{block}{Complex Type derivation}
+		It is also possible to derive an empty content complex type from an element-only content type. By keeping the restriction element empty, we can derive an empty content type. This does not affect the attributes.
+	\end{block}
+
+	\begin{block}{Complex Type derivation}
+		\textbf{Gli elementi del tipo dell'elemento base devono essere opzionali}
+	\end{block}
+\end{frame}
 
 
+\begin{frame}
+	\frametitle{Elementi per la definizione degli schemi xml}
+	\framesubtitle{principi XSD}
+	\addtocounter{nframe}{1}
 
-% It is also possible to derive an empty content complex type from an element-only content type. By keeping the restriction element empty, we can derive an empty content type. This does not affect the attributes. 
-% Gli elementi del tipo dell'elemento base devono essere opzionali.
+	\begin{block}{Complex Type extension}
+		\textbf{complex types are extended to add new elements and attributes}
+	\end{block}
 
-%% complex types are extended to add new elements and attributes. When deriving by extension, all elements and attributes in the base type will be passed down to the derived type by default.
-%% Esempio:
+	\begin{block}{Complex Type extension}
+		When deriving by extension, all elements and attributes in the base type will be passed down to the derived type by default.
+	\end{block}
+\end{frame}
+
 
 % <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema">
 %   <!-- Contact Element -->
@@ -1935,65 +1995,203 @@
 %   <Fax>888-999-3333</Fax>
 % </Contact>
 
-%% You can derive new complex types from a mixed content complex type by restriction or by extension. Derivation of complex types with mixed content is very similar to the derivation of element-only types.
-%  when deriving by restriction from a mixed type, you can derive a mixed type, element-only type or empty content type. The rules of derivation are similar to the rules of element-only content model: Elements declared in the parent type do not pass down to the derived type.
+\begin{frame}
+	\frametitle{Elementi per la definizione degli schemi xml}
+	\framesubtitle{principi XSD}
+	\addtocounter{nframe}{1}
+
+	\begin{block}{Complex Type derivation: esempio}
+		%   <!-- Contact Element -->
+		\texttt{\emph{<xsd:element name="Contact" type="ExtendedContactType"/>}}
+
+		%   <!-- Contact Type -->
+		\\\texttt{
+			<xsd:complexType name=``ContactType''>
+			<xsd:sequence>
+			<xsd:element name=``Phone''/>
+			<xsd:element name=``Email'' minOccurs=``0''/>
+			</xsd:sequence>
+			<xsd:attribute name=``Name'' use=``required''/>
+			<xsd:attribute name=``Title''/>
+			</xsd:complexType>
+			</xsd:schema>
+		}
+	\end{block}
+\end{frame}
+
+
+\begin{frame}
+	\frametitle{Elementi per la definizione degli schemi xml}
+	\framesubtitle{principi XSD}
+	\addtocounter{nframe}{1}
+
+	\begin{block}{Complex Type derivation: esempio}
+		%<!-- Extended Contact Type -->
+		\texttt{
+			<xsd:complexType name=``ExtendedContactType''>
+			<xsd:complexContent>
+			<xsd:extension base=``ContactType''>
+			<xsd:sequence>
+			<xsd:element name=``Fax''/>
+			</xsd:sequence>
+			<xsd:attribute name=``Department''/>
+			</xsd:extension>
+			</xsd:complexContent>
+			</xsd:complexType>
+		}
+	\end{block}
+\end{frame}
+
+\begin{frame}
+	\frametitle{Elementi per la definizione degli schemi xml}
+	\framesubtitle{principi XSD}
+	\addtocounter{nframe}{1}
+
+	\begin{block}{Complex Type: deriving }
+		You can derive new complex types from a mixed content complex type by restriction or by extension. Derivation of complex types with mixed content is very similar to the derivation of element-only types.
+	\end{block}
+
+	\begin{block}{Complex Type: deriving}
+		when deriving by restriction from a mixed type, you can derive a mixed type, element-only type or empty content type. The rules of derivation are similar to the rules of element-only content model: Elements declared in the parent type do not pass down to the derived type.
+	\end{block}
+\end{frame}
+
+
+
 % esempio:
-% <xsd:complexType name="RestrictedNoteType" mixed="true">
-%     <xsd:complexContent>
-%       <xsd:restriction base="NoteType">
-%         <xsd:sequence>
-%           <xsd:element name="name"/>
-%         </xsd:sequence>
-%       </xsd:restriction>
-%     </xsd:complexContent>
-%   </xsd:complexType>
-% 
-% by simply removing the "mixed" attribute from the complex type declaration you derive an element-only complex type from mixed content.
+\begin{frame}
+	\frametitle{Elementi per la definizione degli schemi xml}
+	\framesubtitle{principi XSD}
+	\addtocounter{nframe}{1}
 
-%% When deriving from a mixed type by restriction, we could create an empty content type if all the elements in the base type are optional. By keeping the restriction element empty we could eliminate all the elements declared in the base type (if those elements are declared optional in the base type). To eliminate attributes, you need to declare them in the derived type with prohibited attribute.
+	\begin{block}{Complex Type derivation: esempio}
+		%<!-- Extended Contact Type -->
+		\texttt{
+			<xsd:complexType name="RestrictedNoteType" mixed=``true''>
+			<xsd:complexContent>
+			<xsd:restriction base=``NoteType''>
+			<xsd:sequence>
+			<xsd:element name="name"/>
+			</xsd:sequence>
+			</xsd:restriction>
+			</xsd:complexContent>
+			</xsd:complexType>
+		}
+	\end{block}
+	\textit{by simply removing the ``mixed'' attribute from the complex type declaration you derive an element-only complex type from mixed content.}
+\end{frame}
 
-% the XSD specification allows deriving a simple content from a mixed-content type,
-% esempio:
-% <xsd:complexType name="SimpleNoteType">
-%     <xsd:simpleContent>
-%       <xsd:restriction base="NoteType">
-%         <xsd:simpleType>
-%           <xsd:restriction base="xsd:string"/>
-%         </xsd:simpleType>
-%       </xsd:restriction>
-%     </xsd:simpleContent>
-%   </xsd:complexType>
+\begin{frame}
+	\frametitle{Elementi per la definizione degli schemi xml}
+	\framesubtitle{principi XSD}
+	\addtocounter{nframe}{1}
+	\begin{block}{Complex Type: deriving - Mixed Content}
+		When deriving from a mixed type by restriction, we could create an empty content type if all the elements in the base type are optional. By keeping the restriction element empty we could eliminate all the elements declared in the base type (if those elements are declared optional in the base type). To eliminate attributes, you need to declare them in the derived type with prohibited attribute.
+	\end{block}
+\end{frame}
 
-%% when deriving by extension, we could create only a mixed content complex type.
-% esempio:
-% <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema">
-%   <!-- Invoice Note Element -->
-%   <xsd:element name="InvoiceNote" type="ExtendedNoteType"/>
-%   <!-- Extended Note Type -->
-%   <xsd:complexType name="ExtendedNoteType" mixed="true">
-%     <xsd:complexContent>
-%       <xsd:extension base="NoteType">
-%         <xsd:sequence>
-%           <xsd:element name="email"/>
-%         </xsd:sequence>
-%       </xsd:extension>
-%     </xsd:complexContent>
-%   </xsd:complexType>
-%   <!-- Note Type -->
-%   <xsd:complexType name="NoteType" mixed="true">
-%     <xsd:sequence>
-%       <xsd:element name="name"/>
-%       <xsd:element name="mobile"/>
-%     </xsd:sequence>
-%   </xsd:complexType>
-% </xsd:schema>
-% Una possibile istanza XML
-% <InvoiceNote>
-%   Call <name>Steve</name> on <mobile>999 999 9999</mobile> or <email>steve@somedomain.com</email> before shipping the order.
-% </InvoiceNote>
+% esempio
+\begin{frame}
+	\frametitle{Elementi per la definizione degli schemi xml}
+	\framesubtitle{principi XSD}
+	\addtocounter{nframe}{1}
 
-% Derive a new type from an empty content element by restriction or by extension.
-% Since an empty content complex type can have only attributes, the only purpose of deriving from an empty content type by restriction is to eliminate attributes or add additional validations to the attributes.
+	\begin{block}{Complex Type derivation: esempio}
+		\texttt{
+			<xsd:complexType name=``SimpleNoteType''>
+			<xsd:simpleContent>
+			<xsd:restriction base=``NoteType''>
+			<xsd:simpleType>
+			<xsd:restriction base="xsd:string"/>
+			</xsd:simpleType>
+			</xsd:restriction>
+			</xsd:simpleContent>
+			</xsd:complexType>
+		}
+	\end{block}
+	\textit{the XSD specification allows deriving a simple content from a mixed-content type}
+\end{frame}
+
+
+
+% esempio
+\begin{frame}
+	\frametitle{Elementi per la definizione degli schemi xml}
+	\framesubtitle{principi XSD}
+	\addtocounter{nframe}{1}
+
+	\begin{block}{Complex Type derivation: esempio}
+		%   <!-- Note Type -->
+		\texttt{
+			<xsd:complexType name=``NoteType'' mixed=``true''>
+			<xsd:sequence>
+			<xsd:element name="name"/>
+			<xsd:element name="mobile"/>
+			</xsd:sequence>
+			</xsd:complexType>
+		}
+	\end{block}
+	\textit{when deriving by extension, we could create only a mixed content complex type}
+\end{frame}
+
+
+\begin{frame}
+	\frametitle{Elementi per la definizione degli schemi xml}
+	\framesubtitle{principi XSD}
+	\addtocounter{nframe}{1}
+
+	\begin{block}{Complex Type derivation: esempio}
+		\texttt{\emph{<xsd:element name="InvoiceNote" type="ExtendedNoteType"/>}}
+
+
+		%!-- Extended Note Type -->
+		\\\texttt{
+			<xsd:complexType name=``ExtendedNoteType'' mixed=``true''>
+			<xsd:complexContent>
+			<xsd:extension base=``NoteType''>
+			<xsd:sequence>
+			<xsd:element name=``email''/>
+			</xsd:sequence>
+			</xsd:extension>
+			</xsd:complexContent>
+			</xsd:complexType>
+		}
+	\end{block}
+	\textit{when deriving by extension, we could create only a mixed content complex type}
+\end{frame}
+
+\begin{frame}
+	\frametitle{Elementi per la definizione degli schemi xml}
+	\framesubtitle{principi XSD}
+	\addtocounter{nframe}{1}
+
+	\begin{block}{Complex Type derivation: esempio}
+		%   Una possibile istanza XML
+		\texttt{
+			<InvoiceNote>
+			Call <name>Steve</name> on <mobile>999 999 9999</mobile> or <email>steve@somedomain.com</email> before shipping the order.
+			</InvoiceNote>
+		}
+	\end{block}
+	\textit{when deriving by extension, we could create only a mixed content complex type}
+\end{frame}
+
+\begin{frame}
+	\frametitle{Elementi per la definizione degli schemi xml}
+	\framesubtitle{principi XSD}
+	\addtocounter{nframe}{1}
+
+	\begin{block}{Complex Type extension}
+		\textbf{Derive a new type from an empty content element by restriction or by extension}
+	\end{block}
+
+	\begin{block}{Complex Type extension}
+		Since an empty content complex type can have only attributes, the only purpose of deriving from an empty content type by restriction is to eliminate attributes or add additional validations to the attributes.
+	\end{block}
+\end{frame}
+
+
+
 %% esempio:
 % <xsd:complexType name="RestrictedPhoneType">
 %   <xsd:complexContent>
@@ -2010,59 +2208,163 @@
 %   </xsd:complexContent>
 % </xsd:complexType>
 
-% when you derive by extension you can create an empty type, mixed type or element only content type.
-%% when you derive by extension you can create an empty type, mixed type or element only content type.
-%% we can derive an element only content type from an empty content type by extension
-% esempio:
-% <xsd:complexType name="EmptyPhoneType">
-%   <xsd:complexContent>
-%     <xsd:extension base="PhoneType">
-%       <xsd:sequence>
-%         <xsd:element name="Mobile"/>
-%       </xsd:sequence>
-%     </xsd:extension>
-%   </xsd:complexContent>
-% </xsd:complexType>
 
-%% It is also possible to derive a mixed content type from an empty content type.
-% Esempio:
-% <xsd:complexType name="EmptyPhoneType" mixed="true">
-%   <xsd:complexContent>
-%     <xsd:extension base="PhoneType">
-%        <xsd:sequence>
-%            <xsd:element name="Mobile"/>
-%       </xsd:sequence>
-%     </xsd:extension>
-%   </xsd:complexContent>
-% </xsd:complexType>
-%% una possibile istanza XML:
-% <Phone Home="888-888-8888" Work="777-777-7777">
-%   If not available at home or work, call me on my
-%   <Mobile>666-666-6666</Mobile>.
-% </Phone>
-% 
-% Per ricapitolare:
-% New complex types can be created from complex types by extension and restriction.
-% (tabella riepilogativa content type derivation)
+\begin{frame}
+	\frametitle{Elementi per la definizione degli schemi xml}
+	\framesubtitle{principi XSD}
+	\addtocounter{nframe}{1}
 
-% how to control the derivation of a given complex type: The derivation of a complex type can be controlled by using the final attribute of Complex Type Declaration.
-% taking one of the following three values:
-% restriction: prevent derivation by restriction
-% extension: derivation by extension
-% #all: prevent type derivation by restriction or by extension
-% esempio:
-% <xsd:complexType name="ContactType" final="extension restriction">
-%   <xsd:sequence>
-%     <xsd:element name="Phone" minOccurs="0"/>
-%   </xsd:sequence>
-%   <xsd:attribute name="Name" />
-% </xsd:complexType>
+	\begin{block}{Complex Type extension}
+		\textbf{ when you derive by extension you can create an empty type, mixed type or element only content type.}
+	\end{block}
 
-% derivazione invalida:
-% <xsd:complexType name="ExtendedContactType">
-%     <xsd:complexContent>
-%       <xsd:extension base="ContactType"/>
-%     </xsd:complexContent>
-%   </xsd:complexType>
+\end{frame}
 
-%
+
+\begin{frame}
+	\frametitle{Elementi per la definizione degli schemi xml}
+	\framesubtitle{principi XSD}
+	\addtocounter{nframe}{1}
+
+	\begin{block}{Complex Type derivation: esempio}
+
+		\texttt{
+			<xsd:complexType name=``EmptyPhoneType''>
+			<xsd:complexContent>
+			<xsd:extension base=``PhoneType''>
+			<xsd:sequence>
+			<xsd:element name=``Mobile''/>
+			</xsd:sequence>
+			</xsd:extension>
+			</xsd:complexContent>
+			</xsd:complexType>
+		}
+	\end{block}
+	\textit{we can derive an element only content type from an empty content type by extension}
+\end{frame}
+
+
+\begin{frame}
+	\frametitle{Elementi per la definizione degli schemi xml}
+	\framesubtitle{principi XSD}
+	\addtocounter{nframe}{1}
+
+	\begin{block}{Complex Type derivation: esempio}
+
+		\texttt{
+			<xsd:complexType name=``EmptyPhoneType'' mixed=``true''>
+			<xsd:complexContent>
+			<xsd:extension base=``PhoneType''>
+			<xsd:sequence>
+			<xsd:element name="Mobile"/>
+			</xsd:sequence>
+			</xsd:extension>
+			</xsd:complexContent>
+			</xsd:complexType>
+		}
+	\end{block}
+	\textit{It is also possible to derive a mixed content type from an empty content type.}
+\end{frame}
+
+\begin{frame}
+	\frametitle{Elementi per la definizione degli schemi xml}
+	\framesubtitle{principi XSD}
+	\addtocounter{nframe}{1}
+
+	\begin{block}{Complex Type derivation: esempio}
+
+		\texttt{
+			<Phone Home=``888-888-8888'' Work=``777-777-7777''>
+			If not available at home or work, call me on my
+			<Mobile>666-666-6666</Mobile>.
+			</Phone>
+		}
+	\end{block}
+	\textit{It is also possible to derive a mixed content type from an empty content type.}
+\end{frame}
+
+
+
+
+\begin{frame}
+	\frametitle{Elementi per la definizione degli schemi xml}
+	\framesubtitle{principi XSD}
+	\addtocounter{nframe}{1}
+
+	\begin{block}{Derivazione: riepilogando}
+
+		\includegraphics[width=.95\textwidth]{imgs/TabellaContentTypeDerivation.png}
+
+	\end{block}
+
+	\textit{New complex types can be created from complex types by extension and restriction.}
+\end{frame}
+
+
+
+\begin{frame}
+	\frametitle{Elementi per la definizione degli schemi xml}
+	\framesubtitle{principi XSD}
+	\addtocounter{nframe}{1}
+
+	\begin{block}{Complex Type derivation: final attribute}
+		\textbf{The derivation of a complex type can be controlled by using the final attribute of Complex Type Declaration.}
+	\end{block}
+
+\end{frame}
+
+\begin{frame}
+	\frametitle{Elementi per la definizione degli schemi xml}
+	\framesubtitle{principi XSD}
+	\addtocounter{nframe}{1}
+
+	\begin{block}{Complex Type derivation: final attribute}
+		\textit{taking one of the following three values:}
+		\begin{itemize}
+			\item restriction: prevent derivation by restriction
+			\item extension: derivation by extension
+			\item #all: prevent type derivation by restriction or by extension
+		\end{itemize}
+
+	\end{block}
+
+\end{frame}
+
+% esempio: how to control the derivation of a given complex type: 
+\begin{frame}
+	\frametitle{Elementi per la definizione degli schemi xml}
+	\framesubtitle{principi XSD}
+	\addtocounter{nframe}{1}
+
+	\begin{block}{Complex Type derivation: esempio}
+
+		\texttt{
+			<xsd:complexType name=``ContactType'' final=``extension restriction''>
+			<xsd:sequence>
+			<xsd:element name="Phone" minOccurs="0"/>
+			</xsd:sequence>
+			<xsd:attribute name="Name" />
+			</xsd:complexType>
+		}
+	\end{block}
+	\textit{how to control the derivation of a given complex type: }
+\end{frame}
+
+\begin{frame}
+	\frametitle{Elementi per la definizione degli schemi xml}
+	\framesubtitle{principi XSD}
+	\addtocounter{nframe}{1}
+
+	\begin{block}{Complex Type derivation: esempio}
+
+		\texttt{
+			<xsd:complexType name=``ExtendedContactType''>
+		    <xsd:complexContent>
+		      <xsd:extension base="ContactType"/>
+		    </xsd:complexContent>
+		  </xsd:complexType>
+		}
+	\end{block}
+	\textit{how to control the derivation of a given complex type: }
+\end{frame}
+
