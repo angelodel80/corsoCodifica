@@ -305,7 +305,6 @@
 \end{frame}
 
 
-
 \begin{frame}
 	\frametitle{Elementi per la definizione degli schemi xml}
 	\framesubtitle{principi XSD}
@@ -326,8 +325,6 @@
 		\texttt{<xsd:group ref=``fileDesc''/>
 		}
 	\end{block}
-
-
 
 \end{frame}
 
@@ -353,18 +350,14 @@
 
 	\begin{block}{Element declaration: lista Attributi}
 		\begin{itemize}
-			\item \textbf{name} (\textit{g-l})
+			\item \textbf{name} (\textit{g-l}) the only mandatory attribute (give meaningful names to the elements)
+			\item type (g-l) adds data type related validations to the declaration of an element (XSD has buint-in data types)
+			\item id (g-l) uniquely identifies the given element (non ha effetti sull'istanza XML
+			\item default (g-l) specify the default value of an element (solo de l'elemento opzionale)
+			\item fixed (g-l) valore di un elemento predefinito (``fixed'' and ``default'' are mutually exclusive)
+			\item nillable (g-l) indica che l'elemento è vuoto (xsd:nil nell'istanza XML del documento)
+			\item block (g-l) It is used to control substitution (4 different vales, namely: substitution, extension restriction and \#all)
 		\end{itemize}
-
-		%\begin{itemize}
-		%\item \textbf{name} (\textit{g-l}) the only mandatory attribute (give meaningful names to the elements)
-		%\item type (g-l) adds data type related validations to the declaration of an element (XSD has buint-in data types)
-		%\item id (g-l) uniquely identifies the given element (non ha effetti sull'istanza XML
-		%\item default (g-l) specify the default value of an element (solo de l'elemento opzionale)
-		%\item fixed (g-l) valore di un elemento predefinito (``fixed'' and ``default'' are mutually exclusive)
-		%\item nillable (g-l) indica che l'elemento è vuoto (xsd:nil nell'istanza XML del documento)
-		%\item block (g-l) It is used to control substitution (4 different vales, namely: substitution, extension restriction and #all)
-		%\end{itemize}
 
 	\end{block}
 
@@ -379,15 +372,15 @@
 	\begin{block}{Element declaration: lista Attributi (cont.)}
 
 		\begin{itemize}
-			\item \textbf{final} (\textit{g}) limits
+			\item final (g) limits the declaration of substitution groups in schemas (can take values: \#all, restriction and extension.)
+			\item abstract (g) When an element is declared as abstract, it cannot be instantiated (force an element substitution)
+			\item substitutionGroup (g) is highly extensible (could easily add new types derived) esempio SG
+			\item minOccurs (l) control the occurrence of the elements: minimum number of times the element should appear in the XML instance (minOccurs=0 -> Optional).
+			\item maxOccurs (l) control the occurrence of the elements: The maximum number of times the element can appear within its parent.
+			\item ref (l) Refer to other elements declared globally in the same schema (certain level of reusability)
+			\item form (l) specifies whether the element needs to be qualified with a namespace prefix (be ``qualified'' or ``unqualified'')
 		\end{itemize}
-		%\item final (g) limits the declaration of substitution groups in schemas (can take values: #all, restriction and extension.)
-		%\item abstract (g) When an element is declared as abstract, it cannot be instantiated (force an element substitution)
-		%\item substitutionGroup (g) is highly extensible (could easily add new types derived) esempio SG
-		%\item minOccurs (l) control the occurrence of the elements: minimum number of times the element should appear in the XML instance (minOccurs=0 -> Optional).
-		%\item maxOccurs (l) control the occurrence of the elements: The maximum number of times the element can appear within its parent.
-		%\item ref (l) Refer to other elements declared globally in the same schema (certain level of reusability)
-		%\item form (l) specifies whether the element needs to be qualified with a namespace prefix (be ``qualified'' or ``unqualified'')
+
 
 
 	\end{block}
@@ -430,9 +423,14 @@
 
 \end{frame}
 
+% fare un paio di slide spiegando a cosa serve l'attribute substitutionGroup e come si usa. (pp 114-133)
 
-
-
+% The substitutionGroup attribute is used to declare elements capable of
+%serving as variable content containers. Abstract is used to specify that the
+%element cannot be instantiated directly. To instantiate such an element, a
+%substitution element needs to be created. The block and final attributes are
+%used to control substitution of the element. Final restricts substitution at
+%schema level and block restricts it at instance level.
 
 
 % Attribute Declaration
@@ -469,8 +467,6 @@
 
 \end{frame}
 
-
-
 % tabella con gli attributi nella dichiarazione degli attributi
 % "attributes of an attribute declaration"
 
@@ -487,7 +483,6 @@
 		\end{itemize}
 
 	\end{block}
-
 
 \end{frame}
 
@@ -562,9 +557,6 @@
 	\begin{block}{Attribute declaration: Attribute Groups}
 		Attribute Groups provide a convenient means to reuse attribute declarations in multiple complex types. Attribute Groups provide a better level of reusability by grouping one or more attribute declarations into a named group. By using an attribute group, you can avoid this repetition of code. Chain of attribute group hierarchies.
 	\end{block}
-
-
-
 \end{frame}
 
 
@@ -1586,9 +1578,9 @@
 
 	\begin{block}{Elementi e Attributi: ordering}
 		\begin{itemize}
-			\item sequence: is used to specify that the elements should appear in exactly the same order as they are defined in the schema (<xsd:sequence />).
-			\item all: is used to specify that the child elements can appear in any order (<xsd:all>).
-			\item choice: is used when only one element from a list of child elements should appear in the XML instance (<xsd:choice />).
+			\item sequence: is used to specify that the elements should appear in exactly the same order as they are defined in the schema (\texttt{<xsd:sequence />}).
+			\item all: is used to specify that the child elements can appear in any order (\texttt{<xsd:all>}).
+			\item choice: is used when only one element from a list of child elements should appear in the XML instance (\texttt{<xsd:choice />}).
 		\end{itemize}
 	\end{block}
 \end{frame}
@@ -1614,11 +1606,10 @@
 	\addtocounter{nframe}{1}
 
 
-	% esempio: The following table shows a few examples that demonstrate how to control the occurrences of elements by using minOccurs and maxOccurs.
-	% (immagine:TabellaMinMaxOccurs).
+	% esempio: The following table shows a few examples that demonstrate how to control the occurrences of elements by using minOccurs and maxOccurs. % (immagine:TabellaMinMaxOccurs).
 
 	\begin{center}
-		\includegraphics[width=.95\textwidth]{imgs/TabellaMinMaxOccurs.png}
+		\includegraphics[width=.95\textwidth]{imgs/tabellaMinMaxOccurs.png}
 	\end{center}
 
 \end{frame}
@@ -1815,9 +1806,9 @@
 	\framesubtitle{principi XSD}
 	\addtocounter{nframe}{1}
 
-	\begin{block}{Complex Type derivation}
+	
 		\textbf{All mandatory elements in the base type must exist in the derived type as well}
-	\end{block}
+	
 
 	\begin{block}{Complex Type derivation}
 		\begin{itemize}
@@ -1833,9 +1824,9 @@
 	\framesubtitle{principi XSD}
 	\addtocounter{nframe}{1}
 
-	\begin{block}{Complex Type derivation}
+	
 		\textbf{All mandatory elements in the base type must exist in the derived type as well}
-	\end{block}
+	
 
 	\begin{block}{Complex Type derivation}
 		\begin{itemize}
@@ -1884,9 +1875,9 @@
 	\begin{block}{Complex Type derivation: esempio}
 		%   <!-- Contact Element -->
 		\texttt{\emph{<xsd:element name="Contact" type="RestrictedContactType"/>}}
-
 		%   <!-- Contact Type -->
-		\\\texttt{   <xsd:complexType name=``ContactType''>
+		\texttt{
+			<xsd:complexType name=``ContactType''>
 			<xsd:sequence>
 			<xsd:element name="Phone" minOccurs="0"/>
 			<xsd:element name="Email" minOccurs="0"/>
@@ -1904,7 +1895,7 @@
 
 	\begin{block}{Complex Type derivation: esempio}
 		%<!-- Restricted Contact Type -->
-		\\\texttt{   <xsd:complexType name=``RestrictedContactType''>
+		\texttt{   <xsd:complexType name=``RestrictedContactType''>
 		<xsd:complexContent>
 		<xsd:restriction base=``ContactType''>
 		<xsd:sequence>
@@ -2003,9 +1994,8 @@
 	\begin{block}{Complex Type derivation: esempio}
 		%   <!-- Contact Element -->
 		\texttt{\emph{<xsd:element name="Contact" type="ExtendedContactType"/>}}
-
 		%   <!-- Contact Type -->
-		\\\texttt{
+		\texttt{
 			<xsd:complexType name=``ContactType''>
 			<xsd:sequence>
 			<xsd:element name=``Phone''/>
@@ -2145,7 +2135,7 @@
 
 
 		%!-- Extended Note Type -->
-		\\\texttt{
+		\texttt{
 			<xsd:complexType name=``ExtendedNoteType'' mixed=``true''>
 			<xsd:complexContent>
 			<xsd:extension base=``NoteType''>
@@ -2323,7 +2313,7 @@
 		\begin{itemize}
 			\item restriction: prevent derivation by restriction
 			\item extension: derivation by extension
-			\item #all: prevent type derivation by restriction or by extension
+			\item \#all: prevent type derivation by restriction or by extension
 		\end{itemize}
 
 	\end{block}
@@ -2359,10 +2349,10 @@
 
 		\texttt{
 			<xsd:complexType name=``ExtendedContactType''>
-		    <xsd:complexContent>
-		      <xsd:extension base="ContactType"/>
-		    </xsd:complexContent>
-		  </xsd:complexType>
+			<xsd:complexContent>
+			<xsd:extension base="ContactType"/>
+			</xsd:complexContent>
+			</xsd:complexType>
 		}
 	\end{block}
 	\textit{how to control the derivation of a given complex type: }
