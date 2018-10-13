@@ -1260,43 +1260,83 @@
 %% immagini per i tipi e esempi di catena di derivazione (DerivedTypeBaseType, DerivedTypeFromDerivedType, NumericalDerivedType, NumericalGrafico, String-Grafico).
 
 
+\begin{frame}
+	\frametitle{Elementi per la definizione degli schemi xml}
+	\framesubtitle{principi XSD}
+	\addtocounter{nframe}{1}
+
+	\begin{block}{Complex Type}
+		A complex type can have child elements and/or attributes.
+		\\ Attribute declarations cannot have Complex Types.
+		% an element has a Simple Type, it cannot have child elements or attributes. It can store only a text value.
+
+	\end{block}
+
+	\begin{block}{Named Complex types}
+		A Named Complex Type can be used within the declaration of other complex types
+	\end{block}
+
+\end{frame}
 
 
 
-
-
-
-%% ComplexType
-% A complex type can have child elements and/or attributes.
-% an element has a Simple Type, it cannot have child elements or attributes. It can store only a text value.
-% Attribute declarations cannot have Complex Types
-% All global declarations should have a name. A Named Complex Type can be used within the declaration of other complex types.
 %% Esempio:
 
-%<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema">
-% <!-- Address Type -->
-%  <xsd:complexType name="AddressType">
-%     <xsd:all>
-%       <xsd:element name="Address"/>
-%       <xsd:element name="Street"/>
-%       <xsd:element name="City"/>
-%       <xsd:element name="Zip"/>
-%       <xsd:element name="State"/>
-%     </xsd:all>
-%   </xsd:complexType>
-%   <!-- Customer Information -->
-%   <xsd:element name="Customer">
-%     <xsd:complexType>
-%       <xsd:sequence>
-%         <xsd:element name="CustomerName"/>
-%         <xsd:element name="Address" type="AddressType"/>
-%       </xsd:sequence>
-%     </xsd:complexType>
-%   </xsd:element>
-% </xsd:schema>
+\begin{frame}
+	\frametitle{Elementi per la definizione degli schemi xml}
+	\framesubtitle{principi XSD}
+	\addtocounter{nframe}{1}
 
-% Named Complex Types provide a great deal of reusability.
-% Anonymous types appears within the complex type that owns the element.
+	\begin{block}{Named Complex Type Esempio}
+		\texttt{
+			  <xsd:complexType name=``addressType''>
+     			<xsd:all>
+       				<xsd:element name="address"/>
+       				<xsd:element name="street"/>
+       				<xsd:element name="settlment"/>
+       				<xsd:element name="country"/>
+				 </xsd:all>
+			 </xsd:complexType>
+		}
+	\end{block}
+
+	\begin{block}{Named Complex types Esempio}
+		\texttt{
+			<xsd:element name=``AddressDivision''>
+    			<xsd:complexType>
+      			<xsd:sequence>
+        			<xsd:element name="addresseer"/>
+					<xsd:element name="address" type="addressType"/>
+				</xsd:sequence>
+				</xsd:complexType>
+			</xsd:element>
+		}
+	\end{block}
+
+\end{frame}
+
+
+\begin{frame}
+	\frametitle{Elementi per la definizione degli schemi xml}
+	\framesubtitle{principi XSD}
+	\addtocounter{nframe}{1}
+
+	\begin{block}{Complex Type}
+		Named Complex Types provide a great deal of reusability.
+ Anonymous types appears within the complex type that owns the element.
+
+	\end{block}
+
+	\begin{block}{Anonymous Complex types}
+		\texttt{
+			<xsd:element name=``Customer''>
+			     <xsd:complexType>
+			       <xsd:sequence>
+		}
+	\end{block}
+	\textit{Such declarations cannot be reused}
+\end{frame}
+
 %% esempio
 % <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema">
 %   <!-- Customer Information -->
@@ -1320,15 +1360,41 @@
 %   </xsd:element>
 % </xsd:schema>
 
-% Such declarations cannot be reused
+\begin{frame}
+	\frametitle{Elementi per la definizione degli schemi xml}
+	\framesubtitle{principi XSD}
+	\addtocounter{nframe}{1}
 
-%% The structure of the child elements of a Complex Type is called its Content Model.
-% Elements having Simple Content can store a text value and can hold attributes.
-% When an element has Complex Content, it can be either empty, element- only or mixed type.
-% Empty content element may have attributes.
-% An element is said to have element-only content when it has child elements – and optionally attributes, too – but doesn't hold a text value.
-% When an element has mixed content model it can store child elements, attributes and text value.
-% Esempio:
+	\begin{block}{Content Model}
+		The structure of the child elements of a Complex Type is called its Content Model.
+	\end{block}
+
+	\begin{block}{Content Model: Simple Content, Complex Content}
+		\begin{itemize}
+			\item Elements having Simple Content can store a text value and can hold attributes.
+			\item When an element has Complex Content, it can be either empty, element- only or mixed type.
+		\end{itemize}
+	\end{block}
+	\textit{Such declarations cannot be reused}
+\end{frame}
+
+\begin{frame}
+	\frametitle{Elementi per la definizione degli schemi xml}
+	\framesubtitle{principi XSD}
+	\addtocounter{nframe}{1}
+
+	\begin{block}{Content Model: complex content}
+		\begin{itemize}
+			\item Empty content element may have attributes.
+			\item An element is said to have element-only content when it has child elements – and optionally attributes, too, but doesn't hold a text value.
+			\item When an element has mixed content model it can store child elements, attributes and text value.
+		\end{itemize}
+	\end{block}
+	\textit{Such declarations cannot be reused}
+\end{frame}
+
+
+% Esempio mexed content:
 % <Email Priority="High">
 %   Dear <name>Jacob</name>,
 %   Your order has been
@@ -1338,6 +1404,7 @@
 %% Simple Content
 % when an element has Simple Content it can store a text value and can have attributes.
 % Simple Content does not allow child elements
+
 %% Esempio:
 %<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema">
 %  <xsd:element name="Phone">
@@ -1351,62 +1418,211 @@
 %   </xsd:element>
 % </xsd:schema>
 
-% New Complex Types can be derived from Complex Types having Simple Content. It is not allowed to derive Complex Content from Simple Content.
+\begin{frame}
+	\frametitle{Elementi per la definizione degli schemi xml}
+	\framesubtitle{principi XSD}
+	\addtocounter{nframe}{1}
 
-%% Complex Content can store child elements and attributes as well as text values.
+	\begin{block}{Complex type: simple content}
+		when an element has Simple Content it can store a text value and can have attributes.
+		\\Simple Content does not allow child elements.
+	\end{block}
+
+	\begin{block}{Complex type: simple content esempio}
+		\texttt{
+			<xsd:element name=``name''>
+				<xsd:complexType>
+				<xsd:simpleContent>
+					<xsd:extension base=``xsd:string''>
+					<xsd:attribute name="type" type="xsd:string"/>
+					</xsd:extension>
+				</xsd:simpleContent>
+				</xsd:complexType>
+			</xsd:element>
+		}
+	\end{block}
+\end{frame}
+
+
+\begin{frame}
+	\frametitle{Elementi per la definizione degli schemi xml}
+	\framesubtitle{principi XSD}
+	\addtocounter{nframe}{1}
+
+	\begin{block}{Complex type: Empty content}
+		Complex Types having empty content are very close to the ones having simple content
+	\end{block}
+
+	\begin{block}{Complex type: Empty content}
+		Empty content compex types cannot store a text value but thay can have attributes
+	\end{block}
+\end{frame}
+
 
 %% Empty content
 % Complex Types having empty content are very close to the ones having simple content, but they cannot store a text value. However, it can have attributes.
-%% Element-only content
-% These are Complex Types that hold elements and/or attributes, but no text values.
+
+\begin{frame}
+	\frametitle{Elementi per la definizione degli schemi xml}
+	\framesubtitle{principi XSD}
+	\addtocounter{nframe}{1}
+
+	\begin{block}{Complex type: element-only content}
+		These are Complex Types that hold elements and/or attributes, but no text values.
+	\end{block}
+
+	\begin{block}{Complex type: element-only content - esempio}
+		\texttt{
+			<xsd:group name=``fileDesc''>
+     <xsd:sequence>
+       <xsd:element name="titleStmt"/>
+	   <xsd:element name="publicationStmt"/>
+	   <xsd:element name="sourceDesc" />
+     </xsd:sequence>
+   </xsd:group>
+   <xsd:element name=``teiHeader''>
+     <xsd:complexType>
+       <xsd:sequence>
+         <xsd:group ref=``fileDesc''/>
+       </xsd:sequence>
+     </xsd:complexType>
+   </xsd:element>
+ </xsd:schema>
+		}
+	\end{block}
+\end{frame}
 
 %% Mixed Content
-% Mixed Content is a combination of Simple Content and Element-only content.
-% It can store child elements and attributes as well as text values.
-% Mixed content type makes text values more meaningful. The Mixed content type XML is more meaningful to an XML parser then simple text, because the information can be extracted more accurately from it. 
-% how to write the schema for a Complex Type that has Mixed Content.
-%% Esempio
-% <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema">
-%   <xsd:element name="InvoiceNote">
-%     <xsd:complexType mixed="true">
-%       <xsd:sequence>
-%         <xsd:element name="name"/>
-%         <xsd:element name="mobile"/>
-%       </xsd:sequence>
-%     </xsd:complexType>
-%   </xsd:element>
-% </xsd:schema>
+\begin{frame}
+	\frametitle{Elementi per la definizione degli schemi xml}
+	\framesubtitle{principi XSD}
+	\addtocounter{nframe}{1}
 
-% The only difference from element-only content model is the presence of the attribute "mixed." In DSE there are many cases where we would come across mixed types.
-% When a Complex Type contains elements and attributes, the attribute declarations should appear after the element declarations.
-%% esempio:
+	\begin{block}{Complex type: mixed content}
+		Mixed Content is a combination of Simple Content and Element-only content:
+		\\ It can store child elements and attributes as well as text values.
+	\end{block}
 
-% <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema">
-%   <xsd:element name="Customer">
-%     <xsd:complexType>
-%       <xsd:sequence>
-%         <xsd:element name="name"/>
-%         <xsd:element name="phone"/>
-%       </xsd:sequence>
-%       <xsd:attribute name="CustomerNumber"/>
-%     </xsd:complexType>
-%   </xsd:element>
-% </xsd:schema>
+	\begin{block}{Complex type: mixed content}
+		 Mixed content type makes text values more meaningful. The Mixed content type XML is more meaningful to an XML parser then simple text, because the information can be extracted more accurately from it.
+	\end{block}
+\end{frame}
 
-% Attribute declarations should always appear after element declarations.
-% Attributes of an element can appear in any order. The order/position is not significant for attributes.
-% The order/position of elements is significant in XML: specify for each Complex Type whether the children should follow a specific order or not.
-% XSD uses order indicators to specify the order in which elements should appear inside an XML node.
-% XSD defines the following order indicators:
-% - sequence: is used to specify that the elements should appear in exactly the same order as they are defined in the schema (<xsd:sequence />).
-% - all: is used to specify that the child elements can appear in any order (<xsd:all>). 
-% - choice: is used when only one element from a list of child elements should appear in the XML instance (<xsd:choice />).
+\begin{frame}
+	\frametitle{Elementi per la definizione degli schemi xml}
+	\framesubtitle{principi XSD}
+	\addtocounter{nframe}{1}
 
-%% Occurrence Indicator
-% One of the basic differences between an element and attribute is that an element can appear more than once. Attributes cannot appear more than once within the parent element.
-% We can control the occurrence of elements by using minOccurs and maxOccurs attributes of element declaration. 
+	\begin{block}{Complex type: mixed content - esempio}
+		\texttt{
+  <xsd:element name=``seg''>
+    <xsd:complexType \textit{mixed=``true''}>
+      <xsd:all>
+        <xsd:element name="name"/>
+        <xsd:element name="quote"/>
+      </xsd:all>
+    </xsd:complexType>
+  </xsd:element>
+</xsd:schema>
+		}
+	\end{block}
+
+	\begin{block}{Complex type: mixed content - esempio}
+		\texttt{
+			<seg><name>Petrarca</name> disse: <quote>Raramente la grande bellezza e la grande virtù dimorano assieme</quote></seg>
+		}
+	\end{block}
+
+	\textit{The only difference from element-only content model is the presence of the attribute ``mixed.'' In DSE there are many cases where we would come across mixed types.}
+\end{frame}
+
+\begin{frame}
+	\frametitle{Elementi per la definizione degli schemi xml}
+	\framesubtitle{principi XSD}
+	\addtocounter{nframe}{1}
+
+	\begin{block}{Complex type con attributi}
+		When a Complex Type contains elements and attributes, the attribute declarations should appear after the element declarations.
+	\end{block}
+
+	\begin{block}{Complex type: mixed content}
+		\texttt{<xsd:element name=``seg''>
+		<xsd:complexType \textit{mixed=``true''}>
+		  <xsd:all>
+			<xsd:element name="quote"/>
+		  </xsd:all>
+		<xsd:attribute name="part"/>
+		</xsd:complexType>
+	  </xsd:element>
+	</xsd:schema>}
+	\end{block}
+\end{frame}
+
+
+\begin{frame}
+	\frametitle{Elementi per la definizione degli schemi xml}
+	\framesubtitle{principi XSD}
+	\addtocounter{nframe}{1}
+
+	\begin{block}{Elementi e Attributi: ordering}
+		Attributes of an element can appear in any order. The order/position is not significant for attributes.
+		
+	\end{block}
+
+	\begin{block}{Elementi e Attributi: ordering}
+		The order/position of elements is significant in XML: specify for each Complex Type whether the children should follow a specific order or not.
+	\end{block}
+\end{frame}
+
+
+\begin{frame}
+	\frametitle{Elementi per la definizione degli schemi xml}
+	\framesubtitle{principi XSD}
+	\addtocounter{nframe}{1}
+
+	\begin{block}{Elementi e Attributi: ordering}
+		 XSD uses order indicators to specify the order in which elements should appear inside an XML node.
+	\end{block}
+
+	\begin{block}{Elementi e Attributi: ordering}
+		\begin{itemize}
+			\item sequence: is used to specify that the elements should appear in exactly the same order as they are defined in the schema (<xsd:sequence />).
+			\item all: is used to specify that the child elements can appear in any order (<xsd:all>). 
+			\item choice: is used when only one element from a list of child elements should appear in the XML instance (<xsd:choice />).
+		\end{itemize}
+	\end{block}
+\end{frame}
+
+\begin{frame}
+	\frametitle{Elementi per la definizione degli schemi xml}
+	\framesubtitle{principi XSD}
+	\addtocounter{nframe}{1}
+
+	\begin{block}{Elementi e Attributi: occurrence indicator}
+		Attributes cannot appear more than once within the parent element.
+	\end{block}
+
+	\begin{block}{Elementi e Attributi: ordering}
+		We can control the occurrence of elements by using minOccurs and maxOccurs attributes of element declaration. 
+	\end{block}
+\end{frame}
+
+
+\begin{frame}
+	\frametitle{Elementi per la definizione degli schemi xml}
+	\framesubtitle{principi XSD}
+	\addtocounter{nframe}{1}
+
+
 % esempio: The following table shows a few examples that demonstrate how to control the occurrences of elements by using minOccurs and maxOccurs.
 % (immagine:TabellaMinMaxOccurs).
+
+	\begin{center}
+	 \includegraphics[width=.95\textwidth]{imgs/TabellaMinMaxOccurs.png}
+	\end{center}
+
+\end{frame}
+
 
 %% Element Groups
 % provide reusability to a certain extent as they can be inserted into other complex types within the same schema. The schema is easier to modify and maintain.
@@ -1432,58 +1648,143 @@
 %       <phone>0039123456789</phone>
 % </author>
 
-% Complex Type derivation
-% as we saw with simple types, new types can be derived from complex types. New complex types can be derived from existing complex types by restriction or by extension.
-% New complex types can be derived from existing complex types by restriction or by extension. When you derive a complex type from a simple type, it can only have a simple content.
-% Esempio:
-% <xsd:complexType name="PhoneTypeEx">
-%   <xsd:simpleContent>
-%     <xsd:extension base="PhoneType">
-%       <xsd:attribute name="Type" use="required"/>
-%     </xsd:extension>
-%   </xsd:simpleContent>
-% </xsd:complexType>
 
-% When the final attribute is set to "extension," the simple type cannot be extended.
-% The derivation behavior of each content model is slightly different from others.
-% We can derive a new type by restriction or by extension from complex type simple content model.
-%% derive by restriction from a complex type having simple content
-% add restrictions to the content/text-value of the element
-% add restrictions to the attributes
-% remove one or more of the attributes.
+
+
+\begin{frame}
+	\frametitle{Elementi per la definizione degli schemi xml}
+	\framesubtitle{principi XSD}
+	\addtocounter{nframe}{1}
+
+	\begin{block}{Content Model: Deriving}
+		 New Complex Types can be derived from Complex Types having Simple Content. It is not allowed to derive Complex Content from Simple Content.
+	\end{block}
+
+	\begin{block}{Content Model: Complex Content}
+		Complex Content can store child elements and attributes as well as text values.
+	\end{block}
+\end{frame}
+
+% Complex Type derivation
+\begin{frame}
+	\frametitle{Elementi per la definizione degli schemi xml}
+	\framesubtitle{principi XSD}
+	\addtocounter{nframe}{1}
+
+	\begin{block}{Complex Type derivation}
+		new types can be derived from complex types
+	\end{block}
+
+	\begin{block}{Content Model: Complex Content}
+		New complex types can be derived from existing complex types by restriction or by extension
+	\end{block}
+\end{frame}
+
+\begin{frame}
+	\frametitle{Elementi per la definizione degli schemi xml}
+	\framesubtitle{principi XSD}
+	\addtocounter{nframe}{1}
+
+	\begin{block}{Complex Type derivation: da simple type}
+		When you derive a complex type from a simple type, it can only have a simple content.
+		\\if the \textit{final} attribute is set to \textbf{extension}, the simple type cannot be extended.
+
+	\end{block}
+
+	\begin{block}{Complex Type derivation: da simple type - esempio}
+		\texttt{
+			<xsd:complexType name=``divTypeEx''>
+			<xsd:simpleContent>
+				<xsd:extension base=``divType''>
+				<xsd:attribute name=``type'' use=``required''/>
+				</xsd:extension>
+			</xsd:simpleContent>
+			</xsd:complexType>
+		}
+	\end{block}
+\end{frame}
+
+ 
+
+\begin{frame}
+	\frametitle{Elementi per la definizione degli schemi xml}
+	\framesubtitle{principi XSD}
+	\addtocounter{nframe}{1}
+
+	\begin{block}{Complex Type derivation: da simple type}
+		The derivation behavior of each content model is slightly different from others.
+	\end{block}
+
+	\begin{block}{Complex Type derivation: da simple type - esempio}
+		\begin{itemize}
+			\item derive a new type by restriction or by extension from complex type simple content model
+			\item derive by restriction from a complex type having simple content
+			\item add restrictions to the content/text-value of the element
+			\item add restrictions to the attributes
+			\item remove one or more of the attributes
+		\end{itemize}
+	\end{block}
+\end{frame}
+
+
 %% Esempio:
 
-%<!-- Phone Type -->
-%   <xsd:complexType name="PhoneType">
-%     <xsd:simpleContent>
-%       <xsd:extension base="xsd:string">
-%         <xsd:attribute name="Type" type="xsd:string"/>
-%         <xsd:attribute name="CallOnWeekend" type="xsd:boolean"/>
-%       </xsd:extension>
-%     </xsd:simpleContent>
-%   </xsd:complexType>
-% </xsd:schema>
+\begin{frame}
+	\frametitle{Elementi per la definizione degli schemi xml}
+	\framesubtitle{principi XSD}
+	\addtocounter{nframe}{1}
 
-% <xsd:complexType name="RestrictedPhoneType">
-%   <xsd:simpleContent>
-%     <xsd:restriction base="PhoneType">
-%       <xsd:pattern value="[0-9]{3}-[0-9]{3}-[0-9]{4}"/>
-%       <xsd:attribute name="Type">
-%         <xsd:simpleType>
-%           <xsd:restriction base="xsd:string">
-%           <xsd:enumeration value="Home"/>
-%             <xsd:enumeration value="Work"/>
-%           </xsd:restriction>
-%         </xsd:simpleType>
-%       </xsd:attribute>
-%       <xsd:attribute name="CallOnWeekend" type="xsd:boolean" use="prohibited"/> 
-%     </xsd:restriction>
-%   </xsd:simpleContent>
-% </xsd:complexType>
-%% Note the usage of "prohibited." If you want to eliminate one or more attributes, you need to redefine them in the child type and set the "use" attribute to "prohibited."
-% Note that when you add restrictions to the content as well as attributes, you cannot make the values less restrictive. Similarly, if an attribute is "required" in the base type, you cannot make it "optional" in the derived type.
+	\begin{block}{Complex Type derivation: esempio}
+		\texttt{
+			<xsd:complexType name=``RestrictedPhoneType''>
+  				\emph{<xsd:simpleContent>}
+    				<xsd:restriction base=``PhoneType''>
+      				<xsd:pattern value="[0-9]{3}-[0-9]{3}-[0-9]{4}"/>
+      				<xsd:attribute name=``Type''>
+        				<xsd:simpleType>
+          					<xsd:restriction base=``xsd:string''>
+          					<xsd:enumeration value="Home"/>
+            				<xsd:enumeration value="Work"/>
+         					</xsd:restriction>
+        				</xsd:simpleType>
+      				</xsd:attribute>
+      				\textit{<xsd:attribute name="CallOnWeekend" type="xsd:boolean" use="prohibited"/> }
+    				</xsd:restriction>
+  				</xsd:simpleContent>
+			</xsd:complexType>
+		}
+	\end{block}
+\end{frame}
 
-%% When you derive by extension from a complex type with simple content the result will always be a simple content. The only operation you can do when you extend a simple content type is to add new attributes.
+
+\begin{frame}
+	\frametitle{Elementi per la definizione degli schemi xml}
+	\framesubtitle{principi XSD}
+	\addtocounter{nframe}{1}
+
+	\begin{block}{Complex Type derivation: da simple type}
+		Note the usage of \textit{prohibited}. If you want to eliminate one or more attributes, you need to redefine them in the child type and set the \textit{use} attribute to \textit{prohibited}.
+	\end{block}
+
+	\begin{block}{Complex Type derivation: da simple type - esempio}
+		Note that when you add restrictions to the content as well as attributes, you cannot make the values less restrictive. Similarly, if an attribute is \textit{required} in the base type, you cannot make it \textit{optional} in the derived type.
+	\end{block}
+\end{frame}
+
+\begin{frame}
+	\frametitle{Elementi per la definizione degli schemi xml}
+	\framesubtitle{principi XSD}
+	\addtocounter{nframe}{1}
+
+	\begin{block}{Complex Type derivation: da simple content}
+		\textbf{When you derive by extension from a complex type with simple content the result will always be a simple content. The only operation you can do when you extend a simple content type is to add new attributes.}
+	\end{block}
+
+\end{frame}
+
+
+
+
 %% esempio:
 % <xsd:complexType name="ExtendedPhoneType">
 %   <xsd:simpleContent>
@@ -1493,15 +1794,60 @@
 %   </xsd:simpleContent>
 % </xsd:complexType>
 
-%% A complex type with element-only content can be extended or restricted to create new types. The most common usage of deriving by restriction from an element-only content type is to remove one or more elements or attributes. Elements from the base type are not passed down to the derived type by default. 
-% All mandatory elements in the base type must exist in the derived type as well. 
-%% If the elements in the base type are declared within a sequence group, the derived type cannot change it to all or choice groups. 
-%% If the base type has all, the derived type can change it to sequence. 
-%% If the base type has choice, the derived type must also have choice.
-% All attributes of the base type are passed down to the derived type by default.
-% if you want to remove an attribute you need to re-declare it in the derived type as "prohibited."
-% A derived type cannot eliminate an attribute declared as mandatory in the base type.
-% You need to redefine an attribute in the derived type only if you want to restrict the value space of the attribute.
+
+\begin{frame}
+	\frametitle{Elementi per la definizione degli schemi xml}
+	\framesubtitle{principi XSD}
+	\addtocounter{nframe}{1}
+
+	\begin{block}{Complex Type derivation}
+		\textbf{A complex type with element-only content can be extended or restricted to create new types.}
+	\end{block}
+
+	\begin{block}{Complex Type derivation}
+		The most common usage of deriving by restriction from an element-only content type is to remove one or more elements or attributes. Elements from the base type are not passed down to the derived type by default.
+	\end{block}
+\end{frame}
+
+
+\begin{frame}
+	\frametitle{Elementi per la definizione degli schemi xml}
+	\framesubtitle{principi XSD}
+	\addtocounter{nframe}{1}
+
+	\begin{block}{Complex Type derivation}
+		\textbf{All mandatory elements in the base type must exist in the derived type as well}
+	\end{block}
+
+	\begin{block}{Complex Type derivation}
+		\begin{itemize}
+			\item If the elements in the base type are declared within a sequence group, the derived type cannot change it to all or choice groups. 
+			\item If the base type has all, the derived type can change it to sequence. 
+			\item If the base type has choice, the derived type must also have choice.
+		\end{itemize}
+	\end{block}
+\end{frame}
+
+\begin{frame}
+	\frametitle{Elementi per la definizione degli schemi xml}
+	\framesubtitle{principi XSD}
+	\addtocounter{nframe}{1}
+
+	\begin{block}{Complex Type derivation}
+		\textbf{All mandatory elements in the base type must exist in the derived type as well}
+	\end{block}
+
+	\begin{block}{Complex Type derivation}
+\begin{itemize}
+	\item if you want to remove an attribute you need to re-declare it in the derived type as \textit{prohibited}.
+	\item A derived type cannot eliminate an attribute declared as mandatory in the base type.
+	\item You need to redefine an attribute in the derived type only if you want to restrict the value space of the attribute.
+\end{itemize}
+	\end{block}
+\end{frame}
+
+
+
 % Esempio:
 
 % <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema">
@@ -1544,6 +1890,10 @@
 %     </xsd:complexContent>
 %   </xsd:complexType>
 % </xsd:schema>
+
+
+
+
 
 % It is also possible to derive an empty content complex type from an element-only content type. By keeping the restriction element empty, we can derive an empty content type. This does not affect the attributes. 
 % Gli elementi del tipo dell'elemento base devono essere opzionali.
