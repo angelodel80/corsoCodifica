@@ -6,8 +6,11 @@
 <test>
 	<ciao>
 		<cc>
+		<htmlCode> <![CDATA[ <h1>Capitolo Primo
+  <h2>Sezione Seconda</h1></h2> ]]> </htmlCode>
+  </cc>
 	</ciao>
-		</cc>
+		
 	<choice>
 		<sic>testo con errore</sic>
 		<cor> testo corretto</cor>
