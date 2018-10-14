@@ -194,9 +194,19 @@
 
 	\begin{block}{Complex Types}
 		Alla base dello standard XSD ci sono le dichiarazioni degli elementi e degli attributi, ad un livello di astrazione più alto ci sono i types e i groups.
-		\\ A complex type can have attributes, child elements or both. Here is another example that shows a complex type having child elements.
 
 	\end{block}
+
+	\begin{block}{Element Complex Types}
+		\textbf{Un tipo complesso (Complex Type) può avere attributi e/o elementi figli.}
+	\end{block}
+
+\end{frame}
+
+\begin{frame}
+	\frametitle{Elementi per la definizione degli schemi xml}
+	\framesubtitle{principi XSD}
+	\addtocounter{nframe}{1}
 
 	\begin{block}{Element Complex Types: Esempio Elemento con Figlio}
 		\texttt{
@@ -213,6 +223,7 @@
 
 \end{frame}
 
+
 \begin{frame}
 	\frametitle{Elementi per la definizione degli schemi xml}
 	\framesubtitle{principi XSD}
@@ -228,6 +239,13 @@
 		\end{itemize}
 
 	\end{block}
+
+\end{frame}
+
+\begin{frame}
+	\frametitle{Elementi per la definizione degli schemi xml}
+	\framesubtitle{principi XSD}
+	\addtocounter{nframe}{1}
 
 	\begin{block}{Espressività dell'XSD}
 		\begin{itemize}
@@ -249,15 +267,14 @@
 	\addtocounter{nframe}{1}
 
 	\begin{block}{Element Declaration}
-
-		An XSD element declaration represents an element in the XML instance document
-		An element is said to have a Simple Type if it does not have any attributes and does not have child elements.
+		Una dichiarazione di elemento (\textbf{XSD element declaration}) rappresenta un elemento nel documento XML istanza dello schema. 
+		
 	\end{block}
 
 	\begin{block}{Element Declaration: Istanza XML }
 		\texttt{<p>il contentuto testuale di un paragrafo</p>}
 	\end{block}
-
+	\textit{Un elemento ha un tipo semplice (\textbf{simple type}) se non ha attributi e non ha elementi figli}
 \end{frame}
 
 
@@ -269,13 +286,21 @@
 	\addtocounter{nframe}{1}
 
 	\begin{block}{Global and Local element declaration}
-		The advantage of using a global element declaration is that it can be reused (referred) at other locations from within the same schema.
-		\\ When you have a global element declaration, you can refer it in multiple locations in your schema (level of reusability).
+		Il vantaggio di usare dichiarazioni di elementi globali (\textbf{global element declaration})
+		è che la dichiarazione può essere riferita più volte da altre dichiarazioni all'interno del documento XSD.
 	\end{block}
+
+\end{frame}
+
+
+\begin{frame}
+	\frametitle{Elementi per la definizione degli schemi xml}
+	\framesubtitle{principi XSD}
+	\addtocounter{nframe}{1}
 
 	\begin{block}{Global element declaration: esempio}
 		\texttt{<xsd:schema xmlns:xsd=``http://www.w3.org/2001/XMLSchema">
-			<xsd:element name=``body''>
+			\emph{<xsd:element name=``body''>}
 			<xsd:complexType>
 			<xsd:attribute name=``lang''/>
 			<xsd:attribute name=``type''/>
@@ -284,7 +309,7 @@
 			<xsd:element name=``text''>
 			<xsd:complexType>
 			<xsd:all>
-			<xsd:element ref=``body''/>
+			\emph{<xsd:element ref=``body''/>}
 			</xsd:all>
 			</xsd:complexType>
 			</xsd:element>
@@ -293,14 +318,17 @@
 
 \end{frame}
 
+
 \begin{frame}
 	\frametitle{Elementi per la definizione degli schemi xml}
 	\framesubtitle{principi XSD}
 	\addtocounter{nframe}{1}
 
 	\begin{block}{Group declaration}
-		Commonly used attributes and elements can be grouped together into Attribute Groups and Element Groups. You can then refer to such a group at multiple locations in your schema definition. Attribute groups and Element groups provide a certain level of reusability.
+		Attributi e elementi possono essere raggruppati in costrutti detti \textbf{Attribute Groups} e \textbf{Element Groups}.
 	\end{block}
+	
+	\textit{E' possibile riferirsi a questi gruppi all'interno di altre dichiarazioni ottenendo un significativo grado di riusabilità.}
 
 \end{frame}
 
@@ -312,7 +340,7 @@
 
 
 	\begin{block}{Global element declaration: esempio}
-		\texttt{<xsd:group name=``fileDesc''>
+		\texttt{\emph{<xsd:group name=``fileDesc''>}
 			<xsd:sequence>
 			<xsd:element name=``titleStmt''/>
 			<xsd:element name=``publicationStmt''/>
@@ -322,8 +350,7 @@
 	\end{block}
 
 	\begin{block}{Global element declaration: esempio}
-		\texttt{<xsd:group ref=``fileDesc''/>
-		}
+		\begin{center} \texttt{<xsd:group ref=``fileDesc''/>}\end{center}
 	\end{block}
 
 \end{frame}
@@ -333,12 +360,12 @@
 	\framesubtitle{principi XSD}
 	\addtocounter{nframe}{1}
 
-	\begin{block}{Element Declaration: Attributi}
-		Attributi della dichiarazione di elementi: The only mandatory attribute that an element declaration should take is the ``name'' attribute.
+	\begin{block}{Element Declaration: Attributi nella dichiarazione}
+		L'unico attributo \textit{obbligatorio} nella dichiarazione di elementi è l'attributo \textbf{name}.
 	\end{block}
 
 	\begin{block}{Element Declaration: Attributi - Esempio}
-		\texttt{<xsd:element name=``TEI''/> }
+		\begin{center}\texttt{<xsd:element name=``TEI''/> }\end{center}
 	\end{block}
 
 \end{frame}
@@ -350,19 +377,30 @@
 
 	\begin{block}{Element declaration: lista Attributi}
 		\begin{itemize}
-			\item \textbf{name} (\textit{g-l}) the only mandatory attribute (give meaningful names to the elements)
-			\item type (g-l) adds data type related validations to the declaration of an element (XSD has buint-in data types)
-			\item id (g-l) uniquely identifies the given element (non ha effetti sull'istanza XML
-			\item default (g-l) specify the default value of an element (solo de l'elemento opzionale)
-			\item fixed (g-l) valore di un elemento predefinito (``fixed'' and ``default'' are mutually exclusive)
-			\item nillable (g-l) indica che l'elemento è vuoto (xsd:nil nell'istanza XML del documento)
-			\item block (g-l) It is used to control substitution (4 different vales, namely: substitution, extension restriction and \#all)
+			\item \textbf{name} (\textit{g-l}): il nome dell'elemento, unico attributo obbligatorio (\textit{dare nomi significativi agli elmenti})
+			\item \textbf{type} (\textit{g-l}): aggiunta di un tipo di dato (\textit{data type}) (XSD ha buint-in data types)
+			\item \textbf{id} (\textit{g-l}): identificatore univoco della dichiarazione dell'elemento(non ha effetti sull'istanza XML)
+			\item \textbf{default} (\textit{g-l}): spcifica il valore di default di un elemento (solo se l'elemento è opzionale)
 		\end{itemize}
 
 	\end{block}
 
 \end{frame}
 
+\begin{frame}
+	\frametitle{Elementi per la definizione degli schemi xml}
+	\framesubtitle{principi XSD}
+	\addtocounter{nframe}{1}
+
+	\begin{block}{Element declaration: lista Attributi (cont.)}
+		\begin{itemize}
+			\item \textbf{fixed} (\textit{g-l}): valore di un elemento predefinito (``fixed'' e ``default'' sono mutuamente esclusivi)
+			\item \textbf{nillable} (\textit{g-l}): indica che l'elemento è vuoto (xsd:nil nell'istanza XML del documento)
+			\item \textbf{block} (\textit{g-l}): è utilizzato per controllare la sostizione degli elementi ( può assumere 4 differenti valori: \textit{substitution}, \textit{extension} \textit{restriction} e \textit{\#all})
+		\end{itemize}
+	\end{block}
+
+\end{frame}
 
 \begin{frame}
 	\frametitle{Elementi per la definizione degli schemi xml}
@@ -372,21 +410,30 @@
 	\begin{block}{Element declaration: lista Attributi (cont.)}
 
 		\begin{itemize}
-			\item final (g) limits the declaration of substitution groups in schemas (can take values: \#all, restriction and extension.)
-			\item abstract (g) When an element is declared as abstract, it cannot be instantiated (force an element substitution)
-			\item substitutionGroup (g) is highly extensible (could easily add new types derived) esempio SG
-			\item minOccurs (l) control the occurrence of the elements: minimum number of times the element should appear in the XML instance (minOccurs=0 -> Optional).
-			\item maxOccurs (l) control the occurrence of the elements: The maximum number of times the element can appear within its parent.
-			\item ref (l) Refer to other elements declared globally in the same schema (certain level of reusability)
-			\item form (l) specifies whether the element needs to be qualified with a namespace prefix (be ``qualified'' or ``unqualified'')
+			\item \textbf{final} (\textit{g}): limita la dichiarazione dei gruppi di sostituzione ( può assumere 3 valori: \textit{\#all}, \textit{restriction} and \textit{extension})
+			\item \textbf{abstract} (\textit{g}): un elemento astratto non può essere istanziato (è un modo per forzare la sostituzione)
+			\item \textbf{substitutionGroup} (\textit{g}): è un modo per avere grande estensibilità delle dichiarazioni (facilità la creazione di nuovi tipi di elementi derivati)
+			\item \textbf{minOccurs} (\textit{l}): controlla il numero di occorrenze minime degli elementi all'interno del documento XML istanza dello schema. (\textbf{minOccurs=0} indica elemento \textit{optionale}).
 		\end{itemize}
-
-
-
 	\end{block}
 
 \end{frame}
 
+\begin{frame}
+	\frametitle{Elementi per la definizione degli schemi xml}
+	\framesubtitle{principi XSD}
+	\addtocounter{nframe}{1}
+
+	\begin{block}{Element declaration: lista Attributi (cont.)}
+
+		\begin{itemize}
+			\item \textbf{maxOccurs} (\textit{l}): controlla il numero massimo di occorrenze degli elementi all'interno del documento XML istanza dello schema
+			\item \textbf{ref} (\textit{l}): riferimento ad altri elementi dichiarati globalmente all'interno dello schema (riusabilità)
+			\item \textbf{form} (\textit{l}): specifica se l'elemento deve essere qualificato con l'aggiunta del namespace (``qualified'' oppure ``unqualified'').
+		\end{itemize}
+	\end{block}
+
+\end{frame}
 
 \begin{frame}
 	\frametitle{Elementi per la definizione degli schemi xml}
@@ -398,8 +445,8 @@
 		\texttt{
 			<xsd:element name=``body''>
 			<xsd:complexType>
-			<xsd:sequence maxOccurs=``unbounded''>
-			<xsd:element ref=``div''/>
+			\emph{<xsd:sequence maxOccurs=``unbounded''>}
+			\emph{<xsd:element ref=``div''/>}
 			</xsd:sequence>
 			</xsd:complexType>
 			</xsd:element>
@@ -450,12 +497,20 @@
 	\framesubtitle{principi XSD}
 	\addtocounter{nframe}{1}
 
-	\begin{block}{Attribute declaration:}
-		An attribute is declared with <xsd:attribute> element. The only mandatory attribute of an attribute declaration is ``name''.
-		\\ When an attribute is declared right under the ``<xsd:schema>'' element, it is called global attribute declaration. When it is declared within a Complex Type, it is called Local attribute declaration.
+	\begin{block}{Attribute declaration}
+		Un attributo è dichiarato utilizzando l'elemento \texttt{<xsd:attribute>}. \\ L'unico attributo obbligatorio nella dichiarazione è l'attributo ``\textbf{name}''.
 	\end{block}
 
+	\begin{block}{Attribute declaration: Global vs Local}
+		Quando una dichiarazione di attributo ha il livello gerarchico successivo a ``<xsd:schema>'' (\textit{la root del documento XSD}), questa dichiarazione è detta globale (\textit{global attribute declaration}. In caso contrario l'attributo è dichiarato all'interno di un \textit{Complex Type}, ed è una dichiarazione di attributo locale (\textit{Local attribute declaration}).
+	\end{block}
 
+\end{frame}
+
+\begin{frame}
+	\frametitle{Elementi per la definizione degli schemi xml}
+	\framesubtitle{principi XSD}
+	\addtocounter{nframe}{1}
 	\begin{block}{Attribute declaration}
 
 		\texttt{
@@ -463,8 +518,7 @@
 		}
 
 	\end{block}
-	\textit{Qualsiasi dichiarazione di attributo per essere effettivamente utile deve essere fatta all'interno di una dichiarazione di elemento}
-
+	\textit{Qualsiasi dichiarazione di attributo per essere effettivamente utile deve essere riportata all'interno di una dichiarazione di elemento}
 \end{frame}
 
 % tabella con gli attributi nella dichiarazione degli attributi
@@ -477,9 +531,9 @@
 
 	\begin{block}{Attribute declaration: Attributi}
 		\begin{itemize}
-			\item \textbf{name} (\textit{g-l}) the name of the attribute as it should appear in the XML instance (Mandatory)
-			\item id (g-l) used by the schema processor to uniquely identify the XSD components within a given schema
-			\item type (g-l) associates a data type with an attribute (facilitates validation on the value). make sure that only valid values are accepted
+			\item \textbf{name} (\textit{g-l}): il nome dell'attributo, attributo obbligatorio.
+			\item \textbf{id} (\textit{g-l}): l'identificativo della dichiarazione all'interno del documento XSD (non influenza l'istanza XML).
+			\item \textbf{type} (\textit{g-l}): associa un tipo di dato allo spazio di valori che può assumere l'attributo.
 		\end{itemize}
 
 	\end{block}
@@ -494,17 +548,31 @@
 
 	\begin{block}{Attribute declaration: Attributi (cont.)}
 		\begin{itemize}
-			\item \textbf{default} (\textit{g-l}) The default attribute assigns a default value to an attribute declaration (solo se l'attributo non è presente)
-			\item fixed (g-l) It prevents the attribute from taking any value other than the pre-defined one.
-			\item ref (l) A globally declared attribute can be inserted into a complex type by using the ``ref'' attribute.
-			\item use (l) specifies whether the attribute is optional or mandatory (values optional or required, prohibited).
-			\item form (l) specifies whether the attribute needs to be qualified by a namespace prefix or not, in the XML instance. (può assumere due valori: qualified e unqualified)
+			\item \textbf{default} (\textit{g-l}): assegna un valore di default all'attributo (solo se l'attributo non è presente).
+			\item \textbf{fixed} (\textit{g-l}): assegna un valore predefino e fisso all'attributo.
+			\item \textbf{ref} (\textit{l}): riferimento ad una dichirazione di attributo globale
 		\end{itemize}
-
 	\end{block}
 
 
 \end{frame}
+
+
+\begin{frame}
+	\frametitle{Elementi per la definizione degli schemi xml}
+	\framesubtitle{principi XSD}
+	\addtocounter{nframe}{1}
+
+	\begin{block}{Attribute declaration: Attributi (cont.)}
+		\begin{itemize}
+			\item \textbf{use} (\textit{l}): specifica se l'attributo è opzionale o meno. Possibili valori sono \textit{optional}, \textit{required}, \textit{prohibited}
+			\item \textbf{form} (\textit{l}): indica se l'attributo deve avere o meno indicato il namespace all'interno del documento XML istanza dello schema (può assumere due valori: \textit{qualified} e \textit{unqualified})
+		\end{itemize}
+
+	\end{block}
+
+\end{frame}
+
 
 \begin{frame}
 	\frametitle{Elementi per la definizione degli schemi xml}
@@ -515,11 +583,11 @@
 
 		\texttt{
 			<xsd:schema xmlns:xsd=``http://www.w3.org/2001/XMLSchema''>
-			<xsd:attribute name=``analysis'' />
+			\emph{<xsd:attribute name=``analysis'' />}
 			<!-- -->
 			<xsd:element name=``word''>
 			<xsd:complexType>
-			<xsd:attribute ref=``analysis''/>
+			\emph{<xsd:attribute ref=``analysis''/>}
 			</xsd:complexType>
 			</xsd:element>
 			</xsd:schema>
@@ -555,10 +623,12 @@
 	\addtocounter{nframe}{1}
 
 	\begin{block}{Attribute declaration: Attribute Groups}
-		Attribute Groups provide a convenient means to reuse attribute declarations in multiple complex types. Attribute Groups provide a better level of reusability by grouping one or more attribute declarations into a named group. By using an attribute group, you can avoid this repetition of code. Chain of attribute group hierarchies.
+		Definire gruppi di attributi permette di riusare le dichirazioni degli attributi in molteplici altre dichiarazioni all'interno dello schema.
+		\\I gruppi di attributi permettono di avere un maggiore livello di riusabilità delle dichiarazioni.
 	\end{block}
-\end{frame}
 
+	\textit{Attraverso l'uso dei gruppi di attributi si evitano inutili ripetizioni nel codice XSD ed è possibile costruire catene di gruppi strutturate in gerarchie ben controllate}
+\end{frame}
 
 
 \begin{frame}
@@ -566,11 +636,11 @@
 	\framesubtitle{principi XSD}
 	\addtocounter{nframe}{1}
 
-	\begin{block}{Attribute declaration: Esempio (global)}
+	\begin{block}{Attribute declaration: Esercizio (global)}
 		\texttt{
-			<xsd:schema xmlns:xsd=``http://www.w3.org/2001/XMLSchema''>
+			%<xsd:schema xmlns:xsd=``http://www.w3.org/2001/XMLSchema''>
 			<xsd:attributeGroup name=``EmpAttributes''>
-			<!-- Declaration of attribute ``name'' -->
+			%<!-- Declaration of attribute ``name'' -->
 			<xsd:attribute name=``name''>
 			<xsd:simpleType>
 			<xsd:restriction base=``xsd:string''>
@@ -578,7 +648,7 @@
 			</xsd:restriction>
 			</xsd:simpleType>
 			</xsd:attribute>
-			<!-- Declaration of attribute ``department'' -->
+			%<!-- Declaration of attribute ``department'' -->
 			<xsd:attribute name=``department''>
 			<xsd:simpleType>
 			<xsd:restriction base=``xsd:string''>
@@ -587,12 +657,9 @@
 			</xsd:simpleType>
 			</xsd:attribute>
 			</xsd:attributeGroup>
-			[...]
+			%[...]
 		}
 	\end{block}
-
-	\textit{Global attribute declarations are useful when an attribute is declared with several validations}
-
 
 \end{frame}
 
@@ -602,20 +669,20 @@
 	\framesubtitle{principi XSD}
 	\addtocounter{nframe}{1}
 
-	\begin{block}{Attribute declaration: Esempio (global)}
+	\begin{block}{Attribute declaration: Esercizio (global)}
 		\texttt{
-			[...]
-			<!-- Declaration of root element ``Employees'' -->
+			%[...]
+			%<!-- Declaration of root element ``Employees'' -->
 			<xsd:element name=``Employees''>
 			<xsd:complexType>
 			<xsd:sequence>
-			<!-- Declaration of ``Manager'' element -->
+			%<!-- Declaration of ``Manager'' element -->
 			<xsd:element name=``Manager''>
 			<xsd:complexType>
 			<xsd:attributeGroup ref=``EmpAttributes''/>
 			</xsd:complexType>
 			</xsd:element>
-			<!-- Declaration of ``department'' element -->
+			%<!-- Declaration of ``department'' element -->
 			<xsd:element name=``TechLead''>
 			<xsd:complexType>
 			<xsd:attributeGroup ref=``EmpAttributes''/>
@@ -624,17 +691,11 @@
 			</xsd:sequence>
 			</xsd:complexType>
 			</xsd:element>
-			</xsd:schema>
+			%</xsd:schema>
 		}
 	\end{block}
 
-	\textit{Global attribute declarations are useful when an attribute is declared with several validations}
-
-
 \end{frame}
-
-
-
 
 %% Data type
 
