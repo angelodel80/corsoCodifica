@@ -705,13 +705,11 @@
 	\addtocounter{nframe}{1}
 
 	\begin{block}{XSD Data Type}
-
-		Programming languages use data types to make sure that correct values are stored to variables and correct operations are done using those variables.
+		I linguaggi di programmazione uso i tipi (\textit{data types}) per controllare i valori che può assumere una variabile e le operazioni che possono essere effettuate su quest'ultime.
 	\end{block}
 
-	\begin{block}{XSD Data Type}
-		When you associate a variable to a data type you are basically restricting the values that the variable can store and restricting the permissible operations on them.
-	\end{block}
+		\textit{In parole povere, quando si associa un data type ad una variabile si vuole restringere lo spazio di valori permesso e restringere le operazioni che possono elaborare tali valori.}
+	
 
 \end{frame}
 
@@ -722,14 +720,12 @@
 
 	\begin{block}{XSD Data Type: esempio -  dichiarazione}
 		\texttt{
-			<xsd:schema xmlns:xsd=``http://www.w3.org/2001/XMLSchema''>
 			<xsd:element name=``div''>
 			<xsd:complexType>
-			<xsd:attribute name=``type'' />
-			<xsd:attribute name=``n'' type=``xsd:integer''/>
+			\textit{<xsd:attribute name=``type'' />}
+			\emph{<xsd:attribute name=``n'' type=``xsd:integer''/>}
 			</xsd:complexType>
 			</xsd:element>
-			</xsd:schema>
 		}
 
 
@@ -751,22 +747,25 @@
 	\addtocounter{nframe}{1}
 
 	\begin{block}{XSD Data Type}
-
-
-		XSD supports a number of different data types to describe and validate almost all values that we might need to work with.
-		It supports deriving new data types from the built-in data types
-
-
+		XSD supporta diversi tipi di dati, per descrivere e validare quasi tutti i valori che possono occorrere in un documento XML. 
+		\\\textbf{Ma supporta anche la possibilità di derivare nuovi data types a partire da quelli disponibili (\textit{built-in}}
 	\end{block}
 
 	\begin{block}{XSD Data Type}
-		Data types help describe a certain piece of data more accurately and help validate them more efficiently.
-		\\ XSD supports almost fifty data types. They can be divided into Primitive Data Types, Derived Data Types
-
+		I tipi di dati aiutano a descrivere un certo dato in modo più accurato, contribuendo a validarne i valori in modo più efficace.
 	\end{block}
+	
+\end{frame}
 
+\begin{frame}
+	\frametitle{Elementi per la definizione degli schemi xml}
+	\framesubtitle{principi XSD}
+	\addtocounter{nframe}{1}
 
-
+	\begin{block}{XSD Data Type}
+		\textbf{XSD supporta una \textit{cinquantina} di tipi di dato divisi in due categorie: \textit{Primitive Data Types} e \textit{Derived Data Types}.}
+	\end{block}
+	
 \end{frame}
 
 \begin{frame}
@@ -775,11 +774,10 @@
 	\addtocounter{nframe}{1}
 
 	\begin{block}{Primitive Data Types}
-
-		Primitive Data Types are base data types from which other data types are derived.
-		\\XSD has nineteen primitive data types
-
+		Primitive Data Types sono tipi di dati dai quali sono stati derivati altri tipi di dati.
 	\end{block}
+	\textit{XSD has nineteen primitive data types}
+
 
 	\begin{block}{Primiteive Data Types}
 
@@ -795,16 +793,12 @@
 	\addtocounter{nframe}{1}
 
 	\begin{block}{Primitive Data Types}
-
-
-		Primitive Data Types are the base data types of XSD. This means that they themselves have not been derived from another type.
-
-
+		Primitive Data Types non derivano da alcun tipo di base.
 	\end{block}
 
 	\begin{block}{Derived Data Types}
 
-		These are Data Types derived directly or indirectly from Primitive Data Types.
+		Nel sistema di tipi di XSD esistono data types che sono direttamente oppure indirettamente derivati dai Primitive Data Types.
 
 	\end{block}
 
@@ -819,7 +813,6 @@
 	\begin{center}
 		\includegraphics[width=.95\textwidth]{imgs/DerivedTypeBaseType(2types).png}
 	\end{center}
-
 	\begin{center}
 		\includegraphics[width=.95\textwidth]{imgs/DerivedTypeFromDerivedType(8types).png}
 	\end{center}
@@ -873,13 +866,12 @@
 	\addtocounter{nframe}{1}
 
 	\begin{block}{Data Type: Facets}
-		Each data type has a number of properties that can be restricted to perform additional validations on the value.
-		\\These properties are called \textbf{Facets} in XSD.
+		Ciascun tipo di dato a una collezione di proprietà che possono essere musate per attuare validazioni aggiuntive ai valori permessi dal tipo di dato corrente.
+		\\\textit{Queste proprietà sono chiamate \textbf{Facets} in XSD.}
 	\end{block}
 
 	\begin{block}{Data Type: Facets}
-		So each data type has a certain number of predefined Facets.
-		\\A facet controls a certain attribute or characteristic of a data type
+		Ogni tipo ha un insieme stabilito di Facets che controllano una certa proprietà o una certa caratteristica del tipo di dato considerato.
 	\end{block}
 
 \end{frame}
@@ -891,19 +883,19 @@
 
 	\begin{block}{Data Type: Facets Esempio}
 		\texttt{
-			<xsd:schema xmlns:xsd=``http://www.w3.org/2001/XMLSchema''>
+			%<xsd:schema xmlns:xsd=``http://www.w3.org/2001/XMLSchema''>
 			<xsd:element name=``name''>
 			<xsd:complexType>
 			<xsd:attribute name=``type''>
 			<xsd:simpleType>
-			<xsd:restriction base=``xsd:string''>
-			<xsd:length value=``15''/>
+			\emph{<xsd:restriction base=``xsd:string''>}
+			\emph{<xsd:length value=``15''/>}
 			</xsd:restriction>
 			</xsd:simpleType>
 			</xsd:attribute>
 			</xsd:complexType>
 			</xsd:element>
-			</xsd:schema>
+			%</xsd:schema>
 		}
 
 	\end{block}
@@ -917,19 +909,19 @@
 
 	\begin{block}{Data Type: Facets Esempio}
 		\texttt{
-		<xsd:schema xmlns:xsd=``http://www.w3.org/2001/XMLSchema''>
+		%<xsd:schema xmlns:xsd=``http://www.w3.org/2001/XMLSchema''>
 		<xsd:element name=``name''>
 		<xsd:complexType>
 		<xsd:attribute name=``type''>
 		<xsd:simpleType>
-		<xsd:restriction base=``xsd:string''>
-		<xsd:patter value=``[A-Za-z]+''/>
+		\emph{<xsd:restriction base=``xsd:string''>}
+		\emph{<xsd:patter value=``[A-Za-z]+''/>}
 		</xsd:restriction>
 		</xsd:simpleType>
 		</xsd:attribute>
 		</xsd:complexType>
 		</xsd:element>
-		</xsd:schema>
+		%</xsd:schema>
 		}
 
 	\end{block}
@@ -948,6 +940,9 @@
 \end{frame}
 
 
+
+%Simple Type vs Complex Type
+
 \begin{frame}
 	\frametitle{Elementi per la definizione degli schemi xml}
 	\framesubtitle{principi XSD}
@@ -955,13 +950,14 @@
 
 	\begin{block}{Simple Type vs Complex Type}
 
-		The basic distinction between simple types and complex types is that only a complex type can contain child elements and attributes.
+		La differenza sostanziale tra un tipo semplice (\textit{simple types}) e un tipo complesso (\textit{complex types}) è che solo un tipo complesso può avere elementi figli e attributi.
 
 	\end{block}
 
 	\begin{block}{Simple Type vs Complex Type}
 
-		Simple types can only store a value. An element or attribute can have a simple type.
+		Le entità \textit{simple type} possono trattare solo valori destrutturati. 
+		\\Sia gli elementi sia gli attributi possono essere simple type.
 
 	\end{block}
 
@@ -981,8 +977,7 @@
 	\begin{center}
 		\includegraphics[width=.95\textwidth]{imgs/SimpleTypeGlobalLocal.png}
 	\end{center}
-
-	\textit{Simple Types can be declared globally or locally}
+	\textit{Simple Types can be declared \textbf{globally} or \textbf{locally}}
 
 \end{frame}
 
@@ -993,10 +988,10 @@
 	\addtocounter{nframe}{1}
 
 	\begin{block}{Global simple types}
-		Global simple types help reuse the definitions as well as help organize and maintain the schema.
+		le definizioni di tipi globali sono utili per il riuso del codice e per mantenere ed organizzare al meglio una schema XSD ampio.
 	\end{block}
 
-	\textit{helpful when the same set of validations is to be performed}
+	\textit{Molto utili quando bisogna uniformare un insieme di validazioni e manutenerle in modo coerente}
 
 \end{frame}
 
@@ -1006,7 +1001,7 @@
 	\framesubtitle{principi XSD}
 	\addtocounter{nframe}{1}
 
-	\begin{block}{simple types example}
+	\begin{block}{simple types: esercizio}
 		\texttt{
 			<xsd:simpleType name=``chapterNumberType''>
 			<xsd:restriction base=``xsd:integer''>
@@ -1017,7 +1012,7 @@
 		}
 	\end{block}
 
-	\begin{block}{simple types example}
+	\begin{block}{simple types: esercizio}
 		\texttt{
 			<xsd:element name=``item''>
 			<xsd:complexType>
@@ -1029,7 +1024,8 @@
 \end{frame}
 
 
-% Deriving:
+% Deriving
+
 \begin{frame}
 	\frametitle{Elementi per la definizione degli schemi xml}
 	\framesubtitle{principi XSD}
@@ -1055,7 +1051,7 @@
 	\addtocounter{nframe}{1}
 
 	\begin{block}{simple types: deriving}
-		This involves identifying a base type that is close to what we are looking for, and adding the additional restrictions or validation rules.
+		Identificare il \textbf{tipo di dato di base} e aggiungere le dichiarazioni di \textbf{restrizione} e le \textbf{regole di validazione} che si reputano utili.
 	\end{block}
 
 \end{frame}
@@ -1066,8 +1062,11 @@
 	\addtocounter{nframe}{1}
 
 	\begin{block}{simple types: deriving by Restriction}
-		A restriction is defined by adding ``xsd:restriction'' to the Simple Type declaration. Each data type has a number of properties that restricts the set of values it can accept (facets). When you derive a new data type by restriction, you restrict one or more facets.
+		A restriction is defined by adding
+		Un restrizione si definisce aggiungendo \textbf{``xsd:restriction''} alla dichiarazione del \textit{Simple Type}. 
 	\end{block}
+
+	\textbf{Ciascun tipo di dato possiede una collezione di proprietà (facets) attraverso le quali definire la restrizione voluta.}
 
 \end{frame}
 
@@ -1079,8 +1078,8 @@
 	\begin{block}{simple types: deriving by Restriction}
 		\texttt{
 			<xsd:simpleType name=``signatureType''>
-			\textit{<xsd:restriction base=``xsd:integer''>}
-			\textit{<xsd:totalDigits value=``5''/>}
+			\emph{<xsd:restriction base=``xsd:integer''>}
+			\emph{<xsd:totalDigits value=``5''/>}
 			</xsd:restriction>
 			</xsd:simpleType>
 		}
@@ -1090,10 +1089,12 @@
 		\texttt{
 			<xsd:element name=``signature'' type=``signatureType''>
 		}
+		
+		
 		\texttt{
 			<signature>12345</sgnature>
 		} \textit{(valido)}
-		\texttt{
+		\\\texttt{
 			<signature>123ab</signature>
 		} \textit{(non valido)}
 	\end{block}
@@ -1107,17 +1108,17 @@
 	\addtocounter{nframe}{1}
 
 	\begin{block}{simple types: deriving by List}
-		data type can store a SPACE separated list of values accepted by the base type
+		data type più contenere una lista di valori separata da spazi SPACE
 	\end{block}
 
 	\begin{block}{simple types: deriving by List}
 		\texttt{<xsd:simpleType name=``chapterNumberList''>
-			<xsd:list itemType=``xsd:integer'' />
+			\emph{<xsd:list itemType=``xsd:integer'' />}
 			</xsd:simpleType>}
 		\\\texttt{
 			<xsd:element name=``chapters'' type=``chapterNumberList'' />}
 		\\\texttt{
-			<chapters>1 53 60 61 205 409</chapters>}
+			\textit{<chapters>1 53 60 61 205 409</chapters>}}
 	\end{block}
 
 \end{frame}
@@ -1128,7 +1129,7 @@
 	\addtocounter{nframe}{1}
 
 	\begin{block}{simple types: deriving by Union}
-		The derived type can store the values acceptable to any of the base types from which the new type is derived.
+		Un tipo derivato può accettare valori di qualsiasi tipo dichiarato nella derivazione.
 	\end{block}
 
 	\begin{block}{simple types: deriving by Union}
@@ -1173,13 +1174,13 @@
 	\addtocounter{nframe}{1}
 
 	\begin{block}{simple types: deriving}
-		The value will be accepted only if it validates successfully with one of the base types.
+		I valori sono accettati solo se sono validi per uno dei tipi dichiarati nella derivazione.
 	\end{block}
 
 	\begin{block}{simple types: deriving}
-		It is not allowed to make the value space of a derived type less restrictive than the base type.
+		Nei costrutti di derivazione\textit{ non è permesso aumentare lo spazio dei valori consentiti}.
+		\\\textbf{Non è possibile} quindi definire regole meno restrittive di quelle che caratterizzano il tipo di base.
 	\end{block}
-
 \end{frame}
 
 
@@ -1192,12 +1193,12 @@
 	\addtocounter{nframe}{1}
 
 	\begin{block}{simple types: deriving facets}
-		each XSD data type has a certain number of facets that control its value space.
-		\\When we derive a new Simple Type from another, the new type will inherit all the facets of the base type.
+		\textbf{Quando si deriva un tipo semplice da un altro tipo semplice, tutte le facets vengono ereditate.}
 	\end{block}
 
 	\begin{block}{simple types: deriving facets}
-		You can set the \textbf{fixed} attribute of the given facets to \textbf{true} to make sure that the derived types do not modify those facets.
+		
+		E' possibile utilizzare l'attributo \textbf{fixed} di una data proprietà (facets) a \textbf{true} per assicurare che la proprietà stessa non venga modificata dal tipo derivato.
 	\end{block}
 
 \end{frame}
@@ -1209,9 +1210,16 @@
 	\addtocounter{nframe}{1}
 
 	\begin{block}{Simple types: controllare la derivazione}
-		XSD provides a way to protect your Simple Type so that no other Types can inherit from it.
-
+		XSD ha anche un meccanismo per controllare e proteggere (vietare) un tipo dall'essere derivato.
+		\\ Si impiega l'attributo \textbf{final} della dichiarazione di simple type.
 	\end{block}
+
+\end{frame}
+
+\begin{frame}
+	\frametitle{Elementi per la definizione degli schemi xml}
+	\framesubtitle{principi XSD}
+	\addtocounter{nframe}{1}
 
 	\begin{block}{controllare la derivazione: l'attributo final}
 		\begin{itemize}
@@ -1234,10 +1242,9 @@
 	\begin{block}{Simple types: controllare la derivazione - esempio}
 		\texttt{
 			<xsd:schema xmlns:xsd=``http://www.w3.org/2001/XMLSchema''>
-			<xsd:simpleType name=``zipType''
-			final=``restriction union list extension''>
+			\emph{<xsd:simpleType name=``zipType'' final=``restriction union list extension''>}
 			<xsd:restriction base=``xsd:integer''>
-			<xsd:maxInclusive value=``99999'' fixed=``true''/>
+			\emph{<xsd:maxInclusive value=``99999'' fixed=``true''/>}
 			<xsd:minInclusive value=``10000''/>
 			</xsd:restriction>
 			</xsd:simpleType>
@@ -1253,11 +1260,11 @@
 	\addtocounter{nframe}{1}
 
 	\begin{block}{Simple types: controllare la derivazione - esempio}
-		Extension refers to deriving a new type from a Simple Type that results in a Complex Type
+		Il termine estensione si riferisce alla possibilità di derivare un nuovo tipo che risulta essere complex type da un tipo base simple type.
 	\end{block}
 
 	\begin{block}{Simple types: controllare la derivazione - esempio}
-		When the \textbf{final} attribute is set to \textbf{\#all}, the Simple Type cannot be inherited at all.
+		Quando l'attributo  \textbf{final} ha valore \textbf{\#all}, il Simple Type non puà essere derivato in alcun modo.
 	\end{block}
 
 \end{frame}
@@ -1312,22 +1319,23 @@
 %% Tipi di dati xsd derivati da tipi di dati primitivi (25 in totale)
 %% immagini per i tipi e esempi di catena di derivazione (DerivedTypeBaseType, DerivedTypeFromDerivedType, NumericalDerivedType, NumericalGrafico, String-Grafico).
 
-
+% complex type
 \begin{frame}
 	\frametitle{Elementi per la definizione degli schemi xml}
 	\framesubtitle{principi XSD}
 	\addtocounter{nframe}{1}
 
 	\begin{block}{Complex Type}
-		A complex type can have child elements and/or attributes.
-		\\ Attribute declarations cannot have Complex Types.
+		Un tipo coomplesso (\textbf{complex type}) può essere strutturato e quindi avere figli e avere attributi.
 		% an element has a Simple Type, it cannot have child elements or attributes. It can store only a text value.
 
 	\end{block}
 
 	\begin{block}{Named Complex types}
-		A Named Complex Type can be used within the declaration of other complex types
+		Una comples type può avere un nome (\textit{Named Complex Type}) così da poter essere impiegato all'interno della dichiarazione di altri tipi complessi.
 	\end{block}
+
+	\textbf{Attribute declarations cannot have Complex Types.}
 
 \end{frame}
 
@@ -1353,12 +1361,19 @@
 		}
 	\end{block}
 
+\end{frame}
+
+\begin{frame}
+	\frametitle{Elementi per la definizione degli schemi xml}
+	\framesubtitle{principi XSD}
+	\addtocounter{nframe}{1}
+
 	\begin{block}{Named Complex types Esempio}
 		\texttt{
 			<xsd:element name=``AddressDivision''>
 			<xsd:complexType>
 			<xsd:sequence>
-			<xsd:element name="addresseer"/>
+			<xsd:element name="addressee"/>
 			<xsd:element name="address" type="addressType"/>
 			</xsd:sequence>
 			</xsd:complexType>
@@ -1368,15 +1383,15 @@
 
 \end{frame}
 
-
 \begin{frame}
 	\frametitle{Elementi per la definizione degli schemi xml}
 	\framesubtitle{principi XSD}
 	\addtocounter{nframe}{1}
 
 	\begin{block}{Complex Type}
-		Named Complex Types provide a great deal of reusability.
-		Anonymous types appears within the complex type that owns the element.
+		I 
+		Named Complex Types offrono un potente strumento per riusare parti di codicia XSD all'interno dello schema.
+		\\ Mentre Anonymous Complex Types nono possono essere riferiti e appaiono solo all'interno della dichiarazione in cui vengono definiti.
 
 	\end{block}
 
@@ -1387,7 +1402,6 @@
 			<xsd:sequence>
 		}
 	\end{block}
-	\textit{Such declarations cannot be reused}
 \end{frame}
 
 %% esempio
@@ -1419,16 +1433,15 @@
 	\addtocounter{nframe}{1}
 
 	\begin{block}{Content Model}
-		The structure of the child elements of a Complex Type is called its Content Model.
+		\textbf{La struttura di un Complex Type è chiamata Content Model.}
 	\end{block}
 
 	\begin{block}{Content Model: Simple Content, Complex Content}
 		\begin{itemize}
-			\item Elements having Simple Content can store a text value and can hold attributes.
-			\item When an element has Complex Content, it can be either empty, element- only or mixed type.
+			\item \textbf{Simple Content}: contiene valori testuali e può avere attributi.
+			\item \textbf{Complex Content}: \textit{empty}, \textit{element- only }, \textit{mixed type}.
 		\end{itemize}
 	\end{block}
-	\textit{Such declarations cannot be reused}
 \end{frame}
 
 \begin{frame}
@@ -1438,12 +1451,11 @@
 
 	\begin{block}{Content Model: complex content}
 		\begin{itemize}
-			\item Empty content element may have attributes.
-			\item An element is said to have element-only content when it has child elements – and optionally attributes, too, but doesn't hold a text value.
-			\item When an element has mixed content model it can store child elements, attributes and text value.
+			\item \textit{Empty} content può avere attributi.
+			\item \textit{element-only} ha elementi figli, può avere attributi, ma non può avere testo come valore dell'elemento.
+			\item \textit{mixed content} può contenere elementi figli, attributi e valori testuali.
 		\end{itemize}
 	\end{block}
-	\textit{Such declarations cannot be reused}
 \end{frame}
 
 
@@ -1476,18 +1488,17 @@
 	\framesubtitle{principi XSD}
 	\addtocounter{nframe}{1}
 
-	\begin{block}{Complex type: simple content}
-		when an element has Simple Content it can store a text value and can have attributes.
-		\\Simple Content does not allow child elements.
+	\begin{block}{Complex type: Simple Content}
+		\textit{Simple Content}: text value e attributi, ma non puà avere figli.
 	\end{block}
 
-	\begin{block}{Complex type: simple content esempio}
+	\begin{block}{Complex type: Simple Content esempio}
 		\texttt{
 			<xsd:element name=``name''>
-			<xsd:complexType>
-			<xsd:simpleContent>
+			\emph{<xsd:complexType>}
+			\emph{<xsd:simpleContent>}
 			<xsd:extension base=``xsd:string''>
-			<xsd:attribute name="type" type="xsd:string"/>
+			\emph{<xsd:attribute name="type" type="xsd:string"/>}
 			</xsd:extension>
 			</xsd:simpleContent>
 			</xsd:complexType>
@@ -1502,12 +1513,12 @@
 	\framesubtitle{principi XSD}
 	\addtocounter{nframe}{1}
 
-	\begin{block}{Complex type: Empty content}
-		Complex Types having empty content are very close to the ones having simple content
+	\begin{block}{Complex type: Complex Content - Empty content}
+		Gli elementi Complex Type che hano un modello del contenuto complesso vuoto sono simili agli elementi di tipo complesso con contenuto semplice.
 	\end{block}
 
 	\begin{block}{Complex type: Empty content}
-		Empty content compex types cannot store a text value but thay can have attributes
+		Gli elementi Empty content compex types non possono contenere testo, ma possono avere attributi.
 	\end{block}
 \end{frame}
 
@@ -1521,8 +1532,16 @@
 	\addtocounter{nframe}{1}
 
 	\begin{block}{Complex type: element-only content}
-		These are Complex Types that hold elements and/or attributes, but no text values.
+		Gli elementi  Complex Types element-only content hanno un modello del contenuto composto solo da elementi figli e attributi, ma non possono contenere del testo.
 	\end{block}
+\end{frame}
+
+
+
+\begin{frame}
+	\frametitle{Elementi per la definizione degli schemi xml}
+	\framesubtitle{principi XSD}
+	\addtocounter{nframe}{1}
 
 	\begin{block}{Complex type: element-only content - esempio}
 		\texttt{
