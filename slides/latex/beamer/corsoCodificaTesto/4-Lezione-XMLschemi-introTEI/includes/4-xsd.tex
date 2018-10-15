@@ -498,11 +498,11 @@
 	\addtocounter{nframe}{1}
 
 	\begin{block}{Attribute declaration}
-		Un attributo è dichiarato utilizzando l'elemento \texttt{<xsd:attribute>}. \\ L'unico attributo obbligatorio nella dichiarazione è l'attributo ``\textbf{name}''.
+		Un attributo è dichiarato utilizzando l'elemento \texttt{<xsd:attribute>}. \\ L'unico attributo obbligatorio nella dichiarazione è ``\textbf{name}''.
 	\end{block}
 
 	\begin{block}{Attribute declaration: Global vs Local}
-		Quando una dichiarazione di attributo ha il livello gerarchico successivo a ``<xsd:schema>'' (\textit{la root del documento XSD}), questa dichiarazione è detta globale (\textit{global attribute declaration}. In caso contrario l'attributo è dichiarato all'interno di un \textit{Complex Type}, ed è una dichiarazione di attributo locale (\textit{Local attribute declaration}).
+		Quando una dichiarazione di attributo ha il livello gerarchico successivo a ``\texttt{<xsd:schema>}'' (\textit{la root dello schema}), questa dichiarazione è detta globale (\textit{global attribute declaration}. In caso contrario l'attributo è all'interno di un \textit{Complex Type}, ed è una (\textit{Local attribute declaration}).
 	\end{block}
 
 \end{frame}
@@ -776,7 +776,7 @@
 	\begin{block}{Primitive Data Types}
 		Primitive Data Types sono tipi di dati dai quali sono stati derivati altri tipi di dati.
 	\end{block}
-	\textit{XSD has nineteen primitive data types}
+	%\textit{XSD has nineteen primitive data types}
 
 
 	\begin{block}{Primiteive Data Types}
@@ -1108,7 +1108,7 @@
 	\addtocounter{nframe}{1}
 
 	\begin{block}{simple types: deriving by List}
-		data type più contenere una lista di valori separata da spazi SPACE
+		Un data type può contenere una lista di valori separata da spazi
 	\end{block}
 
 	\begin{block}{simple types: deriving by List}
@@ -1335,7 +1335,7 @@
 		Una comples type può avere un nome (\textit{Named Complex Type}) così da poter essere impiegato all'interno della dichiarazione di altri tipi complessi.
 	\end{block}
 
-	\textbf{Attribute declarations cannot have Complex Types.}
+	\textbf{le Attribute declarations non possono avere Complex Types.}
 
 \end{frame}
 
@@ -1514,7 +1514,7 @@
 	\addtocounter{nframe}{1}
 
 	\begin{block}{Complex type: Complex Content - Empty content}
-		Gli elementi Complex Type che hano un modello del contenuto complesso vuoto sono simili agli elementi di tipo complesso con contenuto semplice.
+		Gli elementi Complex Type che hanno un modello del contenuto complesso vuoto sono simili agli elementi di tipo complesso con contenuto semplice.
 	\end{block}
 
 	\begin{block}{Complex type: Empty content}
@@ -1664,10 +1664,6 @@
 	\addtocounter{nframe}{1}
 
 	\begin{block}{Elementi e Attributi: ordering}
-		XSD utilizza gli indicatori di ordine.
-	\end{block}
-
-	\begin{block}{Elementi e Attributi: ordering}
 		\begin{itemize}
 			\item \textbf{sequence}: è un elemento (\texttt{<xsd:sequence />}) che indica che gli elementi dichiarati devono seguire esattamente l'ordine specificato.
 			\item \textbf{all}: è un elemento (\texttt{<xsd:all>}) che indica che l'ordine degli elementi non è significativo.
@@ -1772,10 +1768,17 @@
 
 	\end{block}
 
+\end{frame}
+
+\begin{frame}
+	\frametitle{Elementi per la definizione degli schemi xml}
+	\framesubtitle{principi XSD}
+	\addtocounter{nframe}{1}
+
 	\begin{block}{Complex Type derivation: da simple type - esempio}
 		\texttt{
 			<xsd:complexType name=``divTypeEx''>
-			<xsd:simpleContent>
+			\emph{<xsd:simpleContent>}
 			\emph{<xsd:extension base=``divType''>}
 			\emph{<xsd:attribute name=``type'' use=``required''/>}
 			</xsd:extension>
@@ -1912,7 +1915,7 @@
 	\framesubtitle{principi XSD}
 	\addtocounter{nframe}{1}
 
-		\textbf{Tutti gli elementi obbligatori nel tipo di base devono essere presenti anche nel tipo derivato}
+		%\textbf{Tutti gli elementi obbligatori nel tipo di base devono essere presenti anche nel tipo derivato}
 	
 	\begin{block}{Complex Type derivation}
 		\begin{itemize}
@@ -2355,7 +2358,9 @@
 
 	\end{block}
 
-	\textit{Nuovi complex types possono essere creati a partire da altri complex types by extension and restriction.}
+	\begin{tiny}
+		\textit{Nuovi complex types possono essere creati a partire da altri complex types by extension and restriction.}
+	\end{tiny}
 \end{frame}
 
 
@@ -2377,7 +2382,7 @@
 	\addtocounter{nframe}{1}
 
 	\begin{block}{Complex Type derivation: final attribute}
-		\textit{L'attributo final può assumete i seguenti valori:}
+		\textit{L'attributo final può assumere i seguenti valori:}
 		\begin{itemize}
 			\item \textbf{restriction}: limita la derivazione by restriction
 			\item \textbf{extension}: limita la derivazione by extension
