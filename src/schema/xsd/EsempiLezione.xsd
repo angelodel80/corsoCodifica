@@ -1,7 +1,55 @@
 <?xml version="1.0" encoding="utf-8"?>
-<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema">
 
 
 
 
+
+<xsd:schema
+xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+    <xsd:element name=‘‘Employee’’> 
+        <xsd:complexType>
+            <xsd:attribute name=‘‘FirstName’’/>
+        </xsd:complexType> 
+    </xsd:element>
 </xsd:schema>
+
+
+
+
+<xsd:schema
+xmlns:xsd=‘‘http://www.w3.org/2001/XMLSchema’’>
+    <xsd:element name=‘‘text’’> 
+        <xsd:complexType>
+            <xsd:sequence> 
+                <xsd:element name=‘‘body’’/>
+            </xsd:sequence> 
+        </xsd:complexType> 
+    </xsd:element>
+</xsd:schema>
+
+
+
+
+
+
+
+<xsd:element name=‘‘body’’> 
+    <xsd:complexType>
+        <xsd:attribute name=‘‘lang’’/> 
+        <xsd:attribute name=‘‘type’’/> 
+    </xsd:complexType> 
+</xsd:element>
+
+<xsd:element name=‘‘text’’> 
+    <xsd:complexType>
+        <xsd:all> 
+            <xsd:element ref=‘‘body’’/>
+        </xsd:all>
+    </xsd:complexType> 
+</xsd:element> 
+
+
+
+
+
+
