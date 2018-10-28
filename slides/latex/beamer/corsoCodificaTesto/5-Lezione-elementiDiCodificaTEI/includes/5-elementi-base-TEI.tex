@@ -638,7 +638,7 @@
     \begin{block}{Enfasi e termini particolari}
         \begin{itemize}
             \item \texttt{<term>} una o più parole considerate termine tecnico.
-            (\texttt{Possiamo definire il <term xml\:id="NPL" rend=``italic''>neopositivismo logico</term>})
+            (\texttt{Possiamo definire il <term xml:id="NPL" rend=``italic''>neopositivismo logico</term>})
             \item \texttt{<gloss>} una spiegazione o glossa riguardo il testo.
             (\texttt{<gloss target=``\#NPL''>una corrente filosofica basata
             sul principio che la filosofia debba aspirare al rigore
@@ -733,18 +733,9 @@
         \end{itemize}
         
         
-
-       \texttt{(Lexicography has shown little sign of being affected by the work
-        of followers of J.R. Firth, probably best summarized in his
-        slogan, \underline{<cit>}
-        \underline{<quote>}You shall know a word by the company it keeps.\underline{</quote>}
-        \underline{<ref>}(Firth, 1957)\underline{</ref>}
-        \underline{</cit>})}
         
-        \textit{Semplice riferimento bibliografico nell’esempio, possibile
-        aggiungere un collegamento (a capitolo/sezione o a una
-        specifica entrata bibliografica) usando l’attributo \emph{@target}}
     \end{block}
+
 
 \end{frame}
 
@@ -756,12 +747,12 @@
 	\begin{block}{Citazioni - Esempio}
 
         
-       \texttt{(Lexicography has shown little sign of being affected by the work
+       \texttt{Lexicography has shown little sign of being affected by the work
         of followers of J.R. Firth, probably best summarized in his
         slogan, \underline{<cit>}
         \underline{<quote>}You shall know a word by the company it keeps.\underline{</quote>}
         \underline{<ref>}(Firth, 1957)\underline{</ref>}
-        \underline{</cit>})}
+        \underline{</cit>}}
         
     \end{block}
 
@@ -856,7 +847,6 @@
 	\addtocounter{nframe}{1}
 
 	\begin{block}{Nomi, numeri e date}
-        
         
         \textbf{possibile usare un modulo specifico:}
         \\\textit{13 Names, Dates, People, and Places} (
@@ -1113,7 +1103,7 @@
         zucchero;</item> <item>mezzo chilo di farina;</item>
         <item>due uova.</item></list>}
     \end{block}
-    \textit{usare l'attributo type per specificare il tipo di lista.
+    \textit{Usare l'attributo type per specificare il tipo di lista.
         \\Il testo non deve essere necessariamente ordinato come lista
         per essere marcato come tale}
 \end{frame}
@@ -1171,11 +1161,21 @@
 \begin{frame}
 	\frametitle{Intro Text Encoding Initiative}
 	\framesubtitle{Schemi di codifica TEI: Moduli base}
+    \addtocounter{nframe}{1}
+    
+    \begin{block}{Tabelle}
+        \texttt{gli elementi per tabelle sono <table>, <row>, <cell> disponibili
+        con il modulo figures, v. il cap. 14 Tables, Formulae and
+        Graphics (\url{http://www.tei-c.org/release/doc/tei-p5-doc/en/html/FT.html})}
+    \end{block}
+
+\end{frame}
+
+\begin{frame}
+	\frametitle{Intro Text Encoding Initiative}
+	\framesubtitle{Schemi di codifica TEI: Moduli base}
 	\addtocounter{nframe}{1}
 
-    \texttt{gli elementi per tabelle sono <table>, <row>, <cell> disponibili
-    con il modulo figures, v. il cap. 14 Tables, Formulae and
-    Graphics (\url{http://www.tei-c.org/release/doc/tei-p5-doc/en/html/FT.html})}
 
 	\begin{block}{Tabella}
         
@@ -1225,7 +1225,7 @@
 	\addtocounter{nframe}{1}
 
 	\begin{block}{Note - Esempio}
-        Esempio nota
+        \texttt{Le <title>Guidelines</title><note n="2" place="foot" resp=``amdg''>C.M. SperbergMcQueen and Lou Burnard, <title>Guidelines for Electronic Text Encoding and Interchange</title> (Chicago, Oxford: Text Encoding initiative, 2002).</note> sono nate con lo scopo di ...}
     \end{block}
 \end{frame}
 
@@ -1234,7 +1234,8 @@
 	\framesubtitle{Schemi di codifica TEI – Moduli base}
 	\addtocounter{nframe}{1}
 
-	\begin{block}{Esercizio}  
+    \begin{block}{Esercizio}
+        Utilizzare puntatori, note, lista, glossario marcare nomi, rs, term.  
         % marcare il testo del file ese03.jpg come segue:
         % editor da usare: XML Copy Editor o Editix
         % marcare tutto quello che si vede nella pagina
@@ -1329,7 +1330,7 @@
             \item \texttt{<editor>} curatore della pubblicazione 
         \end{itemize} 
     \end{block}
-    \textit{questi elementi possono contenere direttamente il testo con il nome oppure elementi più complessi (<persName> e sub-elementi)}
+    \textit{Questi elementi possono contenere direttamente il testo con il nome oppure elementi più complessi (\texttt{<persName> e sub-elementi})}
 \end{frame}
 
 
@@ -1487,15 +1488,14 @@
 
     \begin{block}{Componenti non testuali: immagini}
         \begin{itemize}
-            \item <figure> raggruppa informazioni relative a un’immagine
-            \item <head> titolo o didascalia relativa all’immagine
-            \item <figDesc> descrizione dell'immagine
-            \item <graphic> puntatore a un'immagine
+            \item \texttt{<figure>} raggruppa informazioni relative a un’immagine
+            \item \texttt{<head>} titolo o didascalia relativa all’immagine
+            \item \texttt{<figDesc>} descrizione dell'immagine
+            \item \texttt{<graphic>} puntatore a un'immagine
         \end{itemize}
-        
-        \texttt{<figure> nella P5 fa parte del modulo figures 
-        (\url{http://www.tei-c.org/release/doc/tei-p5-doc/en/html/FT.html\#FTGRA} )}
     \end{block}
+    \texttt{<figure> nella P5 fa parte del modulo figures 
+    (\url{http://www.tei-c.org/release/doc/tei-p5-doc/en/html/FT.html\#FTGRA} )}
     
 \end{frame}
 
@@ -1506,21 +1506,19 @@
 	\framesubtitle{Schemi di codifica TEI – Moduli base}
 	\addtocounter{nframe}{1}
     
-    \textit{Nella TEI P4 è indispensabile inserire dichiarazioni
-    relative alle immagini nell’intestazione del documento}
+    \textit{Nella TEI P4 bisogna inserire dichiarazioni
+    per le immagini nell’intestazione}
     
 	\begin{block}{Esempio TEI P4}
-
         \texttt{<?xml version='1.0' encoding='utf-8'?>
         ...
-        \underline{<!NOTATION JPEG PUBLIC
-        \\`ISO DIS 10918//NOTATION JPEG Graphics Format//EN'>
-        \\<!ENTITY PDatabase SYSTEM `support/PDatabase.jpeg' NDATA JPEG>
-        ]>}
-        \\...
+        <!NOTATION JPEG PUBLIC
+        `ISO DIS 10918//NOTATION JPEG Graphics Format//EN'>
+        <!ENTITY PDatabase SYSTEM `support/PDatabase.jpeg' NDATA JPEG>
+        ]>
+        ...
         <p>The system is build around a relational database, called the
-        <soCalled>palaeographical database</soCalled>, that contains all
-        the information the application produces and processes:</p>
+        <soCalled>palaeographical database</soCalled> ... </p>
         \underline{<figure entity=``PDatabase''>}
         <figDesc>Schematic of the SPI system.</figDesc>
         </figure>}
@@ -1563,7 +1561,6 @@
         \end{itemize}
 
     \end{block}
-    \textit{immagine impiegata come intestazione in un documento P5}
 \end{frame}
 
 

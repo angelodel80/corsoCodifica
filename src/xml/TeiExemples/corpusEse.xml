@@ -1,0 +1,16 @@
+<teiCorpus>
+    <teiHeader> [metadati per il corpus]
+    </teiHeader>
+    <TEI>
+        <teiHeader> [metadati relativi
+al I testo]</teiHeader>
+        <text> [primo testo del
+corpus] </text>
+    </TEI>
+    <TEI>
+        <teiHeader>[metadati
+relativi al II testo]</teiHeader>
+        <text> [secondo
+testo del corpus] </text>
+    </TEI>
+</teiCorpus>

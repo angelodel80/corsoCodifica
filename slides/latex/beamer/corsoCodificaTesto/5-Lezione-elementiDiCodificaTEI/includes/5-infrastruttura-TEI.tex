@@ -4,7 +4,6 @@
 
 % TEI XML can be used for a simple reading-oriented transcription of a primary source, whether that be an authorial manuscript, a printed literary work, an audio broadcast, or a dictionary. It can be used for enriched encodings in which many aspects of such texts are made explicit, so that software of all kinds can operate upon them, from visualisation tools and digital publishing systems to specialised statistical analysis packages. It can be used to provide additional annotations and metadata of all kinds.
 
-% A module is simply a named container for a number of declarations for TEI elements and classes.
 
 % deciding on the proper content for that new element does require some knowledge of the way the TEI system is designed
 
@@ -13,10 +12,16 @@
     \framesubtitle{Tabella Moduli TEI}
     \addtocounter{nframe}{1}
     
-    \begin{block}{Moduli TEI}
-        \begin{center}
-            iv.1.2 Class, Macro, and Datatype Names
-        \end{center}
+    \begin{block}{TEI framework}
+        
+            La tecnologia TEI ha un framework concettuale diviso in
+                \begin{itemize}
+                    \item Moduli
+                    \item Classi
+                    \item Macro
+                    \item Tipi di Dato
+                \end{itemize}
+
     \end{block}
 \end{frame}
 
@@ -26,80 +31,171 @@
     \framesubtitle{Tabella Moduli TEI}
     \addtocounter{nframe}{1}
     
-   
+    \begin{block}{Moduli TEI}
+        Un modulo è semplicemente un contenitore per una serie di dichiarazioni uniformi e coerenti per gli elementi TEI e le relative classi.
+    \end{block}
+\end{frame}
+
+\begin{frame}
+    \frametitle{Infrastruttura TEI}
+    \framesubtitle{Tabella Moduli TEI}
+    \addtocounter{nframe}{1}
+    
         \begin{center}
-        \includegraphics[width=.9\textwidth]{imgs/ModuliTEI.png}
+        \includegraphics[width=.95\textwidth]{imgs/ModuliTEI.png}
         \end{center}
    
 \end{frame}
 
+\begin{frame}
+    \frametitle{Infrastruttura TEI}
+    \framesubtitle{Tabella Moduli TEI}
+    \addtocounter{nframe}{1}
+        \begin{center}
+        \includegraphics[width=.95\textwidth]{imgs/ModelloTEI.png}
+        \end{center}
+\end{frame}
+
+\begin{frame}
+    \frametitle{Infrastruttura TEI}
+    \framesubtitle{Tabella Moduli TEI}
+    \addtocounter{nframe}{1}
+    
+    \begin{block}{Classi TEI}
+        Le classi sono usate per esprimere due distinti tipi di \textbf{caratteristiche comuni} ad un insieme di elementi. 
+    \end{block}
+
+    \begin{block}{Classi TEI}
+        Gli elementi di una classe possono \textit{condividere un insieme di attributi} oppure possono far \textit{parte di uno stesso content model}.
+    \end{block}
+\end{frame}
+
+\begin{frame}
+    \frametitle{Infrastruttura TEI}
+    \framesubtitle{Tabella Moduli TEI}
+    \addtocounter{nframe}{1}
+    
+    \begin{block}{Classi TEI}
+        \begin{itemize}
+            \item Un elemento appartenente ad una classe attributo condivide gli attributi con tutti gli altri elementi membri della stessa classe. 
+            \item Un elemento appartenente alla classe modello condivide il luogo del content model dove appare con gli altri elementi membri della stessa classe.
+        \end{itemize}
+    \end{block}
+    \textit{ In entrambi i casi un \textbf{elemento eredita} proprietà dalle classi di cui è membro.}
+\end{frame}
+
+\begin{frame}
+    \frametitle{Infrastruttura TEI}
+    \framesubtitle{Tabella Moduli TEI}
+    \addtocounter{nframe}{1}
+        \begin{center}
+        \includegraphics[width=.95\textwidth]{imgs/Classi-AttributiGlobaliModuli.png}
+        \end{center}
+\end{frame}
+
+
+\begin{frame}
+    \frametitle{Infrastruttura TEI}
+    \framesubtitle{Tabella Moduli TEI}
+    \addtocounter{nframe}{1}
+    
+    \begin{block}{Macro TEI}
+        Le Macro sono shortcut per dichiarazioni che occorrono frequentemente. 
+        \\ Le Macro sono utilizzate in due modi diversi:
+        \begin{itemize}
+            \item per content model o parti di content model \textit{frequently-encountered}
+            \item per datatype di attributi
+        \end{itemize}
+         
+    \end{block}
+\end{frame}
+
+\begin{frame}
+    \frametitle{Infrastruttura TEI}
+    \framesubtitle{Tabella Moduli TEI}
+    \addtocounter{nframe}{1}
+    
+    \begin{block}{Data Type TEI}
+        I valori che possono assumere gli attributi sono definiti da tipi di dato all'interno delle \textit{TEI datatype specification}.
+    \end{block}
+
+    \begin{block}{Data Type TEI}
+       
+    \end{block}
+    Le specifiche TEI definiscono i propri tipo di dato sfruttando altri tipi di dato primitivi e quelli derivati dalle specifiche W3C. 
+\end{frame}
+
+
+
+
+
 % xx sezione 1 frame 01
-\begin{frame}
-    \frametitle{Attributi Globali}
-    \framesubtitle{Elenco}
-    \addtocounter{nframe}{1}
+% \begin{frame}
+%     \frametitle{Attributi Globali}
+%     \framesubtitle{Elenco}
+%     \addtocounter{nframe}{1}
 
 
-\textbf{\textrm{att.global} provides attributes common to all elements in the TEI encoding scheme.}
+% \textbf{\textrm{att.global} provides attributes common to all elements in the TEI encoding scheme.}
 
-\begin{description}
-    \item [@xml:id]     \textbf{identifier} provides a unique identifier for the element bearing the attribute.
-    \item [@n]          \textbf{number} gives a number (or other label) for an element, which is not necessarily unique within the document.
-    \item [@xml:lang]   \textbf{language} indicates the language of the element content using a ‘tag’ generated according to BCP 47\footnote{see \href{http://google.con}{http://google.com}}.
-\end{description}
+% \begin{description}
+%     \item [@xml:id]     \textbf{identifier} provides a unique identifier for the element bearing the attribute.
+%     \item [@n]          \textbf{number} gives a number (or other label) for an element, which is not necessarily unique within the document.
+%     \item [@xml:lang]   \textbf{language} indicates the language of the element content using a ‘tag’ generated according to BCP 47\footnote{see \href{http://google.con}{http://google.com}}.
+% \end{description}
 
-\end{frame}
-
-
-% xx sezione 1 frame 02
-\begin{frame}
-    \frametitle{Attributi Globali}
-    \framesubtitle{Elenco cont..}
-    \addtocounter{nframe}{1}
+% \end{frame}
 
 
-\textbf{\textmd{att.global} provides attributes common to all elements in the TEI encoding scheme.}
-
-\begin{description}
-    \item [rend] [att.global.rendition]	(rendition) indicates how the element in question was rendered or presented in the source text.
-    \item [style] [att.global.rendition]	contains an expression in some formal style definition language which defines the rendering or presentation used for this element in the source text
-    \item [rendition] [att.global.rendition]	points to a description of the rendering or presentation used for this element in the source text.
-\end{description}
-
-\end{frame}
-
-% xx sezione 1 frame 03
-\begin{frame}
-    \frametitle{Attributi Globali}
-    \framesubtitle{Elenco cont...}
-    \addtocounter{nframe}{1}
+% % xx sezione 1 frame 02
+% \begin{frame}
+%     \frametitle{Attributi Globali}
+%     \framesubtitle{Elenco cont..}
+%     \addtocounter{nframe}{1}
 
 
-\textbf{\textmd{att.global} provides attributes common to all elements in the TEI encoding scheme.}
+% \textbf{\textmd{att.global} provides attributes common to all elements in the TEI encoding scheme.}
 
-\begin{description}
-    \item [xml:base]	provides a base URI reference with which applications can resolve relative URI references into absolute URI references.
-    \item [xml:space]	signals an intention about how white space should be managed by applications.
-    \item [source] [att.global.source]	specifies the source from which some aspect of this element is drawn.
-\end{description}
+% \begin{description}
+%     \item [rend] [att.global.rendition]	(rendition) indicates how the element in question was rendered or presented in the source text.
+%     \item [style] [att.global.rendition]	contains an expression in some formal style definition language which defines the rendering or presentation used for this element in the source text
+%     \item [rendition] [att.global.rendition]	points to a description of the rendering or presentation used for this element in the source text.
+% \end{description}
 
-\end{frame}
+% \end{frame}
 
-% xx sezione 1 frame 04
-\begin{frame}
-    \frametitle{Attributi Globali}
-    \framesubtitle{Elenco cont....}
-    \addtocounter{nframe}{1}
+% % xx sezione 1 frame 03
+% \begin{frame}
+%     \frametitle{Attributi Globali}
+%     \framesubtitle{Elenco cont...}
+%     \addtocounter{nframe}{1}
 
 
-\textbf{\textmd{att.global} provides attributes common to all elements in the TEI encoding scheme.}
+% \textbf{\textmd{att.global} provides attributes common to all elements in the TEI encoding scheme.}
 
-\begin{description}
-    \item [cert] [att.global.responsibility]	(certainty) signifies the degree of certainty associated with the intervention or interpretation.
-    \item [resp] [att.global.responsibility]	(responsible party) indicates the agency responsible for the intervention or interpretation, for example an editor or transcriber.
-\end{description}
+% \begin{description}
+%     \item [xml:base]	provides a base URI reference with which applications can resolve relative URI references into absolute URI references.
+%     \item [xml:space]	signals an intention about how white space should be managed by applications.
+%     \item [source] [att.global.source]	specifies the source from which some aspect of this element is drawn.
+% \end{description}
 
-\end{frame}
+% \end{frame}
+
+% % xx sezione 1 frame 04
+% \begin{frame}
+%     \frametitle{Attributi Globali}
+%     \framesubtitle{Elenco cont....}
+%     \addtocounter{nframe}{1}
+
+
+% \textbf{\textmd{att.global} provides attributes common to all elements in the TEI encoding scheme.}
+
+% \begin{description}
+%     \item [cert] [att.global.responsibility]	(certainty) signifies the degree of certainty associated with the intervention or interpretation.
+%     \item [resp] [att.global.responsibility]	(responsible party) indicates the agency responsible for the intervention or interpretation, for example an editor or transcriber.
+% \end{description}
+
+% \end{frame}
 
 
 % xx sezione 1 frame 05
@@ -111,7 +207,7 @@
 
     \textbf{\textrm{xml:lang} indica la lingua e il sistema di scrittura usato}
     \defverbatim{\langatt}{%
-        %\begin{tiny}
+        \begin{tiny}
         \begin{verbatim}
             <TEI xmlns="http://www.tei-c.org/ns/1.0">
                 <teiHeader xml:lang="en">
@@ -133,7 +229,7 @@
                 </text>
             </TEI>
         \end{verbatim}
-       % \end{tiny}
+        \end{tiny}
         }
         \begin{center}
             {\langatt}
@@ -141,51 +237,51 @@
 \end{frame}
 
 
-% xx sezione 1 frame 06
-\begin{frame}
-    \frametitle{Attributi Globali}
-    \framesubtitle{Stile e Aspetto}
-    \addtocounter{nframe}{1}
+% % xx sezione 1 frame 06
+% \begin{frame}
+%     \frametitle{Attributi Globali}
+%     \framesubtitle{Stile e Aspetto}
+%     \addtocounter{nframe}{1}
 
     
-    \textbf{In the TEI scheme, it is possible to supply information about the appearance of elements within a source document in the following distinct ways:}
+%     \textbf{In the TEI scheme, it is possible to supply information about the appearance of elements within a source document in the following distinct ways:}
 
-    \begin{itemize}
-        \item One or more properties may be specified as the default for a set of elements (based on an external scheme, by default CSS), using rendition elements and their selector attributes;
-        \item One or more properties may be specified for individual element occurrences, using the rend attribute with any convenient set of one or more sequence-indeterminate tokens;
-    \end{itemize}
-\end{frame}
+%     \begin{itemize}
+%         \item One or more properties may be specified as the default for a set of elements (based on an external scheme, by default CSS), using rendition elements and their selector attributes;
+%         \item One or more properties may be specified for individual element occurrences, using the rend attribute with any convenient set of one or more sequence-indeterminate tokens;
+%     \end{itemize}
+% \end{frame}
 
-% xx sezione 1 frame 07
-\begin{frame}
-    \frametitle{Attributi Globali}
-    \framesubtitle{Stile e Aspetto cont..}
-    \addtocounter{nframe}{1}
+% % xx sezione 1 frame 07
+% \begin{frame}
+%     \frametitle{Attributi Globali}
+%     \framesubtitle{Stile e Aspetto cont..}
+%     \addtocounter{nframe}{1}
     
-    \textbf{Note that these TEI attributes always describe the rendition or appearance of the source document, not intended output renditions, although often the two may be closely related.}
+%     \textbf{Note that these TEI attributes always describe the rendition or appearance of the source document, not intended output renditions, although often the two may be closely related.}
 
-    \begin{itemize}
-        \item One or more properties may be specified for individual element occurrences, using the rendition attribute to point to rendition elements;
-        \item One or more properties may be supplied explicitly for individual element occurrences, using the style attribute.
-    \end{itemize}
+%     \begin{itemize}
+%         \item One or more properties may be specified for individual element occurrences, using the rendition attribute to point to rendition elements;
+%         \item One or more properties may be supplied explicitly for individual element occurrences, using the style attribute.
+%     \end{itemize}
 
-\end{frame}
+% \end{frame}
 
 
 % xx sezione 1 frame 08
 
-\begin{frame}
-    \frametitle{Attributi Globali}
-    \framesubtitle{da vari altri Moduli Tabella}
-    \addtocounter{nframe}{1}
-    %fare una tabella 
-class name	module name	see further
-att.global.linking	linking	16 Linking, Segmentation, and Alignment
-att.global.analytic	analysis	17 Simple Analytic Mechanisms
-att.global.facs	transcr	11.1 Digital Facsimiles
-att.global.change	transcr	11.7 Identifying Changes and Revisions
+% \begin{frame}
+%     \frametitle{Attributi Globali}
+%     \framesubtitle{da vari altri Moduli Tabella}
+%     \addtocounter{nframe}{1}
+%     %fare una tabella 
+% class name	module name	see further
+% att.global.linking	linking	16 Linking, Segmentation, and Alignment
+% att.global.analytic	analysis	17 Simple Analytic Mechanisms
+% att.global.facs	transcr	11.1 Digital Facsimiles
+% att.global.change	transcr	11.7 Identifying Changes and Revisions
 
-\end{frame}
+% \end{frame}
 
 %%%%%%%%%%
 % attributi globali: source, cert, resp, xml:base, xml:space
@@ -195,13 +291,65 @@ att.global.change	transcr	11.7 Identifying Changes and Revisions
 %% Macro e DataType
 % Tabella Macro
 % 
+
+
 \begin{frame}
-    \frametitle{Attributi Globali}
+    \frametitle{Infrastruttura TEI}
     \framesubtitle{Classificazione degli elementi}
     \addtocounter{nframe}{1}
-    %fare una tabella 
-    1.3.2.1 Informal Element Classifications
+    \textit{Quasi tutti gli elementi TEI possono essere \textbf{classificati informalmente} come appartenenti alle seguenti categorie:}
+    \begin{block}{TEI element classification}
+        \begin{itemize}
+            \item divisions
+            \item chunks
+            \item phrase-level elements
+            \item inter-level elements
+            \item components
+        \end{itemize}
 
+    \end{block}
+
+\end{frame}
+
+\begin{frame}
+    \frametitle{Infrastruttura TEI}
+    \framesubtitle{Classificazione degli elementi}
+    \addtocounter{nframe}{1}
+   
+    \begin{itemize}
+       \item \textbf{divisions}
+       \item[] Divisioni ad alto livello dei testi, molto spesso elementi annidati.
+    \end{itemize}
+
+   \begin{itemize}
+    \item \textbf{chunks}
+    \item[] Elementi come i paragrafi e altri elementi simili i quali sono posizionati all'interno dei testi e divisioni. Solitamente non sono elementi che possono annidarsi o apparire all'interno di altri elementi di livello chunk.
+    \end{itemize}
+
+\end{frame}
+
+
+\begin{frame}
+    \frametitle{Infrastruttura TEI}
+    \framesubtitle{Classificazione degli elementi}
+    \addtocounter{nframe}{1}
+   
+
+    \begin{itemize}
+        \item \textbf{phrase-level elements}
+        \item[] elementi che occorrono solo all'interno di elementi di livello chunk.
+     \end{itemize}
+ 
+    \begin{itemize}
+     \item \textbf{inter-level elements}
+     \item[] elementi che possono occorrere sia tra chunks all'interno di division, sia all'interno di essi.
+     \end{itemize}
+
+     \begin{itemize}
+        \item \textbf{components}
+        \item[] elementi che possono occorrere direttamente all'interno dei testi o delle divisioni di testo. E' una combinazione di elementi di livello inter e chunk.
+        \end{itemize}
+   
 \end{frame}
 
 

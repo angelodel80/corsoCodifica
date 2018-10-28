@@ -1,0 +1,26 @@
+<TEI>
+    <teiHeader> [ intestazione del testo
+        composito ] </teiHeader>
+    <text>
+        <front> [ front
+            matter del composito ] </front>
+        <group>
+            <text>
+                <front> [ front matter del primo testo ] </front>
+
+                <body> [ body del primo testo ] </body>
+                <back> [
+                    back matter del primo testo ] </back>
+            </text>
+            <text>
+                <front> [ front matter del secondo testo]
+                </front>
+
+                <body> [ body del secondo testo ] </body>
+                <back> [ back matter del secondo testo ] </back>
+            </text> ... [ altri testi o gruppi di testi ] ...
+        </group>
+        <back> [ back matter del composito ]
+        </back>
+    </text>
+</TEI>
