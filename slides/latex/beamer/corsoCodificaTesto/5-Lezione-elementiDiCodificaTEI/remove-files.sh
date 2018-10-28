@@ -1,0 +1,2 @@
+#!/bin/bash
+rm 5-Lezione-ElementiTEI.aux 5-Lezione-ElementiTEI.log 5-Lezione-ElementiTEI.nav 5-Lezione-ElementiTEI.out 5-Lezione-ElementiTEI.pdf 5-Lezione-ElementiTEI.snm 5-Lezione-ElementiTEI.toc 5-Lezione-ElementiTEI.vrb texput.log

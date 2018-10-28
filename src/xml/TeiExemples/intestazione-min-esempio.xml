@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<teiHeader>
+    <fileDesc>
+        <titleStmt>
+            <title>La Divina Commedia: versione elettronica</title>
+            <respStmt>
+                <resp>Conversione TEI P5 a cura di</resp>
+                <name>M. Rossi</name>
+            </respStmt>
+        </titleStmt>
+        <publicationStmt>
+            <publisher>Università di Pisa</publisher>
+            <date>2002-11-07</date>
+            <availability status="restricted">
+                <p></p>
+            </availability>
+        </publicationStmt>
+        <sourceDesc>
+            <bibl>
+                <title>La Divina Commedia</title>
+                <author>Dante Alighieri
+                </author>
+                <publisher>Mondadori</publisher>
+                <date>1988</date>
+            </bibl>
+        </sourceDesc>
+    </fileDesc>
+</teiHeader>

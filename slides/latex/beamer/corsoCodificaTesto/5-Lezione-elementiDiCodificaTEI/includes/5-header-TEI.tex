@@ -20,18 +20,226 @@
 
 % Rifarsi al capitolo due delle linee guida per una descrizione esaustiva e sistematica
 
+\begin{frame}
+	\frametitle{Intro Text Encoding Initiative}
+	\framesubtitle{Schemi di codifica TEI – Intestazione}
+	\addtocounter{nframe}{1}
+
+    \begin{block}{Contenuto del TEI header}
+        \textbf{Qualsiasi documento TEI deve includere una intestazione (TEIHeader)}.
+    \end{block}
+
+    \begin{block}{TEI header: componenti}
+        file description, encoding description, profile description, revision description, no TEI metadata
+    \end{block}
+
+\end{frame}
+
+\begin{frame}
+	\frametitle{Intro Text Encoding Initiative}
+	\framesubtitle{Schemi di codifica TEI – Intestazione}
+	\addtocounter{nframe}{1}
+
+    \begin{block}{Contenuto del TEI header}
+        \begin{itemize}
+            \item metadati relativi al documento (utili per collezioni di testi
+            codificati)
+            \item descrizione del file usando \texttt{<fileDesc>} (obbligatoria)
+            \item descrizioni relative al tipo di codifica, al contenuto del
+            documento, alle sue revisioni (facoltative)
+        \end{itemize}
+    \end{block}
+\textit{E' possibile includere testi introduttivi e spiegazioni relative alla
+codifica effettuata (preziosi per l’interscambio!)}
+
+\end{frame}
+
+
+
+
+
+\begin{frame}
+	\frametitle{Intro Text Encoding Initiative}
+	\framesubtitle{Schemi di codifica TEI – Contentuto}
+	\addtocounter{nframe}{1}
+
+    \begin{block}{Testo in prosa}
+        Most elements contain simple running prose at some level. Many elements may contain either prose (possibly organized into paragraphs) or more specific elements, which themselves contain prose. In this chapter's descriptions of element content, the phrase prose description should be understood to imply a series of paragraphs, each marked as a p element. The word phrase, by contrast, should be understood to imply character data, interspersed as need be with phrase-level elements, but not organized into paragraphs.
+    \end{block}
+\textit{}
+
+\end{frame}
+
+
+\begin{frame}
+	\frametitle{Intro Text Encoding Initiative}
+	\framesubtitle{Schemi di codifica TEI – Contenuto}
+	\addtocounter{nframe}{1}
+
+    \begin{block}{Grouping elements}
+        Elements whose names end with the suffix Stmt (e.g. editionStmt, titleStmt) and the xenoData element enclose a group of specialized elements recording some structured information. In the case of the bibliographic elements, the suffix Stmt is used in names of elements corresponding to the ‘areas’ of the International Standard Bibliographic Description.5 In the case of the xenoData element, the specialized elements are not TEI elements, but rather come from some other metadata scheme. In most cases grouping elements may contain prose descriptions as an alternative to the set of specialized elements, thus allowing the encoder to choose whether or not the information concerned should be presented in a structured form or in prose.
+    \end{block}
+\textit{}
+
+\end{frame}
+
+
+\begin{frame}
+	\frametitle{Intro Text Encoding Initiative}
+	\framesubtitle{Schemi di codifica TEI – Contenuto}
+	\addtocounter{nframe}{1}
+
+    \begin{block}{Dichiarazioni}
+        Elements whose names end with the suffix Decl (e.g. tagsDecl, refsDecl) enclose information about specific encoding practices applied in the electronic text; often these practices are described in coded form. Typically, such information takes the form of a series of declarations, identifying a code with some more complex structure or description. A declaration which applies to more than one text or division of a text need not be repeated in the header of each such text or subdivision. Instead, the decls attribute of each text (or subdivision of the text) to which the declaration applies may be used to supply a cross-reference to it, as further described in section 15.3 Associating Contextual Information with a Text.
+    \end{block}
+\textit{}
+
+\end{frame}
+
+
+\begin{frame}
+	\frametitle{Intro Text Encoding Initiative}
+	\framesubtitle{Schemi di codifica TEI – Contenuto}
+	\addtocounter{nframe}{1}
+
+    \begin{block}{Descrizioni}
+
+        Elements whose names end with the suffix Desc (e.g. settingDesc, projectDesc) contain a prose description, possibly, but not necessarily, organized under some specific headings by suggested sub-elements.
+
+    \end{block}
+\textit{}
+
+\end{frame}
+
+
+
+\begin{frame}
+	\frametitle{Intro Text Encoding Initiative}
+	\framesubtitle{Schemi di codifica TEI – Moduli base}
+	\addtocounter{nframe}{1}
+
+	\begin{block}{documento TEI - schema di intestazione TEI minima}
+        \texttt{<teiHeader>}
+        \texttt{ <fileDesc>}
+        \texttt{  <titleStmt>...</titleStmt>}
+        \texttt{  <publicationStmt>...</publicationStmt>}
+        \texttt{  <sourceDesc>...</sourceDesc>}
+        \texttt{ </fileDesc>}
+        \texttt{</teiHeader>}
+    \end{block}
+    
+
+\end{frame}
+
+
+\begin{frame}
+	\frametitle{Intro Text Encoding Initiative}
+	\framesubtitle{Schemi di codifica TEI – Intestazione}
+	\addtocounter{nframe}{1}
+
+	\begin{block}{documento TEI - schema di intestazione TEI minima}
+        Metadati essenziali riguardo il titolo, la modalità di diffusione e
+        la fonte originaria di un testo codificato.
+        \\Permettono classificazione, archiviazione ed elaborazione
+        bibliografica
+    \end{block}
+    
+\end{frame}
+
+
+
+\begin{frame}
+	\frametitle{Intro Text Encoding Initiative}
+	\framesubtitle{Schemi di codifica TEI – Intestazione}
+	\addtocounter{nframe}{1}
+
+        \texttt{<teiHeader>
+        <fileDesc>
+        <titleStmt>
+        <title>La Divina Commedia: versione elettronica</title>
+        <respStmt>
+        <resp>Conversione TEI P5 a cura di</resp><name>M. Rossi</name>
+        </respStmt>
+        </titleStmt>
+        <publicationStmt>
+        <publisher>Università di Pisa</publisher>
+        <date>2002-11-07</date>
+        <availability status=``restricted''><p></p></availability>
+        </publicationStmt>
+        <sourceDesc>
+        <bibl><title>La Divina Commedia</title><author>Dante Alighieri
+        </author><publisher>Mondadori</publisher>
+        <date>1988</date></bibl>
+        </sourceDesc>
+        </fileDesc>
+        </teiHeader>}
+
+\end{frame}
+
+
+
+\begin{frame}
+	\frametitle{Intro Text Encoding Initiative}
+	\framesubtitle{Schemi di codifica TEI – Intestazione}
+	\addtocounter{nframe}{1}
+
+    \begin{block}{Le altre componenti dell’intestazione TEI}
+        \begin{itemize}
+            \item \texttt{<encodingDesc>} informazioni riguardo lo schema (e il
+            modello di codifica) utilizzato
+            \item  \texttt{<profileDesc>} descrizione del testo: quando è stato
+            creato, da chi, usando quali lingue etc.
+            \item \texttt{<revisionDesc>} informazioni sulle versioni del file
+        \end{itemize}
+    \end{block}
+    \textit{I metadati sono una componente essenziale di qualsiasi
+        progetto di digitalizzazione}
+\end{frame}
+
+
+\begin{frame}
+	\frametitle{Intro Text Encoding Initiative}
+	\framesubtitle{Schemi di codifica TEI – Moduli base}
+	\addtocounter{nframe}{1}
+
+	\begin{block}{Errori frequenti}
+        \textit{Si fraintende il significato dell’elemento \texttt{<fileDesc>}}
+        \begin{itemize}
+            \item serve in primo luogo a dare informazioni sul file stesso, non sul testo originale
+            \item il riferimento alla fonte dalla quale è tratto il testo codificato
+            deve essere inserito nel \texttt{<sourceDesc>}
+        \end{itemize}
+    \end{block}
+
+\end{frame}
+
+\begin{frame}
+	\frametitle{Intro Text Encoding Initiative}
+	\framesubtitle{Schemi di codifica TEI – Intestazione}
+	\addtocounter{nframe}{1}
+
+        \textbf{Esempio Intestazione TEI raccomandata}
+        \textit{Tratto dalle linee Guida della TEI. Capitolo 2 paragrafo 2.7}
+        \\\url{}
+
+\end{frame}
+
 % file description 
-\subsection{File Description}
-\input{filedesc.tex}
+%\subsection{File Description}
+%\input{includes/subinclude/filedesc.tex}
 
 % encoding description
-\subsection{Encoding Description}
-\input{encoding.tex}
+%\subsection{Encoding Description}
+%\input{includes/subinclude/encoding.tex}
 
 % profile description
-\subsection{Profile Description}
-\input{profile.tex}
+%\subsection{Profile Description}
+%\input{includes/subinclude/profile.tex}
 
 % revision description
-\subsection{Revision Description}
-\input{revision.tex}
+%\subsection{Revision Description}
+%\input{includes/subinclude/revision.tex}
+
+% no tei metadata
+%\subsection{No TEI Metadata}
+%\input{includes/subinclude/noTEIData.tex}

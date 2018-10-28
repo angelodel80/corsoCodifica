@@ -13,11 +13,24 @@
     \framesubtitle{Tabella Moduli TEI}
     \addtocounter{nframe}{1}
     
-    \begin{block}{Formalismi}
-	    \includegraphics[width=.5\textwidth]{imgs/ModuliTEI.png}
+    \begin{block}{Moduli TEI}
+        \begin{center}
+            iv.1.2 Class, Macro, and Datatype Names
+        \end{center}
     \end{block}
-    
+\end{frame}
 
+
+\begin{frame}
+    \frametitle{Infrastruttura TEI}
+    \framesubtitle{Tabella Moduli TEI}
+    \addtocounter{nframe}{1}
+    
+   
+        \begin{center}
+        \includegraphics[width=.9\textwidth]{imgs/ModuliTEI.png}
+        \end{center}
+   
 \end{frame}
 
 % xx sezione 1 frame 01
@@ -48,9 +61,9 @@
 \textbf{\textmd{att.global} provides attributes common to all elements in the TEI encoding scheme.}
 
 \begin{description}
-    \item rend [att.global.rendition]	(rendition) indicates how the element in question was rendered or presented in the source text.
-    \item style [att.global.rendition]	contains an expression in some formal style definition language which defines the rendering or presentation used for this element in the source text
-    \item rendition [att.global.rendition]	points to a description of the rendering or presentation used for this element in the source text.
+    \item [rend] [att.global.rendition]	(rendition) indicates how the element in question was rendered or presented in the source text.
+    \item [style] [att.global.rendition]	contains an expression in some formal style definition language which defines the rendering or presentation used for this element in the source text
+    \item [rendition] [att.global.rendition]	points to a description of the rendering or presentation used for this element in the source text.
 \end{description}
 
 \end{frame}
@@ -65,9 +78,9 @@
 \textbf{\textmd{att.global} provides attributes common to all elements in the TEI encoding scheme.}
 
 \begin{description}
-    \item xml:base	provides a base URI reference with which applications can resolve relative URI references into absolute URI references.
-    \item xml:space	signals an intention about how white space should be managed by applications.
-    \item source [att.global.source]	specifies the source from which some aspect of this element is drawn.
+    \item [xml:base]	provides a base URI reference with which applications can resolve relative URI references into absolute URI references.
+    \item [xml:space]	signals an intention about how white space should be managed by applications.
+    \item [source] [att.global.source]	specifies the source from which some aspect of this element is drawn.
 \end{description}
 
 \end{frame}
@@ -82,8 +95,8 @@
 \textbf{\textmd{att.global} provides attributes common to all elements in the TEI encoding scheme.}
 
 \begin{description}
-    \item  cert [att.global.responsibility]	(certainty) signifies the degree of certainty associated with the intervention or interpretation.
-    \item resp [att.global.responsibility]	(responsible party) indicates the agency responsible for the intervention or interpretation, for example an editor or transcriber.
+    \item [cert] [att.global.responsibility]	(certainty) signifies the degree of certainty associated with the intervention or interpretation.
+    \item [resp] [att.global.responsibility]	(responsible party) indicates the agency responsible for the intervention or interpretation, for example an editor or transcriber.
 \end{description}
 
 \end{frame}
@@ -98,7 +111,7 @@
 
     \textbf{\textrm{xml:lang} indica la lingua e il sistema di scrittura usato}
     \defverbatim{\langatt}{%
-        \begin{tiny}
+        %\begin{tiny}
         \begin{verbatim}
             <TEI xmlns="http://www.tei-c.org/ns/1.0">
                 <teiHeader xml:lang="en">
@@ -120,11 +133,11 @@
                 </text>
             </TEI>
         \end{verbatim}
-        \end{tiny}
+       % \end{tiny}
         }
-        \begin{block}{XML TEI con esempio di uso \textrm{xml:lang} attribute}
+        \begin{center}
             {\langatt}
-        \end{block}
+        \end{center}
 \end{frame}
 
 
@@ -182,3 +195,27 @@ att.global.change	transcr	11.7 Identifying Changes and Revisions
 %% Macro e DataType
 % Tabella Macro
 % 
+\begin{frame}
+    \frametitle{Attributi Globali}
+    \framesubtitle{Classificazione degli elementi}
+    \addtocounter{nframe}{1}
+    %fare una tabella 
+    1.3.2.1 Informal Element Classifications
+
+\end{frame}
+
+
+\begin{frame}
+	\frametitle{Intro Text Encoding Initiative}
+	\framesubtitle{Schemi di codifica TEI – Moduli base}
+	\addtocounter{nframe}{1}
+
+	\begin{block}{Struttura di un documento TEI}
+        \begin{itemize}
+            \item \textit{struttura fondamentale all’interno della radice (\texttt{<TEI>})}
+            \item una intestazione TEI (\texttt{<teiHeader>})
+            \item un testo: \texttt{<text>} (o più testi, cfr. infra)
+        \end{itemize}
+    \end{block}
+    
+\end{frame}

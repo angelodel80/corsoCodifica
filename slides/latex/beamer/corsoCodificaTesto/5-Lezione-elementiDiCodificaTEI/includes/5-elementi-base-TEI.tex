@@ -9,6 +9,1534 @@
 
 % Un testo codificato in TEI inizia sempre con l'elemento <text>, suddiviso a sua volta in frontespizio (<front>), corpo del testo (<body>) e appendice (<back>).
 
+
+\begin{frame}
+	\frametitle{Intro Text Encoding Initiative}
+	\framesubtitle{TEI}
+	\addtocounter{nframe}{1}
+
+	\begin{block}{Un documento TEI P5 ‘minimo’}
+        \begin{itemize}
+            \item prologo XML
+            \item intestazione TEI
+            \item elementi strutturali
+            \item elementi semantici dei moduli base
+        \end{itemize}
+    \end{block}
+    
+\end{frame}
+
+\begin{frame}
+	\frametitle{Intro Text Encoding Initiative}
+	\framesubtitle{TEI}
+	\addtocounter{nframe}{1}
+
+   \textbf{ Moduli di base: \textit{tei}, \textit{header}, \textit{textstructure}, \textit{core}}
+
+	\begin{block}{un documento TEI P5 ‘minimo’}
+        Anche usando soltanto i moduli essenziali si ha a disposizione
+        uno schema adatto alla marcatura di numerosi tipi di testi.
+    \end{block}
+ 
+       \textit{Schemi ``leggeri'' consigliati: la TEI Lite, o se necessario una
+        versione più ridotta della P5 (TEI
+        Absolutely Bare)}
+\end{frame}
+
+
+
+\begin{frame}
+	\frametitle{Intro Text Encoding Initiative}
+	\framesubtitle{Schemi di codifica TEI – Moduli base}
+	\addtocounter{nframe}{1}
+
+	\begin{block}{Caratteristiche degli elementi illustrati}
+        \begin{itemize}
+            \item gli elementi TEI rientrano nelle categorie generali di
+            elementi XML che abbiamo visto
+            \item elementi che possono contenere solo altri elementi (=
+            elementi strutturali)
+            \item elementi che possono contenere altri elementi e testo
+            \item elementi che possono contenere solo testo
+            \item  elementi vuoti (es. \texttt{<pb/>})
+            \item  gli elementi vuoti marcano una gerarchia differente
+        \end{itemize}
+    \end{block}
+\end{frame}
+
+
+\begin{frame}
+	\frametitle{Intro Text Encoding Initiative}
+	\framesubtitle{Schemi di codifica TEI – Moduli base}
+	\addtocounter{nframe}{1}
+
+	\begin{block}{Gerarchie multiple}
+        
+        \texttt{<?xml version="1.0" encoding="utf-8"?>
+        <text>
+        <titolo>Gli assassinii della Rue Morgue</titolo>
+        <intestazione> I </intestazione>
+        \emph{<pagina n=``5''>}
+        <p>Le facoltà mentali che si sogliono chiamare analitiche sono, di
+        per se stesse, poco suscettibili di analisi [...]</p>
+        \emph{<p>}La facoltà di risolvere è probabilmente molto rinfor-
+        \emph{</pagina>}
+        <pagina n=``6''>
+        zata dallo studio delle matematiche e in modo particolare
+        dell’altissimo ramo di questa scienza che[...] \emph{</p>}
+        </pagina>
+        </text>}
+    \end{block}
+
+\end{frame}
+
+
+
+\begin{frame}
+	\frametitle{Intro Text Encoding Initiative}
+	\framesubtitle{Schemi di codifica TEI – Moduli base}
+	\addtocounter{nframe}{1}
+
+	\begin{block}{Gerarchie multiple- elementi vuoti}
+        \texttt{<?xml version="1.0" encoding="utf-8"?>
+        <text>
+        <titolo>Gli assassinii della Rue Morgue</titolo>
+        <intestazione> I </intestazione>
+        <pagina n="5"/>
+        <p>Le facoltà mentali che si sogliono chiamare analitiche sono, di
+        per se stesse [...]</p>
+        <p>La facoltà di risolvere è probabilmente molto rinfor-
+        <pagina n="6"/>
+        zata dallo studio delle matematiche e in modo particolare
+        dell’altissimo ramo di questa scienza che [...] </p> </text>}
+       
+    \end{block}
+    
+   
+
+\end{frame}
+
+\begin{frame}
+	\frametitle{Intro Text Encoding Initiative}
+	\framesubtitle{Schemi di codifica TEI – Moduli base}
+	\addtocounter{nframe}{1}
+
+	\begin{block}{Struttura di un documento TEI}
+        \begin{itemize}
+            \item \textit{struttura fondamentale all’interno della radice (\texttt{<TEI>})}
+            \item una intestazione TEI (\texttt{<teiHeader>})
+            \item un testo: \texttt{<text>} (o più testi, cfr. infra)
+        \end{itemize}
+    \end{block}
+    
+\end{frame}
+
+
+
+
+\begin{frame}
+	\frametitle{Intro Text Encoding Initiative}
+	\framesubtitle{Schemi di codifica TEI:  Moduli base}
+	\addtocounter{nframe}{1}
+
+	\begin{block}{Esempio}
+       \texttt{<?xml version="1.0" encoding="utf-8"?>
+         <!DOCTYPE TEI SYSTEM ``tei\_lite.dtd''>
+         <TEI xmlns=``http://www.tei\-c.org/ns/1.0''>
+         <teiHeader> </teiHeader>
+         <text>
+             <div>
+             <p></p>
+             </div>
+        </text>
+        </TEI>}
+    \end{block}
+\end{frame}
+
+
+
+\begin{frame}
+	\frametitle{Intro Text Encoding Initiative}
+	\framesubtitle{Schemi di codifica TEI – Moduli base}
+	\addtocounter{nframe}{1}
+
+	\begin{block}{Esempio}
+        \texttt{<?xml version="1.0" encoding="utf-8"?>
+        <?xml-model href="tei-lite.rng"?>
+        <TEI xmlns=``http://www.tei-c.org/ns/1.0''>
+        <teiHeader>...</teiHeader>
+        <text>
+        <div>
+        <p></p>
+        </div>
+        </text>
+        </TEI>}
+    \end{block}
+    
+   
+
+\end{frame}
+
+
+
+\begin{frame}
+	\frametitle{Intro Text Encoding Initiative}
+	\framesubtitle{Schemi di codifica TEI – Moduli base}
+	\addtocounter{nframe}{1}
+
+	\begin{block}{Elementi strutturali}
+        
+       \begin{itemize}
+           \item \texttt{<text>} un singolo testo di qualsiasi tipo (punto di partenza della gerarchia).
+           \item \texttt{<facsimile>} riproduzione della fonte primaria, può affiancare o sostituire \texttt{<text>}
+           \item \texttt{<front>} figlio di \texttt{<text>} materiale che precede il testo
+           \item \texttt{<body>} figlio di \texttt{<text>} rappresenta il testo stesso
+           \item \texttt{<back>} figlio di \texttt{<text>} materiale che segue il testo
+           \item \texttt{<group>} figlio di \texttt{<text>} alternativo a \texttt{<body>}, raggruppa testi diversi
+       \end{itemize}
+        
+    \end{block}
+    
+   
+
+\end{frame}
+
+
+
+\begin{frame}
+	\frametitle{Intro Text Encoding Initiative}
+	\framesubtitle{Schemi di codifica TEI – Moduli base}
+	\addtocounter{nframe}{1}
+
+	\begin{block}{Esempio schematico di documento TEI}
+        \texttt{<TEI>
+        <teiHeader> [informazioni del TEI Header]
+        </teiHeader>
+        <text>
+        <front> [premessa, dedica ...] </front>
+        <body> [corpo del testo ...] </body>
+        <back> [postfazione, appendice ...]</back>
+        </text>
+        </TEI>}
+    \end{block}
+    
+   
+
+\end{frame}
+
+
+
+\begin{frame}
+	\frametitle{Intro Text Encoding Initiative}
+	\framesubtitle{Schemi di codifica TEI – Moduli base}
+	\addtocounter{nframe}{1}
+    \begin{block}{Costruire documenti compositi}
+        \begin{itemize}
+            \item rimpiazzando il \texttt{<body>} con un gruppo (\texttt{<group>}) di testi si ottiene un documento composito
+            \item ciascuno di questi testi è rappresentato secondo una struttura
+            standard
+            \item un’altra possibilità è creare un corpus con \texttt{<teiCorpus>}
+            \item intestazioni (\texttt{<teiHeader>}) separate per il corpus e per
+            ciascun gruppo di testi
+            \item struttura più complessa, su più livelli
+        \end{itemize}
+    \end{block}
+\end{frame}
+
+
+\begin{frame}
+	\frametitle{Intro Text Encoding Initiative}
+	\framesubtitle{Schemi di codifica TEI – Moduli base}
+	\addtocounter{nframe}{1}
+
+        \texttt{<TEI>
+        <teiHeader> [ intestazione del testo composito ] </teiHeader>
+        <text>
+        <front> [ front matter del composito ] </front>
+        <group>
+        <text>
+        <front> [ front matter del primo testo ] </front>
+        <body> [ body del primo testo ]
+        </body>
+        <back> [ back matter del primo testo ] </back>
+        </text>
+        <text>
+        <front> [ front matter del secondo testo] </front>
+        <body> [ body del secondo testo ]
+        </body>
+        <back> [ back matter del secondo testo ] </back>
+        </text>
+        ...
+        [ altri testi o gruppi di testi ]
+        ...
+        </group>
+        <back>
+        [ back matter del composito ]
+        </back>
+        </text>
+        </TEI>}
+
+\end{frame}
+
+\begin{frame}
+	\frametitle{Intro Text Encoding Initiative}
+	\framesubtitle{Schemi di codifica TEI – Moduli base}
+	\addtocounter{nframe}{1}
+
+    \begin{block}{Costruzione di corpora TEI}
+        \texttt{<teiCorpus>
+<teiHeader> [metadati per il corpus] </teiHeader>
+<TEI>
+<teiHeader> [metadati relativi al I testo]</teiHeader>
+<text> [primo testo del corpus] </text>
+</TEI>
+<TEI>
+<teiHeader>[metadati relativi al II testo]</teiHeader>
+<text> [secondo testo del corpus] </text>
+</TEI>
+</teiCorpus>}
+    \end{block}
+\end{frame}
+
+
+% \begin{frame}
+% 	\frametitle{Intro Text Encoding Initiative}
+% 	\framesubtitle{TEI}
+% 	\addtocounter{nframe}{1}
+
+% 	\begin{block}{TEI}
+% 	 Schemi di codifica TEI – Moduli base
+%   IMMAGINE
+%     \end{block}
+% \end{frame}
+
+
+\begin{frame}
+	\frametitle{Intro Text Encoding Initiative}
+	\framesubtitle{Schemi di codifica TEI – Moduli base}
+	\addtocounter{nframe}{1}
+
+	\begin{block}{Altri elementi strutturali fondamentali}
+        \begin{itemize}
+            \item suddivisioni del testo, non numerati: \texttt{<div> }(nessun limite di nidificazione)
+            \item suddivisioni del testo, numerati: \texttt{<div1> ... <div7> }(massimo 7 livelli)
+            \item paragrafi: \texttt{<p>}
+            \item testo riferito: \texttt{<q>} (discorso diretto, citazioni, etc.)
+        \end{itemize}
+        
+    \end{block}
+\end{frame}
+
+
+\begin{frame}
+	\frametitle{Intro Text Encoding Initiative}
+	\framesubtitle{Schemi di codifica TEI – Moduli base}
+	\addtocounter{nframe}{1}
+
+	\begin{block}{Altri elementi strutturali fondamentali}
+        \begin{itemize}
+            \item versi: strofe \texttt{<lg>} e singoli versi \texttt{<l>}
+            \item testi teatrali: discorsi \texttt{<sp>} che possono contenere paragrafi
+            \texttt{<p>} o versi \texttt{<l>}, oltre a direzioni di scena \texttt{<stage>}
+            \item milestone tags: \texttt{<pb/>, <lb/>, <cb/>, <milestone/>}
+            \item notare che un \texttt{<div>} può contenere un \texttt{<floatingText>} (possibilità di introdurre gerarchie complesse).
+        \end{itemize}
+        
+    \end{block}
+
+\end{frame}
+
+\begin{frame}
+	\frametitle{Intro Text Encoding Initiative}
+	\framesubtitle{Schemi di codifica TEI – Moduli base}
+	\addtocounter{nframe}{1}
+
+	\begin{block}{Apertura e chiusura di un \texttt{<div>}}
+        \begin{itemize}
+            \item \texttt{<head>}: qualunque tipo di intestazione: il titolo di un opera, l’intestazione di un paragrafo, di una sezione, ecc.
+            \item l'attributo \textit{type} permette di classificare in base a una tipologia
+            \item \texttt{<epigraph>} citazione all’inizio del testo, o nella pagina del titolo, eventualmente con riferimento bibliografico
+            \item \texttt{<opener>} raggruppa un serie di elementi (data, luogo, saluti, ecc.) all’inizio del \texttt{<div>}, specie di una lettera
+        \end{itemize}
+    \end{block}
+
+\end{frame}
+
+\begin{frame}
+	\frametitle{Intro Text Encoding Initiative}
+	\framesubtitle{Schemi di codifica TEI – Moduli base}
+	\addtocounter{nframe}{1}
+
+	\begin{block}{Apertura e chiusura di un \texttt{<div>}}
+        \begin{itemize}
+            \item \texttt{<argument>}: lista degli argomenti trattati nel \texttt{<div>}
+            \item \texttt{<trailer>} frase che compare alla fine del \texttt{<div>} (ad esempio ``Fine del capitolo 1'')
+            \item \texttt{<closer>} raggruppa un serie di elementi (data, luogo, saluti, etc.) alla fine del \texttt{<div>}, specie di una lettera
+        \end{itemize}
+    \end{block}
+
+\end{frame}
+
+
+\begin{frame}
+	\frametitle{Intro Text Encoding Initiative}
+	\framesubtitle{Schemi di codifica TEI – Moduli base}
+	\addtocounter{nframe}{1}        
+        \texttt{<div type="lettera”>
+        <opener>
+        <dateline>
+        <name type=``place''>Pisa</name>
+        <date>20 marzo 2015</date>
+        </dateline>
+        <salute>Gentilissima Prof.ssa Scannagatti,</salute>
+        </opener>
+        <p>sono spiacente di doverle comunicare che un’invasione di cavallette si
+        è abbattuta sui miei quaderni incautamente lasciati in giardino, e li ha
+        divorati interamente.</p>
+        <p>Questo purtroppo significa che non posso mostrare i compiti svolti,
+        come sempre, con solerzia e assiduo impegno.</p>
+        <closer>
+        <salute>Certo di poter contare sulla sua comprensione le porgo i miei
+        migliori saluti,</salute>
+        <signed>Pierino Rossi</signed>
+        </closer>
+        </div>}
+
+\end{frame}
+
+
+
+\begin{frame}
+	\frametitle{Intro Text Encoding Initiative}
+	\framesubtitle{Schemi di codifica TEI – Moduli base}
+	\addtocounter{nframe}{1}
+
+	\begin{block}{Errori frequenti}
+        I titoli sono codificati con \texttt{<title>} soltanto nel caso di riferimenti bibliografici i titoli del testo, dei capitoli etc. si marcano con \texttt{<head>}
+    \end{block}
+    
+   
+
+\end{frame}
+
+
+\begin{frame}
+	\frametitle{Intro Text Encoding Initiative}
+	\framesubtitle{Schemi di codifica TEI – Moduli base}
+	\addtocounter{nframe}{1}
+
+	\begin{block}{Nota sugli errori possibili}
+        \textbf{Tre categorie:}
+        \begin{itemize}
+            \item \textbf{errori sintattici}: un elemento inserito in un punto sbagliato
+            della gerarchia, o che non può contenere testo etc.
+            \item \textbf{errori di marcatura semantica}: usare un elemento inadatto
+            allo scopo, ad esempio marcare un titolo con \texttt{<emph>}
+            \item \textbf{errori di interpretazione} del testo (che portano al II tipo o
+            all’assenza del markup che andrebbe inserito)
+        \end{itemize}
+       
+    \end{block}
+
+\end{frame}
+
+
+% \begin{frame}
+% 	\frametitle{Intro Text Encoding Initiative}
+% 	\framesubtitle{Schemi di codifica TEI – Moduli base}
+% 	\addtocounter{nframe}{1}
+
+% 	\begin{block}{ A proposito di <div>}
+%         domanda che ricorre periodicamente: perché non usare nomi
+%         più significativi invece di un contenitore generico come <div>
+%         (= ‘suddivisione, parte di un testo’)?
+%         perché non usare <book>, <chapter>, <section>, etc. come
+%         fa, ad esempio, lo schema DOCBOOK?
+%         troppa variabilità nell’uso comune, meglio usare un termine
+%         generico che possa poi essere specificato usando l’attributo
+%         type (es. <div type=”chapter”>)
+%         i <div>, numerati o meno, possono essere ‘nidificati’, nessun
+%         problema nel riproporre la struttura editoriale visibile
+%     \end{block}
+
+% \end{frame}
+
+
+\begin{frame}
+	\frametitle{Intro Text Encoding Initiative}
+	\framesubtitle{Schemi di codifica TEI – Moduli base}
+	\addtocounter{nframe}{1}
+
+    \textbf{Alcuni attributi possono essere usati con qualsiasi elemento (v. la classe att.global)}
+
+    \begin{block}{ Attributi globali}
+        \begin{itemize}
+            \item \textbf{n} un numero o un nome non univoco, possibilmente breve, per identificare un elemento
+            \item \textbf{rend} informazioni relative all’aspetto (\textit{originale}!) del testo
+            \item \textbf{rendition} simile a \textit{@rend}, ma fa riferimento a elementi
+            \texttt{<rendition>} inseriti nell’\texttt{<encodingDesc>} (dentro \texttt{<tagsDecl>})
+        \end{itemize}
+    \end{block}
+\end{frame}
+
+\begin{frame}
+	\frametitle{Intro Text Encoding Initiative}
+	\framesubtitle{Schemi di codifica TEI – Moduli base}
+	\addtocounter{nframe}{1}
+
+    \begin{block}{ Attributi globali}
+        \begin{itemize}
+            \item \textbf{xml:lang} la lingua del testo contenuto da un elemento
+            \item \textbf{xml:id} un identificatore univoco per l’elemento
+        \end{itemize}
+       \textit{NOTA: in base ai moduli usati nello schema sono disponibili ulteriori attributi globali}
+    \end{block}
+\end{frame}
+
+\begin{frame}
+	\frametitle{Intro Text Encoding Initiative}
+	\framesubtitle{Schemi di codifica TEI – Moduli base}
+	\addtocounter{nframe}{1}
+
+	\begin{block}{Esempio}
+        \texttt{<text>
+        <body>
+        \emph{<div n="ch1" type=``chapter''>}
+        <pb n="1"/>[...]
+        <p>[...] risulta chiaro se avete letto \emph{<title
+        rend="underline" xml:lang=``fra''>}Les fleurs du
+        mal</title> [...]</p>
+        <p>[...] un grande esempio di <foreign
+        xml:lang=``fra''>savoir faire</foreign> [...]</p>
+        [...]
+        </div>
+        [ altri div ... ]
+        </body>
+        </text>}
+    \end{block}
+
+\end{frame}
+
+
+\begin{frame}
+	\frametitle{Intro Text Encoding Initiative}
+	\framesubtitle{Schemi di codifica TEI: Moduli base}
+	\addtocounter{nframe}{1}
+
+	\begin{block}{Esempio}
+       \texttt{
+           <text>
+        <body>
+        <div n="ch1" type=``chapter''> <pb n="1"/> [...]
+        <p n=``1''>[...] descritto altrove (si veda ad
+        esempio \emph{<ref target=``\#Rossi94''>Rossi 1994</ref>})
+        [...] </p> [...]
+        </div>
+        [ altri div ... ]
+        <div n="bib" type=``bibliography''>
+        [...]
+        \emph{<bibl xml:id=``Rossi94''>
+        <author>Rossi, M.</author>[...]</bibl>}
+        [...]
+        </div>
+        </body>
+        </text>}
+    \end{block}
+\end{frame}
+
+\begin{frame}
+	\frametitle{Intro Text Encoding Initiative}
+	\framesubtitle{Schemi di codifica TEI – Moduli base}
+	\addtocounter{nframe}{1}
+
+    \begin{block}{Errori frequenti}
+        \texttt{<div>} non può essere usato allo stesso livello gerarchico
+        di \texttt{<p>}, in altre parole non si può alternare \texttt{<div>} con
+        \texttt{<p>}
+    \end{block}
+    
+    \begin{block}{Errore!}
+        \texttt{<div> [...] </div>
+        <p> [...] </p>
+        <div> [...] </div>}
+    \end{block}
+\end{frame}
+
+
+\begin{frame}
+	\frametitle{Intro Text Encoding Initiative}
+	\framesubtitle{Schemi di codifica TEI – Moduli base}
+	\addtocounter{nframe}{1}
+
+    \begin{block}{Errori frequenti}
+        \texttt{<div>} e tutti gli altri elementi strutturali \textit{puri} non
+        possono contenere testo.
+       
+    \end{block}
+    
+    \begin{block}{Errore!}
+        \texttt{<div>Pippo</div>
+        <person>Pippo</person>}
+    \end{block}
+    
+
+\end{frame}
+
+
+\begin{frame}
+	\frametitle{Intro Text Encoding Initiative}
+	\framesubtitle{Schemi di codifica TEI – Moduli base}
+	\addtocounter{nframe}{1}
+
+	\begin{block}{Enfasi e termini particolari}
+       
+        \begin{itemize}
+            \item \texttt{<emph>} parole o frasi enfatizzate nel testo. (\texttt{Questo è il <emph>mio</emph> computer!})
+            \item \texttt{<foreign>} parola o frase in una lingua diversa. (\texttt{In quel punto entrò il bidello a dare il <foreign xml:lang=``lat''>finis</foreign>}).
+        \end{itemize}
+    \end{block}
+
+\end{frame}
+
+\begin{frame}
+	\frametitle{Intro Text Encoding Initiative}
+	\framesubtitle{Schemi di codifica TEI – Moduli base}
+	\addtocounter{nframe}{1}
+
+	\begin{block}{Enfasi e termini particolari}
+       
+        \begin{itemize}
+            \item \texttt{<distinct>} “diverso” dal testo perché arcaico, gergale, ecc. (\texttt{Saltò in groppa al <distinct>fido destriero</distinct>})
+            \item \texttt{<hi>} elemento generico. (\texttt{<hi rend=``double''>N</hi>el mezzo del cammin di nostra vita.
+            Il suo nome è <hi rend=``italic''>Mario Rossi</hi>})
+        \end{itemize}
+    \end{block}
+
+\end{frame}
+
+\begin{frame}
+	\frametitle{Intro Text Encoding Initiative}
+	\framesubtitle{Schemi di codifica TEI: Moduli base}
+	\addtocounter{nframe}{1}
+
+    \begin{block}{Enfasi e termini particolari}
+        \begin{itemize}
+            \item  \texttt{<mentioned>} parola o frase menzionata ma non usata.
+            (\texttt{Il termine corretto è <mentioned>epigrafe</mentioned>})
+            \item \texttt{<soCalled>} parola o espressione da cui ci si distanzia
+            (\texttt{il cosiddetto <soCalled>darwinismo sociale</soCalled>})
+        \end{itemize}
+    \end{block}
+    
+\end{frame}
+
+\begin{frame}
+	\frametitle{Intro Text Encoding Initiative}
+	\framesubtitle{Schemi di codifica TEI: Moduli base}
+	\addtocounter{nframe}{1}
+
+    \begin{block}{Enfasi e termini particolari}
+        \begin{itemize}
+            \item \texttt{<term>} una o più parole considerate termine tecnico.
+            (\texttt{Possiamo definire il <term xml\:id="NPL" rend=``italic''>neopositivismo logico</term>})
+            \item \texttt{<gloss>} una spiegazione o glossa riguardo il testo.
+            (\texttt{<gloss target=``\#NPL''>una corrente filosofica basata
+            sul principio che la filosofia debba aspirare al rigore
+            proprio della scienza </gloss>})
+        \end{itemize}
+    \end{block}
+    
+\end{frame}
+
+\begin{frame}
+	\frametitle{Intro Text Encoding Initiative}
+	\framesubtitle{Schemi di codifica TEI – Moduli base}
+	\addtocounter{nframe}{1}
+
+	\begin{block}{Esercizio}
+       \textbf{Marcare un testo plain text di circa 3000 caratteri a piacere.}
+        \begin{itemize}
+            \item inserire prologo XML
+            \item marcare la struttura usando gli elementi fin qui descritti
+            in particolare marcare tutti i paragrafi usando \texttt{<p>} e la struttura editoriale usando \texttt{<div>}
+            \item verificare che sia ben formato con xmllint
+            \item salvare il file XML su github
+        \end{itemize}
+    \end{block}
+\end{frame}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\begin{frame}
+	\frametitle{Intro Text Encoding Initiative}
+	\framesubtitle{Schemi di codifica TEI – Moduli base}
+	\addtocounter{nframe}{1}
+
+	\begin{block}{Citazioni}
+        \begin{itemize}
+            \item \texttt{<q>} testo citato da altre fonti: discorso diretto, esempi
+            (nei dizionari), etc.
+            
+        \end{itemize}
+    \end{block}
+
+    \begin{block}{Citazioni - Esempio}
+        (\texttt{La mia maestra della prima superiore mi salutò di
+        sulla porta della classe e mi disse: <q rend=``PRE
+        mdash''>Enrico, tu vai al piano di sopra, quest'anno;
+        non ti vedrò nemmen più passare!</q>})         
+    \end{block}
+    
+
+\end{frame}
+
+
+\begin{frame}
+	\frametitle{Intro Text Encoding Initiative}
+	\framesubtitle{Schemi di codifica TEI – Moduli base}
+	\addtocounter{nframe}{1}
+
+	\begin{block}{Citazioni}
+        \begin{itemize}
+            
+            \item \texttt{<quote>}  frase o brano attribuito a fonte esterna
+           
+            
+        \end{itemize}
+        
+    \end{block}
+
+    \begin{block}{Citazioni - Esempio}
+            
+        (\texttt{<p>E allora disse: <q rend=``PRE lsquo POST
+            rsquo''>Ecco come comincia la Divina Commedia:
+            <quote>Nel mezzo del cammin di nostra vita / Mi
+            ritrovai per una selva oscura</quote>.</q></p>})
+        
+        \end{block}
+    
+\end{frame}
+
+
+
+\begin{frame}
+	\frametitle{Intro Text Encoding Initiative}
+	\framesubtitle{Schemi di codifica TEI – Moduli base}
+	\addtocounter{nframe}{1}
+
+	\begin{block}{Citazioni}
+        \begin{itemize}
+            \item \texttt{<said>} testo pronunciato ad alta voce o pensato
+            \item \texttt{<cit>} citazione con riferimento bibliografico
+        \end{itemize}
+        
+        
+
+       \texttt{(Lexicography has shown little sign of being affected by the work
+        of followers of J.R. Firth, probably best summarized in his
+        slogan, \underline{<cit>}
+        \underline{<quote>}You shall know a word by the company it keeps.\underline{</quote>}
+        \underline{<ref>}(Firth, 1957)\underline{</ref>}
+        \underline{</cit>})}
+        
+        \textit{Semplice riferimento bibliografico nell’esempio, possibile
+        aggiungere un collegamento (a capitolo/sezione o a una
+        specifica entrata bibliografica) usando l’attributo \emph{@target}}
+    \end{block}
+
+\end{frame}
+
+\begin{frame}
+	\frametitle{Intro Text Encoding Initiative}
+	\framesubtitle{Schemi di codifica TEI – Moduli base}
+	\addtocounter{nframe}{1}
+
+	\begin{block}{Citazioni - Esempio}
+
+        
+       \texttt{(Lexicography has shown little sign of being affected by the work
+        of followers of J.R. Firth, probably best summarized in his
+        slogan, \underline{<cit>}
+        \underline{<quote>}You shall know a word by the company it keeps.\underline{</quote>}
+        \underline{<ref>}(Firth, 1957)\underline{</ref>}
+        \underline{</cit>})}
+        
+    \end{block}
+
+    \textit{Semplice riferimento bibliografico nell’esempio, possibile
+        aggiungere un collegamento (a capitolo/sezione o a una
+        specifica entrata bibliografica) usando l’attributo \emph{@target}}
+
+\end{frame}
+
+
+\begin{frame}
+	\frametitle{Intro Text Encoding Initiative}
+	\framesubtitle{Schemi di codifica TEI: Moduli base}
+	\addtocounter{nframe}{1}
+
+	\begin{block}{TEI: elementi di citazione}
+        A proposito di \texttt{<q> e <quote>}
+        possono contenere non solo altri elementi simili (\texttt{<q> e
+        <quote>}) ma anche elementi come \texttt{<p>, <l>, ecc.}:
+    \end{block}
+
+    \textit{Possibili problemi relativi alla gerarchia (tag overlap, gerarchie
+    sovrapposte):
+    \texttt{<p>Allora disse: <q>Sarò breve.</p><p>Ho finito.</q></p>}}
+\end{frame}
+
+
+\begin{frame}
+	\frametitle{Intro Text Encoding Initiative}
+	\framesubtitle{Schemi di codifica TEI: Moduli base}
+	\addtocounter{nframe}{1}
+
+	\begin{block}{TEI: esempio citazione con elementi annidati} 
+       \texttt{<p>
+         <q>The Lord! The Lord! It is Sakya Muni himself,</q> the lama half
+         sobbed; and under his breath began the wonderful Buddhist invocation:<q>
+        <quote>
+         <l>To Him the Way \- the Law \- Apart \- </l>
+         <l>Whom Maya held beneath her heart</l>
+         <l>Ananda's Lord \- the Bodhisat</l>
+        </quote>
+        And He is here! The Most Excellent Law is here also. My
+        pilgrimage is well begun. And what work! What work!</q>
+        </p>}
+    \end{block}
+\end{frame}
+
+
+\begin{frame}
+	\frametitle{Intro Text Encoding Initiative}
+	\framesubtitle{ Schemi di codifica TEI: Moduli base}
+	\addtocounter{nframe}{1}
+
+	\begin{block}{Nomi, numeri e date}
+       \begin{itemize}
+           \item \texttt{<rs>} letteralmente ``referring string'', nome o etichetta generica
+           
+           \texttt{(<q>Mio caro <rs type=``person''>Filippo</rs></q>,
+           gli disse <rs type=``person''>sua moglie</rs>.)}
+
+           \item  \texttt{<name>} nome proprio (di persona, luogo, ecc.)
+           
+           \texttt{<q>Mio caro <name type=``person''>Filippo</name></q>}
+       \end{itemize}
+        
+    \end{block}   
+
+\end{frame}
+
+
+\begin{frame}
+	\frametitle{Intro Text Encoding Initiative}
+	\framesubtitle{Schemi di codifica TEI: Moduli base}
+	\addtocounter{nframe}{1}
+
+    \begin{block}{Nomi, numeri e date}
+        \begin{itemize}
+            \item \texttt{<num>} un numero in qualsiasi formato
+            \texttt{<num value=``23''>XXIII</num>}
+            \item \texttt{<date>} una data in qualsiasi formato
+            \texttt{nato il <date when=``18680210''>10 febb. 1868</date>}
+            \item \texttt{<time>} l'ora in qualsiasi formato
+            \texttt{alle <time when=``8.00''>otto del mattino</time>}
+        \end{itemize}
+    \end{block}
+\end{frame}
+
+
+\begin{frame}
+	\frametitle{Intro Text Encoding Initiative}
+	\framesubtitle{Schemi di codifica TEI – Moduli base}
+	\addtocounter{nframe}{1}
+
+	\begin{block}{Nomi, numeri e date}
+        
+        
+        \textbf{possibile usare un modulo specifico:}
+        \\\textit{13 Names, Dates, People, and Places} (
+        \url{http://www.tei-c.org/release/doc/tei-p5-doc/en/html/ND.html} )
+       
+        
+        \texttt{(<persName>, <forename>, <surname>, <roleName>,
+        <addName>, etc.)}
+
+    \end{block}
+
+    \textit{Questo modulo permette una granularità molto maggiore
+    grazie agli elementi specifici che mette a disposizione.
+    \\Possibile creare sistema prosopografico.
+    \\Ricchezza degli attributi (anche nella versione base)}
+    
+\end{frame}
+
+
+\begin{frame}
+	\frametitle{Intro Text Encoding Initiative}
+	\framesubtitle{Schemi di codifica TEI – Moduli base}
+	\addtocounter{nframe}{1}
+
+	\begin{block}{La pagina del titolo}
+        
+        elemento \texttt{<titlePage> }può contenere:
+        \begin{itemize}
+            \item \texttt{<docTitle>} e (o direttamente) \texttt{<titlePart>}: titolo anche in più parti
+            \item \texttt{<docEdition>}: informazioni riguardo l’edizione
+            \item \texttt{<byline>} e (o direttamente) \texttt{<docAuthor>}: autore
+            \item \texttt{<docImprint>}: informazioni di stampa, a sua volta include
+        \end{itemize}
+    \end{block}
+\end{frame}
+
+\begin{frame}
+	\frametitle{Intro Text Encoding Initiative}
+	\framesubtitle{Schemi di codifica TEI – Moduli base}
+	\addtocounter{nframe}{1}
+
+	\begin{block}{La pagina del titolo}
+        
+        elemento \texttt{<titlePage> }può contenere:
+        \begin{itemize}
+            \item \texttt{<publisher>}: editore
+            \item \texttt{<pubPlace>}: luogo di stampa
+            \item \texttt{<date>}: data
+            \item \texttt{<docDate>}: data
+        \end{itemize}
+    \end{block}
+\end{frame}
+
+
+\begin{frame}
+	\frametitle{Intro Text Encoding Initiative}
+	\framesubtitle{Schemi di codifica TEI – Moduli base}
+	\addtocounter{nframe}{1}
+
+	\begin{block}{Esempio di pagina del titolo}
+        \texttt{<titlePage>
+        <titlePart>Cuore</titlePart>
+        <byline>di <docAuthor>E. de
+        Amicis</docAuthor></byline>
+        <docEdition>Edizione integrale</docEdition>
+        <docImprint>
+        <publisher>Newton Compton editori</publisher>
+        <pubPlace>Roma</pubPlace>
+        <date>1994</date>
+        </docImprint>
+        </titlePage>}
+    \end{block}
+\end{frame}
+
+
+
+\begin{frame}
+	\frametitle{Intro Text Encoding Initiative}
+	\framesubtitle{Schemi di codifica TEI – Moduli base}
+	\addtocounter{nframe}{1}
+
+	\begin{block}{Esempio di pagina del titolo}   
+        \texttt{<titlePage>
+        <docAuthor>E. DE AMICIS</docAuthor>
+        <docTitle>
+        <titlePart type= ``main'' >CUORE</titlePart>
+        <titlePart>Libro per i ragazzi</titlePart>
+        </docTitle>
+        <docEdition>98.a edizione</docEdition>
+        <graphic url= ``publisher.png'' >
+        <docImprint>
+        <pubPlace>MILANO</pubPlace>
+        <publisher>FRATELLI TREVES, EDITORI</publisher>
+        <date>1889</date>
+        </docImprint>
+        </titlePage>}
+    \end{block}
+    
+\end{frame}
+
+
+
+% \begin{frame}
+% 	\frametitle{Intro Text Encoding Initiative}
+% 	\framesubtitle{Schemi di codifica TEI – Moduli base}
+% 	\addtocounter{nframe}{1}
+
+% 	\begin{block}{TEI}
+        
+%         Associare uno schema di codifica
+%         per qualsiasi progetto anche mediamente impegnativo è
+%         preferibile creare un proprio schema TEI
+%         cominciamo a validare sulla base di uno schema a partire
+%         dall’esercizio ese02.txt
+%         associazione di uno schema al documento TEI XML:
+%         XML Copy Editor: XML → Associa → DTD di sistema
+%         Oxygen: Document → Schema → Associate Schema...
+%         altri editor: inserire manualmente il <!DOCTYPE> nel
+%         caso si usi una DTD, o la processing instruction <?xml-
+%         model> descritta nel capitolo A Gentle Introduction to XML
+%     \end{block}
+% \end{frame}
+
+
+
+% \begin{frame}
+% 	\frametitle{Intro Text Encoding Initiative}
+% 	\framesubtitle{TEI}
+% 	\addtocounter{nframe}{1}
+
+% 	\begin{block}{TEI}
+%         % Schemi di codifica TEI: Moduli base
+%         % Nota su XML Copy Editor
+%         % XCE non supporta ancora l’uso di schemi di codifica nel
+%         % formato RelaxNG, necessario ricorrere alla vecchia DTD
+%         % XCE controlla anche la coerenza interna dello schema
+%         % un messaggio come quello che segue può essere
+%         % ignorato, l’informazione essenziale è se il documento è
+%         % valido oppure no (riportato in cima):
+%         % ese02-*******.xml is valid
+%         % Attenzione at line 2, column 37: element
+%         % '_DUMMY_model.resourceLike' is referenced in a content
+%         % model but was never declared
+%         % Attenzione at line 2, column 37: element
+%         % '_DUMMY_model.gLike' is referenced in a content model but
+%         % was never declared
+%     \end{block}
+    
+   
+
+% \end{frame}
+
+
+% \begin{frame}
+% 	\frametitle{Intro Text Encoding Initiative}
+% 	\framesubtitle{TEI}
+% 	\addtocounter{nframe}{1}
+
+% 	\begin{block}{TEI}
+%         Schemi di codifica TEI – Moduli base
+%         Esercizio 2
+%         marcare il testo (file ese02.txt) come segue:
+%         editor da usare: XML Copy Editor
+%         aprire il sito delle norme TEI P5
+%         marcare la struttura per prima cosa
+%         marcare tutte le espressioni enfatizzate (underscore =
+%         corsivo), i discorsi diretti, le citazioni, i nomi, etc.
+%         verificare che sia ben formato premendo F2 e validare
+%         salvare il file XML come ese02-Cognome.xml
+%         testi tratti da http://www.gutenberg.org/
+%     \end{block}
+    
+   
+
+% \end{frame}
+
+
+
+
+\begin{frame}
+	\frametitle{Intro Text Encoding Initiative}
+	\framesubtitle{Schemi di codifica TEI: Moduli base}
+	\addtocounter{nframe}{1}
+
+	\begin{block}{Collegamenti interni ed esterni}
+        
+        \begin{itemize}
+            \item \texttt{<ptr/>} specifica un puntatore a un altro \textit{luogo} (un altro
+            punto dello stesso testo o di un altro testo)
+        \end{itemize}
+
+        \texttt{<p>Il sistema di puntatori è basato sul meccanismo W3C
+        Xpointer. Per maggiori informazioni si veda il
+        capitolo <ptr target="\#SAid"/>; per le specifiche si
+        veda <ptr target=``http://www.w3.org/TR/xptrxpointer/''/>; 
+        anche <ptr type="image" target="\#fig22"/>.</p>}
+    \end{block}
+\end{frame}
+
+\begin{frame}
+	\frametitle{Intro Text Encoding Initiative}
+	\framesubtitle{Schemi di codifica TEI: Moduli base}
+	\addtocounter{nframe}{1}
+
+	\begin{block}{Collegamenti interni ed esterni}
+        
+        \begin{itemize}
+            \item \texttt{<ref>} specifica un puntatore a un altro \textit{luogo}, può
+            includere del testo.            
+        \end{itemize}
+       
+        \texttt{Si veda il <ref>terzo capitolo, p. 24</ref>.
+            Si veda il <ref target=``\#cap3.24''>terzo capitolo,
+            par. 24</ref>}
+    \end{block}
+\end{frame}
+
+
+
+
+
+\begin{frame}
+	\frametitle{Intro Text Encoding Initiative}
+	\framesubtitle{Schemi di codifica TEI – Moduli base}
+	\addtocounter{nframe}{1}
+
+    \begin{block}{Liste e tabelle}
+        \begin{itemize}
+            \item \texttt{<list>} qualsiasi tipo di lista (type per specificare)
+            \item \texttt{<head>} intestazione (titolo) della lista
+            \item \texttt{<item>} un elemento della lista
+            \item \texttt{<label>} numero o esponente associato all’\texttt{<item>}
+            \item \texttt{<headLabel>} intestazione per gli esponenti della lista
+            \item \texttt{<headItem>} intestazione per gli elementi della lista
+        \end{itemize}   
+    \end{block}
+\end{frame}
+
+
+
+
+\begin{frame}
+	\frametitle{Intro Text Encoding Initiative}
+	\framesubtitle{Schemi di codifica TEI – Moduli base}
+	\addtocounter{nframe}{1}
+
+    \textit{Agli item può essere associata o meno una etichetta (label), ma in caso
+    affermativo deve essere presente per tutti.
+   }
+
+	\begin{block}{Liste e tabelle}
+        
+        \texttt{<list><head>Ingredienti:</head> <item>un cucchiaio di
+        zucchero;</item> <item>mezzo chilo di farina;</item>
+        <item>due uova.</item></list>}
+    \end{block}
+    \textit{usare l'attributo type per specificare il tipo di lista.
+        \\Il testo non deve essere necessariamente ordinato come lista
+        per essere marcato come tale}
+\end{frame}
+
+
+
+\begin{frame}
+	\frametitle{Intro Text Encoding Initiative}
+	\framesubtitle{Schemi di codifica TEI – Moduli base}
+	\addtocounter{nframe}{1}
+
+	\begin{block}{Lista semplice}
+        \texttt{
+        <list type=``simple''>
+        <head>Lista della spesa:</head>
+        <item>pane;</item>
+        <item>frutta;</item>
+        <item>verdura;</item>
+        <item>latte;</item>
+        <item>farina;</item>
+        <item>uova;</item>
+        <item>tovaglioli;</item>
+        <item>bicchieri;</item>
+        <item>piatti.</item>
+        </list>}
+    \end{block}
+    
+\end{frame}
+
+
+\begin{frame}
+	\frametitle{Intro Text Encoding Initiative}
+	\framesubtitle{ Schemi di codifica TEI: Moduli base}
+	\addtocounter{nframe}{1}
+
+	\begin{block}{Glossario}
+        \texttt{<list type=``gloss''>
+        <head>Tecnologie XML:</head>
+        <label>XSL</label>
+        <item>eXtensible Stylesheet Language</item>
+        <label>XSLT</label>
+        <item>XSL Transformations</item>
+        <label>XSLFO</label>
+        <item>XSL \- Formatting Objects</item>
+        <label>XQuery</label>
+        <item>XML Query Language</item>
+        <label>XPAth</label>
+        <item>XML Path Language</item>
+        </list>}
+    \end{block}
+    
+\end{frame}
+
+
+\begin{frame}
+	\frametitle{Intro Text Encoding Initiative}
+	\framesubtitle{Schemi di codifica TEI: Moduli base}
+	\addtocounter{nframe}{1}
+
+    \texttt{gli elementi per tabelle sono <table>, <row>, <cell> disponibili
+    con il modulo figures, v. il cap. 14 Tables, Formulae and
+    Graphics (\url{http://www.tei-c.org/release/doc/tei-p5-doc/en/html/FT.html})}
+
+	\begin{block}{Tabella}
+        
+        \texttt{<table rows="3" cols=``2''>
+        <row>
+        <cell>HTML</cell>
+        <cell>Derivato da SGML (come applicazione), il
+        linguaggio del World Wide Web.</cell>
+        </row>
+        <row>
+        <cell>XML</cell>
+        <cell>Derivato da SGML (per semplificazione).</cell>
+        </row>
+        <row>
+        <cell>XSLT</cell>
+        <cell>Fogli di stile per XML.</cell>
+        </row>
+        </table>}
+    \end{block}
+    
+\end{frame}
+
+
+
+\begin{frame}
+	\frametitle{Intro Text Encoding Initiative}
+	\framesubtitle{Schemi di codifica TEI – Moduli base}
+	\addtocounter{nframe}{1}
+
+	\begin{block}{Note}
+        
+        
+        \begin{itemize}
+            \item l’elemento \texttt{<note>} permette di inserire una nota di
+            qualsiasi tipo (attributi \textit{type} e \textit{place})
+            \item la nota può appartenere al testo codificato, o può essere
+            opera di chi lo codifica (attributo \textit{resp})
+            \item se non nel flusso del testo usare gli attributi \textit{target} e
+            \textit{targetEnd} per stabilire collegamento preciso
+        \end{itemize}
+    \end{block}
+\end{frame}
+
+\begin{frame}
+	\frametitle{Intro Text Encoding Initiative}
+	\framesubtitle{Schemi di codifica TEI – Moduli base}
+	\addtocounter{nframe}{1}
+
+	\begin{block}{Note - Esempio}
+        Esempio nota
+    \end{block}
+\end{frame}
+
+\begin{frame}
+	\frametitle{Intro Text Encoding Initiative}
+	\framesubtitle{Schemi di codifica TEI – Moduli base}
+	\addtocounter{nframe}{1}
+
+	\begin{block}{Esercizio}  
+        % marcare il testo del file ese03.jpg come segue:
+        % editor da usare: XML Copy Editor o Editix
+        % marcare tutto quello che si vede nella pagina
+        % marcare come glossario usando <list> oppure
+        % in alternativa: marcare come glossario <term> + <gloss>
+        % usare identificatori e puntatori/riferimenti
+        % inserire un paio di note a piè di pagina
+        % verificare costantemente che il documento sia valido
+        % salvare il file XML come ese03-Cognome.xml
+    \end{block}
+    
+
+\end{frame}
+
+
+\begin{frame}
+	\frametitle{Intro Text Encoding Initiative}
+	\framesubtitle{Schemi di codifica TEI – Moduli base}
+	\addtocounter{nframe}{1}
+
+    %\textit{I riferimenti bibliografici, compresa la bibliografia vera e
+     %   propria, sono codificati usando i seguenti elementi:}
+	\begin{block}{Bibliografia}
+        \begin{itemize}
+            \item \texttt{<bibl>} citazione bibliografica di tipo \textit{flessibile}: possono essere presenti solo alcuni elementi; usata anche nel corpo del testo
+            \item \texttt{<biblStruct>} citazione bibliografica di tipo strutturato: gli
+            elementi devono seguire uno schema fisso
+            \item \texttt{<biblFull>} citazione bibliografica di tipo strutturato completo:
+            gli elementi devono seguire uno schema fisso e devono essere tutti presenti
+            \item \texttt{<listBibl>} lista di citazioni bibliografiche in uno qualsiasi
+            dei formati citati sopra
+        \end{itemize}
+       
+    \end{block}
+    
+\end{frame}
+
+
+
+\begin{frame}
+	\frametitle{Intro Text Encoding Initiative}
+	\framesubtitle{Schemi di codifica TEI – Moduli base}
+	\addtocounter{nframe}{1}
+
+    \textit{Una voce bibliografica può essere codificata impiegando tre possibili tipi:}
+	\begin{block}{Tipi di pubblicazione}
+        
+        \begin{itemize}
+            \item \texttt{<analytic>} “analitico”: informazioni su un titolo che
+            non costituisce una pubblicazione autonoma
+            (articolo di rivista o in una miscellanea)
+            \item \texttt{<monogr>} “monografico”: informazioni su una
+            pubblicazione, anche di tipo periodico (rivista)
+            \item \texttt{<series>} “serie”: informazioni su di una serie
+            editoriale
+        \end{itemize}
+        
+    \end{block}
+    
+    \textit{tipicamente impiegati con gli elementi \texttt{<biblStruct>} e \texttt{<biblFull>}, più flessibilità con \texttt{<bibl>}}
+    
+\end{frame}
+
+
+\begin{frame}
+	\frametitle{Intro Text Encoding Initiative}
+	\framesubtitle{Schemi di codifica TEI – Moduli base}
+	\addtocounter{nframe}{1}
+
+	\begin{block}{Titolo, autore, curatore}
+        \begin{itemize}
+            \item \texttt{<title>} il titolo della pubblicazione; più livelli (attr. level)
+            \item \textit{level=”a”} articolo (article)
+            \item \textit{level=”j”} rivista (journal)
+            \item \textit{level=”m”} monografia (monograph)
+            \item \textit{level=”s”} serie (series)
+            \item \textit{level=”u”} non pubblicato (unpublished)
+        \end{itemize}
+    \end{block}
+    
+\end{frame}
+
+
+\begin{frame}
+	\frametitle{Intro Text Encoding Initiative}
+	\framesubtitle{Schemi di codifica TEI – Moduli base}
+	\addtocounter{nframe}{1}
+
+    \begin{block}{Titolo, autore, curatore}
+        \begin{itemize}
+            \item \texttt{<author>} autore della pubblicazione
+            \item \texttt{<editor>} curatore della pubblicazione 
+        \end{itemize} 
+    \end{block}
+    \textit{questi elementi possono contenere direttamente il testo con il nome oppure elementi più complessi (<persName> e sub-elementi)}
+\end{frame}
+
+
+\begin{frame}
+	\frametitle{Intro Text Encoding Initiative}
+	\framesubtitle{Schemi di codifica TEI – Moduli base}
+	\addtocounter{nframe}{1}
+
+    \begin{block}{Elementi descrittivi}
+        \begin{itemize}
+            \item \texttt{<imprint>} raggruppa informazioni relative alla stampa
+            o diffusione di una pubblicazione
+            \item \texttt{<publisher>} l’editore responsabile della produzione a
+            stampa o diffusione
+            \item \texttt{<pubPlace>} il luogo di pubblicazione
+            \item \texttt{<date>} la data di pubblicazione
+        \end{itemize}
+    \end{block}
+\end{frame}
+
+\begin{frame}
+	\frametitle{Intro Text Encoding Initiative}
+	\framesubtitle{Schemi di codifica TEI – Moduli base}
+	\addtocounter{nframe}{1}
+
+	\begin{block}{Elementi descrittivi}
+    \begin{itemize}
+        \item \texttt{<biblScope>} l’estensione (in pagine, volumi) della
+        pubblicazione;
+        \item con attributo \textit{unit} permette di specificare il tipo di estensione
+        ad es. se si tratta di pagine
+        \item \texttt{<citedRange>} porzione di lavoro citato.
+    \end{itemize}
+
+    \end{block}
+
+    \texttt{<biblScope> può essere usato anche all’interno di <series>}
+\end{frame}
+
+
+\begin{frame}
+	\frametitle{Intro Text Encoding Initiative}
+	\framesubtitle{Schemi di codifica TEI – Moduli base}
+	\addtocounter{nframe}{1}
+
+	\begin{block}{Esempio semplice}
+        
+        
+        il caso di una monografia con autore unico:
+        <biblStruct xml:id=``Robinson1993d''>
+        <monogr>
+        <author>Robinson, P.</author>
+        <title level=``m''>The Digitization of Primary Textual
+        Sources</title>
+        <imprint>
+        <pubPlace>Oxford</pubPlace>
+        <publisher>Office for Humanities
+        Communication</publisher>
+        <date>1993</date>
+        </imprint>
+        </monogr>
+        </biblStruct>
+    \end{block}
+\end{frame}
+
+
+\begin{frame}
+	\frametitle{Intro Text Encoding Initiative}
+	\framesubtitle{Schemi di codifica TEI: Moduli base}
+	\addtocounter{nframe}{1}
+
+	\begin{block}{Articolo di miscellanea, due autori}
+        \texttt{<biblStruct xml:id=``Mohler2001''>
+                <analytic>
+                <author>Mohler, Peter Ph.</author>
+                <author>Zuell, Cornelia</author>
+                <title level=``a''>Applied Text Theory: Qualitative Analysis of
+                Answers to Open Ended Questions</title>
+                </analytic>
+                <monogr>
+                <editor>Mark D. West</editor>
+                <title level=``m''>Application of Computer Content Analysis</title>
+                <imprint>
+                <pubPlace>Westport CN</pubPlace>
+                <publisher>Ablex</publisher>
+                <date>2001</date>
+                <biblScope type=``pages''>116</biblScope>
+                </imprint>
+                </monogr>
+                </biblStruct>}
+    \end{block}
+\end{frame}
+
+
+\begin{frame}
+	\frametitle{Intro Text Encoding Initiative}
+	\framesubtitle{Schemi di codifica TEI – Moduli base}
+	\addtocounter{nframe}{1}
+
+	\begin{block}{articolo su rivista, un solo autore}
+	
+
+        <biblStruct xml:id=``Ester1994''>
+        <analytic>
+        <author>Ester, Michael</author>
+        <title level=``a''>Digital Images in the Context of Visual
+        Collections and Scholarship</title>
+        </analytic>
+        <monogr>
+        <title level=``j''>Visual Resources</title>
+        <imprint>
+        <date>1994</date>
+        </imprint>
+        <biblScope type=``vol''>X, 1</biblScope>
+        <biblScope type=``pages''>23</biblScope>
+        </monogr>
+        <note type=``key''>iproc</note>
+        </biblStruct>
+    \end{block}
+    
+\end{frame}
+
+
+
+
+
+\begin{frame}
+	\frametitle{Intro Text Encoding Initiative}
+	\framesubtitle{Schemi di codifica TEI: Moduli base}
+	\addtocounter{nframe}{1}
+
+	\begin{block}{Componenti non testuali: immagini} 
+        possibile includere nella marcatura immagini in formato XML
+        (SVG, il formato TEI) e in formato binario (TIFF, JPEG, PNG)
+        <graphic/>
+        contiene un puntatore a una immagine
+        url
+        può essere locale o esterna
+        <binaryObject> dati binari che costituiscono una immagine
+        <media>
+        riferimento a file audio, video etc.
+        <figure>
+        raggruppa informazioni relative a un’immagine
+        <head>
+        titolo o didascalia relativa all’immagine
+        <figDesc>
+        descrizione dell'immagine
+        <graphic>
+        puntatore a un'immagine
+        NB <figure> nella P5 fa parte del modulo figures ( \url{http://www.tei-
+        c.org/release/doc/tei-p5-doc/en/html/FT.html\#FTGRA} )
+    \end{block}
+    
+\end{frame}
+
+
+\begin{frame}
+	\frametitle{Intro Text Encoding Initiative}
+	\framesubtitle{Schemi di codifica TEI – Moduli base}
+	\addtocounter{nframe}{1}
+    
+    \textit{Nella TEI P4 è indispensabile inserire dichiarazioni
+    relative alle immagini nell’intestazione del documento}
+    
+	\begin{block}{Esempio TEI P4}
+
+        \texttt{<?xml version='1.0' encoding='utf-8'?>
+        ...
+        \underline{<!NOTATION JPEG PUBLIC
+        `ISO DIS 10918//NOTATION JPEG Graphics Format//EN' >
+        <!ENTITY PDatabase SYSTEM `support/PDatabase.jpeg' NDATA JPEG>
+        ]>}
+        ...
+        <p>The system is build around a relational database, called the
+        <soCalled>palaeographical database</soCalled>, that contains all
+        the information the application produces and processes:</p>
+        \underline{<figure entity=``PDatabase''>}
+        <figDesc>Schematic of the SPI system.</figDesc>
+        </figure>}
+    \end{block}
+\end{frame}
+
+
+\begin{frame}
+	\frametitle{Intro Text Encoding Initiative}
+	\framesubtitle{Schemi di codifica TEI – Moduli base}
+	\addtocounter{nframe}{1}
+
+	\begin{block}{Immagine in un documento P5}
+        
+        \texttt{<p>Questo fenomeno è chiaramente visibile nella figura che
+        segue:
+        <graphic url="diagramma.png"/>
+        Altre variazioni delle crescite sono
+        disponibili...</p>}
+
+
+       \texttt{<head>
+        <graphic
+        url="http://www.iath.virginia.edu/gants/Ornaments/Heads/hpral02.gif"/>
+        </head>}
+
+    \end{block}
+    \textit{immagine impiegata come intestazione in un documento P5}
+\end{frame}
+
+
 % Documento TEI Minimale.
 
 %<TEI xmlns="http://www.tei-c.org/ns/1.0">
@@ -20,7 +1548,7 @@
 %            <publicationStmt>
 %                <publisher>Web Head Press</publisher>
 %                <date>2013</date> edition, 1708</p>
-%                </sourceDesc>
+%                <sourceDesc />
 %        </fileDesc>
 %    </teiHeader>
 %   <text>
