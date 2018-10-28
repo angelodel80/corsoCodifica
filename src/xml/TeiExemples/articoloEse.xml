@@ -1,0 +1,25 @@
+<body xml:lang="en">
+    <div type="section">
+
+        <head>Introduction</head>
+        <p>We recommend the use of TEI markup as a means of representing scientific prose. It has a number of practical
+            advantages: </p>
+        <list>
+            <item>TEI markup is easy to add;</item>
+            <item>TEI markup is widely understood;</item>
+            <item>TEI markup is easy to convert to other formats.</item>
+        </list>
+        <p>TEI markup also has some scientific advantages, which we discuss in section
+            <ptr target="#SEC3" />.</p> <!-- further introductory paragraphs here -->
+    </div>
+    <div type="section">
+
+        <head>Origins of the TEI</head>
+        <p>The Text Encoding Initiative was born in 1987 .... </p> <!-- many more paragraphs here -->
+    </div>
+    <div xml:id="SEC3">
+
+        <head>Scientific properties of TEI markup</head>
+        <p>TEI markup expresses a view of the nature of text ... </p> <!-- many more paragraphs here -->
+    </div>
+</body>

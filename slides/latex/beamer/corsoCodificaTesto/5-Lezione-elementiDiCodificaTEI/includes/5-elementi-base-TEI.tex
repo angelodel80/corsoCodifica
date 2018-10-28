@@ -1375,23 +1375,18 @@
 	\framesubtitle{Schemi di codifica TEI – Moduli base}
 	\addtocounter{nframe}{1}
 
-	\begin{block}{Esempio semplice}
-        
-        
-        il caso di una monografia con autore unico:
-        <biblStruct xml:id=``Robinson1993d''>
-        <monogr>
-        <author>Robinson, P.</author>
-        <title level=``m''>The Digitization of Primary Textual
-        Sources</title>
-        <imprint>
-        <pubPlace>Oxford</pubPlace>
-        <publisher>Office for Humanities
-        Communication</publisher>
-        <date>1993</date>
-        </imprint>
-        </monogr>
-        </biblStruct>
+	\begin{block}{Esempio: monografia con autore unico:}
+        \texttt{<biblStruct xml:id=``Robinson1993d''>}
+        \texttt{ <monogr>}
+        \texttt{  <author>Robinson, P.</author>}
+        \texttt{  <title level=``m''>The Digitization of Primary Textual Sources</title>}
+        \texttt{  <imprint>}
+        \texttt{   <pubPlace>Oxford</pubPlace>}
+        \texttt{   <publisher>Office for Humanities Communication</publisher>}
+        \texttt{   <date>1993</date>}
+        \texttt{  </imprint>}
+        \texttt{ </monogr>}
+        \texttt{</biblStruct>}
     \end{block}
 \end{frame}
 
@@ -1416,7 +1411,7 @@
                 <pubPlace>Westport CN</pubPlace>
                 <publisher>Ablex</publisher>
                 <date>2001</date>
-                <biblScope type=``pages''>116</biblScope>
+                <biblScope unit=``pages''>116</biblScope>
                 </imprint>
                 </monogr>
                 </biblStruct>}
@@ -1430,9 +1425,7 @@
 	\addtocounter{nframe}{1}
 
 	\begin{block}{articolo su rivista, un solo autore}
-	
-
-        <biblStruct xml:id=``Ester1994''>
+       \texttt{ <biblStruct xml:id=``Ester1994''>
         <analytic>
         <author>Ester, Michael</author>
         <title level=``a''>Digital Images in the Context of Visual
@@ -1443,11 +1436,11 @@
         <imprint>
         <date>1994</date>
         </imprint>
-        <biblScope type=``vol''>X, 1</biblScope>
-        <biblScope type=``pages''>23</biblScope>
+        <biblScope unit=``vol''>X, 1</biblScope>
+        <biblScope unit=``pages''>23</biblScope>
         </monogr>
         <note type=``key''>iproc</note>
-        </biblStruct>
+        </biblStruct>}
     \end{block}
     
 \end{frame}
@@ -1462,28 +1455,50 @@
 	\addtocounter{nframe}{1}
 
 	\begin{block}{Componenti non testuali: immagini} 
-        possibile includere nella marcatura immagini in formato XML
-        (SVG, il formato TEI) e in formato binario (TIFF, JPEG, PNG)
-        <graphic/>
-        contiene un puntatore a una immagine
-        url
-        può essere locale o esterna
-        <binaryObject> dati binari che costituiscono una immagine
-        <media>
-        riferimento a file audio, video etc.
-        <figure>
-        raggruppa informazioni relative a un’immagine
-        <head>
-        titolo o didascalia relativa all’immagine
-        <figDesc>
-        descrizione dell'immagine
-        <graphic>
-        puntatore a un'immagine
-        NB <figure> nella P5 fa parte del modulo figures ( \url{http://www.tei-
-        c.org/release/doc/tei-p5-doc/en/html/FT.html\#FTGRA} )
+       \begin{itemize}
+           \item in formato XML \textit{(SVG, il formato TEI)}
+           \item in formato binario \textit{(TIFF, JPEG, PNG)}
+       \end{itemize}
     \end{block}
     
 \end{frame}
+
+
+\begin{frame}
+	\frametitle{Intro Text Encoding Initiative}
+	\framesubtitle{Schemi di codifica TEI: Moduli base}
+	\addtocounter{nframe}{1}
+
+	\begin{block}{Componenti non testuali: immagini} 
+       \begin{itemize}
+           \item \texttt{<graphic/>} contiene un puntatore a una immagine
+           \item attributo \textbf{url} può essere locale o esterna
+           \item \texttt{<binaryObject>} dati binari che costituiscono una immagine
+           \item \texttt{<media>} riferimento a file audio, video ecc.
+       \end{itemize}
+
+    \end{block}
+\end{frame}
+
+\begin{frame}
+	\frametitle{Intro Text Encoding Initiative}
+	\framesubtitle{Schemi di codifica TEI: Moduli base}
+	\addtocounter{nframe}{1}
+
+    \begin{block}{Componenti non testuali: immagini}
+        \begin{itemize}
+            \item <figure> raggruppa informazioni relative a un’immagine
+            \item <head> titolo o didascalia relativa all’immagine
+            \item <figDesc> descrizione dell'immagine
+            \item <graphic> puntatore a un'immagine
+        \end{itemize}
+        
+        \texttt{<figure> nella P5 fa parte del modulo figures 
+        (\url{http://www.tei-c.org/release/doc/tei-p5-doc/en/html/FT.html\#FTGRA} )}
+    \end{block}
+    
+\end{frame}
+
 
 
 \begin{frame}
@@ -1499,10 +1514,10 @@
         \texttt{<?xml version='1.0' encoding='utf-8'?>
         ...
         \underline{<!NOTATION JPEG PUBLIC
-        `ISO DIS 10918//NOTATION JPEG Graphics Format//EN' >
-        <!ENTITY PDatabase SYSTEM `support/PDatabase.jpeg' NDATA JPEG>
+        \\`ISO DIS 10918//NOTATION JPEG Graphics Format//EN'>
+        \\<!ENTITY PDatabase SYSTEM `support/PDatabase.jpeg' NDATA JPEG>
         ]>}
-        ...
+        \\...
         <p>The system is build around a relational database, called the
         <soCalled>palaeographical database</soCalled>, that contains all
         the information the application produces and processes:</p>
@@ -1522,19 +1537,35 @@
         
         \texttt{<p>Questo fenomeno è chiaramente visibile nella figura che
         segue:
-        <graphic url="diagramma.png"/>
+        \underline{<graphic url="diagramma.png"/>}
         Altre variazioni delle crescite sono
         disponibili...</p>}
 
 
        \texttt{<head>
         <graphic
-        url="http://www.iath.virginia.edu/gants/Ornaments/Heads/hpral02.gif"/>
+        url="http://www.name.org/hpral02.gif"/>
         </head>}
 
     \end{block}
     \textit{immagine impiegata come intestazione in un documento P5}
 \end{frame}
+
+\begin{frame}
+	\frametitle{Intro Text Encoding Initiative}
+	\framesubtitle{Schemi di codifica TEI – Moduli base}
+	\addtocounter{nframe}{1}
+
+	\begin{block}{Esercizi documenti di tipo e genere diversi}
+        \begin{itemize}
+            \item codificare usando gli opportuni elementi TEI un articolo di rivista
+            \item codificare usando gli opportuni elementi TEI una cartolina 
+        \end{itemize}
+
+    \end{block}
+    \textit{immagine impiegata come intestazione in un documento P5}
+\end{frame}
+
 
 
 % Documento TEI Minimale.

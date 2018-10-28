@@ -1,3 +1,24 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <TEI>
+    <teiHeader>
+    </teiHeader>
+    <text>
+        <body xml:lang="en">
+            <div type="section">
+                <ab>
+                    <s n="1">Introduction</s>
+                    <s n="2">We recommend the use of TEI markup as a means of representing
+                    scientific prose.</s>
+                    <s n="3">It has a number of practical advantages:</s>
+                    <s n="4">TEI markup is
+                    easy to add;</s>
+                    <s n="5">TEI markup is widely understood;</s>
+                    <s n="6">TEI markup is easy to
+                    convert to other formats.</s>
+                    <s n="7">TEI markup also has some scientific advantages, which we
+                    discuss in section <ptr target="#SEC3" />.</s>
+                </ab>
+            </div>
+        </body>
+    </text>
 </TEI>
