@@ -1,22 +1,32 @@
-<div type="verso">
-    <div type="message">
-        <p>You should try this place. You can see how genteel it is</p>
-        <p> Hope you enjoyed Wales, as they said to Mrs Fitzherbert</p>
-        <signed>Mama</signed>
-    </div>
-    <div type="destination">
-        <ab>
-            <stamp type="publicity">Silhouette of vintage car and slogan <mentioned>Brighton &amp; Hove all set for the
-                    seventies.</mentioned>
-            </stamp>
-            <stamp type="postmark">Circular mark specifying <mentioned>Brighton and <date when="1970-10-26">26 Oct 1970</date>
-            </stamp>
-            <stamp type="postage"> Machin design. 4d, vermillion. </stamp>
-        </ab> <address>
-            <addrLine>Mr Louis Burnard</addrLine>
-            <addrLine>4 Freeland Cottages,</addrLine>
-            <addrLine>Stanton St John</addrLine>
-            <addrLine>OXFORD</addrLine>
-        </address>
-    </div>
-</div>
+<?xml version="1.0" encoding="utf-8" ?>
+<TEI>
+    <teiHeader> </teiHeader>
+    <text>
+        <body>
+            <div type="verso">
+                <div type="message">
+                    <p>You should try this place. You can see how genteel it is</p>
+                    <p> Hope you enjoyed Wales, as they said to Mrs Fitzherbert</p>
+                    <signed>Mama</signed>
+                </div>
+                <div type="destination">
+                    <ab>
+                        <stamp type="publicity">Silhouette of vintage car and slogan <mentioned>Brighton &amp; Hove all set for the seventies.</mentioned>
+                        </stamp>
+                        <stamp type="postmark">Circular mark specifying <mentioned>Brighton &amp; Hove - Sussex</mentioned>
+                            and
+                            <date when="1970-10-26">26 Oct 1970</date>
+                        </stamp>
+                        <stamp type="postage"> Machin design. 4d, vermillion. </stamp>
+                    </ab>
+                    <address>
+                        <addrLine>Mr Louis Burnard</addrLine>
+                        <addrLine>4 Freeland Cottages,</addrLine>
+                        <addrLine>Stanton St John</addrLine>
+                        <addrLine>OXFORD</addrLine>
+                    </address>
+                </div>
+            </div>
+        </body>
+    </text>
+</TEI>

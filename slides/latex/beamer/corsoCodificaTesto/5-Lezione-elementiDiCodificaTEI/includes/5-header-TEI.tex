@@ -56,15 +56,17 @@ codifica effettuata (preziosi per l’interscambio!)}
 
 
 
-
-
 \begin{frame}
 	\frametitle{Intro Text Encoding Initiative}
-	\framesubtitle{Schemi di codifica TEI – Contentuto}
+	\framesubtitle{Schemi di codifica TEI – Intestazione}
 	\addtocounter{nframe}{1}
 
     \begin{block}{Testo in prosa}
-        Most elements contain simple running prose at some level. Many elements may contain either prose (possibly organized into paragraphs) or more specific elements, which themselves contain prose. In this chapter's descriptions of element content, the phrase prose description should be understood to imply a series of paragraphs, each marked as a p element. The word phrase, by contrast, should be understood to imply character data, interspersed as need be with phrase-level elements, but not organized into paragraphs.
+        Molti elementi dell'intestazione contengono semplicemente del testo in prosa (giunti a qualche livello dell'albero del documento).
+    \end{block}
+
+    \begin{block}{Testo in prosa}
+       Alcuni elementi possono contenere testo in prosa suddivisa da \textbf{elementi di paragrafo} (\textit{p}), oppure elementi più specifici strutturati, che a loro volta contengono testo in prosa.
     \end{block}
 \textit{}
 
@@ -73,11 +75,16 @@ codifica effettuata (preziosi per l’interscambio!)}
 
 \begin{frame}
 	\frametitle{Intro Text Encoding Initiative}
-	\framesubtitle{Schemi di codifica TEI – Contenuto}
+	\framesubtitle{Schemi di codifica TEI – Intestazione}
 	\addtocounter{nframe}{1}
 
     \begin{block}{Grouping elements}
-        Elements whose names end with the suffix Stmt (e.g. editionStmt, titleStmt) and the xenoData element enclose a group of specialized elements recording some structured information. In the case of the bibliographic elements, the suffix Stmt is used in names of elements corresponding to the ‘areas’ of the International Standard Bibliographic Description.5 In the case of the xenoData element, the specialized elements are not TEI elements, but rather come from some other metadata scheme. In most cases grouping elements may contain prose descriptions as an alternative to the set of specialized elements, thus allowing the encoder to choose whether or not the information concerned should be presented in a structured form or in prose.
+ 
+        Gli elementi che terminano con suffisso \textbf{Stmt} (esempio \textit{titleStmt}), racchiudono un gruppo di elementi specifici e specializzati per la codifica di informazioni strutturate.
+    \end{block}
+
+    \begin{block}{Grouping elements}
+        In molti casi questi elementi possono contenere anche descrizioni con testo in prosa. Ciò permette al curatore della codifica di decidere se utilizzare una strategia strutturata, semi-strutturata o completamente destrutturara.
     \end{block}
 \textit{}
 
@@ -86,12 +93,19 @@ codifica effettuata (preziosi per l’interscambio!)}
 
 \begin{frame}
 	\frametitle{Intro Text Encoding Initiative}
-	\framesubtitle{Schemi di codifica TEI – Contenuto}
+	\framesubtitle{Schemi di codifica TEI – Intestazione}
 	\addtocounter{nframe}{1}
 
     \begin{block}{Dichiarazioni}
-        Elements whose names end with the suffix Decl (e.g. tagsDecl, refsDecl) enclose information about specific encoding practices applied in the electronic text; often these practices are described in coded form. Typically, such information takes the form of a series of declarations, identifying a code with some more complex structure or description. A declaration which applies to more than one text or division of a text need not be repeated in the header of each such text or subdivision. Instead, the decls attribute of each text (or subdivision of the text) to which the declaration applies may be used to supply a cross-reference to it, as further described in section 15.3 Associating Contextual Information with a Text.
+        
+        Gli elementi che terminano con il suffisso \textbf{Decl} (per esempio \textit{refsDecl}) racchiudono informazioni inerenti specifiche prassi di codifica che sono state usate all'interno del testo digitale.
     \end{block}
+
+    \begin{block}{Dichiarazioni}
+        Spesso queste prassi sono descritte in un linguaggio formale, attraverso una serie di dichiarazioni che identificano strutture complesse e descrizioni dettagliate.
+    \end{block}
+
+    \textit{Le dichiarazioni possono essere riferite con l'attributo \textbf{decls} per ciascuna parte di testo a cui si applica.}
 \textit{}
 
 \end{frame}
@@ -99,18 +113,17 @@ codifica effettuata (preziosi per l’interscambio!)}
 
 \begin{frame}
 	\frametitle{Intro Text Encoding Initiative}
-	\framesubtitle{Schemi di codifica TEI – Contenuto}
+	\framesubtitle{Schemi di codifica TEI – Intestazione}
 	\addtocounter{nframe}{1}
 
     \begin{block}{Descrizioni}
 
-        Elements whose names end with the suffix Desc (e.g. settingDesc, projectDesc) contain a prose description, possibly, but not necessarily, organized under some specific headings by suggested sub-elements.
+        Gli elementi che terminano con il suffisso \textbf{Desc} (esempio \textit{projectDesc}) contengono testo in prosa, che può essere anche strutturata usando specifici elementi.
 
     \end{block}
 \textit{}
 
 \end{frame}
-
 
 
 \begin{frame}
@@ -120,12 +133,12 @@ codifica effettuata (preziosi per l’interscambio!)}
 
 	\begin{block}{documento TEI - schema di intestazione TEI minima}
         \texttt{<teiHeader>}
-        \texttt{ <fileDesc>}
-        \texttt{  <titleStmt>...</titleStmt>}
-        \texttt{  <publicationStmt>...</publicationStmt>}
-        \texttt{  <sourceDesc>...</sourceDesc>}
-        \texttt{ </fileDesc>}
-        \texttt{</teiHeader>}
+        \\\texttt{ <fileDesc>}
+        \\\texttt{  <titleStmt>...</titleStmt>}
+        \\\texttt{  <publicationStmt>...</publicationStmt>}
+        \\\texttt{  <sourceDesc>...</sourceDesc>}
+        \\\texttt{ </fileDesc>}
+        \\\texttt{</teiHeader>}
     \end{block}
     
 
@@ -195,6 +208,22 @@ codifica effettuata (preziosi per l’interscambio!)}
     \textit{I metadati sono una componente essenziale di qualsiasi
         progetto di digitalizzazione}
 \end{frame}
+\begin{frame}
+	\frametitle{Intro Text Encoding Initiative}
+	\framesubtitle{Schemi di codifica TEI – Intestazione}
+	\addtocounter{nframe}{1}
+
+    \begin{block}{Le altre componenti dell’intestazione TEI}
+        \begin{itemize}
+            \item elemento \textbf{xenoData}
+            \item[] Gli elementi di struttura specifici e specializzati che occorrono all'interno di questo elemento non sono parte del vocabolario TEI. Provengono da altri schemi di metadati come ad esempio il \textit{Dublin Core}.
+        \end{itemize}
+    \end{block}
+    \textit{I metadati sono una componente essenziale di qualsiasi
+        progetto di digitalizzazione}
+\end{frame}
+
+
 
 
 \begin{frame}

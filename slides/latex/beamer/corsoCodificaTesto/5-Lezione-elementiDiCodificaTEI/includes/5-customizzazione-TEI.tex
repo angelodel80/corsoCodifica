@@ -1,10 +1,75 @@
+\begin{frame}
+	\frametitle{Intro Text Encoding Initiative}
+	\framesubtitle{Schemi di codifica TEI – Personalizzare TEI}
+	\addtocounter{nframe}{1}
+
+    \begin{block}{Personalizzare TEI}
+        Nessun progetto di codifica richiede di utilizzare tutte le specifiche definite dalle linee guida della TEI.
+    \end{block}
+    \begin{block}{Personalizzare TEI}
+        
+        La TEI fornisce un insieme specifico di elementi che può essere usato per creare uno schema TEI puntuale e ritagliato sulle specifiche del progetto di codifica in corso.
+
+    \end{block}
+    
+\end{frame}
+
+% \begin{frame}
+% 	\frametitle{Intro Text Encoding Initiative}
+% 	\framesubtitle{Schemi di codifica TEI – Personalizzare TEI}
+% 	\addtocounter{nframe}{1}
+
+%     \begin{block}{Personalizzare TEI}
+%         % The TEI provides a special set of elements which can be used to create such a schema specification.
+%         La TEI fornisce un insieme specifico di elementi che può essere usato per creare uno schema TEI puntuale e ritagliato sulle specifiche del progetto di codifica in corso.
+
+%     \end{block}
+    
+% \end{frame}
+
+
+
+\begin{frame}
+	\frametitle{Intro Text Encoding Initiative}
+	\framesubtitle{Schemi di codifica TEI – Personalizzare TEI}
+    \addtocounter{nframe}{1}
+    
+    \begin{block}{Personalizzare TEI - schemaSpec}
+        \texttt{<schemaSpec ident="tei-custom" start="TEI teiCorpus" >}
+        \\\texttt{<moduleRef key="analysis" include="interp interpGrp pc s w" />}
+        \\\texttt{<moduleRef key="linking" include="anchor seg" />}
+        %\texttt{<moduleRef key="tagdocs" include="att code eg gi ident val "/> }
+        \\\texttt{<moduleRef key="tei "/> }
+        %\texttt{<moduleRef key="textstructure" include="TEI argument back body byline closer dateline div docAuthor docDate docEdition docImprint docTitle epigraph front group imprimatur opener postscript salute signed text titlePage titlePart trailer "/> }
+        \\\texttt{</schemaSpec>}
+    \end{block}
+    \textit{Si selezionano o si escudono gli elementi attraverso gli attributi @\textbf{include} e @\textbf{exclude}}
+\end{frame}
+
+\begin{frame}
+	\frametitle{Intro Text Encoding Initiative}
+	\framesubtitle{Schemi di codifica TEI – Personalizzare TEI}
+	\addtocounter{nframe}{1}
+    \textit{Modifica agli elementi e attributi dei Moduli}
+    \begin{block}{Personalizzare TEI - classSpec}
+        \texttt{<classSpec type="atts" ident="att.datable.w3c" module="tei" mode="change" >}
+        \\\texttt{<attList> }
+        \\\texttt{<attDef ident="notAfter" mode="delete" />}
+        \\\texttt{<attDef ident="from" mode="delete" />}
+        \\\texttt{<attDef ident="to" mode="delete" /> }
+        \\\texttt{</attList>}
+        \\\texttt{</classSpec>}
+    \end{block}
+    
+\end{frame}
+
+
+
 % ODD document, Selezione dei Moduli per lo schema, nuovi elementi, profilo personalizzato TEI, capitolo 22 delle linee guida (Documentation Elements), capitolo 23 delle linee guida (Using the TEI)
 
-% Almost no-one needs everything defined by the TEI, yet every one of its elements is of use or interest to someone. How should you go about choosing just the parts of the TEI you need?
 
 % serious use of the TEI requires careful consideration of exactly which of its elements is appropriate to the of things which the project needs to specify more exactly than the TEI does.
 
-% The TEI provides a special set of elements which can be used to create such a schema specification.
 
 % a document using these elements is provides information for a computer to process along with documentation of that information for a human being to read in a single integrated XML document.
 
@@ -21,21 +86,13 @@
 %    <moduleRef key="textstructure " include="TEI argument back body byline closer dateline div docAuthor docDate docEdition docImprint docTitle epigraph front group imprimatur opener postscript salute signed text titlePage titlePart trailer "/> 
 % </schemaSpec>
 
-% attributi @include e @exclude
 
 % TEI currently defines 22 modules
 % foto con la tabella
 
 % definizione degli elementi, degli attributi, dei datatype e dei valori di default 
 
-% modifica agli elementi e attributi dei Moduli
-% <classSpec type="atts" ident="att.datable.w3c" module="tei" mode="change">
-%    <attList> mode="delete"/>
-%        <attDef ident="notAfter" mode="delete" />
-%        <attDef ident="from" mode="delete" />
-%        <attDef ident="to" mode="delete" /> 
-%    </attList>
-% </classSpec>
+
 
 
 %% esempio epidoc

@@ -102,11 +102,11 @@
         <text>
         <titolo>Gli assassinii della Rue Morgue</titolo>
         <intestazione> I </intestazione>
-        <pagina n="5"/>
+        \emph{<pagina n="5"/>}
         <p>Le facoltà mentali che si sogliono chiamare analitiche sono, di
         per se stesse [...]</p>
         <p>La facoltà di risolvere è probabilmente molto rinfor-
-        <pagina n="6"/>
+        \emph{<pagina n="6"/>}
         zata dallo studio delle matematiche e in modo particolare
         dell’altissimo ramo di questa scienza che [...] </p> </text>}
        
@@ -140,20 +140,16 @@
 	\addtocounter{nframe}{1}
 
 	\begin{block}{Esempio}
-       \texttt{<?xml version="1.0" encoding="utf-8"?>
-         <!DOCTYPE TEI SYSTEM ``tei\_lite.dtd''>
-         <TEI xmlns=``http://www.tei\-c.org/ns/1.0''>
-         <teiHeader> </teiHeader>
-         <text>
-             <div>
-             <p></p>
-             </div>
-        </text>
-        </TEI>}
+       \texttt{<?xml version="1.0" encoding="utf-8"?>}
+         \\\texttt{<!DOCTYPE TEI SYSTEM ``tei\_lite.dtd''>}
+         \\\texttt{<TEI xmlns=``http://www.tei\-c.org/ns/1.0''>}
+         \\\texttt{<teiHeader> </teiHeader>}
+         \\\texttt{<text>}
+             \\\texttt{<div><p></p></div>}
+        \\\texttt{</text>}
+        \\\texttt{</TEI>}
     \end{block}
 \end{frame}
-
-
 
 \begin{frame}
 	\frametitle{Intro Text Encoding Initiative}
@@ -161,20 +157,15 @@
 	\addtocounter{nframe}{1}
 
 	\begin{block}{Esempio}
-        \texttt{<?xml version="1.0" encoding="utf-8"?>
-        <?xml-model href="tei-lite.rng"?>
-        <TEI xmlns=``http://www.tei-c.org/ns/1.0''>
-        <teiHeader>...</teiHeader>
-        <text>
-        <div>
-        <p></p>
-        </div>
-        </text>
-        </TEI>}
+        \texttt{<?xml version="1.0" encoding="utf-8"?>}
+        \\\texttt{<?xml-model href="tei-lite.rng"?>}
+        \\\texttt{<TEI xmlns=``http://www.tei-c.org/ns/1.0''>}
+        \\\texttt{<teiHeader>...</teiHeader>}
+        \\\texttt{<text>}
+        \\\texttt{<div><p></p></div>}
+        \\\texttt{</text>}
+        \\\texttt{</TEI>}
     \end{block}
-    
-   
-
 \end{frame}
 
 
@@ -209,15 +200,14 @@
 	\addtocounter{nframe}{1}
 
 	\begin{block}{Esempio schematico di documento TEI}
-        \texttt{<TEI>
-        <teiHeader> [informazioni del TEI Header]
-        </teiHeader>
-        <text>
-        <front> [premessa, dedica ...] </front>
-        <body> [corpo del testo ...] </body>
-        <back> [postfazione, appendice ...]</back>
-        </text>
-        </TEI>}
+        \texttt{<TEI>}
+        \\\texttt{<teiHeader> [informazioni del TEI Header]</teiHeader>}
+        \\\texttt{<text>}
+        \\\texttt{<front> [premessa, dedica ...] </front>}
+        \\\texttt{<body> [corpo del testo ...] </body>}
+        \\\texttt{<back> [postfazione, appendice ...]</back>}
+        \\\texttt{</text>}
+        \\\texttt{</TEI>}
     \end{block}
     
    
@@ -318,10 +308,10 @@
 
 	\begin{block}{Altri elementi strutturali fondamentali}
         \begin{itemize}
-            \item suddivisioni del testo, non numerati: \texttt{<div> }(nessun limite di nidificazione)
-            \item suddivisioni del testo, numerati: \texttt{<div1> ... <div7> }(massimo 7 livelli)
+            \item suddivisioni del testo, non numerate: \texttt{<div> }(nessun limite di nidificazione)
+            \item suddivisioni del testo, numerate: \texttt{<div1> ... <div7> }(massimo 7 livelli)
             \item paragrafi: \texttt{<p>}
-            \item testo riferito: \texttt{<q>} (discorso diretto, citazioni, etc.)
+            \item testo riferito: \texttt{<q>} (discorso diretto, citazioni, ecc.)
         \end{itemize}
         
     \end{block}
@@ -353,7 +343,7 @@
 
 	\begin{block}{Apertura e chiusura di un \texttt{<div>}}
         \begin{itemize}
-            \item \texttt{<head>}: qualunque tipo di intestazione: il titolo di un opera, l’intestazione di un paragrafo, di una sezione, ecc.
+            \item \texttt{<head>}: qualunque tipo di intestazione: il titolo di un'opera, l’intestazione di un paragrafo, di una sezione, ecc.
             \item l'attributo \textit{type} permette di classificare in base a una tipologia
             \item \texttt{<epigraph>} citazione all’inizio del testo, o nella pagina del titolo, eventualmente con riferimento bibliografico
             \item \texttt{<opener>} raggruppa un serie di elementi (data, luogo, saluti, ecc.) all’inizio del \texttt{<div>}, specie di una lettera
@@ -371,7 +361,7 @@
         \begin{itemize}
             \item \texttt{<argument>}: lista degli argomenti trattati nel \texttt{<div>}
             \item \texttt{<trailer>} frase che compare alla fine del \texttt{<div>} (ad esempio ``Fine del capitolo 1'')
-            \item \texttt{<closer>} raggruppa un serie di elementi (data, luogo, saluti, etc.) alla fine del \texttt{<div>}, specie di una lettera
+            \item \texttt{<closer>} raggruppa un serie di elementi (data, luogo, saluti, ecc.) alla fine del \texttt{<div>}, specie di una lettera
         \end{itemize}
     \end{block}
 
@@ -412,10 +402,9 @@
 	\addtocounter{nframe}{1}
 
 	\begin{block}{Errori frequenti}
-        I titoli sono codificati con \texttt{<title>} soltanto nel caso di riferimenti bibliografici i titoli del testo, dei capitoli etc. si marcano con \texttt{<head>}
+        I titoli sono codificati con \texttt{<title>} soltanto nel caso di riferimenti bibliografici. \\I titoli del testo, dei capitoli ecc. si marcano con \texttt{<head>}
     \end{block}
     
-   
 
 \end{frame}
 
@@ -429,7 +418,7 @@
         \textbf{Tre categorie:}
         \begin{itemize}
             \item \textbf{errori sintattici}: un elemento inserito in un punto sbagliato
-            della gerarchia, o che non può contenere testo etc.
+            della gerarchia, o che non può contenere testo ecc.
             \item \textbf{errori di marcatura semantica}: usare un elemento inadatto
             allo scopo, ad esempio marcare un titolo con \texttt{<emph>}
             \item \textbf{errori di interpretazione} del testo (che portano al II tipo o
@@ -450,7 +439,7 @@
 %         domanda che ricorre periodicamente: perché non usare nomi
 %         più significativi invece di un contenitore generico come <div>
 %         (= ‘suddivisione, parte di un testo’)?
-%         perché non usare <book>, <chapter>, <section>, etc. come
+%         perché non usare <book>, <chapter>, <section>, ecc. come
 %         fa, ad esempio, lo schema DOCBOOK?
 %         troppa variabilità nell’uso comune, meglio usare un termine
 %         generico che possa poi essere specificato usando l’attributo
@@ -677,7 +666,7 @@
 	\begin{block}{Citazioni}
         \begin{itemize}
             \item \texttt{<q>} testo citato da altre fonti: discorso diretto, esempi
-            (nei dizionari), etc.
+            (nei dizionari), ecc.
             
         \end{itemize}
     \end{block}
@@ -786,20 +775,17 @@
 	\addtocounter{nframe}{1}
 
 	\begin{block}{TEI: esempio citazione con elementi annidati} 
-       \texttt{<p>
-         <q>The Lord! The Lord! It is Sakya Muni himself,</q> the lama half
-         sobbed; and under his breath began the wonderful Buddhist invocation:<q>
-        <quote>
-         <l>To Him the Way \- the Law \- Apart \- </l>
-         <l>Whom Maya held beneath her heart</l>
-         <l>Ananda's Lord \- the Bodhisat</l>
-        </quote>
-        And He is here! The Most Excellent Law is here also. My
-        pilgrimage is well begun. And what work! What work!</q>
-        </p>}
+       \texttt{<p><q>The Lord! The Lord! It is Sakya Muni himself,</q> the lama half
+         sobbed; and under his breath began the wonderful Buddhist invocation:<q>}
+        \\\texttt{<quote>}
+         \\\texttt{<l>To Him the Way \- the Law \- Apart \- </l>}
+         \\\texttt{<l>Whom Maya held beneath her heart</l>}
+         \\\texttt{<l>Ananda's Lord \- the Bodhisat</l>}
+        \\\texttt{</quote>}
+        \\\texttt{And He is here! The Most Excellent Law is here also. My
+        pilgrimage is well begun. And what work! What work!</q></p>}
     \end{block}
 \end{frame}
-
 
 \begin{frame}
 	\frametitle{Intro Text Encoding Initiative}
@@ -854,7 +840,7 @@
        
         
         \texttt{(<persName>, <forename>, <surname>, <roleName>,
-        <addName>, etc.)}
+        <addName>, ecc.)}
 
     \end{block}
 
@@ -907,17 +893,16 @@
 	\addtocounter{nframe}{1}
 
 	\begin{block}{Esempio di pagina del titolo}
-        \texttt{<titlePage>
-        <titlePart>Cuore</titlePart>
-        <byline>di <docAuthor>E. de
-        Amicis</docAuthor></byline>
-        <docEdition>Edizione integrale</docEdition>
-        <docImprint>
-        <publisher>Newton Compton editori</publisher>
-        <pubPlace>Roma</pubPlace>
-        <date>1994</date>
-        </docImprint>
-        </titlePage>}
+        \texttt{<titlePage>}
+        \\\texttt{<titlePart>Cuore</titlePart>}
+        \\\texttt{<byline>di <docAuthor>E. de Amicis</docAuthor></byline>}
+        \\\texttt{<docEdition>Edizione integrale</docEdition>}
+        \\\texttt{<docImprint>}
+        \\\texttt{<publisher>Newton Compton editori</publisher>}
+        \\\texttt{<pubPlace>Roma</pubPlace>}
+        \\\texttt{<date>1994</date>}
+        \\\texttt{</docImprint>}
+        \\\texttt{</titlePage>}
     \end{block}
 \end{frame}
 
@@ -929,20 +914,20 @@
 	\addtocounter{nframe}{1}
 
 	\begin{block}{Esempio di pagina del titolo}   
-        \texttt{<titlePage>
-        <docAuthor>E. DE AMICIS</docAuthor>
-        <docTitle>
-        <titlePart type= ``main'' >CUORE</titlePart>
-        <titlePart>Libro per i ragazzi</titlePart>
-        </docTitle>
-        <docEdition>98.a edizione</docEdition>
-        <graphic url= ``publisher.png'' >
-        <docImprint>
-        <pubPlace>MILANO</pubPlace>
-        <publisher>FRATELLI TREVES, EDITORI</publisher>
-        <date>1889</date>
-        </docImprint>
-        </titlePage>}
+        \texttt{<titlePage>}
+        \\\texttt{<docAuthor>E. DE AMICIS</docAuthor>}
+        \\\texttt{<docTitle>}
+        \\\texttt{<titlePart type= ``main'' >CUORE</titlePart>}
+        \\\texttt{<titlePart>Libro per i ragazzi</titlePart>}
+        \\\texttt{</docTitle>}
+        \\\texttt{<docEdition>98.a edizione</docEdition>}
+        \\\texttt{<graphic url= ``publisher.png'' >}
+        \\\texttt{<docImprint>}
+        \\\texttt{<pubPlace>MILANO</pubPlace>}
+        \\\texttt{<publisher>FRATELLI TREVES, EDITORI</publisher>}
+        \\\texttt{<date>1889</date>}
+        \\\texttt{</docImprint>}
+        \\\texttt{</titlePage>}
     \end{block}
     
 \end{frame}
@@ -1013,7 +998,7 @@
 %         aprire il sito delle norme TEI P5
 %         marcare la struttura per prima cosa
 %         marcare tutte le espressioni enfatizzate (underscore =
-%         corsivo), i discorsi diretti, le citazioni, i nomi, etc.
+%         corsivo), i discorsi diretti, le citazioni, i nomi, ecc.
 %         verificare che sia ben formato premendo F2 e validare
 %         salvare il file XML come ese02-Cognome.xml
 %         testi tratti da http://www.gutenberg.org/
@@ -1116,19 +1101,18 @@
 	\addtocounter{nframe}{1}
 
 	\begin{block}{Lista semplice}
-        \texttt{
-        <list type=``simple''>
-        <head>Lista della spesa:</head>
-        <item>pane;</item>
-        <item>frutta;</item>
-        <item>verdura;</item>
-        <item>latte;</item>
-        <item>farina;</item>
-        <item>uova;</item>
-        <item>tovaglioli;</item>
-        <item>bicchieri;</item>
-        <item>piatti.</item>
-        </list>}
+        \texttt{<list type=``simple''>}
+        \\\texttt{<head>Lista della spesa:</head>}
+        \\\texttt{<item>pane;</item>}
+        \\\texttt{<item>frutta;</item>}
+        \\\texttt{<item>verdura;</item>}
+        \\\texttt{<item>latte;</item>}
+        \\\texttt{<item>farina;</item>}
+        \\\texttt{<item>uova;</item>}
+        \\\texttt{<item>tovaglioli;</item>}
+        \\\texttt{<item>bicchieri;</item>}
+        \\\texttt{<item>piatti.</item>}
+        \\\texttt{</list>}
     \end{block}
     
 \end{frame}
@@ -1140,19 +1124,19 @@
 	\addtocounter{nframe}{1}
 
 	\begin{block}{Glossario}
-        \texttt{<list type=``gloss''>
-        <head>Tecnologie XML:</head>
-        <label>XSL</label>
-        <item>eXtensible Stylesheet Language</item>
-        <label>XSLT</label>
-        <item>XSL Transformations</item>
-        <label>XSLFO</label>
-        <item>XSL \- Formatting Objects</item>
-        <label>XQuery</label>
-        <item>XML Query Language</item>
-        <label>XPAth</label>
-        <item>XML Path Language</item>
-        </list>}
+        \texttt{<list type=``gloss''>}
+        \\\texttt{<head>Tecnologie XML:</head>}
+        \\\texttt{<label>XSL</label>}
+        \\\texttt{<item>eXtensible Stylesheet Language</item>}
+        \\\texttt{<label>XSLT</label>}
+        \\\texttt{<item>XSL Transformations</item>}
+        \\\texttt{<label>XSLFO</label>}
+        \\\texttt{<item>XSL \- Formatting Objects</item>}
+        \\\texttt{<label>XQuery</label>}
+        \\\texttt{<item>XML Query Language</item>}
+        \\\texttt{<label>XPAth</label>}
+        \\\texttt{<item>XML Path Language</item>}
+        \\\texttt{</list>}
     \end{block}
     
 \end{frame}
@@ -1378,16 +1362,16 @@
 
 	\begin{block}{Esempio: monografia con autore unico:}
         \texttt{<biblStruct xml:id=``Robinson1993d''>}
-        \texttt{ <monogr>}
-        \texttt{  <author>Robinson, P.</author>}
-        \texttt{  <title level=``m''>The Digitization of Primary Textual Sources</title>}
-        \texttt{  <imprint>}
-        \texttt{   <pubPlace>Oxford</pubPlace>}
-        \texttt{   <publisher>Office for Humanities Communication</publisher>}
-        \texttt{   <date>1993</date>}
-        \texttt{  </imprint>}
-        \texttt{ </monogr>}
-        \texttt{</biblStruct>}
+        \\\texttt{ <monogr>}
+        \\\texttt{  <author>Robinson, P.</author>}
+        \\\texttt{  <title level=``m''>The Digitization of Primary Textual Sources</title>}
+        \\\texttt{  <imprint>}
+        \\\texttt{   <pubPlace>Oxford</pubPlace>}
+        \\\texttt{   <publisher>Office for Humanities Communication</publisher>}
+        \\\texttt{   <date>1993</date>}
+        \\\texttt{  </imprint>}
+        \\\texttt{ </monogr>}
+        \\\texttt{</biblStruct>}
     \end{block}
 \end{frame}
 
@@ -1473,7 +1457,7 @@
 	\begin{block}{Componenti non testuali: immagini} 
        \begin{itemize}
            \item \texttt{<graphic/>} contiene un puntatore a una immagine
-           \item attributo \textbf{url} può essere locale o esterna
+           \item attributo \textbf{url} può essere locale o esterno
            \item \texttt{<binaryObject>} dati binari che costituiscono una immagine
            \item \texttt{<media>} riferimento a file audio, video ecc.
        \end{itemize}
