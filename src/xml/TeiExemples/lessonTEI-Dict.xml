@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+   <teiHeader>
+      <fileDesc xml:lang="it">
+         <titleStmt>
+            <title>il mio primo dizionario</title>
+            <author>Fahad Khan</author>
+         </titleStmt>
+         <publicationStmt>
+            <p>informazioni sulla pubblicazione</p>
+         </publicationStmt>
+         <sourceDesc>
+            <p>Informationi sulla sorgente</p>
+         </sourceDesc>
+      </fileDesc>
+   </teiHeader>
+   <text>
+      <body>
+         <entry n="1">
+            <form type = "lemma">
+               <orth>lessicografo</orth>
+               <pron notation="ipa">lessi'kografo</pron>
+               <syll>les|si|cò|gra|fo</syll>
+            </form>
+            <gramGrp>
+               <pos>s.</pos>
+               <gen>m.</gen>
+            </gramGrp>
+            <etym>dal <lang>greco tardo</lang>
+               <mentioned>λεξικογράϕος</mentioned>, composto di <mentioned>λεξικόν</mentioned> ossia
+                  <gloss>"lessico"</gloss> e <mentioned>γράϕος</mentioned> ovvero
+                  <gloss>"-grafo"</gloss></etym>
+            <sense n="s1">
+               <usg type = "dom">(linguistica)</usg> 
+               <def>chi si occupa di lessicografia</def>
+               <cit type= "example">
+                  <quote>Francesco Sabatini è un linguista, lessicografo e presidente onorario dell'Accademia della Crusca</quote>
+               </cit>
+            </sense>
+            <sense n = "s2">
+               <def>colui che contribuisce alla compilazione di un dizionario</def>
+               <cit type= "example">
+                  <quote>Tullio de Mauro è stato un lessicografo</quote>
+               </cit>
+               <xr type= "syn">
+                  <ref>dizionarista</ref>
+               </xr>
+               <xr type= "syn">
+                  <ref>vocabolarista</ref>
+               </xr>  
+            </sense>
+            <re type = "derived">
+               <form>
+                  <orth>lessicografia</orth>
+               </form>
+            </re>
+         </entry>
+         <entry>
+            <form type = "lemma">
+               <orth>fregare</orth>
+               <pron notation = "ipa">freˈgare</pron>
+               <syll>fre|gà|re</syll>
+            </form>
+            <gramGrp>
+               <pos>vtr.</pos>
+            </gramGrp>
+            <etym>
+               dal <lang>latino</lang> <mentioned>frĭcare</mentioned>
+            </etym>
+            <sense n= "s1">
+               <def>fare dei freghi</def>
+               <cit type = "example"> 
+                  <quote>Avendo preso male le misure, fregò la portiera dell'automobile contra la colonna dell'ingresso del garage</quote>
+               </cit>
+            </sense>
+            <sense n = "s2">
+               <usg type= "reg">popolare</usg>
+               <def>tirare un bidone</def>
+               <cit type = "example">
+                  <quote>Ti ha fregato!</quote>
+               </cit>
+               <cit type = "example">
+                  <quote>Il baro lo fregò di brutto calando un poker d'assi alla fine dell'ultima mano</quote>
+               </cit>
+            </sense>
+            <sense n = "s3">
+               <def>rubare</def>
+               <cit type = "example">
+                 <quote>Mi sono distratta un attimo e mi hanno fregato la borsa da sotto il naso!</quote>
+               </cit>
+            </sense>
+            <sense n = "s4">
+               <def>interessare, importare</def>
+               <cit type = "example">
+                  <quote>Non me ne frega niente </quote>
+               </cit>
+            </sense>
+            <sense n = "s5">
+               <note>per estensione</note>
+               <def>imbrogliare o ingannare, quindi in modo ipocrita</def>
+               <cit type = "example">
+                  <quote>oh, tu non mi freghi</quote>
+               </cit>
+            </sense>
+         </entry>
+      </body>
+   </text>
+</TEI>

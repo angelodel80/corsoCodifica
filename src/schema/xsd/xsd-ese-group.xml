@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+
+	<xsd:group name="fileDesc">
+		<xsd:sequence>
+			<xsd:element name="titleStmt"/> 
+			<xsd:element name="publicationStmt"/> 
+			<xsd:element name="sourceDesc" /> 
+		</xsd:sequence> 
+	</xsd:group>
+
+	<xsd:element name="teiHeader">
+		<xsd:complexType>
+			<xsd:sequence>
+				<xsd:group ref="fileDesc"/>
+			</xsd:sequence> 
+		</xsd:complexType> 
+	</xsd:element>
+
+</xsd:schema>
+
