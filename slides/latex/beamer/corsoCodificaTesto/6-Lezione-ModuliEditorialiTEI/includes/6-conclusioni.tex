@@ -12,9 +12,31 @@
     
 \end{frame}
 
+\begin{frame}
+    \frametitle{Introduzione}
+    \addtocounter{nframe}{1}
+    
+    %\begin{center}
+    %    \includegraphics[width=.2\textwidth]{../imgs/tei-r.pdf}
+    %\end{center}
+
+    \begin{block}{Elementi editoriali}
+        \emph{in parte già disponibili nei moduli TEI di base}
+        
+        \textit{Per la critica testuale indispensabili i moduli}
+        \begin{itemize}
+            \item \emph{msdescription} descrizione del manoscritto 
+            \item \emph{trans} trascrizione di fonti primarie 
+            \item \emph{textcrit} apparato critico
+            \item \emph{gaiji} caratteri non standard
+        \end{itemize}
+    \end{block}
+    
+\end{frame}
+
 %%
 le nuove caratteristiche degli schemi TEI P5 offrono un’ottima base per il collegamento testo-immagine
-a causa della relativa complessità è preferibile usare strumenti software per facilitare la creazione di un facsimile digitale
+a causa della relativa complessità è preferibile usare strumenti software per facilitare la creazione di un facsimile digitale
 al momento l’IMT costituisce una buona soluzione quello che manca:
 uno strumento/funzione per collegare le immagini annotate al testo della trascrizione
 software di visualizzazione
@@ -47,16 +69,16 @@ http://www.tei-c.org/release/doc/tei-p5-doc/en/html/TC.html)
 %%
 Elementi di intervento editoriale <damage> marca la parte di testo danneggiata
 non proprio “intervento editoriale” ma spesso usato contestualmente con <gap/>, <unclear> e <supplied>
-<supplied> testo inserito dal curatore perché l’originale è mancante o illeggibile
+<supplied> testo inserito dal curatore perché l’originale è mancante o illeggibile
 <l n="1">Nel mezzo del cammin di nostra vita</l> <l n="2"><damage agent="fire" extent="1line"><unclear>Mi ritrovai</unclear> <supplied reason="illegible" resp="rrdt">per una selva oscura,</supplied></damage></l>
-<l n="3">Ché la diritta via era smarrita</l>
+<l n="3">Ché la diritta via era smarrita</l>
 
 %%
 Elementi di intervento editoriale
 <subst> raggruppa una cancellazione e un’aggiunta scribale per rendere evidente che si tratta di una sostituzione
 stessa semantica funzione di <choice>
 <l n="1">Nel mezzo del cammin di nostra vita</l> <l n="2">Mi ritrovai <subst>
-￼￼  <del>pir</del>
+<del>pir</del>
 <add>per</add>
 </subst>una selva oscura,</l>
-<l n="3">Ché la diritta via era smarrita</l>
+<l n="3">Ché la diritta via era smarrita</l>

@@ -12,182 +12,767 @@
     
 \end{frame}
 
-%%
-<add> una o più parole aggiunte nel testo
-questa parola è <add place="supralinear">stata</add> aggiunta in un secondo momento
-<del> una o più parole cancellate nel testo
-questa invece era <del rend="overstrike">era</del>
- di troppo e l’ho cancellata
-<gap/> parte di testo omessa, mancante o illeggibile
-questa <gap reason="illegible" extent="6" unit="chars"/> è illeggibile (forse “parola”?)
-
-%%
-<damage> testo danneggiato nel documento originale
-   
-per qualche goccia d’acqua questa parola si è
-   <damage agent="water">scolorita</damage> molto
-
-   <unclear> parte di testo interpretabile con difficoltà
-<unclear reason="faded">questa</unclear> si legge
-   ancora ma con difficoltà
-
-   <supplied> testo inserito dal curatore perché illeggibile nell’originale o assente (fa parte del modulo transcr)
-qui <supplied>mancava qualcosa</supplied> nel testo
-
-è possibile combinare questi elementi (compreso <gap/>)
-
-%%
-Dal Vercelli Book: manoscritto in inglese antico, dialetto tardo sassone occidentale, X secolo ca.
-   %\begin{center}
-    %    \includegraphics[width=.9\textwidth]{/imgs/vercelli.png}
+\begin{frame}
+    \frametitle{Introduzione}
+    \addtocounter{nframe}{1}
+    
+    %\begin{center}
+    %    \includegraphics[width=.2\textwidth]{../imgs/tei-r.pdf}
     %\end{center}
 
-%%
-- può succedere che una parola non sia semplicemente cancellata, ma che sia anche sostituita da un altro termine
-- in questo caso è possibile usare l’elemento <subst> per collegare la sequenza cancellazione → nuovo testo
+    \begin{block}{Elementi editoriali}
+        \emph{in parte già disponibili nei moduli TEI di base}
+        
+        \textit{Per la critica testuale indispensabili i moduli}
+        \begin{itemize}
+            \item \emph{msdescription} descrizione del manoscritto 
+            \item \emph{trans} trascrizione di fonti primarie 
+            \item \emph{textcrit} apparato critico
+            \item \emph{gaiji} caratteri non standard
+        \end{itemize}
+    \end{block}
+    
+\end{frame}
+
 
 %%
-questa parola è stata <subst>
-<del rend="overstrike">scritta</del>
-<add place="supralinear">aggiunta</add>
-<subst> in un secondo momento
+\begin{frame}
+    \frametitle{Elementi interventi editoriali}
+    \addtocounter{nframe}{1}
+    
+    %\begin{center}
+    %    \includegraphics[width=.2\textwidth]{../imgs/tei-r.pdf}
+    %\end{center}
 
-anche a livello della singola lettera
-<subst><del rend="overtype">t<del><add>T</add></subst>i scrivo una
-   mail domani mattina
+    \begin{block}{Testo aggiunto, cancellato, lacunoso}
+        \begin{itemize}
+            \item \texttt{<add>} \textbf{una o più parole aggiunte nel testo}
+            \item[] \texttt{questa parola è <add place="supralinear" >stata</add> aggiunta in un secondo momento}
+        \end{itemize}
+        
+    \end{block}
+    
+\end{frame}
 
-   <subst> fa parte del modulo transcr, per ulteriori informazioni (@seq) v. http://www.tei- c.org/release/doc/tei-p5-doc/en/html/PH.html\#PHSU
+\begin{frame}
+    \frametitle{Elementi interventi editoriali}
+    \addtocounter{nframe}{1}
+    
+    %\begin{center}
+    %    \includegraphics[width=.2\textwidth]{../imgs/tei-r.pdf}
+    %\end{center}
+
+    \begin{block}{Testo aggiunto, cancellato, lacunoso}
+        \begin{itemize}
+            \item \texttt{<del>} \textbf{una o più parole cancellate nel testo}
+            \item[] \texttt{questa invece era <del rend="overstrike" >era</del> di troppo e l’ho cancellata}
+        \end{itemize}
+        
+    \end{block}
+    
+\end{frame}
+
+
+\begin{frame}
+    \frametitle{Elementi interventi editoriali}
+    \addtocounter{nframe}{1}
+    
+    %\begin{center}
+    %    \includegraphics[width=.2\textwidth]{../imgs/tei-r.pdf}
+    %\end{center}
+
+    \begin{block}{Testo aggiunto, cancellato, lacunoso}
+        \begin{itemize}
+            \item \texttt{<gap />} \textbf{parte di testo omessa, mancante o illeggibile}
+            \item[] \texttt{questa <gap reason="illegible" extent="6" unit="chars"/> è illeggibile (forse "parola"?)}
+        \end{itemize}
+        
+    \end{block}
+    
+\end{frame}
+
+
 
 %%
-Attributi e valori consigliati
+\begin{frame}
+    \frametitle{Elementi interventi editoriali}
+    \addtocounter{nframe}{1}
+    
+    %\begin{center}
+    %    \includegraphics[width=.2\textwidth]{../imgs/tei-r.pdf}
+    %\end{center}
 
-- <add> 
-place inline, supralinear, margin, etc.
-hand author, scribe1, scribe2
+    \begin{block}{Testo danneggiato, poco chiaro, inserito dal curatore}
+        \begin{itemize}
+            \item \texttt{<damage>} \textbf{testo danneggiato nel documento originale}
+            \item[] \texttt{per qualche goccia d’acqua questa parola si è <damage agent="water" >scolorita</damage> molto}
+        \end{itemize}
+        
+    \end{block}
+    
+\end{frame}
 
-- <del> 
-rend overstrike, subpunct, overtype, dotted
-hand author, scribe1, scribe2
+\begin{frame}
+    \frametitle{Elementi interventi editoriali}
+    \addtocounter{nframe}{1}
+    
+    %\begin{center}
+    %    \includegraphics[width=.2\textwidth]{../imgs/tei-r.pdf}
+    %\end{center}
 
-- <gap>
-reason illegible, cancelled, irrelevant, missing, omissis, censored 
-hand editor
-agent water, smoke, hole, missing page
-extent chars, words, cm
+    \begin{block}{Testo danneggiato, poco chiaro, inserito dal curatore}
+        \begin{itemize}
+            \item \texttt{<unclear>} \textbf{parte di testo interpretabile con difficoltà}
+            \item[] \texttt{<unclear reason="faded" >questa</unclear> si legge
+            ancora ma con difficoltà}
+        \end{itemize}
+        
+    \end{block}
+    
+\end{frame}
 
-- <unclear> 
-reason parterased, ink blot 
-hand author, scribe1, scribe2
-agent water, smoke, ink
+\begin{frame}
+    \frametitle{Elementi interventi editoriali}
+    \addtocounter{nframe}{1}
+    
+    %\begin{center}
+    %    \includegraphics[width=.2\textwidth]{../imgs/tei-r.pdf}
+    %\end{center}
+
+    \begin{block}{Testo danneggiato, poco chiaro, inserito dal curatore}
+        \begin{itemize}
+            \item \texttt{<supplied>} \textbf{testo inserito dal curatore perché illeggibile nell’originale o assente}
+            \item[] \texttt{qui <supplied>mancava qualcosa</supplied> nel testo}
+        \end{itemize}
+        
+    \end{block}
+
+    \textit{\texttt{<supplied>}  (fa parte del modulo transcr)}
+
+\end{frame}
+
+%è possibile combinare questi elementi (compreso <gap/>)
 
 %%
-Correzioni e normalizzazioni
+\begin{frame}
+    \frametitle{Elementi interventi editoriali}
+    \addtocounter{nframe}{1}
+    
+    %\begin{center}
+    %    \includegraphics[width=.2\textwidth]{../imgs/tei-r.pdf}
+    %\end{center}
 
- <sic> parola o frase ritenuta errata, ma riportata “com’è”
-questa parola è <sic>statta</sic> sbagliata
+    \begin{block}{Dal Vercelli Book}
+         \begin{center}
+            \includegraphics[width=.9\textwidth]{imgs/vercelli.png}
+        \end{center}
+    \end{block}
+    \textit{manoscritto in inglese antico, dialetto tardo sassone occidentale, X secolo ca.}
 
-<corr> correzione di una parola o frase errata
-questa parola è <corr>stata</corr> corretta in un
- secondo momento
-
-<orig> parola o frase ritenuta “non standard” 
-Allora, mi dici <orig>’ndo</orig> vai?
-
-<reg> parola o frase normalizzata (regularised) Allora, mi dici <reg>dove</reg> vai?
+\end{frame}
+  
 
 %%
+\begin{frame}
+    \frametitle{Elementi interventi editoriali}
+    \addtocounter{nframe}{1}
+    
+    %\begin{center}
+    %    \includegraphics[width=.2\textwidth]{../imgs/tei-r.pdf}
+    %\end{center}
 
-Abbreviazioni ed espansioni 1 <abbr> parola abbreviata, brevigrafo
- chiedi al <abbr>dott.</abbr> Rossi
- in nomine Patris <abbr>7</abbr> Filii
- <abbr>7</abbr> Spiritus Sancti
+    \begin{block}{Elemento sostituzione}
+        Può succedere che una parola non sia semplicemente cancellata, ma che sia anche sostituita da un altro termine
+    \end{block}
+    \begin{block}{Elemento sostituzione}
+        In questo caso è possibile usare l’elemento <subst> per collegare la sequenza cancellazione -> nuovo testo
+    \end{block}
+    \texttt{<subst>} fa parte del modulo transcr, per ulteriori informazioni \texttt{(@seq)} v. \url{http://www.tei-c.org/release/doc/tei-p5-doc/en/html/PH.html\#PHSU}
+\end{frame}
 
-<expan> espansione di un’abbreviazione chiedi al <expan>dottor</expan> Rossi
- in nomine Patris <expan>et</expan> Filii
- <expan>et</expan> Spiritus Sancti
+
+%%
+\begin{frame}
+    \frametitle{Elementi interventi editoriali}
+    \addtocounter{nframe}{1}
+    
+    %\begin{center}
+    %    \includegraphics[width=.2\textwidth]{../imgs/tei-r.pdf}
+    %\end{center}
+
+    \begin{block}{Elemento sostituzione: parola}
+        \texttt{questa parola è stata <subst> <del rend="overstrike" >scritta</del> <add place="supralinear" >aggiunta</add> </subst> in un secondo momento}
+    \end{block}
+
+    \begin{block}{Elemento sostituzione}
+        \texttt{<subst><del rend="overtype" >t<del><add>T</add></subst>i scrivo una     mail domani mattina}
+    \end{block}
+   
+\end{frame}
+
+
+
+
+%%
+\begin{frame}
+    \frametitle{Elementi interventi editoriali}
+    \addtocounter{nframe}{1}
+    
+    %\begin{center}
+    %    \includegraphics[width=.2\textwidth]{../imgs/tei-r.pdf}
+    %\end{center}
+
+    \begin{block}{Attributi e valori consigliati}
+        \begin{itemize}
+            \item \texttt{<add>} \textbf{place} \textit{inline, supralinear, margin} \textbf{hand} \textit{author, scribe1, scribe2}
+            \item \texttt{<del>} \textbf{rend} \textit{overstrike, subpunct, overtype, dotted} \textbf{hand} \textit{author, scribe1, scribe2}trascrizione di fonti primarie 
+            \item \texttt{<gap>} \textbf{reason} \textit{illegible, cancelled, irrelevant, missing, omissis, censored} \textbf{hand} \textit{editor} \textbf{agent} \textit{water, smoke, hole, missing page} \textbf{extent} \textit{chars, words, cm}
+            \item \texttt{<unclear>} \textbf{reason} \textit{parterased, ink blot} \textbf{hand} \textit{author, scribe1, scribe2} \textbf{agent} \textit{water, smoke, ink}
+        \end{itemize}
+    \end{block}
+    
+\end{frame}
+
+%%
+\begin{frame}
+    \frametitle{Elementi interventi editoriali}
+    \addtocounter{nframe}{1}
+    
+    %\begin{center}
+    %    \includegraphics[width=.2\textwidth]{../imgs/tei-r.pdf}
+    %\end{center}
+
+    \begin{block}{Correzioni e normalizzazioni}
+        \begin{itemize}
+            \item \texttt{<sic>} \textbf{parola o frase ritenuta errata, ma riportata così come appare scritta}
+            \item[] \texttt{questa parola è <sic>statta</sic> sbagliata}
+        \end{itemize}
+        
+    \end{block}
+    
+\end{frame}
+
+\begin{frame}
+    \frametitle{Elementi interventi editoriali}
+    \addtocounter{nframe}{1}
+    
+    %\begin{center}
+    %    \includegraphics[width=.2\textwidth]{../imgs/tei-r.pdf}
+    %\end{center}
+
+    \begin{block}{Correzioni e normalizzazioni}
+        \begin{itemize}
+            \item \texttt{<corr>} \textbf{correzione di una parola o frase errata}
+            \item[] \texttt{questa parola è <corr>stata</corr> corretta in un secondo momento}
+        \end{itemize}
+        
+    \end{block}
+    
+\end{frame}
+
+\begin{frame}
+    \frametitle{Elementi interventi editoriali}
+    \addtocounter{nframe}{1}
+    
+    %\begin{center}
+    %    \includegraphics[width=.2\textwidth]{../imgs/tei-r.pdf}
+    %\end{center}
+
+    \begin{block}{Correzioni e normalizzazioni}
+        \begin{itemize}
+            \item \texttt{<orig>} \textbf{parola o frase ritenuta non standard}
+            \item[] \texttt{Allora, mi dici <orig>'ndo</orig> vai?}
+        \end{itemize}
+        
+    \end{block}
+    
+\end{frame}
+
+\begin{frame}
+    \frametitle{Elementi interventi editoriali}
+    \addtocounter{nframe}{1}
+    
+    %\begin{center}
+    %    \includegraphics[width=.2\textwidth]{../imgs/tei-r.pdf}
+    %\end{center}
+
+    \begin{block}{Correzioni e normalizzazioni}
+        \begin{itemize}
+            \item \texttt{<reg>} \textbf{parola o frase normalizzata (regularised)}
+            \item[] \texttt{Allora, mi dici <reg>dove</reg> vai?}
+        \end{itemize}
+        
+    \end{block}
+    
+\end{frame}
+
+%%
+\begin{frame}
+    \frametitle{Elementi interventi editoriali}
+    \addtocounter{nframe}{1}
+    
+    %\begin{center}
+    %    \includegraphics[width=.2\textwidth]{../imgs/tei-r.pdf}
+    %\end{center}
+
+    \begin{block}{Abbreviazioni ed espansioni}
+        \begin{itemize}
+            \item \texttt{<abbr>} \textbf{parola abbreviata, brevigrafo}
+            \item[] \texttt{chiedi al <abbr>dott.</abbr> Rossi}
+            \item[] \texttt{in nomine Patris <expan>et</expan> Filii
+            <expan>et</expan> Spiritus Sancti}
+        \end{itemize}
+        
+    \end{block}
+    
+\end{frame}
+
+\begin{frame}
+    \frametitle{Elementi interventi editoriali}
+    \addtocounter{nframe}{1}
+    
+    %\begin{center}
+    %    \includegraphics[width=.2\textwidth]{../imgs/tei-r.pdf}
+    %\end{center}
+
+    \begin{block}{Abbreviazioni ed espansioni}
+        \begin{itemize}
+            \item \texttt{<expan>} \textbf{espansione di un’abbreviazione}
+            \item[] \texttt{chiedi al <expan>dottor</expan> Rossi}
+            \item[] \texttt{in nomine Patris <expan>et</expan> Filii <expan>et</expan> Spiritus Sancti}
+        \end{itemize}
+        
+    \end{block}
+    
+\end{frame}
 
  %%
+
+ \begin{frame}
+    \frametitle{Elementi interventi editoriali}
+    \addtocounter{nframe}{1}
+    
+    %\begin{center}
+    %    \includegraphics[width=.2\textwidth]{../imgs/tei-r.pdf}
+    %\end{center}
+
+    \begin{block}{Abbreviazioni ed espansioni}
+        \begin{itemize}
+            \item \texttt{<abbr>} \textbf{usare l’attributo type per specificare il tipo}
+            \item[] \texttt{chiedi al <abbr type="titolo" >dott.</abbr> Rossi}
+            \item[] \texttt{in nomine Patris <abbr type="brevigrafo" >7</abbr> Filii <abbr type="brevigrafo" >7</abbr> Spiritus}
+        \end{itemize}
+        
+    \end{block}
+    
+\end{frame}
+
+\begin{frame}
+    \frametitle{Elementi interventi editoriali}
+    \addtocounter{nframe}{1}
+    
+    %\begin{center}
+    %    \includegraphics[width=.2\textwidth]{../imgs/tei-r.pdf}
+    %\end{center}
+    \textit{Disponibili ulteriori elementi aggiungendo il modulo transcr:}
+    \begin{block}{Abbreviazioni ed espansioni}
+        \begin{itemize}
+            \item \texttt{<am>} \textbf{lettere o segni di abbreviazione}
+            \item \texttt{<ex>} \textbf{lettere aggiunte espandendo un’abbreviazione}
+            \item[] \texttt{<abbr>sanct<am>u~</am></abbr>}
+            \item[] \texttt{ <expan>sanctu<ex>m</ex></expan>}
+        \end{itemize}
+        
+    \end{block}
+    
+\end{frame}
  
-<abbr> usare l’attributo type per specificare il tipo chiedi al <abbr type="titolo">dott.</abbr> Rossi
- in nomine Patris <abbr type="brevigrafo">7</abbr> Filii
- <abbr type="brevigrafo">7</abbr> Spiritus
 
  %%
-disponibili ulteriori elementi aggiungendo il modulo transcr:
-<am> lettere o segni di abbreviazione
-<ex> lettere aggiunte espandendo un’abbreviazione
- <abbr>sanct<am>u~</am></abbr>
- <expan>sanctu<ex>m</ex></expan>
+ \begin{frame}
+    \frametitle{Elementi interventi editoriali}
+    \addtocounter{nframe}{1}
+    
+    %\begin{center}
+    %    \includegraphics[width=.2\textwidth]{../imgs/tei-r.pdf}
+    %\end{center}
 
- %%
- alcuni elementi di intervento editoriale sono perfettamente speculari:
-<sic> - <corr> <orig> - <reg> <abbr> - <expan>
+    \textit{Alcuni elementi di intervento editoriale sono perfettamente speculari}
+    \begin{block}{Elementi speculari}
+        \begin{itemize}
+            \item \texttt{<sic> - <corr>} 
+            \item \texttt{<orig> - <reg>}
+            \item \texttt{<abbr> - <expan>}
+        \end{itemize}
+        
+    \end{block}
+    
+\end{frame}
+
+%%
+\begin{frame}
+    \frametitle{Elementi interventi editoriali}
+    \addtocounter{nframe}{1}
+    
+    %\begin{center}
+    %    \includegraphics[width=.2\textwidth]{../imgs/tei-r.pdf}
+    %\end{center}
+
+    \begin{block}{Elemento choice}
+        Nella \textit{TEI P5} è stato introdotto un nuovo elemento \texttt{<choice>} che comprende ogni coppia
+    \end{block}
+    \begin{block}{Elemento choice}
+        La relazione fra le coppie è importante per essere sicuri che ciascun elemento sia collegato all’altro
+    \end{block}
+\end{frame}
+
+%%
+\begin{frame}
+    \frametitle{Elementi interventi editoriali}
+    \addtocounter{nframe}{1}
+    
+    %\begin{center}
+    %    \includegraphics[width=.2\textwidth]{../imgs/tei-r.pdf}
+    %\end{center}
+    \textit{Disponibili ulteriori elementi aggiungendo il modulo transcr:}
+    \begin{block}{Coppie in choice}
+        \begin{itemize}
+            \item \texttt{<sic> - <corr>} 
+            \item[] \texttt{questa parola è <choice> <sic>statta</sic> <corr>stata</corr> </choice> scritta sbagliata}
+        \end{itemize}
+        
+    \end{block}
+    
+\end{frame}
+
+\begin{frame}
+    \frametitle{Elementi interventi editoriali}
+    \addtocounter{nframe}{1}
+    
+    %\begin{center}
+    %    \includegraphics[width=.2\textwidth]{../imgs/tei-r.pdf}
+    %\end{center}
+    \textit{Disponibili ulteriori elementi aggiungendo il modulo transcr:}
+    \begin{block}{Coppie in choice}
+        \begin{itemize}
+            \item \texttt{<orig> - <reg>} 
+            \item[] \texttt{Allora, mi dici <choice><orig>’ndo</orig> <reg>dove</reg></choice> vai?}
+        \end{itemize}
+        
+    \end{block}
+    
+\end{frame}
+
+\begin{frame}
+    \frametitle{Elementi interventi editoriali}
+    \addtocounter{nframe}{1}
+    
+    %\begin{center}
+    %    \includegraphics[width=.2\textwidth]{../imgs/tei-r.pdf}
+    %\end{center}
+    \textit{Disponibili ulteriori elementi aggiungendo il modulo transcr:}
+    \begin{block}{Coppie in choice}
+        \begin{itemize}
+            \item \texttt{<abbr> - <expan>} 
+            \item[] \texttt{chiedi al <choice><abbr>dott.</abbr> <expan>dott<ex>or</ex></expan></choice> Rossi}
+        \end{itemize}
+        
+    \end{block}
+    
+\end{frame}
+
+%%
+\begin{frame}
+    \frametitle{Elementi interventi editoriali}
+    \addtocounter{nframe}{1}
+    
+    %\begin{center}
+    %    \includegraphics[width=.2\textwidth]{../imgs/tei-r.pdf}
+    %\end{center}
+
+    \begin{block}{Attributi responsabilità}
+        Per \texttt{<add> e <del>} abbiamo l’attributo \texttt{@hand} per specificare, se necessario, \textbf{l’autore} della \textbf{modifica} all’originale
+    \end{block}
+    \begin{block}{Attributi responsabilità}
+        Per qualche intervento editoriale, invece, potrebbe essere importante specificare il \textbf{responsabile} (in particolare per l’elemento \texttt{<supplied>}!) e il grado di \textbf{certezza}
+    \end{block}
+    \textbf{Per fare questo si usano gli attributi @resp e @cert}
+\end{frame}
+
 
 %%
 
-la relazione fra le coppie è importante per essere sicuri che ciascun elemento sia collegato all’altro
+\begin{frame}
+    \frametitle{Elementi interventi editoriali}
+    \addtocounter{nframe}{1}
+    
+    %\begin{center}
+    %    \includegraphics[width=.2\textwidth]{../imgs/tei-r.pdf}
+    %\end{center}
 
-Nella TEI P5 è stato introdotto un nuovo elemento <choice> che comprende ogni coppia
+    \begin{block}{Attributi responsabilità}
+        \texttt{questa parola è <choice> <sic>statta</sic> <corr resp="rrdt" >stata</corr> </choice> scritta per errore}
+    \end{block}
+    \textit{Il valore di @resp può rimandare a un <respStmt>}
+    \texttt{<corr resp="\#rrdt" >stata</corr>}
+\end{frame}
 
-%%
-- <sic> - <corr>
-questa parola è <choice>
-
-<sic>statta</sic>
-<corr>stata</corr> </choice> scritta sbagliata
-
-- <orig> - <reg>
-Allora, mi dici <choice><orig>’ndo</orig> <reg>dove</reg></choice> vai?
-
-- <abbr> - <expan>
-chiedi al <choice><abbr>dott.</abbr> <expan>dott<ex>or</ex></expan></choice> Rossi
-
-%%
-Attributi @resp e @cert
-- per <add> e <del> abbiamo l’attributo @hand per specificare, se necessario, l’autore della modifica all’originale
-- per qualche intervento editoriale, invece, potrebbe essere importante specificare il responsabile (in particolare per l’elemento <supplied>!) e il grado di certezza
-- per fare questo si usano gli attributi @resp e @cert
-
-%%
-questa parola è <choice>
-<sic>statta</sic>
-<corr resp="rrdt">stata</corr> </choice> scritta per errore
-- il valore di @resp può rimandare a un <respStmt>: <corr resp="\#rrdt">stata</corr>
 
 %%
 
-Altri elementi utili 1
+\begin{frame}
+    \frametitle{Elementi interventi editoriali}
+    \addtocounter{nframe}{1}
+    
+    %\begin{center}
+    %    \includegraphics[width=.2\textwidth]{../imgs/tei-r.pdf}
+    %\end{center}
+    \begin{block}{Altri elementi utili}
+        \begin{itemize}
+            \item \texttt{<gb/>} \textbf{gathering begins}
+            \item[] \textit{indica l’inizio di un nuovo fascicolo nella trascrizione di un manoscritto}
+        \end{itemize}
+        
+    \end{block}
+    
+\end{frame}
 
-<gb/> gathering begins: indica l’inizio di un nuovo fascicolo nella trascrizione di un manoscritto
+\begin{frame}
+    \frametitle{Elementi interventi editoriali}
+    \addtocounter{nframe}{1}
+    
+    %\begin{center}
+    %    \includegraphics[width=.2\textwidth]{../imgs/tei-r.pdf}
+    %\end{center}
+    \begin{block}{Altri elementi utili}
+        \begin{itemize}
+            \item \texttt{<space>} \textbf{modulo linking}
+            \item[] \textit{usato per marcare la presenza di spazio significativo (ad esempio spazio lasciato dallo scriba per inserire una iniziale miniata)}
+            \item[] normalmente usato come elemento vuoto
+        \end{itemize}
+        
+    \end{block}
+    
+\end{frame}
 
-<space> usato per marcare la presenza di spazio significativo (ad esempio spazio lasciato dallo scriba per inserire una iniziale miniata)
-normalmente usato come elemento vuoto modulo linking
+\begin{frame}
+    \frametitle{Elementi interventi editoriali}
+    \addtocounter{nframe}{1}
+    
+    %\begin{center}
+    %    \includegraphics[width=.2\textwidth]{../imgs/tei-r.pdf}
+    %\end{center}
+    \begin{block}{Altri elementi utili}
+        \begin{itemize}
+            \item \texttt{<pc>} \textbf{modulo analysis}
+            \item[] \textit{contiene uno o più caratteri che costituiscono una forma di punteggiatura nel testo}
+            \item[] punctuation character(s)
+        \end{itemize}
+        
+    \end{block}
+    
+\end{frame}
 
-<pc> punctuation character(s): contiene uno o più caratteri che costituiscono una forma di punteggiatura nel testo
 
-modulo analysis
+%%
+\begin{frame}
+    \frametitle{Elementi interventi editoriali}
+    \addtocounter{nframe}{1}
+    
+    %\begin{center}
+    %    \includegraphics[width=.2\textwidth]{../imgs/tei-r.pdf}
+    %\end{center}
+    \begin{block}{Altri elementi utili}
+        \begin{itemize}
+            \item \texttt{<ab>} \textbf{anonymous block}
+            \item[] \textit{contenitore di testo simile a un paragrafo ma senza il valore semantico di quest’ultimo}
+            \item[] modulo linking
+        \end{itemize}
+        
+    \end{block}
+    
+\end{frame} 
+
+\begin{frame}
+    \frametitle{Elementi interventi editoriali}
+    \addtocounter{nframe}{1}
+    
+    %\begin{center}
+    %    \includegraphics[width=.2\textwidth]{../imgs/tei-r.pdf}
+    %\end{center}
+    \begin{block}{Altri elementi utili}
+        \begin{itemize}
+            \item \texttt{<seg>} \textbf{arbitrary segment}
+            \item[] \textit{usato per marcare qualunque porzione di testo, usare @type per specificare il contenuto semantico}
+            \item[] modulo linking
+        \end{itemize}
+        
+    \end{block}
+    
+\end{frame} 
+
+\begin{frame}
+    \frametitle{Elementi interventi editoriali}
+    \addtocounter{nframe}{1}
+    
+    %\begin{center}
+    %    \includegraphics[width=.2\textwidth]{../imgs/tei-r.pdf}
+    %\end{center}
+    \begin{block}{Altri elementi utili}
+        \begin{itemize}
+            \item \texttt{<w>} \textbf{word}
+            \item[] \textit{marca una parola a livello grammaticale, @lemma per indicare il lemma e @lemmaref per stabilire un link con un dizionario online}
+            \item[] modulo analysis
+        \end{itemize}
+        
+    \end{block}
+    
+\end{frame}
+
+\begin{frame}
+    \frametitle{Elementi interventi editoriali}
+    \addtocounter{nframe}{1}
+    
+    %\begin{center}
+    %    \includegraphics[width=.2\textwidth]{../imgs/tei-r.pdf}
+    %\end{center}
+    \begin{block}{Altri elementi utili}
+        \begin{itemize}
+            \item \texttt{<c>} \textbf{character}
+            \item[] \textit{marca un singolo carattere nel testo}
+            \item[] modulo analysis
+        \end{itemize}
+        
+    \end{block}
+    
+\end{frame} 
+
 
 %% 
-- <ab> anonymous block: contenitore di testo simile a un paragrafo ma senza il valore semantico di quest’ultimo
-– modulo linking
-- <seg> arbitrary segment: usato per marcare qualunque porzione di testo,
-usare @type per specificare il contenuto semantico – modulo linking
-- <w> word: marca una parola a livello grammaticale, @lemma per indicare il lemma e @lemmaref per stabilire un link con un dizionario online
-– modulo analysis
-- <c> character: marca un singolo carattere nel testo
-– modulo analysis
+\begin{frame}
+    \frametitle{Elementi interventi editoriali}
+    \addtocounter{nframe}{1}
+    
+   
+    \begin{block}{Aggiunte scribali}
+        \begin{center}
+            \includegraphics[width=.9\textwidth]{imgs/Aggiunte-1.png}
+        \end{center}
 
-%% 
-Esempio
+    \end{block}
+    
+\end{frame} 
+
+\begin{frame}
+    \frametitle{Elementi interventi editoriali}
+    \addtocounter{nframe}{1}
+    
+   
+    \begin{block}{Aggiunte scribali}
+        \begin{center}
+            \includegraphics[width=.9\textwidth]{imgs/Aggiunte-2.png}
+        \end{center}
+
+    \end{block}
+    
+\end{frame} 
 
 %%
-Esempio
+\begin{frame}
+    \frametitle{Elementi interventi editoriali}
+    \addtocounter{nframe}{1}
+    
+    \begin{block}{Cancellature}
+        \begin{center}
+            \includegraphics[width=.9\textwidth]{imgs/Cancellature.png}
+        \end{center}
+    \end{block}
+   
+    \begin{block}{Aggiunte scribali: Dal Vercelli Book}
+        \texttt{<del rend="erasure" >ff</del>fore wæron
+        <del rend="dot" ><g ref="\#aeligddot"/></del>}
+    \end{block}
+    
+\end{frame} 
 
-Dal Vercelli Book (inglese antico, dialetto tardo sassone occidentale, X secolo ca.
-<del rend="erasure">ff</del>fore wæron
-<del rend="dot"><g ref="\#aeligddot"/></del>
+
+\begin{frame}
+    \frametitle{Elementi interventi editoriali}
+    \addtocounter{nframe}{1}
+    
+   
+    \begin{block}{Abbreviazioni e Espansioni}
+        \begin{center}
+            \includegraphics[width=.9\textwidth]{imgs/Abbreviazioni-1.png}
+        \end{center}
+
+    \end{block}
+    
+\end{frame}
+
+\begin{frame}
+    \frametitle{Elementi interventi editoriali}
+    \addtocounter{nframe}{1}
+    
+   
+    \begin{block}{Abbreviazioni e Espansioni}
+        \begin{center}
+            \includegraphics[width=.9\textwidth]{imgs/Aggiunta-cancellatura-regolarizzazione.png}
+        \end{center}
+
+    \end{block}
+    
+\end{frame}
+
+\begin{frame}
+    \frametitle{Elementi interventi editoriali}
+    \addtocounter{nframe}{1}
+    
+   
+    \begin{block}{Errori Scribali}
+        \begin{center}
+            \includegraphics[width=.9\textwidth]{imgs/Correzioni.png}
+        \end{center}
+
+    \end{block}
+    
+\end{frame}
+
+\begin{frame}
+    \frametitle{Elementi interventi editoriali}
+    \addtocounter{nframe}{1}
+    
+   
+    \begin{block}{Decorazioni}
+        \begin{center}
+            \includegraphics[width=.9\textwidth]{imgs/Decorazioni.png}
+        \end{center}
+    \end{block}
+    
+\end{frame}
+
+\begin{frame}
+    \frametitle{Elementi interventi editoriali}
+    \addtocounter{nframe}{1}
+    
+   
+    \begin{block}{Marcatura singole parole}
+        \begin{center}
+            \includegraphics[width=.9\textwidth]{imgs/MarcaturaParole.png}
+        \end{center}
+    \end{block}
+    
+\end{frame}
 
 %% 
-Esempio choice
-
-%% esempi presi con screenshot
+\begin{frame}
+    \frametitle{Elementi interventi editoriali}
+    \addtocounter{nframe}{1}
+    
+   
+    \begin{block}{Esercizio}
+        \begin{center}
+            Trascrivere e codificare un frammento di lettera di Bellini
+        \end{center}
+    \end{block}
+\end{frame}

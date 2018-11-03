@@ -12,6 +12,28 @@
     
 \end{frame}
 
+\begin{frame}
+  \frametitle{Introduzione}
+  \addtocounter{nframe}{1}
+  
+  %\begin{center}
+  %    \includegraphics[width=.2\textwidth]{../imgs/tei-r.pdf}
+  %\end{center}
+
+  \begin{block}{Elementi editoriali}
+      \emph{in parte già disponibili nei moduli TEI di base}
+      
+      \textit{Per la critica testuale indispensabili i moduli}
+      \begin{itemize}
+          \item \emph{msdescription} descrizione del manoscritto 
+          \item \emph{trans} trascrizione di fonti primarie 
+          \item \emph{textcrit} apparato critico
+          \item \emph{gaiji} caratteri non standard
+      \end{itemize}
+  \end{block}
+  
+\end{frame}
+
 %%
 Tipi di edizione digitale
 
@@ -28,14 +50,15 @@ il testo dell’edizione (diplomatica, critica) con le immagini del
 manoscritto
 
 %%
-trascrizione collegata alle immagini del manoscritto serie di funzionalità “standard”:
+trascrizione collegata alle immagini del manoscritto
+serie di funzionalità "standard":
 immagini in formati e/o risoluzioni diverse 
 lente d’ingrandimento
 evidenziazione dettagli (← restauro digitale) 
 motore di ricerca testuale
 introduzione paleografica/filologica, 
 commento al testo, bibliografia, etc.
-￼￼￼￼￼￼￼(Electronic Beowulf, Vita Nova)
+(Electronic Beowulf, Vita Nova)
 
 %% 
 edizione digitale di un manoscritto
@@ -50,12 +73,12 @@ livelli di edizione
 
 e. diplomatica: trascrizione del testo di un testimone rispettando la disposizione e la grafia originale, senza nessun tipo di correzione (errori manifesti) o altri interventi editoriali (espansione abbreviazioni)
 
-e. diplomatico-interpretativa: sempre rispettando il testo originale, vengono corretti gli errori più evidenti, regolarizzate certe particolarità ortografiche (suddivisione delle parole), espanse le abbreviazioni, etc.
+e. diplomatico-interpretativa: sempre rispettando il testo originale, vengono corretti gli errori più evidenti, regolarizzate certe particolarità ortografiche (suddivisione delle parole), espanse le abbreviazioni, etc.
 
 e. critica: sulla base della collazione di tutte le trascrizioni
 dei testimoni viene stabilito lo stemma codicum e si tenta
 di ricostruire il testo originale confrontando le varianti dei
-testimoni più validi
+testimoni più validi
 
 %%
 esempi electronic Beowulf, (variorum), lettere, etc
@@ -84,32 +107,33 @@ di tipo “editoriale”
 %%
 includendo il modulo transcr nello schema di codifica TEI si rende disponibile un nuovo attributo globale:
 @facs (facsimile) points to all or part of an image which corresponds with the content of the element
-questo attributo può essere usato in qualsiasi elemento per associare il contenuto dello stesso a un’immagine:
-￼￼<p n="1" facs="para1.jpg">
-<head facs="head.jpg">
-<pb facs="page1.jpg"/>
+questo attributo può essere usato in qualsiasi elemento per associare il contenuto dello stesso a un’immagine:
+<p n="1" facs="para1.jpg" >
+<head facs="head.jpg" >
+<pb facs="page1.jpg" />
 
 %%
-oltre a @facs è necessario usare i nuovi elementi per collegare testo a immagine:
+oltre a @facs è necessario usare i nuovi elementi per collegare testo a immagine:
 <facsimile> contains a representation of some written source in the form of a set of images rather than as transcribed or encoded text.
 <surface> defines a written surface in terms of a rectangular coordinate space, optionally grouping one or more graphic representations of that space, and rectangular zones of interest within it.
 @start points to an element which encodes the starting position of the text corresponding to the inscribed part of the surface.
 <zone> defines a rectangular area contained within a surface 23 element.
 
 %%
-l’elemento <facsimile> è di tipo strutturale e si pone allo stesso livello di <text> o addirittura in alternativa a quest’ultimo
-quando il modulo transcr viene aggiunto allo schema di codifica è possibile scegliere fra:
+l’elemento <facsimile> è di tipo strutturale e si pone allo stesso livello di <text> o addirittura in alternativa a quest’ultimo
+quando il modulo transcr viene aggiunto allo schema di codifica è possibile scegliere fra:
 un <teiHeader> e un <facsimile>
 un <teiHeader> e un <text>
 un <teiHeader>, un <facsimile> e un <text>
-questo permette una grande flessibilità:
-caso più semplice: facsimile digitale con le immagini del ms
-￼￼￼￼￼￼￼facsimile digitale con trascrizione del testo facsimile digitale con trascrizione e collegamento
+questo permette una grande flessibilità:
+caso più semplice: facsimile digitale con le immagini del ms
+
+facsimile digitale con trascrizione del testo facsimile digitale con trascrizione e collegamento
 
 %%
 <TEI>
  <teiHeader>
-  <!­­...­­>
+ <!-- ... -->
  </teiHeader>
  <facsimile>
   <graphic url="page1.png"/>
@@ -122,27 +146,27 @@ caso più semplice: facsimile digitale con le immagini del ms
 %%
 <TEI>
  <teiHeader>
-  <!­­...­­>
+ <!-- ... -->
  </teiHeader>
  <text>
   <pb facs="page1.png"/>
-   <!­­ inserire qui il testo di pagina 1 ­­>
+   <!-- inserire qui il testo di pagina 1 -->
   <pb facs="page2.png"/>
-   <!­­ inserire qui il testo di pagina 2 ­­>
+   <!-- inserire qui il testo di pagina 2 -->
  </text>
 </TEI>
 
 %%
-grazie a un foglio di stile XSLT è possibile generare una pagina HMTL divisa in due riquadri (immagine e testo)
-in alternativa è possibile usare un elemento <facsimile> sullo stesso livello di <text>
+grazie a un foglio di stile XSLT è possibile generare una pagina HMTL divisa in due riquadri (immagine e testo)
+in alternativa è possibile usare un elemento <facsimile> sullo stesso livello di <text>
 ma allora sarebbe necessario aggiungere i collegamenti svantaggi di questa soluzione:
 nessun collegamento testo-immagine a livello diverso dalla pagina
-non è possibile individuare aree particolari delle immagini
+non è possibile individuare aree particolari delle immagini
 i puntatori alle immagini sono sparsi per tutto il documento (a
 meno che non si usi un elemento <facsimile>)
 
 %%
-la soluzione più efficace è la parallel transcription basata su <facsimile> e <text>
+la soluzione più efficace è la parallel transcription basata su <facsimile> e <text>
 uso di <surface> e <zone> all’interno di <facsimile>
 per definire le aree delle immagini
 per collegare il testo della trascrizione a tali aree e/o immagini secondarie
@@ -153,11 +177,11 @@ ulx, uly coordinate x e y dell’angolo superiore sinistro lrx, lry coordinate x
 <surface> individua la superficie scritta di un’immagine
 <surface ulx="0" uly="0" lrx="400" lry="280"> <graphic url="page1.png"/>
 </surface>
-può contenere più di un elemento <graphic>
+può contenere più di un elemento <graphic>
 <surface>
-<graphic url="page1­highRes.png"/> <graphic url="page1­lowRes.png"/>
+<graphic url="page1-highRes.png"/> <graphic url="page1-lowRes.png"/>
 </surface>
-invece di <graphic> può contenere una o più <zone> <surface> stesso si trova all’interno di <facsimile>
+invece di <graphic> può contenere una o più <zone> <surface> stesso si trova all’interno di <facsimile>
 
 %%
 L’elemento <zone>
@@ -166,8 +190,10 @@ un’area dell’immagine:
 <surface ulx="0" uly="0" lrx="500" lry="321"> <zone ulx="50" uly="20" lrx="400" lry="280">
 <graphic url="scrittura.png"/></zone> <note>first page</note>
 </surface>
-o una porzione più piccola (utile per creare un hot-spot): <zone ulx="120" uly="48" lrx="143" lry="56">
-￼￼￼ <graphic url="gloss.png"/>
+o una porzione più piccola (utile per creare un hot-spot):
+
+<zone ulx="120" uly="48" lrx="143" lry="56">
+ <graphic url="gloss.png"/>
  <note>Scribe gloss</note>
 </zone>
 
@@ -177,13 +203,13 @@ Esempio immagine zone
 %%
 <facsimile xml:id="imtAnnotatedImage"> <surface>
 <graphic height="1797px" url="LindisfarneFol27rIncipitMatt.jpg" width="1266px"/>
-<zone lrx="1268" lry="1797" rend="visible" rendition="surface" ulx="0" uly="­4" xml:id="imtArea_0"/>
-<zone lrx="1267" lry="450" rend="visible" rendition="zone" ulx="1202" uly="356" xml:id="imtArea_1"/>
-<zone lrx="1050" lry="792" rend="visible" rendition="zone" ulx="81" uly="30" xml:id="imtArea_3"/>
-<zone lrx="1190" lry="154" rend="visible" rendition="zone" ulx="503" uly="48" xml:id="imtArea_4"/>
-<zone lrx="1184" lry="412" rend="visible" rendition="zone" ulx="1116" uly="353" xml:id="imtArea__6"/>
-<zone lrx="86" lry="606" rend="visible" rendition="zone" ulx="2" uly="478" xml:id="imtArea_5"/>
-<zone lrx="995" lry="366" rend="visible" rendition="zone" ulx="694" uly="321" xml:id="imtArea_6"/>
+<zone lrx="1268" lry="1797" rend="visible" rendition="surface" ulx="0" uly="4" xml:id="imtArea-0"/>
+<zone lrx="1267" lry="450" rend="visible" rendition="zone" ulx="1202" uly="356" xml:id="imtArea-1"/>
+<zone lrx="1050" lry="792" rend="visible" rendition="zone" ulx="81" uly="30" xml:id="imtArea-3"/>
+<zone lrx="1190" lry="154" rend="visible" rendition="zone" ulx="503" uly="48" xml:id="imtArea-4"/>
+<zone lrx="1184" lry="412" rend="visible" rendition="zone" ulx="1116" uly="353" xml:id="imtArea-6a"/>
+<zone lrx="86" lry="606" rend="visible" rendition="zone" ulx="2" uly="478" xml:id="imtArea-5"/>
+<zone lrx="995" lry="366" rend="visible" rendition="zone" ulx="694" uly="321" xml:id="imtArea-6b"/>
   </surface>
 </facsimile>
 
@@ -202,12 +228,12 @@ specificare l’id degli elementi testuali
  <body>
   <div>
 Esempio bidirezionale completo
-<pb facs="#page1" n="1" xml:id="page_1"/>
-<p>Lorem ipsum ... <gloss facs="#det1">semper</gloss></p> </div>
+<pb facs="\#page1" n="1" xml:id="page-1"/>
+<p>Lorem ipsum ... <gloss facs="\#det1">semper</gloss></p> </div>
  </body>
 </text>
 <facsimile>
-<surface xml:id="page1” start="#page_1" ulx="0" uly="0" lrx="500" lry="321">
+<surface xml:id="page1” start="\#page-1" ulx="0" uly="0" lrx="500" lry="321">
 <graphic url="page1.png”>
 <zone xml:id="line1" ulx="50" uly="80" lrx="200" lry="321">
 <graphic url="line1.png"/>
@@ -220,12 +246,12 @@ Esempio bidirezionale completo
 </facsimile>
 
 %%
-Facsimile con embedded transcription un metodo a metà fra facsimile digitale e edizione basata
-su immagini è quello della embedded transcription: http://www.tei-c.org/release/doc/tei-p5-
-doc/en/html/PH.html#PHZLAB
+Facsimile con embedded transcription un metodo a metà fra facsimile digitale e edizione basata
+su immagini è quello della embedded transcription: http://www.tei-c.org/release/doc/tei-p5-
+doc/en/html/PH.html\#PHZLAB
 differenze importanti rispetto a trascrizione parallela basata su <text>:
-il testo è considerato “di accompagnamento”, focus sulle immagini (ad esempio disposizione fisica delle parti)
-￼￼￼￼infatti il modello di codifica di <line> è limitato nessun problema di conflitti di gerarchie
+il testo è considerato “di accompagnamento”, focus sulle immagini (ad esempio disposizione fisica delle parti)
+infatti il modello di codifica di <line> è limitato nessun problema di conflitti di gerarchie
 
 %%
 Facsimile con embedded transcription uso dell’elemento <sourceDoc> sullo stesso livello
