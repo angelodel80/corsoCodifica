@@ -13,28 +13,28 @@
 \end{frame}
 
 %%
-<add> una o più parole aggiunte nel testo
-questa parola è <add place="supralinear">stata</add> aggiunta in un secondo momento
-<del> una o più parole cancellate nel testo
+<add> una o più parole aggiunte nel testo
+questa parola è <add place="supralinear">stata</add> aggiunta in un secondo momento
+<del> una o più parole cancellate nel testo
 questa invece era <del rend="overstrike">era</del>
  di troppo e l’ho cancellata
 <gap/> parte di testo omessa, mancante o illeggibile
-questa <gap reason="illegible" extent="6" unit="chars"/> è illeggibile (forse “parola”?)
+questa <gap reason="illegible" extent="6" unit="chars"/> è illeggibile (forse “parola”?)
 
 %%
 <damage> testo danneggiato nel documento originale
    
-per qualche goccia d’acqua questa parola si è
+per qualche goccia d’acqua questa parola si è
    <damage agent="water">scolorita</damage> molto
 
-   <unclear> parte di testo interpretabile con difficoltà
+   <unclear> parte di testo interpretabile con difficoltà
 <unclear reason="faded">questa</unclear> si legge
-   ancora ma con difficoltà
+   ancora ma con difficoltà
 
-   <supplied> testo inserito dal curatore perché illeggibile nell’originale o assente (fa parte del modulo transcr)
+   <supplied> testo inserito dal curatore perché illeggibile nell’originale o assente (fa parte del modulo transcr)
 qui <supplied>mancava qualcosa</supplied> nel testo
 
-è possibile combinare questi elementi (compreso <gap/>)
+è possibile combinare questi elementi (compreso <gap/>)
 
 %%
 Dal Vercelli Book: manoscritto in inglese antico, dialetto tardo sassone occidentale, X secolo ca.
@@ -43,11 +43,11 @@ Dal Vercelli Book: manoscritto in inglese antico, dialetto tardo sassone occiden
     %\end{center}
 
 %%
-● può succedere che una parola non sia semplicemente cancellata, ma che sia anche sostituita da un altro termine
-● in questo caso è possibile usare l’elemento <subst> per collegare la sequenza cancellazione → nuovo testo
+- può succedere che una parola non sia semplicemente cancellata, ma che sia anche sostituita da un altro termine
+- in questo caso è possibile usare l’elemento <subst> per collegare la sequenza cancellazione → nuovo testo
 
 %%
-questa parola è stata <subst>
+questa parola è stata <subst>
 <del rend="overstrike">scritta</del>
 <add place="supralinear">aggiunta</add>
 <subst> in un secondo momento
@@ -56,26 +56,26 @@ anche a livello della singola lettera
 <subst><del rend="overtype">t<del><add>T</add></subst>i scrivo una
    mail domani mattina
 
-   <subst> fa parte del modulo transcr, per ulteriori informazioni (@seq) v. http://www.tei- c.org/release/doc/tei-p5-doc/en/html/PH.html#PHSU
+   <subst> fa parte del modulo transcr, per ulteriori informazioni (@seq) v. http://www.tei- c.org/release/doc/tei-p5-doc/en/html/PH.html\#PHSU
 
 %%
 Attributi e valori consigliati
 
-● <add> 
+- <add> 
 place inline, supralinear, margin, etc.
 hand author, scribe1, scribe2
 
-● <del> 
+- <del> 
 rend overstrike, subpunct, overtype, dotted
 hand author, scribe1, scribe2
 
-● <gap>
+- <gap>
 reason illegible, cancelled, irrelevant, missing, omissis, censored 
 hand editor
 agent water, smoke, hole, missing page
 extent chars, words, cm
 
-● <unclear> 
+- <unclear> 
 reason parterased, ink blot 
 hand author, scribe1, scribe2
 agent water, smoke, ink
@@ -83,11 +83,11 @@ agent water, smoke, ink
 %%
 Correzioni e normalizzazioni
 
- <sic> parola o frase ritenuta errata, ma riportata “com’è”
-questa parola è <sic>statta</sic> sbagliata
+ <sic> parola o frase ritenuta errata, ma riportata “com’è”
+questa parola è <sic>statta</sic> sbagliata
 
 <corr> correzione di una parola o frase errata
-questa parola è <corr>stata</corr> corretta in un
+questa parola è <corr>stata</corr> corretta in un
  secondo momento
 
 <orig> parola o frase ritenuta “non standard” 
@@ -116,7 +116,7 @@ Abbreviazioni ed espansioni 1 <abbr> parola abbreviata, brevigrafo
 disponibili ulteriori elementi aggiungendo il modulo transcr:
 <am> lettere o segni di abbreviazione
 <ex> lettere aggiunte espandendo un’abbreviazione
- <abbr>sanct<am>ū</am></abbr>
+ <abbr>sanct<am>u~</am></abbr>
  <expan>sanctu<ex>m</ex></expan>
 
  %%
@@ -125,34 +125,34 @@ disponibili ulteriori elementi aggiungendo il modulo transcr:
 
 %%
 
-la relazione fra le coppie è importante per essere sicuri che ciascun elemento sia collegato all’altro
+la relazione fra le coppie è importante per essere sicuri che ciascun elemento sia collegato all’altro
 
-Nella TEI P5 è stato introdotto un nuovo elemento <choice> che comprende ogni coppia
+Nella TEI P5 è stato introdotto un nuovo elemento <choice> che comprende ogni coppia
 
 %%
-● <sic> - <corr>
-questa parola è <choice>
+- <sic> - <corr>
+questa parola è <choice>
 
 <sic>statta</sic>
 <corr>stata</corr> </choice> scritta sbagliata
 
-● <orig> - <reg>
+- <orig> - <reg>
 Allora, mi dici <choice><orig>’ndo</orig> <reg>dove</reg></choice> vai?
 
-● <abbr> - <expan>
+- <abbr> - <expan>
 chiedi al <choice><abbr>dott.</abbr> <expan>dott<ex>or</ex></expan></choice> Rossi
 
 %%
 Attributi @resp e @cert
-● per <add> e <del> abbiamo l’attributo @hand per specificare, se necessario, l’autore della modifica all’originale
-● per qualche intervento editoriale, invece, potrebbe essere importante specificare il responsabile (in particolare per l’elemento <supplied>!) e il grado di certezza
-● per fare questo si usano gli attributi @resp e @cert
+- per <add> e <del> abbiamo l’attributo @hand per specificare, se necessario, l’autore della modifica all’originale
+- per qualche intervento editoriale, invece, potrebbe essere importante specificare il responsabile (in particolare per l’elemento <supplied>!) e il grado di certezza
+- per fare questo si usano gli attributi @resp e @cert
 
 %%
-questa parola è <choice>
+questa parola è <choice>
 <sic>statta</sic>
 <corr resp="rrdt">stata</corr> </choice> scritta per errore
-● il valore di @resp può rimandare a un <respStmt>: <corr resp="#rrdt">stata</corr>
+- il valore di @resp può rimandare a un <respStmt>: <corr resp="\#rrdt">stata</corr>
 
 %%
 
@@ -163,18 +163,18 @@ Altri elementi utili 1
 <space> usato per marcare la presenza di spazio significativo (ad esempio spazio lasciato dallo scriba per inserire una iniziale miniata)
 normalmente usato come elemento vuoto modulo linking
 
-<pc> punctuation character(s): contiene uno o più caratteri che costituiscono una forma di punteggiatura nel testo
+<pc> punctuation character(s): contiene uno o più caratteri che costituiscono una forma di punteggiatura nel testo
 
 modulo analysis
 
 %% 
-● <ab> anonymous block: contenitore di testo simile a un paragrafo ma senza il valore semantico di quest’ultimo
+- <ab> anonymous block: contenitore di testo simile a un paragrafo ma senza il valore semantico di quest’ultimo
 – modulo linking
-● <seg> arbitrary segment: usato per marcare qualunque porzione di testo,
+- <seg> arbitrary segment: usato per marcare qualunque porzione di testo,
 usare @type per specificare il contenuto semantico – modulo linking
-● <w> word: marca una parola a livello grammaticale, @lemma per indicare il lemma e @lemmaref per stabilire un link con un dizionario online
+- <w> word: marca una parola a livello grammaticale, @lemma per indicare il lemma e @lemmaref per stabilire un link con un dizionario online
 – modulo analysis
-● <c> character: marca un singolo carattere nel testo
+- <c> character: marca un singolo carattere nel testo
 – modulo analysis
 
 %% 
@@ -185,7 +185,7 @@ Esempio
 
 Dal Vercelli Book (inglese antico, dialetto tardo sassone occidentale, X secolo ca.
 <del rend="erasure">ff</del>fore wæron
-<del rend="dot"><g ref="#aeligddot"/></del>
+<del rend="dot"><g ref="\#aeligddot"/></del>
 
 %% 
 Esempio choice
