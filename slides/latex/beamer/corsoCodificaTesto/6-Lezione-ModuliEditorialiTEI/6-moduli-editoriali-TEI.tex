@@ -1,0 +1,154 @@
+%
+
+\documentclass{beamer}
+    
+    %    \usepackage[english]{babel}
+        %\usepackage[latin1]{inputenc}
+        %\usepackage[T1]{fontenc}
+    
+    \mode<presentation>{
+      \setbeamertemplate{background canvas}[vertical shading]
+      \usetheme{Berkeley}
+      \useoutertheme{himinfolines}
+    }
+      
+    \usepackage{ucs}
+    \usepackage[utf8]{inputenc}
+    \usepackage[english,polutonikogreek,italian,UKenglish,british]{babel}
+    \usepackage{graphicx}
+    \usepackage{colortbl}
+    \usepackage{multicol}
+    \usepackage{ulem}
+    \usepackage{verbatim}
+    \usepackage{alltt}
+    \usepackage{ccicons}
+    \usepackage{MnSymbol,wasysym}
+    \usepackage{tikzsymbols}
+    \usepackage{textcomp}
+    \usepackage{xmpincl}
+    
+    \usepackage{parskip}
+    \setcounter{nframes}{115}
+    \setcounter{nframe}{1}
+    \setbeamercovered{dynamic}
+    \newenvironment{grcenv}{\begin{otherlanguage}{greek}}{\end{otherlanguage}}
+    \newcommand{\g}[1]{\textgreek{#1}}
+    \definecolor{darkgreen}{rgb}{0,0.5,0}
+    \definecolor{darkblue}{rgb}{0,0,0.5}
+    \definecolor{grey}{rgb}{0.5,0.5,0.5}
+    \setcounter{tocdepth}{5}
+    
+    \makeatletter
+    
+    \makeatother
+    %\includexmp{LicencesAndLicensing}
+    
+    %frame00 metadata
+        \title{Codifica TEI - Elementi editoriali e facsimile}
+        \author[A.M. Del Grosso]{Angelo Mario Del Grosso}
+        \institute{\texttt{angelo.delgrosso@ilc.cnr.it} \\\bigskip\textit{CNR-ILC-LicoLab} \\\bigskip\url{http://licolab.ilc.cnr.it/}}
+        \date{Istituto di Linguistica Computazionale ``A. Zampolli'', \today}
+        \AtBeginSection[]{
+        \begin{frame}<beamer>
+        \addtocounter{nframe}{1}
+        \footnotesize
+        \frametitle{Progress status}
+        \tableofcontents[currentsection,hideothersubsections]
+        \end{frame}
+        }
+    
+    \begin{document}
+    
+    \begin{frame}
+        \maketitle
+    \end{frame}
+    
+    \begin{frame}
+        \frametitle{Sommario della Lezione}
+        \tableofcontents
+    \end{frame}
+    
+    \section{Introduzione agli elementi editoriali e facsimile TEI}
+    
+    \begin{frame}
+        \frametitle{Introduzione}
+        \addtocounter{nframe}{1}
+        
+        %\begin{center}
+        %    \includegraphics[width=.2\textwidth]{../imgs/tei-r.pdf}
+        %\end{center}
+    
+        \begin{block}{Elementi editoriali}
+            \emph{in parte già disponibili nei moduli TEI di base}
+            
+            \textit{Per la critica testuale indispensabili i moduli:}
+            \begin{itemize}
+                \item \emph{msdescription} descrizione del manoscritto 
+                \item \emph{trans} trascrizione di fonti primarie 
+                \item \emph{textcrit} apparato critico
+                \item \emph{gaiji} caratteri non standard
+            \end{itemize}
+        \end{block}
+        
+    \end{frame}
+    
+    \begin{frame}
+        \frametitle{Introduzione}
+        \addtocounter{nframe}{1}
+        
+        \begin{block}{Qual è l'obiettivo della TEI}
+           \textbf{ A seconda del tipo di marcatura utili anche}: 
+           \begin{itemize}
+               \item \emph{analysis}
+               \item \emph{certainty}
+               \item \emph{figures}
+               \item \emph{namesdates}
+               \item \emph{verse}
+           \end{itemize}
+        \end{block}
+        
+    \end{frame}
+    
+    \begin{frame}
+        \frametitle{Modularità della TEI}
+        \addtocounter{nframe}{1}
+        
+       % \begin{center}
+        % \includegraphics[width=.2\textwidth]{../imgs/tei-r.pdf}
+        % \end{center}
+    
+        \begin{itemize}
+            
+            \item<1-> parleremo del sistema Modulare della TEI
+                \begin{itemize}
+                    \item<1-> Moduli
+                    \item<1-> Classi
+                    \item<1-> Macro
+                    \item<1-> Datatype
+                \end{itemize} 
+            \item<2-> parleremo degli elementi basilari
+                \begin{itemize}
+                    \item<2-> Intestazione TEI (TEIHeader)
+                    \item<2-> Elementi e attributi presenti in tutti i documenti TEI
+                    \item<2-> Esempi di codifica
+                \end{itemize} 
+        \end{itemize}
+        
+    \end{frame}
+    
+    \section{Elementi editoriali TEI}
+    \input{includes/6-elementi-interventi-TEI.tex}
+    
+    \section{Elementi facsimile TEI}
+    \input{includes/6-elementi-facsimile-TEI.tex}
+    
+    %\section{Elementi di base TEI}
+    %\input{includes/5-elementi-base-TEI.tex}
+    
+    %\section{Personalizzare TEI}
+    %\input{includes/5-customizzazione-TEI.tex}
+    
+    \section{Conclusioni}
+    \input{includes/6-conclusioni.tex}
+    
+    \end{document}

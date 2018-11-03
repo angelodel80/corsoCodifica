@@ -1,0 +1,2 @@
+#!/bin/bash
+rm 6-moduli-editoriali-TEI.aux 6-moduli-editoriali-TEI.log 6-moduli-editoriali-TEI.nav 6-moduli-editoriali-TEI.out 6-moduli-editoriali-TEI.pdf 6-moduli-editoriali-TEI.snm 6-moduli-editoriali-TEI.toc 6-moduli-editoriali-TEI.vrb 6-moduli-editoriali-TEI.log
