@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" schematypens="http://relaxng.org/ns/structure/1.0"?>
+
 <TEI xmlns="http://www.tei-c.org/ns/1.0" 
 	xmlns:svg="http://www.w3.org/2000/svg" 
 	xmlns:xi="http://www.w3.org/2001/XInclude">
@@ -48,7 +49,10 @@
 						<!-- riferimento al catalogo delle sigle dei musei in cui è definito I-CATm -->
 						<!-- mettere come secondo valore di ref diel tag repository l'URI del nodo museo del dataset del Belliniano -->
 						<idno type="inventory">LL1.16</idno>						<!-- segnatura della singola lettera -->
-						<idno type="collocation">in esposizione Casa Natale, sala B, vetrina 4, ripiano 2, I</idno>						<!-- collocazione della lettera al museo -->
+						<altIdentifier>
+						<p>in esposizione Casa Natale, sala B, vetrina 4, ripiano 2, I</p>
+						</altIdentifier>
+						<!-- idno type="collocation"></idno -->						<!-- collocazione della lettera al museo -->
 					</msIdentifier>
 					<msContents>
 						<msItem>
@@ -71,11 +75,12 @@
 					 						<!-- E' la descrizione in linguaggio naturale dei francobolli e dei timbri  -->
 									</stamp>
 									<p>Lettera in buone condizioni fisiche, composta da un solo folio, piegato in più parti e con testo solo nel fronte e retro bianco. Carta sottilissima senza filigrana, colore beige, inchiostro nero. La parte centrale del verso presenta l’indirizzo e il timbro di partenza; la piegatura inferiore il timbro di arrivo nonché appunti di altre mani con scrittura orientata dall'alto in basso e da destra verso sinistra. Timbro di arrivo parzialmente leggibile.
-					 																	<!-- descrizione fisica della lettera -->
+					 				<!-- descrizione fisica della lettera -->
 									</p>
 								</support>
 								<extent>
-									<measure type="folio">1</measure>				<!--  va inserita la quantità dell'oggetto, indicando in type il tipo descritto -->
+									<measure type="composition" unit="folio" quantity="1">1</measure>				
+									<!--  va inserita la quantità dell'oggetto, indicando in type il tipo descritto -->
 									<dimensions unit="mm">
 										<height>102</height>
 										<width>135</width>
@@ -110,29 +115,34 @@
 					</physDesc>
 					<additional>
 						<adminInfo>
-							<note>								<!-- descrizione del significato della segnatura della lettera -->
+							<note>	
+							<!-- descrizione del significato della segnatura della lettera -->
 									All'interno del carteggio belliniano (LL), la segnatura LL1.16 identifica la sedicesima missiva in ordine cronologico del primo sottogruppo, che corrisponde alle lettere scritte da Vincenzo Bellini.
-																	<!-- Note aggiuntive non strutturabili con altri tag TEI -->
+							<!-- Note aggiuntive non strutturabili con altri tag TEI -->
 							</note>
 						</adminInfo>
 					</additional>
 				</msDesc>
 			</sourceDesc>
 		</fileDesc>
+		
 		<profileDesc>
 			<correspDesc>
 				<correspAction type="sent">
 					<persName ref="TEI-ListPerson.xml#VB" role="composer">Vincenzo Bellini</persName>
 					<placeName ref="TEI-ListPlace.xml#Put">Puteaux</placeName>
-					<date when="1834-06-27">27 giugno 1834</date>					<!--potrebbe essere uno span temporale -->
+					<date when="1834-06-27">27 giugno 1834</date>
+					<!--potrebbe essere uno span temporale -->
 				</correspAction>
-				<correspAction type="received">
-					<persName ref="TEI-ListPerson.xml#CP" role="librettist">Carlo Pepoli</persName>
-					<placeName ref="TEI-ListPlace.xml#Paris"> Paris</placeName>
-					<date when="1834-06-27">27 giugno 1834</date>					<!-- potrebbe essere uno span temporale -->
-				</correspAction >
+				<correspAction type="received"> 
+				<persName ref="TEI-ListPerson.xml#CP" role="librettist">Carlo Pepoli</persName>
+					<placeName ref="TEI-ListPlace.xml#Paris">Paris</placeName>
+					<date when="1834-06-27">27 giugno 1834</date>
+					<!-- potrebbe essere uno span temporale -->
+				</correspAction>
 				<correspContext>
-					<!-- previous -->					<!-- forward -->
+					<!-- previous -->
+					<!-- forward -->
 					<!-- eventuale riferimento a altre lettere appartenenti a una stessa corrispondenza -->
 				</correspContext>
 			</correspDesc>
@@ -199,7 +209,8 @@
 	</facsimile>
 
 	<text type="letter" xml:id="LL1.16" n="LL1.16">
-		<front type="envelop"> 	<!-- FRONTE VERSO -->
+		<!-- FRONTE VERSO -->
+		<front type="envelop"> 	
 			<pb n="4" xml:id="LL1.16_fol_1fv_front" facs="#LL1.16_folio_1fv"/> 
 			<div xml:id="LL1.16_hs_1fv_05" facs="#LL1.16_hotspot_1fv_05" type="sent">
 				<ab>					<!-- inserire l'id del timbro -->
@@ -279,26 +290,19 @@
 							<hi rend="align(right)">Avendo steso l'intero								<term subtype="music-term" ref="TEI-ListTerm.xml#duetto">duetto</term>
 								<ptr target="#LL1_16_note2"/>
 							</hi>
-							<lb xml:id="LL1.16_lb_1fr_05" n="5" facs="#LL1.16_line_1fr_05"/>
- e mancando in esso qualche
-							<lb xml:id="LL1.16_lb_1fr_06" n="6" facs="#LL1.16_line_1fr_06"/>
-cosetta, desidererei che tu
-							<lb xml:id="LL1.16_lb_1fr_07" n="7" facs="#LL1.16_line_1fr_07"/>
-t'incommodassi a venire à
+							<lb xml:id="LL1.16_lb_1fr_05" n="5" facs="#LL1.16_line_1fr_05"/> e mancando in esso qualche
+							<lb xml:id="LL1.16_lb_1fr_06" n="6" facs="#LL1.16_line_1fr_06"/> cosetta, desidererei che tu
+							<lb xml:id="LL1.16_lb_1fr_07" n="7" facs="#LL1.16_line_1fr_07"/> t'incommodassi a venire à
 							<lb xml:id="LL1.16_lb_1fr_08" n="8" facs="#LL1.16_line_1fr_08"/>
 							<placeName ref="TEI-ListPlace.xml#Put">Puteau</placeName> per tutto fissare, e
-							<lb xml:id="LL1.16_lb_1fr_09" n="9" facs="#LL1.16_line_1fr_09"/>
-nell'istesso tempo darmi la
+							<lb xml:id="LL1.16_lb_1fr_09" n="9" facs="#LL1.16_line_1fr_09"/> nell'istesso tempo darmi la
 							<lb xml:id="LL1.16_lb_1fr_10" n="10" facs="#LL1.16_line_1fr_10"/>
 							<term subtype="music-term" ref="TEI-ListTerm.xml#sortita">sortita</term> di							<persName ref="TEI-ListPerson.xml#GBR" role="tenore">Rubini</persName>
-							<ptr target="#LL1_16_note3"/>
-, se è							<w>termi
-								<lb xml:id="LL1.16_lb_1fr_11" n="11" facs="#LL1.16_line_1fr_11" break="no"/>
-nata</w>.
+							<ptr target="#LL1_16_note3"/>, se è							<w>termi
+								<lb xml:id="LL1.16_lb_1fr_11" n="11" facs="#LL1.16_line_1fr_11" break="no"/>nata</w>.
 						</s>
 						<s type="sentence" n="s_04"> T'aspetto in qual giorno
-							<lb xml:id="LL1.16_lb_1fr_12" n="12" facs="#LL1.16_line_1fr_12"/>
-ed in qual'ora vorrai. 
+							<lb xml:id="LL1.16_lb_1fr_12" n="12" facs="#LL1.16_line_1fr_12"/> ed in qual'ora vorrai. 
 						</s>
 					</ab>
 				</div>
@@ -328,15 +332,15 @@ ed in qual'ora vorrai.
 
 			<div type="fronte-verso">
 				<pb n="4" xml:id="LL1.16_fol_1fv_body" facs="#LL1.16_folio_1fv"/> 
-				<ab type="paratext" subtype="addition" hand="#h2" xml:id="LL1.16_hs_1fv_02" facs="#LL1.16_hotspot_1fv_02">					<!-- terza mano del bibliotecario -->
-			27 Lettera del Bellini sul					<term subtype="music-term" ref="TEI-ListTerm.xml#duetto">duetto</term> del p:°					<term subtype="music-term" ref="TEI-ListTerm.xml#atto">Atto</term> dei					<rs type="work" ref="TEI-ListWork.xml#Puritani">Puritani</rs>
+				<ab type="paratext" subtype="addition" hand="#h2" xml:id="LL1.16_hs_1fv_02" facs="#LL1.16_hotspot_1fv_02">
+					<!-- terza mano del bibliotecario -->27 Lettera del Bellini sul			<term subtype="music-term" ref="TEI-ListTerm.xml#duetto">duetto</term> del p:° <term subtype="music-term" ref="TEI-ListTerm.xml#atto">Atto</term> dei <rs type="work" ref="TEI-ListWork.xml#Puritani">Puritani</rs>
 				</ab>
 				<ab type="paratext" subtype="addition" hand="#h1" xml:id="LL1.16_hs_1fv_01" facs="#LL1.16_hotspot_1fv_01">
 										<!-- seconda mano di Pepoli -->
 					<persName ref="TEI-ListPerson.xml#CP" role="librettist">
 						<choice>
 							<abbr>C</abbr>
-							<expan>C<ex>arlo</ex>arlo</expan>
+							<expan>C<ex>arlo</ex></expan>
 						</choice> Pepoli
 					</persName>
 				</ab>

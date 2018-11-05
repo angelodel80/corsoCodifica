@@ -35,50 +35,192 @@
 \end{frame}
 
 %%
-le nuove caratteristiche degli schemi TEI P5 offrono un’ottima base per il collegamento testo-immagine
-a causa della relativa complessità è preferibile usare strumenti software per facilitare la creazione di un facsimile digitale
-al momento l’IMT costituisce una buona soluzione quello che manca:
-uno strumento/funzione per collegare le immagini annotate al testo della trascrizione
-software di visualizzazione
+\begin{frame}
+    \frametitle{Introduzione}
+    \addtocounter{nframe}{1}
+    
+    %\begin{center}
+    %    \includegraphics[width=.2\textwidth]{../imgs/tei-r.pdf}
+    %\end{center}
+
+    \begin{block}{Cos'è la TEI}
+        Le nuove caratteristiche degli schemi TEI P5 offrono un’ottima base per edizioni digitali complesse con collegamento testo-immagine
+    \end{block}
+    
+\end{frame}
+
+
+
+%%
+\begin{frame}
+    \frametitle{Conclusioni: Editioni Digitali}
+    \addtocounter{nframe}{1}
+    
+    %\begin{center}
+    %    \includegraphics[width=.2\textwidth]{../imgs/tei-r.pdf}
+    %\end{center}
+
+    \begin{block}{Edizioni digitali scientifiche}
+        \begin{itemize}
+            \item elementi contenuti nei moduli di base
+            \item elementi del modulo di descrizione dei manoscritti
+            \item elementi del modulo di trascrizione delle fonti primarie
+            \item elementi del modulo di apparato critico
+            \item elementi del modulo di gestione di caratteri non spandard
+        \end{itemize}
+    \end{block}
+    
+\end{frame}
+
+%%
+
+\begin{frame}
+    \frametitle{Conclusioni: Edizioni Digitali}
+    \addtocounter{nframe}{1}
+    
+    %\begin{center}
+    %    \includegraphics[width=.2\textwidth]{../imgs/tei-r.pdf}
+    %\end{center}
+
+    \begin{block}{elementi per interventi editoriali:}
+        \texttt{<abbr> <expan>, <orig> <reg>, <sic> <corr>, <subst>
+        <gap/>, <supplied>, <unclear>, <damage>}
+    \end{block}
+
+    \begin{block}{strutturali specifici:}
+        \texttt{<gb/>, <line>}
+    \end{block}
+    
+\end{frame}
 
 
 %%
-elementi contenuti nei moduli di base
-elementi del modulo di descrizione dei manoscritti (10 Manuscript
-Description http://www.tei-c.org/release/doc/tei-p5-doc/en/html/MS.html) elementi strutturali specifici:
-<gb/>, <line>
-elementi per interventi editoriali:
-<abbr> <expan>, <orig> <reg>, <sic> <corr>, <subst>
-<gap/>, <supplied>, <unclear>, <damage>
-elementi del modulo gaiji
-elementi del m. relativo all’apparato critico (12 Critical Apparatus
-http://www.tei-c.org/release/doc/tei-p5-doc/en/html/TC.html)
+\begin{frame}
+    \frametitle{Conclusioni: Edizioni Digitali}
+    \addtocounter{nframe}{1}
+    
+    %\begin{center}
+    %    \includegraphics[width=.2\textwidth]{../imgs/tei-r.pdf}
+    %\end{center}
+
+    \begin{block}{Elementi di intervento editoriali}
+        \begin{itemize}
+            \item \texttt{<damage>} marca la parte di testo danneggiata
+            \item[] non proprio “intervento editoriale” ma spesso usato contestualmente con \texttt{<gap/>,  <unclear> e <supplied>}
+            \item \texttt{<supplied>} testo inserito dal curatore perché l’originale è mancante o illeggibile
+        \end{itemize} 
+    \end{block}
+\end{frame}
+
+\begin{frame}
+    \frametitle{Conclusioni: Edizioni Digitali}
+    \addtocounter{nframe}{1}
+    
+    %\begin{center}
+    %    \includegraphics[width=.2\textwidth]{../imgs/tei-r.pdf}
+    %\end{center}
+
+    \begin{block}{Elementi di intervento editoriali: esempio}
+        \texttt{<l n="1" >Nel mezzo del cammin di nostra vita</l>}
+        \\\texttt{<l n="2" ><damage agent="fire" extent="1line" ><unclear>Mi ritrovai</unclear> <supplied reason="illegible" resp="rrdt" >per una selva oscura,</supplied></damage></l>}
+        \\\texttt{<l n="3" >Ché la diritta via era smarrita</l>}
+    \end{block}
+\end{frame}
 
 %%
-elementi contenuti nei moduli di base
-elementi del modulo di descrizione dei manoscritti (10 Manuscript
-Description http://www.tei-c.org/release/doc/tei-p5-doc/en/html/MS.html) elementi strutturali specifici:
-<gb/>, <line>
-elementi per interventi editoriali:
-<abbr> <expan>, <orig> <reg>, <sic> <corr>, <subst>
-<gap/>, <supplied>, <unclear>, <damage>
-elementi del modulo gaiji
-elementi del m. relativo all’apparato critico (12 Critical Apparatus
-http://www.tei-c.org/release/doc/tei-p5-doc/en/html/TC.html)
+\begin{frame}
+    \frametitle{Conclusioni: Edizioni Digitali}
+    \addtocounter{nframe}{1}
+    
+    %\begin{center}
+    %    \includegraphics[width=.2\textwidth]{../imgs/tei-r.pdf}
+    %\end{center}
+
+    \begin{block}{Elementi di intervento editoriale}
+        \begin{itemize}
+            \item \texttt{<subst>} raggruppa una cancellazione e un’aggiunta scribale per rendere evidente che si tratta di una sostituzione
+            \item[] Stessa semantica funzionale di \texttt{<choice>}
+        \end{itemize}
+    \end{block}
+
+\end{frame}
 
 %%
-Elementi di intervento editoriale <damage> marca la parte di testo danneggiata
-non proprio “intervento editoriale” ma spesso usato contestualmente con <gap/>, <unclear> e <supplied>
-<supplied> testo inserito dal curatore perché l’originale è mancante o illeggibile
-<l n="1">Nel mezzo del cammin di nostra vita</l> <l n="2"><damage agent="fire" extent="1line"><unclear>Mi ritrovai</unclear> <supplied reason="illegible" resp="rrdt">per una selva oscura,</supplied></damage></l>
-<l n="3">Ché la diritta via era smarrita</l>
+\begin{frame}
+    \frametitle{Conclusioni: Edizioni Digitali}
+    \addtocounter{nframe}{1}
+    
+    %\begin{center}
+    %    \includegraphics[width=.2\textwidth]{../imgs/tei-r.pdf}
+    %\end{center}
+
+    \begin{block}{Elementi di intervento editoriale}
+        \texttt{<l n="1" >Nel mezzo del cammin di nostra vita</l> }
+        \\\texttt{<l n="2" >Mi ritrovai }
+        \\\texttt{<subst>}
+        \\\texttt{<del>pir</del>}
+        \\\texttt{<add>per</add>}
+        \\\texttt{</subst>}
+        \\\texttt{una selva oscura,</l>}
+        \\\texttt{<l n="3" >Ché la diritta via era smarrita</l>}
+    \end{block}
+    
+\end{frame}
+
 
 %%
-Elementi di intervento editoriale
-<subst> raggruppa una cancellazione e un’aggiunta scribale per rendere evidente che si tratta di una sostituzione
-stessa semantica funzione di <choice>
-<l n="1">Nel mezzo del cammin di nostra vita</l> <l n="2">Mi ritrovai <subst>
-<del>pir</del>
-<add>per</add>
-</subst>una selva oscura,</l>
-<l n="3">Ché la diritta via era smarrita</l>
+
+\begin{frame}
+    \frametitle{Conclusioni: Edizioni Digitali}
+    \addtocounter{nframe}{1}
+    
+    %\begin{center}
+    %    \includegraphics[width=.2\textwidth]{../imgs/tei-r.pdf}
+    %\end{center}
+
+    \begin{block}{Edizione image-based: Elementi strutturali}
+        \begin{itemize}
+            \item \texttt{<gb/>} \textbf{gathering begins} 
+            \item[] marca il punto in cui si presenta un nuovo fascicolo all’interno di un manoscritto
+            \item \texttt{@type:} classificazione in base al tipo
+            \item \texttt{@n:} numero progressivo
+        \end{itemize}
+    \end{block}
+\end{frame}
+
+\begin{frame}
+    \frametitle{Conclusioni: Edizioni Digitali}
+    \addtocounter{nframe}{1}
+    
+    %\begin{center}
+    %    \includegraphics[width=.2\textwidth]{../imgs/tei-r.pdf}
+    %\end{center}
+
+    \begin{block}{Edizione image-based: Elementi strutturali}
+        \begin{itemize}
+            \item \texttt{<line> }
+            \item[] trascrizione di una riga del foglio del manoscritto 
+            \item[] \textbf{può essere contenuto solo da \texttt{<surface> e <zone>}!}
+            \item per le righe di testo da inserire all’interno di \texttt{<text>} è sempre necessario usare \texttt{<lb/>}.
+        \end{itemize}
+    \end{block}
+\end{frame}
+
+%%
+\begin{frame}
+    \frametitle{Conclusioni: Edizioni Digitali}
+    \addtocounter{nframe}{1}
+    
+    %\begin{center}
+    %    \includegraphics[width=.2\textwidth]{../imgs/tei-r.pdf}
+    %\end{center}
+
+    \begin{block}{Elementi per interventi editoriali}
+        A causa della relativa complessità di codifica di edizioni digitali image-based è preferibile usare strumenti software per facilitare la creazione di un facsimile digitale
+    \end{block}
+
+    \begin{block}{strutturali specifici}
+        Manca però ancora uno strumento/funzione per collegare le immagini annotate al testo della trascrizione
+    \end{block}
+\end{frame}
+

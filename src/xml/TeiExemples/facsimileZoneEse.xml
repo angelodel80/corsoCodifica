@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI>
+    <teiHeader>
+        <!-- I coomponenti dell'intestazione -->
+    </teiHeader>
+
+    <facsimile xml:id="imtAnnotatedImage">
+        <surface>
+            <graphic height="1797px" url="LindisfarneFol27rIncipitMatt.jpg" width="1266px"/>
+            <zone lrx="1268" lry="1797" rend="visible" rendition="surface" ulx="0" uly="4" xml:id="imtArea-0"/>
+            <zone lrx="1267" lry="450" rend="visible" rendition="zone" ulx="1202" uly="356" xml:id="imtArea-1"/>
+            <zone lrx="1050" lry="792" rend="visible" rendition="zone" ulx="81" uly="30" xml:id="imtArea-3"/>
+            <zone lrx="1190" lry="154" rend="visible" rendition="zone" ulx="503" uly="48" xml:id="imtArea-4"/>
+            <zone lrx="1184" lry="412" rend="visible" rendition="zone" ulx="1116" uly="353" xml:id="imtArea-6a"/>
+            <zone lrx="86" lry="606" rend="visible" rendition="zone" ulx="2" uly="478" xml:id="imtArea-5"/>
+            <zone lrx="995" lry="366" rend="visible" rendition="zone" ulx="694" uly="321" xml:id="imtArea-6b"/>
+        </surface>
+    </facsimile>
+    
+</TEI>
