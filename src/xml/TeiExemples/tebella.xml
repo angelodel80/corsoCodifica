@@ -1,0 +1,23 @@
+
+
+<table rows="3" cols="2">
+    <row>
+        <cell>HTML</cell>
+        <cell>Derivato da SGML (come
+applicazione), il linguaggio del World Wide
+Web.</cell>
+    </row>
+
+    <row>
+        <cell>XML</cell>
+        <cell>Derivato da SGML (per
+semplificazione).</cell>
+    </row>
+
+    <row>
+        <cell>XSLT</cell>
+        <cell>Fogli di stile per
+XML.</cell>
+    </row>
+
+</table>

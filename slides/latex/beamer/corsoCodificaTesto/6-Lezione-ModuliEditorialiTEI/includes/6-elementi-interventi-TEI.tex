@@ -1,40 +1,3 @@
-\begin{frame}
-    \frametitle{Introduzione}
-    \addtocounter{nframe}{1}
-    
-    %\begin{center}
-    %    \includegraphics[width=.2\textwidth]{../imgs/tei-r.pdf}
-    %\end{center}
-
-    \begin{block}{Cos'è la TEI}
-        la TEI - \textit{acronimo di Text Encoding Initiative} - rappresenta un punto di riferimento per tutte le iniziative il cui scopo principale è quello di digitalizzare risorse testuali in ambito umanistico per fini di ricerca e di conservazione.
-    \end{block}
-    
-\end{frame}
-
-\begin{frame}
-    \frametitle{Introduzione}
-    \addtocounter{nframe}{1}
-    
-    %\begin{center}
-    %    \includegraphics[width=.2\textwidth]{../imgs/tei-r.pdf}
-    %\end{center}
-
-    \begin{block}{Elementi editoriali}
-        \emph{in parte già disponibili nei moduli TEI di base}
-        
-        \textit{Per la critica testuale indispensabili i moduli}
-        \begin{itemize}
-            \item \emph{msdescription} descrizione del manoscritto 
-            \item \emph{trans} trascrizione di fonti primarie 
-            \item \emph{textcrit} apparato critico
-            \item \emph{gaiji} caratteri non standard
-        \end{itemize}
-    \end{block}
-    
-\end{frame}
-
-
 %%
 \begin{frame}
     \frametitle{Elementi interventi editoriali}
@@ -167,7 +130,7 @@
             \includegraphics[width=.9\textwidth]{imgs/vercelli.png}
         \end{center}
     \end{block}
-    \textit{manoscritto in inglese antico, dialetto tardo sassone occidentale, X secolo ca.}
+    \textit{Manoscritto in inglese antico, dialetto tardo sassone occidentale, X secolo ca.}
 
 \end{frame}
   
@@ -185,7 +148,7 @@
         Può succedere che una parola non sia semplicemente cancellata, ma che sia anche sostituita da un altro termine
     \end{block}
     \begin{block}{Elemento sostituzione}
-        In questo caso è possibile usare l’elemento <subst> per collegare la sequenza cancellazione -> nuovo testo
+        In questo caso è possibile usare l’elemento \texttt{<subst>} per collegare la sequenza cancellazione - nuovo testo
     \end{block}
     \texttt{<subst>} fa parte del modulo transcr, per ulteriori informazioni \texttt{(@seq)} v. \url{http://www.tei-c.org/release/doc/tei-p5-doc/en/html/PH.html\#PHSU}
 \end{frame}
@@ -204,7 +167,7 @@
         \texttt{questa parola è stata <subst> <del rend="overstrike" >scritta</del> <add place="supralinear" >aggiunta</add> </subst> in un secondo momento}
     \end{block}
 
-    \begin{block}{Elemento sostituzione}
+    \begin{block}{Elemento sostituzione: carattere}
         \texttt{<subst><del rend="overtype" >t<del><add>T</add></subst>i scrivo una     mail domani mattina}
     \end{block}
    
@@ -225,7 +188,7 @@
     \begin{block}{Attributi e valori consigliati}
         \begin{itemize}
             \item \texttt{<add>} \textbf{place} \textit{inline, supralinear, margin} \textbf{hand} \textit{author, scribe1, scribe2}
-            \item \texttt{<del>} \textbf{rend} \textit{overstrike, subpunct, overtype, dotted} \textbf{hand} \textit{author, scribe1, scribe2}trascrizione di fonti primarie 
+            \item \texttt{<del>} \textbf{rend} \textit{overstrike, subpunct, overtype, dotted} \textbf{hand} \textit{author, scribe1, scribe2}
             \item \texttt{<gap>} \textbf{reason} \textit{illegible, cancelled, irrelevant, missing, omissis, censored} \textbf{hand} \textit{editor} \textbf{agent} \textit{water, smoke, hole, missing page} \textbf{extent} \textit{chars, words, cm}
             \item \texttt{<unclear>} \textbf{reason} \textit{parterased, ink blot} \textbf{hand} \textit{author, scribe1, scribe2} \textbf{agent} \textit{water, smoke, ink}
         \end{itemize}
@@ -319,8 +282,8 @@
         \begin{itemize}
             \item \texttt{<abbr>} \textbf{parola abbreviata, brevigrafo}
             \item[] \texttt{chiedi al <abbr>dott.</abbr> Rossi}
-            \item[] \texttt{in nomine Patris <expan>et</expan> Filii
-            <expan>et</expan> Spiritus Sancti}
+            \item[] \texttt{in nomine Patris <abbr>7</abbr> Filii
+            <abbr>7</abbr> Spiritus Sancti}
         \end{itemize}
         
     \end{block}
@@ -511,10 +474,10 @@
     %\end{center}
 
     \begin{block}{Attributi responsabilità}
-        \texttt{questa parola è <choice> <sic>statta</sic> <corr resp="rrdt" >stata</corr> </choice> scritta per errore}
+        \texttt{questa parola è <choice> <sic>statta</sic> <corr resp="amdg" >stata</corr> </choice> scritta per errore}
     \end{block}
-    \textit{Il valore di @resp può rimandare a un <respStmt>}
-    \texttt{<corr resp="\#rrdt" >stata</corr>}
+    \textit{Il valore di \texttt{@resp} può rimandare a un \texttt{<respStmt>}}
+    \texttt{<corr resp="\#amdg" >stata</corr>}
 \end{frame}
 
 
@@ -656,7 +619,7 @@
    
     \begin{block}{Aggiunte scribali}
         \begin{center}
-            \includegraphics[width=.9\textwidth]{imgs/Aggiunte-1.png}
+            \includegraphics[width=.95\textwidth]{imgs/Aggiunte-1.png}
         \end{center}
 
     \end{block}
@@ -670,7 +633,7 @@
    
     \begin{block}{Aggiunte scribali}
         \begin{center}
-            \includegraphics[width=.9\textwidth]{imgs/Aggiunte-2.png}
+            \includegraphics[width=.95\textwidth]{imgs/Aggiunte-2.png}
         \end{center}
 
     \end{block}
@@ -701,12 +664,11 @@
     \addtocounter{nframe}{1}
     
    
-    \begin{block}{Abbreviazioni e Espansioni}
+    \textit{Abbreviazioni e Espansioni}
         \begin{center}
-            \includegraphics[width=.9\textwidth]{imgs/Abbreviazioni-1.png}
+            \includegraphics[width=.95\textwidth]{imgs/Abbreviazioni-1.png}
         \end{center}
 
-    \end{block}
     
 \end{frame}
 
@@ -717,7 +679,7 @@
    
     \begin{block}{Abbreviazioni e Espansioni}
         \begin{center}
-            \includegraphics[width=.9\textwidth]{imgs/Aggiunta-cancellatura-regolarizzazione.png}
+            \includegraphics[width=.95\textwidth]{imgs/Aggiunta-cancellatura-regolarizzazione.png}
         \end{center}
 
     \end{block}
@@ -731,7 +693,7 @@
    
     \begin{block}{Errori Scribali}
         \begin{center}
-            \includegraphics[width=.9\textwidth]{imgs/Correzioni.png}
+            \includegraphics[width=.95\textwidth]{imgs/Correzioni.png}
         \end{center}
 
     \end{block}
@@ -742,25 +704,21 @@
     \frametitle{Elementi interventi editoriali}
     \addtocounter{nframe}{1}
     
-   
-    \begin{block}{Decorazioni}
+    \textit{Decorazioni}
         \begin{center}
             \includegraphics[width=.9\textwidth]{imgs/Decorazioni.png}
         \end{center}
-    \end{block}
-    
 \end{frame}
 
 \begin{frame}
     \frametitle{Elementi interventi editoriali}
     \addtocounter{nframe}{1}
     
-   
-    \begin{block}{Marcatura singole parole}
+    \textit{Marcatura singole parole}
         \begin{center}
             \includegraphics[width=.9\textwidth]{imgs/MarcaturaParole.png}
         \end{center}
-    \end{block}
+    
     
 \end{frame}
 

@@ -1,0 +1,43 @@
+<?xml version"1.0" encoding="UTF-8"?>
+
+<TEI>
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <!-- riempiti i campi-->
+            </titleStmt>
+            <publicationStmt>
+                <!-- riempiti i campi -->
+            </publicationStmt>
+            <sourceDesc>
+                <!-- riempiti i campi -->
+            </sourceDesc>
+        </fileDesc>
+    </teiHeader>
+    <text>
+        <front>
+            <titlePage>
+                <docAuthor>E. DE AMICIS</docAuthor>
+                <docTitle>
+                    <titlePart type= "main">CUORE</titlePart>
+                    <titlePart>Libro per i ragazzi</titlePart>
+                </docTitle>
+                <docEdition>98.a edizione</docEdition>
+                <graphic url= "publisher.png">
+                    <docImprint>
+                        <pubPlace>MILANO</pubPlace>
+                        <publisher>FRATELLI TREVES, EDITORI</publisher>
+                        <date>1889</date>
+                    </docImprint>
+            </titlePage>
+            </front>
+￼￼           
+            <body>
+                <!-- inserire il testo -->
+            </body>
+
+            <back>
+                <!-- info di annex -->
+            </back>
+        </text>
+    </TEI>
