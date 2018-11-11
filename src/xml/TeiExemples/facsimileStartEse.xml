@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI>
+    <teiHeader>
+        <!-- componenti tei header -->
+    </teiHeader>
+
+    <text>
+        <body>
+            <div>
+                <pb facs="#page1" n="1" xml:id="page-1" />
+                <p>Lorem ipsum ... <gloss facs="#det1">semper</gloss>
+                </p>
+            </div>
+        </body>
+    </text>
+
+    <facsimile>
+        <surface xml:id="page1" start="#page-1" ulx="0" uly="0" lrx="500" lry="321">
+            <graphic url="page1.png" />
+            <zone xml:id="line1" ulx="50" uly="80" lrx="200" lry="321">
+                <graphic url="line1.png" />
+                <note>First page.</note>
+            </zone>
+            <zone xml:id="det1" ulx="120" uly="48" lrx="143" lry="56">
+                <graphic url="gloss.png" />
+                <note>Scribe gloss.</note>
+            </zone>
+        </surface>
+    </facsimile>
+</TEI>

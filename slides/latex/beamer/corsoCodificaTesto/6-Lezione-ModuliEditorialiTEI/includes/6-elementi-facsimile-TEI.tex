@@ -102,8 +102,12 @@ manoscritto
 
   \begin{block}{Esempio edizione digitale image-based}
     \textit{Electronic Beowulf}
+    \\\url{http://ebeowulf.uky.edu/}
   \end{block}
   
+  \begin{center}
+      \includegraphics[width=.7\textwidth]{imgs/eBeow.png}
+  \end{center}
 \end{frame}
 
 
@@ -206,7 +210,12 @@ manoscritto
 
   \begin{block}{Esempio livelli di edizione}
     \textit{Vercelli Book}
+    \\url{http://vbd.humnet.unipi.it/beta/}
   \end{block}
+
+   \begin{center}
+      \includegraphics[width=.7\textwidth]{imgs/vercelliDigitale.png}
+  \end{center}
   
 \end{frame}
 
@@ -310,10 +319,10 @@ manoscritto
   %\end{center}
 
   \begin{block}{Edizione digitale Facsimile}
-    Includendo il modulo transcr nello schema di codifica TEI si rende disponibile un attributo globale \texttt{@facs}
+    Includendo il modulo \textbf{transcr} nello schema di codifica TEI si rende disponibile un attributo globale \texttt{@facs}
   \end{block}
   \begin{block}{Edizione digitale Facsimile}
-    \textit{\texttt{@facs (facsimile)} points to all or part of an image which corresponds with the content of the element}
+    \textit{\texttt{@facs (facsimile)} collega tutta o parte di una immagine al corrispettivo contenuto di un elemento.}
   \end{block}
 
 \end{frame}
@@ -369,12 +378,11 @@ manoscritto
   %    \includegraphics[width=.2\textwidth]{../imgs/tei-r.pdf}
   %\end{center}
 
-\textbf{oltre a \texttt{@facs} è necessario usare gli altri elementi del modulo transcrption per collegare testo a immagine}
   \begin{block}{Elemento Facsimile}
       
       \begin{itemize}
           \item \texttt{<facsimile>} 
-          \item[] contains a representation of some written source in the form of a set of images rather than as transcribed or encoded text.
+          \item[] costituisce una rappresentazione digitale di una fonte con testo scritto espressa attraverso un insieme di immagini, piuttosto che attraverso la trascrizione e la codifica del testo.
       \end{itemize}
   \end{block}
 
@@ -388,19 +396,20 @@ manoscritto
   %    \includegraphics[width=.2\textwidth]{../imgs/tei-r.pdf}
   %\end{center}
 
-\textbf{oltre a \texttt{@facs} è necessario usare gli altri elementi del modulo transcrption per collegare testo a immagine}
   \begin{block}{Elemento Facsimile}
       
       \begin{itemize}
           \item \texttt{<surface>}
-          \item[] defines a written surface in terms of a rectangular coordinate space, optionally grouping one or more graphic representations of that space, and rectangular zones of interest within it.
+          \item[] definisce una superficie di scrittura in termini di uno spazio espresso attraverso un sistema di coordinate. 
+          \\ Opzionalmente può essere inserita una collezione di elementi \texttt{graphic} che rappresentano graficamente lo spazio indicato. E' possibile caratterizzare la superficie con successivi elementi \texttt{zone} che rappresentano specifiche regioni di interesse su di essa.
       \end{itemize}
   \end{block}
 
-  \textit{L'attributo \texttt{@start} points to an element which encodes the starting position of the text corresponding to the inscribed part of the surface.}
+  \textit{L'attributo \texttt{@start} punta ad un elemento di testo che codifica dove ha inizio il contenuto della superficie interessata.}
 
 
 \end{frame}
+
 
 \begin{frame}
   \frametitle{Facsimile ed edizione digitale}
@@ -410,33 +419,17 @@ manoscritto
   %    \includegraphics[width=.2\textwidth]{../imgs/tei-r.pdf}
   %\end{center}
 
-\textbf{oltre a \texttt{@facs} è necessario usare gli altri elementi del modulo transcrption per collegare testo a immagine}
-  \begin{block}{Elemento Facsimile}
-      
-      \begin{itemize}
-          \item \texttt{<surface>}
-          \item[] defines a written surface in terms of a rectangular coordinate space, optionally grouping one or more graphic representations of that space, and rectangular zones of interest within it.
-      \end{itemize}
-  \end{block}
-
-\end{frame}
-
-\begin{frame}
-  \frametitle{Facsimile ed edizione digitale}
-  \addtocounter{nframe}{1}
-  
-  %\begin{center}
-  %    \includegraphics[width=.2\textwidth]{../imgs/tei-r.pdf}
-  %\end{center}
-
-\textbf{oltre a \texttt{@facs} è necessario usare gli altri elementi del modulo transcrption per collegare testo a immagine}
   \begin{block}{Elemento Facsimile}
       
       \begin{itemize}
           \item \texttt{<zone>}
-          \item[] defines a rectangular area contained within a surface element.
+          \item[] definisce un'area di interesse all'interno dell'elemento \texttt{surface}.
       \end{itemize}
   \end{block}
+
+   \begin{center}
+      \includegraphics[width=.5\textwidth]{imgs/zoneBellini.png}
+  \end{center}
 
 \end{frame}
 
@@ -455,7 +448,7 @@ manoscritto
   \end{block}
 
   \begin{block}{Elemento Facsimile}
-    La TEI permette una \textbf{grande flessibilità}: facsimile digitale con le immagini del ms, facsimile digitale con trascrizione del testo e facsimile digitale con trascrizione e collegamento all'immagine.
+    La TEI permette una \textbf{grande flessibilità}: facsimile digitale con le immagini del manoscritto; facsimile digitale con trascrizione del testo;  facsimile digitale con trascrizione del testo e collegamento all'immagine.
   \end{block}
 
 \end{frame}
@@ -468,7 +461,7 @@ manoscritto
   %    \includegraphics[width=.2\textwidth]{../imgs/tei-r.pdf}
   %\end{center}
 
-\textit{}{Quando il modulo transcr viene aggiunto allo schema di codifica è possibile scegliere fra:}
+\textit{}{Quando il modulo \textit{transcr} viene aggiunto allo schema di codifica è possibile scegliere fra:}
 
   \begin{block}{Elemento Facsimile}
       
@@ -546,7 +539,7 @@ manoscritto
     Grazie a un foglio di stile XSLT è possibile generare una pagina HMTL divisa in due riquadri (immagine e testo)
   \end{block}
   \begin{block}{Elemento Facsimile}
-    Nessun collegamento testo-immagine a livello diverso dalla pagina e non è possibile nemmeno individuare aree particolari delle immagini.  
+    Nessun collegamento testo-immagine a livello diverso dalla pagina e non è possibile nemmeno individuare aree particolari sulle immagini.  
     \\Infine, i puntatori alle immagini sono sparsi per tutto il documento.
   \end{block}
 
@@ -651,7 +644,7 @@ manoscritto
   %\begin{center}
   %    \includegraphics[width=.2\textwidth]{../imgs/tei-r.pdf}
   %\end{center}
-\textit{l'elemento facsimile invece di \texttt{<graphic>} può contenere una o più \texttt{<zone>}}
+\textit{l'elemento surface invece di \texttt{<graphic>} può contenere una o più \texttt{<zone>}}
 
   \begin{block}{Elemento Zone}
     
@@ -769,7 +762,7 @@ manoscritto
    </text>
    <facsimile>
    <surface xml:id="page1” start="\#page-1" ulx="0" uly="0" lrx="500" lry="321" >
-   <graphic url="page1.png”>
+   <graphic url="page1.png” />
    <zone xml:id="line1" ulx="50" uly="80" lrx="200" lry="321" >
    <graphic url="line1.png"/>
    <note>First page.</note> </zone>
@@ -915,7 +908,7 @@ manoscritto
   %\end{center}
 
   \begin{block}{Edizioni image-based: Esercizio}
-   \textbf{ Codificare lettera Bellini}
+   \textbf{ Codificare lettera Bellini utilizzando il tagset facsimile e il collegamento completo testo-immagine}
   \end{block}
 
 \end{frame}
