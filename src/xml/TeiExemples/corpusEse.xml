@@ -11,6 +11,8 @@ corpus] </text>
         <teiHeader>[metadati
 relativi al II testo]</teiHeader>
         <text> [secondo
-testo del corpus] </text>
+testo del corpus]
+<div> ciao</div>
+ </text>
     </TEI>
 </teiCorpus>
