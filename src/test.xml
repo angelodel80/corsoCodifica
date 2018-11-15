@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI>
+<teiHeader>
+    <fileDesc><title>Topolino</title></fileDesc>
+    <profileDesc><p>Pluto</p></profileDesc>
+</teiHeader>
+<text>
+<body>
+    <div><p>testo di <seg>qualche</seg> <rs>codice</rs></p></div>
+    <div><head>titolo</head></div>
+</body>
+
+</text>
+
+</TEI>
