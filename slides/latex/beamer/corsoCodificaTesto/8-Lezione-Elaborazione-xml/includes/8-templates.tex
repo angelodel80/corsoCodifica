@@ -1,23 +1,23 @@
-\begin{frame}
-    \frametitle{Visualizzare ed Elaborare documenti XML}
-    \addtocounter{nframe}{1}
+% \begin{frame}
+%     \frametitle{Visualizzare ed Elaborare documenti XML}
+%     \addtocounter{nframe}{1}
     
-    %\begin{center}
-    %    \includegraphics[width=.2\textwidth]{../imgs/tei-r.pdf}
-    %\end{center}
-    %\textit{In parte già disponibili nei moduli TEI di base}
+%     %\begin{center}
+%     %    \includegraphics[width=.2\textwidth]{../imgs/tei-r.pdf}
+%     %\end{center}
+%     %\textit{In parte già disponibili nei moduli TEI di base}
 
-     \begin{block}{Perché visualizzare il testo}
-    %     \emph{Per la critica testuale indispensabili i moduli}
-         \begin{itemize}
-            \item  Controllare la codifica e correggere i refusi
-             \item Assicurarsi che tutto sia stato trascritto correttamente
-             \item Mostrare il testo a persone che non conoscono XML-TEI
-             \item Disporre di una versione del lavoro fuibile
-        \end{itemize}
-     \end{block}
+%      \begin{block}{Perché visualizzare il testo}
+%     %     \emph{Per la critica testuale indispensabili i moduli}
+%          \begin{itemize}
+%             \item  Controllare la codifica e correggere i refusi
+%              \item Assicurarsi che tutto sia stato trascritto correttamente
+%              \item Mostrare il testo a persone che non conoscono XML-TEI
+%              \item Disporre di una versione del lavoro fuibile
+%         \end{itemize}
+%      \end{block}
     
-\end{frame}
+% \end{frame}
 
 \begin{frame}
     \frametitle{Visualizzare ed Elaborare documenti XML}
@@ -39,7 +39,7 @@
     \addtocounter{nframe}{1}
     
     \begin{center}
-        \includegraphics[width=.9\textwidth]{imgs/Schema-template.png}
+        \includegraphics[width=.95\textwidth]{imgs/Schema-template.png}
     \end{center}
     %\textit{In parte già disponibili nei moduli TEI di base}
 
@@ -59,8 +59,8 @@
          \begin{itemize}
              \item \textbf{name}: nome del template;
              \item \textbf{match}: pattern che indica l'elemento su cui applicare il modello;
-             \item \textbf{priority}: priorità del modello;
-             \item \textbf{mode}: modalità di elaborazione, che consente all'elemento di essere elaborato più volte per produrre un risultato diverso ogni volta.
+             \item \textbf{priority}: priorità del modello;
+             \item \textbf{mode}: modalità di elaborazione, che consente all'elemento di essere elaborato più volte per produrre un risultato diverso ogni volta.
         \end{itemize}
      \end{block}
     
@@ -101,7 +101,7 @@
 
      \begin{block}{Elemento \texttt{<xsl:value-of>}}
         Restituisce il contenuto del nodo selezionato secondo l'espressione XPath indicata.
-        \\ \textit{(Il contenuto di un elemento è costituito da tutti i caratteri che si trovano fra tag di apertura e tag di chiusura)}
+        \\ \textit{(Il contenuto di un elemento è costituito da tutti i caratteri che si trovano fra tag di apertura e tag di chiusura)}
      \end{block}
     
 \end{frame}
@@ -111,7 +111,7 @@
     \addtocounter{nframe}{1}
     
     \begin{center}
-        \includegraphics[width=.9\textwidth]{imgs/Schema-value-of.png}
+        \includegraphics[width=.95\textwidth]{imgs/Schema-value-of.png}
     \end{center}
     %\textit{In parte già disponibili nei moduli TEI di base}
 
@@ -185,7 +185,7 @@
     \addtocounter{nframe}{1}
     
     \begin{center}
-        \includegraphics[width=.9\textwidth]{imgs/Schema-apply-templates.png}
+        \includegraphics[width=.95\textwidth]{imgs/Schema-apply-templates.png}
     \end{center}
     %\textit{In parte già disponibili nei moduli TEI di base}
 
@@ -245,11 +245,11 @@
     %\textit{In parte già disponibili nei moduli TEI di base}
 
      \begin{block}{Elemento \texttt{<xsl:for-each>}}
-        Se sono presenti più nodi con lo stesso nome (e manca un’istruzione ricorsiva precedente) \texttt{<xsl:value-of>} restituisce il valore del primo che incontra.
+        Se sono presenti più nodi con lo stesso nome (e manca un’istruzione ricorsiva precedente) \texttt{<xsl:value-of>} restituisce il valore del primo che incontra.
      \end{block}
 
      \begin{block}{Elemento \texttt{<xsl:for-each>}}
-        È quindi possibile usare l’istruzione \texttt{<xsl:for-each>} e applicare un’istruzione \texttt{<xsl:value-of>} a tutti i nodi identificati dalla regola.
+        è quindi possibile usare l’istruzione \texttt{<xsl:for-each>} e applicare un’istruzione \texttt{<xsl:value-of>} a tutti i nodi identificati dalla regola.
      \end{block}
 
 \end{frame}
@@ -259,7 +259,7 @@
     \addtocounter{nframe}{1}
     
     \begin{center}
-        \includegraphics[width=.9\textwidth]{imgs/Schema-for-each.png}
+        \includegraphics[width=.95\textwidth]{imgs/Schema-for-each.png}
     \end{center}
     %\textit{In parte già disponibili nei moduli TEI di base}
 
@@ -296,8 +296,8 @@
         
         \texttt{<xsl:template match="/" >}
         \\\texttt{<html><head>}
-        \\\texttt{<title><xsl:value-of select="TEI/teiHeader/fileDesc/title"/></title></head>}
-        \\\texttt{<body><div>}
+        \\\texttt{<title><xsl:value-of select="TEI/teiHeader/fileDesc/title"/></title>}
+        \\\texttt{</head><body><div>}
         \\\texttt{<xsl:for-each select="//div" >}
         \\\texttt{<div><xsl:value-of select="./p" /></div>}
         \\\texttt{</xsl:for-each></div></body></html>}
@@ -323,7 +323,7 @@
      \end{block}
 
      \begin{block}{Elemento \texttt{<xsl:text>}}
-        Molto utile se si è deciso di eliminare tutti gli spazi e gli a capo.
+        Molto utile se si è deciso di eliminare tutti gli spazi e gli a capo.
      \end{block}
      
 
@@ -334,7 +334,7 @@
     \addtocounter{nframe}{1}
     
     \begin{center}
-        \includegraphics[width=.9\textwidth]{imgs/Schema-text.png}
+        \includegraphics[width=.95\textwidth]{imgs/Schema-text.png}
     \end{center}
     %\textit{In parte già disponibili nei moduli TEI di base}
 
@@ -371,7 +371,7 @@
         
         \texttt{<xsl:for-each select="\$attr" >}
         \\\texttt{<xsl:value-of select="concat('[',position(),']',current())" />}
-        \\\texttt{<xsl:text>&#32;</xsl:text>}
+        \\\texttt{<xsl:text>\&\#32;</xsl:text>}
         \\\texttt{</xsl:for-each>}
 
      \end{block}
@@ -399,7 +399,7 @@
     \addtocounter{nframe}{1}
     
     \begin{center}
-        \includegraphics[width=.9\textwidth]{imgs/Schema-if.png}
+        \includegraphics[width=.95\textwidth]{imgs/Schema-if.png}
     \end{center}
     %\textit{In parte già disponibili nei moduli TEI di base}
 
@@ -469,7 +469,7 @@
     \addtocounter{nframe}{1}
     
     \begin{center}
-        \includegraphics[width=.9\textwidth]{imgs/Schema-choose.png}
+        \includegraphics[width=.95\textwidth]{imgs/Schema-choose.png}
     \end{center}
     %\textit{In parte già disponibili nei moduli TEI di base}
 
@@ -544,7 +544,7 @@
     \addtocounter{nframe}{1}
     
     \begin{center}
-        \includegraphics[width=.9\textwidth]{imgs/Schema-sort.png}
+        \includegraphics[width=.95\textwidth]{imgs/Schema-sort.png}
     \end{center}
     %\textit{In parte già disponibili nei moduli TEI di base}
 
@@ -619,7 +619,7 @@
     \addtocounter{nframe}{1}
     
     \begin{center}
-        \includegraphics[width=.9\textwidth]{imgs/Schema-variable.png}
+        \includegraphics[width=.95\textwidth]{imgs/Schema-variable.png}
     \end{center}
     %\textit{In parte già disponibili nei moduli TEI di base}
 
@@ -652,13 +652,13 @@
     %    \includegraphics[width=.2\textwidth]{../imgs/tei-r.pdf}
     %\end{center}
     %\textit{In parte già disponibili nei moduli TEI di base}
-    \textbf{La definizione di variabili può assumere tre distinte forme:}
+    \textbf{La definizione di variabili può assumere tre distinte forme:}
 
      \begin{block}{Esempio Elemento \texttt{<xsl:variable>}}
         \begin{itemize}
-            \item creazione di una variabile il cui valore è una stringa vuota
-            \item creazione di una variabile avente valore definito dall’attributo select
-            \item creazione mediante inclusione di contenuto nel corpo dell’elemento
+            \item creazione di una variabile il cui valore è una stringa vuota
+            \item creazione di una variabile avente valore definito dall'attributo select
+            \item creazione mediante inclusione di contenuto nel corpo dell'elemento
         \end{itemize}
      \end{block}
 \end{frame}
@@ -671,7 +671,7 @@
     %    \includegraphics[width=.2\textwidth]{../imgs/tei-r.pdf}
     %\end{center}
     %\textit{In parte già disponibili nei moduli TEI di base}
-    \textbf{La definizione di variabili può assumere tre distinte forme:}
+    \textbf{La definizione di variabili può assumere tre distinte forme:}
 
      \begin{block}{Esempio Elemento \texttt{<xsl:variable>}}
         \begin{itemize}
@@ -711,7 +711,7 @@
     \addtocounter{nframe}{1}
     
     \begin{center}
-        \includegraphics[width=.9\textwidth]{imgs/Schema-param.png}
+        \includegraphics[width=.95\textwidth]{imgs/Schema-param.png}
     \end{center}
     %\textit{In parte già disponibili nei moduli TEI di base}
 
@@ -769,11 +769,11 @@
     %\textit{In parte già disponibili nei moduli TEI di base}
 
      \begin{block}{Elemento \texttt{<xsl:call-template>}}
-        Dopo aver assegnato un nome ad un template, è possibile richiamarlo con l’istruzione \texttt{<xsl:call-template>}.
+        Dopo aver assegnato un nome ad un template, è possibile richiamarlo con l’istruzione \texttt{<xsl:call-template>}.
      \end{block}
 
      \begin{block}{Elemento \texttt{<xsl:call-template>}}
-        Per invocare un template passando dei parametri è possibile utilizzare l’elemento \texttt{<xsl:with-param>} nel corpo dell’elemento \texttt{<xsl:call-template>} o \texttt{<xsl:apply-templates>} indicando il nome del parametro ed il valore.
+        Per invocare un template passando dei parametri è possibile utilizzare l’elemento \texttt{<xsl:with-param>} nel corpo dell’elemento \texttt{<xsl:call-template>} o \texttt{<xsl:apply-templates>} indicando il nome del parametro ed il valore.
      \end{block}
 
 \end{frame}
@@ -783,7 +783,7 @@
     \addtocounter{nframe}{1}
     
     \begin{center}
-        \includegraphics[width=.9\textwidth]{imgs/Schema-call-template.png}
+        \includegraphics[width=.95\textwidth]{imgs/Schema-call-template.png}
     \end{center}
     %\textit{In parte già disponibili nei moduli TEI di base}
 
@@ -820,7 +820,8 @@
         
         \texttt{<body>}
         \\\texttt{<xsl:call-template name="body" >}
-        \\\texttt{<xsl:with-param name="style" >color:red</xsl:with-param>}
+        \\\texttt{<xsl:with-param name="style" >}
+        \\\texttt{color:red </xsl:with-param>}
         \\\texttt{</xsl:call-template></body>}
 
      \end{block}
@@ -838,7 +839,7 @@
     %\textit{In parte già disponibili nei moduli TEI di base}
 
      \begin{block}{Elemento \texttt{<xsl:element>}}
-        Per creare elementi è possibile utilizzare l'istruzione \texttt{<xsl:element>}.
+        Per creare elementi è possibile utilizzare l'istruzione \texttt{<xsl:element>}.
      \end{block}
 
 \end{frame}
@@ -848,7 +849,7 @@
     \addtocounter{nframe}{1}
     
     \begin{center}
-        \includegraphics[width=.9\textwidth]{imgs/Schema-element.png}
+        \includegraphics[width=.95\textwidth]{imgs/Schema-element.png}
     \end{center}
     %\textit{In parte già disponibili nei moduli TEI di base}
 
@@ -859,7 +860,7 @@
     \addtocounter{nframe}{1}
     
     \begin{center}
-        \includegraphics[width=.9\textwidth]{imgs/element-example.png}
+        \includegraphics[width=.95\textwidth]{imgs/element-example.png}
     \end{center}
     %\textit{In parte già disponibili nei moduli TEI di base}
 
@@ -878,7 +879,7 @@
     %\textit{In parte già disponibili nei moduli TEI di base}
 
      \begin{block}{Elemento \texttt{<xsl:attribute>}}
-        E' possibile create attributi utilizzando l’elemento \texttt{<xsl:attribute>} ed indicando negli attributi \textit{name} e \textit{namespace} (opzionale) il nome e il namespace di appartenenza dell’attributo.
+        E' possibile creare attributi utilizzando l’elemento \texttt{<xsl:attribute>} ed indicando negli attributi \textit{name} e \textit{namespace} (opzionale) il nome e il namespace di appartenenza dell’attributo.
      \end{block}
 
 \end{frame}
@@ -888,7 +889,7 @@
     \addtocounter{nframe}{1}
     
     \begin{center}
-        \includegraphics[width=.9\textwidth]{imgs/Schema-attributo.png}
+        \includegraphics[width=.95\textwidth]{imgs/Schema-attributo.png}
     \end{center}
     %\textit{In parte già disponibili nei moduli TEI di base}
 
@@ -928,12 +929,9 @@
 
      \begin{block}{Altri Elemento di creazione}
         \begin{itemize}
-            \item \textbf{commenti}: mediante \texttt{<xsl:comment>} specificando fra i tag di apertura e chiusura il testo del commento:
-            \item[] ...
+            \item \textbf{commenti}: mediante \texttt{<xsl:comment>} specificando fra i tag di apertura e chiusura il testo del commento
             \item \textbf{processing instruction}: si utilizza \texttt{<xsl:processing-instruction>} specificando mediante l’attributo name il nome ed inserendone il contenuto tra i tag di apertura e chiusura
-            \item[] ...
             \item \textbf{testo}: si usa \texttt{<xsl:text>} specificando nel corpo il contenuto della sezione CDATA.
-            \item[] ...  
         \end{itemize}
      \end{block}
 
@@ -950,7 +948,7 @@
     %\textit{In parte già disponibili nei moduli TEI di base}
 
      \begin{block}{Gestione spazi bianchi}
-        La gestione degli spazi bianchi nel documento di origine è specificato dalle regole di scarto attraverso le istruzioni \textbf{xsl:preserve-space} e \textbf{xsl:strip-space}.
+        La gestione degli spazi bianchi nel documento di origine è specificato dalle regole di scarto attraverso le istruzioni \textbf{xsl:preserve-space} e \textbf{xsl:strip-space}.
      \end{block}
 
 \end{frame}
@@ -981,7 +979,7 @@
     \addtocounter{nframe}{1}
     
     \begin{center}
-        \includegraphics[width=.9\textwidth]{imgs/Schema-preserve-space.png}
+        \includegraphics[width=.95\textwidth]{imgs/Schema-preserve-space.png}
     \end{center}
 
 \end{frame}
@@ -1012,7 +1010,7 @@
     \addtocounter{nframe}{1}
     
     \begin{center}
-        \includegraphics[width=.9\textwidth]{imgs/Schema-strip-space.png}
+        \includegraphics[width=.95\textwidth]{imgs/Schema-strip-space.png}
     \end{center}
 
 \end{frame}

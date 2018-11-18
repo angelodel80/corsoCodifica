@@ -1,23 +1,23 @@
-\begin{frame}
-    \frametitle{Visualizzare ed Elaborare documenti XML}
-    \addtocounter{nframe}{1}
+% \begin{frame}
+%     \frametitle{Visualizzare ed Elaborare documenti XML}
+%     \addtocounter{nframe}{1}
     
-    %\begin{center}
-    %    \includegraphics[width=.2\textwidth]{../imgs/tei-r.pdf}
-    %\end{center}
-    %\textit{In parte già disponibili nei moduli TEI di base}
+%     %\begin{center}
+%     %    \includegraphics[width=.2\textwidth]{../imgs/tei-r.pdf}
+%     %\end{center}
+%     %\textit{In parte già disponibili nei moduli TEI di base}
 
-     \begin{block}{Perché visualizzare il testo}
-    %     \emph{Per la critica testuale indispensabili i moduli}
-         \begin{itemize}
-            \item  Controllare la codifica e correggere i refusi
-             \item Assicurarsi che tutto sia stato trascritto correttamente
-             \item Mostrare il testo a persone che non conoscono XML-TEI
-             \item Disporre di una versione del lavoro fuibile
-        \end{itemize}
-     \end{block}
+%      \begin{block}{Perché visualizzare il testo}
+%     %     \emph{Per la critica testuale indispensabili i moduli}
+%          \begin{itemize}
+%             \item  Controllare la codifica e correggere i refusi
+%              \item Assicurarsi che tutto sia stato trascritto correttamente
+%              \item Mostrare il testo a persone che non conoscono XML-TEI
+%              \item Disporre di una versione del lavoro fuibile
+%         \end{itemize}
+%      \end{block}
     
-\end{frame}
+% \end{frame}
 
 
 
@@ -85,9 +85,9 @@
      \begin{block}{XSL Transformations}
     %     \emph{Per la critica testuale indispensabili i moduli}
          \begin{itemize}
-            \item XSLT è un vero e proprio linguaggio di programmazione che usa la sintassi XML
+            \item XSLT è un vero e proprio linguaggio di programmazione che usa la sintassi XML
             \item Usa namespace differenti per distinguere fra istruzioni proprie (precedute da \textbf{xsl:}) e output
-            \item Legge e scrive alberi XML (ma è possibile ottenere come output anche del
+            \item Legge e scrive alberi XML (ma è possibile ottenere come output anche del
             codice HTML o del testo semplice)
             \item Versione attuale: XSLT 3.0 \url{(https://www.w3.org/TR/xslt-30/)}
         \end{itemize}
@@ -110,6 +110,23 @@
             \item generazione di testo costante;
             \item soppressione del contenuto;
             \item spostamento del testo (es., scambio ordine di nome e cognome);
+        \end{itemize}
+     \end{block}
+    
+\end{frame}
+
+\begin{frame}
+    \frametitle{Fondamenti Extensible Stylesheet Language}
+    \addtocounter{nframe}{1}
+    
+    %\begin{center}
+    %    \includegraphics[width=.2\textwidth]{../imgs/tei-r.pdf}
+    %\end{center}
+    %\textit{In parte già disponibili nei moduli TEI di base}
+
+     \begin{block}{XSL Capacità di trasformazione}
+    %     \emph{Per la critica testuale indispensabili i moduli}
+         \begin{itemize}
             \item duplicazione del testo (ad es., tabella di contenuti copiando i titoli);
             \item ordinamento dei contenuti (ad es, termini in ordine alfabetico);
             \item elaborazione di nuove informazioni in base a quelle esistenti (es. statistiche)
@@ -130,7 +147,7 @@
      \begin{block}{Caratteristiche fondamentali di XSLT}
     %     \emph{Per la critica testuale indispensabili i moduli}
          \begin{itemize}
-            \item Basato su regole di trasformazione (\textit{modello pattern-match})
+            \item Basato su regole di trasformazione (\textit{modello pattern-matching})
             \item Le regole sono dichiarative \textit{(specificano che cosa deve essere generato quando si incontra un certo modello nel documento)}
             \item Le regole possono essere disposte in qualsiasi ordine
         \end{itemize}
@@ -151,9 +168,9 @@
      \begin{block}{Modalità di Trasformazioni XSLT}
     %     \emph{Per la critica testuale indispensabili i moduli}
          \begin{itemize}
-            \item \textbf{Lato server}, utilizzando script Java, ASP, PHP etc. , per produrre “al volo” pagine HTML sulla base di documenti XML (es. Cocoon);
+            \item \textbf{Lato server}, utilizzando script Java, ASP, PHP ecc. , per produrre "al volo" pagine HTML sulla base di documenti XML (es. Cocoon);
             \item \textbf{Lato client}, sui Browser che supportano questa tecnologia;
-            \item tramite un programma separato (come ad esempio Oxygen), che permette di applicare uno o più scenari di trasformazione.
+            \item tramite un programma separato (come ad esempio Oxygen), che permette di applicare uno o più scenari di trasformazione.
         \end{itemize}
      \end{block}
     
@@ -225,7 +242,7 @@
     \addtocounter{nframe}{1}
     
     \begin{center}
-        \includegraphics[width=.8\textwidth]{imgs/template-modello.png}
+        \includegraphics[width=.9\textwidth]{imgs/template-modello.png}
     \end{center}
     %\textit{In parte già disponibili nei moduli TEI di base}
 
@@ -258,7 +275,7 @@
     \addtocounter{nframe}{1}
     
     \begin{center}
-        \includegraphics[width=.8\textwidth]{imgs/Processo-xslt.png}
+        \includegraphics[width=.9\textwidth]{imgs/Processo-xslt.png}
     \end{center}
     %\textit{In parte già disponibili nei moduli TEI di base}
 
@@ -314,12 +331,12 @@
 
      \begin{block}{Tipi di nodo nell'albero XML}
          \begin{itemize}
-            \item Il \textbf{documento} stesso costituisce la radice (\textit{l’elemento radice XML non è la radice dell'albero di rappresentazione!})
+            \item Il \textbf{documento} stesso costituisce la radice (\textit{l'elemento radice XML non è la radice dell'albero di rappresentazione!})
             \item L'intero albero è suddivisibile in sotto-alberi
-            \item I nodi più importanti sono gli elementi e i loro attributi
-            \item Le entità vengono "tradotte" nel testo loro assegnato al momento
+            \item I nodi più importanti sono gli elementi e i loro attributi
+            \item Le entità vengono "tradotte" nel testo loro assegnato al momento
             della dichiarazione
-            \item Lo spazio "vuoto" può essere considerato o no
+            \item Lo spazio "vuoto" può essere considerato o no
         \end{itemize}
      \end{block}
     
@@ -330,7 +347,7 @@
     \addtocounter{nframe}{1}
     
     \begin{center}
-        \includegraphics[width=.8\textwidth]{imgs/Schema-trasformazione.png}
+        \includegraphics[width=.75\textwidth]{imgs/Schema-trasformazione.png}
     \end{center}
     %\textit{In parte già disponibili nei moduli TEI di base}
 
