@@ -223,8 +223,8 @@
         
         \texttt{<xsl:template match="/" >}
         \\\texttt{<html><head>}
-        \\\texttt{<title><xsl:value-of select="TEI/teiHeader/fileDesc/title"/></title></head>}
-        \\\texttt{<body><div><span>1.</span>}
+        \\\texttt{<title><xsl:value-of select="TEI/teiHeader/fileDesc/title"/></title>}
+        \\\texttt{</head><body><div><span>1.</span>}
         \\\texttt{<xsl:apply-templates select="TEI/teiHeader/fileDesc" />}
         \\\texttt{</div></body></html></xsl:template>}
 
@@ -502,7 +502,7 @@
     %\end{center}
     %\textit{In parte già disponibili nei moduli TEI di base}
 
-     \begin{block}{Esempio Elemento \texttt{<xsl:if>}}
+     \begin{block}{Esempio Elemento \texttt{<xsl:choose>}}
         
         \texttt{<xsl:template match="tei:title" >}
         \\\texttt{<xsl:choose>}
