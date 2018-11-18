@@ -1,0 +1,2 @@
+#!/bin/bash
+rm 8-elaborazione-XML.aux 8-elaborazione-XML.log 8-elaborazione-XML.nav 8-elaborazione-XML.out 8-elaborazione-XML.pdf 8-elaborazione-XML.snm 8-elaborazione-XML.toc 8-elaborazione-XML.vrb 8-elaborazione-XML.log

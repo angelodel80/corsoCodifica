@@ -1,13 +1,32 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE TEI SYSTEM "tei_all.dtd">
 <TEI>
-<teiHeader>
-    <fileDesc><title>Topolino</title></fileDesc>
+<teiHeader xml:id="ID098765432">
+    <fileDesc>
+        <titleStmt>
+            <title>Topolino</title>
+            <author>Paperino</author>
+        </titleStmt>
+        <publicationStmt><p>unpublished</p></publicationStmt>
+        <sourceDesc><bibl>questo è un file di test</bibl></sourceDesc>
+    </fileDesc>
+    
     <profileDesc><p>Pluto</p></profileDesc>
+    
 </teiHeader>
 <text>
 <body>
-    <div><p>testo di <seg>qualche</seg> <rs>codice</rs></p></div>
-    <div><head>titolo</head></div>
+    <div n="1" type="chapter">
+        <head>primo capitolo</head>
+        <p>testo di <seg>qualche</seg> <rs>codice</rs></p>
+    </div>
+    <div n="2" type="chapter">
+        <head>secondo capitolo</head>
+        <p>qui inizia il secondo capitolo</p>
+    </div>
+    <div n="4" type="note" subtype="ora"><p>10:11</p></div>
+    <div n="3" type="tel"><p>050 315 2000</p></div>
+    <div n="10" type="cel"><p>349 66 76 123</p></div>
 </body>
 
 </text>

@@ -3,12 +3,15 @@
 
 <xsl:output 
     method="html"
+    indent="yes"
      />
 <xsl:template match="/">
 <html>
     <head><title><xsl:value-of select="TEI/teiHeader/fileDesc/title"/></title></head>
     <body>
-        <div>1.<xsl:apply-templates select="TEI/teiHeader/fileDesc" /></div>
+        <div><span>1.</span>
+            <xsl:apply-templates select="TEI/teiHeader/fileDesc" />
+        </div>
         <div>2.<xsl:apply-templates select="TEI/teiHeader/profileDesc" /></div>
         <div style="color:blue"><xsl:apply-templates select="TEI/text/body" /></div>
     </body>
@@ -17,6 +20,9 @@
 
 <xsl:template match="fileDesc">
     <h1>File Desc</h1>
+    <p>
+        <xsl:value-of select="titleStmt/title" disable-output-escaping="no" />
+    </p>
 </xsl:template>
 
 <xsl:template match="profileDesc">
