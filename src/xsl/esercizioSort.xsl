@@ -19,7 +19,7 @@
                             <xsl:value-of select="@n" />
                             <xsl:text>|</xsl:text>
                             <xsl:value-of select="current()" />
-                        </li>
+                        </li>   
                     </xsl:for-each>
                     </ul>
                 </div>
