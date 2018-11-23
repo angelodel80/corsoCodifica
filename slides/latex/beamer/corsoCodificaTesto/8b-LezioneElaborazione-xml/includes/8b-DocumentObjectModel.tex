@@ -8,7 +8,7 @@
     %\textit{In parte già disponibili nei moduli TEI di base}
 
      \begin{block}{Documenti Object Model (DOM)}
-        The Document Object Model (DOM) is an application programming interface (API) for XML.
+        The Document Object Model (DOM) is a language-independed application programming interface (API) for accessing and manipulating XML documents (e HTML).
         \\ The DOM maps out an entire XML document as a hierarchy of nodes.
 
     %     \emph{Per la critica testuale indispensabili i moduli}
@@ -20,8 +20,6 @@
         % \end{itemize}
      \end{block}
 
-
-    
 \end{frame}
 
 
@@ -30,61 +28,249 @@
     \addtocounter{nframe}{1}
     
     \begin{center}
-        \includegraphics[width=.9\textwidth]{imgs/XML-DOM.png}
+        \includegraphics[width=.7\textwidth]{imgs/XML-DOM.png}
     \end{center}
     \textit{In parte già disponibili nei moduli TEI di base}
 
 \end{frame}
 
-% The Document Object Model
-% The document object model (DOM) is, as previously mentioned, a way of representing the document
-% independent of browser type. It allows a developer to access the document via a common set of objects,
-% properties, methods, and events, and to alter the contents of the web page dynamically using scripts.
-% You should be aware that some small variations are usually added to the DOM by the browser
-% vendor. So, to guarantee that you don’t fall afoul of a particular implementation, the W3C has
-% provided a generic set of objects, properties, and methods that should be available in all browsers, in
-% the form of the DOM standard.
-% The DOM Standard
-% We haven’t talked about the DOM standard so far, and for a particular reason: It’s not the easiest
-% standard to follow. Supporting a generic set of properties and methods has proved to be a very
-% complex task, and the DOM standard has been broken down into separate levels and sections
-% to deal with the different areas. The different levels of the standard are all at differing stages of
-% completion.
+\begin{frame}
+    \frametitle{Visualizzare ed Elaborare documenti XML}
+    \addtocounter{nframe}{1}
+    
+    %\begin{center}
+    %    \includegraphics[width=.2\textwidth]{../imgs/tei-r.pdf}
+    %\end{center}
+    %\textit{In parte già disponibili nei moduli TEI di base}
 
-% Level 0
-% Level 0 is a bit of a misnomer, because there wasn’t really a level 0 of the standard. This term in fact
-% refers to the “old way” of doing things—the methods implemented by the browser vendors before the
-% DOM standard. Someone mentioning level 0 properties is referring to a more linear notation of accessing
-% properties and methods. For example, typically you’d reference items on a form with the following code:
-% document.forms[0].elements[1].value = "button1";
-% We’re not going to cover such properties and methods in this chapter, because they have been
-% superseded by newer methods.
+     \begin{block}{Documenti Object Model (DOM)}
+        Each part of an XML-TEI documenti is a type of a node containing different kinds of data
 
-% Level 1
-% Level 1 is the first version of the standard. It is split into two sections: One is defined as core
-% (objects, properties, and methods that can apply to both XML and HTML) and the other as HTMLThe Document Object Model
-% ❘ 235
-% (HTML‐specific objects, properties, and methods). The first section deals with how to go about
-% navigating and manipulating the structure of the document. The objects, properties, and methods in
-% this section are very abstract. The second section deals with HTML only and offers a set of objects
-% corresponding to all the HTML elements. This chapter mainly deals with the second section—
-% level 1 of the standard.
-% In 2000, level 1 was revamped and corrected, though it only made it to a working draft and not to a
-% full W3C recommendation.
+     \end{block}
 
-% Level 2
-% Level 2 is complete and many of the properties, methods, and events have been implemented
-% by today’s browsers. It has sections that add specifications for events and style sheets to the
-% specifications for core and HTML‐specific properties and events. (It also provides sections on
-% views and traversal ranges, neither of which is covered in this book; you can find more information
-% at www.w3.org/TR/2000/PR‐DOM‐Level‐2‐Views‐20000927/ and www.w3.org/TR/2000/
-% PR‐DOM‐Level‐2‐Traversal‐Range‐20000927/ .)
+     \begin{block}{Documenti Object Model (DOM)}
+        Grazie alla rappresentazione gerarchica messa a disposizione dal DOM è possibile avere un livello di controllo a granularità molto fine per manipolare quasi tutti gli aspetti del documento.
+     \end{block}
+     
+\end{frame}
 
-% Level 3
-% Level 3 achieved recommendation status in 2004. It is intended to resolve a lot of the complications
-% that still exist in the event model in level 2 of the standard, and adds support for XML features,
-% such as content models and being able to save the DOM as an XML document.
-% Level 4
-% In May 2014, DOM level 4 reached candidate recommendation status. It consolidates DOM level 3
-% with several independent components. At the time of this writing, no modern browser supports
-% DOM level 4, although that will change in the future.
+\begin{frame}
+    \frametitle{Visualizzare ed Elaborare documenti XML}
+    \addtocounter{nframe}{1}
+    
+    %\begin{center}
+    %    \includegraphics[width=.2\textwidth]{../imgs/tei-r.pdf}
+    %\end{center}
+    %\textit{In parte già disponibili nei moduli TEI di base}
+
+     \begin{block}{Documenti Object Model (DOM): espressività}
+        Nodes can be removed, added, replaced, and modified easily by using the DOM API.
+     \end{block}
+
+     \begin{block}{Documenti Object Model (DOM)}
+        Il modello DOM è una specifica e una raccomandazione del consorzio di standardiziazione Web W3C.
+        \\\url{URL/TO/DOM/W3C/RECOMMENDATION}
+     \end{block}
+     
+\end{frame}
+
+\begin{frame}
+    \frametitle{Visualizzare ed Elaborare documenti XML}
+    \addtocounter{nframe}{1}
+    
+    %\begin{center}
+    %    \includegraphics[width=.2\textwidth]{../imgs/tei-r.pdf}
+    %\end{center}
+    %\textit{In parte già disponibili nei moduli TEI di base}
+
+     \begin{block}{Documenti Object Model (DOM): Browser-Indipendent}
+        Una importante caratteristica del Modello e delle API DOM è la sua indipendenza dalla tecnologia di implementazione.
+        
+     \end{block}
+
+     \begin{block}{Tecnologia indipendente dal software}
+        DOM dovrebbe essere cross-platform, ma in realtà non tutti i browser implementano allo stesso modo le specifiche, così come non tutti i browser sono allineati all'ultima versione delle funzionalità (copertura non al 100\%).
+       
+     \end{block}
+     
+\end{frame}
+
+
+\begin{frame}
+    \frametitle{Visualizzare ed Elaborare documenti XML}
+    \addtocounter{nframe}{1}
+    
+    %\begin{center}
+    %    \includegraphics[width=.2\textwidth]{../imgs/tei-r.pdf}
+    %\end{center}
+    %\textit{In parte già disponibili nei moduli TEI di base}
+
+     \begin{block}{DOM Levels}
+       Esistono diverse versioni (livelli) dello standard DOM nonché diverse sezioni all'interno di esso.
+     \end{block}
+
+     \begin{block}{DOM Levels}
+       Per implementare nel modo più efficace possibile il Modello DOM, questo consta di 5 diverse versioni o approcci, detti livelli, a loro volta suddivisi in moduli.
+     \end{block}
+     
+\end{frame}
+
+\begin{frame}
+    \frametitle{Visualizzare ed Elaborare documenti XML}
+    \addtocounter{nframe}{1}
+    
+    %\begin{center}
+    %    \includegraphics[width=.2\textwidth]{../imgs/tei-r.pdf}
+    %\end{center}
+    %\textit{In parte già disponibili nei moduli TEI di base}
+
+     \begin{block}{le API con il linguaggio di programmazione javascript}
+       E' possibile sfruttare usando javascript nativo la rappresentazione ad albero di un documento XML e le funzionalità che DOM mette a disposizione per accedere, manipolare ed estrarre informazioni da un documento XML.
+     \end{block}
+     
+\end{frame}
+
+
+\begin{frame}
+    \frametitle{Visualizzare ed Elaborare documenti XML}
+    \addtocounter{nframe}{1}
+    
+    %\begin{center}
+    %    \includegraphics[width=.2\textwidth]{../imgs/tei-r.pdf}
+    %\end{center}
+    %\textit{In parte già disponibili nei moduli TEI di base}
+
+     \begin{block}{DOM Level 0}
+       Il livello 0 del DOM indica la madalità di operare fuori dalle specifiche W3C.
+     \end{block}
+     
+
+     \begin{block}{DOM Level 0}
+        Con DOM Level 0 si suppongono anche scelte imiplementative non cross-platform e non browser-independent.
+      \end{block}
+
+\end{frame}
+
+\begin{frame}
+    \frametitle{Visualizzare ed Elaborare documenti XML}
+    \addtocounter{nframe}{1}
+    
+    %\begin{center}
+    %    \includegraphics[width=.2\textwidth]{../imgs/tei-r.pdf}
+    %\end{center}
+    %\textit{In parte già disponibili nei moduli TEI di base}
+
+     \begin{block}{DOM Level 1}
+       DOM Level 1 è la prima versione dello standard (raccomandazione W3C nel 1998). La specifica definisce  oggetti, proprietà e funzionalità di base per navigare e manipolare la struttura di un documento XML (e HTML).
+     \end{block}
+     
+
+     \begin{block}{DOM Level 1}
+        Il DOM Level 1 è diviso in due sezioni:
+        \begin{itemize}
+            \item[1] \textbf{Generica} per la gestione di documenti XML e HTML
+            \item[2] \textbf{Specifica} per documenti HTML che estende la prima.
+        \end{itemize}
+      \end{block}
+
+\end{frame}
+
+\begin{frame}
+    \frametitle{Visualizzare ed Elaborare documenti XML}
+    \addtocounter{nframe}{1}
+    
+    %\begin{center}
+    %    \includegraphics[width=.2\textwidth]{../imgs/tei-r.pdf}
+    %\end{center}
+    %\textit{In parte già disponibili nei moduli TEI di base}
+
+     \begin{block}{DOM Level 2}
+       \textit{DOM Level 2} è un estensione del livello 1 e aggiunge a quest'ultimo numerose funzionalità e specifiche sezioni, come la gestione degli eventi e dei fogli di stile CSS.
+     \end{block}
+     
+
+     \begin{block}{DOM Level 2}
+       Tra i vari moduli che \textit{DOM Level 2} aggiunge, di particolare interesse è il modulo \textbf{DOM Traversal and Range}
+      \end{block}
+
+\end{frame}
+
+\begin{frame}
+    \frametitle{Visualizzare ed Elaborare documenti XML}
+    \addtocounter{nframe}{1}
+    
+    %\begin{center}
+    %    \includegraphics[width=.2\textwidth]{../imgs/tei-r.pdf}
+    %\end{center}
+    %\textit{In parte già disponibili nei moduli TEI di base}
+
+     
+      Lo standard \textit{DOM Level 3} ha raggiunto lo status di raccomandazione W3C nel 2004.
+     
+
+     \begin{block}{DOM Level 3}
+        \begin{itemize}
+            \item Migliora ed estende il modulo di gestione degli eventi definito nel DOM Level 2
+            \item Aggiunge funzionalità per supportare tutta la specifica della versione 1.0 di XML (es.: \textbf{XML namespace}, \textbf{XPath}, \textbf{DOM Validaton})
+            \item Caricamento e salvataggio dei documenti con serializzazione XML (\textbf{DOM Load and Save}).
+        \end{itemize}
+       
+      \end{block}
+
+\end{frame}
+
+
+\begin{frame}
+    \frametitle{Visualizzare ed Elaborare documenti XML}
+    \addtocounter{nframe}{1}
+    
+    %\begin{center}
+    %    \includegraphics[width=.2\textwidth]{../imgs/tei-r.pdf}
+    %\end{center}
+    %\textit{In parte già disponibili nei moduli TEI di base}
+
+     \begin{block}{DOM Level 4}
+     \textit{DOM Level 4} è la prossima versione ed estensione del Modello DOM sulla quale sta lavorando il W3C. Ancora non ha raggiunto lo status di raccomandazione e non è ancora supportata dai browser. 
+     \end{block}
+     
+
+     \begin{block}{DOM Level 4}
+       
+        \textbf{TROVARE QUALCHE NUOVA FREATURE E IL RAPPORTO CON ECMASCRIPT O ALTRO}
+       
+      \end{block}
+
+\end{frame}
+
+\begin{frame}
+    \frametitle{Visualizzare ed Elaborare documenti XML}
+    \addtocounter{nframe}{1}
+    
+    %\begin{center}
+    %    \includegraphics[width=.2\textwidth]{../imgs/tei-r.pdf}
+    %\end{center}
+    %\textit{In parte già disponibili nei moduli TEI di base}
+
+     \begin{block}{Supporto dei browser alle specifiche DOM}
+        DOM support became a huge priority for most browser vendors, and efforts have been ongoing to improve support with each release.
+     \end{block}
+     
+\end{frame}
+
+
+\begin{frame}
+    \frametitle{Visualizzare ed Elaborare documenti XML}
+    \addtocounter{nframe}{1}
+    
+    %\begin{center}
+    %    \includegraphics[width=.2\textwidth]{../imgs/tei-r.pdf}
+    %\end{center}
+    %\textit{In parte già disponibili nei moduli TEI di base}
+
+     \begin{block}{Supporto dei browser alle specifiche DOM}
+        
+     \end{block}
+     
+\end{frame}
+
+
