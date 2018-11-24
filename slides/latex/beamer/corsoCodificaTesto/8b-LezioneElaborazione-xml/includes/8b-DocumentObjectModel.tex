@@ -205,7 +205,7 @@
     %\textit{In parte già disponibili nei moduli TEI di base}
 
      
-      Lo standard \textit{DOM Level 3} ha raggiunto lo status di raccomandazione W3C nel 2004.
+      \textbf{Lo standard \textit{DOM Level 3} ha raggiunto lo status di raccomandazione W3C nel 2004.}
      
 
      \begin{block}{DOM Level 3}
@@ -348,9 +348,9 @@
      \end{block}
 
      \begin{block}{Il Modello DOM: principali caratteristiche}
-        \begin{itemize}
+
             A NodeList is an array-like object used to store an ordered list of nodes that are accessible by position
-        \end{itemize}
+       
      \end{block}
 
 \end{frame}
@@ -440,7 +440,115 @@
 \end{frame}
 
 
-%% piccolo approfondimento su Element Type - Text Type - Attribute Type
+%% piccolo approfondimento su Document Type - Element Type - Text Type - Attribute Type
+
+\begin{frame}
+    \frametitle{Visualizzare ed Elaborare documenti XML}
+    \addtocounter{nframe}{1}
+    
+    %\begin{center}
+    %    \includegraphics[width=.2\textwidth]{../imgs/tei-r.pdf}
+    %\end{center}
+    %\textit{In parte già disponibili nei moduli TEI di base}
+
+     \begin{block}{Il Modello DOM: Document Type}
+        \begin{itemize}
+            \item Represents an entire document and is the root node of a hierarchy
+            \item The document object is an instance of Document type, which allows for querying and retrieval of nodes in a number of different ways.
+        \end{itemize}
+     \end{block}
+
+     \begin{block}{Il Modello DOM: Document Type esempio}
+
+            \texttt{xmlRootElement = document.documentElement;}
+            \\\texttt{divElement = document.getElementById('divID');}
+            \\\texttt{myDivList = document.getElementsByTagName('div');}
+       
+     \end{block}
+
+\end{frame}
+
+\begin{frame}
+    \frametitle{Visualizzare ed Elaborare documenti XML}
+    \addtocounter{nframe}{1}
+    
+    %\begin{center}
+    %    \includegraphics[width=.2\textwidth]{../imgs/tei-r.pdf}
+    %\end{center}
+    %\textit{In parte già disponibili nei moduli TEI di base}
+
+     \begin{block}{Il Modello DOM: Element Type}
+        \begin{itemize}
+            \item Rappresenta elementi XML (ma anche HTML) in un documento
+            \item Usato per accedere e manipolare  il proprio contenuto e li valore degli attributi 
+        \end{itemize}
+     \end{block}
+
+     \begin{block}{Il Modello DOM: Element Type esempio}
+
+        \texttt{myDiv.tagName == myDiv.nodeName}
+        \\\texttt{if (element.tagName.toLowerCase() == “div”){// istruzioni varie}}
+       
+     \end{block}
+
+\end{frame}
+
+\begin{frame}
+    \frametitle{Visualizzare ed Elaborare documenti XML}
+    \addtocounter{nframe}{1}
+    
+    %\begin{center}
+    %    \includegraphics[width=.2\textwidth]{../imgs/tei-r.pdf}
+    %\end{center}
+    %\textit{In parte già disponibili nei moduli TEI di base}
+
+     \begin{block}{Il Modello DOM: Attribute Type}
+        \begin{itemize}
+            \item Technically, attributes are nodes that exist in an element’s attributes property.
+            \item Child nodes may be Text or EntityReference in XML.
+        \end{itemize}
+     \end{block}
+
+     \begin{block}{Il Modello DOM: Attribute Type esempio}
+
+        \texttt{myDiv.getAttribute('lang');}
+        \\\texttt{attr = document.createAttribute("rend");} 
+        \\\texttt{attr.value = "above";} 
+        \\\texttt{element.setAttributeNode(attr);}
+       
+     \end{block}
+
+\end{frame}
+
+\begin{frame}
+    \frametitle{Visualizzare ed Elaborare documenti XML}
+    \addtocounter{nframe}{1}
+    
+    %\begin{center}
+    %    \includegraphics[width=.2\textwidth]{../imgs/tei-r.pdf}
+    %\end{center}
+    %\textit{In parte già disponibili nei moduli TEI di base}
+
+     \begin{block}{Il Modello DOM: Text Type}
+        \begin{itemize}
+            \item contain plain text that is interpreted literally and may contain escaped XML characters but no XML code.
+            \item very element that may contain content will have al meno one text node when content is present
+        \end{itemize}
+     \end{block}
+
+     \begin{block}{Il Modello DOM: Text Type esempio}
+
+        \texttt{var textNode = myDiv.firstChild;}
+        \\\texttt{var text = textNode.nodeValue;}
+        \\\texttt{var newTextNode = document.createTextNode(' testo aggiunto');}
+        \\\texttt{myDiv.appendChild(newTextNode);}
+        \\\texttt{ myDiv.normalize();}
+        \\\texttt{element.firstChild.splitText(5);}
+       
+     \end{block}
+
+\end{frame}
+
 
 \begin{frame}
     \frametitle{Visualizzare ed Elaborare documenti XML}
@@ -472,14 +580,213 @@
     %\end{center}
     %\textit{In parte già disponibili nei moduli TEI di base}
 
-     \begin{block}{Modello DOM: namespace}
-        DOM Levels 2 and 3 Core is to expand the DOM API to encompass all of the requirements of XML.
+     \begin{block}{Modello DOM verificare lo stato dell'implementazione}
+        
+        The document .implementation property is an object containing information and functionality tied directly to the browser’s implementation of the DOM
      \end{block}
 
-     \begin{block}{Verificare con js se il browser implementa i moduli XML del modello DOM}
-        \texttt{document.implementation.hasFeature(“Core”, “2.0”); }
-        \\\texttt{document.implementation.hasFeature(“Core”, “3.0”);} 
-        \\\texttt{document.implementation.hasFeature(“XML”, “2.0”);}
+     \begin{block}{Modello DOM verificare lo stato dell'implementazione}
+        It’s very easy to make this method return true for any and all values, but that doesn’t necessarily mean that the implementation conforms to all the specifications it claims to.
+     \end{block}
+     
+\end{frame}
+
+
+\begin{frame}
+    \frametitle{Visualizzare ed Elaborare documenti XML}
+    \addtocounter{nframe}{1}
+    
+    %\begin{center}
+    %    \includegraphics[width=.2\textwidth]{../imgs/tei-r.pdf}
+    %\end{center}
+    %\textit{In parte già disponibili nei moduli TEI di base}
+
+     \begin{block}{Modello DOM per XML: Level 2 e Level 3}
+        \begin{itemize}
+            \item  DOM Level 2 Core introduces several new methods related to XML namespaces on various DOM types
+            \item DOM Leve 2 permette la creazione di new instances of Document and to enable the creation of DocumentType objects
+        \end{itemize}
+       
+     \end{block}
+
+     
+\end{frame}
+
+\begin{frame}
+    \frametitle{Visualizzare ed Elaborare documenti XML}
+    \addtocounter{nframe}{1}
+    
+    %\begin{center}
+    %    \includegraphics[width=.2\textwidth]{../imgs/tei-r.pdf}
+    %\end{center}
+    %\textit{In parte già disponibili nei moduli TEI di base}
+
+     \begin{block}{Modello DOM per XML: Traversals e Range}
+        \begin{itemize}
+            \item The DOM Level 2 Traversals and Range module specifies different ways to interact with a DOM structure as follows
+            \item Oggetti \texttt{NodeIterator} e \texttt{TreeWalker} per eseguire "attraversamenti" \textbf{depth-first} sull'albero DOM.
+        \end{itemize}
+       
+     \end{block}
+
+     \begin{block}{Modello DOM per XML: Traversals e Range}
+        \begin{itemize}
+            \item Ranges are a way to select specific portions of a DOM structure to augment it in some fashion.
+            \item can be used to remove portions of a document while retaining a well-formed document structure or for cloning portions of a document.
+        \end{itemize}
+       
+     \end{block}
+
+     
+\end{frame}
+
+
+\begin{frame}
+    \frametitle{Visualizzare ed Elaborare documenti XML}
+    \addtocounter{nframe}{1}
+    
+    %\begin{center}
+    %    \includegraphics[width=.2\textwidth]{../imgs/tei-r.pdf}
+    %\end{center}
+    %\textit{In parte già disponibili nei moduli TEI di base}
+
+     \begin{block}{Modello DOM per XML}
+        \begin{itemize}
+            \item DOM Level 2 introduce il concetto di creazione dinamica di documenti XML
+            \item DOM Level 3 introduce meccanismi di parsing e di serializzazione XML.
+        \end{itemize}
+        
+     \end{block}
+
+     \begin{block}{modello DOM per XML: creazione di documenti}
+       
+       % \\\texttt{document.implementation.hasFeature(“Core”, “3.0”);} 
+       % vedere capitolo 12
+       \texttt{xmlDom = document.implementation.createDocument(}
+        \\\texttt{   namespaceUri, root, doctype);;} 
+        \texttt{teiDom = document.implementation.createDocument(}
+        \\\texttt{   'http://www.tei-c.org/ns/1.0', 'tei:TEI', TEIDoctype);;} 
+       
+     \end{block}
+     
+\end{frame}
+
+
+\begin{frame}
+    \frametitle{Visualizzare ed Elaborare documenti XML}
+    \addtocounter{nframe}{1}
+    
+    %\begin{center}
+    %    \includegraphics[width=.2\textwidth]{../imgs/tei-r.pdf}
+    %\end{center}
+    %\textit{In parte già disponibili nei moduli TEI di base}
+
+     \begin{block}{Modello DOM per XML}
+        \begin{itemize}
+            \item Una volta creato il documento è possibile sfruttare tutte le features che ci mette a disposizione il modello DOM.
+            \item Nuovi nodi possono essere aggiunti al documento e manipolati a piacimento.
+        \end{itemize}
+        
+     \end{block}
+
+     \begin{block}{modello DOM per XML: creazione di documenti}
+       
+       % \\\texttt{document.implementation.hasFeature(“Core”, “3.0”);} 
+       % vedere capitolo 12
+       \texttt{teiHeaderElem = teiDom.createElement('teiHeader'); }
+       \\\texttt{teiDom.documentElement.appendChild(teiHeaderElem);}
+       
+     \end{block}
+     
+\end{frame}
+
+
+\begin{frame}
+    \frametitle{Visualizzare ed Elaborare documenti XML}
+    \addtocounter{nframe}{1}
+    
+    %\begin{center}
+    %    \includegraphics[width=.2\textwidth]{../imgs/tei-r.pdf}
+    %\end{center}
+    %\textit{In parte già disponibili nei moduli TEI di base}
+
+     \begin{block}{Modello DOM per XML}
+        \begin{itemize}
+            \item  It is much more likely that an XML document needs to be parsed into a DOM structure or vice versa
+            \item Esiste un oggetto  \texttt{DOMParser} che può "parsare" stringhe di testo che rappresentato documenti XML \textbf{well-formed}
+        \end{itemize}
+        
+     \end{block}
+
+     \begin{block}{modello DOM per XML: creazione di documenti}
+       
+       % \\\texttt{document.implementation.hasFeature(“Core”, “3.0”);} 
+       % vedere capitolo 12
+        \texttt{parser = new DOMParser();}
+        \\\texttt{teiDoc = parser.parseFromString(“<TEI><teiHeader/></TEI>”, “text/xml”);}
+        \\\texttt{textElement = teiDoc.createElement("text");}
+        \\\texttt{teiDoc.documentElement.appendChild(textElement);}
+        
+     \end{block}
+     
+\end{frame}
+
+
+\begin{frame}
+    \frametitle{Visualizzare ed Elaborare documenti XML}
+    \addtocounter{nframe}{1}
+    
+    %\begin{center}
+    %    \includegraphics[width=.2\textwidth]{../imgs/tei-r.pdf}
+    %\end{center}
+    %\textit{In parte già disponibili nei moduli TEI di base}
+
+     \begin{block}{Modello DOM per XML}
+        \begin{itemize}
+            \item Esiste anche l'oggetto duale di \texttt{DOMParser}. Questo è l'oggetto \texttt{XMLSerializer}.
+            \item  per ottenere una stringa che rappresenti il documento XML bisogna creare una istanza di \texttt{XMLSerializer} e passare al metodo \texttt{serializeToString()} il documento DOM.
+        \end{itemize}
+        
+     \end{block}
+
+     \begin{block}{modello DOM per XML: creazione di documenti}
+       
+       % \\\texttt{document.implementation.hasFeature(“Core”, “3.0”);} 
+       % vedere capitolo 12
+        \texttt{serializer = new XMLSerializer();}
+        \\\texttt{xml = serializer.serializeToString(xmldom);}
+        
+     \end{block}
+     
+\end{frame}
+
+\begin{frame}
+    \frametitle{Visualizzare ed Elaborare documenti XML}
+    \addtocounter{nframe}{1}
+    
+    %\begin{center}
+    %    \includegraphics[width=.2\textwidth]{../imgs/tei-r.pdf}
+    %\end{center}
+    %\textit{In parte già disponibili nei moduli TEI di base}
+
+     \begin{block}{Modello DOM per XML}
+        \begin{itemize}
+            \item Non è disponibile un metodo diretto per caricare XML da server o da file in locale. 
+            \item Solo Internet Explorer ha sviluppato nativamente una funzionalità del genere sul DOM \texttt{(xmldom.load("example.xml")}).
+            \item it’s generally accepted to use an XMLHttpRequest for this instead.
+        \end{itemize}
+        
+     \end{block}
+
+     \begin{block}{modello DOM per XML: creazione di documenti}
+       
+       % \\\texttt{document.implementation.hasFeature(“Core”, “3.0”);} 
+       % vedere capitolo 12
+       var xhr = new XMLHttpRequest();
+        xhr.open(“get”, “example.txt”, false); 
+        xhr.send(null);
+        if ((xhr.status >= 200 && xhr.status < 300) || xhr.status == 304){ alert(xhr.responseText); } else { alert(“Request was unsuccessful: “ + xhr.status); }
+        
      \end{block}
      
 \end{frame}

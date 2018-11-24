@@ -64,6 +64,28 @@ function NodeApp() {
         console.log('figlio', nodelist[2]);
         var child = nodelist.item(0);
         console.log('child', child);
+
+        var myDiv = document.getElementById("n1");
+        console.log('DIV', myDiv);
+
+        var myDivList = document.getElementsByTagName('div');
+        console.log('div list', myDivList);
+
+        console.log('tagName == nodeName: ', myDiv.tagName == myDiv.nodeName);
+
+        var lang = myDiv.getAttribute('lang');
+        console.log('lang: ', lang);
+
+        var textNode = myDiv.firstChild;
+        var text = textNode.nodeValue;
+        console.log('text', text);
+
+        var newTextNode = document.createTextNode(' testo aggiunto');
+        myDiv.appendChild(newTextNode);
+        console.log('nuovo testo: ', newTextNode);
+
+        myDiv.normalize();
+
     }
 
     this.nodeManipulation = function(){
@@ -75,14 +97,48 @@ function NodeApp() {
         node.removeChild(oldChild);
 
         node.cloneNode(deep);
+
         node.normalize();
     }
 
+    
+}
+
+function XMLApp(){
 
     this.createDocument = function(){
-        document.implementation.createDocument(namespaceURI, qualifiedName, doctype);
+        var doctype = document.implementation.createDocumentType('TEI', '', 'tei_all.dtd');
+        var xmlDoc =  document.implementation.createDocument('http://www.tei-c.org/ns/1.0', 'tei:TEI', doctype);
+        console.log('nuovo doc TEI', xmlDoc);
+        console.log('NS doc TEI', xmlDoc.lookupNamespaceURI('tei'));
+
+        
+
+        var teiHeaderElem = xmlDoc.createElement('tei:teiHeader'); 
+        xmlDoc.documentElement.appendChild(teiHeaderElem);
+
+        console.log('TEI DOC with teiHeader: ', xmlDoc);
     }
 
-    
+    this.parseDocument = function(){
+        var parser = new DOMParser();
+       var xmldom = parser.parseFromString("<TEI><teiHeader/></TEI>", "text/xml");
+       var textElem = xmldom.createElement("text");
+       xmldom.documentElement.appendChild(textElem);
+       console.log('TEI DOC PARSED', xmldom);
+
+        var serializer = new XMLSerializer();
+        var xmlString = serializer.serializeToString(xmldom);
+        console.log('Serializzato DOM-XML', xmlString);
+
+        document.documentElement.appendChild(document.createTextNode(xmlString));
+
+    }
+
+    this.loadXML = function(){
+        var path="../test.xml";
+
+
+    }
 }
 

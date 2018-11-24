@@ -17,7 +17,7 @@
 
 <facsimile>
     <surface xml:id="page1" start="#page-1" ulx="0" uly="0" lrx="500" lry="321">
-        <graphic url="page1.png">
+        <graphic url="page1.png" />
             <zone xml:id="line1" ulx="50" uly="80" lrx="200" lry="321">
                 <graphic url="line1.png"/>
                 <note>First page.</note>

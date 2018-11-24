@@ -9,6 +9,9 @@
     <script src="js/main-dom.js"></script>
 </head>
 <body>
+        <div id="n1" lang="it-IT">
+                div con ID
+        </div>
 
     <script>
         var app = new App();
@@ -18,6 +21,10 @@
         var nodeApp = new NodeApp();
         nodeApp.createNode();
         nodeApp.getNodeList();
+
+        var xmlApp = new XMLApp();
+        xmlApp.createDocument();
+        xmlApp.parseDocument();
     </script>
 
     <tei:TEI xmlns:tei="http://www.tei-c.org/ns/1.0">
@@ -28,6 +35,8 @@
         <tei:text>p</tei:text>
 
     </tei:TEI>
+
+    
     
 </body>
 </html>
