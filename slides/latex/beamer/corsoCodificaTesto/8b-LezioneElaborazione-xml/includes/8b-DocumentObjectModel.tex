@@ -110,7 +110,7 @@
      \end{block}
 
      \begin{block}{DOM Levels}
-       Per implementare nel modo più efficace possibile il Modello DOM, questo consta di 5 diverse versioni o approcci, detti livelli, a loro volta suddivisi in moduli.
+       Allo stato attuale, il Modello DOM conta 5 diverse versioni o approcci, detti livelli, a loro volta suddivisi in moduli.
      \end{block}
      
 \end{frame}
@@ -267,8 +267,219 @@
     %\end{center}
     %\textit{In parte già disponibili nei moduli TEI di base}
 
-     \begin{block}{Supporto dei browser alle specifiche DOM}
-        
+     \begin{block}{Il Modello DOM in sistesi}
+        \begin{itemize}
+            \item XML document can be represented as a hierarchy of nodes using the DOM.
+            \item Each node type has different characteristics, data, and methods, and each may have relationships with other nodes
+            \item Relationships create a hierarchy that allows markup to be represented as a tree
+        \end{itemize}
+     \end{block}
+     
+\end{frame}
+
+\begin{frame}
+    \frametitle{Visualizzare ed Elaborare documenti XML}
+    \addtocounter{nframe}{1}
+    
+    %\begin{center}
+    %    \includegraphics[width=.2\textwidth]{../imgs/tei-r.pdf}
+    %\end{center}
+    %\textit{In parte già disponibili nei moduli TEI di base}
+
+     \begin{block}{Il Modello DOM: principali caratteristiche}
+        \begin{itemize}
+            \item A document node represents every document as the root
+            \item The document element is the outermost element in the document within which all other elements exist (esiste sono un \textit{document element} per documento)
+            \item Every piece of markup can be represented by a node in the tree
+        \end{itemize}
+     \end{block}
+     
+\end{frame}
+
+\begin{frame}
+    \frametitle{Visualizzare ed Elaborare documenti XML}
+    \addtocounter{nframe}{1}
+    
+    %\begin{center}
+    %    \includegraphics[width=.2\textwidth]{../imgs/tei-r.pdf}
+    %\end{center}
+    %\textit{In parte già disponibili nei moduli TEI di base}
+
+     \begin{block}{Il Modello DOM: principali caratteristiche}
+        \begin{itemize}
+            \item A differenza di XSLT, DOM presenta 12 node types, ciascuno dei quali eredita da un nodo di base (in js dall'interfaccia \textit{Node Type}).
+            \item Ciascun nodo ha una proprietà che indica il tipo del nodo stesso (in js nodeType)
+        \end{itemize}
+     \end{block}
+     
+\end{frame}
+
+\begin{frame}
+    \frametitle{Visualizzare ed Elaborare documenti XML}
+    \addtocounter{nframe}{1}
+    
+    %\begin{center}
+    %    \includegraphics[width=.2\textwidth]{../imgs/tei-r.pdf}
+    %\end{center}
+    %\textit{In parte già disponibili nei moduli TEI di base}
+
+     \textit{I tipi di nodo nel modello DOM}
+
+        \begin{center}
+            \includegraphics[width=.9\textwidth]{imgs/nodetypes.png}
+        \end{center}
+     
+\end{frame}
+
+\begin{frame}
+    \frametitle{Visualizzare ed Elaborare documenti XML}
+    \addtocounter{nframe}{1}
+    
+    %\begin{center}
+    %    \includegraphics[width=.2\textwidth]{../imgs/tei-r.pdf}
+    %\end{center}
+    %\textit{In parte già disponibili nei moduli TEI di base}
+
+     \begin{block}{Il Modello DOM: principali caratteristiche}
+        \begin{itemize}
+            \item All nodes in a document have hierarchical relationships to other nodes
+            \item Each node has a childNodes property containing a NodeList
+        \end{itemize}
+     \end{block}
+
+     \begin{block}{Il Modello DOM: principali caratteristiche}
+        \begin{itemize}
+            A NodeList is an array-like object used to store an ordered list of nodes that are accessible by position
+        \end{itemize}
+     \end{block}
+
+\end{frame}
+
+\begin{frame}
+    \frametitle{Visualizzare ed Elaborare documenti XML}
+    \addtocounter{nframe}{1}
+    
+    %\begin{center}
+    %    \includegraphics[width=.2\textwidth]{../imgs/tei-r.pdf}
+    %\end{center}
+    %\textit{In parte già disponibili nei moduli TEI di base}
+
+     \begin{block}{Il Modello DOM: esempio NodeList}
+        \texttt{firstChild = someNode.childNodes[0];}
+        \\\texttt{secondChild = someNode.childNodes.item(1); }
+        \\\texttt{count = someNode.childNodes.length;}
+     \end{block}
+
+\end{frame}
+
+\begin{frame}
+    \frametitle{Visualizzare ed Elaborare documenti XML}
+    \addtocounter{nframe}{1}
+    
+    \begin{center}
+        \includegraphics[width=.8\textwidth]{imgs/nodeRelations.png}
+    \end{center}
+    %\textit{In parte già disponibili nei moduli TEI di base}
+
+\end{frame}
+
+\begin{frame}
+    \frametitle{Visualizzare ed Elaborare documenti XML}
+    \addtocounter{nframe}{1}
+    
+    %\begin{center}
+    %    \includegraphics[width=.2\textwidth]{../imgs/tei-r.pdf}
+    %\end{center}
+    %\textit{In parte già disponibili nei moduli TEI di base}
+
+     \begin{block}{Il Modello DOM: proprietà ownerDocument}
+        Tutti i nodi condividono la proprietà \texttt{ownerDocument} che è un collegamento diretto al nodo che rappresenta l'intero documento.
+     \end{block}
+
+     \begin{block}{Il Modello DOM: proprietà ownerDocument}
+        This property provides a quick way to access the document node without needing to traverse the node hierarchy back up to the top.
+     \end{block}
+
+\end{frame}
+
+\begin{frame}
+    \frametitle{Visualizzare ed Elaborare documenti XML}
+    \addtocounter{nframe}{1}
+    
+    %\begin{center}
+    %    \includegraphics[width=.2\textwidth]{../imgs/tei-r.pdf}
+    %\end{center}
+    %\textit{In parte già disponibili nei moduli TEI di base}
+
+     \begin{block}{Il Modello DOM: metodi per la manipolazione}
+        Una serie di metodi sono disponibile per la manipolazione dei nodi dell'albero DOM.
+     \end{block}
+
+     \begin{block}{Il Modello DOM: metodi per la manipolazione}
+        Quattro di questi metodi (sei in totali) lavorano sui figli di uno specifico nodo:
+        \\poiché non tutti i tipi di nodi hanno nodi figli questi ultimi metodi possono lanciare degli errori se invocati.
+     \end{block}
+
+\end{frame}
+
+\begin{frame}
+    \frametitle{Visualizzare ed Elaborare documenti XML}
+    \addtocounter{nframe}{1}
+    
+    %\begin{center}
+    %    \includegraphics[width=.2\textwidth]{../imgs/tei-r.pdf}
+    %\end{center}
+    %\textit{In parte già disponibili nei moduli TEI di base}
+
+     \textit{Il Modello DOM: metodi per la manipolazione}
+       
+    \begin{center}
+        \includegraphics[width=.9\textwidth]{imgs/nodeManipulation.png}
+    \end{center}
+     
+\end{frame}
+
+
+%% piccolo approfondimento su Element Type - Text Type - Attribute Type
+
+\begin{frame}
+    \frametitle{Visualizzare ed Elaborare documenti XML}
+    \addtocounter{nframe}{1}
+    
+    %\begin{center}
+    %    \includegraphics[width=.2\textwidth]{../imgs/tei-r.pdf}
+    %\end{center}
+    %\textit{In parte già disponibili nei moduli TEI di base}
+
+     \begin{block}{Modello DOM per la manipolazione di documenti XML}
+        DOM Levels 2 and 3 Core is to expand the DOM API to encompass all of the requirements of XML.
+     \end{block}
+
+     \begin{block}{Verificare con js se il browser implementa i moduli XML del modello DOM}
+        \texttt{document.implementation.hasFeature(“Core”, “2.0”); }
+        \\\texttt{document.implementation.hasFeature(“Core”, “3.0”);} 
+        \\\texttt{document.implementation.hasFeature(“XML”, “2.0”);}
+     \end{block}
+     
+\end{frame}
+
+\begin{frame}
+    \frametitle{Visualizzare ed Elaborare documenti XML}
+    \addtocounter{nframe}{1}
+    
+    %\begin{center}
+    %    \includegraphics[width=.2\textwidth]{../imgs/tei-r.pdf}
+    %\end{center}
+    %\textit{In parte già disponibili nei moduli TEI di base}
+
+     \begin{block}{Modello DOM: namespace}
+        DOM Levels 2 and 3 Core is to expand the DOM API to encompass all of the requirements of XML.
+     \end{block}
+
+     \begin{block}{Verificare con js se il browser implementa i moduli XML del modello DOM}
+        \texttt{document.implementation.hasFeature(“Core”, “2.0”); }
+        \\\texttt{document.implementation.hasFeature(“Core”, “3.0”);} 
+        \\\texttt{document.implementation.hasFeature(“XML”, “2.0”);}
      \end{block}
      
 \end{frame}

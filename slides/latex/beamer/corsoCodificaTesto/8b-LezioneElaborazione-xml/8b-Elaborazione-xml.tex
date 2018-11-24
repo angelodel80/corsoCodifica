@@ -83,13 +83,14 @@
         %\end{center}
         %\textit{In parte già disponibili nei moduli TEI di base}
 
-         \begin{block}{Perché visualizzare il testo}
+         \begin{block}{Perché visualizzare e elaborare il testo}
         %     \emph{Per la critica testuale indispensabili i moduli}
              \begin{itemize}
                 \item Controllare la codifica e correggere i refusi
                 \item Assicurarsi che tutto sia stato trascritto correttamente
                 \item Mostrare il testo a persone che non conoscono XML-TEI
                 \item Disporre di una versione del lavoro fruibile
+                \item Manipolare e analizzare le informazioni codificate
             \end{itemize}
          \end{block}
         
@@ -103,6 +104,19 @@
            \begin{itemize}
                \item Descrive il modo in cui un documento elettronico deve essere visualizzato
                \item Il mezzo di visualizzazione può variare: lo schermo di un computer, la stampa, i sintetizzatori vocali, ecc.
+           \end{itemize}
+        \end{block}
+        
+    \end{frame}
+
+    \begin{frame}
+        \frametitle{Visualizzare ed Elaborare documenti XML}
+        \addtocounter{nframe}{1}
+        
+        \begin{block}{Modello del Documento}
+           \begin{itemize}
+               \item Descrive il modo in cui un documento elettronico deve essere rappresentato e navigato dagli agenti software
+               \item Indipendenza dal linguaggio e dall piattaforma
            \end{itemize}
         \end{block}
         
@@ -127,179 +141,28 @@
         \frametitle{Visualizzare ed Elaborare documenti XML}
         \addtocounter{nframe}{1}
         
+        \begin{block}{Scopo di un modello per i documenti}
+           \begin{itemize}
+               \item \emph{Astrazione}: \textit{la navigazione e la elaborazione è spacificata da uno standard e non cambia nelle sue varie implementazioni}
+               \item \emph{Uniformità}: \textit{le interfacce sono comuni a tutti i sistemi che implementano il modello}
+               \item \emph{Efficacia ed Efficienza}: il modello identifica oggetti, metodi e proprietà utili alla gestione e al controllo programmatico dei documenti. 
+           \end{itemize}
+        \end{block}
+        
+    \end{frame}
+
+    \begin{frame}
+        \frametitle{Visualizzare ed Elaborare documenti XML}
+        \addtocounter{nframe}{1}
+        
         \begin{block}{Metodi e Tecnologie}
             \textbf{Quelli più noti e utilizzati sono standard internazionali definiti dal consorzio W3 \url{(http://www.w3.org/Style/CSS)}.}
            \begin{itemize}
-            \item CSS: Cascading Style Sheets
             \item XSL: eXtensible Stylesheet Language
+            \item DOM: Document Object Model
            \end{itemize}
         \end{block}
         
-    \end{frame}
-
-    \begin{frame}
-        \frametitle{Visualizzare ed Elaborare documenti XML}
-        \addtocounter{nframe}{1}
-        
-        \begin{block}{CSS: Cascading Style Sheets}
-           
-           \begin{itemize}
-               \item Nati per HTML, possono essere utilizzati anche con XML
-               \item Mostrano cosa c'è nel file, nell'ordine in cui questo compare
-               \item Molto semplici, ma anche limitati
-           \end{itemize}
-        \end{block}
-        
-    \end{frame}
-
-    \begin{frame}
-        \frametitle{Visualizzare ed Elaborare documenti XML}
-        \addtocounter{nframe}{1}
-        
-        \begin{block}{XSL: eXtensible Stylesheet Language}
-           
-           \begin{itemize}
-               \item Trasforma XML in qualcos'altro: HTML, PDF, ODT, EPUB
-               \item Molto potente, ma complesso e difficile da imparare
-           \end{itemize}
-        \end{block}
-        
-    \end{frame}
-
-
-    \begin{frame}
-        \frametitle{Visualizzare ed Elaborare documenti XML}
-        \addtocounter{nframe}{1}
-        
-        \begin{block}{Perché due tipologie di fogli di stile}
-           
-           \begin{itemize}
-               \item I documenti XML possono essere resi in tre modi diversi
-               \item Usare CSS quando si può e XSL quando è necessario
-           \end{itemize}
-        \end{block}
-        
-    \end{frame}
-
-
-    \begin{frame}
-        \frametitle{Visualizzare ed Elaborare documenti XML}
-        \addtocounter{nframe}{1}
-        
-        % \begin{center}
-        %     \includegraphics[width=.9\textwidth]{imgs/XML-VisualModality.png}
-        % \end{center}
-        %\textit{In parte già disponibili nei moduli TEI di base}
-    
-    \end{frame}
-
-
-    \begin{frame}
-        \frametitle{Visualizzare ed Elaborare documenti XML}
-        \addtocounter{nframe}{1}
-        \begin{center}
-            \textbf{CSS e XSL: caratteristiche a confronto}
-        \end{center}
-       
-        % \begin{center}
-        %     \includegraphics[width=.9\textwidth]{imgs/css-xsl.png}
-        % \end{center}
-        %\textit{In parte già disponibili nei moduli TEI di base}
-    
-    \end{frame}
-
-    \begin{frame}
-        \frametitle{Visualizzare ed Elaborare documenti XML}
-        \addtocounter{nframe}{1}
-        
-        \begin{block}{Fogli di Stile CSS}
-           
-           \begin{itemize}
-               \item Il formato CSS (Cascading Style Sheets) è nato per essere applicato alle pagine HTML.
-               \item Ottenere una separazione tra contenuto e forma
-               \item Le specifiche dei fogli di stile CSS sono disponibili sul sito \url{http://www.w3.org/Style/CSS}
-           \end{itemize}
-        \end{block}
-        
-    \end{frame}
-
-    \begin{frame}
-        \frametitle{Visualizzare ed Elaborare documenti XML}
-        \addtocounter{nframe}{1}
-        
-        \begin{block}{Fogli di Stile CSS}
-           
-           \begin{itemize}
-               \item Al momento è in corso di definizione la successiva versione CSS4
-               \item La situazione è in costante miglioramento grazie alla nuova generazione
-               di navigatori (Firefox, Opera, Konqueror, Safari, Chrome, ecc.)
-               \item Possono essere utilizzate anche per documenti XML
-           \end{itemize}
-        \end{block}
-        
-    \end{frame}
-
-
-    \begin{frame}
-        \frametitle{Visualizzare ed Elaborare documenti XML}
-        \addtocounter{nframe}{1}
-        
-        \begin{block}{Fogli di Stile CSS}
-           
-           \begin{itemize}
-               \item Offrono limitatissimi mezzi per modificare il documento al quale vengono applicati (in particolare aggiungere testo)
-               \item Sono basati su una sintassi specifica piuttosto semplice
-           \end{itemize}
-        \end{block}
-        
-    \end{frame}
-
-
-    \begin{frame}
-        \frametitle{Visualizzare ed Elaborare documenti XML}
-        \addtocounter{nframe}{1}
-        \begin{center}
-            \textbf{Sintassi CSS}
-        \end{center}
-       
-        % \begin{center}
-        %     \includegraphics[width=.8\textwidth]{imgs/css-sintassi.png}
-        % \end{center}
-        %\textit{In parte già disponibili nei moduli TEI di base}
-    
-    \end{frame}
-
-    \begin{frame}
-        \frametitle{Visualizzare ed Elaborare documenti XML}
-        \addtocounter{nframe}{1}
-        \begin{block}{Fogli di Stile CSS: invocazione}
-            
-            \begin{itemize}
-                \item usando \textbf{l’elemento} \texttt{<style>} nel gruppo \texttt{<head>} di un documento HTML/XHTML
-                \item con un \textbf{collegamento} all’interno del gruppo \texttt{<head>} di un documento HTML/XHTML
-                \item con una \textbf{istruzione} specifica all’inizio di un documento XML
-            \end{itemize}
-         \end{block}
-    
-    \end{frame}
-
-    \begin{frame}
-        \frametitle{Visualizzare ed Elaborare documenti XML}
-        \addtocounter{nframe}{1}
-        \begin{block}{Fogli di Stile CSS: invocazione HTML}
-
-            \texttt{<link rel="stylesheet" }
-                \\\texttt{ type="text/css" href="default.css" media="screen" > }
-
-         \end{block}
-
-         \begin{block}{Fogli di Stile CSS: invocazione XML}
-            
-            \texttt{<?xml-stylesheet} 
-                \\\texttt{type="text/css" href="style.css"?>}
-
-         \end{block}
-    
     \end{frame}
 
     % \begin{frame}
@@ -329,10 +192,10 @@
         
     % \end{frame}
     
-    \section{XSL Transformations: Note sulla Versione 2.0}
+    \section{XSLT: Documenti Multipli e Versione 2.0}
     \input{includes/8b-XSLT2.tex}
     
-    \section{XML Transformations: Un esempio TEI}
+    \section{XML Transformations: Un esempio con XML-TEI}
     \input{includes/8b-Esercizio-XSL.tex}
     
     \section{Panoramica sul Document Object Model (DOM)}
