@@ -1,11 +1,6 @@
 \begin{frame}
     \frametitle{Visualizzare ed Elaborare documenti XML}
     \addtocounter{nframe}{1}
-    
-    %\begin{center}
-    %    \includegraphics[width=.2\textwidth]{../imgs/tei-r.pdf}
-    %\end{center}
-    %\textit{In parte già disponibili nei moduli TEI di base}
 
      \begin{block}{XML Slyle Sheet Transformation: Modularità}
         \begin{itemize}
@@ -14,6 +9,12 @@
         \end{itemize}
      \end{block}
 
+\end{frame}
+
+\begin{frame}
+    \frametitle{Visualizzare ed Elaborare documenti XML}
+    \addtocounter{nframe}{1}
+
      \begin{block}{XML Slyle Sheet Transformation}
         \begin{itemize}
             \item \textbf{inclusione}: le regole definite nel documento incluso hanno la stessa priorità delle regole definite nel documento XSLT principale.
@@ -21,7 +22,6 @@
         \end{itemize}
 
      \end{block}
-
 
 \end{frame}
 
@@ -33,7 +33,7 @@
     \textbf{Dichiarazione XSD dell'elemento xsl:include}
 
     \begin{center}
-        \includegraphics[width=.8\textwidth]{imgs/elementXSL-Include.png}
+        \includegraphics[width=.95\textwidth]{imgs/elementXSL-Include.png}
     \end{center}
 
 \end{frame}
@@ -42,13 +42,9 @@
     \frametitle{Visualizzare ed Elaborare documenti XML}
     \addtocounter{nframe}{1}
     
-    %\begin{center}
-    %    \includegraphics[width=.2\textwidth]{../imgs/tei-r.pdf}
-    %\end{center}
-    %\textit{In parte già disponibili nei moduli TEI di base}
 
      \begin{block}{XML Slyle Sheet Transformation: xsl:include}
-        Dato un foglio esterno \texttt{esterno.xsl} per includerlo nel foglio principale si impiega l'elemento: \texttt{<xsl:include href="esterno.xsl"/>}
+        Dato un foglio esterno \texttt{esterno.xsl} per includerlo nel foglio principale si usa l'elemento: \\\texttt{<xsl:include href="esterno.xsl"/>}
      \end{block}
 
 \end{frame}
@@ -60,7 +56,7 @@
     \textbf{Dichiarazione XSD dell'elemento xsl:import}
 
     \begin{center}
-        \includegraphics[width=.8\textwidth]{imgs/elementXSL-Import.png}
+        \includegraphics[width=.95\textwidth]{imgs/elementXSL-Import.png}
     \end{center}
 
 \end{frame}
@@ -138,14 +134,17 @@
     \frametitle{Visualizzare ed Elaborare documenti XML}
     \addtocounter{nframe}{1}
     
-    %\begin{center}
-    %    \includegraphics[width=.2\textwidth]{../imgs/tei-r.pdf}
-    %\end{center}
-    %\textit{In parte già disponibili nei moduli TEI di base}
 
      \begin{block}{XML Slyle Sheet Transformation: XSLT 2.0}
-        XSLT 2.0 che permette di creare un documento di output (xml, html, xhtml, text).
+        XSLT 2.0 permette di creare un documento di output in vari formati (xml, html, xhtml, text).
      \end{block}
+
+\end{frame}
+
+\begin{frame}
+    \frametitle{Visualizzare ed Elaborare documenti XML}
+    \addtocounter{nframe}{1}
+    
 
      \begin{block}{XML Slyle Sheet Transformation: documenti multipli}
        
@@ -162,22 +161,23 @@
 \begin{frame}
     \frametitle{Visualizzare ed Elaborare documenti XML}
     \addtocounter{nframe}{1}
-    
-    %\begin{center}
-    %    \includegraphics[width=.2\textwidth]{../imgs/tei-r.pdf}
-    %\end{center}
-    %\textit{In parte già disponibili nei moduli TEI di base}
 
      \begin{block}{XML Slyle Sheet Transformation: XSLT 2.0}
-        XSLT 2.0 che permette di creare anche documenti multipli.
+        XSLT 2.0 permette di creare anche documenti multipli.
      \end{block}
+
+\end{frame}
+
+\begin{frame}
+    \frametitle{Visualizzare ed Elaborare documenti XML}
+    \addtocounter{nframe}{1}
 
      \begin{block}{XML Slyle Sheet Transformation: XSLT 2.0 esempio}
         \texttt{<template match="//div/[@type='book']" >}
         \\\texttt{<xsl:for-each select="div/[@type='chapter']" >}
         \\\texttt{<xsl:result-document}
            \\\texttt{method="html"}
-           \\\texttt{href="{@n}.html" >}
+           \\\texttt{href="\{@n\}.html" >}
            \\\texttt{<xsl:apply-templates/>}
         \\\texttt{</xsl:result-document>}
         \\\texttt{</xsl:for-each>}
@@ -204,6 +204,12 @@
         
      \end{block}
 
+\end{frame}
+
+\begin{frame}
+    \frametitle{Visualizzare ed Elaborare documenti XML}
+    \addtocounter{nframe}{1}
+    
      \begin{block}{XML Slyle Sheet Transformation: XSLT 2.0}
         \textit{Possibili attributi}
         \begin{itemize}
@@ -224,7 +230,7 @@
         \textit{Esempio elemento for-each-group}
 
     \begin{center}
-        \includegraphics[width=.8\textwidth]{imgs/esempio-groupBy.png}
+        \includegraphics[width=.95\textwidth]{imgs/esempio-groupBy.png}
     \end{center}
 
 \end{frame}
@@ -236,7 +242,7 @@
         \textit{Espressioni condizionali if()}
 
     \begin{center}
-        \includegraphics[width=.8\textwidth]{imgs/esempio-espressioneCondizionale.png}
+        \includegraphics[width=.95\textwidth]{imgs/esempio-espressioneCondizionale.png}
     \end{center}
 
 \end{frame}

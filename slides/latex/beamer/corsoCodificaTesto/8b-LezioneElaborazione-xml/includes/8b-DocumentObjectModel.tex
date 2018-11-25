@@ -8,7 +8,7 @@
     %\textit{In parte già disponibili nei moduli TEI di base}
 
      \begin{block}{Documenti Object Model (DOM)}
-        Il \textbf{Document Object Model} (\textit{DOM}) è un modello \textit{language-independed} che mette a disposizione delle \textbf{Application Programming Interface} (\textit{API}) per accedere e manipolare documenti XML (e HTML).
+        Il \textbf{Document Object Model} (\textit{DOM}) è un modello \textit{language-independent} che mette a disposizione delle \textbf{Application Programming Interface} (\textit{API}) per accedere e manipolare documenti XML (e HTML).
 
      \end{block}
 
@@ -25,9 +25,8 @@
     \addtocounter{nframe}{1}
     \textit{Esempio albero DOM}    
     \begin{center}
-        \includegraphics[width=.7\textwidth]{imgs/XML-DOM.png}
+        \includegraphics[width=.6\textwidth]{imgs/XML-DOM.png}
     \end{center}
-
 
 \end{frame}
 
@@ -60,7 +59,7 @@
     %\textit{In parte già disponibili nei moduli TEI di base}
 
      \begin{block}{Documenti Object Model (DOM): espressività}
-        Nodes can be removed, added, replaced, and modified easily by using the DOM API.
+       I nodi di un albero DOM possono essere aggiunti, modificati, cancellatti o rimpiazzati facilmente frazie alle API definite dal modello.
      \end{block}
 
      \begin{block}{Documenti Object Model (DOM)}
@@ -85,7 +84,8 @@
      \end{block}
 
      \begin{block}{Tecnologia indipendente dal software}
-        DOM dovrebbe essere cross-platform, ma in realtà non tutti i browser implementano allo stesso modo le specifiche, così come non tutti i browser sono allineati all'ultima versione delle funzionalità (copertura non al 100\%).
+        Un importante obiettivo dello standard DOM è quello di essere cross-platform. 
+        \\In realtà però non tutti i browser implementano con le stesse modalità le specifiche, così come non tutti i browser sono allineati all'ultima versione del modello (copertura non al 100\%).
        
      \end{block}
      
@@ -102,11 +102,11 @@
     %\textit{In parte già disponibili nei moduli TEI di base}
 
      \begin{block}{DOM Levels}
-       Esistono diverse versioni (livelli) dello standard DOM nonché diverse sezioni all'interno di esso.
+       Esistono diverse versioni (livelli) dello standard DOM nonché diverse moduli all'interno di ciascun livello.
      \end{block}
 
      \begin{block}{DOM Levels}
-       Allo stato attuale, il Modello DOM conta 5 diverse versioni o approcci, detti livelli, a loro volta suddivisi in moduli.
+       Allo stato attuale, il Modello DOM conta 5 diverse versioni o approcci (livelli), a loro volta suddivisi in sezioni o aree.
      \end{block}
      
 \end{frame}
@@ -121,7 +121,7 @@
     %\textit{In parte già disponibili nei moduli TEI di base}
 
      \begin{block}{le API con il linguaggio di programmazione javascript}
-       E' possibile sfruttare usando javascript nativo la rappresentazione ad albero di un documento XML e le funzionalità che DOM mette a disposizione per accedere, manipolare ed estrarre informazioni da un documento XML.
+       E' possibile sfruttare, anche attraverso javascript nativo, la rappresentazione ad albero di un documento XML e le funzionalità che DOM mette a disposizione per accedere, manipolare ed estrarre informazioni da un documento XML.
      \end{block}
      
 \end{frame}
@@ -137,12 +137,12 @@
     %\textit{In parte già disponibili nei moduli TEI di base}
 
      \begin{block}{DOM Level 0}
-       Il livello 0 del DOM indica la madalità di operare fuori dalle specifiche W3C.
+       \textbf{Il livello 0} del DOM indica la madalità 'legacy' di operare sui documenti, sarebbe cioè quella che non tiene di conto delle specifiche W3C.
      \end{block}
      
 
      \begin{block}{DOM Level 0}
-        Con DOM Level 0 si suppongono anche scelte imiplementative non cross-platform e non browser-independent.
+        Adottando DOM Level 0 si suppongono anche scelte imiplementative non cross-platform e non browser-independent.
       \end{block}
 
 \end{frame}
@@ -157,15 +157,22 @@
     %\textit{In parte già disponibili nei moduli TEI di base}
 
      \begin{block}{DOM Level 1}
-       DOM Level 1 è la prima versione dello standard (raccomandazione W3C nel 1998). La specifica definisce  oggetti, proprietà e funzionalità di base per navigare e manipolare la struttura di un documento XML (e HTML).
+       \textbf{DOM Level 1} è la prima versione dello standard (\textit{raccomandazione W3C nel 1998}). 
+       \\ La specifica definisce  \textbf{oggetti, proprietà e funzionalità di base} per navigare e manipolare la struttura di un documento XML (e HTML).
      \end{block}
-     
 
+\end{frame}
+
+
+\begin{frame}
+    \frametitle{Visualizzare ed Elaborare documenti XML}
+    \addtocounter{nframe}{1}
+         
      \begin{block}{DOM Level 1}
         Il DOM Level 1 è diviso in due sezioni:
         \begin{itemize}
             \item[1] \textbf{Generica} per la gestione di documenti XML e HTML
-            \item[2] \textbf{Specifica} per documenti HTML che estende la prima.
+            \item[2] \textbf{Specifica} per documenti HTML: questa sezione estende la prima (Sezione Generale).
         \end{itemize}
       \end{block}
 
@@ -181,12 +188,12 @@
     %\textit{In parte già disponibili nei moduli TEI di base}
 
      \begin{block}{DOM Level 2}
-       \textit{DOM Level 2} è un estensione del livello 1 e aggiunge a quest'ultimo numerose funzionalità e specifiche sezioni, come la gestione degli eventi e dei fogli di stile CSS.
+       \textbf{DOM Level 2} è una estensione del livello 1 e aggiunge a quest'ultimo numerose funzionalità e moduli specifici, come per esempio la gestione degli eventi e dei fogli di stile CSS.
      \end{block}
      
 
      \begin{block}{DOM Level 2}
-       Tra i vari moduli che \textit{DOM Level 2} aggiunge, di particolare interesse è il modulo \textbf{DOM Traversal and Range}
+       Tra i vari moduli che \textit{DOM Level 2} aggiunge, di particolare interesse è il modulo \textbf{DOM Traversal and Range}.
       \end{block}
 
 \end{frame}
@@ -207,7 +214,7 @@
      \begin{block}{DOM Level 3}
         \begin{itemize}
             \item Migliora ed estende il modulo di gestione degli eventi definito nel DOM Level 2
-            \item Aggiunge funzionalità per supportare tutta la specifica della versione 1.0 di XML (es.: \textbf{XML namespace}, \textbf{XPath}, \textbf{DOM Validaton})
+            \item Aggiunge funzionalità per \textit{supportare tutta la specifica della versione 1.0} di XML (es.: \textbf{XML namespace}, \textbf{XPath}, \textbf{DOM Validaton})
             \item Caricamento e salvataggio dei documenti con serializzazione XML (\textbf{DOM Load and Save}).
         \end{itemize}
        
@@ -226,16 +233,9 @@
     %\textit{In parte già disponibili nei moduli TEI di base}
 
      \begin{block}{DOM Level 4}
-     \textit{DOM Level 4} è la prossima versione ed estensione del Modello DOM sulla quale sta lavorando il W3C. Ancora non ha raggiunto lo status di raccomandazione e non è ancora supportata dai browser. 
+     \textbf{DOM Level 4} è la prossima versione del Modello DOM sulla quale sta lavorando il W3C. Ancora non ha raggiunto lo status di raccomandazione e non è ancora supportata dai browser. 
      \end{block}
      
-
-     \begin{block}{DOM Level 4}
-       
-        \textbf{TROVARE QUALCHE NUOVA FREATURE E IL RAPPORTO CON ECMASCRIPT O ALTRO}
-       
-      \end{block}
-
 \end{frame}
 
 \begin{frame}
@@ -248,7 +248,8 @@
     %\textit{In parte già disponibili nei moduli TEI di base}
 
      \begin{block}{Supporto dei browser alle specifiche DOM}
-        DOM support became a huge priority for most browser vendors, and efforts have been ongoing to improve support with each release.
+        Da qualche anno il supporto alle specifiche e alle API DOM è \textbf{diventato una priorità}, oltre che una necessità, per i più grossi gruppi che sviluppano browser.
+        \\ Tuttavia non tutte le principali compagnie implementano allo stesso modo lo standard.
      \end{block}
      
 \end{frame}
@@ -258,16 +259,12 @@
     \frametitle{Visualizzare ed Elaborare documenti XML}
     \addtocounter{nframe}{1}
     
-    %\begin{center}
-    %    \includegraphics[width=.2\textwidth]{../imgs/tei-r.pdf}
-    %\end{center}
-    %\textit{In parte già disponibili nei moduli TEI di base}
-
      \begin{block}{Il Modello DOM in sistesi}
         \begin{itemize}
-            \item XML document can be represented as a hierarchy of nodes using the DOM.
-            \item Each node type has different characteristics, data, and methods, and each may have relationships with other nodes
-            \item Relationships create a hierarchy that allows markup to be represented as a tree
+            \item Un documento XML può essere rappresentato come una gerarchia di nodi attraverso il modello DOM.
+            \item Ciascun tipo di nodo ha caratteristiche, dati e funzionalità differenti.
+            \item Caiascun tipo di nodo può avere differenti tipi di relazioni con gli altri tipi di nodi.
+            \item Le relazioni tra i nodi DOM creano una gerarchia, la quale permette di rappresentare un documento XML come un albero.
         \end{itemize}
      \end{block}
      
@@ -284,9 +281,9 @@
 
      \begin{block}{Il Modello DOM: principali caratteristiche}
         \begin{itemize}
-            \item A document node represents every document as the root
-            \item The document element is the outermost element in the document within which all other elements exist (esiste sono un \textit{document element} per documento)
-            \item Every piece of markup can be represented by a node in the tree
+            \item Il Modello DOM ha un nodo \textbf{document} che rappresenta tutto il documento attraverso la cosiddetta \textbf{radice} del documento.
+            \item Il Modello DOM ha un elemento detto document element che è l'elemento più esterno del documento, il quale è avo di tutti gli altri elementi e che quindi li racchiude tutti. (esiste solo un \textit{document element} per documento)
+            \item Ciascun pezzo del documento XML può essere rappresentato da un nodo DOM in un albero DOM.
         \end{itemize}
      \end{block}
      
@@ -303,7 +300,7 @@
 
      \begin{block}{Il Modello DOM: principali caratteristiche}
         \begin{itemize}
-            \item A differenza di XSLT, DOM presenta 12 node types, ciascuno dei quali eredita da un nodo di base (in js dall'interfaccia \textit{Node Type}).
+            \item A differenza di XSLT, DOM presenta 12 node types, ciascuno dei quali eredita da un nodo di base (in js tutto il data model parte dall'interfaccia \textit{Node Type}).
             \item Ciascun nodo ha una proprietà che indica il tipo del nodo stesso (in js nodeType)
         \end{itemize}
      \end{block}
@@ -322,7 +319,7 @@
      \textit{I tipi di nodo nel modello DOM}
 
         \begin{center}
-            \includegraphics[width=.9\textwidth]{imgs/nodetypes.png}
+            \includegraphics[width=.85\textwidth]{imgs/nodetypes.png}
         \end{center}
      
 \end{frame}
@@ -338,14 +335,14 @@
 
      \begin{block}{Il Modello DOM: principali caratteristiche}
         \begin{itemize}
-            \item All nodes in a document have hierarchical relationships to other nodes
-            \item Each node has a childNodes property containing a NodeList
+            \item Tutti i nodi in un documento DOM instaurano relazioni gerarchiche tra di loro.
+            \item Ciascun nodo ha una proprietà \textit{childNodes} contenente una lista di nodi, detta \textit{NodeList}.
         \end{itemize}
      \end{block}
 
      \begin{block}{Il Modello DOM: principali caratteristiche}
 
-            A NodeList is an array-like object used to store an ordered list of nodes that are accessible by position
+            Un oggetto NodeList è simile ad un array usato per memorizzare una lista ordinata di nodi accessibili per posizione
        
      \end{block}
 
@@ -371,9 +368,11 @@
 \begin{frame}
     \frametitle{Visualizzare ed Elaborare documenti XML}
     \addtocounter{nframe}{1}
+
+    \textbf{Le relazioni di un nodo}
     
     \begin{center}
-        \includegraphics[width=.8\textwidth]{imgs/nodeRelations.png}
+        \includegraphics[width=.9\textwidth]{imgs/nodeRelations.png}
     \end{center}
     %\textit{In parte già disponibili nei moduli TEI di base}
 
@@ -393,7 +392,7 @@
      \end{block}
 
      \begin{block}{Il Modello DOM: proprietà ownerDocument}
-        This property provides a quick way to access the document node without needing to traverse the node hierarchy back up to the top.
+        La proprietà \textit{ownerDocument} fornisce un modo veloce per accedere al \textit{nodo documento} senza dover attraversare tutta la gerachia di nodi per arrivare alla radice dell'albero.
      \end{block}
 
 \end{frame}
@@ -408,12 +407,12 @@
     %\textit{In parte già disponibili nei moduli TEI di base}
 
      \begin{block}{Il Modello DOM: metodi per la manipolazione}
-        Una serie di metodi sono disponibile per la manipolazione dei nodi dell'albero DOM.
+        Una serie di metodi sono disponibili per la manipolazione dei nodi dell'albero DOM.
      \end{block}
 
      \begin{block}{Il Modello DOM: metodi per la manipolazione}
-        Quattro di questi metodi (sei in totali) lavorano sui figli di uno specifico nodo:
-        \\poiché non tutti i tipi di nodi hanno nodi figli questi ultimi metodi possono lanciare degli errori se invocati.
+        Quattro di questi metodi (sei in totale) lavorano sui figli di uno specifico nodo.
+        \\Poiché non tutti i tipi di nodi hanno nodi figli, questi ultimi metodi possono lanciare degli errori se invocati.
      \end{block}
 
 \end{frame}
@@ -449,8 +448,8 @@
 
      \begin{block}{Il Modello DOM: Document Type}
         \begin{itemize}
-            \item Represents an entire document and is the root node of a hierarchy
-            \item The document object is an instance of Document type, which allows for querying and retrieval of nodes in a number of different ways.
+            \item Rappresenta un intero documento ed è la radice della gerarchia.
+            \item L'oggetto \textit{document} è una istanza di tipo \textbf{Document}, attraverso di esso è possibile interrogare e ottenere altri nodi in molti modi diversi.
         \end{itemize}
      \end{block}
 
@@ -476,14 +475,14 @@
      \begin{block}{Il Modello DOM: Element Type}
         \begin{itemize}
             \item Rappresenta elementi XML (ma anche HTML) in un documento
-            \item Usato per accedere e manipolare  il proprio contenuto e li valore degli attributi 
+            \item Usato per accedere e manipolarne il contenuto e/o il valore dei propri attributi 
         \end{itemize}
      \end{block}
 
      \begin{block}{Il Modello DOM: Element Type esempio}
 
         \texttt{myDiv.tagName == myDiv.nodeName}
-        \\\texttt{if (element.tagName.toLowerCase() == “div”){// istruzioni varie}}
+        \\\texttt{if (element.tagName.toLowerCase() == 'div'){// istruzioni varie}}
        
      \end{block}
 
@@ -492,19 +491,21 @@
 \begin{frame}
     \frametitle{Visualizzare ed Elaborare documenti XML}
     \addtocounter{nframe}{1}
-    
-    %\begin{center}
-    %    \includegraphics[width=.2\textwidth]{../imgs/tei-r.pdf}
-    %\end{center}
-    %\textit{In parte già disponibili nei moduli TEI di base}
 
      \begin{block}{Il Modello DOM: Attribute Type}
         \begin{itemize}
-            \item Technically, attributes are nodes that exist in an element’s attributes property.
-            \item Child nodes may be Text or EntityReference in XML.
+            \item Tecnicamente anche gli attributi sono nodi. 
+            \item Possono essere acceduti attraverso la proprietà \textit{attributes} di un oggetto \textit{element}.
+            \item I nodi figlio di un attributo possono essere nodi di tipo \textit{Text} oppure nodi di tipo \textit{EntityReference}.
         \end{itemize}
      \end{block}
 
+\end{frame}
+
+\begin{frame}
+    \frametitle{Visualizzare ed Elaborare documenti XML}
+    \addtocounter{nframe}{1}
+    
      \begin{block}{Il Modello DOM: Attribute Type esempio}
 
         \texttt{myDiv.getAttribute('lang');}
@@ -519,18 +520,21 @@
 \begin{frame}
     \frametitle{Visualizzare ed Elaborare documenti XML}
     \addtocounter{nframe}{1}
-    
-    %\begin{center}
-    %    \includegraphics[width=.2\textwidth]{../imgs/tei-r.pdf}
-    %\end{center}
-    %\textit{In parte già disponibili nei moduli TEI di base}
 
      \begin{block}{Il Modello DOM: Text Type}
         \begin{itemize}
-            \item contain plain text that is interpreted literally and may contain escaped XML characters but no XML code.
-            \item very element that may contain content will have al meno one text node when content is present
+            \item Un oggetto istanza di tipo \textit{Text} contiene testo puro che viene interpretato come \textit{literal}. 
+            \item Può contenere caratteri XML con escape, ma non può contenere codice XML.
+            \item Gli elementi che contengono testo hanno almeno un nodo di tipo testo.
         \end{itemize}
      \end{block}
+
+
+\end{frame}
+
+\begin{frame}
+    \frametitle{Visualizzare ed Elaborare documenti XML}
+    \addtocounter{nframe}{1}
 
      \begin{block}{Il Modello DOM: Text Type esempio}
 
@@ -545,18 +549,12 @@
 
 \end{frame}
 
-
 \begin{frame}
     \frametitle{Visualizzare ed Elaborare documenti XML}
     \addtocounter{nframe}{1}
-    
-    %\begin{center}
-    %    \includegraphics[width=.2\textwidth]{../imgs/tei-r.pdf}
-    %\end{center}
-    %\textit{In parte già disponibili nei moduli TEI di base}
-
+   
      \begin{block}{Modello DOM per la manipolazione di documenti XML}
-        DOM Levels 2 and 3 Core is to expand the DOM API to encompass all of the requirements of XML.
+        I moduli Core di DOM Level 2 e 3 estendono il modello e le API DOM in modo da coprire tutte le specifiche XML.
      \end{block}
 
      \begin{block}{Verificare con js se il browser implementa i moduli XML del modello DOM}
@@ -577,12 +575,12 @@
     %\textit{In parte già disponibili nei moduli TEI di base}
 
      \begin{block}{Modello DOM verificare lo stato dell'implementazione}
-        
-        The document .implementation property is an object containing information and functionality tied directly to the browser’s implementation of the DOM
+        L'oggetto \textit{document} ha una proprietà, \textit{implementation}, che presenta informazioni e funzionalità direttamente collegate all'implementazione DOM dei vari browser.
      \end{block}
 
      \begin{block}{Modello DOM verificare lo stato dell'implementazione}
-        It’s very easy to make this method return true for any and all values, but that doesn’t necessarily mean that the implementation conforms to all the specifications it claims to.
+        Tramite questa proprietà è possibile testare se sono implementate o meno le varie sezioni dello standard. 
+        \\ Non è detto però che a tale verifica corrisponda effettivamente la corretta implementazione del modulo.
      \end{block}
      
 \end{frame}
@@ -591,49 +589,43 @@
 \begin{frame}
     \frametitle{Visualizzare ed Elaborare documenti XML}
     \addtocounter{nframe}{1}
-    
-    %\begin{center}
-    %    \includegraphics[width=.2\textwidth]{../imgs/tei-r.pdf}
-    %\end{center}
-    %\textit{In parte già disponibili nei moduli TEI di base}
 
      \begin{block}{Modello DOM per XML: Level 2 e Level 3}
         \begin{itemize}
-            \item  DOM Level 2 Core introduces several new methods related to XML namespaces on various DOM types
-            \item DOM Leve 2 permette la creazione di new instances of Document and to enable the creation of DocumentType objects
+            \item Il modulo DOM Level 2 Core introduce nuove funzionalità collegate alla gestione dei namespaces XML.
+            \item DOM Leve 2 permette la creazione di nuove istanze di Document e permette la creazione di oggetti \textit{DocumentType}.
         \end{itemize}
        
      \end{block}
-
-     
+    
 \end{frame}
 
 \begin{frame}
     \frametitle{Visualizzare ed Elaborare documenti XML}
     \addtocounter{nframe}{1}
-    
-    %\begin{center}
-    %    \includegraphics[width=.2\textwidth]{../imgs/tei-r.pdf}
-    %\end{center}
-    %\textit{In parte già disponibili nei moduli TEI di base}
 
      \begin{block}{Modello DOM per XML: Traversals e Range}
         \begin{itemize}
-            \item The DOM Level 2 Traversals and Range module specifies different ways to interact with a DOM structure as follows
-            \item Oggetti \texttt{NodeIterator} e \texttt{TreeWalker} per eseguire "attraversamenti" \textbf{depth-first} sull'albero DOM.
+            \item I moduli Traversals e Range implementano diverse modalità per elaborare e accedere alla struttura DOM.
+            \item Gli oggetti più importanti sono \texttt{NodeIterator} e \texttt{TreeWalker} per eseguire "visite" \textbf{depth-first} dell'albero DOM.
         \end{itemize}
        
      \end{block}
 
+\end{frame}
+
+\begin{frame}
+    \frametitle{Visualizzare ed Elaborare documenti XML}
+    \addtocounter{nframe}{1}
+
      \begin{block}{Modello DOM per XML: Traversals e Range}
         \begin{itemize}
-            \item Ranges are a way to select specific portions of a DOM structure to augment it in some fashion.
-            \item can be used to remove portions of a document while retaining a well-formed document structure or for cloning portions of a document.
+            \item Gli oggetti \textit{Ranges} implementano funzionalità per selezionare specifiche porzioni della struttura del DOM per elaborare il documento in qualche modo.
+            \item Per esempio può essere usato per rimuovere porzioni di documento mantenendo sempre una coerenza sintattita e di forma del documento XML.
         \end{itemize}
        
      \end{block}
-
-     
+          
 \end{frame}
 
 
@@ -641,10 +633,6 @@
     \frametitle{Visualizzare ed Elaborare documenti XML}
     \addtocounter{nframe}{1}
     
-    %\begin{center}
-    %    \includegraphics[width=.2\textwidth]{../imgs/tei-r.pdf}
-    %\end{center}
-    %\textit{In parte già disponibili nei moduli TEI di base}
 
      \begin{block}{Modello DOM per XML}
         \begin{itemize}
@@ -654,28 +642,30 @@
         
      \end{block}
 
-     \begin{block}{modello DOM per XML: creazione di documenti}
-       
-       % \\\texttt{document.implementation.hasFeature(“Core”, “3.0”);} 
-       % vedere capitolo 12
-       \texttt{xmlDom = document.implementation.createDocument(}
-        \\\texttt{   namespaceUri, root, doctype);;} 
-        \texttt{teiDom = document.implementation.createDocument(}
-        \\\texttt{   'http://www.tei-c.org/ns/1.0', 'tei:TEI', TEIDoctype);;} 
-       
-     \end{block}
      
 \end{frame}
-
 
 \begin{frame}
     \frametitle{Visualizzare ed Elaborare documenti XML}
     \addtocounter{nframe}{1}
     
-    %\begin{center}
-    %    \includegraphics[width=.2\textwidth]{../imgs/tei-r.pdf}
-    %\end{center}
-    %\textit{In parte già disponibili nei moduli TEI di base}
+
+     \begin{block}{modello DOM per XML: creazione di documenti}
+       
+       % \\\texttt{document.implementation.hasFeature(“Core”, “3.0”);} 
+       % vedere capitolo 12
+       \texttt{xmlDom = document.implementation.createDocument(}
+        \\\texttt{   namespaceUri, root, doctype);} 
+        \\\texttt{teiDom = document.implementation.createDocument(}
+        \\\texttt{   'http://www.tei-c.org/ns/1.0', 'tei:TEI', TEIDoctype);} 
+       
+     \end{block}
+     
+\end{frame}
+
+\begin{frame}
+    \frametitle{Visualizzare ed Elaborare documenti XML}
+    \addtocounter{nframe}{1}
 
      \begin{block}{Modello DOM per XML}
         \begin{itemize}
@@ -696,30 +686,30 @@
      
 \end{frame}
 
-
 \begin{frame}
     \frametitle{Visualizzare ed Elaborare documenti XML}
     \addtocounter{nframe}{1}
-    
-    %\begin{center}
-    %    \includegraphics[width=.2\textwidth]{../imgs/tei-r.pdf}
-    %\end{center}
-    %\textit{In parte già disponibili nei moduli TEI di base}
 
      \begin{block}{Modello DOM per XML}
         \begin{itemize}
-            \item  It is much more likely that an XML document needs to be parsed into a DOM structure or vice versa
+            \item  Più che creare un documento DOM da zero, la funzionalità più utile è quella di \textit{parsare} un documento XML già compilato, oppure la funzionalità inversa di serializzazione.
             \item Esiste un oggetto  \texttt{DOMParser} che può "parsare" stringhe di testo che rappresentato documenti XML \textbf{well-formed}
         \end{itemize}
         
      \end{block}
+     
+\end{frame}
+
+\begin{frame}
+    \frametitle{Visualizzare ed Elaborare documenti XML}
+    \addtocounter{nframe}{1}
 
      \begin{block}{modello DOM per XML: creazione di documenti}
        
        % \\\texttt{document.implementation.hasFeature(“Core”, “3.0”);} 
        % vedere capitolo 12
         \texttt{parser = new DOMParser();}
-        \\\texttt{teiDoc = parser.parseFromString(“<TEI><teiHeader/></TEI>”, “text/xml”);}
+        \\\texttt{teiDoc = parser.parseFromString('<TEI><teiHeader/></TEI>', 'text/xml');}
         \\\texttt{textElement = teiDoc.createElement("text");}
         \\\texttt{teiDoc.documentElement.appendChild(textElement);}
         
@@ -740,7 +730,7 @@
      \begin{block}{Modello DOM per XML}
         \begin{itemize}
             \item Esiste anche l'oggetto duale di \texttt{DOMParser}. Questo è l'oggetto \texttt{XMLSerializer}.
-            \item  per ottenere una stringa che rappresenti il documento XML bisogna creare una istanza di \texttt{XMLSerializer} e passare al metodo \texttt{serializeToString()} il documento DOM.
+            \item  Per ottenere una stringa che rappresenti il documento XML bisogna creare una istanza di \texttt{XMLSerializer} e passare al metodo \texttt{serializeToString()} il documento DOM.
         \end{itemize}
         
      \end{block}
@@ -768,7 +758,7 @@
      \begin{block}{Modello DOM per XML}
         \begin{itemize}
             \item Non è disponibile un metodo diretto per caricare XML da server o da file in locale. 
-            \item Solo Internet Explorer ha sviluppato nativamente una funzionalità del genere sul DOM \texttt{(xmldom.load("example.xml")}).
+            \item Solo Internet Explorer ha sviluppato nativamente una funzionalità del genere sul DOM \texttt{xmldom.load("example.xml")}.
             \item E' generalmente accettato utilizzare l'oggetto XMLHttpRequest per caricare file da percorsi esterni (remoti oppure locali).
         \end{itemize}
         
@@ -793,37 +783,28 @@
        % \\\texttt{document.implementation.hasFeature(“Core”, “3.0”);} 
        % vedere capitolo 12
         \texttt{xhr = new XMLHttpRequest();}
-        \\\texttt{xhr.open(“get”, “example.txt”, false);} 
+        \\\texttt{xhr.open('get', 'example.xml', false);} 
         \\\texttt{xhr.send(null);}
-        \\\texttt{if ((xhr.status >= 200 && xhr.status < 300) || xhr.status == 304)}
-        \\\texttt{{ text = xhr.responseText); } else { ... }}
+        \\\texttt{if ((xhr.status >= 200 \&\& xhr.status < 300) || xhr.status == 304)}
+        \\\texttt{{ text = xhr.responseText; } else { ... }}
         
      \end{block}
      
 \end{frame}
-
-
      
-\end{frame}
 
 \begin{frame}
     \frametitle{Visualizzare ed Elaborare documenti XML}
     \addtocounter{nframe}{1}
     
-    %\begin{center}
-    %    \includegraphics[width=.2\textwidth]{../imgs/tei-r.pdf}
-    %\end{center}
-    %\textit{In parte già disponibili nei moduli TEI di base}
 
     \begin{block}{modello DOM per XML: Xpath}
-        An API for XPath wasn’t part of a specification until DOM Level 3, which introduced the DOM Level 3 XPath recommendation
+        Una API per XPath è stata definita solo a partire dalla specifica DOM Level 3, la quale introduce la \textit{DOM Level 3 XPath recommendation}.
     \end{block}
 
      \begin{block}{modello DOM per XML: Xpath}
        
-       % \\\texttt{document.implementation.hasFeature(“Core”, “3.0”);} 
-       % vedere capitolo 12
-       \texttt{var supportsXPath = document.implementation.hasFeature(“XPath”, “3.0”);}
+       \texttt{supportsXPath = document.implementation.hasFeature('XPath', '3.0');}
         
         
      \end{block}
@@ -833,25 +814,27 @@
 \begin{frame}
     \frametitle{Visualizzare ed Elaborare documenti XML}
     \addtocounter{nframe}{1}
-    
-    %\begin{center}
-    %    \includegraphics[width=.2\textwidth]{../imgs/tei-r.pdf}
-    %\end{center}
-    %\textit{In parte già disponibili nei moduli TEI di base}
-
+   
     \begin{block}{modello DOM per XML: Xpath}
         \begin{itemize}
-            \item Oggetto di tipo \texttt{XPathEvaluator} (used to evaluate XPath expressions)
-            \item Oggetto di tipo \texttt{XPathResult} (impiegato per gestire il tipo di risultato ottenuto da una operazione di selezione xpath)
+            \item Oggetto di tipo \texttt{XPathEvaluator}: impiegato per valutare (evaluate) le espressioni XPath.
+            \item Oggetto di tipo \texttt{XPathResult}: impiegato per gestire il tipo di risultato ottenuto da una operazione di selezione xpath.
         \end{itemize}
        
     \end{block}
 
+     
+\end{frame}
+
+\begin{frame}
+    \frametitle{Visualizzare ed Elaborare documenti XML}
+    \addtocounter{nframe}{1}
+   
+
      \begin{block}{modello DOM per XML: Xpath}
        
-       % \\\texttt{document.implementation.hasFeature(“Core”, “3.0”);} 
-       % vedere capitolo 12
-       \texttt{result = xmldom.evaluate(“employee/name”, xmldom.documentElement, null, XPathResult.ORDERED_NODE_ITERATOR_TYPE, null);}
+      
+       \texttt{result = xmldom.evaluate('employee/name', xmldom.documentElement, null, XPathResult.ORDERED\_NODE\_ITERATOR\_TYPE, null);}
        \\\texttt{evaluator.evaluate(expression, contextNode, resolver, type, result)}
         
         
@@ -864,7 +847,7 @@
     \frametitle{Visualizzare ed Elaborare documenti XML}
     \addtocounter{nframe}{1}
     
-    \textbf{XPathResult ha 10 tipi diversi di possibili valori}
+    \textbf{XPathResult conta 10 tipi diversi di possibili valori}
 
     \begin{center}
         \includegraphics[width=.9\textwidth]{imgs/xpathResult.png}
@@ -876,21 +859,16 @@
     \frametitle{Visualizzare ed Elaborare documenti XML}
     \addtocounter{nframe}{1}
     
-    %\begin{center}
-    %    \includegraphics[width=.2\textwidth]{../imgs/tei-r.pdf}
-    %\end{center}
-    %\textit{In parte già disponibili nei moduli TEI di base}
-
     \begin{block}{modello DOM per XML: Xpath Esempio}
         \texttt{result = xmldom.evaluate(}
          \\\texttt{ 'text/back', xmlTEI.documentElement, }
-         \\\texttt{ null, XPathResult.BOOLEAN_TYPE, null);}
+         \\\texttt{ null, XPathResult.BOOLEAN\_TYPE, null);}
     \end{block}
 
      \begin{block}{modello DOM per XML: Xpath Esempio}
         \texttt{result = xmldom.evaluate(}
         \\\texttt{  'count(text/body/div)', xmldom.documentElement,} 
-        \\\texttt{  null, XPathResult.NUMBER_TYPE, null);}
+        \\\texttt{  null, XPathResult.NUMBER\_TYPE, null);}
      \end{block}
      
 \end{frame}
@@ -899,16 +877,12 @@
     \frametitle{Visualizzare ed Elaborare documenti XML}
     \addtocounter{nframe}{1}
     
-    %\begin{center}
-    %    \includegraphics[width=.2\textwidth]{../imgs/tei-r.pdf}
-    %\end{center}
-    %\textit{In parte già disponibili nei moduli TEI di base}
 
     \begin{block}{modello DOM per XML: Namespace support}
         \begin{itemize}
-            \item Spesso i documenti XML fanno uso di namespace per qualificate il corretto vocabolario impiegato.
+            \item Spesso i documenti XML fanno uso di namespace per definire il corretto vocabolario impiegato.
             \item In questa ciscostanza \texttt{XPathEvaluator} deve essere opportunamente impostato.
-            \item Nel documenti TEI-XML tutti gli elementi sono parte del namespace \texttt{http://www.tei-c.org/ns/1.0}
+            \item Nei documenti TEI-XML tutti gli elementi sono parte del namespace \texttt{http://www.tei-c.org/ns/1.0}
         \end{itemize}
         
     \end{block}
@@ -929,14 +903,10 @@
         \begin{itemize}
             \item Un modo per gestire il namespace è attraverso la creazione di un oggetto \texttt{XPathNSResolver}
             \item Invocando il metodo \texttt{createNSResolver()} del documento.
-            \item Struttando una funzione che dato un prefisso restituisce l'URI del namespace. (\texttt{lookupNamespaceURI})
+            \item Sfruttando una funzione che, dato un prefisso, restituisce l'URI del namespace. (\texttt{lookupNamespaceURI})
         \end{itemize}
     \end{block}
 
-    \begin{block}{modello DOM per XML: Namespace support example}
-        \texttt{nsresolver = xmldom.createNSResolver(xmldom.documentElement);} 
-        \\\texttt{result = xmldom.evaluate(} \\\texttt{"/tei:TEI/tei:text/tei:front/tei:titlePage/tei:docImprint/tei:publisher",} \\\texttt{xmldom.documentElement, nsresolver, XPathResult.ORDERED_NODE_SNAPSHOT_TYPE, null);}
-    \end{block}
      
 \end{frame}
 
@@ -944,10 +914,16 @@
     \frametitle{Visualizzare ed Elaborare documenti XML}
     \addtocounter{nframe}{1}
     
-    %\begin{center}
-    %    \includegraphics[width=.2\textwidth]{../imgs/tei-r.pdf}
-    %\end{center}
-    %\textit{In parte già disponibili nei moduli TEI di base}
+    \begin{block}{modello DOM per XML: Namespace support example}
+        \texttt{nsresolver = xmldom.createNSResolver(xmldom.documentElement);} 
+        \\\texttt{result = xmldom.evaluate(} \\\texttt{"/tei:TEI/tei:text/tei:front/tei:titlePage",} \\\texttt{xmldom.documentElement, nsresolver, XPathResult.ORDERED\_NODE\_SNAPSHOT\_TYPE, null);}
+    \end{block}
+     
+\end{frame}
+
+\begin{frame}
+    \frametitle{Visualizzare ed Elaborare documenti XML}
+    \addtocounter{nframe}{1}
 
     \begin{block}{modello DOM per XML: XSLT support}
         \begin{itemize}
@@ -968,26 +944,28 @@
     \frametitle{Visualizzare ed Elaborare documenti XML}
     \addtocounter{nframe}{1}
     
-    %\begin{center}
-    %    \includegraphics[width=.2\textwidth]{../imgs/tei-r.pdf}
-    %\end{center}
-    %\textit{In parte già disponibili nei moduli TEI di base}
-
     \begin{block}{modello DOM per XML: XSLT support}
         \begin{itemize}
-            \item Accanto al metodo \texttt{transformToDocument()} esiste anche il metodo  \testtt{transformToFragment()}. 
-            \item La ragione per l'utilizzo di tale metodo è per coprire eventuali casi in cui il risultato della trasformazione vuole essere aggiunta ad un terzo documento DOM.
-            \item Tra gli argomenti, infatti, deve essere inserito anche il documento destinatario finale per ovvi controlli di consistenza.
+            \item Accanto al metodo \texttt{transformToDocument()} esiste anche il metodo \texttt{transformToFragment()}. 
+            \item La ragione per la quale è utile l'utilizzo di tale metodo è per coprire eventuali casi in cui il risultato della trasformazione vuole essere aggiunto ad un ulteriore altro documento DOM.
+            \item Tra gli argomenti, infatti, deve essere inserito anche il documento destinatario finale per poter effettuare controlli di consistenza.
         \end{itemize}
-    \end{block}
+    \end{block}     
+\end{frame}
+
+\begin{frame}
+    \frametitle{Visualizzare ed Elaborare documenti XML}
+    \addtocounter{nframe}{1}
+    
 
     \begin{block}{modello DOM per XML: XSLT support example}
-        \testtt{fragment = processor.transformToFragment(xmldom, document); }
-        \\\texttt{div = document.getElementById(“divResult”); }
+        \texttt{fragment = processor.transformToFragment(xmldom, document); }
+        \\\texttt{div = document.getElementById('divResult'); }
         \\\texttt{div.appendChild(fragment);}
     \end{block}
      
 \end{frame}
+
 
 \begin{frame}
     \frametitle{Visualizzare ed Elaborare documenti XML}
@@ -999,7 +977,7 @@
     %\textit{In parte già disponibili nei moduli TEI di base}
 
     \begin{block}{modello DOM per XML: XSLT support}
-        L'oggetto XSLTProcessor permette di gestire e indicare parametri XSLT
+        L'oggetto XSLTProcessor permette di gestire e indicare \textbf{parametri XSLT}.
     \end{block}
 
     \begin{block}{modello DOM per XML: XSLT support example}
@@ -1015,13 +993,8 @@
     \frametitle{Visualizzare ed Elaborare documenti XML}
     \addtocounter{nframe}{1}
     
-    %\begin{center}
-    %    \includegraphics[width=.2\textwidth]{../imgs/tei-r.pdf}
-    %\end{center}
-    %\textit{In parte già disponibili nei moduli TEI di base}
-
     \begin{block}{modello DOM per XML: XSLT support}
-        Le istanze dell'oggetto \texttt{XSLTProcessor} possono essere riusate per più trasformazioni e con diversi fogli di stile (Efficienza computazionale).
+        Le istanze dell'oggetto \texttt{XSLTProcessor} possono essere riusate per più trasformazioni e con diversi fogli di stile (efficienza computazionale).
     \end{block}
 
     \begin{block}{modello DOM per XML: XSLT support example}
@@ -1036,14 +1009,9 @@
 \begin{frame}
     \frametitle{Visualizzare ed Elaborare documenti XML}
     \addtocounter{nframe}{1}
-    
-    %\begin{center}
-    %    \includegraphics[width=.2\textwidth]{../imgs/tei-r.pdf}
-    %\end{center}
-    %\textit{In parte già disponibili nei moduli TEI di base}
 
     \begin{block}{modello DOM per XML: concludendo..}
-       la tecnologia XML è ad oggi ben supportato nei vari browser, anche se alcune implementazioni differiscono in termini di copertura dello standard e di aderenza ad esso. Esistono comunque tecnologie per avere un supporto cross-browser per le più comuni funzionalità.
+       la tecnologia XML è ad oggi ben supportata dai vari browser, anche se alcune implementazioni differiscono in termini di copertura dello standard e di aderenza ad esso. Esistono comunque tecnologie per avere un supporto cross-browser per le più comuni funzionalità.
     \end{block}
      
 \end{frame}
