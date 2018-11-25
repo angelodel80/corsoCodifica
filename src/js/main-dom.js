@@ -136,9 +136,54 @@ function XMLApp(){
     }
 
     this.loadXML = function(){
-        var path="../test.xml";
+        var path="test.xml";
+        var xhr = new XMLHttpRequest();
+        xhr.open('get', path, false);
+        xhr.send(null);
+        var txt = xhr.responseText;
+        var teiDoc = xhr.responseXML;
+        console.log('XHR textResponse', txt);
+        console.log('XHR DOM Response', teiDoc);
+    }
 
+    this.xpath = function(){
+        var supportsXPath = document.implementation.hasFeature('XPath', 3.0);
+        console.log('xpath support? ', supportsXPath);
+        var evaluator = new XPathEvaluator();
+        console.log('XPATH evaluator', evaluator);
+
+        var path="test.xml";
+        var xhr = new XMLHttpRequest();
+        xhr.open('get', path, false);
+        xhr.send(null);
+        
+        var teiDoc = xhr.responseXML;
+        console.log('XHR DOM Response', teiDoc);
+
+        var result = evaluator.evaluate('TEI/teiHeader/fileDesc/titleStmt/title', teiDoc, null, XPathResult.STRING_TYPE, null);
+
+        console.log('XPATH result: ', result);
+
+        var ele = document.createElement('div');
+        var textNode = document.createTextNode(result.stringValue);
+        ele.appendChild(textNode);
+        document.documentElement.appendChild(ele);
 
     }
+
+    this.xpathRes = function(){
+       XPathResult.ANY_TYPE;
+       XPathResult.NUMBER_TYPE;
+       XPathResult.STRING_TYPE;
+       XPathResult.BOOLEAN_TYPE;
+       XPathResult.UNORDERED_NODE_ITERATOR_TYPE;
+       XPathResult.ORDERED_NODE_ITERATOR_TYPE;
+       XPathResult.UNORDERED_NODE_SNAPSHOT_TYPE;
+       XPathResult.ORDERED_NODE_SNAPSHOT_TYPE;
+       XPathResult.ANY_UNORDERED_NODE_TYPE;
+       XPathResult.FIRST_ORDERED_NODE_TYPE;
+
+    }
+
 }
 

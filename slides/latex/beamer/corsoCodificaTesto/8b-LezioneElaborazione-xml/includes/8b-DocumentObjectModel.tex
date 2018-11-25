@@ -749,7 +749,7 @@
         
      \end{block}
 
-     \begin{block}{modello DOM per XML: creazione di documenti}
+     \begin{block}{modello DOM per XML: serializzazione di documenti}
        
        % \\\texttt{document.implementation.hasFeature(“Core”, “3.0”);} 
        % vedere capitolo 12
@@ -773,22 +773,132 @@
         \begin{itemize}
             \item Non è disponibile un metodo diretto per caricare XML da server o da file in locale. 
             \item Solo Internet Explorer ha sviluppato nativamente una funzionalità del genere sul DOM \texttt{(xmldom.load("example.xml")}).
-            \item it’s generally accepted to use an XMLHttpRequest for this instead.
+            \item E' generalmente accettato utilizzare l'oggetto XMLHttpRequest per caricare file da percorsi esterni (remoti oppure locali).
         \end{itemize}
         
      \end{block}
 
-     \begin{block}{modello DOM per XML: creazione di documenti}
+     
+\end{frame}
+
+\begin{frame}
+    \frametitle{Visualizzare ed Elaborare documenti XML}
+    \addtocounter{nframe}{1}
+    
+    %\begin{center}
+    %    \includegraphics[width=.2\textwidth]{../imgs/tei-r.pdf}
+    %\end{center}
+    %\textit{In parte già disponibili nei moduli TEI di base}
+
+    \textit{Il più delle volte è meglio utilizzare chiamate asincrone e non sincrone per caricare risorse esterne.}
+
+     \begin{block}{modello DOM per XML: caricamento di documenti}
        
        % \\\texttt{document.implementation.hasFeature(“Core”, “3.0”);} 
        % vedere capitolo 12
-       var xhr = new XMLHttpRequest();
-        xhr.open(“get”, “example.txt”, false); 
-        xhr.send(null);
-        if ((xhr.status >= 200 && xhr.status < 300) || xhr.status == 304){ alert(xhr.responseText); } else { alert(“Request was unsuccessful: “ + xhr.status); }
+        \texttt{xhr = new XMLHttpRequest();}
+        \\\texttt{xhr.open(“get”, “example.txt”, false);} 
+        \\\texttt{xhr.send(null);}
+        \\\texttt{if ((xhr.status >= 200 && xhr.status < 300) || xhr.status == 304)}
+        \\\texttt{{ text = xhr.responseText); } else { ... }}
         
      \end{block}
      
 \end{frame}
+
+
+     
+\end{frame}
+
+\begin{frame}
+    \frametitle{Visualizzare ed Elaborare documenti XML}
+    \addtocounter{nframe}{1}
+    
+    %\begin{center}
+    %    \includegraphics[width=.2\textwidth]{../imgs/tei-r.pdf}
+    %\end{center}
+    %\textit{In parte già disponibili nei moduli TEI di base}
+
+    \begin{block}{modello DOM per XML: Xpath}
+        An API for XPath wasn’t part of a specification until DOM Level 3, which introduced the DOM Level 3 XPath recommendation
+    \end{block}
+
+     \begin{block}{modello DOM per XML: Xpath}
+       
+       % \\\texttt{document.implementation.hasFeature(“Core”, “3.0”);} 
+       % vedere capitolo 12
+       \texttt{var supportsXPath = document.implementation.hasFeature(“XPath”, “3.0”);}
+        
+        
+     \end{block}
+     
+\end{frame}
+
+\begin{frame}
+    \frametitle{Visualizzare ed Elaborare documenti XML}
+    \addtocounter{nframe}{1}
+    
+    %\begin{center}
+    %    \includegraphics[width=.2\textwidth]{../imgs/tei-r.pdf}
+    %\end{center}
+    %\textit{In parte già disponibili nei moduli TEI di base}
+
+    \begin{block}{modello DOM per XML: Xpath}
+        \begin{itemize}
+            \item Oggetto di tipo \texttt{XPathEvaluator} (used to evaluate XPath expressions)
+            \item Oggetto di tipo \texttt{XPathResult} (impiegato per gestire il tipo di risultato ottenuto da una operazione di selezione xpath)
+        \end{itemize}
+       
+    \end{block}
+
+     \begin{block}{modello DOM per XML: Xpath}
+       
+       % \\\texttt{document.implementation.hasFeature(“Core”, “3.0”);} 
+       % vedere capitolo 12
+       \texttt{result = xmldom.evaluate(“employee/name”, xmldom.documentElement, null, XPathResult.ORDERED_NODE_ITERATOR_TYPE, null);}
+       \\\texttt{evaluator.evaluate(expression, contextNode, resolver, type, result)}
+        
+        
+     \end{block}
+     
+\end{frame}
+
+
+\begin{frame}
+    \frametitle{Visualizzare ed Elaborare documenti XML}
+    \addtocounter{nframe}{1}
+    
+    \textbf{XPathResult ha 10 tipi diversi di possibili valori}
+
+    \begin{center}
+        \includegraphics[width=.9\textwidth]{imgs/xpathResult.png}
+    \end{center}
+
+\end{frame}
+
+\begin{frame}
+    \frametitle{Visualizzare ed Elaborare documenti XML}
+    \addtocounter{nframe}{1}
+    
+    %\begin{center}
+    %    \includegraphics[width=.2\textwidth]{../imgs/tei-r.pdf}
+    %\end{center}
+    %\textit{In parte già disponibili nei moduli TEI di base}
+
+    \begin{block}{modello DOM per XML: Xpath Esempio}
+        \texttt{result = xmldom.evaluate(}
+         \\\texttt{ 'text/back', xmlTEI.documentElement, }
+         \\\texttt{ null, XPathResult.BOOLEAN_TYPE, null);}
+    \end{block}
+
+     \begin{block}{modello DOM per XML: Xpath Esempio}
+        \texttt{result = xmldom.evaluate(}
+        \\\texttt{  'count(text/body/div)', xmldom.documentElement,} 
+        \\\texttt{  null, XPathResult.NUMBER_TYPE, null);}
+     \end{block}
+     
+\end{frame}
+
+
 
 
