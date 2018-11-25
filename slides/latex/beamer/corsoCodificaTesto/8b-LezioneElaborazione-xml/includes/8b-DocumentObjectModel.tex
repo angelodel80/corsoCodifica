@@ -899,6 +899,158 @@
      
 \end{frame}
 
+\begin{frame}
+    \frametitle{Visualizzare ed Elaborare documenti XML}
+    \addtocounter{nframe}{1}
+    
+    %\begin{center}
+    %    \includegraphics[width=.2\textwidth]{../imgs/tei-r.pdf}
+    %\end{center}
+    %\textit{In parte già disponibili nei moduli TEI di base}
+
+    \begin{block}{modello DOM per XML: Namespace support}
+        \begin{itemize}
+            \item Spesso i documenti XML fanno uso di namespace per qualificate il corretto vocabolario impiegato.
+            \item In questa ciscostanza \texttt{XPathEvaluator} deve essere opportunamente impostato.
+            \item Nel documenti TEI-XML tutti gli elementi sono parte del namespace \texttt{http://www.tei-c.org/ns/1.0}
+        \end{itemize}
+        
+    \end{block}
+     
+\end{frame}
+
+
+\begin{frame}
+    \frametitle{Visualizzare ed Elaborare documenti XML}
+    \addtocounter{nframe}{1}
+    
+    %\begin{center}
+    %    \includegraphics[width=.2\textwidth]{../imgs/tei-r.pdf}
+    %\end{center}
+    %\textit{In parte già disponibili nei moduli TEI di base}
+
+    \begin{block}{modello DOM per XML: Namespace support}
+        \begin{itemize}
+            \item Un modo per gestire il namespace è attraverso la creazione di un oggetto \texttt{XPathNSResolver}
+            \item Invocando il metodo \texttt{createNSResolver()} del documento.
+            \item Struttando una funzione che dato un prefisso restituisce l'URI del namespace. (\texttt{lookupNamespaceURI})
+        \end{itemize}
+    \end{block}
+
+    \begin{block}{modello DOM per XML: Namespace support example}
+        \texttt{nsresolver = xmldom.createNSResolver(xmldom.documentElement);} 
+        \\\texttt{result = xmldom.evaluate(} \\\texttt{"/tei:TEI/tei:text/tei:front/tei:titlePage/tei:docImprint/tei:publisher",} \\\texttt{xmldom.documentElement, nsresolver, XPathResult.ORDERED_NODE_SNAPSHOT_TYPE, null);}
+    \end{block}
+     
+\end{frame}
+
+\begin{frame}
+    \frametitle{Visualizzare ed Elaborare documenti XML}
+    \addtocounter{nframe}{1}
+    
+    %\begin{center}
+    %    \includegraphics[width=.2\textwidth]{../imgs/tei-r.pdf}
+    %\end{center}
+    %\textit{In parte già disponibili nei moduli TEI di base}
+
+    \begin{block}{modello DOM per XML: XSLT support}
+        \begin{itemize}
+            \item Esiste un oggetto che può essere usato per elaborare fogli di stile XSLT in javascript: \texttt{XSLTProcessor}.
+            \item Il promo passo è caricare due documenti DOM: un XML di base, e l'altro XSLT.
+        \end{itemize}
+    \end{block}
+
+    \begin{block}{modello DOM per XML: XSLT support example}
+         \texttt{processor = new XSLTProcessor()} 
+         \\\texttt{processor.importStylesheet(xsltdom);}
+         \\\text{result = processor.transformToDocument(xmldom);}
+    \end{block}
+     
+\end{frame}
+
+\begin{frame}
+    \frametitle{Visualizzare ed Elaborare documenti XML}
+    \addtocounter{nframe}{1}
+    
+    %\begin{center}
+    %    \includegraphics[width=.2\textwidth]{../imgs/tei-r.pdf}
+    %\end{center}
+    %\textit{In parte già disponibili nei moduli TEI di base}
+
+    \begin{block}{modello DOM per XML: XSLT support}
+        \begin{itemize}
+            \item Accanto al metodo \texttt{transformToDocument()} esiste anche il metodo  \testtt{transformToFragment()}. 
+            \item La ragione per l'utilizzo di tale metodo è per coprire eventuali casi in cui il risultato della trasformazione vuole essere aggiunta ad un terzo documento DOM.
+            \item Tra gli argomenti, infatti, deve essere inserito anche il documento destinatario finale per ovvi controlli di consistenza.
+        \end{itemize}
+    \end{block}
+
+    \begin{block}{modello DOM per XML: XSLT support example}
+        \testtt{fragment = processor.transformToFragment(xmldom, document); }
+        \\\texttt{div = document.getElementById(“divResult”); }
+        \\\texttt{div.appendChild(fragment);}
+    \end{block}
+     
+\end{frame}
+
+\begin{frame}
+    \frametitle{Visualizzare ed Elaborare documenti XML}
+    \addtocounter{nframe}{1}
+    
+    %\begin{center}
+    %    \includegraphics[width=.2\textwidth]{../imgs/tei-r.pdf}
+    %\end{center}
+    %\textit{In parte già disponibili nei moduli TEI di base}
+
+    \begin{block}{modello DOM per XML: XSLT support}
+        L'oggetto XSLTProcessor permette di gestire e indicare parametri XSLT
+    \end{block}
+
+    \begin{block}{modello DOM per XML: XSLT support example}
+         \texttt{processor = new XSLTProcessor();}
+         \\\texttt{processor.importStylesheet(xsltdom);} 
+         \\\texttt{processor.setParameter(null, "message", "contenuto del messaggio");} 
+         \\\texttt{result = processor.transformToDocument(xmldom);}
+    \end{block}
+     
+\end{frame}
+
+\begin{frame}
+    \frametitle{Visualizzare ed Elaborare documenti XML}
+    \addtocounter{nframe}{1}
+    
+    %\begin{center}
+    %    \includegraphics[width=.2\textwidth]{../imgs/tei-r.pdf}
+    %\end{center}
+    %\textit{In parte già disponibili nei moduli TEI di base}
+
+    \begin{block}{modello DOM per XML: XSLT support}
+        Le istanze dell'oggetto \texttt{XSLTProcessor} possono essere riusate per più trasformazioni e con diversi fogli di stile (Efficienza computazionale).
+    \end{block}
+
+    \begin{block}{modello DOM per XML: XSLT support example}
+        \texttt{processor.importStylesheet(xsltdom); }
+        \\\texttt{//do some transformations }
+        \\\texttt{processor.reset(); }
+        \\\texttt{processor.importStylesheet(xsltdom2); }
+    \end{block}
+     
+\end{frame}
+
+\begin{frame}
+    \frametitle{Visualizzare ed Elaborare documenti XML}
+    \addtocounter{nframe}{1}
+    
+    %\begin{center}
+    %    \includegraphics[width=.2\textwidth]{../imgs/tei-r.pdf}
+    %\end{center}
+    %\textit{In parte già disponibili nei moduli TEI di base}
+
+    \begin{block}{modello DOM per XML: concludendo..}
+       la tecnologia XML è ad oggi ben supportato nei vari browser, anche se alcune implementazioni differiscono in termini di copertura dello standard e di aderenza ad esso. Esistono comunque tecnologie per avere un supporto cross-browser per le più comuni funzionalità.
+    \end{block}
+     
+\end{frame}
 
 
 

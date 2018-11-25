@@ -1,4 +1,4 @@
-<?xml version"1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="UTF-8"?>
 
 <TEI>
     <teiHeader>
@@ -23,7 +23,7 @@
                     <titlePart>Libro per i ragazzi</titlePart>
                 </docTitle>
                 <docEdition>98.a edizione</docEdition>
-                <graphic url= "publisher.png">
+                <graphic url= "publisher.png" />
                     <docImprint>
                         <pubPlace>MILANO</pubPlace>
                         <publisher>FRATELLI TREVES, EDITORI</publisher>

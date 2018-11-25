@@ -172,6 +172,8 @@ function XMLApp(){
     }
 
     this.xpathRes = function(){
+
+        
        XPathResult.ANY_TYPE;
        XPathResult.NUMBER_TYPE;
        XPathResult.STRING_TYPE;
@@ -183,6 +185,12 @@ function XMLApp(){
        XPathResult.ANY_UNORDERED_NODE_TYPE;
        XPathResult.FIRST_ORDERED_NODE_TYPE;
 
+    }
+
+    this.xsltprocess = function(){
+        var processor = new XSLTProcessor();
+        
+        
     }
 
 }

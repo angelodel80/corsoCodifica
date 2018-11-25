@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<tei:TEI xmlns:tei="http://www.tei-c.org/ns/1.0">
+    <tei:teiHeader>
+        <tei:fileDesc>
+            <tei:titleStmt>
+                <tei:title>Cuore</tei:title>
+                <tei:author>E. DE AMICIS</tei:author>
+            </tei:titleStmt>
+            <tei:publicationStmt>
+                <tei:p>versione non pubblicata</tei:p>
+            </tei:publicationStmt>
+            <tei:sourceDesc>
+               <tei:p>libro a stampa</tei:p>
+            </tei:sourceDesc>
+        </tei:fileDesc>
+    </tei:teiHeader>
+    
+    <tei:text>
+        <tei:front>
+            <tei:titlePage>
+                <tei:docAuthor>E. DE AMICIS</tei:docAuthor>
+                <tei:docTitle>
+                    <tei:titlePart type= "main">CUORE</tei:titlePart>
+                    <tei:titlePart>Libro per i ragazzi</tei:titlePart>
+                </tei:docTitle>
+                <tei:docEdition>98.a edizione</tei:docEdition>
+                <tei:graphic url= "publisher.png" />
+                    <tei:docImprint>
+                        <tei:pubPlace>MILANO</tei:pubPlace>
+                        <tei:publisher>FRATELLI TREVES, EDITORI</tei:publisher>
+                        <tei:date>1889</tei:date>
+                    </tei:docImprint>
+            </tei:titlePage>
+        </tei:front>
+
+        <tei:body>
+            <tei:div>
+                <tei:p>[qui il testo]</tei:p>
+            </tei:div>
+            
+        </tei:body>
+
+        <tei:back>
+            <tei:div>
+                <tei:p>[qui le appendici]</tei:p>
+            </tei:div>
+        </tei:back>
+    </tei:text>
+</tei:TEI>
