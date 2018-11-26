@@ -55,6 +55,8 @@ function NodeApp() {
 
     this.createNode = function(){
         var mynode = document.getRootNode();
+        console.log('XXXXXXXXX-',document.documentElement);
+    
         console.log('node type', mynode.nodeType);
     }
 

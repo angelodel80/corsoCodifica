@@ -59,11 +59,11 @@
     %\textit{In parte già disponibili nei moduli TEI di base}
 
      \begin{block}{Document Object Model (DOM): espressività}
-       I nodi di un albero DOM possono essere aggiunti, modificati, cancellatti o rimpiazzati facilmente frazie alle API definite dal modello.
+       I nodi di un albero DOM possono essere aggiunti, modificati, cancellatti o rimpiazzati facilmente grazie alle API definite dal modello.
      \end{block}
 
      \begin{block}{Document Object Model (DOM)}
-        Il modello DOM è una specifica e una raccomandazione del consorzio di standardiziazione Web W3C.
+        Il modello DOM è una specifica e una raccomandazione del consorzio di standardizzazione Web W3C.
         \\\url{https://www.w3.org/DOM/DOMTR}
      \end{block}
      
@@ -78,7 +78,7 @@
     %\end{center}
     %\textit{In parte già disponibili nei moduli TEI di base}
 
-     \begin{block}{Document Object Model (DOM): Browser-Indipendent}
+     \begin{block}{Document Object Model (DOM): Browser-Independent}
         Una importante caratteristica del Modello e delle API DOM è la sua indipendenza dalla tecnologia di implementazione.
         
      \end{block}
@@ -102,7 +102,7 @@
     %\textit{In parte già disponibili nei moduli TEI di base}
 
      \begin{block}{DOM Levels}
-       Esistono diverse versioni (livelli) dello standard DOM nonché diverse moduli all'interno di ciascun livello.
+       Esistono diverse versioni (livelli) dello standard DOM nonché diversi moduli all'interno di ciascun livello.
      \end{block}
 
      \begin{block}{DOM Levels}
@@ -137,7 +137,7 @@
     %\textit{In parte già disponibili nei moduli TEI di base}
 
      \begin{block}{DOM Level 0}
-       \textbf{Il livello 0} del DOM indica la madalità 'legacy' di operare sui documenti, sarebbe cioè quella che non tiene di conto delle specifiche W3C.
+       \textbf{Il livello 0} del DOM indica la modalità 'legacy' di operare sui documenti, sarebbe cioè quella che non tiene in conto delle specifiche W3C.
      \end{block}
      
 
@@ -263,7 +263,7 @@
         \begin{itemize}
             \item Un documento XML può essere rappresentato come una gerarchia di nodi attraverso il modello DOM.
             \item Ciascun tipo di nodo ha caratteristiche, dati e funzionalità differenti.
-            \item Caiascun tipo di nodo può avere differenti tipi di relazioni con gli altri tipi di nodi.
+            \item Ciascun tipo di nodo può avere differenti tipi di relazioni con gli altri tipi di nodi.
             \item Le relazioni tra i nodi DOM creano una gerarchia, la quale permette di rappresentare un documento XML come un albero.
         \end{itemize}
      \end{block}
@@ -282,7 +282,7 @@
      \begin{block}{Il Modello DOM: principali caratteristiche}
         \begin{itemize}
             \item Il Modello DOM ha un nodo \textbf{document} che rappresenta tutto il documento attraverso la cosiddetta \textbf{radice} del documento.
-            \item Il Modello DOM ha un elemento detto document element che è l'elemento più esterno del documento, il quale è avo di tutti gli altri elementi e che quindi li racchiude tutti. (esiste solo un \textit{document element} per documento)
+            \item Il Modello DOM ha un elemento detto \textbf{document element} che è l'elemento più esterno del documento, il quale è avo di tutti gli altri elementi e che quindi li racchiude tutti. (esiste solo un \textit{document element} per documento)
             \item Ciascun pezzo del documento XML può essere rappresentato da un nodo DOM in un albero DOM.
         \end{itemize}
      \end{block}
@@ -392,7 +392,7 @@
      \end{block}
 
      \begin{block}{Il Modello DOM: proprietà ownerDocument}
-        La proprietà \textit{ownerDocument} fornisce un modo veloce per accedere al \textit{nodo documento} senza dover attraversare tutta la gerachia di nodi per arrivare alla radice dell'albero.
+        La proprietà \textit{ownerDocument} fornisce un modo veloce per accedere al \textit{nodo documento} senza dover attraversare tutta la gerarchia di nodi per arrivare alla radice dell'albero.
      \end{block}
 
 \end{frame}
@@ -558,9 +558,9 @@
      \end{block}
 
      \begin{block}{Verificare con js se il browser implementa i moduli XML del modello DOM}
-        \texttt{document.implementation.hasFeature(“Core”, “2.0”); }
-        \\\texttt{document.implementation.hasFeature(“Core”, “3.0”);} 
-        \\\texttt{document.implementation.hasFeature(“XML”, “2.0”);}
+        \texttt{document.implementation.hasFeature('Core', '2.0'); }
+        \\\texttt{document.implementation.hasFeature('Core', '3.0');} 
+        \\\texttt{document.implementation.hasFeature('XML', '2.0');}
      \end{block}
      
 \end{frame}
@@ -593,7 +593,7 @@
      \begin{block}{Modello DOM per XML: Level 2 e Level 3}
         \begin{itemize}
             \item Il modulo DOM Level 2 Core introduce nuove funzionalità collegate alla gestione dei namespaces XML.
-            \item DOM Leve 2 permette la creazione di nuove istanze di Document e permette la creazione di oggetti \textit{DocumentType}.
+            \item DOM Level 2 permette la creazione di nuove istanze di Document e permette la creazione di oggetti \textit{DocumentType}.
         \end{itemize}
        
      \end{block}
@@ -621,7 +621,7 @@
      \begin{block}{Modello DOM per XML: Traversals e Range}
         \begin{itemize}
             \item Gli oggetti \textit{Ranges} implementano funzionalità per selezionare specifiche porzioni della struttura del DOM per elaborare il documento in qualche modo.
-            \item Per esempio può essere usato per rimuovere porzioni di documento mantenendo sempre una coerenza sintattita e di forma del documento XML.
+            \item Per esempio può essere usato per rimuovere porzioni di documento mantenendo sempre una coerenza sintattica e di forma del documento XML.
         \end{itemize}
        
      \end{block}
@@ -758,7 +758,7 @@
      \begin{block}{Modello DOM per XML}
         \begin{itemize}
             \item Non è disponibile un metodo diretto per caricare XML da server o da file in locale. 
-            \item Solo Internet Explorer ha sviluppato nativamente una funzionalità del genere sul DOM \texttt{xmldom.load("example.xml")}.
+            \item Solo Internet Explorer ha implementato nativamente una funzionalità del genere sul DOM \texttt{xmldom.load("example.xml")}.
             \item E' generalmente accettato utilizzare l'oggetto XMLHttpRequest per caricare file da percorsi esterni (remoti oppure locali).
         \end{itemize}
         
@@ -928,7 +928,7 @@
     \begin{block}{modello DOM per XML: XSLT support}
         \begin{itemize}
             \item Esiste un oggetto che può essere usato per elaborare fogli di stile XSLT in javascript: \texttt{XSLTProcessor}.
-            \item Il promo passo è caricare due documenti DOM: un XML di base, e l'altro XSLT.
+            \item Il primo passo è quello di caricare due documenti DOM: un XML di base, e l'altro XSLT.
         \end{itemize}
     \end{block}
 
