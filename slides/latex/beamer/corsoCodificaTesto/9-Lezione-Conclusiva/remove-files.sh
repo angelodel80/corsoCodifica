@@ -1,0 +1,2 @@
+#!/bin/bash
+rm 9-personalizzareSchema-TEI-TematicheAvanzate-conclusioni.aux 9-personalizzareSchema-TEI-TematicheAvanzate-conclusioni.log 9-personalizzareSchema-TEI-TematicheAvanzate-conclusioni.nav 9-personalizzareSchema-TEI-TematicheAvanzate-conclusioni.out 9-personalizzareSchema-TEI-TematicheAvanzate-conclusioni.pdf 9-personalizzareSchema-TEI-TematicheAvanzate-conclusioni.snm 9-personalizzareSchema-TEI-TematicheAvanzate-conclusioni.toc 9-personalizzareSchema-TEI-TematicheAvanzate-conclusioni.vrb 9-personalizzareSchema-TEI-TematicheAvanzate-conclusioni.log texput.log
