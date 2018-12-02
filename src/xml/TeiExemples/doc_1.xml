@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<TEI>
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title></title>
+            </titleStmt>
+            
+            <publicationStmt>
+                <publisher></publisher>
+                <date></date>
+                <availability status="restricted">
+                    <p></p>
+                </availability>
+            </publicationStmt>
+            
+            <sourceDesc>
+                <bibl>
+                </bibl>
+            </sourceDesc>
+        </fileDesc>
+    </teiHeader>
+
+    <text xml:id="doc_1">
+        <div>
+            <p><!-- --></p>
+        </div>
+       
+    </text>
+</TEI>

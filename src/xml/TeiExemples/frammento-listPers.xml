@@ -1,0 +1,24 @@
+<listPerson>
+    <person xml:id="AgataRossi">
+        <persName>
+
+        </persName>
+
+    </person>
+
+    <person xml:id="Androinus">
+        <persName>
+            <forename>Androinus</forename>
+        </persName>
+        <sex>M</sex>
+    </person>
+
+    <person xml:id="MarioRossi">
+        <persName>
+
+        </persName>
+
+    </person>
+
+</listPerson>
+

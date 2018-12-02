@@ -1,6 +1,6 @@
 
     \begin{frame}
-        \frametitle{Modularità della TEI}
+        \frametitle{Aspetti avanzati della TEI}
         \addtocounter{nframe}{1}
         
        % \begin{center}
@@ -9,19 +9,468 @@
     
         \begin{itemize}
             
-            \item<1-> parleremo del sistema Modulare della TEI
+            \item<1-> Alcuni degli aspetti avanzati per la codifica TEI sono:
                 \begin{itemize}
-                    \item<1-> Moduli
-                    \item<1-> Classi
-                    \item<1-> Macro
-                    \item<1-> Datatype
+                    \item<1-> Gestione delle \textbf{Gerarchie Multiple Sovrapposte}
+                    \item<1-> Annotazione e descrizione di \textbf{Entità Nominate}
+                    \item<1-> Impiego dei \textbf{Namespace} per l'uso di più vocabolari XML
+                    \item<1-> Impiego delle direttive \textbf{XInlude} per la gestione 
+                     di documenti XML multipli
                 \end{itemize} 
-            \item<2-> parleremo degli elementi basilari
-                \begin{itemize}
-                    \item<2-> Intestazione TEI (TEIHeader)
-                    \item<2-> Elementi e attributi presenti in tutti i documenti TEI
-                    \item<2-> Esempi di codifica
-                \end{itemize} 
+           
         \end{itemize}
         
     \end{frame}
+
+    \begin{frame}
+        \frametitle{Aspetti avanzati della TEI}
+        \addtocounter{nframe}{1}
+        
+       % \begin{center}
+        % \includegraphics[width=.2\textwidth]{../imgs/tei-r.pdf}
+        % \end{center}
+    
+        \begin{block}{Modello Dati e Struttura XML: Singola Gerarchia}
+            
+            XML impone una singola gerarchia nel proprio modello dati che genera un singolo albero, dove non c’è alcuna possibilità di sovrapposizione.
+           
+        \end{block}
+        
+    \end{frame}
+
+
+    \begin{frame}
+        \frametitle{Aspetti avanzati della TEI}
+        \addtocounter{nframe}{1}
+        
+       % \begin{center}
+        % \includegraphics[width=.2\textwidth]{../imgs/tei-r.pdf}
+        % \end{center}
+    
+        \begin{block}{Modello Dati e Struttura XML: Singola Gerarchia}
+            
+            Da un punto di vista della struttura e delle relazioni testuali che esistono implicitamente ed esplicitamente in una risorsa testuale, una singola gerarchia può non essere sufficiente a descrivere tutta la complessità veicolata. 
+            
+           
+        \end{block}
+
+        \begin{block}{Modello Dati e Struttura XML: Singola Gerarchia}
+
+            E' necessario quindi considerare gerarchie multiple concorrenti per catturare contemporaneamente aspetti multipli e indipendenti (strutture sintattiche, dichiarazioni tipografiche, analisi semantiche o relazionali).
+
+        \end{block}
+        
+    \end{frame}
+
+
+    \begin{frame}
+        \frametitle{Aspetti avanzati della TEI}
+        \addtocounter{nframe}{1}
+        
+       % \begin{center}
+        % \includegraphics[width=.2\textwidth]{../imgs/tei-r.pdf}
+        % \end{center}
+    
+        \begin{block}{Gerarchie multiple sovrapposte}
+            Uno stesso frammento di documento che si presta parzialmente o completamente ad essere annotato con tag differenti si può sovrapporre a gerarchie diverse dando vita a frammenti testuali che si intersecano gli uni agli altri.
+        \end{block}
+
+        \begin{block}{Gerarchie multiple sovrapposte: esempio}
+            Per esempio un paragrafo può iniziare in una pagina e terminare all’interno della pagina successiva.
+            \\ Per approfondire: \textit{TEI Guidelines 20 Non-hierarchical Structures}.
+        \end{block}
+        
+    \end{frame}
+
+
+
+    \begin{frame}
+        \frametitle{Aspetti avanzati della TEI}
+        \addtocounter{nframe}{1}
+        
+       % \begin{center}
+        % \includegraphics[width=.2\textwidth]{../imgs/tei-r.pdf}
+        % \end{center}
+    \textit{Individuare gerarchie sovrapposte: codificare lo stesso testo con più prospettive.}
+
+        \begin{block}{Esempio: Codifica della metrica}
+            \begin{center}
+                \includegraphics[width=.95\textwidth]{imgs/metrica.png}
+            \end{center}
+        \end{block}
+        
+    \end{frame}
+
+    \begin{frame}
+        \frametitle{Aspetti avanzati della TEI}
+        \addtocounter{nframe}{1}
+        
+       % \begin{center}
+        % \includegraphics[width=.2\textwidth]{../imgs/tei-r.pdf}
+        % \end{center}
+    \textit{Individuare gerarchie sovrapposte: codificare lo stesso testo con più prospettive.}
+
+        \begin{block}{Esempio: Codifica delle frasi}
+            \begin{center}
+                \includegraphics[width=.95\textwidth]{imgs/frasi.png}
+            \end{center}
+        \end{block}
+        
+    \end{frame}
+
+    \begin{frame}
+        \frametitle{Aspetti avanzati della TEI}
+        \addtocounter{nframe}{1}
+        
+       % \begin{center}
+        % \includegraphics[width=.2\textwidth]{../imgs/tei-r.pdf}
+        % \end{center}
+
+        \begin{block}{Gerarchie sovrapposte: Soluzioni proposte dalla TEI}
+            \begin{itemize}
+                \item Elementi vuoti
+                \item Segmentazione
+            \end{itemize}
+        \end{block}
+        
+    \end{frame}
+
+
+    \begin{frame}
+        \frametitle{Aspetti avanzati della TEI}
+        \addtocounter{nframe}{1}
+        
+       % \begin{center}
+        % \includegraphics[width=.2\textwidth]{../imgs/tei-r.pdf}
+        % \end{center}
+
+        \begin{block}{Gerarchie sovrapposte: Elementi vuoti}
+            Identificare un vocabolario come primario che viene rappresentato con una gerarchia standard XML, e usare elementi vuoti per delimitare l’inizio e la fine dei tag dei vocabolari secondari.
+        \end{block}
+
+        \begin{block}{Gerarchie sovrapposte: Elementi vuoti}
+            Utilizzo di un elemento vuoto \textbf{milestone} che ha la funzione di marcare/segnare/annotare la posizione all’interno di un testo in cui la tipologia di un elemento in un dato sistema di riferimento cambia.
+        \end{block}
+        
+    \end{frame}
+
+    \begin{frame}
+        \frametitle{Aspetti avanzati della TEI}
+        \addtocounter{nframe}{1}
+        
+       % \begin{center}
+        % \includegraphics[width=.2\textwidth]{../imgs/tei-r.pdf}
+        % \end{center}
+        Tali elementi non hanno contenuti, ma semplicemente suddividono il testo in regioni contigue
+        \begin{block}{Gerarchie sovrapposte: Elementi vuoti}
+            \begin{itemize}
+                \item \texttt{<milestone/>}: segnala il limite che separa ogni tipo di sezione di un testo, come indicato da cambiamenti nel sistema di riferimento standard, qualora la sezione non sia rappresentata da un elemento strutturale.
+                \item \texttt{<pb/>} (\textit{page beginning}): indica il limite tra una pagina di un testo e la successiva in un sistema di riferimento standard.
+            \end{itemize}
+        \end{block}
+
+    \end{frame}
+
+    \begin{frame}
+        \frametitle{Aspetti avanzati della TEI}
+        \addtocounter{nframe}{1}
+        
+       % \begin{center}
+        % \includegraphics[width=.2\textwidth]{../imgs/tei-r.pdf}
+        % \end{center}
+        Tali elementi non hanno contenuti, ma semplicemente suddividono il testo in regioni contigue
+        \begin{block}{Gerarchie sovrapposte: Elementi vuoti}
+            \begin{itemize}
+                \item \texttt{<lb/>} (\textit{line beginning}): segna l'inizio di una nuova riga (tipografica) in qualche edizione o versione di un testo.
+                \item \texttt{<cb/>} (\textit{column beginning}): indica il limite tra una colonna di un testo e la successiva in un sistema di riferimento standard.
+                \item \textbf{@n}: usato per codificare un valore per unità associate a milestone
+            \end{itemize}
+        \end{block}
+
+    \end{frame}
+
+
+    \begin{frame}
+        \frametitle{Aspetti avanzati della TEI}
+        \addtocounter{nframe}{1}
+        
+       % \begin{center}
+        % \includegraphics[width=.2\textwidth]{../imgs/tei-r.pdf}
+        % \end{center}
+    \textit{Individuare gerarchie sovrapposte: codificare lo stesso testo con più prospettive.}
+
+        \begin{block}{Esempio: Codificare righe e frasi}
+            \begin{center}
+                \includegraphics[width=.97\textwidth]{imgs/frasi-righe.png}
+            \end{center}
+        \end{block}
+        
+    \end{frame}
+
+    \begin{frame}
+        \frametitle{Aspetti avanzati della TEI}
+        \addtocounter{nframe}{1}
+        
+       % \begin{center}
+        % \includegraphics[width=.2\textwidth]{../imgs/tei-r.pdf}
+        % \end{center}
+
+        \begin{block}{Gerarchie sovrapposte: Segmentazione}
+             Se un elemento appartenente ad una gerarchia secondaria è in overlap con elementi appartenenti alla gerarchia primaria, questo viene spezzato in frammenti più piccoli (\textbf{partial elements}).
+        \end{block}
+
+        \begin{block}{Gerarchie sovrapposte: Segmentazione}
+            La gerarchia principale viene espressa attraverso markup XML standard, mentre gli elementi delle gerarchie secondarie risultano frammentati all'interno degli elementi principali: \textbf{sono connessi fra di loro attraverso attributi specifici}.
+        \end{block}
+        
+    \end{frame}
+
+    \begin{frame}
+        \frametitle{Aspetti avanzati della TEI}
+        \addtocounter{nframe}{1}
+        
+       % \begin{center}
+        % \includegraphics[width=.2\textwidth]{../imgs/tei-r.pdf}
+        % \end{center}
+
+        \begin{block}{Gerarchie sovrapposte: Segmentazione}
+              Modalità per collegare i \textbf{partial elements}.
+              \begin{itemize}
+                  \item \textbf{Virtual join}, chaining o aggregation
+                  \item [] \textit{attraverso il meccanismo di co-indexing}
+                  \item \textbf{Join}
+                  \item [] \textit{attraverso collegamenti anche non contigui di elementi}
+              \end{itemize}
+        \end{block}
+
+    \end{frame}
+
+    \begin{frame}
+        \frametitle{Aspetti avanzati della TEI}
+        \addtocounter{nframe}{1}
+
+        \begin{block}{Gerarchie sovrapposte: Co-indexing - Esempio}
+            \begin{center}
+                \includegraphics[width=.97\textwidth]{imgs/co-indexing.png}
+            \end{center}
+        \end{block}
+
+            \tiny\textit{Lasciatelo dire, – concluse Dupin che non aveva giudicato opportuno ribattere quelle osservazioni – lasciatelo discorrere: si alleggerirà la coscienza.}
+
+    \end{frame}
+
+    \begin{frame}
+        \frametitle{Aspetti avanzati della TEI}
+        \addtocounter{nframe}{1}
+
+        \begin{block}{Gerarchie sovrapposte: Join - Esempio}
+            \begin{center}
+                \includegraphics[width=.95\textwidth]{imgs/join.png}
+            \end{center}
+        \end{block}
+    \end{frame}
+
+    \begin{frame}
+        \frametitle{Aspetti avanzati della TEI}
+        \addtocounter{nframe}{1}
+
+        \begin{block}{Entità Nominate: definizione poco rigorosa}
+            Sono definite \textbf{entità nominate} (\textit{named entities}) quegli ``oggetti'' del \textit{mondo reale} (\textbf{persone}, \textbf{luoghi}, \textbf{organizzazioni}, ecc.) che possono essere designati ed individuati in maniera precisa per mezzo di \textbf{nomi propri}.
+        \end{block}
+    \end{frame}
+
+    \begin{frame}
+        \frametitle{Aspetti avanzati della TEI}
+        \addtocounter{nframe}{1}
+
+        \begin{block}{Entità Nominate e TEI}
+            In un testo possiamo trovare molti riferimenti a oggetti nominati.
+            \\In TEI possono essere codificati in vario modo.
+        \end{block}
+        
+            \begin{itemize}
+                \item \texttt{<rs>}
+                \item \texttt{<name>}
+                \item \texttt{<persName>}
+                \item \texttt{<placeName>}
+                \item ...
+            \end{itemize}
+        
+    \end{frame}
+
+    \begin{frame}
+        \frametitle{Aspetti avanzati della TEI}
+        \addtocounter{nframe}{1}
+
+        \begin{block}{Entità Nominate e TEI}
+            Un nome da solo, tuttavia, presenta sempre margini di ambiguità che impediscono una identificazione univoca sulla base del testo.
+        \end{block}
+
+        \begin{block}{Entità Nominate e TEI}
+            Per questo motivo si raccolgono gli oggetti nominati, individuati nel testo, in liste specifiche.
+            \\ Le singole occorrenze dei nomi condificate nel testo si collegano poi a queste liste per mezzo di opportuni riferimenti. 
+        \end{block}
+        
+    \end{frame}
+
+    \begin{frame}
+        \frametitle{Aspetti avanzati della TEI}
+        \addtocounter{nframe}{1}
+        
+        \textit{Nel \texttt{<teiHeader>} sarà inserita una lista dedicata alle persone}
+
+            \begin{center}
+                \includegraphics[width=.7\textwidth]{imgs/listPerson.png}
+            \end{center}
+        
+    \end{frame}
+
+    \begin{frame}
+        \frametitle{Aspetti avanzati della TEI}
+        \addtocounter{nframe}{1}
+
+        \begin{block}{Entità nominate: Name - Esempio}
+            \begin{center}
+                \includegraphics[width=.98\textwidth]{imgs/name.png}
+            \end{center}
+        \end{block}
+        \textit{Nel testo si riferisce la persona in questione attraverso l'attributo \textbf{@ref} che identifichi un \textbf{@xml:id} specifico per la persona marcata}
+    \end{frame}
+
+    \begin{frame}
+        \frametitle{Aspetti avanzati della TEI}
+        \addtocounter{nframe}{1}
+
+        \begin{block}{Entità nominate}
+            \begin{itemize}
+                \item Qualunque forma ortografica e lessicale riconducibile alla stessa persona avrà un puntatore allo stesso valore di \textbf{@xml:id}
+                \item Volendo può essere applicato anche a \textbf{forme denotative} meno precise e/o allusive: \textit{il Presidente degli Stati Uniti}.
+            \end{itemize}
+        \end{block}
+    \end{frame}
+
+    \begin{frame}
+        \frametitle{Aspetti avanzati della TEI}
+        \addtocounter{nframe}{1}
+
+        \begin{block}{Entità nominate: Luoghi, Enti, Organizzazioni, ecc}
+            \begin{itemize}
+                \item Lo stesso metodo si applica anche ai nomi di luogo
+                \item [] Utilizzando l'elemento \texttt{<listPlace>}
+                \item Lo stesso metodo si applica anche ai nomi di enti e organizzazioni
+                \item [] Utilizzando l'elemento \texttt{<listOrg>}
+            \end{itemize}
+        \end{block}
+    \end{frame}
+
+
+    \begin{frame}
+        \frametitle{Aspetti avanzati della TEI}
+        \addtocounter{nframe}{1}
+
+        \begin{block}{NameSpace}
+            \begin{itemize}
+                \item i \textbf{namespace} sono dei raggruppamenti di nomi sotto un unico identificativo
+                \item possibilità di usare gli elementi di più vocabolari contemporaneamente
+                \item distinguere gli elementi di ciascun vocabolario
+                \item indicare lo schema di appartenenza per gli elementi
+                \item distinguere elementi e attributi con lo stesso nome
+            \end{itemize}
+        \end{block}
+    \end{frame}
+
+
+    \begin{frame}
+        \frametitle{Aspetti avanzati della TEI}
+        \addtocounter{nframe}{1}
+
+        \begin{block}{Uso dei NameSpace}
+            \begin{itemize}
+                \item i \textbf{namespace} sono dei raggruppamenti di nomi sotto un unico identificativo
+                \item per introdurre un namespace nel documento XML si utilizza l'attributo \textbf{@xmlns}.
+                \item il valore dell'attributo \textbf{@xmlns} è un \textbf{URI} che non ha nessun valore dichiarativo, ma solo \textbf{informativo}.
+                \item \texttt{<elemento xmlns="URI" />}
+                \item \texttt{<prefix:elemento xmlns:prefix="URI" />}
+            \end{itemize}
+        \end{block}
+    \end{frame}
+
+    \begin{frame}
+        \frametitle{Aspetti avanzati della TEI}
+        \addtocounter{nframe}{1}
+
+        
+            \begin{center}
+                \includegraphics[width=.9\textwidth]{imgs/namespaces.png}
+            \end{center}
+        \textit{Ogni nome di elemento o attributo del documento XML è preceduto da un prefisso che specifica il vocabolario di appartenenza}
+    \end{frame}
+
+    \begin{frame}
+        \frametitle{Aspetti avanzati della TEI}
+        \addtocounter{nframe}{1}
+
+        \begin{block}{XInclude}
+            XInclude (XML Inclusions) è una sintassi e un modello di elaborazione che specifica un metodo generale di inclusione di oggetti all’interno dei documenti XML.
+        \end{block}
+        \textit{Pagina W3C della tecnologia: \url{https://www.w3.org/TR/xinclude/}}
+    \end{frame}
+
+    \begin{frame}
+        \frametitle{Aspetti avanzati della TEI}
+        \addtocounter{nframe}{1}
+
+        \begin{block}{XInclude: possibilità}
+            \begin{itemize}
+                \item si possono inserire all’interno di documenti XML altri documenti, in parte o in toto
+                \item molto utile nel caso si abbia a che fare con documenti multipli che condividono caratteristiche comuni, ad esempio i testi di un manoscritto o un corpus
+            \end{itemize}
+        \end{block}
+    \end{frame}
+
+
+    \begin{frame}
+        \frametitle{Aspetti avanzati della TEI}
+        \addtocounter{nframe}{1}
+
+        \begin{block}{XInclude: sintassi di base}
+            \begin{itemize}
+                \item Elementi e Namespace
+                \item [] \texttt{<xi:include xmlns:xi="http://www.w3.org/2001/XInclude" />}
+                \item [] \texttt{<xi:fallback>}: copre le risorse mancanti
+                \item Attributi
+                \item [] \texttt{@xpointer}: identifica parte della risorsa da includere; se omesso viene inclusa tutta la risorsa
+                \item [] \texttt{@href}: URI che specifica la posizione della risorsa
+            \end{itemize}
+        \end{block}
+        
+    \end{frame}
+
+    \begin{frame}
+        \frametitle{Aspetti avanzati della TEI}
+        \addtocounter{nframe}{1}
+        
+            \begin{center}
+                \includegraphics[width=.8\textwidth]{imgs/xinclude.png}
+            \end{center}
+        
+    \end{frame}
+    \begin{frame}
+        \frametitle{Aspetti avanzati della TEI}
+        \addtocounter{nframe}{1}
+        
+            \begin{center}
+                \includegraphics[width=.95\textwidth]{imgs/doc_1.png}
+            \end{center}
+        
+    \end{frame}
+    \begin{frame}
+        \frametitle{Aspetti avanzati della TEI}
+        \addtocounter{nframe}{1}
+        
+            \begin{center}
+                \includegraphics[width=.85\textwidth]{imgs/doc_2.png}
+            \end{center}
+        
+    \end{frame}
+

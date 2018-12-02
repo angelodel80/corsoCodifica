@@ -1,0 +1,12 @@
+<tei-fragment>
+    <p>How does it go? <q>
+            <l xml:id="frog_x1">da-da-da</l>
+            <l xml:id="frog_l2">gets a new frog</l>
+            <l>...</l>
+            <l xml:id="frog_l1">When the old pond</l>
+            <l>...</l>
+            <l xml:id="frog_l3">It's a new pond.</l>
+        </q>
+    </p>
+    <join target="#frog_l1 #frog_l2 #frog_l3" result="lg" scope="root" />
+</tei-fragment>

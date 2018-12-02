@@ -1,0 +1,14 @@
+
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+<!-- ... -->
+    <svg:svg xmlns:svg="https://www.w3.org/TR/SVG/">
+       <svg:g id="object1">
+         <svg:ellipse
+            style="fill: #ffffff"
+            cx="3.875" cy="3.025"
+            rx="1.175" ry="1.175"/>
+       </svg:g>
+    </svg:svg>
+
+</TEI>
+
