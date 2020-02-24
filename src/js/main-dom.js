@@ -112,12 +112,13 @@ function XMLApp(){
         var doctype = document.implementation.createDocumentType('TEI', '', 'tei_all.dtd');
         var xmlDoc =  document.implementation.createDocument('http://www.tei-c.org/ns/1.0', 'tei:TEI', doctype);
         console.log('nuovo doc TEI', xmlDoc);
-        console.log('NS doc TEI', xmlDoc.lookupNamespaceURI('tei'));
+        console.log('NS doc TEI', xmlDoc.lookupNam  espaceURI('tei'));
 
         
 
         var teiHeaderElem = xmlDoc.createElement('tei:teiHeader'); 
         xmlDoc.documentElement.appendChild(teiHeaderElem);
+        xmlDoc.documen
 
         console.log('TEI DOC with teiHeader: ', xmlDoc);
     }
