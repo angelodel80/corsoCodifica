@@ -1,0 +1,225 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<TEI     xmlns="http://www.tei-c.org/ns/1.0" 
+    xmlns:svg="http://www.w3.org/2000/svg" 
+    xmlns:xi="http://www.w3.org/2001/XInclude">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title>
+                    <!-- Insert title for this digital text -->
+                </title>
+            </titleStmt>
+            <publicationStmt>
+                <p>
+                    <!-- Insert information about the publication of this digital text -->
+                </p>
+            </publicationStmt>
+            <sourceDesc>
+                <p>
+                    <!-- Insert a bibliographic description of the source for this digital text -->
+                </p>
+                <list type="terminology">
+                    <head>Vocabulary</head>                   
+                                      
+                    <label>
+                        <term subtype="music-term" xml:lang="it" xml:id="aria" key="">Aria</term>
+                    </label>
+                    <item>
+                        <gloss xml:lang="it" target="#aria" source="TEI-ListBibl.xml#DellaSeta2010">
+                        Brano per voce sola appartenente a un’<term subtype="music-term" ref="#opera">opera</term>, <term subtype="music-term"> oratorio </term>, <term subtype="music-term">cantata</term> o ad altro genere di <term subtype="music-term">teatro musicale</term> (nel <term subtype="music-term" ref="#balletto">balletto</term> solo strumentale). Il termine, usato già nel XIV sec. per indicare una melodia dal profilo ben riconoscibile, fu impiegato fin dalle origini dell’opera per designare sezioni cantabili che interrompevano la continuità del <term subtype="music-term"> recitar cantando </term>, sia per rappresentare realisticamente l’atto del cantare (“Vi ricorda o boschi ombrosi” nell’Orfeo, 1607), sia per esprimere uno sfogo affettivo del personaggio. <gap reason="editorial"/> Nell’opera italiana del pieno Ottocento prevalse anche nelle arie la struttura in più movimenti codificata dalle opere di Rossini (<term subtype="music-term">numero</term>); questa articolazione favoriva l’integrazione dell’aria nell’azione drammatica in quanto prevedeva l’alternanza tra movimenti dinamici, in cui questa procede (<term subtype="music-term" ref="#scena">scena[4]</term> e <term subtype="music-term">tempo di mezzo</term>), e momenti di stasi riflessiva (<term subtype="music-term">cantabile</term> e <term subtype="music-term">cabaletta</term>); la transizione tra i diversi momenti era spesso innescata dall’intervento di personaggi secondari (<term subtype="music-term">pertichino</term>) che interloquivano col solista titolare dell’aria. <gap reason="editorial"/>
+                        </gloss>
+                    </item>
+                      	
+                    <label>
+                        <term subtype="music-term" xml:lang="it" xml:id="sortita" key="lesmu_1828B/sortita.14063">Aria di sortita</term>
+                    </label>
+                    <item>
+                        <gloss xml:lang="it" target="#sortita" source="TEI-ListBibl.xml#DellaSeta2010">
+                        	Nell'opera del Settecento e del primo Ottocento, aria di sortita cantata da un personaggio quando compare in scena la prima volta (e quindi al momento di "sortire" dalle quinte). Nell'Ottocento un'aria di sortita in questa posizione era detta <term subtype="music-term">cavatina</term>.
+                        </gloss>
+                    </item>
+                    
+                    <label>
+                        <term subtype="music-term" xml:lang="it" xml:id="arietta" key="">Arietta</term>
+                    </label>
+                    <item>
+                        <gloss xml:lang="it" target="#arietta" source="TEI-ListBibl.xml#DellaSeta2010">
+                        	Termine usato nei sec. XVII-XVIII, prevalentemente in ambito letterario, per designare le <term subtype="music-term" ref="#aria">arie</term>, con particolare riferimento al loro testo peotico nei <term subtype="music-term" ref="#libretto">libretti</term>. Dalla metà del Settecento fu usato anche per indicare un'aria di brevi dimensioni.
+                        </gloss>
+                    </item>
+                    
+                    
+                    <label>
+                        <term subtype="music-term" xml:lang="it" xml:id="atto" key="lesmu_">Atto</term>
+                    </label>
+                    <item>
+                        <gloss xml:lang="it" target="#atto" source="TEI-ListBibl.xml#DellaSeta2010">
+                        	Unità di suddivisione principale di un dramma, di un’<term subtype="music-term" ref="#opera">opera </term>o di un <term subtype="music-term" ref="#balletto">balletto</term>, che può essere ulteriormente suddivisa in <term subtype="music-term">quadri</term> – sezioni di norma caratterizzate da unità di luogo e tempo – e in <term subtype="music-term" ref="#scena">scene</term>. Implicita nella struttura della tragedia greca, la divisione in atti, di solito cinque separati da intervalli, fu introdotta in epoca romana e fu istituzionalizzata dalle poetiche classicistiche del Cinquecento. <gap reason="editorial"/>Nell’opera italiana si affermarono presto altri modelli: il <term subtype="music-term">dramma per musica</term> tra Sei e Settecento era sempre in tre atti (separati da due <term subtype="music-term">intermezzi</term> e spesso seguiti da un <term subtype="music-term" ref="#balletto">ballo</term>conclusivo), tra Settecento e Ottocento prevalse la divisione in due atti (con un ballo nell’intervallo e un altro in conclusione), nel pieno Ottocento furono adottati modelli che andavano da due a quattro atti, eventualmente preceduti da un <term subtype="music-term">prologo</term>. <gap reason="editorial"/>
+                        </gloss>
+                    </item>
+                    
+                    <label>
+                        <term subtype="music-term" xml:lang="it" xml:id="balletto" key="">Balletto</term>
+                    </label>
+                    <item>
+                        <gloss xml:lang="it" target="#balletto" source="TEI-ListBibl.xml#DellaSeta2010">
+                        (anche "ballo") Nell'accezione più ampia, qualsiasi rappresentazione fondata sul movimento corporeo, regolata da uno schema precostituito di passi, detto <term subtype="music-term">coreografia(2)</term>, e accompagnata dalla musica. <gap reason="editorial"/>
+                        </gloss>
+                    </item>
+                      	
+                    <label>
+                        <term subtype="music-term" xml:lang="it" xml:id="basso" key="">Basso</term>
+                    </label>
+                    <item>
+                        <gloss xml:lang="it" target="#basso" source="TEI-ListBibl.xml#DellaSeta2010">
+                        La <term subtype="music-term">voce</term> maschile più grave. Fin dalle prime opere a questo registro vocale furono associate principalmente due tipologie di ruoli: personaggi maschili anziani o dotati di una certa autorità e ruoli con caratteristiche comico-grottesca (rispettivamente Plutone e Caronte in L'Orfeo, 1607). <gap reason="editorial"/> Nel corso dell'Ottocento al basso verranno affidati anche ruoli drammatici e tragici: personaggi complessi e tormentati (Filippo in Don Carlos, 1867), figure di tiranni e despoti (il Grande Inquisitore nella stessa <term subtype="music-term" ref="#opera">opera</term>) o anche figure demoniache (il protagonista del Mefistofele, 1868-75). Sono comunque rari i casi in cui il basso è protagonista assoluto (Boris nel Boris Godunov, 1874).
+                        </gloss>
+                    </item>
+                      	
+                    <label>
+                        <term subtype="music-term" xml:lang="it" xml:id="censura" key="">Censura</term>
+                    </label>
+                    <item>
+                        <gloss xml:lang="it" target="#censura" source="TEI-ListBibl.xml#DellaSeta2010">
+                        Controllo preventivo esercitato da autorità ecclesiastiche o civili sui testi delle <term subtype="music-term" ref="#opera">opere</term> letterarie e teatrali, allo scopo di eliminare da esse elementi ritenuti sconvenienti o pericolosi sul piano religioso, morale o politico <gap reason="editorial"/>. Nel periodo della Restaurazione (dal 1814) essa fu rafforzata in tutti gli stati europei e affidata ad appositi organismi costituiti da funzionari del clero o di polizia, che la esercitarono in maniera più o meno rigida a seconda degli eventi politici in corso (sommosse, moti rivoluzionari) e della maggiore o minore tolleranza dei diversi regimi. In Italia, e in particolare nei territori soggetti all'Austria e nel Regno delle Due Sicilie, la censura teatrale si esercitò soprattutto sui <term subtype="music-term" ref="#libretto">libretti</term> delle opere nei quali, in maniera a volte non intenzionale, si riflettevano idee e sentimenti connessi ai moti risorgimentali, mentre nello Stato della Chiesa si vigilava affinché non venissero toccati in alcun modo temi religiosi (erano proibite parole quali "chiesa", "angelo", "croce", anche se in senso metaforico). Gli <term subtype="music-term" ref="#impresario">impresari</term> erano obbligati a sottoporre in anticipo alle autorità prima la <term subtype="music-term">selva</term>, poi il libretto manoscritto dell'opera, che, quando non semplicemente proibito, veniva restituito tagliato e corretto secondo le indicazioni dei censori. <gap reason="editorial"/>
+                        </gloss>
+                    </item>
+                      	
+                    <label>
+                        <term subtype="music-term" xml:lang="it" xml:id="compagnia" key="">Compagnia</term>
+                    </label>
+                    <item>
+                        <gloss xml:lang="it" target="#compagnia" source="TEI-ListBibl.xml#DellaSeta2010">
+                        Insieme degli artisti che partecipano all'<term subtype="music-term">allestimento</term> di un'<term subtype="music-term" ref="#opera">opera</term>. Tra il 1600 e il 1670 circa le compagnie, formate sul modello della compagnia dell'arte da cantanti-attori, compositori, poeti e scenografi, erano itineranti: esse si spostavano di città in città per allestire le stesse opere in diversi teatri di corte o pubblici. <gap reason="editorial"/> Successivamente, soprattutto in Italia fino a tutto l'Ottocento, il termine passò a indicare l'insieme dei cantanti ingaggiati da un teatro per un'intera <term subtype="music-term">stagione</term>; nel resto d'Europa, e in particolare a Parigi, le compagnie erano permanenti e restavano legate anche per diversi anni a un singolo teatro. <gap reason="editorial"/>
+                        </gloss>
+                    </item>
+                      	
+                    <label>
+                        <term subtype="music-term" xml:lang="it" xml:id="concerto" key="">Concerto, esecuzione in forma di</term>
+                    </label>
+                    <item>
+												<gloss xml:lang="it" target="#concerto" source="TEI-ListBibl.xml#DellaSeta2010">	
+												Esecuzione di un'opera musicale senza l'ausilio di un <term subtype="music-term">allestimento</term> scenico. A volte viene usata con lo stesso significato l'espressione "in forma oratoriale (<term subtype="music-term">oratorio</term>).
+												</gloss>
+										</item>
+
+                    <label>
+                        <term subtype="music-term" xml:lang="it" xml:id="coro" key="">Coro</term>
+                    </label>
+                    <item>
+                        <gloss xml:lang="it" target="#coro" source="TEI-ListBibl.xml#DellaSeta2010">
+                        Complesso formato da più <term subtype="music-term">voci</term> non solistiche che esegue brani all'unisono o, più frequentemente, a più parti; per estensione, il termine indica un brano musicale destinato a essere eseguito da tale complesso, in particolare nel <term subtype="music-term">teatro musicale</term>. <gap reason="editorial"/> Il coro divenne una componente fondamentale nell'Ottocento, sviluppandosi in forme sempre più complesse, come i cori doppi, per esigenze drammatiche e spettacolari. <gap reason="editorial"/>
+                        </gloss>
+                    </item>
+
+                    <label>
+                        <term subtype="music-term" xml:lang="it" xml:id="duetto" key="">Duetto</term>
+                    </label>
+                    <item>
+                        <gloss xml:lang="it" target="#duetto" source="TEI-ListBibl.xml#DellaSeta2010">
+                        	Brano per due voci sole. Sin dalle origini dell'<term subtype="music-term" ref="#opera">opera </term>, il duetto fu usato, in forme simili a quelle dell'<term subtype="music-term" ref="#aria">aria</term>, come mezzo elettivo per rappresentare il contrasto o la consonanza sentimentale tra due personaggi. Nel Settecento il duetto è presente raramente nell'<term subtype="music-term" ref="#opera_seria">opera seria</term>, dove di solito è collocato alla fine di un <term subtype="music-term" ref="#atto">atto</term>, mentre è frequente nell'<term subtype="music-term">opera buffa</term>, soprattutto per le scene di vivace confronto; il suo impiego si moltiplica dall'Ottocento nelle opere italiane, francesi e tedesche di ogni genere, in cui diviene il mezzo principale per esprimere il rapporto amoroso. Nel <term subtype="music-term">melodramma</term> prevale il modello formale codificato da <persName ref="TEI-ListPerson.xml#GR">Rossini</persName> (<term subtype="music-term">numero</term>), che può essere variato in molti modi. <gap reason="editorial"/>
+                        </gloss>
+                    </item>
+                  
+                   <label>
+                        <term subtype="music-term" xml:lang="it" xml:id="impresario" key="">Impresario</term>
+                    </label>
+                    <item>
+                        <gloss xml:lang="it" target="#impresario" source="TEI-ListBibl.xml#DellaSeta2010">
+                       Imprenditore che si assume in prima persona la responsabilità economica di uno spettacolo teatrale, occupandosi dell’organizzazione logistica e della formazione del cast in accordo con i proprietari dei teatri. Come figura professionale la sua data di nascita coincide con quella degli spettacoli pubblici a Venezia nel 1637, quando la famiglia patrizia Tron affittò il teatro S. Cassiano alla compagnia formata dal librettista Benedetto Ferrari e dal compositore Francesco Manelliper la rappresentazione con ingresso a pagamento dell’Andromeda. Per questa prima fase si parla di opera mercenaria, cioè a pagamento; successivamente, tra Sei e Settecento, la figura dell’impresario si istituzionalizzò, dando vita a un sistema di produzione noto come opera impresariale, in cui si affittavano i teatri cittadini o delle famiglie nobili per periodi di tempo sempre più lunghi, al fine di potervi tenere una o più <term subtype="music-term">stagioni</term>, incentrate sul reclutamento di una compagnia di canto e di ballo. Nella prima metà dell’Ottocento impresari quali Domenico Barbaja o Alessandro Lanari giunsero a controllare contemporaneamente più teatri in diverse città in Italia e all’estero. Nella seconda metà del secolo, a causa di un sistema produttivo sempre più di tipo industriale, di tipo industriale, l’iniziativa della produzione operistica fu assunta direttamente dalle case editrici (in Italia Ricordi, Lucca, Sonzogno), che soppiantarono progressivamente la figura dell’impresario nel determinare le scelte dei compositori e dei cantanti nei maggiori teatri del mondo. Nei teatri di oggi le competenze tradizionali dell’impresario sono suddivise tra diverse figure professionali, quali il sovrintendente, il direttore artistico e, in Germania, il Dramaturg.
+                        </gloss>
+                    </item>
+                      
+                    <label>
+                        <term subtype="music-term" xml:lang="it" xml:id="libretto" key="">Libretto</term>
+                    </label>
+                    <item>
+                        <gloss xml:lang="it" target="#libretto" source="TEI-ListBibl.xml#DellaSeta2010">
+                        Libro di piccolo formato contenente il testo letterario di un’<term subtype="music-term" ref="#opera">opera</term> o di altra composizione vocale di carattere drammatico e, per estensione, il testo stesso, costituito dalle parole destinate a essere cantate, in versi o, più raramente, in prosa, dalle descrizioni della <term subtype="music-term">scenografia</term> e dalle didascalie relative ai movimenti dei cantanti; può inoltre contenere indicazioni riguardanti uno specifico <term subtype="music-term">allestimento</term> dell’opera, il contesto storico della sua prima rappresentazione, a volte, dichiarazioni di poetica dell’autore o degli autori. Molte di queste informazioni, quali il nome del compositore, del coreografo e delle altre figure che collaborarono alla messa in scena della prima rappresentazione, l’elenco dei cantanti e dei ballerini che vi parteciparono, l’organico strumentale, l’esposizione dell’antefatto con la dichiarazione della fonte letteraria, la dedica e la lettera al lettore, hanno oggi un’importanza capitale per la comprensione storica della singola opera e del sistema produttivo in cui essa nacque. Dal punto di vista strettamente letterario, il libretto è da considerarsi principalmente come parte integrante di un’opera d’arte complessiva da cui dipende e che lo trascende. Sebbene in alcuni casi esso tenda a rivendicare una propria dignità letteraria, è innegabile che molti aspetti della sua struttura siano predeterminati dalle esigenze specifiche del teatro musicale (prima fra tutte quella della declamazione cantata) e dalle innumerevoli convenzioni specifiche dei diversi generi operistici e dei diversi contesti storico-sociali. Così, la suddivisione in <term subtype="music-term" ref="#atto">atti</term> e <term subtype="music-term" ref="#scena">scene</term>, la successione dei <term subtype="music-term">numeri</term> chiusi, la quantità di <term subtype="music-term" ref="#aria">arie</term> affidate a un personaggio (<term subtype="music-term">convenienze</term>), la maggiore o minor presenza di <term subtype="music-term">pezzi d’assieme</term>, l’impiego di determinate tipologie metriche e strofiche, ma anche il tipo di soggetto trattato (mitologico, storico o letterario), le modalità del suo svolgimento e del suo scioglimento (tragico o lieto) possono essere ricondotti a convenzioni, rispetto alle quali l’autore può disporre di una maggiore o minore libertà d’azione. Sebbene la paternità del libretto sia generalmente riconosciuta al poeta che lo ha prodotto (<term subtype="music-term">librettista</term>), sono frequenti i casi in cui l’intervento del compositore ne modifica in modo sostanziale l’assetto, conducendo a divergenze anche notevoli fra la versione pubblicata e quella riportata in partitura (il che rende opportuno pubblicarle entrambe in forma distinta). Altrettanto significativi sono i casi in cui il compositore decide di contravvenire intenzionalmente alle indicazioni implicite del libretto, per esempio trasformando un <term subtype="music-term" ref="#recitativo">recitativo</term> in aria o viceversa, o ancora concependo situazioni musicali che contraddicono palesemente il senso del testo poetico.
+                        </gloss>
+                    </item>
+
+                    <label>
+                        <term subtype="music-term" xml:lang="it" xml:id="loggione" key="">Loggione</term>
+                    </label>
+                    <item>
+                        <gloss xml:lang="it" target="#loggione" source="TEI-ListBibl.xml#DellaSeta2010">
+                        Il settore più alto degli ordini architettonici di un <term subtype="music-term">teatro all'italiana</term>, i cui posti sono i più economici. Per estensione, l'insieme degli spettatori che lo frequentano (loggionisti), di solito appassionati e intransigenti giudici delle prestazioni dei cantanti. (Vedi anche <term subtype="music-term">claque</term>; <term subtype="music-term">divismo</term>).
+                        </gloss>
+                    </item>
+
+										<label>
+                        <term subtype="music-term" xml:lang="it" xml:id="opera" key="">Opera</term>
+                    </label>
+                    <item>
+                        <gloss xml:lang="it" target="#opera" source="TEI-ListBibl.xml#DellaSeta2010">
+												(dal plurale del latino opus, nel senso di “manufatto”) Spettacolo teatrale in cui l’azione si manifesta principalmente attraverso la musica e l’espressione canora dei personaggi. L’opera è un genere complesso, fondato sulla cooperazione tra testo letterario (<term subtype="music-term" ref="#libretto">libretto</term>), allestimento scenico e musica, che ha comunque una funzione essenziale nel caratterizzare drammaticamente il lavoro (drammaturgia musicale). Le differenti possibilità di relazione che intercorrono tra musica, libretto e aspetti scenici rendono pressoché impossibile una definizione univoca di opera. A ciò si aggiungono le difficoltà causate dall’evoluzione compiuta in quattro secoli di storia, dalla presenza sotto una comune etichetta di generi tra loro estremamente lontani, dalle specificità nazionali (sotto il profilo sia drammaturgico sia organizzativo). L’opera nacque nell’Italia del primo Seicento (Firenze, Mantova, Roma) come spettacolo di corte con carattere prevalentemente celebrativo. Dalla fine degli anni trenta, con l’apertura a Venezia dei primi teatri pubblici a pagamento, si impose il modello dell’opera <term subtype="music-term" ref="#impresario">impresariale</term>, che produsse in Italia, con la rapida e diffusa circolazione di cantanti, compositori, scenografi, l’attività di una miriade di sale teatrali sparse sul territorio (dalle grandi capitali dotate di numerosi palcoscenici ai piccoli centri) e una produzione sterminata di nuovi lavori (nel XVIII secolo e nella prima metà del XIX secolo i compositori arrivavano a scrivere tre o quattro novità all’anno). Tale modello si diffuse ben presto in Europa, imponendo nel Settecento – nelle tre declinazioni dell’<term subtype="music-term" ref="#opera_seria">opera seria</term>, dell’<term subtype="music-term">opera buffa</term> e poi dell’<term subtype="music-term">opera semiseria</term> – il predominio italiano che perdura ancor oggi nei cartelloni dei teatri di tutto il mondo.<gap reason="editorial"/>
+												</gloss>
+                    </item>                
+ 
+                    <label>
+                        <term subtype="music-term" xml:lang="it" xml:id="opera_seria" key="">Opera seria</term>
+                    </label>
+                    <item>
+                        <gloss xml:lang="it" target="#opera_seria" source="TEI-ListBibl.xml#DellaSeta2010">
+                        Genere dell’<term subtype="music-term" ref="#opera">opera</term> italiana, che comprende le opere di argomento eroico o tragico dalla fine del XVII all’inizio del XIX sec. Il termine non compare mai nei <term subtype="music-term" ref="#libretto">libretti</term> (dove domina la dizione <term subtype="music-term">dramma per musica</term>, a volte specificato come “serio”), ma entrò nell’uso corrente quando si istituzionalizzò la separazione rispetto all’<term subtype="music-term">opera buffa</term>. <gap reason="editorial"/> Regolata da un indirizzo estetico classicista di matrice razionalista, l’opera seria mirava alla rappresentazione idealizzata di valori morali e di comportamenti esemplari della classe nobiliare, attraverso soggetti desunti principalmente dalla storia antica. Tra le sue principali caratteristiche drammatiche e musicali, che si assestarono, con la produzione metastasiana, in un solido complesso di convenzioni, vi sono la divisione del dramma in tre <term subtype="music-term" ref="#atto">atti</term>, una chiara articolazione delle <term subtype="music-term" ref="#scena">scene (3)</term>, il rispetto delle unità di tempo e di azione con esclusione di trame secondarie, l’espunzione di ogni componente comica, un numero limitato di personaggi (non più di otto), l’organizzazione musicale in base ai due regimi stilistici del <term subtype="music-term" ref="#recitativo">recitativo</term> e dell’<term subtype="music-term" ref="#aria">aria</term>, la distribuzione di queste ultime secondo un equilibrato sistema mirante a ottenere varietà di caratteri espressivi e a rispettare le gerarchie di prestigio trai vari cantanti (<term subtype="music-term"> convenienze</term>). 
+                        </gloss>
+                    </item>
+                      	
+                    <label>
+                        <term subtype="music-term" xml:lang="it" xml:id="recitativo" key="">Recitativo</term>
+                    </label>
+                    <item>
+                        <gloss xml:lang="it" target="#recitativo" source="TEI-ListBibl.xml#DellaSeta2010">
+                        Stile di <term subtype="music-term">canto</term> che imita i modi della recitazione parlata. Presente da sempre in tutte le culture e in tutte le epoche <gap reason="editorial"/>. Nel primo Ottocento furono ancora modelli francesi a imporre l'impiego del recitativo strumentato nell'<term subtype="music-term" ref="#opera_seria">opera seria</term> italiana, in particolare a Napoli; tale pratica, qui accolta da Rossini, si diffuse sul suo esempio fino a diventare esclusiva, mentre il recitativo semplice sopravvisse a lungo nell'<term subtype="music-term">opera buffa</term>. Nel corso dell'Ottocento la distinzione tra recitativo e cantabile si andò attenuando, in quanto il primo fu sempre meno usato come connettivo tra i diversi <term subtype="music-term">numeri</term> e fu incorporato in essi (v. <term subtype="music-term" ref="#scena">scena[4]</term>); compositori quali Bellini, Donizzetti e Verdi fecero spesso uso di ampie frasi in stile di <term subtype="music-term" ref="#arioso">arioso</term>, che consentivano di passare più gradualmente dal recitativo al <term subtype="music-term">cantabile</term>. Il processo continuò fino alla fine del secolo, quando la distinzione può considerarsi scomparsa. <gap reason="editorial"/>
+                        </gloss>
+                    </item>
+
+                     <label>
+                        <term subtype="music-term" xml:lang="it" xml:id="scena" key="">Scena</term>
+                    </label>
+                    <item>
+                        <gloss xml:lang="it" target="#scena" source="TEI-ListBibl.xml#DellaSeta2010">
+                        (1) Spazio che ospita la rappresentazione teatrale visibile al pubblico, delimitato orizzontalmente dal <term subtype="music-term">palcoscenico</term> e verticalmente dalla <term subtype="music-term">scenografia</term>. (2) Luogo in cui è ambientata e in cui si sviluppa l'azione drammatica. (3) Unità di suddivisione, spesso numerata, del testo drammatico, caratterizzata da omogeneità di luogo e tempo e definita dall'ingresso e dall'uscita di uno o più personaggi. Le scene, di numero variabile, possono essere raggruppate in <term subtype="music-term">quadri</term> se si svolgono con identica scenografia oppure in <term subtype="music-term" ref="#atto">atti</term>; nel <term subtype="music-term">teatro musicale</term> la transizione tra le scene è spesso accompagnata da un <term subtype="music-term">interludio strumentale</term>. (4) Nel <term subtype="music-term">melodramma</term> del XIX sec., episodio drammatico che combina <term subtype="music-term" ref="#recitativo">recitativo</term>, <term subtype="music-term">arioso</term> e musica orchestrale, e che costituisce la prima sezione di un <term subtype="music-term">numero</term>. Il termine era a volte impiegato (anche nella forma "gran scena") per definire un intero numero solistico, formato da molte sezioni, in cui l'interesse drammatico prevaleva su quello strettamente musicale.
+                        </gloss>
+                    </item>                      	
+
+									 <label>
+                        <term subtype="music-term" xml:lang="it" xml:id="spartito" key="">Spartito</term>
+                    </label>
+                    <item>
+                        <gloss xml:lang="it" target="#spartito" source="TEI-ListBibl.xml#DellaSeta2010">
+                         Riduzione di una partitura operistica (ma anche di <term subtype="music-term">oratorio</term> o <term subtype="music-term" ref="#balletto">balletto</term>), consistente nelle parti vocali originali e in una sintesi per pianoforte delle parti orchestrali. Nacque come strumento professionale per cantanti e <term subtype="music-term">maestri accompagnatori</term> alla fine del Settecento, ma conobbe grande diffusione nei due secoli successive, in funzione del successo mondiale del genere operistico e dell’allargamento della composizione sociale del pubblico, grazie all’abbassamento dei costi della stampa musicale consentito da tecniche quali la litografia. In questo contesto lo spartito era destinato prevalentemente al consumo domestico dei lavori teatrali più recenti e popolari: si usava infatti pubblicare dapprima solo le sezioni di maggior successo e di più facile esecuzione (<term subtype="music-term" ref="#aria">arie</term> e <term subtype="music-term" ref="#duetto">duetti</term>), e solo se l’opera si affermava stabilmente nel <term subtype="music-term">repertorio</term> veniva pubblicato lo spartito completo. Tali pubblicazioni rappresentavano spesso l’unico tramite tra il mondo del teatro e quanti avevano difficilmente accesso a esso, sia perché abitavano lontano dai maggiori centri di produzione sia per motivi economici; esse costituivano quindi un fondamentale mezzo di diffusione e popolarizzazione del repertorio operistico.
+                         </gloss>
+                    </item>
+                    
+                   <label>
+                        <term subtype="music-term" xml:lang="it" xml:id="tenore" key="">Tenore</term>
+                    </label>
+                    <item>
+                        <gloss xml:lang="it" target="#tenore" source="TEI-ListBibl.xml#DellaSeta2010">
+                        	La <term subtype="music-term">voce</term> maschile più acuta. Nei primi decenni della fortuna dell’opera si incontrano spesso tenori protagonisti (Ulisse in Il ritorno di Ulisse in patria, 1639-40), ma di fatto queste parti avevano una tessitura che oggi definiremmo baritonale ed erano interpretate da un <term subtype="music-term">baritenore</term>. Nel secondo Seicento e per buona parte del Settecento al tenore vennero attribuite parti di carattere: figure comiche di donne anziane en <term subtype="music-term">travesti</term>, oppure tiranni e despoti. Anche nell’<term subtype="music-term">opera buffa</term> tardo settecentesca il tenore era di solito un ruolo secondario, quello del giovane innamorato, e nel primo Ottocento conservò tale connotazione, aggiungendovi però una tessitura acutissima e notevole virtuosismo (Lindoro in L’italiana in Algeri, 1813); questa tipologia, detta tenore contraltino, fu presto soppiantata da nuove forme di vocalità tenorile, anche se il carattere leggero rimase in alcuni protagonisti di opere successive, definiti come tenori di grazia. Nel <term subtype="music-term">melodramma</term> serio il tenore divenne un protagonista verso la fine degli anni venti dell’Ottocento, quando il ruolo dell’innamorato passò in primo piano per formare con il <term subtype="music-term">soprano</term> la coppia principale. Fin da subito si delinearono i due tipi fondamentali di carattere che può assumere il tenore moderno: quello eroico, connotato da slancio passionale e grande veemenza vocale (Edgardo in Lucia di Lammermoor, 1835), e quello più languido, caratterizzato da una vocalità più cantabile (Nemorino in L’elisir d’amore, 1832). Nella <term subtype="music-term">critica</term> e nella trattatistica italiana questi due tipi verranno denominati rispettivamente tenore drammatico (o “di forza”) e tenore lirico. La preminenza del tenore rispetto alle altre voci maschili perdurò per tutto l’Ottocento, anche in tradizioni operistiche differenti da quella italiana (le parti di protagonista nel <term subtype="music-term">grand-opéra</term> e lo <term subtype="music-term">Heldenteno</term> wagneriano), e ancor oggi il tenore è la voce maschile che più spesso dà origine a fenomeni di <term subtype="music-term">divismo</term>. È probabilmente collegato a questo “abuso” del mito tenorile il fatto che nel teatro musicale del Novecento al tenore vengono sempre meno spesso affidate parti di protagonista positivo, ma piuttosto di personaggi nettamente malvagi (Aegisthus in Elektra, 1909) o equivoci e interiormente tormentati (Captain Vere in Billy Budd, 1951).
+                        </gloss>
+                    </item>
+                    
+                    <label>
+                        <term subtype="music-term" xml:lang="it" xml:id="tragedia_lirica" key="">Tragédie lirique</term>
+                    </label>
+                    <item>
+                        <gloss xml:lang="it" target="#tragedia_lirica" source="TEI-ListBibl.xml#DellaSeta2010">
+                        (fr.: "tragedia lirica") Termine con cui a partire dal 1740 circa fu definita la <term subtype="music-term">tragédie en musique</term>, il più importante genere del <term subtype="music-term">teatro musicale</term>, concepito nell'ambito della Académie royale de musique fondata da Luigi XIV nel 1672 e realizzato con la collaborazione tra Lully e il poeta Philippe Quinault. Ispirata ai modelli aulici della tragedia letteraria (Corneille, Racine, Voltaire), nel corso di un secolo e mezzo la tragédie lyrique conservò quasi intatte alcune delle sue caratteristiche originarie: argomento mitologico o eroico, articolazione del dramma in un <term subtype="music-term">prologo</term> e cinque <term subtype="music-term" ref="#atto">atti</term> (eliminato il primo, ridotti spesso a tre i secondi verso la fine del Settecento), linguaggio letterario elevato, grande attenzione alla declamazione del testo e impiego limitato del canto virtuosistico, struttura musicale costituita da una successione di <term subtype="music-term">récits</term>, <term subtype="music-term">airs</term> solistici e corali, <term subtype="music-term">entrées</term> e <term subtype="music-term">diverissements</term>, assai meno distinti tra loro dei <term subtype="music-term">numeri</term> dell'<term subtype="music-term" ref="#opera">opera</term> italiana. <gap reason="editorial"/>
+                        </gloss>
+                    </item>
+                      	
+                </list>
+            </sourceDesc>
+        </fileDesc>
+    </teiHeader>
+    <text>
+        <body>
+            <p>This is a template for a minimal TEI header with the mandatory components:</p>
+        </body>
+    </text>
+</TEI>
+

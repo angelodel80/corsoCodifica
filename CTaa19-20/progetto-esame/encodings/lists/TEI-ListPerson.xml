@@ -1,0 +1,603 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" 
+  xmlns:svg="http://www.w3.org/2000/svg" 
+  xmlns:xi="http://www.w3.org/2001/XInclude">
+  <teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title>
+          <!-- Insert title for this digital text -->
+        </title>
+      </titleStmt>
+      <publicationStmt>
+        <p>
+          <!-- Insert information about the publication of this digital text -->
+        </p>
+      </publicationStmt>
+      <sourceDesc>
+        <p>
+          <!-- Insert a bibliographic description of the source for this digital text -->
+        </p>
+        <listPerson>
+          <head>Lista Persone</head>
+          
+					<person xml:id="CB">
+						<persName role="impresario">
+							<forename>Carlo </forename> 
+              <surname>Balocchi</surname>
+						</persName>
+            <sex>M </sex>
+            <birth>
+            	<date when="1770">1770</date>
+            	<placeName>
+            	 	  <settlement type="municipality">Vercelli</settlement>
+            	 		<settlement type="provincia" key="VC">Vercelli</settlement>
+            	 		<country key="IT">Italia</country>
+            	</placeName>
+            </birth>
+            <death>
+            	<date when="1850">1850</date>
+            	<placeName ref="TEI-ListPlace#MI">
+            			<settlement type="municipality">Milano</settlement>
+            	 		<settlement type="provincia" key="MI">Milano</settlement>
+            	 		<country key="IT">Italia</country>
+            	</placeName>
+            </death>
+            <note resp="#EC">
+            	Carlo Balocchi, impresario, dal 1826 al 1832 ebbe in gestione il <orgName type="theatre" ref="TEI-ListOrganization.xml#Scala">Teatro alla Scala</orgName> insieme a <persName ref="#DB">Domenico Barbaja</persName>, <persName ref="#GC">Giuseppe Crivelli</persName> e <persName ref="#GBV">Giovanni Battista Villa</persName>.
+            </note>          		
+					</person>
+
+					<person xml:id="DB" sameAs="http://viaf.org/viaf/64747908">
+						<persName role="impresario">
+							<ref target="http://data.rism.info/id/rismauthorities/pe40207584 http://www.treccani.it/enciclopedia/domenico-barbaja/"/>
+							<forename>Domenico</forename> 
+              <surname>Barbaja</surname>
+						</persName>
+            <sex>M </sex>
+            <birth><date when="1778-08-10">10 agosto 1778</date>
+            	<placeName ref="TEI-ListPlace#MI">
+            			<settlement type="municipality">Milano</settlement>
+            	 		<settlement type="provincia" key="MI">Milano</settlement>
+            	 		<country key="IT">Italia</country>
+            	</placeName>
+						</birth>
+            <death><date when="1841-10-19">19 ottobre 1841</date>
+              	<placeName>
+            			<settlement type="municipality">Posillipo</settlement>
+            	 		<settlement type="provincia" key="NA" ref="TEI-ListPlace#NA">Napoli</settlement>
+            	 		<country key="IT">Italia</country>
+            	</placeName>
+            </death>
+            <note source="TEI-ListBibl.xml#Seminara2017" resp="#GS" ana="59">
+                  <bibl>
+                      	  <citedRange unit="page" from="81" to="81">81</citedRange>
+                  </bibl>
+                  <p>Domenico Barbaja (Milano, 1778 - Posillipo, 1841), impresario. Nel 1809 fu nominato Sovrintendente dei Teatri di <placeName ref="TEI-ListPlace.xml#NA">Napoli</placeName> e dal 1821 al 1828 ebbe in gestione a <placeName ref="TEI-ListPlace.xml#Wien">Vienna</placeName> il <orgName type="theatre">Kärntnertortheater</orgName> e il <orgName type="theatre">Theater an der Wien</orgName>; nel 1826 – insieme a <persName ref="#CB">Carlo Balocchi</persName>, <persName ref="#GC">Giuseppe Crivelli</persName> e <persName ref="#GBV">Giovanni Battista Villa</persName> – assunse l’appalto del <orgName type="theatre" ref="TEI-ListOrganization.xml#Scala">Teatro alla Scala</orgName>, che mantenne fino al 1832. Fu Barbaja a scritturare <persName ref="#VB">Bellini</persName> al <orgName type="theatre" ref="TEI-ListOrganization.xml#San_Carlo">Teatro San Carlo</orgName> per la rappresentazione di <rs type="work" ref="#Bianca_e_Gernando">Bianca e Gernando</rs> e a portarlo quindi a <placeName ref="TEI-ListPlace.xml#MI">Milano</placeName> nel 1827, con la commissione di un’opera per la Scala.
+                 	</p>
+							</note>
+					</person>
+
+          <person xml:id="VB" sameAs="http://viaf.org/viaf/39560983"> 
+         	 <persName role="composer"> <!-- esempi: composer, librettist, tenore, editor, ...-->
+          		<ref target="http://data.rism.info/id/rismauthorities/pe11648 http://www.treccani.it/enciclopedia/vincenzo-bellini_(Dizionario-Biografico)"/>
+          		<forename>Vincenzo</forename>
+          		<forename>Salvatore</forename>
+          		<forename>Carmelo</forename>
+          		<forename>Francesco </forename> 
+              <surname>Bellini</surname>
+              <addName type="alias">Il Cigno</addName>
+              <roleName type="honorific">Cavaliere della Legione d'onore</roleName> 
+            </persName>
+            <sex>M </sex>
+            <birth><date when="1801-11-03">3 novembre 1801</date>
+            	<placeName ref="TEI-ListPlace#CT">
+            			<settlement type="municipality">Catania</settlement>
+            	 		<settlement type="provincia" key="CT">Catania</settlement>
+            	 		<country key="IT">Italia</country>
+            	</placeName>
+            </birth>
+            <death><date when="1835-09-23">23 settembre 1835</date>
+            	<placeName ref="TEI-ListPlace#Put">
+            			<settlement type="municipality">Puteaux</settlement>
+            	 		<settlement type="department" key="Paris">Paris</settlement>
+            	 		<country key="FR">France</country>
+            	</placeName>
+						</death>
+            <note><!--  note da creare con l'indicazione di dove e' vissuto durante quali periodi  -->
+             </note>          		
+          </person>
+   
+          <person xml:id="GB" sameAs="http://viaf.org/viaf/90084841"> 
+          	  <persName role="composer">
+                 <ref target="http://www.treccani.it/enciclopedia/giuseppe-bornaccini_(Enciclopedia-Italiana)/"/>
+                 <forename>Giuseppe</forename>
+                 <surname>Bornaccini</surname>
+               </persName>
+              <sex>M </sex>
+              <birth><date when="1802-5-5">5 maggio 1802</date>
+                 	<placeName>
+            				<settlement type="municipality">Ancona</settlement>
+            	 			<settlement type="provincia" key="AN">Ancona</settlement>
+            	 			<country key="IT">Italia</country>
+             	    </placeName>
+ 							</birth>
+              <death><date when="1881-12-17">17 dicembre 1881</date>
+                 	<placeName>
+            				<settlement type="municipality">Ancona</settlement>
+            	 			<settlement type="provincia" key="AN">Ancona</settlement>
+            	 			<country key="IT">Italia</country>
+             	   </placeName>
+              	</death>
+              <note source="TEI-ListBibl.xml#Seminara2017" resp="#GS" ana="398">
+                  <bibl>
+                      	  <citedRange unit="page" from="239" to="239">239</citedRange>
+                  </bibl>
+                 <p>
+                 Giuseppe Bornaccini (Ancona, 1802 - 1881) aveva studiato al Collegio di San Sebastiano ed era stato condiscepolo di <persName ref="#VB">Bellini</persName>. Dopo l’esordio come compositore di opere sacre e strumentali, intendeva dedicarsi al teatro musicale e per questo si era rivolto al musicista di <placeName ref="TEI-ListPlace.xml#CT">Catania</placeName>.
+                 	</p>
+              </note> 
+  				 </person>
+          
+           <person xml:id="MC" sameAs="http://viaf.org/viaf/17415171"> 
+          	  <persName role="composer"> <!-- esempi sono: composer, librettist, tenore, editor, ...-->
+                 <ref target="http://data.rism.info/id/rismauthorities/pe30009076 https://it.wikipedia.org/wiki/Michele_Costa"/>
+                 <forename>Michele</forename>
+                 <surname>Costa</surname>
+               </persName>
+              <sex>M </sex>
+              <birth><date when="1808-02-04">4 febbraio 1808</date>
+                <placeName ref="TEI-ListPlace#NA">
+            			<settlement type="municipality">Napoli</settlement>
+            	 		<settlement type="provincia" key="NA">Napoli</settlement>
+            	 		<country key="IT">Italia</country>
+            	  </placeName>
+							</birth>
+              <death><date when="1884-04-29">29 aprile 1884</date>
+                <placeName>
+            			<settlement type="municipality">Hove</settlement>
+            	 		<settlement type="country" key="ESX">East Sussex</settlement>
+            	 		<country key="GB">Great Britain</country>
+            	  </placeName>
+              </death>
+              <note source="TEI-ListBibl.xml#Seminara2017" resp="#GS" ana="871">
+                  <bibl>
+                      	  <citedRange unit="page" from="510" to="510">510</citedRange>
+                  </bibl>
+                 <p>
+                 	Michele Costa (Napoli, 1808 - Hove, Sussex, 1884), al quale l'impresario del <orgName type="theatre" ref="TEI-ListOrganization.xml#King">King's Theatre</orgName>, <persName ref="#PFL">Pierre François Laporte</persName>, aveva affidato la direzione dei <rs type="work" ref="TEI-ListWork.xml#Puritani">Puritani</rs>. Costa aveva studiato al Real Collegio di Musica di San Sebastiano con Tritto, Furno e Zingarelli; nel 1829 si era trasferito in Inghilterra ed era stato assunto - prima come maestro al cembalo, poi come direttore d'orchestra - al King's Theatre di <placeName ref="TEI-ListPlace.xml#London">Londra</placeName>. Qui nel 1835 diresse sia I Puritani che il Marin Faliero, con gli stessi interpreti che avevano cantato a <placeName ref="TEI-ListPlace.xml#Paris">Parigi</placeName>.
+                 	</p>
+              </note> 
+         	  	<note resp="#EC"> </note> <!-- inserire eventuali note aggiuntive di Erica -->
+          </person>
+
+           <person xml:id="GC"> 
+          	  <persName role="impresario"> 
+                 <forename>Giuseppe</forename>
+                 <surname>Crivelli</surname>
+               </persName>
+              <sex>M </sex>
+              <birth><date when="1770" cert="medium">1770</date> 
+							</birth>
+              <death><date when="1831">1831</date>
+                <placeName ref="TEI-ListPlace#MI">
+            			<settlement type="municipality">Milano</settlement>
+            	 		<settlement type="provincia" key="MI">Milano</settlement>
+            	 		<country key="IT">Italia</country>
+            		</placeName>
+              </death>
+              <note source="TEI-ListBibl.xml#Seminara2017" resp="#GS" ana="167">
+                  <bibl>
+                      	  <citedRange unit="page" from="125" to="125">125</citedRange>
+                  </bibl>
+                 <p>
+                 	Giuseppe Crivelli (1770 ca. - Milano, 1831), impresario. Tra il 1804 e il 1806 tenne in gestione il <orgName type="theatre">Teatro Regio</orgName> di <placeName ref="TEI-ListPlace.xml#TO">Torino</placeName> e nel 1821 rilevò l’impresa del <orgName type="theatre" ref="TEI-ListOrganization.xml#Fenice">Teatro La Fenice</orgName>. Dal 1826 amministrava anche il <orgName type="theatre" ref="TEI-ListOrganization.xml#Scala">Teatro alla Scala</orgName> insieme a <persName ref="#DB">Domenico Barbaja</persName>, <persName ref="#CB">Carlo Balocchi</persName> e <persName ref="#GBV">Giovanni Battista Villa</persName>.
+                 	</p>
+              </note> 
+          </person>
+
+         <person xml:id="VF"> 
+          	  <persName> 
+                 <forename>Vincenzo</forename>
+                 <surname>Ferlito</surname>
+               </persName>
+              <sex>M </sex>
+              <birth><date when="1780" cert="medium">1780</date>
+                 	<placeName ref="TEI-ListPlace#CT">
+            				<settlement type="municipality">Catania</settlement>
+            	 			<settlement type="provincia" key="CT">Catania</settlement>
+            	 			<country key="IT">Italia</country>
+            			</placeName>
+            	</birth>
+							<death><date when="1850">1850</date>
+	            	<placeName ref="TEI-ListPlace#London">
+            			<settlement type="municipality">London</settlement>
+            	 		<settlement type="country">Greater London</settlement>
+            	 		<country key="GB">Great Britain</country>
+            		</placeName>
+							</death>
+               <note source="TEI-ListBibl.xml#Seminara2017" resp="#GS" ana="38">
+                  <bibl>   <!--  note dell'edizione critica della Seminara -->
+                      	  <citedRange unit="page" from="77" to="77">77</citedRange>
+                  </bibl>
+                 <p>
+                 Vincenzo Ferlito (Catania, 1780 ca. - 1850) era zio materno di <persName ref="#VB" role="composer">Bellini</persName>; aveva sposato <persName ref="#RM">Rosaria Maugeri</persName>, indicata dal musicista come “zia Sara”. Bellini si rivolgeva a lui per far pervenire proprie notizie alla famiglia.
+                 	</p>
+              </note> 
+          </person>
+
+           <person xml:id="VG" sameAs="http://viaf.org/viaf/88959020"> 
+          	  <persName role="composer"> <!-- esempi sono: composer, librettist, tenore, editor, ...-->
+                 <ref target="http://data.rism.info/id/rismauthorities/pe30005398 http://www.treccani.it/enciclopedia/vincenzo-gabussi_(Dizionario-Biografico)/"/>
+                 <forename>Vincenzo</forename>
+                 <surname>Gabussi</surname>
+               </persName>
+              <sex>M </sex>
+              <birth><date when="1800">1800</date>
+                 	<placeName>
+            				<settlement type="municipality">Bologna</settlement>
+            	 			<settlement type="provincia" key="BO">Bologna</settlement>
+            	 			<country key="IT">Italia</country>
+            			</placeName>
+              </birth>
+              <death><date when="1846-12-12">12 dicembre 1846</date>
+                 	<placeName ref="TEI-ListPlace#London">
+            				<settlement type="municipality">London</settlement>
+            	 			<settlement type="provincia">Greater London</settlement>
+            	 			<country key="GB">Great Britain</country>
+            			</placeName>
+              </death>
+              <note source="TEI-ListBibl.xml#Seminara2017" resp="#GS" ana="508">
+                  <bibl>            	  	<!--  note dell'edizione critica della Seminara -->
+                      	  <citedRange unit="page" from="309" to="309">309</citedRange>
+                  </bibl>
+                 <p>
+                 Il compositore bolognese Vincenzo Gabussi (Bologna, 1800 - Londra, 1846), dopo gli studi con Stanislao Mattei, aveva esordito come operista al <orgName type="theatre">Teatro Comunale</orgName> di <placeName >Modena</placeName> il 12 febbraio 1825 con I furbi al cimento; nella seconda metà degli anni venti si era trasferito a <placeName ref="TEI-ListPlace.xml#London">Londra</placeName>, dove si era affermato come insegnante di canto e come autore di romanze da camera.
+                 	</p>
+              </note> 
+          </person>
+
+          <person xml:id="DG" sameAs="http://viaf.org/viaf/5197094"> 
+          	  <persName role="librettist">
+                 <ref target="http://data.rism.info/id/rismauthorities/pe30030298 https://it.wikipedia.org/wiki/Domenico_Gilardoni"/>
+                 <forename>Domenico</forename>
+                 <surname>Gilardoni</surname>
+              </persName>
+              <sex>M </sex>
+              <birth><date when="1798">1798</date>               	
+                	<placeName ref="TEI-ListPlace#NA">
+            				<settlement type="municipality">Napoli</settlement>
+            	 			<settlement type="provincia" key="NA">Napoli</settlement>
+            	 			<country key="IT">Italia</country>
+            			</placeName>
+              </birth>
+              <death><date when="1831">1831</date>
+                 	<placeName ref="TEI-ListPlace#NA">
+            				<settlement type="municipality">Napoli</settlement>
+            	 			<settlement type="provincia" key="NA">Napoli</settlement>
+            	 			<country key="IT">Italia</country>            	 			        </placeName>
+             </death>
+              <note source="TEI-ListBibl.xml#Seminara2017" resp="#GS" ana="86">
+                  <bibl>
+                      	  <citedRange unit="page" from="89" to="89">89</citedRange>
+                  </bibl>
+                  <p>Domenico Gilardoni (Napoli, 1798 - 1831), librettista attivo a Napoli, nel 1826	aveva scritto i versi di <rs type="work" ref="TEI-ListWork.xml#Bianca_e_Gernando">Bianca e Gernando</rs>.
+                  </p>	
+              </note> 
+          </person>
+
+          <person xml:id="AL" sameAs="http://viaf.org/viaf/30590930"> 
+          	  <persName role="impresario"> 
+                 <ref target="http://data.rism.info/id/rismauthorities/pe20002174 http://www.treccani.it/enciclopedia/alessandro-lanari_(Dizionario-Biografico)/"/>
+                 <forename>Alessandro</forename>
+                 <surname>Lanari</surname>
+               </persName>
+              <sex>M </sex>
+              <birth><date when="1787-01-25">25 gennaio 1787</date>
+                  	<placeName>
+            				<settlement type="municipality">San Marcello</settlement>
+            	 			<settlement type="provincia" key="AN">Ancona</settlement>
+            	 			<country key="IT">Italia</country>
+            			</placeName>
+             	</birth>
+              <death><date when="1852-10-07">7 ottobre 1852</date>
+                 	<placeName ref="TEI-ListPlace#FI">
+            				<settlement type="municipality">Firenze</settlement>
+            	 			<settlement type="provincia" key="FI">Firenze</settlement>
+            	 			<country key="IT">Italia</country>
+            			</placeName>
+              </death>
+ 							<note source="TEI-ListBibl.xml#Seminara2017" resp="#GS" ana="317">
+                 <bibl>
+             	  	  <citedRange unit="page" from="201" to="201">201</citedRange>
+             	   </bibl>
+                 <p>Alessandro Lanari (<sic>1790</sic>-1852), impresario. Nel 1829 era entrato in società con <persName ref="#GC">Giuseppe Crivelli</persName> per la gestione del <orgName type="theatre" ref="TEI-ListOrganization.xml#Scala">Teatro alla Scala</orgName> e del <orgName type="theatre" ref="TEI-ListOrganization.xml#Fenice">Teatro La Fenice</orgName> e aveva ripreso l’appalto del <orgName type="theatre">Teatro della Pergola</orgName> di <placeName ref="TEI-ListPlace.xml#FI">Firenze</placeName>, che aveva già tenuto dal 1823 al 1828.
+                 </p>
+              </note> 
+          </person>
+
+           <person xml:id="FPC" sameAs="http://viaf.org/viaf/208235133"> 
+          	  <persName> 
+                 <ref target="https://it.wikipedia.org/wiki/Francesco_Paternò_Castello"/>
+                 <forename>Francesco</forename>
+                 <surname>Paternò</surname>
+                 <surname>Castello</surname>
+                 <roleName>duca di Carcaci</roleName>
+               </persName>
+              <sex>M </sex>
+              <birth><date when="1786-08-15">15 agosto 1786</date>
+                 	<placeName ref="TEI-ListPlace#CT">
+            				<settlement type="municipality">Catania</settlement>
+            	 			<settlement type="provincia" key="CT">Catania</settlement>
+            	 			<country key="IT">Italia</country>
+             	 </placeName>
+ 							</birth>
+              <death><date when="1854-04-08">8 aprile 1854</date>
+                 	<placeName ref="TEI-ListPlace#CT">
+            				<settlement type="municipality">Catania</settlement>
+            	 			<settlement type="provincia" key="CT">Catania</settlement>
+            	 			<country key="IT">Italia</country>
+             	   </placeName>
+              	</death>
+              <note source="TEI-ListBibl.xml#Seminara2017" resp="#GS" ana="353">
+                  <bibl>
+                      	  <citedRange unit="page" from="220" to="220">220</citedRange>
+                  </bibl>
+                 <p>
+                 Francesco Paternò Castello (Catania, 1786 - 1854), nel 1838 – alla morte del nipote Mario – sarebbe diventato VII duca di Carcaci e Gentiluomo di Camera di Ferdinando II, re delle Due Sicilie. Nel 1826 venne nominato primo direttore dell’Accademia Gioenia di <placeName ref="TEI-ListPlace.xml#CT">Catania</placeName> e fu autore di una <hi rend="italic">Descrizione di Catania e delle cose notevoli ne’ dintorni di essa</hi> (Catania, Giuntini, 1841). Compositore dilettante, era un ammiratore del musicista che si premurava di inviargli gli <term subtype="music-term" ref="TEI-ListTerm.xml#spartito">spartiti</term> delle proprie opere.
+                 	</p>
+              </note> 
+  				 </person>
+          
+          <person xml:id="CP" sameAs="http://viaf.org/viaf/79049762"> 
+          	  <persName role="librettist"> 
+                 <ref target="http://data.rism.info/id/rismauthorities/pe30101038 http://www.treccani.it/enciclopedia/carlo-pepoli_(Dizionario-Biografico)"/>
+                 <forename>Carlo</forename>
+                 <surname>Pepoli</surname>
+                 <roleName>conte</roleName>
+               </persName>
+              <sex>M </sex>
+              <birth><date when="1796-07-22">22 luglio 1796</date>
+                  	<placeName>
+            				<settlement type="municipality">Bologna</settlement>
+            	 			<settlement type="provincia" key="BO">Bologna</settlement>
+            	 			<country key="IT">Italia</country>
+            			</placeName>
+             	</birth>
+              <death><date when="1881-12-07">7 dicembre 1881</date>
+                 	<placeName>
+            				<settlement type="municipality">Bologna</settlement>
+            	 			<settlement type="provincia" key="BO">Bologna</settlement>
+            	 			<country key="IT">Italia</country>
+            			</placeName>
+              </death>
+ 							<note source="TEI-ListBibl.xml#Seminara2017" resp="#GS" ana="551">
+                 <bibl>
+             	  	  <citedRange unit="page" from="331" to="331">331</citedRange>
+             	   </bibl>
+                 <p>Carlo Pepoli (Bologna, 1796 - 1881) aveva predisposto il <term subtype="music-term" ref="TEI-ListTerm.xml#libretto">libretto</term> dei <rs type="work" ref="TEI-ListWork.xml#Puritani">Puritani</rs>. Amico di <persName>Giacomo Leopardi</persName>, aveva partecipato ai moti carbonari del 1831 e - dopo esser stato detenuto in carcere a Venezia - nel 1833 si era recato in esilio a Parigi; in quello stesso anno aveva pubblicato una raccolta di scritti in due volumi (Prose. Volume primo e Versi. Volume primo) presso l'editore Vignier di Ginevra. Il poeta bolognese conobbe <persName ref="#VB" role="composer">Bellini</persName> nel salotto di <persName ref="#CTB" role="writer">Cristina Trivulzio di Belgiojoso</persName>, nel quale si fece apprezzare anche come autore di testi per musica: i suoi versi furono intonati da <persName ref="#MC" role="composer">Michele Costa</persName>, <persName ref="#VG">Vincenzo Gabussi</persName>, <persName ref="#GR">Rossini</persName> e <persName ref="#NV">Vaccaj</persName>, nonche' dallo stesso <persName ref="#VB" role="composer">Bellini</persName>.</p>
+              </note> 
+          </person>
+
+          <person xml:id="FP" sameAs="http://viaf.org/viaf/22328380"> 
+        	  <persName role="composer">  
+                 <ref target="http://data.rism.info/id/rismauthorities/pe26730 https://it.wikipedia.org/wiki/Francesco_Pollini"/>
+                 <forename>Francesco</forename>
+                 <surname>Pollini</surname>
+               </persName>
+              <sex>M </sex>
+			 			 <birth><date when="1762-03-26">26 marzo 1762</date>
+                 	<placeName>
+            				<settlement type="municipality">Lubiana</settlement>
+            	 			<settlement type="provincia">Lubiana</settlement>
+            	 			<country key="SL">Slovenia</country>
+            			</placeName>
+			 			 </birth>
+              <death><date when="1846-09-17">17 settembre 1846</date>
+       	     		<placeName ref="TEI-ListPlace#MI">
+            			<settlement type="municipality">Milano</settlement>
+            	 		<settlement type="provincia" key="MI">Milano</settlement>
+            	 		<country key="IT">Italia</country>
+            		</placeName>
+              </death>
+ 							<note resp="#GS">
+                 <p>Compositore e didatta, Francesco Pollini (Lubiana, 1762 - Milano, 1846)  aveva studiato con <persName>Mozart</persName> a Vienna e a Napoli con <persName>Zingarelli</persName> ed era autore di musica sacra e strumentale; aveva anche scritto un <hi rend="italic">Metodo pel clavicembalo</hi> (Milano, Ricordi, 1812) impiegato in quegli anni al Conservatorio di Milano, dove nel 1809 era stato chiamato a occupare la cattedra di pianoforte. Insieme alla moglie <persName ref="#MGP">Marianna Gasparini</persName>, che era cantante dilettante, Pollini accolse <persName ref="#VB" role="composer">Bellini</persName> come un figlio quando il giovane musicista giunse a Milano. A lui Bellini dedicò la riduzione per canto e pianoforte della <rs type="work" ref="TEI-ListWork.xml#Sonnambula">Sonnambula</rs>Sonnambula, edita da Ricordi nel 1831; dedicate a <persName ref="#MGP">Marianna Pollini</persName>, sono invece le Sei <term subtype="music-term" ref="TEI-ListTerm.xml#aria">ariette</term> per camera, pubblicate da <orgName type="publisher" ref="TEI-ListOrganization.xml#CasaRicordi">Ricordi</orgName> in quello stesso anno. 
+                 </p>
+              </note> 
+          </person>
+          
+          <person xml:id="FR" sameAs="http://viaf.org/viaf/19683628"> 
+          	  <persName role="librettist">
+                 <ref target="http://data.rism.info/id/rismauthorities/pe30028772 http://www.treccani.it/enciclopedia/felice-romani_(Dizionario-Biografico)"/>
+                 <forename>Felice</forename>
+                 <surname>Romani</surname>
+              </persName>
+              <sex>M </sex>
+              <birth><date when="1788-01-31">31 gennaio 1788</date>
+               	<placeName>
+            			<settlement type="municipality">Genova</settlement>
+            	 		<settlement type="provincia" key="GE">Genova</settlement>
+            	 		<country key="IT">Italia</country>
+              	</placeName>
+							</birth>
+              <death><date when="1865-01-28">28 gennaio 1865</date>
+               	<placeName>
+            			<settlement type="municipality">Moneglia</settlement>
+            	 		<settlement type="provincia" key="GE">Genova</settlement>
+            	 		<country key="IT">Italia</country>
+ 	            	</placeName>
+							</death>
+ 							<note source="TEI-ListBibl.xml#Seminara2017" resp="#GS" ana="32">
+                 <bibl>
+              	  	  <citedRange unit="page" from="75" to="75">75</citedRange>
+             	   </bibl>
+                 <p>         
+                 Felice Romani (Genova, 1788 - Moneglia, 1865), librettista. Bellini, che lo conobbe al suo arrivo a Milano, a lui si affidò per i libretti di tutte le opere composte tra il 1827 e il 1833, dal <rs type="work" ref="TEI-ListWork.xml#Pirata">Pirata</rs> a <rs type="work" ref="TEI-ListWork.xml#Beatrice_di_Tenda">Beatrice di Tenda</rs>. Sul profilo intellettuale e artistico di Romani cfr. Alessandro Roccatagliati, Felice Romani librettista, Lucca, LIM, 1996.
+                 </p>
+              </note> 
+          </person>
+  
+  			 <person xml:id="GR" sameAs="http://viaf.org/viaf/34644407"> 
+          	  <persName role="composer"> <!-- esempi sono: composer, librettist, tenore, editor, ...-->
+                 <ref target="http://data.rism.info/id/rismauthorities/pe63766 http://www.treccani.it/enciclopedia/gioacchino-rossini/"/>
+                 <forename>Gioachino</forename>
+                 <surname>Rossini</surname>
+              </persName>
+              <sex>M </sex>
+              <birth><date when="1792-02-29">29 febbraio 1792</date>
+            		<placeName>
+            			<settlement type="municipality">Pesaro</settlement>
+            	 		<settlement type="provincia" key="PU">Pesaro e Urbino</settlement>
+            	 		<country key="IT">Italia</country>
+            	 </placeName>
+ 							</birth>
+              <death><date when="1868-11-13">13 novembre 1868</date>
+            		<placeName>
+            			<settlement type="municipality">Passy</settlement>
+            	 		<settlement type="department" key="Paris" ref="TEI-ListPlace#Paris">Paris</settlement>
+            	 		<country key="FR">France</country>
+ 							 </placeName>
+ 						 </death>
+          </person>      
+          
+         <person xml:id="GBR" sameAs="http://viaf.org/viaf/89373781"> 
+          	<persName role="tenore"> <!-- esempi sono: composer, librettist, tenore, editor, ...-->
+          		<ref target="http://data.rism.info/id/rismauthorities/pe67506 http://www.treccani.it/enciclopedia/giovanni-battista-rubini_(Dizionario-Biografico)"/>
+              <forename> Giovanni Battista</forename>
+              <surname> Rubini</surname>
+             </persName>
+            <sex>M </sex>
+            <birth><date when="1794-04-07">7 aprile 1794</date>
+            	<placeName>
+            			<settlement type="municipality">Romano di Lombardia</settlement>
+            	 		<settlement type="provincia" key="BG" ref="TEI-ListPlace#BG">Bergamo</settlement>
+            	 		<country key="IT">Italia</country>
+            	</placeName>
+            </birth>
+            <death><date when="1854-03-03">3 marzo 1854</date>
+             	<placeName>
+            			<settlement type="municipality">Romano di Lombardia</settlement>
+            	 		<settlement type="provincia" key="BG" ref="TEI-ListPlace#BG">Bergamo</settlement>
+            	 		<country key="IT">Italia</country>
+            	</placeName>
+            </death>
+ 							<note source="TEI-ListBibl.xml#Seminara2017" resp="#GS" ana="43">
+                 <bibl>
+													<!--  note dell'edizione critica della Seminara -->
+              	  	  <citedRange unit="page" from="77" to="77">77</citedRange>
+             	   </bibl>
+                 <p>         
+                Giovanni Battista Rubini (Bergamo, 1794 - 1854) era un <term subtype="music-term" ref="TEI-ListTerm.xml#tenore">tenore</term> di straordinario talento, dotato di una grande estensione nel <term subtype="music-term">registro</term> acuto. Tenne il ruolo di Gernando nella prima rappresentazione di <rs type="work" ref="TEI-ListWork.xml#Bianca_e_Gernando">Bianca e Gernando</rs> e fu creatore delle parti di Gualtiero nel <rs type="work" ref="TEI-ListWork.xml#Pirata">Pirata</rs>, di Elvino in <rs type="work" ref="TEI-ListWork.xml#Sonnambula">Sonnambula</rs> e di Arturo nei <rs type="work" ref="TEI-ListWork.xml#Puritani">Puritani</rs>; con queste interpretazioni contribuì al successo delle tre opere belliniane e si impose come prototipo del <term subtype="music-term" ref="TEI-ListTerm.xml#tenore">tenore</term> romantico. 
+                </p>
+            </note> 
+             <note resp="#EC">
+                 <p>
+                 	Rubini fu il <term subtype="music-term" ref="TEI-ListTerm.xml#tenore">tenore</term> interprete di Arturo nella prima assoluta dei <rs type="work" ref="TEI-ListWork.xml#Puritani">Puritani</rs> il 24 gennaio 1835 al <orgName type="theatre" ref="TEI-ListOrganization.xml#Teatro_italiano">Théâtre de la comédie italienne</orgName>, <placeName ref="TEI-ListPlace.xml#Paris">Parigi</placeName>.
+                 	</p>
+             </note>      		
+          </person>
+          
+          <person xml:id="CTB" sameAs="http://viaf.org/viaf/59152953"> 
+          	<persName role="writer"> <!-- esempi sono: composer, librettist, tenore, editor, ...-->
+          		<ref target="http://data.rism.info/id/rismauthorities/pe41008187 http://www.treccani.it/enciclopedia/cristina-belgioioso-trivulzio_(Enciclopedia-Italiana)"/>
+              <forename>Cristina</forename>
+              <surname>Trivulzio di Belgiojoso</surname>
+               <roleName>principessa</roleName>
+            </persName>
+            <sex>F </sex>
+            <birth><date when="1808-06-28">28 giugno 1808</date>
+            	<placeName ref="TEI-ListPlace#MI">
+            			<settlement type="municipality">Milano</settlement>
+            	 		<settlement type="provincia" key="MI">Milano</settlement>
+            	 		<country key="IT">Italia</country>
+            	</placeName>
+            </birth>
+            <death><date when="1871-07-15">15 luglio 1871</date>
+             	<placeName ref="TEI-ListPlace#MI">
+            			<settlement type="municipality">Milano</settlement>
+            	 		<settlement type="provincia" key="MI">Milano</settlement>
+            	 		<country key="IT">Italia</country>
+            	</placeName>
+           </death>
+ 							<note source="TEI-ListBibl.xml#Seminara2017" resp="#GS" ana="213">
+                 <bibl>
+													<!--  note dell'edizione critica della Seminara -->
+              	  	  <citedRange unit="page" from="145" to="145">145</citedRange>
+             	   </bibl>
+                 <p>         
+                		Cristina Trivulzio (Milano, 1808 - 1871), figlia del <persName>marchese Gerolamo</persName>, che nel 1824 aveva sposato il principe <persName>Emilio Barbiano di Belgiojoso d'Este</persName>. Nel 1831 si sarebbe rifugiata a Parigi per sfuggire alla polizia austriaca, che ne conosceva i legami con gli intellettuali italiani impegnati nella causa risorgimentale. Il suo salotto - tenuto in un lussuoso palazzo di Rue d'Anjou - fu uno dei luoghi di incontro più élitari della capitale francese, frequentato da artisti e intellettuali come Augustin Thierry, Alexis-Charles-Henri de Tocqueville, Alexandre Dumas padre, Victor Hugo, Honoré de Balzac, George Sand, François-René de Chateaubriand, Heirich Heine, <persName>Fryderyk Chopin</persName>, <persName>Franz Liszt</persName>, <persName>Johann Adam Hiller</persName>.
+                </p>
+            </note>          		
+          </person>          
+					
+          <person xml:id="NV" sameAs="http://viaf.org/viaf/46872491"> 
+          	<persName role="composer tenore singing_teacher">
+          		<ref target="http://data.rism.info/id/rismauthorities/pe30003199 http://www.treccani.it/enciclopedia/nicola-vaccai_(Enciclopedia-Italiana)/"/>
+              <forename>Nicola</forename>
+              <surname>Vaccaj</surname>
+            </persName>
+            <sex>M </sex>
+            <birth><date when="1790-03-15">15 marzo 1790</date>
+            	<placeName>
+            			<settlement type="municipality">Tolentino</settlement>
+            	 		<settlement type="provincia" key="MC">Macerata</settlement>
+            	 		<country key="IT">Italia</country>
+            	</placeName>
+            </birth>
+            <death><date when="1848-08-05">5 agosto 1848</date>
+             	<placeName>
+            			<settlement type="municipality">Pesaro</settlement>
+            	 		<settlement type="provincia" key="PU">Pesaro e Urbino</settlement>
+            	 		<country key="IT">Italia</country>
+            	</placeName>
+           </death>
+ 							<note source="TEI-ListBibl.xml#Seminara2017" resp="#GS" ana="73">
+                 <bibl>
+													<!--  note dell'edizione critica della Seminara -->
+              	  	  <citedRange unit="page" from="85" to="85">85</citedRange>
+             	   </bibl>
+                 <p>         
+                		Nicola Vaccaj (Tolentino, Macerata 1790-Pesaro, 1848), allievo di <persName>Paisiello</persName> a <placeName ref="TEI-ListPlace.xml#NA">Napoli</placeName>, esordì come operista nel 1815. La sua opera più celebre fu Giulietta e Romeo su <term subtype="music-term" ref="TEI-ListTerm.xml#libretto">libretto</term> di <persName ref="#FR">Romani</persName>, messa in scena al Teatro della Cannobiana di <placeName ref="TEI-ListPlace.xml#MI">Milano</placeName> il 31 ottobre 1825; lo stesso Romani nel 1830 avrebbe rivisto il libretto per l’opera di <persName ref="#VB">Bellini</persName> <rs type="work" ref="TEI-ListWork.xml#Capuleti_e_Montecchi">I Capuleti e i Montecchi</rs>. Vaccaj fu noto anche come didatta e nel 1832 pubblicò a <placeName ref="TEI-ListPlace.xml#London">Londra</placeName> un Metodo pratico di Canto Italiano per camera diviso in 15 lezioni, che fu ristampato e tradotto in diverse lingue sino alle soglie del XX secolo.
+                </p>
+            </note>          		
+          </person>          
+					
+					<person xml:id="GBV">
+							<persName role="impresario">
+								<forename>Giovanni</forename> 
+								<forename>Battista</forename> 
+           	   	<surname>Villa</surname>
+							</persName>
+            	<sex>M </sex>
+            	<birth></birth>
+            	<death></death>
+            	<note source="TEI-ListBibl.xml#Seminara2017" resp="#GS" ana="68">
+                  <bibl>
+                      	  <citedRange unit="page" from="83" to="83">83</citedRange>
+                  </bibl>
+                  <p> Giovanni Battista Villa, impresario, dal 1826 al 1832 ebbe in gestione il <orgName type="theatre" ref="TEI-ListOrganization.xml#Scala">Teatro alla Scala</orgName> insieme a <persName ref="#CB">Carlo Balocchi</persName>, <persName ref="#DB">Domenico Barbaja</persName> e <persName ref="#GC">Giuseppe Crivelli</persName>.
+                 </p>
+							</note>
+					</person>
+
+ 
+ 
+         <listRelation>
+              		<relation name="maternal uncle" active="#VF" passive="#VB"/>
+              		<relation name="spouse" mutual="#VF #RM"/>
+ 					</listRelation>
+
+         </listPerson>
+          
+
+                  
+      </sourceDesc>
+    </fileDesc>
+  </teiHeader>
+  <text>
+      <body>
+         <p>This is a template for a minimal TEI header with the mandatory components</p>
+      </body>
+   </text>
+</TEI>

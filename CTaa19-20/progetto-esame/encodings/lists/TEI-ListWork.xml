@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--<?xml-model href="schema/tei_cp.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?> -->
+    <!-- <TEI xmlns="http://www.tei-c.org/ns/1.0 -->
+ <TEI xmlns:mei="https://music-encoding.org/schema/4.0.1/mei-all.rng">
+       <teiHeader>
+      <fileDesc>
+         <titleStmt>
+            <title><!-- Insert title for this digital text --></title>
+         </titleStmt>
+         <publicationStmt>
+            <p><!-- Insert information about the publication of this digital text --></p>
+         </publicationStmt>
+         <sourceDesc>
+            <p><!-- Insert a bibliographic description of the (music) work for this digital text --></p>
+         </sourceDesc>
+      </fileDesc>
+   </teiHeader>
+   <text>
+      <body>
+         <p>This is a template for a minimal TEI header with the mandatory components:</p>
+      </body>
+      <back>
+            <div type="work">
+            <listBibl>
+                 <bibl xml:id="Beatrice_di_Tenda">
+                 		<ref target="https://it.wikipedia.org/wiki/Beatrice_di_Tenda(dramma)"/>
+                    <title>Beatrice di Tenda</title>
+                    <mei:composer>
+                    	<ref target="TEI-ListPerson.xml#VB"/>	Vincenzo Bellini
+                    </mei:composer>
+                    <mei:librettist> <ref target="TEI-ListPerson.xml#FR"/>Felice Romani</mei:librettist>
+                    <orgName type="theatre" ref="TEI-ListOrganization.xml#Fenice">Teatro La Fenice</orgName>
+                    <placeName ref="TEI-ListPlace.xml#VE">Venezia</placeName>
+                    <date when="1833-03-16">16 marzo 1833</date> 
+                    <note resp="#GS">
+                        <p>Ispirata a un dramma di Carlo Tebaldi Flores, Beatrice di Tenda fu messa in scena al <orgName type="theatre" ref="TEI-ListOrganization.xml#Fenice">Teatro La Fenice</orgName> il 16 marzo 1833 con <persName ref="TEI-ListPerson.xml#GP">Giuditta Pasta</persName> nel ruolo della protagonista. La prima rappresentazione dell’opera fu un «sollenne fiasco», come avrebbe riconosciuto lo stesso <persName ref="TEI-ListPerson.xml#VB">Bellini</persName> in una lettera del successivo 21 marzo al compositore <persName ref="TEI-ListPerson.xml#GB">Giuseppe Bornaccini</persName> (Ancona, 1802 1881), suo condiscepolo al Collegio di San Sebastiano in <placeName ref="TEI-ListPlace.xml#NA">Napoli</placeName>.
+                 				</p>
+              			</note> 
+                </bibl>
+
+                <bibl xml:id="Bianca_e_Gernando">
+                 		<ref target="https://it.wikipedia.org/wiki/Bianca_e_Fernando"/>
+                    <title>Bianca e Gernando</title>
+                    <mei:composer>
+                    	<ref target="TEI-ListPerson.xml#VB"/>	Vincenzo Bellini
+                    </mei:composer>
+                    <mei:librettist> <ref target="TEI-ListPerson.xml#DG"/>Domenico Gilardoni</mei:librettist>
+                    <orgName type="theatre" ref="TEI-ListOrganization.xml#San_Carlo">Teatro San Carlo</orgName>
+                    <placeName ref="TEI-ListPlace.xml#NA">Napoli</placeName>
+                    <date when="1826-05-30">30 maggio 1826</date> 
+                    <note source="TEI-ListBibl.xml#Seminara2017" resp="#GS" ana="25">
+                 				<bibl>
+													<!--  note dell'edizione critica della Seminara -->
+              	  	 		 <citedRange unit="page" from="72" to="72">72</citedRange>
+             	         </bibl>
+                      <p>Bianca e Gernando, composta su libretto di <persName ref="TEI-ListPerson.xml#DG">Domenico Gilardoni </persName> e andata in scena al <orgName type="theatre" ref="TEI-ListOrganization.xml#San_Carlo">Teatro San Carlo</orgName> il 30 maggio 1826 con <persName> Henriette Méric Lalande</persName> e <persName ref="TEI-ListPerson.xml#GBR">Giovanni Battista Rubini</persName>. </p>
+                   </note> 
+                   <note resp="EC">
+                   	<p>Il titolo originale Bianca e Fernando fu sostituito da <persName ref="TEI-ListPerson.xml#VB">Bellini</persName> in Bianca e Gernando in occasione del debutto dell'opera per riguardo al principe <persName>Ferdinando di Borbone</persName>.</p>
+                   </note>	
+                   <note source="TEI-ListBibl.xml#Seminara2017" resp="#GS" ana="50">
+                 				<bibl>
+													<!--  note dell'edizione critica della Seminara -->
+              	  	 		 <citedRange unit="page" from="79" to="80">79-80</citedRange>
+             	         </bibl>
+                      <p>Il soggetto di Bianca e Fernando derivava dal dramma di <persName>Carlo Roti</persName> Bianca e Fernando alla tomba di Carlo IV duca di Agrigento, messo in scena a <placeName ref="TEI-ListPlace.xml#NA">Napoli</placeName> nel 1820 e pubblicato nel 1825 dall’editore Gaetano Nobile. </p>
+                   </note> 
+                </bibl>
+ 
+               <bibl xml:id="Capuleti">
+                 		<ref target="http://www.treccani.it/enciclopedia/capuleti-e-montecchi"/>
+                    <title> I Capuleti e i Montecchi</title>
+                    <mei:composer>
+                    	<ref target="TEI-ListPerson.xml#VB"/>
+                    	Vincenzo Bellini</mei:composer>
+                    <mei:librettist>
+                    	 <ref target="TEI-ListPerson.xml#FR"/>
+                    	 Felice Romani </mei:librettist>
+                    <orgName type="theatre" ref="TEI-ListOrganization.xml#Fenice">
+                    	Teatro La Fenice</orgName>
+                    <placeName ref="TEI-ListPlace.xml#VE">
+                    	Venezia</placeName>
+                    <date when="1830-03-11">
+                    	11 marzo 1830 </date> 
+                    <note resp="#GS">
+                 			<p>La «tragedia lirica» I Capuleti e i Montecchi fu composta da <persName ref="TEI-ListPerson.xml#VB">Bellini</persName> su commissione di <persName ref="TEI-ListPerson.xml#AL">Alessandro Lanari</persName>, impresario del <orgName type="theatre" ref="TEI-ListOrganization.xml#Fenice">Teatro La Fenice</orgName> di <placeName ref="TEI-ListPlace.xml#VE">Venezia</placeName>: il musicista, che si trovava nella città lagunare dal dicembre 1829 per seguire la rappresentazione del <rs type="work" ref="#Pirata">Pirata</rs>, aveva accettato la proposta di sostituire l’inadempiente <persName>Pacini</persName> per la stagione del Carnevale del 1830. La ristrettezza del tempo indusse <persName ref="TEI-ListPerson.xml#FR">Felice Romani</persName> a riutilizzare il <term subtype="music-term" ref="TEI-ListTerm.xml#libretto">libretto</term> di Giulietta e Romeo, scritto nel 1825 per <persName ref="TEI-ListPerson.xml#NV">Nicola Vaccaj</persName>; a sua volta Bellini si avvalse delle musiche già composte per <rs type="work" ref="#Zaira">Zaira</rs>, l’opera con la quale il 16 maggio 1829 aveva inaugurato il <orgName type="theatre">Teatro Ducale</orgName> di <placeName ref="TEI-ListPlace.xml#PR">Parma</placeName> incontrando un sostanziale insuccesso. Fu invece trionfale l’accoglienza riservata dal pubblico veneziano ai Capuleti, che andarono in scena al Teatro La Fenice l’11 marzo 1830.
+                 				</p>
+                   </note> 
+                </bibl>
+    
+                 
+               <bibl xml:id="Pirata">
+                 		<ref target="https://it.wikipedia.org/wiki/Il_pirata"/>
+                    <title>Il pirata</title>
+                    <mei:composer>
+                    	<ref target="TEI-ListPerson.xml#VB"/>
+                    	Vincenzo Bellini</mei:composer>
+                    <mei:librettist>
+                    	 <ref target="TEI-ListPerson.xml#FR"/>
+                    	 Felice Romani </mei:librettist>
+                    <orgName type="theatre" ref="TEI-ListOrganization.xml#Scala">Teatro alla Scala</orgName>
+                    <placeName ref="TEI-ListPlace.xml#MI">Milano</placeName>
+                    <date when="1827-10-27">27 ottobre 1827 </date> 
+                    <note source="TEI-ListBibl.xml#Seminara2017" resp="#GS" ana="41">
+                 			<bibl>
+              	  	 		 <citedRange unit="page" from="77" to="77">77</citedRange>
+             	        </bibl>
+                      <p>La terza opera di <persName ref="TEI-ListPerson.xml#VB">Bellini</persName>, Il pirata, messa in scena al <orgName type="theatre" ref="TEI-ListOrganization.xml#Scala">Teatro alla Scala</orgName> il 27 ottobre 1827 con <persName> Henriette Méric Lalande</persName>, <persName ref="TEI-ListPerson.xml#GBR">Giovanni Battista Rubini</persName> e <persName>Antonio Tamburini</persName>.</p>
+                   </note> 
+                </bibl>
+                
+                <bibl xml:id="Puritani">
+                 		<ref target="http://www.treccani.it/enciclopedia/i-puritani/"/>
+                    <title>I puritani</title>
+                    <mei:composer>
+                    	<ref target="TEI-ListPerson.xml#VB"/>	Vincenzo Bellini
+                    </mei:composer>
+                    <mei:librettist> <ref target="TEI-ListPerson.xml#CP"/>Carlo Pepoli</mei:librettist>
+                    <orgName type="theatre" ref="TEI-ListOrganization.xml#Teatro_italiano">Théâtre de la comédie italienne</orgName>
+                    <placeName ref="TEI-ListPlace.xml#Paris">Paris</placeName>
+                    <date when="1835-01-24">24 gennaio 1835</date> 
+                    <note resp="#GS">
+                       	Composti da <persName ref="TEI-ListPerson.xml#VB">Bellini</persName> su <term subtype="music-term" ref="TEI-ListTerm.xml#libretto">libretto</term> di <persName ref="TEI-ListPerson.xml#CP">Carlo Pepoli </persName>, I puritani si ispiravano al dramma storico <hi rend="italic">Têtes rondes et Cavaliers</hi> di <persName>Jacques-Arsène Ancelot</persName> e <persName>Joseph-Xavier-Boniface Saintine</persName>, che era andato in scena al <orgName type="theatre">Théâtre du Vaudeville</orgName> il <date when="1833-09-25">25 settembre 1833</date> e in quello stesso anno era stato pubblicato a <placeName ref="#Paris">Parigi</placeName> dall’editore <persName>Barba</persName>. L’<term subtype="music-term" ref="TEI-ListTerm.xml#opera">opera</term> fu rappresentata al <orgName type="theatre" ref="TEI-ListOrganization.xml#Teatro_italiano">Théâtre Italien</orgName> di <placeName ref="#Paris">Parigi</placeName> il <date when="1835-01-24">24 gennaio 1835</date> e incontrò uno trionfale successo, grazie anche all’interpretazione del “<term subtype="music-term">quartetto</term>” di cantanti <persName>Giulia Grisi</persName> (“<term subtype="music-term">soprano</term>), Giovanni Battista Rubini (“<term subtype="music-term" ref="TEI-ListTerm.xml#tenore">tenore</term>), Antonio Taburini (“<term subtype="music-term">baritono</term>), Luigi Lablache (“<term subtype="music-term" ref="TEI-ListTerm.xml#basso">basso</term>).
+                    </note>
+                    <note resp="#EC">
+                    		<term subtype="music-term" ref="TEI-ListTerm.xml#opera_seria">Opera seria</term> in tre <term subtype="music-term" ref="TEI-ListTerm.xml#atto">atti</term>. Il dramma storico <hi rend="italic">Têtes rondes et Cavaliers</hi> a sua volta era derivato dal romanzo Old mortality (<date when="1816">1816</date>) di Walter Scott che fu tradotto in Italia nel 1822 col titolo I puritani di Scozia. Essendo in rotta con il librettista <persName ref="TEI-ListPerson.xml#FR">Felice Romani</persName>, Bellini accettò il testo approntato dal conte Pepoli, distinto letterato ma che non aveva alcuna esperienza di teatro: l’ultima opera del Cigno fu composta pertanto nell’arco di ben nove mesi, un tempo decisamente ampio durante il quale musicista e librettista lavorarono fianco a fianco nella costruzione dell’impianto drammaturgico.
+                    </note>
+                 </bibl>
+               
+                 <bibl xml:id="Sonnambula">
+                 		<ref target="http://www.treccani.it/enciclopedia/la-sonnambula-o-i-due-fidanzati-svizzeri"/>
+                    <title>La sonnambula</title>
+                    <mei:composer>
+                    	<ref target="TEI-ListPerson.xml#VB"/>	Vincenzo Bellini
+                    </mei:composer>
+                    <mei:librettist> <ref target="TEI-ListPerson.xml#FR"/>Felice Romani</mei:librettist>
+                    <orgName type="theatre" ref="TEI-ListOrganization.xml#Carcano">Teatro Carcano</orgName>
+                    <placeName ref="TEI-ListPlace.xml#MI">Milano</placeName>
+                    <date when="1831-03-06">6 marzo 1831</date> 
+             
+                     
+                </bibl>
+              </listBibl>
+            </div>
+      </back>
+   </text>
+</TEI>
