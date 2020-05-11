@@ -1,7 +1,7 @@
-slides/latex/beamer/corsoCodificaTesto/Lezione-introduzione/l2l.tex
-slides/latex/beamer/corsoCodificaTesto/imgs/l2l.pdf
-slides/latex/beamer/corsoCodificaTesto/imgs/1200px-Text_Encoding_InitiativeTEI_Logo.svg.png
-slides/latex/beamer/corsoCodificaTesto/Lezione-introduzione/l2l.tex
+CTaa18-19/slides/latex/beamer/corsoCodificaTesto/Lezione-introduzione/l2l.tex
+CTaa18-19/slides/latex/beamer/corsoCodificaTesto/imgs/l2l.pdf
+CTaa18-19/slides/latex/beamer/corsoCodificaTesto/imgs/1200px-Text_Encoding_InitiativeTEI_Logo.svg.png
+CTaa18-19/slides/latex/beamer/corsoCodificaTesto/Lezione-introduzione/l2l.tex
 *.aux
 *.log
 *.nav
@@ -15,8 +15,9 @@ slides/latex/beamer/corsoCodificaTesto/Lezione-introduzione/l2l.tex
 *.fdb_latexmk
 *.fls
 *.synctex.gz
-slides/latex/beamer/corsoCodificaTesto/3-Lezione-Elementi-xml/includes/subinclude/__latexindent_temp.tex
-slides/latex/beamer/corsoCodificaTesto/3-Lezione-Elementi-xml/includes/__latexindent_temp.tex
-slides/3-elementi-XML[08-10-2018].pdf
-slides/latex/beamer/corsoCodificaTesto/4-Lezione-XMLschemi-introTEI/__4-Lezione-XMLschemi-introTEI.pdf
+CTaa18-19/slides/latex/beamer/corsoCodificaTesto/3-Lezione-Elementi-xml/includes/subinclude/__latexindent_temp.tex
+CTaa18-19/slides/latex/beamer/corsoCodificaTesto/3-Lezione-Elementi-xml/includes/__latexindent_temp.tex
+CTaa18-19/slides/3-elementi-XML[08-10-2018].pdf
+CTaa18-19/slides/latex/beamer/corsoCodificaTesto/4-Lezione-XMLschemi-introTEI/__4-Lezione-XMLschemi-introTEI.pdf
 progetto-esame/script-makedir.sh
+CTaa19-20/progetto-esame/scans/LL1/*.xml
