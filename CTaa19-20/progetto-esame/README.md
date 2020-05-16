@@ -2,7 +2,7 @@
 
 ## Lettere scelte per gruppi di lavoro
 
-* LL1.17
+* _LL1.17_
 * LL1.20
 * LL1.29
 * LL1.19
@@ -15,6 +15,10 @@
 * LL1.35
 * LL1.14
 * LL1.11
+* _LL1.7_
+* LL1.3
+* LL1.32.I
+
 
 
 
