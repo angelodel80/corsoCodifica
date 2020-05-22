@@ -217,7 +217,7 @@
 			</div>
 
 			<div type="destination">
-				<ab xml:id="LL1.4_hs_1r_03"	copyof="#LL1.4_hs_1r_03_body">				
+				<ab xml:id="LL1.4_hs_1r_03"	copyOf="#LL1.4_hs_1r_03_body">				
 					<stamp type="postmark">		<!-- timbro del destinatario -->				
 					</stamp>
 				</ab>
@@ -324,7 +324,7 @@
  							perciò vedete quanti obblighi professo
 							
 							<lb xml:id="LL1.4_lb_1f_19" n="19" facs="#LL1.4_line_1f_19"/>
-							<choice><sic>aquesta</sic><reg resp="#GS">a questa</reg></choice> buona <choice><abbr>fam<am>:<hi rend="superscript">a</hi></am></abbr><expan>fam<ex resp="#DS">iglia</ex></expan></choice> che mi ama più che figlio.
+							<choice><sic>aquesta</sic><reg resp="#GS">a questa</reg></choice> buona <choice><abbr>fam<am>:<g rend="superscript">a</g></am></abbr><expan>fam<ex resp="#DS">iglia</ex></expan></choice> che mi ama più che figlio.
 						</s>
 					</ab>
 					<ab type="parag" rend="first_line_indented" n="ab_02">
@@ -347,13 +347,13 @@
 							di più, ossia altri <hi rend="underline"><num type="cardinal" value="600">600:</num></hi> ducati, che vengono ad essere 
 				
 							<lb xml:id="LL1.4_lb_1f_25" n="25" facs="#LL1.4_line_1f_25"/>
-							<hi rend="underline"><num type="cardinal" value="20000">20000:</num></hi> <expan><abbr>f<am>:<hi rend="superscript">i</hi></am></abbr><ex resp="#GS">ranchi</ex></expan> cosa che si risolverà fra giorni.
+							<hi rend="underline"><num type="cardinal" value="20000">20000:</num></hi> <expan><abbr>f<am>:<g rend="superscript">i</g></am></abbr><ex resp="#GS">ranchi</ex></expan> cosa che si risolverà fra giorni.
 						</s>
 						<s type="sentence" n="s_12">
 							Intanto 
 						
 							<lb xml:id="LL1.4_lb_1f_26" n="26" facs="#LL1.4_line_1f_26"/>
-							ricevetevi i miei <expan><abbr>abb<am>:<hi rend="superscript">ci</hi></am></abbr><ex resp="#GS">racci</ex></expan> e le tante cose per tutti i parenti
+							ricevetevi i miei <expan><abbr>abb<am>:<g rend="superscript">ci</g></am></abbr><ex resp="#GS">racci</ex></expan> e le tante cose per tutti i parenti
 						</s>
 					</ab>
 				</div>
@@ -445,23 +445,29 @@
 						<head>Bibliography of the letter LL1.4 </head>
 						<bibl xml:id="LL1_4_DeLogu">
 							<ref target="TEI-ListBibl.xml#Delogu1931">
+								<bibl>
 								<author>Delogu</author>
 								<date when="1931">1931</date>
 								<citedRange unit="page" from="169" to="169">169</citedRange>
+								</bibl>
 							</ref>
 						</bibl>
 						<bibl xml:id="LL1_4_Cambi">
 							<ref target="TEI-ListBibl.xml#Cambi1943">
-							 <author>Cambi</author>
-							 <date when="1943">1943</date>
-							 <citedRange unit="page" from="252" to="253">252-253</citedRange>
+							 <bibl>
+								<author>Cambi</author>
+							 	<date when="1943">1943</date>
+							 	<citedRange unit="page" from="252" to="253">252-253</citedRange>
+							</bibl>
 							 </ref>
 						</bibl>
 						<bibl xml:id="LL1_4_Neri">
-								<ref target="TEI-ListBibl.xml#Neri2005">
+							<ref target="TEI-ListBibl.xml#Neri2005">
+							<bibl>
 							<author>Neri</author>
 							<date when="2005">2005</date>
 							<citedRange unit="page" from="172" to="173">172-173</citedRange>
+							</bibl>
 							</ref>
 						</bibl>
 					</listBibl>
