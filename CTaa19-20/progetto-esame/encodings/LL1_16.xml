@@ -62,7 +62,7 @@
 							<title type="uniform" xml:lang="it">
 								<persName ref="TEI-ListPerson.xml#VB" role="composer">Vincenzo Bellini</persName> a								<persName ref="TEI-ListPerson.xml#CP" role="librettist">Carlo Pepoli</persName>, in								<placeName ref="TEI-ListPlace.xml#Put">Puteaux</placeName>,								<date when="1834-06-26">26 giugno 1834</date>
 							</title>
-							<textLang mainLang="it" otherLang="fr">italiano di inizio Ottocento con indirizzo in francese</textLang>
+							<textLang mainLang="it" otherLangs="fr">italiano di inizio Ottocento con indirizzo in francese</textLang>
 						</msItem>
 					</msContents>
 					<physDesc>
@@ -369,20 +369,22 @@
 						</address>
 					</ab>
 				</div>
-				
-			<ab type="paratext" subtype="addition" hand="#h2" xml:id="LL1.16_hs_1fv_02" facs="#LL1.16_hotspot_1fv_02">				<!-- terza mano del bibliotecario -->
-				<fw type="catalogNum"><idno type="oldCat">27</idno></fw> Lettera del Bellini sul					<term subtype="music-term" ref="TEI-ListTerm.xml#duetto">duetto</term> del p:°					<term subtype="music-term" ref="TEI-ListTerm.xml#atto">Atto</term> dei					<rs type="work" ref="TEI-ListWork.xml#Puritani">Puritani</rs>
-			</ab>
-			<ab type="paratext" subtype="addition" hand="#h1" xml:id="LL1.16_hs_1fv_01" facs="#LL1.16_hotspot_1fv_01">
+			
+				<div type="paratext">
+				<ab type="paratext" subtype="addition" hand="#h2" xml:id="LL1.16_hs_1fv_02" facs="#LL1.16_hotspot_1fv_02">				<!-- terza mano del bibliotecario -->
+					<fw type="catalogNum"><idno type="oldCat">27</idno></fw> Lettera del Bellini sul					<term subtype="music-term" ref="TEI-ListTerm.xml#duetto">duetto</term> del p:°					<term subtype="music-term" ref="TEI-ListTerm.xml#atto">Atto</term> dei					<rs type="work" ref="TEI-ListWork.xml#Puritani">Puritani</rs>
+				</ab>
+				<ab type="paratext" subtype="addition" hand="#h1" xml:id="LL1.16_hs_1fv_01" facs="#LL1.16_hotspot_1fv_01">
 					<!-- seconda mano di Pepoli -->
-					<persName ref="TEI-ListPerson.xml#CP" role="librettist">
+						<persName ref="TEI-ListPerson.xml#CP" role="librettist">
 						 <choice>
 						 	 <abbr>C</abbr>
 						 	 <expan resp="#DS">C<ex>arlo</ex></expan>
 						 </choice>
 						 	  Pepoli
-					</persName>
-				</ab>
+						</persName>
+					</ab>
+				</div>
 			</div>
 		</body>
 
@@ -413,16 +415,20 @@
 						<head>Bibliography of the letter LL1.16 </head>
 						<bibl xml:id="LL1_16_Pastura">
 							 	<ref target="TEI-ListBibl.xml#Pastura1959">
+									 <bibl>
 										<author>Pastura</author>
 										<date when="1959">1959</date>
 										<citedRange unit="page" from="422" to="422">422</citedRange>
+									</bibl>
 								</ref>
 						</bibl>
 						<bibl xml:id="LL1_16_Neri">
 								<ref target="TEI-ListBibl.xml#Neri2005">
+									<bibl>
 										<author>Neri</author>
 										<date when="2005">2005</date>
 										<citedRange unit="page" from="301" to="302">301-302</citedRange>
+									</bibl>
 								</ref>
 						</bibl>
 					</listBibl>
