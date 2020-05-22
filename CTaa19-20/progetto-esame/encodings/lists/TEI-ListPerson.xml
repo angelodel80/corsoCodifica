@@ -178,7 +178,9 @@
                  <surname>Crivelli</surname>
                </persName>
               <sex>M </sex>
-              <birth><date when="1770" cert="medium">1770</date> 
+              <birth>
+              	<date when="1770" cert="medium">1770</date> 
+              	<placeName type="unknown"/>
 							</birth>
               <death><date when="1831">1831</date>
                 <placeName ref="TEI-ListPlace#MI">
@@ -194,6 +196,32 @@
                  <p>
                  	Giuseppe Crivelli (1770 ca. - Milano, 1831), impresario. Tra il 1804 e il 1806 tenne in gestione il <orgName type="theatre">Teatro Regio</orgName> di <placeName ref="TEI-ListPlace.xml#TO">Torino</placeName> e nel 1821 rilevò l’impresa del <orgName type="theatre" ref="TEI-ListOrganization.xml#Fenice">Teatro La Fenice</orgName>. Dal 1826 amministrava anche il <orgName type="theatre" ref="TEI-ListOrganization.xml#Scala">Teatro alla Scala</orgName> insieme a <persName ref="#DB">Domenico Barbaja</persName>, <persName ref="#CB">Carlo Balocchi</persName> e <persName ref="#GBV">Giovanni Battista Villa</persName>.
                  	</p>
+              </note> 
+          </person>
+
+         <person xml:id="AF"> 
+          	  <persName> 
+                 <forename>Agata</forename>
+                 <surname>Ferlito</surname>
+               </persName>
+              <sex>F </sex>
+              <birth><date when="1778">1778</date>
+                 	<placeName ref="TEI-ListPlace#CT">
+            				<settlement type="municipality">Catania</settlement>
+            	 			<settlement type="provincia" key="CT">Catania</settlement>
+            	 			<country key="IT">Italia</country>
+            			</placeName>
+            	</birth>
+							<death><date when="1842">1842</date>
+                 	<placeName ref="TEI-ListPlace#CT">
+            				<settlement type="municipality">Catania</settlement>
+            	 			<settlement type="provincia" key="CT">Catania</settlement>
+            	 			<country key="IT">Italia</country>
+            	 		</placeName>
+							</death>
+               <note resp="#GS">
+                 <p>Agata Ferlito (Catania, 1778 -1842) apparteneva a una famiglia relativamente agiata poiché il padre Carmelo era funzionario presso l’amministrazione catanese. Sposò <persName ref="#RB">Rosario Bellini</persName> il 17 gennaio 1801 e con lui si stabilì in un modesto appartamento di tre stanze ricavato dalle dépendances del settecentesco palazzo Gravina Cruylas, situato in Largo San Francesco a <placeName ref="TEI-ListPlace.xml#CT"> Catania </placeName>. I due coniugi ebbero sette figli: <persName ref="#VB">Vincenzo</persName>, il primogenito, nel 1801, Carmelo nel 1803, Francesco nel 1804, Michela nel 1806, Giuseppa nel 1807, Mario nel 1810, Maria nel 1813.
+                 </p>
               </note> 
           </person>
 
@@ -253,7 +281,7 @@
                       	  <citedRange unit="page" from="309" to="309">309</citedRange>
                   </bibl>
                  <p>
-                 Il compositore bolognese Vincenzo Gabussi (Bologna, 1800 - Londra, 1846), dopo gli studi con Stanislao Mattei, aveva esordito come operista al <orgName type="theatre">Teatro Comunale</orgName> di <placeName >Modena</placeName> il 12 febbraio 1825 con I furbi al cimento; nella seconda metà degli anni venti si era trasferito a <placeName ref="TEI-ListPlace.xml#London">Londra</placeName>, dove si era affermato come insegnante di canto e come autore di romanze da camera.
+                 Il compositore bolognese Vincenzo Gabussi (Bologna, 1800 - Londra, 1846), dopo gli studi con Stanislao Mattei, aveva esordito come operista al <orgName type="theatre">Teatro Comunale</orgName> di <placeName>Modena</placeName> il 12 febbraio 1825 con I furbi al cimento; nella seconda metà degli anni venti si era trasferito a <placeName ref="TEI-ListPlace.xml#London">Londra</placeName>, dove si era affermato come insegnante di canto e come autore di romanze da camera.
                  	</p>
               </note> 
           </person>
@@ -570,9 +598,15 @@
            	   	<surname>Villa</surname>
 							</persName>
             	<sex>M </sex>
-            	<birth></birth>
-            	<death></death>
-            	<note source="TEI-ListBibl.xml#Seminara2017" resp="#GS" ana="68">
+            	<birth>
+            		<date type="unknown"/>
+            		<placeName type="unknown"/>
+            	</birth>
+            	<death>
+            		<date type="unknown"/>
+            		<placeName type="unknown"/>
+            	</death>
+             	<note source="TEI-ListBibl.xml#Seminara2017" resp="#GS" ana="68">
                   <bibl>
                       	  <citedRange unit="page" from="83" to="83">83</citedRange>
                   </bibl>
@@ -580,15 +614,14 @@
                  </p>
 							</note>
 					</person>
-
- 
  
          <listRelation>
-              		<relation name="maternal uncle" active="#VF" passive="#VB"/>
               		<relation name="spouse" mutual="#VF #RM"/>
+              		<relation name="mother" active="#AF" passive="#VB"/>
+              		<relation name="sibling" mutual="#AF #VF"/>
+              		<relation name="spouse" mutual="#AF #RB"/>
  					</listRelation>
-
-         </listPerson>
+        </listPerson>
           
 
                   

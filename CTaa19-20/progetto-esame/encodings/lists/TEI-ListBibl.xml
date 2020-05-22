@@ -99,7 +99,7 @@
                      		<biblScope unit="volume">XIII</biblScope>
   											<biblScope unit="page" from="1" to="8">1-8</biblScope>
                         <pubPlace>Catania</pubPlace>
-                         <date when="1935">1935</date>
+                        <date when="1935">1935</date>
                     </bibl>
                     
                     <bibl xml:id="Neri2005" type="print">
@@ -199,6 +199,18 @@
                         <publisher>Leo S. Olschki Editore</publisher>
                         <date when="2017">2017</date>                       
                     </bibl>
+
+                   <bibl xml:id="Zangara1906" type="print" cert="medium" resp="#GS">
+                        <author xml:id="VMZ">
+                        	<forename>Vincenzo</forename>
+                        	<surname>Maugeri</surname>
+                        	<surname>Zangara</surname>
+                        </author>
+                        <title level="j">Natura e arte</title>
+                     		<biblScope unit="page" from="176" to="176">176</biblScope>
+                        <date when="1906">1906</date>
+                    </bibl>
+                    
                 </listBibl>
             </div>
         </back>

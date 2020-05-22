@@ -33,7 +33,7 @@
                     <placeName ref="TEI-ListPlace.xml#VE">Venezia</placeName>
                     <date when="1833-03-16">16 marzo 1833</date> 
                     <note resp="#GS">
-                        <p>Ispirata a un dramma di Carlo Tebaldi Flores, Beatrice di Tenda fu messa in scena al <orgName type="theatre" ref="TEI-ListOrganization.xml#Fenice">Teatro La Fenice</orgName> il 16 marzo 1833 con <persName ref="TEI-ListPerson.xml#GP">Giuditta Pasta</persName> nel ruolo della protagonista. La prima rappresentazione dell’opera fu un «sollenne fiasco», come avrebbe riconosciuto lo stesso <persName ref="TEI-ListPerson.xml#VB">Bellini</persName> in una lettera del successivo 21 marzo al compositore <persName ref="TEI-ListPerson.xml#GB">Giuseppe Bornaccini</persName> (Ancona, 1802 1881), suo condiscepolo al Collegio di San Sebastiano in <placeName ref="TEI-ListPlace.xml#NA">Napoli</placeName>.
+                        <p>Ispirata a un dramma di Carlo Tebaldi Flores, Beatrice di Tenda fu messa in scena al <orgName type="theatre" ref="TEI-ListOrganization.xml#Fenice">Teatro La Fenice</orgName> il 16 marzo 1833 con <persName ref="TEI-ListPerson.xml#GNP">Giuditta Pasta</persName> nel ruolo della protagonista. La prima rappresentazione dell’<term subtype="music-term" ref="TEI-ListTerm.xml#opera">opera</term> fu un <quote rend="double angle quotation marks">sollenne fiasco</quote>, come avrebbe riconosciuto lo stesso <persName ref="TEI-ListPerson.xml#VB">Bellini</persName> in una lettera del successivo 21 marzo al compositore <persName ref="TEI-ListPerson.xml#GB">Giuseppe Bornaccini</persName> (Ancona, 1802 1881), suo condiscepolo al Collegio di San Sebastiano in <placeName ref="TEI-ListPlace.xml#NA">Napoli</placeName>.
                  				</p>
               			</note> 
                 </bibl>
@@ -53,10 +53,10 @@
 													<!--  note dell'edizione critica della Seminara -->
               	  	 		 <citedRange unit="page" from="72" to="72">72</citedRange>
              	         </bibl>
-                      <p>Bianca e Gernando, composta su libretto di <persName ref="TEI-ListPerson.xml#DG">Domenico Gilardoni </persName> e andata in scena al <orgName type="theatre" ref="TEI-ListOrganization.xml#San_Carlo">Teatro San Carlo</orgName> il 30 maggio 1826 con <persName> Henriette Méric Lalande</persName> e <persName ref="TEI-ListPerson.xml#GBR">Giovanni Battista Rubini</persName>. </p>
+                      <p>Bianca e Gernando, composta su <term subtype="music-term" ref="TEI-ListTerm.xml#libretto">libretto</term> di <persName ref="TEI-ListPerson.xml#DG">Domenico Gilardoni </persName> e andata in scena al <orgName type="theatre" ref="TEI-ListOrganization.xml#San_Carlo">Teatro San Carlo</orgName> il 30 maggio 1826 con <persName> Henriette Méric Lalande</persName> e <persName ref="TEI-ListPerson.xml#GBR">Giovanni Battista Rubini</persName>. </p>
                    </note> 
                    <note resp="EC">
-                   	<p>Il titolo originale Bianca e Fernando fu sostituito da <persName ref="TEI-ListPerson.xml#VB">Bellini</persName> in Bianca e Gernando in occasione del debutto dell'opera per riguardo al principe <persName>Ferdinando di Borbone</persName>.</p>
+                   	<p>Il titolo originale Bianca e Fernando fu sostituito da <persName ref="TEI-ListPerson.xml#VB">Bellini</persName> in Bianca e Gernando in occasione del debutto dell'<term subtype="music-term" ref="TEI-ListTerm.xml#opera">opera</term> per riguardo al principe <persName>Ferdinando di Borbone</persName>.</p>
                    </note>	
                    <note source="TEI-ListBibl.xml#Seminara2017" resp="#GS" ana="50">
                  				<bibl>
@@ -83,12 +83,39 @@
                     <date when="1830-03-11">
                     	11 marzo 1830 </date> 
                     <note resp="#GS">
-                 			<p>La «tragedia lirica» I Capuleti e i Montecchi fu composta da <persName ref="TEI-ListPerson.xml#VB">Bellini</persName> su commissione di <persName ref="TEI-ListPerson.xml#AL">Alessandro Lanari</persName>, impresario del <orgName type="theatre" ref="TEI-ListOrganization.xml#Fenice">Teatro La Fenice</orgName> di <placeName ref="TEI-ListPlace.xml#VE">Venezia</placeName>: il musicista, che si trovava nella città lagunare dal dicembre 1829 per seguire la rappresentazione del <rs type="work" ref="#Pirata">Pirata</rs>, aveva accettato la proposta di sostituire l’inadempiente <persName>Pacini</persName> per la stagione del Carnevale del 1830. La ristrettezza del tempo indusse <persName ref="TEI-ListPerson.xml#FR">Felice Romani</persName> a riutilizzare il <term subtype="music-term" ref="TEI-ListTerm.xml#libretto">libretto</term> di Giulietta e Romeo, scritto nel 1825 per <persName ref="TEI-ListPerson.xml#NV">Nicola Vaccaj</persName>; a sua volta Bellini si avvalse delle musiche già composte per <rs type="work" ref="#Zaira">Zaira</rs>, l’opera con la quale il 16 maggio 1829 aveva inaugurato il <orgName type="theatre">Teatro Ducale</orgName> di <placeName ref="TEI-ListPlace.xml#PR">Parma</placeName> incontrando un sostanziale insuccesso. Fu invece trionfale l’accoglienza riservata dal pubblico veneziano ai Capuleti, che andarono in scena al Teatro La Fenice l’11 marzo 1830.
+                 			<p>La «tragedia lirica» I Capuleti e i Montecchi fu composta da <persName ref="TEI-ListPerson.xml#VB">Bellini</persName> su commissione di <persName ref="TEI-ListPerson.xml#AL">Alessandro Lanari</persName>, impresario del <orgName type="theatre" ref="TEI-ListOrganization.xml#Fenice">Teatro La Fenice</orgName> di <placeName ref="TEI-ListPlace.xml#VE">Venezia</placeName>: il musicista, che si trovava nella città lagunare dal dicembre 1829 per seguire la rappresentazione del <rs type="work" ref="#Pirata">Pirata</rs>, aveva accettato la proposta di sostituire l’inadempiente <persName>Pacini</persName> per la stagione del Carnevale del 1830. La ristrettezza del tempo indusse <persName ref="TEI-ListPerson.xml#FR">Felice Romani</persName> a riutilizzare il <term subtype="music-term" ref="TEI-ListTerm.xml#libretto">libretto</term> di Giulietta e Romeo, scritto nel 1825 per <persName ref="TEI-ListPerson.xml#NV">Nicola Vaccaj</persName>; a sua volta Bellini si avvalse delle musiche già composte per <rs type="work" ref="#Zaira">Zaira</rs>, l’<term subtype="music-term" ref="TEI-ListTerm.xml#opera">opera</term> con la quale il 16 maggio 1829 aveva inaugurato il <orgName type="theatre">Teatro Ducale</orgName> di <placeName ref="TEI-ListPlace.xml#PR">Parma</placeName> incontrando un sostanziale insuccesso. Fu invece trionfale l’accoglienza riservata dal pubblico veneziano ai Capuleti, che andarono in scena al Teatro La Fenice l’11 marzo 1830.
                  				</p>
                    </note> 
                 </bibl>
     
-                 
+                <bibl xml:id="Norma">
+                 		<ref target="https://it.wikipedia.org/wiki/Norma_(opera)"/>
+                    <title>Norma</title>
+                    <mei:composer>
+                    	<ref target="TEI-ListPerson.xml#VB"/>
+                    	Vincenzo Bellini</mei:composer>
+                    <mei:librettist>
+                    	 <ref target="TEI-ListPerson.xml#FR"/>
+                    	 Felice Romani </mei:librettist>
+                    <orgName type="theatre" ref="TEI-ListOrganization.xml#Scala">
+                    	Teatro alla Scala</orgName>
+                    <placeName ref="TEI-ListPlace.xml#MI">
+                    	Milano</placeName>
+                    <date when="1831-12-26">26 dicembre 1831</date> 
+                    <note resp="#GS">
+                 			<p>
+                 				Norma, ispirata a un’omonima tragedia di <persName ref="TEI-ListPerson.xml#AS">Alexandre Soumet</persName> (<rs type="work" ref="#Norma-tragedia">Norma, ou l’Infanticide</rs>, 1831), fu concepita per il talento ‘enciclopedico’ di <persName ref="TEI-ListPerson.xml#GNP">Giuditta Pasta</persName>, alla quale era destinato il ruolo della prima donna. L’<term subtype="music-term" ref="TEI-ListTerm.xml#opera">opera</term> inaugurò la Stagione di Carnevale del Teatro alla Scala il 26 dicembre 1831; nonostante l’esito incerto della prima rappresentazione, si impose ben presto come il titolo più rappresentativo del compositore di <placeName ref="TEI-ListPlace.xml#CT">Catania</placeName>.
+                 				</p>	
+                   </note> 
+                   <note source="TEI-ListBibl.xml#Seminara2017" resp="#GS" ana="503">
+                 			<bibl>
+              	  	 		 <citedRange unit="page" from="307" to="307">307</citedRange>
+             	        </bibl>
+                      <p>A <placeName ref="ListPlace.xml#London">Londra</placeName> <hi rend="italic">Norma</hi> fu messa in scena al <orgName type="theatre" ref="TEI-ListOrganization.xml#King">King’s Theatre</orgName> il 20 giugno 1833, con Giuditta Pasta nel ruolo della protagonista. Il 21 giugno Giuditta Pasta scriveva a <persName>Rachele Negri</persName>, madre di Giuditta: <quote rend="double angle quotation marks">Ieri sera si rappresentò la <hi rend="italic">Norma</hi> pel beneficio della Giuditta. Né la <hi rend="italic">Medea</hi> né l’<hi rend="italic">Anna Bolena</hi> possono vantare miglior successo di questa prima rappresentazione di Norma; mercé la mia insistenza con <persName ref="TEI-ListPerson.xml#PFL">Laporte</persName>, e dietro la direzione di Bellini per l’orchestra e i cori, quest’opera è montata in maniera che non v’è esempio al <orgName type="theatre">Teatro Italiano</orgName> di Londra, il trionfo quindi della stessa superò il desiderio di Giuditta, e la speranza di Bellini; vi furono applausi straordinari, e lagrime nel secondo atto</quote> <ref rend="round brackets">In Maria Ferranti Giulini, <hi rend="italic">Giuditta Pasta e i suoi tempi</hi>, Milano, Cronotipia Sormani, 1935, pp. 158-159</ref>.
+                      </p>
+                   </note> 
+                </bibl>
+                    
                <bibl xml:id="Pirata">
                  		<ref target="https://it.wikipedia.org/wiki/Il_pirata"/>
                     <title>Il pirata</title>
@@ -105,7 +132,7 @@
                  			<bibl>
               	  	 		 <citedRange unit="page" from="77" to="77">77</citedRange>
              	        </bibl>
-                      <p>La terza opera di <persName ref="TEI-ListPerson.xml#VB">Bellini</persName>, Il pirata, messa in scena al <orgName type="theatre" ref="TEI-ListOrganization.xml#Scala">Teatro alla Scala</orgName> il 27 ottobre 1827 con <persName> Henriette Méric Lalande</persName>, <persName ref="TEI-ListPerson.xml#GBR">Giovanni Battista Rubini</persName> e <persName>Antonio Tamburini</persName>.</p>
+                      <p>La terza <term subtype="music-term" ref="TEI-ListTerm.xml#opera">opera</term> di <persName ref="TEI-ListPerson.xml#VB">Bellini</persName>, Il pirata, messa in scena al <orgName type="theatre" ref="TEI-ListOrganization.xml#Scala">Teatro alla Scala</orgName> il 27 ottobre 1827 con <persName>Henriette Méric Lalande</persName>, <persName ref="TEI-ListPerson.xml#GBR">Giovanni Battista Rubini</persName> e <persName>Antonio Tamburini</persName>.</p>
                    </note> 
                 </bibl>
                 
@@ -120,10 +147,10 @@
                     <placeName ref="TEI-ListPlace.xml#Paris">Paris</placeName>
                     <date when="1835-01-24">24 gennaio 1835</date> 
                     <note resp="#GS">
-                       	Composti da <persName ref="TEI-ListPerson.xml#VB">Bellini</persName> su <term subtype="music-term" ref="TEI-ListTerm.xml#libretto">libretto</term> di <persName ref="TEI-ListPerson.xml#CP">Carlo Pepoli </persName>, I puritani si ispiravano al dramma storico <hi rend="italic">Têtes rondes et Cavaliers</hi> di <persName>Jacques-Arsène Ancelot</persName> e <persName>Joseph-Xavier-Boniface Saintine</persName>, che era andato in scena al <orgName type="theatre">Théâtre du Vaudeville</orgName> il <date when="1833-09-25">25 settembre 1833</date> e in quello stesso anno era stato pubblicato a <placeName ref="#Paris">Parigi</placeName> dall’editore <persName>Barba</persName>. L’<term subtype="music-term" ref="TEI-ListTerm.xml#opera">opera</term> fu rappresentata al <orgName type="theatre" ref="TEI-ListOrganization.xml#Teatro_italiano">Théâtre Italien</orgName> di <placeName ref="#Paris">Parigi</placeName> il <date when="1835-01-24">24 gennaio 1835</date> e incontrò uno trionfale successo, grazie anche all’interpretazione del “<term subtype="music-term">quartetto</term>” di cantanti <persName>Giulia Grisi</persName> (“<term subtype="music-term">soprano</term>), Giovanni Battista Rubini (“<term subtype="music-term" ref="TEI-ListTerm.xml#tenore">tenore</term>), Antonio Taburini (“<term subtype="music-term">baritono</term>), Luigi Lablache (“<term subtype="music-term" ref="TEI-ListTerm.xml#basso">basso</term>).
+                       	Composti da <persName ref="TEI-ListPerson.xml#VB">Bellini</persName> su <term subtype="music-term" ref="TEI-ListTerm.xml#libretto">libretto</term> di <persName ref="TEI-ListPerson.xml#CP">Carlo Pepoli </persName>, I puritani si ispiravano al dramma storico <hi rend="italic">Têtes rondes et Cavaliers</hi> di <persName>Jacques-Arsène Ancelot</persName> e <persName>Joseph-Xavier-Boniface Saintine</persName>, che era andato in <term subtype="music-term" ref="TEI-ListTerm.xml#scena">scena</term> al <orgName type="theatre">Théâtre du Vaudeville</orgName> il <date when="1833-09-25">25 settembre 1833</date> e in quello stesso anno era stato pubblicato a <placeName ref="#Paris">Parigi</placeName> dall’editore <persName>Barba</persName>. L’<term subtype="music-term" ref="TEI-ListTerm.xml#opera">opera</term> fu rappresentata al <orgName type="theatre" ref="TEI-ListOrganization.xml#Teatro_italiano">Théâtre Italien</orgName> di <placeName ref="#Paris">Parigi</placeName> il <date when="1835-01-24">24 gennaio 1835</date> e incontrò uno trionfale successo, grazie anche all’interpretazione del “<term subtype="music-term">quartetto</term>” di cantanti <persName>Giulia Grisi</persName> (“<term subtype="music-term">soprano</term>), Giovanni Battista Rubini (“<term subtype="music-term" ref="TEI-ListTerm.xml#tenore">tenore</term>), Antonio Taburini (“<term subtype="music-term">baritono</term>), Luigi Lablache (“<term subtype="music-term" ref="TEI-ListTerm.xml#basso">basso</term>).
                     </note>
                     <note resp="#EC">
-                    		<term subtype="music-term" ref="TEI-ListTerm.xml#opera_seria">Opera seria</term> in tre <term subtype="music-term" ref="TEI-ListTerm.xml#atto">atti</term>. Il dramma storico <hi rend="italic">Têtes rondes et Cavaliers</hi> a sua volta era derivato dal romanzo Old mortality (<date when="1816">1816</date>) di Walter Scott che fu tradotto in Italia nel 1822 col titolo I puritani di Scozia. Essendo in rotta con il librettista <persName ref="TEI-ListPerson.xml#FR">Felice Romani</persName>, Bellini accettò il testo approntato dal conte Pepoli, distinto letterato ma che non aveva alcuna esperienza di teatro: l’ultima opera del Cigno fu composta pertanto nell’arco di ben nove mesi, un tempo decisamente ampio durante il quale musicista e librettista lavorarono fianco a fianco nella costruzione dell’impianto drammaturgico.
+                    		<term subtype="music-term" ref="TEI-ListTerm.xml#opera_seria">Opera seria</term> in tre <term subtype="music-term" ref="TEI-ListTerm.xml#atto">atti</term>. Il dramma storico <hi rend="italic">Têtes rondes et Cavaliers</hi> a sua volta era derivato dal romanzo Old mortality (<date when="1816">1816</date>) di Walter Scott che fu tradotto in Italia nel 1822 col titolo I puritani di Scozia. Essendo in rotta con il librettista <persName ref="TEI-ListPerson.xml#FR">Felice Romani</persName>, Bellini accettò il testo approntato dal conte Pepoli, distinto letterato ma che non aveva alcuna esperienza di teatro: l’ultima <term subtype="music-term" ref="TEI-ListTerm.xml#opera">opera</term> del Cigno fu composta pertanto nell’arco di ben nove mesi, un tempo decisamente ampio durante il quale musicista e librettista lavorarono fianco a fianco nella costruzione dell’impianto drammaturgico.
                     </note>
                  </bibl>
                
@@ -137,9 +164,42 @@
                     <orgName type="theatre" ref="TEI-ListOrganization.xml#Carcano">Teatro Carcano</orgName>
                     <placeName ref="TEI-ListPlace.xml#MI">Milano</placeName>
                     <date when="1831-03-06">6 marzo 1831</date> 
-             
-                     
+             				<note resp="#GS">
+             					La Sonnambula, ispirata al <term subtype="music-term" ref="TEI-ListTerm.xml#balletto">balletto</term>-<term subtype="music-term">pantomima</term> La Sunnambule, ou L’arrivée d’un nouveau Seigneur di Eugéne Scribe messo in musica da Louis-Ferdinand Hérold (Parigi, Opéra, 19 settembre 1827), fu commissionata a <persName ref="TEI-ListPerson.xml#VB">Bellini</persName> dal <orgName type="theatre" ref="TEI-ListOrganization.xml#Carcano">Teatro Carcano</orgName> di Milano, dove andò in <term subtype="music-term" ref="TEI-ListTerm.xml#scena">scena</term> il 6 marzo 1831 con grande successo. La parte di Amina fu tenuta da <persName ref="TEI-ListPerson.xml#GNP">Giuditta Pasta</persName>, quella di Elvino da <persName ref="TEI-ListPerson.xml#GBR">Giovanni Battista Rubini</persName>: i due cantanti concorsero al successo dell’<term subtype="music-term" ref="TEI-ListTerm.xml#opera">opera</term> documentato dalla stampa dell’epoca e confermato da Bellini in una lettera ad Alessandro Lamperi del 7 marzo 1831 (<quote rend="double angle quotation marks">Rubini e la Pasta sono due angioli, che hanno entusiasmato quasi alla follia l’intiero pubblico</quote>).
+             				</note>                      
                 </bibl>
+
+                 <bibl xml:id="Straniera">
+                 		<ref target="https://it.wikipedia.org/wiki/La_straniera"/>
+                    <title>La straniera</title>
+                    <mei:composer>
+                    	<ref target="TEI-ListPerson.xml#VB"/>Vincenzo Bellini
+                    </mei:composer>
+                    <mei:librettist> <ref target="TEI-ListPerson.xml#FR"/>Felice Romani</mei:librettist>
+                    <orgName type="theatre" ref="TEI-ListOrganization.xml#Scala">Teatro alla Scala</orgName>
+                    <placeName ref="TEI-ListPlace.xml#MI">Milano</placeName>
+                    <date when="1829-02-14">14 febbraio 1829</date> 
+             				<note resp="#GS">
+             					La straniera, ispirata al romanzo di <persName>Charles d’Alincourt L’Étrangere </persName>(pubblicato nel 1825), fu rappresentata al <orgName type="theatre" ref="TEI-ListOrganization.xml#Scala">Teatro alla Scala</orgName> il 14 febbraio 1829. Interpreti principali furono <persName>Henriette Méric Lalande</persName>, nel ruolo di Alaide, <persName ref="TEI-ListPerson.xml#DR"> Domenico Reina</persName> nel ruolo di Arturo, <persName>Antonio Tamburini</persName> nel ruolo del barone di Valdeburgo.  L’<term subtype="music-term" ref="TEI-ListTerm.xml#opera">opera</term> ottenne un grande successo e sancì la definitiva affermazione di Bellini nel panorama operistico del tempo.
+             				</note>
+                </bibl>
+                
+                 <bibl xml:id="Zaira">
+                 		<ref target="https://it.wikipedia.org/wiki/Zaira_(Bellini)"/>
+                    <title>Zaira</title>
+                    <mei:composer>
+                    	<ref target="TEI-ListPerson.xml#VB"/>Vincenzo Bellini
+                    </mei:composer>
+                    <mei:librettist> <ref target="TEI-ListPerson.xml#FR"/>Felice Romani</mei:librettist>
+                    <orgName type="theatre">Teatro Ducale</orgName>
+                    <placeName ref="TEI-ListPlace.xml#PR">Parma</placeName>
+                    <date when="1829-05-16">16 maggio 1829</date> 
+             				<note resp="#GS">
+             					Zaira, ispirata a una tragedia scritta da <persName>Voltaire</persName> nel 1732, fu commissionata a Bellini per l’inaugurazione del <orgName type="theatre"> Nuovo teatro Ducale</orgName> di <placeName ref="TEI-ListPlace.xml#PR">Parma</placeName>, dove messa in <term subtype="music-term" ref="TEI-ListTerm.xml#scena">scena</term> il 16 maggio 1829. Il suo insuccesso fu in parte determinato dall’ostilità del pubblico fomentato dall’avvocato parmense Luigi Torrigiani, il cui <term subtype="music-term" ref="TEI-ListTerm.xml#libretto">libretto</term> era stato respinto dal musicista. Bellini non ripropose più l’<term subtype="music-term" ref="TEI-ListTerm.xml#opera">opera</term> ma impiegò una parte cospicua della musica, che rimaneggiò ampiamente, per la composizione de <rs type="work" ref="#Capuleti_e_Montecchi"><hi rend="italic">I Capuleti e i Montecchi</hi></rs>.
+             				</note>
+                </bibl>
+
+
               </listBibl>
             </div>
       </back>
