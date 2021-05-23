@@ -3,7 +3,7 @@
 
 - immagini facsimile da archivi digitali:
   - [BGE Fondo Saussure][1]
-  - [Saussure Aechives numériques][2]
+  - [Saussure Archives numériques][2]
 - trascrizione francese e traduzione italiana da allegati PDF
 - segmentazione testo in pericopi da allegati PDF
 - identificazione entità nominate e fenomeni notevoli da allegati PDF 
