@@ -5,9 +5,26 @@
     nome del file:
 -->
 
-<TEI type="doc">
-    <test>
-        no
-    </test>
+<TEI 
+    xmlns="http://tei/2.0" 
+    xmlns:tt="http://angelo.delgrosso/1.0"     
+    type="doc">
+
+    <tt:test>
+        <tt:figliotest>
+
+        </tt:figliotest>
+
+        <p>
+            ciao
+        </p>
+    </tt:test>
+
+    <htmlFragment>
+        <![CDATA[ 
+            <h1></h1>
+            <div><span></span></div>
+        ]]>
+    </htmlFragment>
 
 </TEI>
