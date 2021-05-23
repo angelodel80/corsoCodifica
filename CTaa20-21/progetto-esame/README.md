@@ -7,7 +7,7 @@
 - trascrizione francese e traduzione italiana da allegati PDF
 - segmentazione testo in pericopi da allegati PDF
 - identificazione entità nominate e fenomeni notevoli da allegati PDF 
-- realizzazione di una edizione imaged-based:
+- realizzazione di una edizione image-based:
   - Collegamento testo-immagine delle aree di interesse
   - Uso di strumenti online per la selezione delle coordinate ([TEI Zoner][3])
 - realizzare una presentazione web attraverso fogli di stile XSLT
