@@ -18,6 +18,9 @@
   - file a corredo per la corretta replicabilità del processo
   - file a corredo per la corretta visualizzazione e navigazione dell'edizione
 
+## pagine selezionate
+
+ - pagine 27 e 28 (immagini 68-70)
 
 [1]: https://archives.bge-geneve.ch/archives/archives/fonds/saussure\_ferdinand\_de/view:5892/n:89 "BGE Saussure"
 [2]: http://fds.unige.ch/iip4/homepage.php "Archivio immagini Saussure"
