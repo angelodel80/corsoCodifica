@@ -18,9 +18,13 @@
   - file a corredo per la corretta replicabilità del processo
   - file a corredo per la corretta visualizzazione e navigazione dell'edizione
 
-## pagine selezionate
+## pagine selezionate (prolusioni 1 - manoscritto Ms. fr. 3951/1)
 
  - pagine 27 e 28 (immagini 68-70)
+ - pagine 29-30 (immagini 72-75) 
+
+## pagine selezionate (morfologia - manoscritto Ms. fr. 3951/7)
+
 
 [1]: https://archives.bge-geneve.ch/archives/archives/fonds/saussure\_ferdinand\_de/view:5892/n:89 "BGE Saussure"
 [2]: http://fds.unige.ch/iip4/homepage.php "Archivio immagini Saussure"
