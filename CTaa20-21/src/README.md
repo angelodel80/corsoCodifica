@@ -15,3 +15,13 @@ $ java -cp \
 $ java -jar \
     SaxonHE10-3J/saxon-he-10.3.jar -s:test.xml -xsl:test.xsl -o:test.txt
 ```
+
+## verificare tool di query con xpath Saxon-HE
+
+```shell
+$ java -cp "SaxonHE10-3J/saxon-he-10.3.jar" 
+  net.sf.saxon.Query
+  \!method=adaptive 
+  -s:"Test_maria.xml" 
+  -qs:"//titlePart/parent::node()/child::node()/attribute::type"
+```
