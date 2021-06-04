@@ -26,6 +26,7 @@
  - pagine 29-30 (immagini 72-75) 
 
 ## pagine selezionate (morfologia - manoscritto Ms. fr. 3951/7)
+ - pagine 1, 2 (prima zona) 3 (seconda zona).
 
 
 [1]: https://archives.bge-geneve.ch/archives/archives/fonds/saussure\_ferdinand\_de/view:5892/n:89 "BGE Saussure"
