@@ -22,6 +22,7 @@
 
  - pagina  7-8  (immagini 17-20)
  - pagina  8-9  (immagini 20-25)
+ - pagina 10-11 (immagini 30-34)
  - pagine 15-16 (immagini 44-46)
  - pagine 17-18 (immagini 48-50)
  - pagine 27-28 (immagini 68-70)
