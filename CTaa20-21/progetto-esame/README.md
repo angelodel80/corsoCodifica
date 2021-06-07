@@ -25,6 +25,7 @@
  - pagina 10-11 (immagini 30-34)
  - pagine 15-16 (immagini 44-46)
  - pagine 17-18 (immagini 48-50)
+ - pagine 19-20 (immagini 52-54)
  - pagine 27-28 (immagini 68-70)
  - pagine 29-30 (immagini 72-75) 
 
