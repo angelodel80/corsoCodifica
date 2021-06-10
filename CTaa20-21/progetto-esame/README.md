@@ -20,6 +20,7 @@
 
 ## pagine selezionate (prolusioni 1 - manoscritto Ms. fr. 3951/1)
 
+ - pagina  4-5  (immagini 12-15)
  - pagina  7-8  (immagini 17-20)
  - pagina  8-9  (immagini 20-25)
  - pagina 10-11 (immagini 30-34)
