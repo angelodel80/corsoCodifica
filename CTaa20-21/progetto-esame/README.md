@@ -34,6 +34,7 @@
 ## pagine selezionate (morfologia - manoscritto Ms. fr. 3951/7)
  - pagine 1, 2 (prima zona) 3 (seconda zona).
  - pagina 3, 7 (pericopi 031 e 032)
+ - pagina 12 e 13 (immagini 27-30). 
 
 
 [1]: https://archives.bge-geneve.ch/archives/archives/fonds/saussure\_ferdinand\_de/view:5892/n:89 "BGE Saussure"
