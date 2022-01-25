@@ -34,6 +34,15 @@
  - pagine 27-28 (immagini 68-70)
  - pagine 29-30 (immagini 72-75) 
 
+## pagine selezionate (prolusioni 2 - manoscritto Ms. fr. 3951/1)
+
+ - *pagine 6-7 (immagini 89-92) 
+
+## pagine selezionate (prolusioni 3 - manoscritto Ms. fr. 3951/1)
+
+ - 
+
+
 ## pagine selezionate (morfologia - manoscritto Ms. fr. 3951/7)
  - pagine 1, 2 (prima zona) 3 (seconda zona)
  - pagine 2, 3 (pericopi 013 2 021)
