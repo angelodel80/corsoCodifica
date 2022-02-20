@@ -1,0 +1,1213 @@
+<HTML><HEAD><META content="text/html; charset=utf8" http-equiv="Content-Type"><SCRIPT language="JavaScript" src="resources/script.js" type="text/javascript"></SCRIPT><TITLE>XNI Parser Configuration</TITLE></HEAD><BODY alink="#ff0000" bgcolor="#ffffff" leftmargin="4" link="#0000ff" marginheight="4" marginwidth="4" text="#000000" topmargin="4" vlink="#0000aa"><TABLE border="0" cellpadding="0" cellspacing="0" width="620"><TR><TD align="left" height="60" rowspan="3" valign="top" width="135"><IMG border="0" height="60" hspace="0" src="resources/logo.gif" vspace="0" width="135"></TD><TD align="left" colspan="4" height="5" valign="top" width="456"><IMG border="0" height="5" hspace="0" src="resources/line.gif" vspace="0" width="456"></TD><TD align="left" height="60" rowspan="3" valign="top" width="29"><IMG border="0" height="60" hspace="0" src="resources/right.gif" vspace="0" width="29"></TD></TR><TR><TD align="left" bgcolor="#0086b2" colspan="4" height="35" valign="top" width="456"><IMG alt="" border="0" height="35" hspace="0" src="graphics/xni-config-header.jpg" vspace="0" width="456"></TD></TR><TR><TD align="left" height="20" valign="top" width="168"><IMG border="0" height="20" hspace="0" src="resources/bottom.gif" vspace="0" width="168"></TD><TD align="left" height="20" valign="top" width="96"><A href="http://xml.apache.org/" onMouseOut="rolloverOff('xml');" onMouseOver="rolloverOn('xml');" target="new"><IMG alt="http://xml.apache.org/" border="0" height="20" hspace="0" name="xml" onLoad="rolloverLoad('xml','resources/button-xml-hi.gif','resources/button-xml-lo.gif');" src="resources/button-xml-lo.gif" vspace="0" width="96"></A></TD><TD align="left" height="20" valign="top" width="96"><A href="http://www.apache.org/" onMouseOut="rolloverOff('asf');" onMouseOver="rolloverOn('asf');" target="new"><IMG alt="http://www.apache.org/" border="0" height="20" hspace="0" name="asf" onLoad="rolloverLoad('asf','resources/button-asf-hi.gif','resources/button-asf-lo.gif');" src="resources/button-asf-lo.gif" vspace="0" width="96"></A></TD><TD align="left" height="20" valign="top" width="96"><A href="http://www.w3.org/" onMouseOut="rolloverOff('w3c');" onMouseOver="rolloverOn('w3c');" target="new"><IMG alt="http://www.w3.org/" border="0" height="20" hspace="0" name="w3c" onLoad="rolloverLoad('w3c','resources/button-w3c-hi.gif','resources/button-w3c-lo.gif');" src="resources/button-w3c-lo.gif" vspace="0" width="96"></A></TD></TR></TABLE><TABLE border="0" cellpadding="0" cellspacing="0" width="620"><TR><TD align="left" valign="top" width="120"><IMG border="0" height="14" hspace="0" src="resources/join.gif" vspace="0" width="120"><BR>
+ <A href="http://xerces.apache.org/" onMouseOut="rolloverOff('side-ext-2');" onMouseOver="rolloverOn('side-ext-2');"><IMG alt="Home" border="0" height="12" hspace="0" name="side-ext-2" onLoad="rolloverLoad('side-ext-2','graphics/ext-2-label-2.jpg','graphics/ext-2-label-3.jpg');" src="graphics/ext-2-label-3.jpg" vspace="0" width="120"></A><BR>
+ <IMG border="0" height="6" hspace="0" src="resources/separator.gif" vspace="0" width="120"><BR>
+ <A href="index.html" onMouseOut="rolloverOff('side-index');" onMouseOver="rolloverOn('side-index');"><IMG alt="Readme" border="0" height="12" hspace="0" name="side-index" onLoad="rolloverLoad('side-index','graphics/index-label-2.jpg','graphics/index-label-3.jpg');" src="graphics/index-label-3.jpg" vspace="0" width="120"></A><BR>
+ <A href="charter.html" onMouseOut="rolloverOff('side-charter');" onMouseOver="rolloverOn('side-charter');"><IMG alt="Charter" border="0" height="12" hspace="0" name="side-charter" onLoad="rolloverLoad('side-charter','graphics/charter-label-2.jpg','graphics/charter-label-3.jpg');" src="graphics/charter-label-3.jpg" vspace="0" width="120"></A><BR>
+ <A href="releases.html" onMouseOut="rolloverOff('side-releases');" onMouseOver="rolloverOn('side-releases');"><IMG alt="Release Info" border="0" height="12" hspace="0" name="side-releases" onLoad="rolloverLoad('side-releases','graphics/releases-label-2.jpg','graphics/releases-label-3.jpg');" src="graphics/releases-label-3.jpg" vspace="0" width="120"></A><BR>
+ <IMG border="0" height="6" hspace="0" src="resources/separator.gif" vspace="0" width="120"><BR>
+ <A href="install.html" onMouseOut="rolloverOff('side-install');" onMouseOver="rolloverOn('side-install');"><IMG alt="Installation" border="0" height="12" hspace="0" name="side-install" onLoad="rolloverLoad('side-install','graphics/install-label-2.jpg','graphics/install-label-3.jpg');" src="graphics/install-label-3.jpg" vspace="0" width="120"></A><BR>
+ <A href="http://xerces.apache.org/mirrors.cgi" onMouseOut="rolloverOff('side-ext-16');" onMouseOver="rolloverOn('side-ext-16');"><IMG alt="Download" border="0" height="12" hspace="0" name="side-ext-16" onLoad="rolloverLoad('side-ext-16','graphics/ext-16-label-2.jpg','graphics/ext-16-label-3.jpg');" src="graphics/ext-16-label-3.jpg" vspace="0" width="120"></A><BR>
+ 
+ <A href="jira.html" onMouseOut="rolloverOff('side-jira');" onMouseOver="rolloverOn('side-jira');"><IMG alt="Bug-Reporting" border="0" height="12" hspace="0" name="side-jira" onLoad="rolloverLoad('side-jira','graphics/jira-label-2.jpg','graphics/jira-label-3.jpg');" src="graphics/jira-label-3.jpg" vspace="0" width="120"></A><BR>
+
+ <IMG border="0" height="6" hspace="0" src="resources/separator.gif" vspace="0" width="120"><BR>
+ <A href="faqs.html" onMouseOut="rolloverOff('side-faqs');" onMouseOver="rolloverOn('side-faqs');"><IMG alt="FAQs" border="0" height="12" hspace="0" name="side-faqs" onLoad="rolloverLoad('side-faqs','graphics/faqs-label-2.jpg','graphics/faqs-label-3.jpg');" src="graphics/faqs-label-3.jpg" vspace="0" width="120"></A><BR>
+ <A href="samples.html" onMouseOut="rolloverOff('side-samples');" onMouseOver="rolloverOn('side-samples');"><IMG alt="Samples" border="0" height="12" hspace="0" name="side-samples" onLoad="rolloverLoad('side-samples','graphics/samples-label-2.jpg','graphics/samples-label-3.jpg');" src="graphics/samples-label-3.jpg" vspace="0" width="120"></A><BR>
+ 
+ 
+ 
+ 
+ 
+ 
+ <A href="api.html" onMouseOut="rolloverOff('side-api');" onMouseOver="rolloverOn('side-api');"><IMG alt="API JavaDoc" border="0" height="12" hspace="0" name="side-api" onLoad="rolloverLoad('side-api','graphics/api-label-2.jpg','graphics/api-label-3.jpg');" src="graphics/api-label-3.jpg" vspace="0" width="120"></A><BR>
+ 
+ 
+ 
+ 
+ 
+
+ <IMG border="0" height="6" hspace="0" src="resources/separator.gif" vspace="0" width="120"><BR>
+ <A href="features.html" onMouseOut="rolloverOff('side-features');" onMouseOver="rolloverOn('side-features');"><IMG alt="Features" border="0" height="12" hspace="0" name="side-features" onLoad="rolloverLoad('side-features','graphics/features-label-2.jpg','graphics/features-label-3.jpg');" src="graphics/features-label-3.jpg" vspace="0" width="120"></A><BR>
+ <A href="properties.html" onMouseOut="rolloverOff('side-properties');" onMouseOver="rolloverOn('side-properties');"><IMG alt="Properties" border="0" height="12" hspace="0" name="side-properties" onLoad="rolloverLoad('side-properties','graphics/properties-label-2.jpg','graphics/properties-label-3.jpg');" src="graphics/properties-label-3.jpg" vspace="0" width="120"></A><BR>
+ <IMG border="0" height="6" hspace="0" src="resources/separator.gif" vspace="0" width="120"><BR>
+
+ <A href="xni.html" onMouseOut="rolloverOff('side-xni');" onMouseOver="rolloverOn('side-xni');"><IMG alt="XNI Manual" border="0" height="12" hspace="0" name="side-xni" onLoad="rolloverLoad('side-xni','graphics/xni-label-2.jpg','graphics/xni-label-3.jpg');" src="graphics/xni-label-3.jpg" vspace="0" width="120"></A><BR>
+ <A href="xml-schema.html" onMouseOut="rolloverOff('side-xml-schema');" onMouseOver="rolloverOn('side-xml-schema');"><IMG alt="XML Schema" border="0" height="12" hspace="0" name="side-xml-schema" onLoad="rolloverLoad('side-xml-schema','graphics/xml-schema-label-2.jpg','graphics/xml-schema-label-3.jpg');" src="graphics/xml-schema-label-3.jpg" vspace="0" width="120"></A><BR>
+ <A href="sax.html" onMouseOut="rolloverOff('side-sax');" onMouseOver="rolloverOn('side-sax');"><IMG alt="SAX" border="0" height="12" hspace="0" name="side-sax" onLoad="rolloverLoad('side-sax','graphics/sax-label-2.jpg','graphics/sax-label-3.jpg');" src="graphics/sax-label-3.jpg" vspace="0" width="120"></A><BR>
+ <A href="dom.html" onMouseOut="rolloverOff('side-dom');" onMouseOver="rolloverOn('side-dom');"><IMG alt="DOM" border="0" height="12" hspace="0" name="side-dom" onLoad="rolloverLoad('side-dom','graphics/dom-label-2.jpg','graphics/dom-label-3.jpg');" src="graphics/dom-label-3.jpg" vspace="0" width="120"></A><BR>
+ 
+ <A href="limitations.html" onMouseOut="rolloverOff('side-limitations');" onMouseOver="rolloverOn('side-limitations');"><IMG alt="Limitations" border="0" height="12" hspace="0" name="side-limitations" onLoad="rolloverLoad('side-limitations','graphics/limitations-label-2.jpg','graphics/limitations-label-3.jpg');" src="graphics/limitations-label-3.jpg" vspace="0" width="120"></A><BR>
+ <IMG border="0" height="6" hspace="0" src="resources/separator.gif" vspace="0" width="120"><BR>
+ 
+ <A href="source-repository.html" onMouseOut="rolloverOff('side-source-repository');" onMouseOver="rolloverOn('side-source-repository');"><IMG alt="Source Repository" border="0" height="12" hspace="0" name="side-source-repository" onLoad="rolloverLoad('side-source-repository','graphics/source-repository-label-2.jpg','graphics/source-repository-label-3.jpg');" src="graphics/source-repository-label-3.jpg" vspace="0" width="120"></A><BR>
+ <A href="http://mail-archives.apache.org/mod_mbox/xerces-j-users/" onMouseOut="rolloverOff('side-ext-76');" onMouseOver="rolloverOn('side-ext-76');"><IMG alt="User Mail Archive" border="0" height="12" hspace="0" name="side-ext-76" onLoad="rolloverLoad('side-ext-76','graphics/ext-76-label-2.jpg','graphics/ext-76-label-3.jpg');" src="graphics/ext-76-label-3.jpg" vspace="0" width="120"></A><BR>
+ <A href="http://mail-archives.apache.org/mod_mbox/xerces-j-dev/" onMouseOut="rolloverOff('side-ext-78');" onMouseOver="rolloverOn('side-ext-78');"><IMG alt="Dev Mail Archive" border="0" height="12" hspace="0" name="side-ext-78" onLoad="rolloverLoad('side-ext-78','graphics/ext-78-label-2.jpg','graphics/ext-78-label-3.jpg');" src="graphics/ext-78-label-3.jpg" vspace="0" width="120"></A><BR>
+
+<IMG border="0" height="14" hspace="0" src="resources/close.gif" vspace="0" width="120"><BR></TD><TD align="left" valign="top" width="500"><TABLE border="0" cellpadding="3" cellspacing="0"><TR><TD>
+ <TABLE border="0" cellpadding="0" cellspacing="0" width="494"><TR><TD bgcolor="666699" colspan="2" width="494"><TABLE border="0" cellpadding="0" cellspacing="0" width="494"><TR><TD bgcolor="#039acc" height="1" width="1"><IMG border="0" height="1" hspace="0" src="resources/void.gif" vspace="0" width="1"></TD><TD bgcolor="#039acc" height="1" width="492"><IMG border="0" height="1" hspace="0" src="resources/void.gif" vspace="0" width="492"></TD><TD bgcolor="#0086b2" height="1" width="1"><IMG border="0" height="1" hspace="0" src="resources/void.gif" vspace="0" width="1"></TD></TR><TR><TD bgcolor="#039acc" width="1"><IMG border="0" height="1" hspace="0" src="resources/void.gif" vspace="0" width="1"></TD><TD bgcolor="#0086b2" width="492"><FONT color="#ffffff" face="arial,helvetica,sanserif" size="+1"><IMG border="0" height="2" hspace="0" src="resources/void.gif" vspace="0" width="2"><B>Parser Configuration</B></FONT></TD><TD bgcolor="#017299" width="1"><IMG border="0" height="1" hspace="0" src="resources/void.gif" vspace="0" width="1"></TD></TR><TR><TD bgcolor="#0086b2" height="1" width="1"><IMG border="0" height="1" hspace="0" src="resources/void.gif" vspace="0" width="1"></TD><TD bgcolor="#017299" height="1" width="492"><IMG border="0" height="1" hspace="0" src="resources/void.gif" vspace="0" width="492"></TD><TD bgcolor="#017299" height="1" width="1"><IMG border="0" height="1" hspace="0" src="resources/void.gif" vspace="0" width="1"></TD></TR></TABLE></TD></TR><TR><TD width="10">&nbsp;</TD><TD width="484"><FONT color="#000000" face="arial,helvetica,sanserif">
+  <P>
+   Parser configurations built using the Xerces Native Interface
+   are made from a series of parser components. This document
+   details the XNI API for these components and how they are put
+   together to construct a parser configuration in the following
+   sections:
+  </P>
+  <UL>
+   <LI><A href="#components">Components</A></LI>
+   <LI><A href="#configurations">Configurations</A></LI>
+   <LI><A href="#pipelines">Pipelines</A></LI>
+  </UL>
+  <P>
+   In addition, several <A href="#examples">examples</A>
+   are included to show how to create some parser components and 
+   configurations:
+  </P>
+  <UL>
+   <LI><A href="#abstract-parser-config">Abstract Parser Configuration</A></LI>
+   <LI><A href="#csv-parser-config">CSV Parser Configuration</A></LI>
+  </UL>
+  <TABLE border="0" cellpadding="0" cellspacing="3" width="100%"><TR><TD valign="top" width="20"><IMG alt="Note:" border="0" height="24" hspace="0" src="resources/note.gif" vspace="0" width="20"></TD><TD valign="top"><FONT color="#000000" face="arial,helvetica,sanserif" size="-1"><I>
+   All of the interfaces and classes defined in this document
+   reside in the <CODE>org.apache.xerces.xni.parser</CODE> package
+   but may use various interfaces and classes from the core XNI
+   package, <CODE>org.apache.xerces.xni</CODE>.
+  </I></FONT></TD></TR></TABLE>
+  <TABLE border="0" cellpadding="0" cellspacing="3" width="100%"><TR><TD valign="top" width="20"><IMG alt="Note:" border="0" height="24" hspace="0" src="resources/note.gif" vspace="0" width="20"></TD><TD valign="top"><FONT color="#000000" face="arial,helvetica,sanserif" size="-1"><I>
+   The source code for the samples in this document are included
+   in the downloaded packages for Xerces2.
+  </I></FONT></TD></TR></TABLE>
+ </FONT></TD></TR></TABLE><BR>
+ <A name="components"><!--anchor--></A>
+ <TABLE border="0" cellpadding="0" cellspacing="0" width="494"><TR><TD bgcolor="666699" colspan="2" width="494"><TABLE border="0" cellpadding="0" cellspacing="0" width="494"><TR><TD bgcolor="#039acc" height="1" width="1"><IMG border="0" height="1" hspace="0" src="resources/void.gif" vspace="0" width="1"></TD><TD bgcolor="#039acc" height="1" width="492"><IMG border="0" height="1" hspace="0" src="resources/void.gif" vspace="0" width="492"></TD><TD bgcolor="#0086b2" height="1" width="1"><IMG border="0" height="1" hspace="0" src="resources/void.gif" vspace="0" width="1"></TD></TR><TR><TD bgcolor="#039acc" width="1"><IMG border="0" height="1" hspace="0" src="resources/void.gif" vspace="0" width="1"></TD><TD bgcolor="#0086b2" width="492"><FONT color="#ffffff" face="arial,helvetica,sanserif" size="+1"><IMG border="0" height="2" hspace="0" src="resources/void.gif" vspace="0" width="2"><B>Components</B></FONT></TD><TD bgcolor="#017299" width="1"><IMG border="0" height="1" hspace="0" src="resources/void.gif" vspace="0" width="1"></TD></TR><TR><TD bgcolor="#0086b2" height="1" width="1"><IMG border="0" height="1" hspace="0" src="resources/void.gif" vspace="0" width="1"></TD><TD bgcolor="#017299" height="1" width="492"><IMG border="0" height="1" hspace="0" src="resources/void.gif" vspace="0" width="492"></TD><TD bgcolor="#017299" height="1" width="1"><IMG border="0" height="1" hspace="0" src="resources/void.gif" vspace="0" width="1"></TD></TR></TABLE></TD></TR><TR><TD width="10">&nbsp;</TD><TD width="484"><FONT color="#000000" face="arial,helvetica,sanserif">
+  <P>
+   Parser configurations are comprised of a number of parser
+   components that perform various tasks. For example, a parser
+   component may be responsible for the actual scanning of XML
+   documents to generate document &quot;streaming&quot; information
+   events; another component may manage commonly used symbols
+   within the parser configuration in order to improve
+   performance; and a third component may even manage the
+   resolution of external parsed entities and the transcoding
+   of these entities from various international encodings into
+   <A href="http://www.unicode.org/">Unicode</A> used 
+   within the Java virtual machine. When these components are
+   assembled in a certain way, they constitute a single parser
+   configuration but they can also be used interchangeably with
+   other components that implement the appropriate interfaces.
+  </P>
+  <P>
+   <STRONG>Note:</STRONG>
+   Even though a parser is comprised of a number of components,
+   not all of these components are <I>configurable</I>. In
+   other words, some components depend on knowing the state of
+   certain features and properties of the parser configuration
+   while others can operate completely independent of the parser
+   configuration. However, when we use the term &quot;component&quot; when
+   talking about XNI, we are talking about a <I>configurable
+   component</I> within the parser configuration.
+  </P>
+  <P>
+   The following diagram shows an example of this collection of 
+   parser components: (Please note that this is not the <I>only</I>
+   configuration of parser components.)
+  </P>
+  <P>
+   <IMG alt="Parser Components" border="0" hspace="4" src="images/xni-components-overview.gif" vspace="4">
+  </P>
+  <P>
+   The only distinguishing feature of a component
+   is that it can be notified of the state
+   of parser features and properties. Features represent parser
+   state of type <CODE>boolean</CODE> whereas properties represent
+   parser state of type <CODE>java.lang.Object</CODE>. Each
+   component can also be queried for which features and properties
+   it recognizes.
+  </P>
+  <A name="component"><!--anchor--></A>
+  <TABLE border="0" cellpadding="0" cellspacing="0" width="484"><TR><TD bgcolor="666699" colspan="2" width="484"><TABLE border="0" cellpadding="0" cellspacing="0" width="484"><TR><TD bgcolor="#039acc" height="1" width="1"><IMG border="0" height="1" hspace="0" src="resources/void.gif" vspace="0" width="1"></TD><TD bgcolor="#039acc" height="1" width="482"><IMG border="0" height="1" hspace="0" src="resources/void.gif" vspace="0" width="482"></TD><TD bgcolor="#0086b2" height="1" width="1"><IMG border="0" height="1" hspace="0" src="resources/void.gif" vspace="0" width="1"></TD></TR><TR><TD bgcolor="#039acc" width="1"><IMG border="0" height="1" hspace="0" src="resources/void.gif" vspace="0" width="1"></TD><TD bgcolor="#0086b2" width="482"><FONT color="#ffffff" face="arial,helvetica,sanserif"><IMG border="0" height="2" hspace="0" src="resources/void.gif" vspace="0" width="2"><B>Interface XMLComponent</B></FONT></TD><TD bgcolor="#017299" width="1"><IMG border="0" height="1" hspace="0" src="resources/void.gif" vspace="0" width="1"></TD></TR><TR><TD bgcolor="#0086b2" height="1" width="1"><IMG border="0" height="1" hspace="0" src="resources/void.gif" vspace="0" width="1"></TD><TD bgcolor="#017299" height="1" width="482"><IMG border="0" height="1" hspace="0" src="resources/void.gif" vspace="0" width="482"></TD><TD bgcolor="#017299" height="1" width="1"><IMG border="0" height="1" hspace="0" src="resources/void.gif" vspace="0" width="1"></TD></TR></TABLE></TD></TR><TR><TD width="10">&nbsp;</TD><TD width="474"><FONT color="#000000" face="arial,helvetica,sanserif" size="-1">
+   <P>
+    This interface is the basic configurable component in a parser
+    configuration. It is managed by the
+    <A href="#component-manager">XMLComponentManager</A>
+    which holds the parser state.
+   </P>
+   <TABLE border="0" cellpadding="2" cellspacing="2" width="100%">
+    <TR><TD align="center" bgcolor="#039acc" colspan="1" rowspan="1" valign="center"><FONT color="#ffffff" face="arial,helvetica,sanserif" size="-1"><B>Methods</B>&nbsp;
+      </FONT></TD></TR>
+    <TR>
+     <TD align="" bgcolor="#a0ddf0" colspan="1" rowspan="1" valign="top"><FONT color="#000000" face="arial,helvetica,sanserif" size="-1">
+      <CODE>
+       public void reset(
+           <A href="#component-manager">XMLComponentManager</A> manager
+           ) throws <A href="#configuration-exception">XMLConfigurationException</A>;
+      </CODE>
+     &nbsp;
+      </FONT></TD>
+    </TR>
+    <TR>
+     <TD align="" bgcolor="#a0ddf0" colspan="1" rowspan="1" valign="top"><FONT color="#000000" face="arial,helvetica,sanserif" size="-1">
+      <CODE>
+       public Boolean getDefaultFeature(
+           String featureId);
+      </CODE>
+     &nbsp;
+      </FONT></TD>
+    </TR>
+    <TR>
+     <TD align="" bgcolor="#a0ddf0" colspan="1" rowspan="1" valign="top"><FONT color="#000000" face="arial,helvetica,sanserif" size="-1">
+      <CODE>
+       public void getDefaultProperty(
+           String propertyId);
+      </CODE>
+     &nbsp;
+      </FONT></TD>
+    </TR>
+    <TR>
+     <TD align="" bgcolor="#a0ddf0" colspan="1" rowspan="1" valign="top"><FONT color="#000000" face="arial,helvetica,sanserif" size="-1">
+      <CODE>
+       public void setFeature(
+           String featureId,
+           boolean state
+           ) throws <A href="#configuration-exception">XMLConfigurationException</A>;
+      </CODE>
+     &nbsp;
+      </FONT></TD>
+    </TR>
+    <TR>
+     <TD align="" bgcolor="#a0ddf0" colspan="1" rowspan="1" valign="top"><FONT color="#000000" face="arial,helvetica,sanserif" size="-1">
+      <CODE>
+       public void setProperty(
+           String propertyId,
+	   Object value
+           ) throws <A href="#configuration-exception">XMLConfigurationException</A>;
+      </CODE>
+     &nbsp;
+      </FONT></TD>
+    </TR>
+    <TR><TD align="" bgcolor="#a0ddf0" colspan="1" rowspan="1" valign="top"><FONT color="#000000" face="arial,helvetica,sanserif" size="-1"><CODE>public String[] getRecognizedFeatures();</CODE>&nbsp;
+      </FONT></TD></TR>
+    <TR><TD align="" bgcolor="#a0ddf0" colspan="1" rowspan="1" valign="top"><FONT color="#000000" face="arial,helvetica,sanserif" size="-1"><CODE>public String[] getRecognizedProperties();</CODE>&nbsp;
+      </FONT></TD></TR>
+   </TABLE>
+  </FONT></TD></TR></TABLE><BR>
+  <A name="configuration-exception"><!--anchor--></A>
+  <TABLE border="0" cellpadding="0" cellspacing="0" width="484"><TR><TD bgcolor="666699" colspan="2" width="484"><TABLE border="0" cellpadding="0" cellspacing="0" width="484"><TR><TD bgcolor="#039acc" height="1" width="1"><IMG border="0" height="1" hspace="0" src="resources/void.gif" vspace="0" width="1"></TD><TD bgcolor="#039acc" height="1" width="482"><IMG border="0" height="1" hspace="0" src="resources/void.gif" vspace="0" width="482"></TD><TD bgcolor="#0086b2" height="1" width="1"><IMG border="0" height="1" hspace="0" src="resources/void.gif" vspace="0" width="1"></TD></TR><TR><TD bgcolor="#039acc" width="1"><IMG border="0" height="1" hspace="0" src="resources/void.gif" vspace="0" width="1"></TD><TD bgcolor="#0086b2" width="482"><FONT color="#ffffff" face="arial,helvetica,sanserif"><IMG border="0" height="2" hspace="0" src="resources/void.gif" vspace="0" width="2"><B>Class XMLConfigurationException</B></FONT></TD><TD bgcolor="#017299" width="1"><IMG border="0" height="1" hspace="0" src="resources/void.gif" vspace="0" width="1"></TD></TR><TR><TD bgcolor="#0086b2" height="1" width="1"><IMG border="0" height="1" hspace="0" src="resources/void.gif" vspace="0" width="1"></TD><TD bgcolor="#017299" height="1" width="482"><IMG border="0" height="1" hspace="0" src="resources/void.gif" vspace="0" width="482"></TD><TD bgcolor="#017299" height="1" width="1"><IMG border="0" height="1" hspace="0" src="resources/void.gif" vspace="0" width="1"></TD></TR></TABLE></TD></TR><TR><TD width="10">&nbsp;</TD><TD width="474"><FONT color="#000000" face="arial,helvetica,sanserif" size="-1">
+   <P>
+   </P>
+   <TABLE border="0" cellpadding="2" cellspacing="2" width="100%">
+    <TR>
+     <TD align="center" bgcolor="#039acc" colspan="1" rowspan="1" valign="center"><FONT color="#ffffff" face="arial,helvetica,sanserif" size="-1"><B>
+      Extends <A href="xni-core.html#exception">XNIException</A>
+     </B>&nbsp;
+      </FONT></TD>
+    </TR>
+    <TR><TD align="center" bgcolor="#039acc" colspan="1" rowspan="1" valign="center"><FONT color="#ffffff" face="arial,helvetica,sanserif" size="-1"><B>Constants</B>&nbsp;
+      </FONT></TD></TR>
+    <TR>
+     <TD align="" bgcolor="#a0ddf0" colspan="1" rowspan="1" valign="top"><FONT color="#000000" face="arial,helvetica,sanserif" size="-1"><CODE>public static final short NOT_RECOGNIZED;</CODE>&nbsp;
+      </FONT></TD>
+    </TR>
+    <TR>
+     <TD align="" bgcolor="#a0ddf0" colspan="1" rowspan="1" valign="top"><FONT color="#000000" face="arial,helvetica,sanserif" size="-1"><CODE>public static final short NOT_SUPPORTED;</CODE>&nbsp;
+      </FONT></TD>
+    </TR>
+    <TR><TD align="center" bgcolor="#039acc" colspan="1" rowspan="1" valign="center"><FONT color="#ffffff" face="arial,helvetica,sanserif" size="-1"><B>Constructors</B>&nbsp;
+      </FONT></TD></TR>
+    <TR>
+     <TD align="" bgcolor="#a0ddf0" colspan="1" rowspan="1" valign="top"><FONT color="#000000" face="arial,helvetica,sanserif" size="-1">
+      <CODE>
+       public XMLConfigurationException(
+           short type,
+	   String identifier
+           );
+      </CODE>
+     &nbsp;
+      </FONT></TD>
+    </TR>
+    <TR>
+     <TD align="" bgcolor="#a0ddf0" colspan="1" rowspan="1" valign="top"><FONT color="#000000" face="arial,helvetica,sanserif" size="-1">
+      <CODE>
+       public XMLConfigurationException(
+           short type,
+	   String identifier,
+	   String message
+           );
+      </CODE>
+     &nbsp;
+      </FONT></TD>
+    </TR>
+    <TR><TD align="center" bgcolor="#039acc" colspan="1" rowspan="1" valign="center"><FONT color="#ffffff" face="arial,helvetica,sanserif" size="-1"><B>Methods</B>&nbsp;
+      </FONT></TD></TR>
+    <TR><TD align="" bgcolor="#a0ddf0" colspan="1" rowspan="1" valign="top"><FONT color="#000000" face="arial,helvetica,sanserif" size="-1"><CODE>public short getType();</CODE>&nbsp;
+      </FONT></TD></TR>
+    <TR><TD align="" bgcolor="#a0ddf0" colspan="1" rowspan="1" valign="top"><FONT color="#000000" face="arial,helvetica,sanserif" size="-1"><CODE>public String getIdentifier();</CODE>&nbsp;
+      </FONT></TD></TR>
+   </TABLE>
+  </FONT></TD></TR></TABLE><BR>
+  <P>
+   Components are managed by a component manager. The component
+   manager keeps track of the parser state for features and 
+   properties.  The component manager is responsible for notifying
+   each component when the value of those features and properties
+   change.
+  </P>
+  <P>
+   Before parsing a document, a parser configuration <I>must</I>
+   use the component manager to reset all of the parser components.
+   Then, during parsing, each time a feature or property value is
+   modified, all of the components <I>must</I> be informed of the 
+   change.
+  </P>
+  <A name="component-manager"><!--anchor--></A>
+  <TABLE border="0" cellpadding="0" cellspacing="0" width="484"><TR><TD bgcolor="666699" colspan="2" width="484"><TABLE border="0" cellpadding="0" cellspacing="0" width="484"><TR><TD bgcolor="#039acc" height="1" width="1"><IMG border="0" height="1" hspace="0" src="resources/void.gif" vspace="0" width="1"></TD><TD bgcolor="#039acc" height="1" width="482"><IMG border="0" height="1" hspace="0" src="resources/void.gif" vspace="0" width="482"></TD><TD bgcolor="#0086b2" height="1" width="1"><IMG border="0" height="1" hspace="0" src="resources/void.gif" vspace="0" width="1"></TD></TR><TR><TD bgcolor="#039acc" width="1"><IMG border="0" height="1" hspace="0" src="resources/void.gif" vspace="0" width="1"></TD><TD bgcolor="#0086b2" width="482"><FONT color="#ffffff" face="arial,helvetica,sanserif"><IMG border="0" height="2" hspace="0" src="resources/void.gif" vspace="0" width="2"><B>Interface XMLComponentManager</B></FONT></TD><TD bgcolor="#017299" width="1"><IMG border="0" height="1" hspace="0" src="resources/void.gif" vspace="0" width="1"></TD></TR><TR><TD bgcolor="#0086b2" height="1" width="1"><IMG border="0" height="1" hspace="0" src="resources/void.gif" vspace="0" width="1"></TD><TD bgcolor="#017299" height="1" width="482"><IMG border="0" height="1" hspace="0" src="resources/void.gif" vspace="0" width="482"></TD><TD bgcolor="#017299" height="1" width="1"><IMG border="0" height="1" hspace="0" src="resources/void.gif" vspace="0" width="1"></TD></TR></TABLE></TD></TR><TR><TD width="10">&nbsp;</TD><TD width="474"><FONT color="#000000" face="arial,helvetica,sanserif" size="-1">
+   <P>
+    The component manager interface allows components to query
+    needed features and properties during a call to the
+    <CODE>XMLComponent#reset(XMLComponentManager)</CODE> method.
+    However, components <I>should not</I> keep a reference to
+    the component manager. In other words, all necessary state
+    should be queried when the component is reset.
+   </P>
+   <TABLE border="0" cellpadding="2" cellspacing="2" width="100%">
+    <TR><TD align="center" bgcolor="#039acc" colspan="1" rowspan="1" valign="center"><FONT color="#ffffff" face="arial,helvetica,sanserif" size="-1"><B>Methods</B>&nbsp;
+      </FONT></TD></TR>
+    <TR>
+     <TD align="" bgcolor="#a0ddf0" colspan="1" rowspan="1" valign="top"><FONT color="#000000" face="arial,helvetica,sanserif" size="-1">
+      <CODE>
+       public boolean getFeature(
+           String featureId
+           ) throws <A href="#configuration-exception">XMLConfigurationException</A>;
+      </CODE>
+     &nbsp;
+      </FONT></TD>
+    </TR>
+    <TR>
+     <TD align="" bgcolor="#a0ddf0" colspan="1" rowspan="1" valign="top"><FONT color="#000000" face="arial,helvetica,sanserif" size="-1">
+      <CODE>
+       public Object getProperty(
+           String propertyId
+           ) throws <A href="#configuration-exception">XMLConfigurationException</A>;
+      </CODE>
+     &nbsp;
+      </FONT></TD>
+    </TR>
+   </TABLE>
+  </FONT></TD></TR></TABLE><BR>
+  <P>
+   <STRONG>Note:</STRONG>
+   A compliant XNI parser configuration is <I>not</I>
+   required to use any components that implement the
+   <CODE><A href="#component">XMLComponent</A></CODE>
+   interface. That interface is included as a convenience for
+   people building modular and configurable parser components.
+   The Xerces2 reference implementation uses the component
+   interface to implement its components so that they can be
+   used interchangeably in various configurations.
+  </P>
+ </FONT></TD></TR></TABLE><BR>
+ <A name="configurations"><!--anchor--></A>
+ <TABLE border="0" cellpadding="0" cellspacing="0" width="494"><TR><TD bgcolor="666699" colspan="2" width="494"><TABLE border="0" cellpadding="0" cellspacing="0" width="494"><TR><TD bgcolor="#039acc" height="1" width="1"><IMG border="0" height="1" hspace="0" src="resources/void.gif" vspace="0" width="1"></TD><TD bgcolor="#039acc" height="1" width="492"><IMG border="0" height="1" hspace="0" src="resources/void.gif" vspace="0" width="492"></TD><TD bgcolor="#0086b2" height="1" width="1"><IMG border="0" height="1" hspace="0" src="resources/void.gif" vspace="0" width="1"></TD></TR><TR><TD bgcolor="#039acc" width="1"><IMG border="0" height="1" hspace="0" src="resources/void.gif" vspace="0" width="1"></TD><TD bgcolor="#0086b2" width="492"><FONT color="#ffffff" face="arial,helvetica,sanserif" size="+1"><IMG border="0" height="2" hspace="0" src="resources/void.gif" vspace="0" width="2"><B>Configurations</B></FONT></TD><TD bgcolor="#017299" width="1"><IMG border="0" height="1" hspace="0" src="resources/void.gif" vspace="0" width="1"></TD></TR><TR><TD bgcolor="#0086b2" height="1" width="1"><IMG border="0" height="1" hspace="0" src="resources/void.gif" vspace="0" width="1"></TD><TD bgcolor="#017299" height="1" width="492"><IMG border="0" height="1" hspace="0" src="resources/void.gif" vspace="0" width="492"></TD><TD bgcolor="#017299" height="1" width="1"><IMG border="0" height="1" hspace="0" src="resources/void.gif" vspace="0" width="1"></TD></TR></TABLE></TD></TR><TR><TD width="10">&nbsp;</TD><TD width="484"><FONT color="#000000" face="arial,helvetica,sanserif">
+  <P>
+   An XNI parser configuration defines the entry point for a
+   parser to set features and properties, initiate a parse of
+   an XML instance document, perform entity resolution, and
+   receive notification of errors that occurred in the document.
+  </P>
+  <P>
+   A parser configuration is typically comprised of a series of
+   parser components. Some of these components may be
+   connected together to form the parsing pipeline. This parser
+   configuration is then used by a specific parser implementation
+   that generates a particular API, such as DOM or SAX. The
+   separation between the parser configuration and parser instance
+   allows the same API-generating parser to be used with an
+   unlimited number of different parser configurations.
+  </P>
+  <P>
+   When a document is parsed, the parser configuration resets the
+   configurable components and initiates the scanning of the
+   document. Typically, a scanner starts scanning the document
+   which generates XNI information set events that are sent to
+   the next component in the pipeline (e.g. the validator). The
+   information set events coming out of the end of the pipeline
+   are then communicated to the document and DTD handlers that
+   are registered with the parser configuration. 
+  </P>
+  <P>
+   The following diagram shows both the generic parsing pipeline
+   contained within a parser configuration and the separation of 
+   parser configuration and specific parser classes.
+  </P>
+  <P>
+   <IMG alt="Parser Configuration" border="0" hspace="4" src="images/xni-parser-configuration.gif" vspace="4">
+  </P>
+  <P>
+   There are two parser configuration interfaces defined in XNI:
+   the <CODE>XMLParserConfiguration</CODE> and the
+   <CODE>XMLPullParserConfiguration</CODE>. For most purposes, the
+   standard parser configuration will suffice. Document and DTD
+   handler interfaces will be registered on the parser configuration
+   and the document will be parsed completely by calling the
+   <CODE>parse(XMLInputSource)</CODE> method. In this situation,
+   the application is driven by the output of the configuration.
+  </P>
+  <P>
+   However, the <CODE>XMLPullParserConfiguration</CODE> interface
+   extends the <CODE>XMLParserConfiguration</CODE> interface to
+   provide methods that allow the application to drive the
+   configuration. Any configuration class that implements this
+   interface guarantees that it can be driven in a pull parsing
+   fashion but does not make any statement as to how much or how
+   little pull parsing will be performed at each step.
+  </P>
+  <A name="parser-configuration"><!--anchor--></A>
+  <TABLE border="0" cellpadding="0" cellspacing="0" width="484"><TR><TD bgcolor="666699" colspan="2" width="484"><TABLE border="0" cellpadding="0" cellspacing="0" width="484"><TR><TD bgcolor="#039acc" height="1" width="1"><IMG border="0" height="1" hspace="0" src="resources/void.gif" vspace="0" width="1"></TD><TD bgcolor="#039acc" height="1" width="482"><IMG border="0" height="1" hspace="0" src="resources/void.gif" vspace="0" width="482"></TD><TD bgcolor="#0086b2" height="1" width="1"><IMG border="0" height="1" hspace="0" src="resources/void.gif" vspace="0" width="1"></TD></TR><TR><TD bgcolor="#039acc" width="1"><IMG border="0" height="1" hspace="0" src="resources/void.gif" vspace="0" width="1"></TD><TD bgcolor="#0086b2" width="482"><FONT color="#ffffff" face="arial,helvetica,sanserif"><IMG border="0" height="2" hspace="0" src="resources/void.gif" vspace="0" width="2"><B>Interface XMLParserConfiguration</B></FONT></TD><TD bgcolor="#017299" width="1"><IMG border="0" height="1" hspace="0" src="resources/void.gif" vspace="0" width="1"></TD></TR><TR><TD bgcolor="#0086b2" height="1" width="1"><IMG border="0" height="1" hspace="0" src="resources/void.gif" vspace="0" width="1"></TD><TD bgcolor="#017299" height="1" width="482"><IMG border="0" height="1" hspace="0" src="resources/void.gif" vspace="0" width="482"></TD><TD bgcolor="#017299" height="1" width="1"><IMG border="0" height="1" hspace="0" src="resources/void.gif" vspace="0" width="1"></TD></TR></TABLE></TD></TR><TR><TD width="10">&nbsp;</TD><TD width="474"><FONT color="#000000" face="arial,helvetica,sanserif" size="-1">
+   <P>
+    The parser configuration is the primary connection to specific
+    parser instances. Because the parser configuration is responsible
+    for holding the parser state, the 
+    <CODE>addRecognizedFeatures(String[])</CODE> and
+    <CODE>addRecognizedProperties(String[])</CODE> methods allow the
+    parser instance to add recognized features and properties that
+    the parser configuration will store.
+   </P>
+   
+  </FONT></TD></TR></TABLE><BR>
+  <A name="pull-parser-configuration"><!--anchor--></A>
+  <TABLE border="0" cellpadding="0" cellspacing="0" width="484"><TR><TD bgcolor="666699" colspan="2" width="484"><TABLE border="0" cellpadding="0" cellspacing="0" width="484"><TR><TD bgcolor="#039acc" height="1" width="1"><IMG border="0" height="1" hspace="0" src="resources/void.gif" vspace="0" width="1"></TD><TD bgcolor="#039acc" height="1" width="482"><IMG border="0" height="1" hspace="0" src="resources/void.gif" vspace="0" width="482"></TD><TD bgcolor="#0086b2" height="1" width="1"><IMG border="0" height="1" hspace="0" src="resources/void.gif" vspace="0" width="1"></TD></TR><TR><TD bgcolor="#039acc" width="1"><IMG border="0" height="1" hspace="0" src="resources/void.gif" vspace="0" width="1"></TD><TD bgcolor="#0086b2" width="482"><FONT color="#ffffff" face="arial,helvetica,sanserif"><IMG border="0" height="2" hspace="0" src="resources/void.gif" vspace="0" width="2"><B>Interface XMLPullParserConfiguration</B></FONT></TD><TD bgcolor="#017299" width="1"><IMG border="0" height="1" hspace="0" src="resources/void.gif" vspace="0" width="1"></TD></TR><TR><TD bgcolor="#0086b2" height="1" width="1"><IMG border="0" height="1" hspace="0" src="resources/void.gif" vspace="0" width="1"></TD><TD bgcolor="#017299" height="1" width="482"><IMG border="0" height="1" hspace="0" src="resources/void.gif" vspace="0" width="482"></TD><TD bgcolor="#017299" height="1" width="1"><IMG border="0" height="1" hspace="0" src="resources/void.gif" vspace="0" width="1"></TD></TR></TABLE></TD></TR><TR><TD width="10">&nbsp;</TD><TD width="474"><FONT color="#000000" face="arial,helvetica,sanserif" size="-1">
+   <P>
+    Parser configurations that implement this interface state that they
+    can be driven by the application in a pull parser fashion.
+   </P>
+   <TABLE border="0" cellpadding="2" cellspacing="2" width="100%">
+    <TR>
+     <TD align="center" bgcolor="#039acc" colspan="1" rowspan="1" valign="center"><FONT color="#ffffff" face="arial,helvetica,sanserif" size="-1"><B>
+      Extends <A href="#parser-configuration">XMLParserConfiguration</A>
+     </B>&nbsp;
+      </FONT></TD>
+    </TR>
+    <TR><TD align="center" bgcolor="#039acc" colspan="1" rowspan="1" valign="center"><FONT color="#ffffff" face="arial,helvetica,sanserif" size="-1"><B>Methods</B>&nbsp;
+      </FONT></TD></TR>
+    <TR>
+     <TD align="" bgcolor="#a0ddf0" colspan="1" rowspan="1" valign="top"><FONT color="#000000" face="arial,helvetica,sanserif" size="-1">
+      <CODE>
+       public void setInputSource(
+           <A href="#input-source">XMLInputSource</A> source
+	   ) throws java.io.IOException, 
+                    <A href="#configuration-exception">XMLConfigurationException</A>;
+      </CODE>
+     &nbsp;
+      </FONT></TD>
+    </TR>
+    <TR>
+     <TD align="" bgcolor="#a0ddf0" colspan="1" rowspan="1" valign="top"><FONT color="#000000" face="arial,helvetica,sanserif" size="-1">
+      <CODE>
+       public boolean parse(boolean complete)
+	   throws java.io.IOException, 
+                  <A href="#exception">XNIException</A>;
+      </CODE>
+     &nbsp;
+      </FONT></TD>
+    </TR>
+   </TABLE>
+  </FONT></TD></TR></TABLE><BR>
+  <A name="entity-resolver"><!--anchor--></A>
+  <TABLE border="0" cellpadding="0" cellspacing="0" width="484"><TR><TD bgcolor="666699" colspan="2" width="484"><TABLE border="0" cellpadding="0" cellspacing="0" width="484"><TR><TD bgcolor="#039acc" height="1" width="1"><IMG border="0" height="1" hspace="0" src="resources/void.gif" vspace="0" width="1"></TD><TD bgcolor="#039acc" height="1" width="482"><IMG border="0" height="1" hspace="0" src="resources/void.gif" vspace="0" width="482"></TD><TD bgcolor="#0086b2" height="1" width="1"><IMG border="0" height="1" hspace="0" src="resources/void.gif" vspace="0" width="1"></TD></TR><TR><TD bgcolor="#039acc" width="1"><IMG border="0" height="1" hspace="0" src="resources/void.gif" vspace="0" width="1"></TD><TD bgcolor="#0086b2" width="482"><FONT color="#ffffff" face="arial,helvetica,sanserif"><IMG border="0" height="2" hspace="0" src="resources/void.gif" vspace="0" width="2"><B>Interface XMLEntityResolver</B></FONT></TD><TD bgcolor="#017299" width="1"><IMG border="0" height="1" hspace="0" src="resources/void.gif" vspace="0" width="1"></TD></TR><TR><TD bgcolor="#0086b2" height="1" width="1"><IMG border="0" height="1" hspace="0" src="resources/void.gif" vspace="0" width="1"></TD><TD bgcolor="#017299" height="1" width="482"><IMG border="0" height="1" hspace="0" src="resources/void.gif" vspace="0" width="482"></TD><TD bgcolor="#017299" height="1" width="1"><IMG border="0" height="1" hspace="0" src="resources/void.gif" vspace="0" width="1"></TD></TR></TABLE></TD></TR><TR><TD width="10">&nbsp;</TD><TD width="474"><FONT color="#000000" face="arial,helvetica,sanserif" size="-1">
+   <P>
+   This interface is used to resolve external parsed entities. The
+   application can register an object that implements this interface
+  with the parser configuration in order to intercept entities and
+  resolve them explicitly. If the registered entity resolver cannot
+  resolve the entity, it should return <CODE>null</CODE> so that the
+  parser will try to resolve the entity using a default mechanism.   </P>
+   <TABLE border="0" cellpadding="2" cellspacing="2" width="100%">
+    <TR><TD align="center" bgcolor="#039acc" colspan="1" rowspan="1" valign="center"><FONT color="#ffffff" face="arial,helvetica,sanserif" size="-1"><B>Methods</B>&nbsp;
+      </FONT></TD></TR>
+    <TR>
+     <TD align="" bgcolor="#a0ddf0" colspan="1" rowspan="1" valign="top"><FONT color="#000000" face="arial,helvetica,sanserif" size="-1">
+      <CODE>
+       public <A href="#input-source">XMLInputSource</A> resolveEntity(
+               <A href="#resource-identifier">XMLResourceIdentifier</A> resourceIdentifier
+	   ) throws java.io.IOException, <A href="#parse-exception">XMLParseException</A>;
+      </CODE>
+     &nbsp;
+      </FONT></TD>
+    </TR>
+   </TABLE>
+  </FONT></TD></TR></TABLE><BR>
+  <A name="error-handler"><!--anchor--></A>
+  <TABLE border="0" cellpadding="0" cellspacing="0" width="484"><TR><TD bgcolor="666699" colspan="2" width="484"><TABLE border="0" cellpadding="0" cellspacing="0" width="484"><TR><TD bgcolor="#039acc" height="1" width="1"><IMG border="0" height="1" hspace="0" src="resources/void.gif" vspace="0" width="1"></TD><TD bgcolor="#039acc" height="1" width="482"><IMG border="0" height="1" hspace="0" src="resources/void.gif" vspace="0" width="482"></TD><TD bgcolor="#0086b2" height="1" width="1"><IMG border="0" height="1" hspace="0" src="resources/void.gif" vspace="0" width="1"></TD></TR><TR><TD bgcolor="#039acc" width="1"><IMG border="0" height="1" hspace="0" src="resources/void.gif" vspace="0" width="1"></TD><TD bgcolor="#0086b2" width="482"><FONT color="#ffffff" face="arial,helvetica,sanserif"><IMG border="0" height="2" hspace="0" src="resources/void.gif" vspace="0" width="2"><B>Interface XMLErrorHandler</B></FONT></TD><TD bgcolor="#017299" width="1"><IMG border="0" height="1" hspace="0" src="resources/void.gif" vspace="0" width="1"></TD></TR><TR><TD bgcolor="#0086b2" height="1" width="1"><IMG border="0" height="1" hspace="0" src="resources/void.gif" vspace="0" width="1"></TD><TD bgcolor="#017299" height="1" width="482"><IMG border="0" height="1" hspace="0" src="resources/void.gif" vspace="0" width="482"></TD><TD bgcolor="#017299" height="1" width="1"><IMG border="0" height="1" hspace="0" src="resources/void.gif" vspace="0" width="1"></TD></TR></TABLE></TD></TR><TR><TD width="10">&nbsp;</TD><TD width="474"><FONT color="#000000" face="arial,helvetica,sanserif" size="-1">
+  <P>
+  An interface for handling errors. If the application is interested
+  in error notifications, then it can register an error handler object
+  that implements this interface with the parser configuration.
+ </P>
+   <TABLE border="0" cellpadding="2" cellspacing="2" width="100%">
+    <TR><TD align="center" bgcolor="#039acc" colspan="1" rowspan="1" valign="center"><FONT color="#ffffff" face="arial,helvetica,sanserif" size="-1"><B>Methods</B>&nbsp;
+      </FONT></TD></TR>
+    <TR>
+     <TD align="" bgcolor="#a0ddf0" colspan="1" rowspan="1" valign="top"><FONT color="#000000" face="arial,helvetica,sanserif" size="-1">
+      <CODE>
+       public void warning(
+           String domain,
+	   String key,
+           <A href="#parse-exception">XMLParseException</A> exception
+	   ) throws <A href="xni-core.html#exception">XNIException</A>;
+      </CODE>
+     &nbsp;
+      </FONT></TD>
+    </TR>
+    <TR>
+     <TD align="" bgcolor="#a0ddf0" colspan="1" rowspan="1" valign="top"><FONT color="#000000" face="arial,helvetica,sanserif" size="-1">
+      <CODE>
+       public void error(
+           String domain,
+	   String key,
+           <A href="#parse-exception">XMLParseException</A> exception
+	   ) throws <A href="xni-core.html#exception">XNIException</A>;
+      </CODE>
+     &nbsp;
+      </FONT></TD>
+    </TR>
+    <TR>
+     <TD align="" bgcolor="#a0ddf0" colspan="1" rowspan="1" valign="top"><FONT color="#000000" face="arial,helvetica,sanserif" size="-1">
+      <CODE>
+       public void fatalError(
+           String domain,
+	   String key,
+           <A href="#parse-exception">XMLParseException</A> exception
+	   ) throws <A href="xni-core.html#exception">XNIException</A>;
+      </CODE>
+     &nbsp;
+      </FONT></TD>
+    </TR>
+   </TABLE>
+  </FONT></TD></TR></TABLE><BR>
+  <A name="input-source"><!--anchor--></A>
+  <TABLE border="0" cellpadding="0" cellspacing="0" width="484"><TR><TD bgcolor="666699" colspan="2" width="484"><TABLE border="0" cellpadding="0" cellspacing="0" width="484"><TR><TD bgcolor="#039acc" height="1" width="1"><IMG border="0" height="1" hspace="0" src="resources/void.gif" vspace="0" width="1"></TD><TD bgcolor="#039acc" height="1" width="482"><IMG border="0" height="1" hspace="0" src="resources/void.gif" vspace="0" width="482"></TD><TD bgcolor="#0086b2" height="1" width="1"><IMG border="0" height="1" hspace="0" src="resources/void.gif" vspace="0" width="1"></TD></TR><TR><TD bgcolor="#039acc" width="1"><IMG border="0" height="1" hspace="0" src="resources/void.gif" vspace="0" width="1"></TD><TD bgcolor="#0086b2" width="482"><FONT color="#ffffff" face="arial,helvetica,sanserif"><IMG border="0" height="2" hspace="0" src="resources/void.gif" vspace="0" width="2"><B>Class XMLInputSource</B></FONT></TD><TD bgcolor="#017299" width="1"><IMG border="0" height="1" hspace="0" src="resources/void.gif" vspace="0" width="1"></TD></TR><TR><TD bgcolor="#0086b2" height="1" width="1"><IMG border="0" height="1" hspace="0" src="resources/void.gif" vspace="0" width="1"></TD><TD bgcolor="#017299" height="1" width="482"><IMG border="0" height="1" hspace="0" src="resources/void.gif" vspace="0" width="482"></TD><TD bgcolor="#017299" height="1" width="1"><IMG border="0" height="1" hspace="0" src="resources/void.gif" vspace="0" width="1"></TD></TR></TABLE></TD></TR><TR><TD width="10">&nbsp;</TD><TD width="474"><FONT color="#000000" face="arial,helvetica,sanserif" size="-1">
+  <P>
+  This class represents an input source for an XML document. The
+  basic properties of an input source are the following: 
+   public identifier,
+   system identifier,
+   byte stream or character stream.   
+   </P>
+   
+  </FONT></TD></TR></TABLE><BR>
+  
+  <A name="resource-identifier"><!--anchor--></A>
+  <TABLE border="0" cellpadding="0" cellspacing="0" width="484"><TR><TD bgcolor="666699" colspan="2" width="484"><TABLE border="0" cellpadding="0" cellspacing="0" width="484"><TR><TD bgcolor="#039acc" height="1" width="1"><IMG border="0" height="1" hspace="0" src="resources/void.gif" vspace="0" width="1"></TD><TD bgcolor="#039acc" height="1" width="482"><IMG border="0" height="1" hspace="0" src="resources/void.gif" vspace="0" width="482"></TD><TD bgcolor="#0086b2" height="1" width="1"><IMG border="0" height="1" hspace="0" src="resources/void.gif" vspace="0" width="1"></TD></TR><TR><TD bgcolor="#039acc" width="1"><IMG border="0" height="1" hspace="0" src="resources/void.gif" vspace="0" width="1"></TD><TD bgcolor="#0086b2" width="482"><FONT color="#ffffff" face="arial,helvetica,sanserif"><IMG border="0" height="2" hspace="0" src="resources/void.gif" vspace="0" width="2"><B>Class XMLResourceIdentifier</B></FONT></TD><TD bgcolor="#017299" width="1"><IMG border="0" height="1" hspace="0" src="resources/void.gif" vspace="0" width="1"></TD></TR><TR><TD bgcolor="#0086b2" height="1" width="1"><IMG border="0" height="1" hspace="0" src="resources/void.gif" vspace="0" width="1"></TD><TD bgcolor="#017299" height="1" width="482"><IMG border="0" height="1" hspace="0" src="resources/void.gif" vspace="0" width="482"></TD><TD bgcolor="#017299" height="1" width="1"><IMG border="0" height="1" hspace="0" src="resources/void.gif" vspace="0" width="1"></TD></TR></TABLE></TD></TR><TR><TD width="10">&nbsp;</TD><TD width="474"><FONT color="#000000" face="arial,helvetica,sanserif" size="-1">
+  <P>
+   This represents the basic physical description of the location of any
+  XML resource (a Schema grammar, a DTD, a general entity etc.) 
+   </P>
+   </FONT></TD></TR></TABLE><BR>
+
+
+  <A name="parse-exception"><!--anchor--></A>
+  <TABLE border="0" cellpadding="0" cellspacing="0" width="484"><TR><TD bgcolor="666699" colspan="2" width="484"><TABLE border="0" cellpadding="0" cellspacing="0" width="484"><TR><TD bgcolor="#039acc" height="1" width="1"><IMG border="0" height="1" hspace="0" src="resources/void.gif" vspace="0" width="1"></TD><TD bgcolor="#039acc" height="1" width="482"><IMG border="0" height="1" hspace="0" src="resources/void.gif" vspace="0" width="482"></TD><TD bgcolor="#0086b2" height="1" width="1"><IMG border="0" height="1" hspace="0" src="resources/void.gif" vspace="0" width="1"></TD></TR><TR><TD bgcolor="#039acc" width="1"><IMG border="0" height="1" hspace="0" src="resources/void.gif" vspace="0" width="1"></TD><TD bgcolor="#0086b2" width="482"><FONT color="#ffffff" face="arial,helvetica,sanserif"><IMG border="0" height="2" hspace="0" src="resources/void.gif" vspace="0" width="2"><B>Class XMLParseException</B></FONT></TD><TD bgcolor="#017299" width="1"><IMG border="0" height="1" hspace="0" src="resources/void.gif" vspace="0" width="1"></TD></TR><TR><TD bgcolor="#0086b2" height="1" width="1"><IMG border="0" height="1" hspace="0" src="resources/void.gif" vspace="0" width="1"></TD><TD bgcolor="#017299" height="1" width="482"><IMG border="0" height="1" hspace="0" src="resources/void.gif" vspace="0" width="482"></TD><TD bgcolor="#017299" height="1" width="1"><IMG border="0" height="1" hspace="0" src="resources/void.gif" vspace="0" width="1"></TD></TR></TABLE></TD></TR><TR><TD width="10">&nbsp;</TD><TD width="474"><FONT color="#000000" face="arial,helvetica,sanserif" size="-1">
+  <P>
+  
+  A parsing exception. This exception is different from the standard
+  XNI exception in that it stores the location in the document (or
+  its entities) where the exception occurred.
+  </P>
+  
+  </FONT></TD></TR></TABLE><BR>
+ </FONT></TD></TR></TABLE><BR>
+ <A name="pipelines"><!--anchor--></A>
+ <TABLE border="0" cellpadding="0" cellspacing="0" width="494"><TR><TD bgcolor="666699" colspan="2" width="494"><TABLE border="0" cellpadding="0" cellspacing="0" width="494"><TR><TD bgcolor="#039acc" height="1" width="1"><IMG border="0" height="1" hspace="0" src="resources/void.gif" vspace="0" width="1"></TD><TD bgcolor="#039acc" height="1" width="492"><IMG border="0" height="1" hspace="0" src="resources/void.gif" vspace="0" width="492"></TD><TD bgcolor="#0086b2" height="1" width="1"><IMG border="0" height="1" hspace="0" src="resources/void.gif" vspace="0" width="1"></TD></TR><TR><TD bgcolor="#039acc" width="1"><IMG border="0" height="1" hspace="0" src="resources/void.gif" vspace="0" width="1"></TD><TD bgcolor="#0086b2" width="492"><FONT color="#ffffff" face="arial,helvetica,sanserif" size="+1"><IMG border="0" height="2" hspace="0" src="resources/void.gif" vspace="0" width="2"><B>Pipelines</B></FONT></TD><TD bgcolor="#017299" width="1"><IMG border="0" height="1" hspace="0" src="resources/void.gif" vspace="0" width="1"></TD></TR><TR><TD bgcolor="#0086b2" height="1" width="1"><IMG border="0" height="1" hspace="0" src="resources/void.gif" vspace="0" width="1"></TD><TD bgcolor="#017299" height="1" width="492"><IMG border="0" height="1" hspace="0" src="resources/void.gif" vspace="0" width="492"></TD><TD bgcolor="#017299" height="1" width="1"><IMG border="0" height="1" hspace="0" src="resources/void.gif" vspace="0" width="1"></TD></TR></TABLE></TD></TR><TR><TD width="10">&nbsp;</TD><TD width="484"><FONT color="#000000" face="arial,helvetica,sanserif">
+  <P>
+   The <A href="xni-core.html">Core Interfaces</A> provide
+   interfaces for the streaming information set. While these
+   interfaces are sufficient for communicating the document and
+   DTD information, it does not provide an easy way to construct
+   the pipeline or initiate the pipeline to start parsing an
+   XML document. The <CODE>org.apache.xerces.xni.parser</CODE> 
+   package has additional interfaces to fill exactly this need.
+  </P>
+  <P>
+   Each parser configuration can be thought of as two separate
+   pipelines: one for document information and one for DTD
+   information. Each pipeline starts with a scanner and is followed
+   by zero or more filters (objects that implement interfaces
+   to handle the incoming information as well as register
+   handlers for the outgoing information). The information that
+   comes out the end of the pipeline is usually forwarded by
+   the parser configuration to the registered handlers.
+  </P>
+  <P>
+   There are two scanner interfaces defined: the XMLDocumentScanner
+   and the XMLDTDScanner:
+  </P>
+  <A name="document-scanner"><!--anchor--></A>
+  <TABLE border="0" cellpadding="0" cellspacing="0" width="484"><TR><TD bgcolor="666699" colspan="2" width="484"><TABLE border="0" cellpadding="0" cellspacing="0" width="484"><TR><TD bgcolor="#039acc" height="1" width="1"><IMG border="0" height="1" hspace="0" src="resources/void.gif" vspace="0" width="1"></TD><TD bgcolor="#039acc" height="1" width="482"><IMG border="0" height="1" hspace="0" src="resources/void.gif" vspace="0" width="482"></TD><TD bgcolor="#0086b2" height="1" width="1"><IMG border="0" height="1" hspace="0" src="resources/void.gif" vspace="0" width="1"></TD></TR><TR><TD bgcolor="#039acc" width="1"><IMG border="0" height="1" hspace="0" src="resources/void.gif" vspace="0" width="1"></TD><TD bgcolor="#0086b2" width="482"><FONT color="#ffffff" face="arial,helvetica,sanserif"><IMG border="0" height="2" hspace="0" src="resources/void.gif" vspace="0" width="2"><B>Interface XMLDocumentScanner</B></FONT></TD><TD bgcolor="#017299" width="1"><IMG border="0" height="1" hspace="0" src="resources/void.gif" vspace="0" width="1"></TD></TR><TR><TD bgcolor="#0086b2" height="1" width="1"><IMG border="0" height="1" hspace="0" src="resources/void.gif" vspace="0" width="1"></TD><TD bgcolor="#017299" height="1" width="482"><IMG border="0" height="1" hspace="0" src="resources/void.gif" vspace="0" width="482"></TD><TD bgcolor="#017299" height="1" width="1"><IMG border="0" height="1" hspace="0" src="resources/void.gif" vspace="0" width="1"></TD></TR></TABLE></TD></TR><TR><TD width="10">&nbsp;</TD><TD width="474"><FONT color="#000000" face="arial,helvetica,sanserif" size="-1">
+   <P>This interface defines an XML document scanner.</P>
+   <TABLE border="0" cellpadding="2" cellspacing="2" width="100%">
+    <TR>
+     <TD align="center" bgcolor="#039acc" colspan="1" rowspan="1" valign="center"><FONT color="#ffffff" face="arial,helvetica,sanserif" size="-1"><B>
+      Extends <A href="#document-source">XMLDocumentSource</A>
+     </B>&nbsp;
+      </FONT></TD>
+    </TR>
+    <TR><TD align="center" bgcolor="#039acc" colspan="1" rowspan="1" valign="center"><FONT color="#ffffff" face="arial,helvetica,sanserif" size="-1"><B>Methods</B>&nbsp;
+      </FONT></TD></TR>
+    <TR>
+     <TD align="" bgcolor="#a0ddf0" colspan="1" rowspan="1" valign="top"><FONT color="#000000" face="arial,helvetica,sanserif" size="-1">
+      <CODE>
+       public void setInputSource(
+           <A href="#input-source">XMLInputSource</A> source
+           ) throws java.io.IOException;
+      </CODE>
+     &nbsp;
+      </FONT></TD>
+    </TR>
+    <TR>
+     <TD align="" bgcolor="#a0ddf0" colspan="1" rowspan="1" valign="top"><FONT color="#000000" face="arial,helvetica,sanserif" size="-1">
+      <CODE>
+       public boolean scanDocument(boolean complete)
+           throws java.io.IOException, <A href="#exception">XNIException</A>;
+      </CODE>
+     &nbsp;
+      </FONT></TD>
+    </TR>
+   </TABLE>
+  </FONT></TD></TR></TABLE><BR>
+  <A name="dtd-scanner"><!--anchor--></A>
+  <TABLE border="0" cellpadding="0" cellspacing="0" width="484"><TR><TD bgcolor="666699" colspan="2" width="484"><TABLE border="0" cellpadding="0" cellspacing="0" width="484"><TR><TD bgcolor="#039acc" height="1" width="1"><IMG border="0" height="1" hspace="0" src="resources/void.gif" vspace="0" width="1"></TD><TD bgcolor="#039acc" height="1" width="482"><IMG border="0" height="1" hspace="0" src="resources/void.gif" vspace="0" width="482"></TD><TD bgcolor="#0086b2" height="1" width="1"><IMG border="0" height="1" hspace="0" src="resources/void.gif" vspace="0" width="1"></TD></TR><TR><TD bgcolor="#039acc" width="1"><IMG border="0" height="1" hspace="0" src="resources/void.gif" vspace="0" width="1"></TD><TD bgcolor="#0086b2" width="482"><FONT color="#ffffff" face="arial,helvetica,sanserif"><IMG border="0" height="2" hspace="0" src="resources/void.gif" vspace="0" width="2"><B>Interface XMLDTDScanner</B></FONT></TD><TD bgcolor="#017299" width="1"><IMG border="0" height="1" hspace="0" src="resources/void.gif" vspace="0" width="1"></TD></TR><TR><TD bgcolor="#0086b2" height="1" width="1"><IMG border="0" height="1" hspace="0" src="resources/void.gif" vspace="0" width="1"></TD><TD bgcolor="#017299" height="1" width="482"><IMG border="0" height="1" hspace="0" src="resources/void.gif" vspace="0" width="482"></TD><TD bgcolor="#017299" height="1" width="1"><IMG border="0" height="1" hspace="0" src="resources/void.gif" vspace="0" width="1"></TD></TR></TABLE></TD></TR><TR><TD width="10">&nbsp;</TD><TD width="474"><FONT color="#000000" face="arial,helvetica,sanserif" size="-1">
+   <P>
+    This interface defines a DTD scanner. Typically, scanning of
+    the DTD internal subset is initiated from the XML document 
+    scanner so the input source is implicitly the same as the
+    one used by the document scanner. Therefore, the 
+    <CODE>setInputSource</CODE> method should only be called before
+    scanning of the DTD external subset.
+   </P>
+   <TABLE border="0" cellpadding="2" cellspacing="2" width="100%">
+    <TR>
+     <TD align="center" bgcolor="#039acc" colspan="1" rowspan="1" valign="center"><FONT color="#ffffff" face="arial,helvetica,sanserif" size="-1"><B>
+      Extends <A href="#dtd-source">XMLDTDSource</A>,
+      <A href="#dtd-content-model-source">XMLDTDContentModelSource</A>
+     </B>&nbsp;
+      </FONT></TD>
+    </TR>
+    <TR><TD align="center" bgcolor="#039acc" colspan="1" rowspan="1" valign="center"><FONT color="#ffffff" face="arial,helvetica,sanserif" size="-1"><B>Methods</B>&nbsp;
+      </FONT></TD></TR>
+    <TR>
+     <TD align="" bgcolor="#a0ddf0" colspan="1" rowspan="1" valign="top"><FONT color="#000000" face="arial,helvetica,sanserif" size="-1">
+      <CODE>
+       public void setInputSource(
+           <A href="#input-source">XMLInputSource</A> source
+           ) throws java.io.IOException;
+      </CODE>
+     &nbsp;
+      </FONT></TD>
+    </TR>
+    <TR>
+     <TD align="" bgcolor="#a0ddf0" colspan="1" rowspan="1" valign="top"><FONT color="#000000" face="arial,helvetica,sanserif" size="-1">
+      <CODE>
+       public boolean scanDTDInternalSubset(
+           boolean complete,
+	   boolean standalone,
+	   boolean hasExternalSubset
+	   ) throws java.io.IOException, <A href="#exception">XNIException</A>;
+      </CODE>
+     &nbsp;
+      </FONT></TD>
+    </TR>
+    <TR>
+     <TD align="" bgcolor="#a0ddf0" colspan="1" rowspan="1" valign="top"><FONT color="#000000" face="arial,helvetica,sanserif" size="-1">
+      <CODE>
+       public boolean scanDTDExternalSubset(
+           boolean complete
+	   ) throws java.io.IOException, <A href="#exception">XNIException</A>;
+      </CODE>
+     &nbsp;
+      </FONT></TD>
+    </TR>
+   </TABLE>
+  </FONT></TD></TR></TABLE><BR>
+  <P>
+   Notice how each scanner interface's scanning methods take a
+   <CODE>complete</CODE> parameter and returns a boolean. This
+   allows (but does not require) scanners that implement these
+   interfaces to provide &quot;pull&quot; parsing behaviour in which the
+   application drives the parser's operation instead of having
+   parsing events &quot;pushed&quot; to the registered handlers.
+  </P>
+  <P>
+   After the scanners, zero or filters may be present in a parser
+   configuration pipeline. A document pipeline filter implements the
+   <A href="xni-core.html#document-handler">XMLDocumentHandler</A>
+   interface from the XNI Core Interfaces as well as the
+   <A href="#document-source">XMLDocumentSource</A>
+   interface which allows filters to be chained together in
+   the pipeline. There are equivalents source interfaces for the
+   DTD information as well.
+  </P>
+  <A name="document-source"><!--anchor--></A>
+  <TABLE border="0" cellpadding="0" cellspacing="0" width="484"><TR><TD bgcolor="666699" colspan="2" width="484"><TABLE border="0" cellpadding="0" cellspacing="0" width="484"><TR><TD bgcolor="#039acc" height="1" width="1"><IMG border="0" height="1" hspace="0" src="resources/void.gif" vspace="0" width="1"></TD><TD bgcolor="#039acc" height="1" width="482"><IMG border="0" height="1" hspace="0" src="resources/void.gif" vspace="0" width="482"></TD><TD bgcolor="#0086b2" height="1" width="1"><IMG border="0" height="1" hspace="0" src="resources/void.gif" vspace="0" width="1"></TD></TR><TR><TD bgcolor="#039acc" width="1"><IMG border="0" height="1" hspace="0" src="resources/void.gif" vspace="0" width="1"></TD><TD bgcolor="#0086b2" width="482"><FONT color="#ffffff" face="arial,helvetica,sanserif"><IMG border="0" height="2" hspace="0" src="resources/void.gif" vspace="0" width="2"><B>Interface XMLDocumentSource</B></FONT></TD><TD bgcolor="#017299" width="1"><IMG border="0" height="1" hspace="0" src="resources/void.gif" vspace="0" width="1"></TD></TR><TR><TD bgcolor="#0086b2" height="1" width="1"><IMG border="0" height="1" hspace="0" src="resources/void.gif" vspace="0" width="1"></TD><TD bgcolor="#017299" height="1" width="482"><IMG border="0" height="1" hspace="0" src="resources/void.gif" vspace="0" width="482"></TD><TD bgcolor="#017299" height="1" width="1"><IMG border="0" height="1" hspace="0" src="resources/void.gif" vspace="0" width="1"></TD></TR></TABLE></TD></TR><TR><TD width="10">&nbsp;</TD><TD width="474"><FONT color="#000000" face="arial,helvetica,sanserif" size="-1">
+   <P>This interface allows a document handler to be registered.</P>
+   <TABLE border="0" cellpadding="2" cellspacing="2" width="100%">
+    <TR><TD align="center" bgcolor="#039acc" colspan="1" rowspan="1" valign="center"><FONT color="#ffffff" face="arial,helvetica,sanserif" size="-1"><B>Methods</B>&nbsp;
+      </FONT></TD></TR>
+    <TR>
+     <TD align="" bgcolor="#a0ddf0" colspan="1" rowspan="1" valign="top"><FONT color="#000000" face="arial,helvetica,sanserif" size="-1">
+      <CODE>
+       public void setDocumentHandler(
+           <A href="xni-core.html#document-handler">XMLDocumentHandler</A> handler
+           );
+      </CODE>
+     &nbsp;
+      </FONT></TD>
+    </TR>
+    <TR>
+     <TD align="" bgcolor="#a0ddf0" colspan="1" rowspan="1" valign="top"><FONT color="#000000" face="arial,helvetica,sanserif" size="-1">
+      <CODE>
+       public <A href="xni-core.html#document-handler">XMLDocumentHandler</A> getDocumentHandler();
+      </CODE>
+     &nbsp;
+      </FONT></TD>
+    </TR>
+   </TABLE>
+  </FONT></TD></TR></TABLE><BR>
+  <A name="document-filter"><!--anchor--></A>
+  <TABLE border="0" cellpadding="0" cellspacing="0" width="484"><TR><TD bgcolor="666699" colspan="2" width="484"><TABLE border="0" cellpadding="0" cellspacing="0" width="484"><TR><TD bgcolor="#039acc" height="1" width="1"><IMG border="0" height="1" hspace="0" src="resources/void.gif" vspace="0" width="1"></TD><TD bgcolor="#039acc" height="1" width="482"><IMG border="0" height="1" hspace="0" src="resources/void.gif" vspace="0" width="482"></TD><TD bgcolor="#0086b2" height="1" width="1"><IMG border="0" height="1" hspace="0" src="resources/void.gif" vspace="0" width="1"></TD></TR><TR><TD bgcolor="#039acc" width="1"><IMG border="0" height="1" hspace="0" src="resources/void.gif" vspace="0" width="1"></TD><TD bgcolor="#0086b2" width="482"><FONT color="#ffffff" face="arial,helvetica,sanserif"><IMG border="0" height="2" hspace="0" src="resources/void.gif" vspace="0" width="2"><B>Interface XMLDocumentFilter</B></FONT></TD><TD bgcolor="#017299" width="1"><IMG border="0" height="1" hspace="0" src="resources/void.gif" vspace="0" width="1"></TD></TR><TR><TD bgcolor="#0086b2" height="1" width="1"><IMG border="0" height="1" hspace="0" src="resources/void.gif" vspace="0" width="1"></TD><TD bgcolor="#017299" height="1" width="482"><IMG border="0" height="1" hspace="0" src="resources/void.gif" vspace="0" width="482"></TD><TD bgcolor="#017299" height="1" width="1"><IMG border="0" height="1" hspace="0" src="resources/void.gif" vspace="0" width="1"></TD></TR></TABLE></TD></TR><TR><TD width="10">&nbsp;</TD><TD width="474"><FONT color="#000000" face="arial,helvetica,sanserif" size="-1">
+   <P>
+    Defines a document filter that acts as both a receiver and 
+    an emitter of document events.
+   </P>
+   <TABLE border="0" cellpadding="2" cellspacing="2" width="100%">
+    <TR>
+     <TD align="center" bgcolor="#039acc" colspan="1" rowspan="1" valign="center"><FONT color="#ffffff" face="arial,helvetica,sanserif" size="-1"><B> Extends 
+      <A href="xni-core.html#document-handler">XMLDocumentHandler</A>,
+      <A href="#document-source">XMLDocumentSource</A>
+     </B>&nbsp;
+      </FONT></TD>
+    </TR>
+   </TABLE>
+  </FONT></TD></TR></TABLE><BR>
+  <A name="dtd-source"><!--anchor--></A>
+  <TABLE border="0" cellpadding="0" cellspacing="0" width="484"><TR><TD bgcolor="666699" colspan="2" width="484"><TABLE border="0" cellpadding="0" cellspacing="0" width="484"><TR><TD bgcolor="#039acc" height="1" width="1"><IMG border="0" height="1" hspace="0" src="resources/void.gif" vspace="0" width="1"></TD><TD bgcolor="#039acc" height="1" width="482"><IMG border="0" height="1" hspace="0" src="resources/void.gif" vspace="0" width="482"></TD><TD bgcolor="#0086b2" height="1" width="1"><IMG border="0" height="1" hspace="0" src="resources/void.gif" vspace="0" width="1"></TD></TR><TR><TD bgcolor="#039acc" width="1"><IMG border="0" height="1" hspace="0" src="resources/void.gif" vspace="0" width="1"></TD><TD bgcolor="#0086b2" width="482"><FONT color="#ffffff" face="arial,helvetica,sanserif"><IMG border="0" height="2" hspace="0" src="resources/void.gif" vspace="0" width="2"><B>Interface XMLDTDSource</B></FONT></TD><TD bgcolor="#017299" width="1"><IMG border="0" height="1" hspace="0" src="resources/void.gif" vspace="0" width="1"></TD></TR><TR><TD bgcolor="#0086b2" height="1" width="1"><IMG border="0" height="1" hspace="0" src="resources/void.gif" vspace="0" width="1"></TD><TD bgcolor="#017299" height="1" width="482"><IMG border="0" height="1" hspace="0" src="resources/void.gif" vspace="0" width="482"></TD><TD bgcolor="#017299" height="1" width="1"><IMG border="0" height="1" hspace="0" src="resources/void.gif" vspace="0" width="1"></TD></TR></TABLE></TD></TR><TR><TD width="10">&nbsp;</TD><TD width="474"><FONT color="#000000" face="arial,helvetica,sanserif" size="-1">
+   <P>This interface allows a DTD handler to be registered.</P>
+   <TABLE border="0" cellpadding="2" cellspacing="2" width="100%">
+    <TR><TD align="center" bgcolor="#039acc" colspan="1" rowspan="1" valign="center"><FONT color="#ffffff" face="arial,helvetica,sanserif" size="-1"><B>Methods</B>&nbsp;
+      </FONT></TD></TR>
+    <TR>
+     <TD align="" bgcolor="#a0ddf0" colspan="1" rowspan="1" valign="top"><FONT color="#000000" face="arial,helvetica,sanserif" size="-1">
+      <CODE>
+       public void setDTDHandler(
+           <A href="xni-core.html#dtd-handler">XMLDTDHandler</A> handler
+           );
+      </CODE>
+     &nbsp;
+      </FONT></TD>
+    </TR>
+    <TR>
+     <TD align="" bgcolor="#a0ddf0" colspan="1" rowspan="1" valign="top"><FONT color="#000000" face="arial,helvetica,sanserif" size="-1">
+      <CODE>
+       public <A href="xni-core.html#dtd-handler">XMLDTDHandler</A> getDTDHandler();
+      </CODE>
+     &nbsp;
+      </FONT></TD>
+    </TR>
+   </TABLE>
+  </FONT></TD></TR></TABLE><BR>
+  <A name="dtd-filter"><!--anchor--></A>
+  <TABLE border="0" cellpadding="0" cellspacing="0" width="484"><TR><TD bgcolor="666699" colspan="2" width="484"><TABLE border="0" cellpadding="0" cellspacing="0" width="484"><TR><TD bgcolor="#039acc" height="1" width="1"><IMG border="0" height="1" hspace="0" src="resources/void.gif" vspace="0" width="1"></TD><TD bgcolor="#039acc" height="1" width="482"><IMG border="0" height="1" hspace="0" src="resources/void.gif" vspace="0" width="482"></TD><TD bgcolor="#0086b2" height="1" width="1"><IMG border="0" height="1" hspace="0" src="resources/void.gif" vspace="0" width="1"></TD></TR><TR><TD bgcolor="#039acc" width="1"><IMG border="0" height="1" hspace="0" src="resources/void.gif" vspace="0" width="1"></TD><TD bgcolor="#0086b2" width="482"><FONT color="#ffffff" face="arial,helvetica,sanserif"><IMG border="0" height="2" hspace="0" src="resources/void.gif" vspace="0" width="2"><B>Interface XMLDTDFilter</B></FONT></TD><TD bgcolor="#017299" width="1"><IMG border="0" height="1" hspace="0" src="resources/void.gif" vspace="0" width="1"></TD></TR><TR><TD bgcolor="#0086b2" height="1" width="1"><IMG border="0" height="1" hspace="0" src="resources/void.gif" vspace="0" width="1"></TD><TD bgcolor="#017299" height="1" width="482"><IMG border="0" height="1" hspace="0" src="resources/void.gif" vspace="0" width="482"></TD><TD bgcolor="#017299" height="1" width="1"><IMG border="0" height="1" hspace="0" src="resources/void.gif" vspace="0" width="1"></TD></TR></TABLE></TD></TR><TR><TD width="10">&nbsp;</TD><TD width="474"><FONT color="#000000" face="arial,helvetica,sanserif" size="-1">
+   <P>
+    Defines a DTD filter that acts as both a receiver and 
+    an emitter of DTD events.
+   </P>
+   <TABLE border="0" cellpadding="2" cellspacing="2" width="100%">
+    <TR>
+     <TD align="center" bgcolor="#039acc" colspan="1" rowspan="1" valign="center"><FONT color="#ffffff" face="arial,helvetica,sanserif" size="-1"><B> Extends 
+      <A href="xni-core.html#dtd-handler">XMLDTDHandler</A>,
+      <A href="#dtd-source">XMLDTDSource</A>
+     </B>&nbsp;
+      </FONT></TD>
+    </TR>
+   </TABLE>
+  </FONT></TD></TR></TABLE><BR>
+  <A name="dtd-content-model-source"><!--anchor--></A>
+  <TABLE border="0" cellpadding="0" cellspacing="0" width="484"><TR><TD bgcolor="666699" colspan="2" width="484"><TABLE border="0" cellpadding="0" cellspacing="0" width="484"><TR><TD bgcolor="#039acc" height="1" width="1"><IMG border="0" height="1" hspace="0" src="resources/void.gif" vspace="0" width="1"></TD><TD bgcolor="#039acc" height="1" width="482"><IMG border="0" height="1" hspace="0" src="resources/void.gif" vspace="0" width="482"></TD><TD bgcolor="#0086b2" height="1" width="1"><IMG border="0" height="1" hspace="0" src="resources/void.gif" vspace="0" width="1"></TD></TR><TR><TD bgcolor="#039acc" width="1"><IMG border="0" height="1" hspace="0" src="resources/void.gif" vspace="0" width="1"></TD><TD bgcolor="#0086b2" width="482"><FONT color="#ffffff" face="arial,helvetica,sanserif"><IMG border="0" height="2" hspace="0" src="resources/void.gif" vspace="0" width="2"><B>Interface XMLDTDContentModelSource</B></FONT></TD><TD bgcolor="#017299" width="1"><IMG border="0" height="1" hspace="0" src="resources/void.gif" vspace="0" width="1"></TD></TR><TR><TD bgcolor="#0086b2" height="1" width="1"><IMG border="0" height="1" hspace="0" src="resources/void.gif" vspace="0" width="1"></TD><TD bgcolor="#017299" height="1" width="482"><IMG border="0" height="1" hspace="0" src="resources/void.gif" vspace="0" width="482"></TD><TD bgcolor="#017299" height="1" width="1"><IMG border="0" height="1" hspace="0" src="resources/void.gif" vspace="0" width="1"></TD></TR></TABLE></TD></TR><TR><TD width="10">&nbsp;</TD><TD width="474"><FONT color="#000000" face="arial,helvetica,sanserif" size="-1">
+   <P>This interface allows a DTD content model handler to be registered.</P>
+   <TABLE border="0" cellpadding="2" cellspacing="2" width="100%">
+    <TR><TD align="center" bgcolor="#039acc" colspan="1" rowspan="1" valign="center"><FONT color="#ffffff" face="arial,helvetica,sanserif" size="-1"><B>Methods</B>&nbsp;
+      </FONT></TD></TR>
+    <TR>
+     <TD align="" bgcolor="#a0ddf0" colspan="1" rowspan="1" valign="top"><FONT color="#000000" face="arial,helvetica,sanserif" size="-1">
+      <CODE>
+       public void setDTDContentModelHandler(
+           <A href="xni-core.html#dtd-content-model-handler">XMLDTDContentModelHandler</A> handler
+           );
+      </CODE>
+     &nbsp;
+      </FONT></TD>
+    </TR>
+    <TR>
+     <TD align="" bgcolor="#a0ddf0" colspan="1" rowspan="1" valign="top"><FONT color="#000000" face="arial,helvetica,sanserif" size="-1">
+      <CODE>
+       public <A href="xni-core.html#dtd-content-model-handler">XMLDTDContentModelHandler</A> getDTDContentModelHandler();
+      </CODE>
+     &nbsp;
+      </FONT></TD>
+    </TR>
+   </TABLE>
+  </FONT></TD></TR></TABLE><BR>
+  <A name="dtd-content-model-filter"><!--anchor--></A>
+  <TABLE border="0" cellpadding="0" cellspacing="0" width="484"><TR><TD bgcolor="666699" colspan="2" width="484"><TABLE border="0" cellpadding="0" cellspacing="0" width="484"><TR><TD bgcolor="#039acc" height="1" width="1"><IMG border="0" height="1" hspace="0" src="resources/void.gif" vspace="0" width="1"></TD><TD bgcolor="#039acc" height="1" width="482"><IMG border="0" height="1" hspace="0" src="resources/void.gif" vspace="0" width="482"></TD><TD bgcolor="#0086b2" height="1" width="1"><IMG border="0" height="1" hspace="0" src="resources/void.gif" vspace="0" width="1"></TD></TR><TR><TD bgcolor="#039acc" width="1"><IMG border="0" height="1" hspace="0" src="resources/void.gif" vspace="0" width="1"></TD><TD bgcolor="#0086b2" width="482"><FONT color="#ffffff" face="arial,helvetica,sanserif"><IMG border="0" height="2" hspace="0" src="resources/void.gif" vspace="0" width="2"><B>Interface XMLDTDContentModelFilter</B></FONT></TD><TD bgcolor="#017299" width="1"><IMG border="0" height="1" hspace="0" src="resources/void.gif" vspace="0" width="1"></TD></TR><TR><TD bgcolor="#0086b2" height="1" width="1"><IMG border="0" height="1" hspace="0" src="resources/void.gif" vspace="0" width="1"></TD><TD bgcolor="#017299" height="1" width="482"><IMG border="0" height="1" hspace="0" src="resources/void.gif" vspace="0" width="482"></TD><TD bgcolor="#017299" height="1" width="1"><IMG border="0" height="1" hspace="0" src="resources/void.gif" vspace="0" width="1"></TD></TR></TABLE></TD></TR><TR><TD width="10">&nbsp;</TD><TD width="474"><FONT color="#000000" face="arial,helvetica,sanserif" size="-1">
+   <P>
+    Defines a DTD content model filter that acts as both a receiver and 
+    an emitter of DTD content model events.
+   </P>
+   <TABLE border="0" cellpadding="2" cellspacing="2" width="100%">
+    <TR>
+     <TD align="center" bgcolor="#039acc" colspan="1" rowspan="1" valign="center"><FONT color="#ffffff" face="arial,helvetica,sanserif" size="-1"><B> Extends 
+      <A href="xni-core.html#dtd-content-model-handler">XMLDTDContentModelHandler</A>,
+      <A href="#dtd-content-model-source">XMLDTDContentModelSource</A>
+     </B>&nbsp;
+      </FONT></TD>
+    </TR>
+   </TABLE>
+  </FONT></TD></TR></TABLE><BR>
+  <P>
+   The next section gives some basic examples for using the XNI
+   framework to construct filters and parser configurations.
+  </P>
+ </FONT></TD></TR></TABLE><BR>
+ <A name="examples"><!--anchor--></A>
+ <TABLE border="0" cellpadding="0" cellspacing="0" width="494"><TR><TD bgcolor="666699" colspan="2" width="494"><TABLE border="0" cellpadding="0" cellspacing="0" width="494"><TR><TD bgcolor="#039acc" height="1" width="1"><IMG border="0" height="1" hspace="0" src="resources/void.gif" vspace="0" width="1"></TD><TD bgcolor="#039acc" height="1" width="492"><IMG border="0" height="1" hspace="0" src="resources/void.gif" vspace="0" width="492"></TD><TD bgcolor="#0086b2" height="1" width="1"><IMG border="0" height="1" hspace="0" src="resources/void.gif" vspace="0" width="1"></TD></TR><TR><TD bgcolor="#039acc" width="1"><IMG border="0" height="1" hspace="0" src="resources/void.gif" vspace="0" width="1"></TD><TD bgcolor="#0086b2" width="492"><FONT color="#ffffff" face="arial,helvetica,sanserif" size="+1"><IMG border="0" height="2" hspace="0" src="resources/void.gif" vspace="0" width="2"><B>Examples</B></FONT></TD><TD bgcolor="#017299" width="1"><IMG border="0" height="1" hspace="0" src="resources/void.gif" vspace="0" width="1"></TD></TR><TR><TD bgcolor="#0086b2" height="1" width="1"><IMG border="0" height="1" hspace="0" src="resources/void.gif" vspace="0" width="1"></TD><TD bgcolor="#017299" height="1" width="492"><IMG border="0" height="1" hspace="0" src="resources/void.gif" vspace="0" width="492"></TD><TD bgcolor="#017299" height="1" width="1"><IMG border="0" height="1" hspace="0" src="resources/void.gif" vspace="0" width="1"></TD></TR></TABLE></TD></TR><TR><TD width="10">&nbsp;</TD><TD width="484"><FONT color="#000000" face="arial,helvetica,sanserif">
+  <P>
+   The following samples show how to create various parser components
+   and parser configurations. The XNI samples included with the Xerces2
+   reference release provide a convenient way to test a parser
+   configuration. For example, to test the 
+   <A href="#csv-parser-config">CSV Parser Configuration</A>
+   example, run the following command:
+  </P>
+  <DIV align="right"><TABLE border="0" cellpadding="0" cellspacing="4" width="464"><TR><TD bgcolor="#0086b2" height="1" width="1"><IMG border="0" height="1" hspace="0" src="resources/void.gif" vspace="0" width="1"></TD><TD bgcolor="#0086b2" height="1" width="462"><IMG border="0" height="1" hspace="0" src="resources/void.gif" vspace="0" width="462"></TD><TD bgcolor="#0086b2" height="1" width="1"><IMG border="0" height="1" hspace="0" src="resources/void.gif" vspace="0" width="1"></TD></TR><TR><TD bgcolor="#0086b2" width="1"><IMG border="0" height="1" hspace="0" src="resources/void.gif" vspace="0" width="1"></TD><TD bgcolor="#ffffff" width="462"><FONT size="-1"><PRE>java xni.DocumentTracer -p CSVConfiguration document.csv</PRE></FONT></TD><TD bgcolor="#0086b2" width="1"><IMG border="0" height="1" hspace="0" src="resources/void.gif" vspace="0" width="1"></TD></TR><TR><TD bgcolor="#0086b2" height="1" width="1"><IMG border="0" height="1" hspace="0" src="resources/void.gif" vspace="0" width="1"></TD><TD bgcolor="#0086b2" height="1" width="462"><IMG border="0" height="1" hspace="0" src="resources/void.gif" vspace="0" width="462"></TD><TD bgcolor="#0086b2" height="1" width="1"><IMG border="0" height="1" hspace="0" src="resources/void.gif" vspace="0" width="1"></TD></TR></TABLE></DIV>
+  <P>
+   Or a new CSV parser can be constructed that produces standard
+   SAX events. For example:
+  </P>
+  <DIV align="right"><TABLE border="0" cellpadding="0" cellspacing="4" width="464"><TR><TD bgcolor="#0086b2" height="1" width="1"><IMG border="0" height="1" hspace="0" src="resources/void.gif" vspace="0" width="1"></TD><TD bgcolor="#0086b2" height="1" width="462"><IMG border="0" height="1" hspace="0" src="resources/void.gif" vspace="0" width="462"></TD><TD bgcolor="#0086b2" height="1" width="1"><IMG border="0" height="1" hspace="0" src="resources/void.gif" vspace="0" width="1"></TD></TR><TR><TD bgcolor="#0086b2" width="1"><IMG border="0" height="1" hspace="0" src="resources/void.gif" vspace="0" width="1"></TD><TD bgcolor="#ffffff" width="462"><FONT size="-1"><PRE>import org.apache.xerces.parsers.AbstractSAXParser;
+
+public class CSVParser
+    extends AbstractSAXParser {
+
+    // Constructors
+
+    public CSVParser() {
+        super(new CSVConfiguration());
+    }
+
+} // class CSVParser</PRE></FONT></TD><TD bgcolor="#0086b2" width="1"><IMG border="0" height="1" hspace="0" src="resources/void.gif" vspace="0" width="1"></TD></TR><TR><TD bgcolor="#0086b2" height="1" width="1"><IMG border="0" height="1" hspace="0" src="resources/void.gif" vspace="0" width="1"></TD><TD bgcolor="#0086b2" height="1" width="462"><IMG border="0" height="1" hspace="0" src="resources/void.gif" vspace="0" width="462"></TD><TD bgcolor="#0086b2" height="1" width="1"><IMG border="0" height="1" hspace="0" src="resources/void.gif" vspace="0" width="1"></TD></TR></TABLE></DIV>
+  <P>
+   The following samples are available:
+  </P>
+  <UL>
+   <LI><A href="#abstract-parser-config">Abstract Parser Configuration</A></LI>
+   <LI><A href="#csv-parser-config">CSV Parser Configuration</A></LI>
+  </UL>
+  <A name="abstract-parser-config"><!--anchor--></A>
+  <TABLE border="0" cellpadding="0" cellspacing="0" width="484"><TR><TD bgcolor="666699" colspan="2" width="484"><TABLE border="0" cellpadding="0" cellspacing="0" width="484"><TR><TD bgcolor="#039acc" height="1" width="1"><IMG border="0" height="1" hspace="0" src="resources/void.gif" vspace="0" width="1"></TD><TD bgcolor="#039acc" height="1" width="482"><IMG border="0" height="1" hspace="0" src="resources/void.gif" vspace="0" width="482"></TD><TD bgcolor="#0086b2" height="1" width="1"><IMG border="0" height="1" hspace="0" src="resources/void.gif" vspace="0" width="1"></TD></TR><TR><TD bgcolor="#039acc" width="1"><IMG border="0" height="1" hspace="0" src="resources/void.gif" vspace="0" width="1"></TD><TD bgcolor="#0086b2" width="482"><FONT color="#ffffff" face="arial,helvetica,sanserif"><IMG border="0" height="2" hspace="0" src="resources/void.gif" vspace="0" width="2"><B>Abstract Parser Configuration</B></FONT></TD><TD bgcolor="#017299" width="1"><IMG border="0" height="1" hspace="0" src="resources/void.gif" vspace="0" width="1"></TD></TR><TR><TD bgcolor="#0086b2" height="1" width="1"><IMG border="0" height="1" hspace="0" src="resources/void.gif" vspace="0" width="1"></TD><TD bgcolor="#017299" height="1" width="482"><IMG border="0" height="1" hspace="0" src="resources/void.gif" vspace="0" width="482"></TD><TD bgcolor="#017299" height="1" width="1"><IMG border="0" height="1" hspace="0" src="resources/void.gif" vspace="0" width="1"></TD></TR></TABLE></TD></TR><TR><TD width="10">&nbsp;</TD><TD width="474"><FONT color="#000000" face="arial,helvetica,sanserif" size="-1">
+   <P>
+    This abstract parser configuration simply helps manage
+    components, features and properties, and other tasks common to
+    all parser configurations.
+   </P>
+   <DIV align="right"><TABLE border="0" cellpadding="0" cellspacing="4" width="464"><TR><TD bgcolor="#0086b2" height="1" width="1"><IMG border="0" height="1" hspace="0" src="resources/void.gif" vspace="0" width="1"></TD><TD bgcolor="#0086b2" height="1" width="462"><IMG border="0" height="1" hspace="0" src="resources/void.gif" vspace="0" width="462"></TD><TD bgcolor="#0086b2" height="1" width="1"><IMG border="0" height="1" hspace="0" src="resources/void.gif" vspace="0" width="1"></TD></TR><TR><TD bgcolor="#0086b2" width="1"><IMG border="0" height="1" hspace="0" src="resources/void.gif" vspace="0" width="1"></TD><TD bgcolor="#ffffff" width="462"><FONT size="-1"><PRE>import java.io.FileInputStream;
+import java.io.InputStream;
+import java.io.IOException;
+import java.net.MalformedURLException;
+import java.net.URL;
+import java.util.Hashtable;
+import java.util.Locale;
+import java.util.Vector;
+
+import org.apache.xerces.xni.XMLDocumentHandler;
+import org.apache.xerces.xni.XMLDTDHandler;
+import org.apache.xerces.xni.XMLDTDContentModelHandler;
+import org.apache.xerces.xni.XNIException;
+
+import org.apache.xerces.xni.parser.XMLComponent;
+import org.apache.xerces.xni.parser.XMLConfigurationException;
+import org.apache.xerces.xni.parser.XMLEntityResolver;
+import org.apache.xerces.xni.parser.XMLErrorHandler;
+import org.apache.xerces.xni.parser.XMLInputSource;
+import org.apache.xerces.xni.parser.XMLParserConfiguration;
+
+public abstract class AbstractConfiguration 
+    implements XMLParserConfiguration {
+
+    // Data
+
+    protected final Vector fRecognizedFeatures = new Vector();
+    protected final Vector fRecognizedProperties = new Vector();
+    protected final Hashtable fFeatures = new Hashtable();
+    protected final Hashtable fProperties = new Hashtable();
+
+    protected XMLEntityResolver fEntityResolver;
+    protected XMLErrorHandler fErrorHandler;
+    protected XMLDocumentHandler fDocumentHandler;
+    protected XMLDTDHandler fDTDHandler;
+    protected XMLDTDContentModelHandler fDTDContentModelHandler;
+    
+    protected Locale fLocale;
+
+    protected final Vector fComponents = new Vector();
+
+    // XMLParserConfiguration methods
+
+    public void addRecognizedFeatures(String[] featureIds) {
+        int length = featureIds != null ? featureIds.length : 0;
+        for (int i = 0; i &lt; length; i++) {
+            String featureId = featureIds[i];
+            if (!fRecognizedFeatures.contains(featureId)) {
+                fRecognizedFeatures.addElement(featureId);
+            }
+        }
+    }
+    
+    public void setFeature(String featureId, boolean state)
+        throws XMLConfigurationException {
+        if (!fRecognizedFeatures.contains(featureId)) {
+            short type = XMLConfigurationException.NOT_RECOGNIZED;
+            throw new XMLConfigurationException(type, featureId);
+        }
+        fFeatures.put(featureId, state ? Boolean.TRUE : Boolean.FALSE);
+        int length = fComponents.size();
+        for (int i = 0; i &lt; length; i++) {
+            XMLComponent component = (XMLComponent)fComponents.elementAt(i);
+            component.setFeature(featureId, state);
+        }
+    }
+
+    public boolean getFeature(String featureId) 
+        throws XMLConfigurationException {
+        if (!fRecognizedFeatures.contains(featureId)) {
+            short type = XMLConfigurationException.NOT_RECOGNIZED;
+            throw new XMLConfigurationException(type, featureId);
+        }
+        Boolean state = (Boolean)fFeatures.get(featureId);
+        return state != null ? state.booleanValue() : false;
+    }
+    
+    public void addRecognizedProperties(String[] propertyIds) {
+        int length = propertyIds != null ? propertyIds.length : 0;
+        for (int i = 0; i &lt; length; i++) {
+            String propertyId = propertyIds[i];
+            if (!fRecognizedProperties.contains(propertyId)) {
+                fRecognizedProperties.addElement(propertyId);
+            }
+        }
+    }
+
+    public void setProperty(String propertyId, Object value) 
+        throws XMLConfigurationException {
+        if (!fRecognizedProperties.contains(propertyId)) {
+            short type = XMLConfigurationException.NOT_RECOGNIZED;
+            throw new XMLConfigurationException(type, propertyId);
+        }
+        if (value != null) {
+            fProperties.put(propertyId, value);
+        }
+        else {
+            fProperties.remove(propertyId);
+        }
+        int length = fComponents.size();
+        for (int i = 0; i &lt; length; i++) {
+            XMLComponent component = (XMLComponent)fComponents.elementAt(i);
+            component.setProperty(propertyId, value);
+        }
+    }
+
+    public Object getProperty(String propertyId) 
+        throws XMLConfigurationException {
+        if (!fRecognizedProperties.contains(propertyId)) {
+            short type = XMLConfigurationException.NOT_RECOGNIZED;
+            throw new XMLConfigurationException(type, propertyId);
+        }
+        Object value = fProperties.get(propertyId);
+        return value;
+    }
+
+    public void setEntityResolver(XMLEntityResolver resolver) {
+        fEntityResolver = resolver;
+    }
+    
+    public XMLEntityResolver getEntityResolver() {
+        return fEntityResolver;
+    }
+
+    public void setErrorHandler(XMLErrorHandler handler) {
+        fErrorHandler = handler;
+    }
+    
+    public XMLErrorHandler getErrorHandler() {
+        return fErrorHandler;
+    }
+
+    public void setDocumentHandler(XMLDocumentHandler handler) {
+        fDocumentHandler = handler;
+    }
+
+    public XMLDocumentHandler getDocumentHandler() {
+        return fDocumentHandler;
+    }
+
+    public void setDTDHandler(XMLDTDHandler handler) {
+        fDTDHandler = handler;
+    }
+
+    public XMLDTDHandler getDTDHandler() {
+        return fDTDHandler;
+    }
+
+    public void setDTDContentModelHandler(XMLDTDContentModelHandler handler) {
+        fDTDContentModelHandler = handler;
+    }
+    
+    public XMLDTDContentModelHandler getDTDContentModelHandler() {
+        return fDTDContentModelHandler;
+    }
+
+    public abstract void parse(XMLInputSource inputSource) 
+        throws IOException, XNIException;
+    
+    public void setLocale(Locale locale) {
+        fLocale = locale;
+    }
+    
+    // Protected methods
+
+    protected void addComponent(XMLComponent component) {
+        if (!fComponents.contains(component)) {
+            fComponents.addElement(component);
+            addRecognizedFeatures(component.getRecognizedFeatures());
+            addRecognizedProperties(component.getRecognizedProperties());
+        }
+    }
+
+    protected void resetComponents() 
+        throws XMLConfigurationException {
+        int length = fComponents.size();
+        for (int i = 0; i &lt; length; i++) {
+            XMLComponent component = (XMLComponent)fComponents.elementAt(i);
+            component.reset(this);
+        }
+    }
+
+    protected void openInputSourceStream(XMLInputSource source)
+        throws IOException {
+        if (source.getCharacterStream() != null) {
+            return;
+        }
+        InputStream stream = source.getByteStream();
+        if (stream == null) {
+            String systemId = source.getSystemId();
+            try {
+                URL url = new URL(systemId);
+                stream = url.openStream();
+            }
+            catch (MalformedURLException e) {
+                stream = new FileInputStream(systemId);
+            }
+            source.setByteStream(stream);
+        }
+    }
+
+} // class AbstractConfiguration</PRE></FONT></TD><TD bgcolor="#0086b2" width="1"><IMG border="0" height="1" hspace="0" src="resources/void.gif" vspace="0" width="1"></TD></TR><TR><TD bgcolor="#0086b2" height="1" width="1"><IMG border="0" height="1" hspace="0" src="resources/void.gif" vspace="0" width="1"></TD><TD bgcolor="#0086b2" height="1" width="462"><IMG border="0" height="1" hspace="0" src="resources/void.gif" vspace="0" width="462"></TD><TD bgcolor="#0086b2" height="1" width="1"><IMG border="0" height="1" hspace="0" src="resources/void.gif" vspace="0" width="1"></TD></TR></TABLE></DIV>
+  </FONT></TD></TR></TABLE><BR>
+  <A name="csv-parser-config"><!--anchor--></A>
+  <TABLE border="0" cellpadding="0" cellspacing="0" width="484"><TR><TD bgcolor="666699" colspan="2" width="484"><TABLE border="0" cellpadding="0" cellspacing="0" width="484"><TR><TD bgcolor="#039acc" height="1" width="1"><IMG border="0" height="1" hspace="0" src="resources/void.gif" vspace="0" width="1"></TD><TD bgcolor="#039acc" height="1" width="482"><IMG border="0" height="1" hspace="0" src="resources/void.gif" vspace="0" width="482"></TD><TD bgcolor="#0086b2" height="1" width="1"><IMG border="0" height="1" hspace="0" src="resources/void.gif" vspace="0" width="1"></TD></TR><TR><TD bgcolor="#039acc" width="1"><IMG border="0" height="1" hspace="0" src="resources/void.gif" vspace="0" width="1"></TD><TD bgcolor="#0086b2" width="482"><FONT color="#ffffff" face="arial,helvetica,sanserif"><IMG border="0" height="2" hspace="0" src="resources/void.gif" vspace="0" width="2"><B>CSV Parser Configuration</B></FONT></TD><TD bgcolor="#017299" width="1"><IMG border="0" height="1" hspace="0" src="resources/void.gif" vspace="0" width="1"></TD></TR><TR><TD bgcolor="#0086b2" height="1" width="1"><IMG border="0" height="1" hspace="0" src="resources/void.gif" vspace="0" width="1"></TD><TD bgcolor="#017299" height="1" width="482"><IMG border="0" height="1" hspace="0" src="resources/void.gif" vspace="0" width="482"></TD><TD bgcolor="#017299" height="1" width="1"><IMG border="0" height="1" hspace="0" src="resources/void.gif" vspace="0" width="1"></TD></TR></TABLE></TD></TR><TR><TD width="10">&nbsp;</TD><TD width="474"><FONT color="#000000" face="arial,helvetica,sanserif" size="-1">
+   <P>
+    This example is a very simple parser configuration that can
+    parse files with comma-separated values (CSV) to generate
+    XML events. For example, the following CSV document:
+   </P>
+   <DIV align="right"><TABLE border="0" cellpadding="0" cellspacing="4" width="464"><TR><TD bgcolor="#0086b2" height="1" width="1"><IMG border="0" height="1" hspace="0" src="resources/void.gif" vspace="0" width="1"></TD><TD bgcolor="#0086b2" height="1" width="462"><IMG border="0" height="1" hspace="0" src="resources/void.gif" vspace="0" width="462"></TD><TD bgcolor="#0086b2" height="1" width="1"><IMG border="0" height="1" hspace="0" src="resources/void.gif" vspace="0" width="1"></TD></TR><TR><TD bgcolor="#0086b2" width="1"><IMG border="0" height="1" hspace="0" src="resources/void.gif" vspace="0" width="1"></TD><TD bgcolor="#ffffff" width="462"><FONT size="-1"><PRE>Andy Clark,16 Jan 1973,Cincinnati</PRE></FONT></TD><TD bgcolor="#0086b2" width="1"><IMG border="0" height="1" hspace="0" src="resources/void.gif" vspace="0" width="1"></TD></TR><TR><TD bgcolor="#0086b2" height="1" width="1"><IMG border="0" height="1" hspace="0" src="resources/void.gif" vspace="0" width="1"></TD><TD bgcolor="#0086b2" height="1" width="462"><IMG border="0" height="1" hspace="0" src="resources/void.gif" vspace="0" width="462"></TD><TD bgcolor="#0086b2" height="1" width="1"><IMG border="0" height="1" hspace="0" src="resources/void.gif" vspace="0" width="1"></TD></TR></TABLE></DIV>
+   <P>
+    produces the following XML &quot;document&quot; as represented by the
+    XNI streaming document information:
+   </P>
+   <DIV align="right"><TABLE border="0" cellpadding="0" cellspacing="4" width="464"><TR><TD bgcolor="#0086b2" height="1" width="1"><IMG border="0" height="1" hspace="0" src="resources/void.gif" vspace="0" width="1"></TD><TD bgcolor="#0086b2" height="1" width="462"><IMG border="0" height="1" hspace="0" src="resources/void.gif" vspace="0" width="462"></TD><TD bgcolor="#0086b2" height="1" width="1"><IMG border="0" height="1" hspace="0" src="resources/void.gif" vspace="0" width="1"></TD></TR><TR><TD bgcolor="#0086b2" width="1"><IMG border="0" height="1" hspace="0" src="resources/void.gif" vspace="0" width="1"></TD><TD bgcolor="#ffffff" width="462"><FONT size="-1"><PRE>&lt;?xml version='1.0' encoding='UTF-8'?&gt;
+&lt;!DOCTYPE csv [
+&lt;!ELEMENT csv (row)*&gt;
+&lt;!ELEMENT row (col)*&gt;
+&lt;!ELEMENT col (#PCDATA)&gt;
+]&gt;
+&lt;csv&gt;
+ &lt;row&gt;
+  &lt;col&gt;Andy Clark&lt;/col&gt;
+  &lt;col&gt;16 Jan 1973&lt;/col&gt;
+  &lt;col&gt;Cincinnati&lt;/col&gt;
+ &lt;/row&gt;
+&lt;/csv&gt;</PRE></FONT></TD><TD bgcolor="#0086b2" width="1"><IMG border="0" height="1" hspace="0" src="resources/void.gif" vspace="0" width="1"></TD></TR><TR><TD bgcolor="#0086b2" height="1" width="1"><IMG border="0" height="1" hspace="0" src="resources/void.gif" vspace="0" width="1"></TD><TD bgcolor="#0086b2" height="1" width="462"><IMG border="0" height="1" hspace="0" src="resources/void.gif" vspace="0" width="462"></TD><TD bgcolor="#0086b2" height="1" width="1"><IMG border="0" height="1" hspace="0" src="resources/void.gif" vspace="0" width="1"></TD></TR></TABLE></DIV>
+   <P>
+    Here is the source code for the CSV parser configuration. 
+    Notice that it does not use any components. Rather, it implements
+    the CSV parsing directly in the parser configuration's 
+    <CODE>parse(XMLInputSource)</CODE> method. This demonstrates
+    that you are <I>not</I> required to use the 
+    <CODE>XMLComponent</CODE> interface but it is there for
+    building modular components that can be used in other
+    configurations.
+   </P>
+   <DIV align="right"><TABLE border="0" cellpadding="0" cellspacing="4" width="464"><TR><TD bgcolor="#0086b2" height="1" width="1"><IMG border="0" height="1" hspace="0" src="resources/void.gif" vspace="0" width="1"></TD><TD bgcolor="#0086b2" height="1" width="462"><IMG border="0" height="1" hspace="0" src="resources/void.gif" vspace="0" width="462"></TD><TD bgcolor="#0086b2" height="1" width="1"><IMG border="0" height="1" hspace="0" src="resources/void.gif" vspace="0" width="1"></TD></TR><TR><TD bgcolor="#0086b2" width="1"><IMG border="0" height="1" hspace="0" src="resources/void.gif" vspace="0" width="1"></TD><TD bgcolor="#ffffff" width="462"><FONT size="-1"><PRE>import java.io.BufferedReader;
+import java.io.InputStream;
+import java.io.InputStreamReader;
+import java.io.IOException;
+import java.io.Reader;
+import java.util.StringTokenizer;
+
+import org.apache.xerces.util.XMLAttributesImpl;
+import org.apache.xerces.util.XMLStringBuffer;
+
+import org.apache.xerces.xni.QName;
+import org.apache.xerces.xni.XMLAttributes;
+import org.apache.xerces.xni.XMLDTDContentModelHandler;
+import org.apache.xerces.xni.XNIException;
+
+import org.apache.xerces.xni.parser.XMLInputSource;
+
+public class CSVConfiguration
+    extends AbstractConfiguration {
+
+    // Constants
+
+    protected static final QName CSV = new QName(null, null, &quot;csv&quot;, null);
+    protected static final QName ROW = new QName(null, null, &quot;row&quot;, null);
+    protected static final QName COL = new QName(null, null, &quot;col&quot;, null);
+    protected static final XMLAttributes EMPTY_ATTRS = new XMLAttributesImpl();
+
+    // Data
+
+    private final XMLStringBuffer fStringBuffer = new XMLStringBuffer();
+
+    // XMLParserConfiguration methods
+
+    public void setFeature(String featureId, boolean state) {}
+    public boolean getFeature(String featureId) { return false; }
+    public void setProperty(String propertyId, Object value) {}
+    public Object getProperty(String propertyId) { return null; }
+
+    public void parse(XMLInputSource source) 
+        throws IOException, XNIException {
+
+        // get reader
+        openInputSourceStream(source);
+        Reader reader = source.getCharacterStream();
+        if (reader == null) {
+            InputStream stream = source.getByteStream();
+            reader = new InputStreamReader(stream);
+        }
+        BufferedReader bufferedReader = new BufferedReader(reader);
+
+        // start document
+        if (fDocumentHandler != null) {
+            fDocumentHandler.startDocument(null, &quot;UTF-8&quot;);
+            fDocumentHandler.xmlDecl(&quot;1.0&quot;, &quot;UTF-8&quot;, null);
+            fDocumentHandler.doctypeDecl(&quot;csv&quot;, null, null);
+        }
+        if (fDTDHandler != null) {
+            fDTDHandler.startDTD(null);
+            fDTDHandler.elementDecl(&quot;csv&quot;, &quot;(row)*&quot;);
+            fDTDHandler.elementDecl(&quot;row&quot;, &quot;(col)*&quot;);
+            fDTDHandler.elementDecl(&quot;col&quot;, &quot;(#PCDATA)&quot;);
+        }
+        if (fDTDContentModelHandler != null) {
+            fDTDContentModelHandler.startContentModel(&quot;csv&quot;);
+            fDTDContentModelHandler.startGroup();
+            fDTDContentModelHandler.element(&quot;row&quot;);
+            fDTDContentModelHandler.endGroup();
+            short csvOccurs = XMLDTDContentModelHandler.OCCURS_ZERO_OR_MORE;
+            fDTDContentModelHandler.occurrence(csvOccurs);
+            fDTDContentModelHandler.endContentModel();
+            
+            fDTDContentModelHandler.startContentModel(&quot;row&quot;);
+            fDTDContentModelHandler.startGroup();
+            fDTDContentModelHandler.element(&quot;col&quot;);
+            fDTDContentModelHandler.endGroup();
+            short rowOccurs = XMLDTDContentModelHandler.OCCURS_ZERO_OR_MORE;
+            fDTDContentModelHandler.occurrence(rowOccurs);
+            fDTDContentModelHandler.endContentModel();
+        
+            fDTDContentModelHandler.startContentModel(&quot;col&quot;);
+            fDTDContentModelHandler.startGroup();
+            fDTDContentModelHandler.pcdata();
+            fDTDContentModelHandler.endGroup();
+            fDTDContentModelHandler.endContentModel();
+        }
+        if (fDTDHandler != null) {
+            fDTDHandler.endDTD();
+        }
+        if (fDocumentHandler != null) {
+            fDocumentHandler.startElement(CSV, EMPTY_ATTRS);
+        }
+
+        // read lines
+        String line;
+        while ((line = bufferedReader.readLine()) != null) {
+            if (fDocumentHandler != null) {
+                fDocumentHandler.startElement(ROW, EMPTY_ATTRS);
+                StringTokenizer tokenizer = new StringTokenizer(line, &quot;,&quot;);
+                while (tokenizer.hasMoreTokens()) {
+                    fDocumentHandler.startElement(COL, EMPTY_ATTRS);
+                    String token = tokenizer.nextToken();
+                    fStringBuffer.clear();
+                    fStringBuffer.append(token);
+                    fDocumentHandler.characters(fStringBuffer);
+                    fDocumentHandler.endElement(COL);
+                }
+                fDocumentHandler.endElement(ROW);
+            }
+        }
+        bufferedReader.close();
+
+        // end document
+        if (fDocumentHandler != null) {
+            fDocumentHandler.endElement(CSV);
+            fDocumentHandler.endDocument();
+        }
+
+    }
+    
+} // class CSVConfiguration</PRE></FONT></TD><TD bgcolor="#0086b2" width="1"><IMG border="0" height="1" hspace="0" src="resources/void.gif" vspace="0" width="1"></TD></TR><TR><TD bgcolor="#0086b2" height="1" width="1"><IMG border="0" height="1" hspace="0" src="resources/void.gif" vspace="0" width="1"></TD><TD bgcolor="#0086b2" height="1" width="462"><IMG border="0" height="1" hspace="0" src="resources/void.gif" vspace="0" width="462"></TD><TD bgcolor="#0086b2" height="1" width="1"><IMG border="0" height="1" hspace="0" src="resources/void.gif" vspace="0" width="1"></TD></TR></TABLE></DIV>
+  <P>
+   The source code is longer than it actually needs to be because
+   it also emits the DTD information necessary for a validating
+   parser to validate the document. The real core of the example
+   is the following:
+  </P>
+  <DIV align="right"><TABLE border="0" cellpadding="0" cellspacing="4" width="464"><TR><TD bgcolor="#0086b2" height="1" width="1"><IMG border="0" height="1" hspace="0" src="resources/void.gif" vspace="0" width="1"></TD><TD bgcolor="#0086b2" height="1" width="462"><IMG border="0" height="1" hspace="0" src="resources/void.gif" vspace="0" width="462"></TD><TD bgcolor="#0086b2" height="1" width="1"><IMG border="0" height="1" hspace="0" src="resources/void.gif" vspace="0" width="1"></TD></TR><TR><TD bgcolor="#0086b2" width="1"><IMG border="0" height="1" hspace="0" src="resources/void.gif" vspace="0" width="1"></TD><TD bgcolor="#ffffff" width="462"><FONT size="-1"><PRE>fDocumentHandler.startDocument(null, &quot;UTF-8&quot;);
+fDocumentHandler.startElement(CSV, EMPTY_ATTRS);
+
+String line;
+while ((line = bufferedReader.readLine()) != null) {
+    if (fDocumentHandler != null) {
+        fDocumentHandler.startElement(ROW, EMPTY_ATTRS);
+        
+	StringTokenizer tokenizer = new StringTokenizer(line, &quot;,&quot;);
+        while (tokenizer.hasMoreTokens()) {
+            fDocumentHandler.startElement(COL, EMPTY_ATTRS);
+            String token = tokenizer.nextToken();
+            fStringBuffer.clear();
+            fStringBuffer.append(token);
+            fDocumentHandler.characters(fStringBuffer);
+            fDocumentHandler.endElement(COL);
+        }
+	
+        fDocumentHandler.endElement(ROW);
+    }
+}
+
+fDocumentHandler.endElement(CSV);
+fDocumentHandler.endDocument();</PRE></FONT></TD><TD bgcolor="#0086b2" width="1"><IMG border="0" height="1" hspace="0" src="resources/void.gif" vspace="0" width="1"></TD></TR><TR><TD bgcolor="#0086b2" height="1" width="1"><IMG border="0" height="1" hspace="0" src="resources/void.gif" vspace="0" width="1"></TD><TD bgcolor="#0086b2" height="1" width="462"><IMG border="0" height="1" hspace="0" src="resources/void.gif" vspace="0" width="462"></TD><TD bgcolor="#0086b2" height="1" width="1"><IMG border="0" height="1" hspace="0" src="resources/void.gif" vspace="0" width="1"></TD></TR></TABLE></DIV>
+  </FONT></TD></TR></TABLE><BR>
+ </FONT></TD></TR></TABLE><BR>
+</TD></TR></TABLE></TD></TR></TABLE><BR><TABLE border="0" cellpadding="0" cellspacing="0" width="620"><TR><TD bgcolor="#0086b2"><IMG height="1" src="images/dot.gif" width="1"></TD></TR><TR><TD align="center"><FONT color="#0086b2" size="-1"><I>
+              Copyright &copy; 1999-2020 The Apache Software Foundation.
+              All Rights Reserved.
+            </I></FONT></TD></TR></TABLE></BODY></HTML>

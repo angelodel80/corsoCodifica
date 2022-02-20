@@ -1,0 +1,404 @@
+<HTML><HEAD><META content="text/html; charset=utf8" http-equiv="Content-Type"><SCRIPT language="JavaScript" src="resources/script.js" type="text/javascript"></SCRIPT><TITLE>Caching and Preparsing Grammars</TITLE></HEAD><BODY alink="#ff0000" bgcolor="#ffffff" leftmargin="4" link="#0000ff" marginheight="4" marginwidth="4" text="#000000" topmargin="4" vlink="#0000aa"><TABLE border="0" cellpadding="0" cellspacing="0" width="620"><TR><TD align="left" height="60" rowspan="3" valign="top" width="135"><IMG border="0" height="60" hspace="0" src="resources/logo.gif" vspace="0" width="135"></TD><TD align="left" colspan="4" height="5" valign="top" width="456"><IMG border="0" height="5" hspace="0" src="resources/line.gif" vspace="0" width="456"></TD><TD align="left" height="60" rowspan="3" valign="top" width="29"><IMG border="0" height="60" hspace="0" src="resources/right.gif" vspace="0" width="29"></TD></TR><TR><TD align="left" bgcolor="#0086b2" colspan="4" height="35" valign="top" width="456"><IMG alt="" border="0" height="35" hspace="0" src="graphics/faq-grammars-header.jpg" vspace="0" width="456"></TD></TR><TR><TD align="left" height="20" valign="top" width="168"><IMG border="0" height="20" hspace="0" src="resources/bottom.gif" vspace="0" width="168"></TD><TD align="left" height="20" valign="top" width="96"><A href="http://xml.apache.org/" onMouseOut="rolloverOff('xml');" onMouseOver="rolloverOn('xml');" target="new"><IMG alt="http://xml.apache.org/" border="0" height="20" hspace="0" name="xml" onLoad="rolloverLoad('xml','resources/button-xml-hi.gif','resources/button-xml-lo.gif');" src="resources/button-xml-lo.gif" vspace="0" width="96"></A></TD><TD align="left" height="20" valign="top" width="96"><A href="http://www.apache.org/" onMouseOut="rolloverOff('asf');" onMouseOver="rolloverOn('asf');" target="new"><IMG alt="http://www.apache.org/" border="0" height="20" hspace="0" name="asf" onLoad="rolloverLoad('asf','resources/button-asf-hi.gif','resources/button-asf-lo.gif');" src="resources/button-asf-lo.gif" vspace="0" width="96"></A></TD><TD align="left" height="20" valign="top" width="96"><A href="http://www.w3.org/" onMouseOut="rolloverOff('w3c');" onMouseOver="rolloverOn('w3c');" target="new"><IMG alt="http://www.w3.org/" border="0" height="20" hspace="0" name="w3c" onLoad="rolloverLoad('w3c','resources/button-w3c-hi.gif','resources/button-w3c-lo.gif');" src="resources/button-w3c-lo.gif" vspace="0" width="96"></A></TD></TR></TABLE><TABLE border="0" cellpadding="0" cellspacing="0" width="620"><TR><TD align="left" valign="top" width="120"><IMG border="0" height="14" hspace="0" src="resources/join.gif" vspace="0" width="120"><BR>
+ <A href="http://xerces.apache.org/" onMouseOut="rolloverOff('side-ext-2');" onMouseOver="rolloverOn('side-ext-2');"><IMG alt="Home" border="0" height="12" hspace="0" name="side-ext-2" onLoad="rolloverLoad('side-ext-2','graphics/ext-2-label-2.jpg','graphics/ext-2-label-3.jpg');" src="graphics/ext-2-label-3.jpg" vspace="0" width="120"></A><BR>
+ <IMG border="0" height="6" hspace="0" src="resources/separator.gif" vspace="0" width="120"><BR>
+ <A href="index.html" onMouseOut="rolloverOff('side-index');" onMouseOver="rolloverOn('side-index');"><IMG alt="Readme" border="0" height="12" hspace="0" name="side-index" onLoad="rolloverLoad('side-index','graphics/index-label-2.jpg','graphics/index-label-3.jpg');" src="graphics/index-label-3.jpg" vspace="0" width="120"></A><BR>
+ <A href="charter.html" onMouseOut="rolloverOff('side-charter');" onMouseOver="rolloverOn('side-charter');"><IMG alt="Charter" border="0" height="12" hspace="0" name="side-charter" onLoad="rolloverLoad('side-charter','graphics/charter-label-2.jpg','graphics/charter-label-3.jpg');" src="graphics/charter-label-3.jpg" vspace="0" width="120"></A><BR>
+ <A href="releases.html" onMouseOut="rolloverOff('side-releases');" onMouseOver="rolloverOn('side-releases');"><IMG alt="Release Info" border="0" height="12" hspace="0" name="side-releases" onLoad="rolloverLoad('side-releases','graphics/releases-label-2.jpg','graphics/releases-label-3.jpg');" src="graphics/releases-label-3.jpg" vspace="0" width="120"></A><BR>
+ <IMG border="0" height="6" hspace="0" src="resources/separator.gif" vspace="0" width="120"><BR>
+ <A href="install.html" onMouseOut="rolloverOff('side-install');" onMouseOver="rolloverOn('side-install');"><IMG alt="Installation" border="0" height="12" hspace="0" name="side-install" onLoad="rolloverLoad('side-install','graphics/install-label-2.jpg','graphics/install-label-3.jpg');" src="graphics/install-label-3.jpg" vspace="0" width="120"></A><BR>
+ <A href="http://xerces.apache.org/mirrors.cgi" onMouseOut="rolloverOff('side-ext-16');" onMouseOver="rolloverOn('side-ext-16');"><IMG alt="Download" border="0" height="12" hspace="0" name="side-ext-16" onLoad="rolloverLoad('side-ext-16','graphics/ext-16-label-2.jpg','graphics/ext-16-label-3.jpg');" src="graphics/ext-16-label-3.jpg" vspace="0" width="120"></A><BR>
+ 
+ <A href="jira.html" onMouseOut="rolloverOff('side-jira');" onMouseOver="rolloverOn('side-jira');"><IMG alt="Bug-Reporting" border="0" height="12" hspace="0" name="side-jira" onLoad="rolloverLoad('side-jira','graphics/jira-label-2.jpg','graphics/jira-label-3.jpg');" src="graphics/jira-label-3.jpg" vspace="0" width="120"></A><BR>
+
+ <IMG border="0" height="6" hspace="0" src="resources/separator.gif" vspace="0" width="120"><BR>
+ <A href="faqs.html" onMouseOut="rolloverOff('side-faqs');" onMouseOver="rolloverOn('side-faqs');"><IMG alt="FAQs" border="0" height="12" hspace="0" name="side-faqs" onLoad="rolloverLoad('side-faqs','graphics/faqs-label-2.jpg','graphics/faqs-label-3.jpg');" src="graphics/faqs-label-3.jpg" vspace="0" width="120"></A><BR>
+ <A href="samples.html" onMouseOut="rolloverOff('side-samples');" onMouseOver="rolloverOn('side-samples');"><IMG alt="Samples" border="0" height="12" hspace="0" name="side-samples" onLoad="rolloverLoad('side-samples','graphics/samples-label-2.jpg','graphics/samples-label-3.jpg');" src="graphics/samples-label-3.jpg" vspace="0" width="120"></A><BR>
+ 
+ 
+ 
+ 
+ 
+ 
+ <A href="api.html" onMouseOut="rolloverOff('side-api');" onMouseOver="rolloverOn('side-api');"><IMG alt="API JavaDoc" border="0" height="12" hspace="0" name="side-api" onLoad="rolloverLoad('side-api','graphics/api-label-2.jpg','graphics/api-label-3.jpg');" src="graphics/api-label-3.jpg" vspace="0" width="120"></A><BR>
+ 
+ 
+ 
+ 
+ 
+
+ <IMG border="0" height="6" hspace="0" src="resources/separator.gif" vspace="0" width="120"><BR>
+ <A href="features.html" onMouseOut="rolloverOff('side-features');" onMouseOver="rolloverOn('side-features');"><IMG alt="Features" border="0" height="12" hspace="0" name="side-features" onLoad="rolloverLoad('side-features','graphics/features-label-2.jpg','graphics/features-label-3.jpg');" src="graphics/features-label-3.jpg" vspace="0" width="120"></A><BR>
+ <A href="properties.html" onMouseOut="rolloverOff('side-properties');" onMouseOver="rolloverOn('side-properties');"><IMG alt="Properties" border="0" height="12" hspace="0" name="side-properties" onLoad="rolloverLoad('side-properties','graphics/properties-label-2.jpg','graphics/properties-label-3.jpg');" src="graphics/properties-label-3.jpg" vspace="0" width="120"></A><BR>
+ <IMG border="0" height="6" hspace="0" src="resources/separator.gif" vspace="0" width="120"><BR>
+
+ <A href="xni.html" onMouseOut="rolloverOff('side-xni');" onMouseOver="rolloverOn('side-xni');"><IMG alt="XNI Manual" border="0" height="12" hspace="0" name="side-xni" onLoad="rolloverLoad('side-xni','graphics/xni-label-2.jpg','graphics/xni-label-3.jpg');" src="graphics/xni-label-3.jpg" vspace="0" width="120"></A><BR>
+ <A href="xml-schema.html" onMouseOut="rolloverOff('side-xml-schema');" onMouseOver="rolloverOn('side-xml-schema');"><IMG alt="XML Schema" border="0" height="12" hspace="0" name="side-xml-schema" onLoad="rolloverLoad('side-xml-schema','graphics/xml-schema-label-2.jpg','graphics/xml-schema-label-3.jpg');" src="graphics/xml-schema-label-3.jpg" vspace="0" width="120"></A><BR>
+ <A href="sax.html" onMouseOut="rolloverOff('side-sax');" onMouseOver="rolloverOn('side-sax');"><IMG alt="SAX" border="0" height="12" hspace="0" name="side-sax" onLoad="rolloverLoad('side-sax','graphics/sax-label-2.jpg','graphics/sax-label-3.jpg');" src="graphics/sax-label-3.jpg" vspace="0" width="120"></A><BR>
+ <A href="dom.html" onMouseOut="rolloverOff('side-dom');" onMouseOver="rolloverOn('side-dom');"><IMG alt="DOM" border="0" height="12" hspace="0" name="side-dom" onLoad="rolloverLoad('side-dom','graphics/dom-label-2.jpg','graphics/dom-label-3.jpg');" src="graphics/dom-label-3.jpg" vspace="0" width="120"></A><BR>
+ 
+ <A href="limitations.html" onMouseOut="rolloverOff('side-limitations');" onMouseOver="rolloverOn('side-limitations');"><IMG alt="Limitations" border="0" height="12" hspace="0" name="side-limitations" onLoad="rolloverLoad('side-limitations','graphics/limitations-label-2.jpg','graphics/limitations-label-3.jpg');" src="graphics/limitations-label-3.jpg" vspace="0" width="120"></A><BR>
+ <IMG border="0" height="6" hspace="0" src="resources/separator.gif" vspace="0" width="120"><BR>
+ 
+ <A href="source-repository.html" onMouseOut="rolloverOff('side-source-repository');" onMouseOver="rolloverOn('side-source-repository');"><IMG alt="Source Repository" border="0" height="12" hspace="0" name="side-source-repository" onLoad="rolloverLoad('side-source-repository','graphics/source-repository-label-2.jpg','graphics/source-repository-label-3.jpg');" src="graphics/source-repository-label-3.jpg" vspace="0" width="120"></A><BR>
+ <A href="http://mail-archives.apache.org/mod_mbox/xerces-j-users/" onMouseOut="rolloverOff('side-ext-76');" onMouseOver="rolloverOn('side-ext-76');"><IMG alt="User Mail Archive" border="0" height="12" hspace="0" name="side-ext-76" onLoad="rolloverLoad('side-ext-76','graphics/ext-76-label-2.jpg','graphics/ext-76-label-3.jpg');" src="graphics/ext-76-label-3.jpg" vspace="0" width="120"></A><BR>
+ <A href="http://mail-archives.apache.org/mod_mbox/xerces-j-dev/" onMouseOut="rolloverOff('side-ext-78');" onMouseOver="rolloverOn('side-ext-78');"><IMG alt="Dev Mail Archive" border="0" height="12" hspace="0" name="side-ext-78" onLoad="rolloverLoad('side-ext-78','graphics/ext-78-label-2.jpg','graphics/ext-78-label-3.jpg');" src="graphics/ext-78-label-3.jpg" vspace="0" width="120"></A><BR>
+
+<IMG border="0" height="14" hspace="0" src="resources/close.gif" vspace="0" width="120"><BR></TD><TD align="left" valign="top" width="500"><TABLE border="0" cellpadding="3" cellspacing="0"><TR><TD><TABLE border="0" cellpadding="0" cellspacing="0" width="494"><TR><TD bgcolor="666699" colspan="2" width="494"><TABLE border="0" cellpadding="0" cellspacing="0" width="494"><TR><TD bgcolor="#039acc" height="1" width="1"><IMG border="0" height="1" hspace="0" src="resources/void.gif" vspace="0" width="1"></TD><TD bgcolor="#039acc" height="1" width="492"><IMG border="0" height="1" hspace="0" src="resources/void.gif" vspace="0" width="492"></TD><TD bgcolor="#0086b2" height="1" width="1"><IMG border="0" height="1" hspace="0" src="resources/void.gif" vspace="0" width="1"></TD></TR><TR><TD bgcolor="#039acc" width="1"><IMG border="0" height="1" hspace="0" src="resources/void.gif" vspace="0" width="1"></TD><TD bgcolor="#0086b2" width="492"><FONT color="#ffffff" face="arial,helvetica,sanserif" size="+1"><IMG border="0" height="2" hspace="0" src="resources/void.gif" vspace="0" width="2"><B>Questions</B></FONT></TD><TD bgcolor="#017299" width="1"><IMG border="0" height="1" hspace="0" src="resources/void.gif" vspace="0" width="1"></TD></TR><TR><TD bgcolor="#0086b2" height="1" width="1"><IMG border="0" height="1" hspace="0" src="resources/void.gif" vspace="0" width="1"></TD><TD bgcolor="#017299" height="1" width="492"><IMG border="0" height="1" hspace="0" src="resources/void.gif" vspace="0" width="492"></TD><TD bgcolor="#017299" height="1" width="1"><IMG border="0" height="1" hspace="0" src="resources/void.gif" vspace="0" width="1"></TD></TR></TABLE></TD></TR><TR><TD width="10">&nbsp;</TD><TD width="484"><FONT color="#000000" face="arial,helvetica,sanserif"><UL><LI><A href="#faq-1">Caching Grammars</A></LI><LI><A href="#faq-2">Xerces Default Grammar Caching Implementation</A></LI><LI><A href="#faq-3">Preparsing Grammars</A></LI><LI><A href="#faq-4">Grammar caching with Standard APIs</A></LI><LI><A href="#faq-5">Examining Grammars</A></LI><LI><A href="#faq-6">Alternative method for getting an XSModel</A></LI></UL></FONT></TD></TR></TABLE><BR><TABLE border="0" cellpadding="0" cellspacing="0" width="494"><TR><TD bgcolor="666699" colspan="2" width="494"><TABLE border="0" cellpadding="0" cellspacing="0" width="494"><TR><TD bgcolor="#039acc" height="1" width="1"><IMG border="0" height="1" hspace="0" src="resources/void.gif" vspace="0" width="1"></TD><TD bgcolor="#039acc" height="1" width="492"><IMG border="0" height="1" hspace="0" src="resources/void.gif" vspace="0" width="492"></TD><TD bgcolor="#0086b2" height="1" width="1"><IMG border="0" height="1" hspace="0" src="resources/void.gif" vspace="0" width="1"></TD></TR><TR><TD bgcolor="#039acc" width="1"><IMG border="0" height="1" hspace="0" src="resources/void.gif" vspace="0" width="1"></TD><TD bgcolor="#0086b2" width="492"><FONT color="#ffffff" face="arial,helvetica,sanserif" size="+1"><IMG border="0" height="2" hspace="0" src="resources/void.gif" vspace="0" width="2"><B>Answers</B></FONT></TD><TD bgcolor="#017299" width="1"><IMG border="0" height="1" hspace="0" src="resources/void.gif" vspace="0" width="1"></TD></TR><TR><TD bgcolor="#0086b2" height="1" width="1"><IMG border="0" height="1" hspace="0" src="resources/void.gif" vspace="0" width="1"></TD><TD bgcolor="#017299" height="1" width="492"><IMG border="0" height="1" hspace="0" src="resources/void.gif" vspace="0" width="492"></TD><TD bgcolor="#017299" height="1" width="1"><IMG border="0" height="1" hspace="0" src="resources/void.gif" vspace="0" width="1"></TD></TR></TABLE></TD></TR><TR><TD width="10">&nbsp;</TD><TD width="484"><FONT color="#000000" face="arial,helvetica,sanserif"><BR><A name="faq-1"><!--anchor--></A><TABLE border="0" cellpadding="0" cellspacing="0" width="484"><TR><TD bgcolor="666699" colspan="2" width="484"><TABLE border="0" cellpadding="0" cellspacing="0" width="484"><TR><TD bgcolor="#039acc" height="1" width="1"><IMG border="0" height="1" hspace="0" src="resources/void.gif" vspace="0" width="1"></TD><TD bgcolor="#039acc" height="1" width="482"><IMG border="0" height="1" hspace="0" src="resources/void.gif" vspace="0" width="482"></TD><TD bgcolor="#0086b2" height="1" width="1"><IMG border="0" height="1" hspace="0" src="resources/void.gif" vspace="0" width="1"></TD></TR><TR><TD bgcolor="#039acc" width="1"><IMG border="0" height="1" hspace="0" src="resources/void.gif" vspace="0" width="1"></TD><TD bgcolor="#0086b2" width="482"><FONT color="#ffffff" face="arial,helvetica,sanserif"><IMG border="0" height="2" hspace="0" src="resources/void.gif" vspace="0" width="2"><B>I have a set of (DTD or XML Schema) grammars that I
+    use a lot.  How can I make Xerces
+    reuse the representations it builds for these grammars,
+    instead of parsing them anew with every new document?
+  </B></FONT></TD><TD bgcolor="#017299" width="1"><IMG border="0" height="1" hspace="0" src="resources/void.gif" vspace="0" width="1"></TD></TR><TR><TD bgcolor="#0086b2" height="1" width="1"><IMG border="0" height="1" hspace="0" src="resources/void.gif" vspace="0" width="1"></TD><TD bgcolor="#017299" height="1" width="482"><IMG border="0" height="1" hspace="0" src="resources/void.gif" vspace="0" width="482"></TD><TD bgcolor="#017299" height="1" width="1"><IMG border="0" height="1" hspace="0" src="resources/void.gif" vspace="0" width="1"></TD></TR></TABLE></TD></TR><TR><TD width="10">&nbsp;</TD><TD width="474"><FONT color="#000000" face="arial,helvetica,sanserif" size="-1">
+    <P>
+        Before answering this question, it will greatly help to
+        understand how Xerces handles grammars internally.  To do
+        this, here are some terms:
+    </P>
+    <A name="grammar-terms"><!--anchor--></A>
+    <UL>
+        <LI><CODE>Grammar</CODE>:  defined in the
+        <CODE>org.apache.xerces.xni.grammars.Grammar</CODE>
+        interface; simply differentiates objects that are Xerces
+        grammars from other objects, as well as providing a means
+        to get at the location information (<CODE>XMLGrammarDescription</CODE>) for the grammar represented..</LI>
+        <LI><CODE>XMLGrammarDescription</CODE>:  defined by the
+        <CODE>org.apache.xerces.xni.grammars.XMLGrammarDescription</CODE>
+        interface, holds some basic location information common to all grammars.
+        This can be used to distinguish one
+        <CODE>Grammar</CODE> object from another, and also
+        contains information about the type of the grammar.</LI>
+        <LI>Validator:  A generic term used in Xerces to denote
+        an object which compares the structure of an XML document
+        with the expectations of a certain type of grammar.
+        Currently, we have DTD and XML Schema validators.</LI>
+        <LI><CODE>XMLGrammarPool</CODE>:  Defined by the
+        <CODE>org.apache.xerces.xni.grammars.XMLGrammarPool</CODE>
+        interface, this object is owned by the application and it
+        is the means by which the application and Xerces pass
+        complex grammars to one another.</LI>
+        <LI>Grammar bucket:  An internal data structure owned by
+        a Xerces validator in which grammars--and information
+        related to grammars--to be used in a given validation
+        episode is stored.</LI>
+        <LI><CODE>XMLGrammarLoader</CODE>:  defined in the
+        <CODE>org.apache.xerces.xni.grammars.XMLGrammarLoader</CODE>
+        interface, this defines an object that &quot;knows how&quot; to
+        read the XML representation of a particular kind of
+        grammar and construct a Xerces-internal representation (a
+        <CODE>Grammar</CODE> object) out of it.  These objects
+        may interact with validators during parsing of instance
+        documents, or with external code during grammar
+        preparsing.</LI>
+    </UL>
+    <P>Now that the terminology is out of the way, it's possible
+        to relate all these objects together.  At the commencement of
+        a validation episode, a validator will call the
+        <CODE>retrieveInitialGrammarSet(String grammarType)</CODE> method of the
+        <CODE>XMLGrammarPool</CODE> instance to which it has access.  It
+        will use the <CODE>Grammar</CODE> objects it procures in this
+        way to seed its grammar bucket.
+    </P>
+    <P>
+        When the validator determines that it needs a grammar, it
+        will consult its grammar bucket.  If it finds a matching
+        grammar, it will attempt to use it.  Otherwise, if it has
+        access to an <CODE>XMLGrammarPool</CODE> instance, it
+        will request a grammar from that object with the
+        <CODE>retrieveGrammar(XMLGrammarDescription desc)</CODE>
+        method.  Only if both of these steps fail will it fall
+        back to attempting to resolve the grammar entity and
+        calling the appropriate <CODE>XMLGrammarLoader</CODE> 
+        to actually create a new Grammar object.
+    </P>
+    <P>
+        At the end of the validation episode, the validator will
+        call the <CODE>cacheGrammars(String grammarType,
+        Grammar[] grammars)</CODE> method of the
+        <CODE>XMLGrammarPool</CODE> (if any) to which it has
+        access.  There is no guarantee grammars that the grammar
+        pool itself supplied to the validator will not be
+        included in this set, so a grammar pool implementation
+        cannot rely only on new grammars to be passed back in
+        this situation.
+    </P>
+    <P>
+        At long last, it's now possible to answer the original
+        question--how can one cache grammars?  Assuming one has a
+        reasonable <CODE>XMLGrammarPool</CODE>
+        implementation--such as that provided with Xerces--there are two
+        answers:
+    </P>
+    <OL>
+        <LI><A name="passive"><!--anchor--></A>The &quot;passive&quot; approach:  Don't do any preparsing,
+        just register the grammar pool implementation with the
+        parser, and as new grammars are requested by instance
+        documents, simply let the validators add them to the
+        pool.  This is very unobtrusive to the application, but
+        doesn't provide that much control over what grammars are
+        added; even if a custom EntityResolver is registered,
+        it's still possible that unwanted grammars will make it
+        into the pool.</LI>
+        <LI>The &quot;active&quot; approach:  Preload a grammar pool
+        implementation with all the grammars you'll need, then
+        lock it so that no new grammars will be added.  Then
+        registering this on the configuration will allow
+        validators to make use of this set; registering a
+        do-nothing EntityResolver will allow the application to
+        deny validators from using any but the &quot;approved&quot; grammar
+        set.  This will oblige the application to use more Xerces
+        code, but provides a far more fine-grained approach to
+        controlling what grammars may be used.</LI>
+    </OL>
+    <P>
+        We discuss both these approaches in a bit more detail
+        below, complete with some (broad) examples.  
+        As a starting point, though, the
+        <CODE>XMLGrammarBuilder</CODE> sample, from the
+        <CODE>xni</CODE> package, should provide a starting-point
+        for implementing either the active or passive approach.
+    </P>
+  </FONT></TD></TR></TABLE><BR><A name="faq-2"><!--anchor--></A><TABLE border="0" cellpadding="0" cellspacing="0" width="484"><TR><TD bgcolor="666699" colspan="2" width="484"><TABLE border="0" cellpadding="0" cellspacing="0" width="484"><TR><TD bgcolor="#039acc" height="1" width="1"><IMG border="0" height="1" hspace="0" src="resources/void.gif" vspace="0" width="1"></TD><TD bgcolor="#039acc" height="1" width="482"><IMG border="0" height="1" hspace="0" src="resources/void.gif" vspace="0" width="482"></TD><TD bgcolor="#0086b2" height="1" width="1"><IMG border="0" height="1" hspace="0" src="resources/void.gif" vspace="0" width="1"></TD></TR><TR><TD bgcolor="#039acc" width="1"><IMG border="0" height="1" hspace="0" src="resources/void.gif" vspace="0" width="1"></TD><TD bgcolor="#0086b2" width="482"><FONT color="#ffffff" face="arial,helvetica,sanserif"><IMG border="0" height="2" hspace="0" src="resources/void.gif" vspace="0" width="2"><B>Exactly how does Xerces default implementation of things
+  like the grammar pool work?</B></FONT></TD><TD bgcolor="#017299" width="1"><IMG border="0" height="1" hspace="0" src="resources/void.gif" vspace="0" width="1"></TD></TR><TR><TD bgcolor="#0086b2" height="1" width="1"><IMG border="0" height="1" hspace="0" src="resources/void.gif" vspace="0" width="1"></TD><TD bgcolor="#017299" height="1" width="482"><IMG border="0" height="1" hspace="0" src="resources/void.gif" vspace="0" width="482"></TD><TD bgcolor="#017299" height="1" width="1"><IMG border="0" height="1" hspace="0" src="resources/void.gif" vspace="0" width="1"></TD></TR></TABLE></TD></TR><TR><TD width="10">&nbsp;</TD><TD width="474"><FONT color="#000000" face="arial,helvetica,sanserif" size="-1">
+    <P>
+        Before proceeding further, let there be no doubt that, by default, Xerces
+        does not cache grammars at all.  In order to trigger Xerces grammar caching, an <CODE>XMLGrammarPool</CODE>
+        must be set, using the <CODE>setProperty</CODE> method,
+        on a Xerces configuration that supports grammar pools.  On the other hand,
+        you could simply use the <CODE>XMLGrammarCachingConfiguration</CODE> as
+        discussed briefly <A href="#caching-w-standards">below</A>.
+    </P>
+    <P>
+        When enabled, by default, Xerces's grammar pool implementation stores
+        any grammar offered to it (provided it does not already
+        have a reference matching that grammar).  It also makes
+        available all grammars it has, of a particular type, on
+        calls to <CODE>retrieveInitialGrammarSet</CODE>.  It will
+        also try and retrieve a matching grammar on calls to
+        <CODE>retrieveGrammar</CODE>.
+    </P>
+    <P>
+        Xerces uses hashing to distinguish different grammar
+        objects, by hashing on the
+        <CODE>XMLGrammarDescription</CODE> objects that those
+        grammars contain.  Thus, both of Xerces implementations
+        of XMLGrammarDescription--for DTD's and XML
+        Schemas--provide implementations of <CODE>hashCode():
+        int</CODE> and <CODE>equals(Object):boolean</CODE> that
+        are used by the hashing algorithm.
+    </P>
+    <P>
+        In XML Schemas, hashing is simply carried out on the
+        target namespace of the schema.  Thus, two grammars are
+        considered equal (by our default implementation) if and
+        only if their XMLGrammarDescriptions are instances of
+        <CODE>org.apache.xerces.impl.xs.XSDDescription</CODE> (our schema implementation of
+        XMLGrammarDescription) and the targetNamespace fields of
+        those objects are identical.
+    </P>
+    <P>
+        The case in DTD's is much more difficult.  Here is the
+        algorithm, which describes the conditions under which two
+        DTD grammars will be considered equal:
+    </P>
+    <UL>
+        <LI>Both grammars must have XMLGrammarDescriptions that
+        are instances of
+        <CODE>org.apache.xerces.impl.dtd.XMLDTDDescription</CODE>.</LI>
+        <LI>If their publicId or expandedSystemId fields are
+        non-null they must be identical;</LI>
+        <LI>If one of the descriptions has a root element
+        defined, it must be the same as the root element defined
+        in the other description, or be in the list of global
+        elements stored in that description;</LI>
+        <LI>If neither has a root element defined, then they must
+        share at least one global element declaration in
+        common.</LI>
+    </UL>
+    <P>
+        The DTD grammar caching also assumes that the entirety of
+        the cached grammar will lie in an external subset.  i.e.,
+        in the example below, Xerces will happily cache--or use a
+        cached version of--the DTD in &quot;my.dtd&quot;.  If the document
+        contained an internal subset, the declarations would be
+        ignored.  
+    </P>
+    <DIV align="right"><TABLE border="0" cellpadding="0" cellspacing="4" width="464"><TR><TD bgcolor="#0086b2" height="1" width="1"><IMG border="0" height="1" hspace="0" src="resources/void.gif" vspace="0" width="1"></TD><TD bgcolor="#0086b2" height="1" width="462"><IMG border="0" height="1" hspace="0" src="resources/void.gif" vspace="0" width="462"></TD><TD bgcolor="#0086b2" height="1" width="1"><IMG border="0" height="1" hspace="0" src="resources/void.gif" vspace="0" width="1"></TD></TR><TR><TD bgcolor="#0086b2" width="1"><IMG border="0" height="1" hspace="0" src="resources/void.gif" vspace="0" width="1"></TD><TD bgcolor="#ffffff" width="462"><FONT size="-1"><PRE>&lt;!DOCTYPE myDoc SYSTEM &quot;my.dtd&quot;&gt;
+&lt;myDoc ...&gt;...&lt;/myDoc&gt;</PRE></FONT></TD><TD bgcolor="#0086b2" width="1"><IMG border="0" height="1" hspace="0" src="resources/void.gif" vspace="0" width="1"></TD></TR><TR><TD bgcolor="#0086b2" height="1" width="1"><IMG border="0" height="1" hspace="0" src="resources/void.gif" vspace="0" width="1"></TD><TD bgcolor="#0086b2" height="1" width="462"><IMG border="0" height="1" hspace="0" src="resources/void.gif" vspace="0" width="462"></TD><TD bgcolor="#0086b2" height="1" width="1"><IMG border="0" height="1" hspace="0" src="resources/void.gif" vspace="0" width="1"></TD></TR></TABLE></DIV>
+    <P>
+        Using these heuristics, Xerces's default grammar caching
+        implementation appears to do a reasonable job at matching
+        grammars up with appropriate instance documents.  This
+        functionality is very new, so in addition to bug reports
+        we'd very much appreciate, especially on the DTD front,
+        feedback on whether this form of caching is indeed useful or
+        whether--for instance--it would be better if internal
+        declarations were somehow incorporated into the grammar
+        that's been cached.
+    </P>
+  </FONT></TD></TR></TABLE><BR><A name="faq-3"><!--anchor--></A><TABLE border="0" cellpadding="0" cellspacing="0" width="484"><TR><TD bgcolor="666699" colspan="2" width="484"><TABLE border="0" cellpadding="0" cellspacing="0" width="484"><TR><TD bgcolor="#039acc" height="1" width="1"><IMG border="0" height="1" hspace="0" src="resources/void.gif" vspace="0" width="1"></TD><TD bgcolor="#039acc" height="1" width="482"><IMG border="0" height="1" hspace="0" src="resources/void.gif" vspace="0" width="482"></TD><TD bgcolor="#0086b2" height="1" width="1"><IMG border="0" height="1" hspace="0" src="resources/void.gif" vspace="0" width="1"></TD></TR><TR><TD bgcolor="#039acc" width="1"><IMG border="0" height="1" hspace="0" src="resources/void.gif" vspace="0" width="1"></TD><TD bgcolor="#0086b2" width="482"><FONT color="#ffffff" face="arial,helvetica,sanserif"><IMG border="0" height="2" hspace="0" src="resources/void.gif" vspace="0" width="2"><B>I like the idea of &quot;active&quot; caching (or I want the grammar
+  object for some purpose); how do I go about parsing a grammar
+  independent of an instance document?</B></FONT></TD><TD bgcolor="#017299" width="1"><IMG border="0" height="1" hspace="0" src="resources/void.gif" vspace="0" width="1"></TD></TR><TR><TD bgcolor="#0086b2" height="1" width="1"><IMG border="0" height="1" hspace="0" src="resources/void.gif" vspace="0" width="1"></TD><TD bgcolor="#017299" height="1" width="482"><IMG border="0" height="1" hspace="0" src="resources/void.gif" vspace="0" width="482"></TD><TD bgcolor="#017299" height="1" width="1"><IMG border="0" height="1" hspace="0" src="resources/void.gif" vspace="0" width="1"></TD></TR></TABLE></TD></TR><TR><TD width="10">&nbsp;</TD><TD width="474"><FONT color="#000000" face="arial,helvetica,sanserif" size="-1">
+    <P>
+        First, if you haven't read <A href="#grammar-terms">the first FAQ on this page</A> and
+        have trouble with terminology, hopefully answers
+        lie there.  
+      </P>
+      <P>
+        Preparsing of grammars in Xerces is accomplished with
+        implementations of the <CODE>XMLGrammarLoader</CODE>
+        interface.  Each implementation needs to know how to
+        parse a particular type of grammar and how to build a
+        data structure representing that grammar that Xerces can
+        efficiently make use of in validation.  Since most
+        application programs won't want to deal with Xerces
+        implementations per se, we have provided a handy utility
+        class to handle grammar preparsing generally:
+        <CODE>org.apache.xerces.parsers.XMLGrammarPreparser</CODE>.
+        This FAQ describes the use of this class.
+        For a live example, check out the
+        <CODE>XMLGrammarBuilder</CODE> sample in the
+        <CODE>samples/xni</CODE> directory of the binary
+        distribution.
+    </P>
+    <P>
+        <CODE>XMLGrammarPreparser</CODE> has methods for
+        installing XNI error handlers, entity resolvers, setting
+        the Locale, and generally doing similar things as an XNI
+        configuration.  Any object passed to XMLGrammarPreparser
+        by any of these methods will be passed on to all
+        <CODE>XMLGrammarLoader</CODE>s registered with
+        XMLGrammarPreparser.
+    </P>
+    <P>
+        Before <CODE>XMLGrammarPreparser</CODE> can be used, its
+        <CODE>registerPreparser(String, XMLGrammarLoader):
+        boolean</CODE> method must be called.  This allows a
+        String identifying an arbitrary grammar type to be
+        associated with a loader for that type.  To make peoples'
+        lives easier, if you want DTD grammars or XML Schema
+        grammar support, you can pass <CODE>null</CODE> for the
+        second parameter and <CODE>XMLGrammarPreparser</CODE>
+        will try and instantiate the appropriate default grammar
+        loader.  For DTD's, for instance, just call
+        <CODE>registerPreparser</CODE> like:
+    </P>
+    <DIV align="right"><TABLE border="0" cellpadding="0" cellspacing="4" width="464"><TR><TD bgcolor="#0086b2" height="1" width="1"><IMG border="0" height="1" hspace="0" src="resources/void.gif" vspace="0" width="1"></TD><TD bgcolor="#0086b2" height="1" width="462"><IMG border="0" height="1" hspace="0" src="resources/void.gif" vspace="0" width="462"></TD><TD bgcolor="#0086b2" height="1" width="1"><IMG border="0" height="1" hspace="0" src="resources/void.gif" vspace="0" width="1"></TD></TR><TR><TD bgcolor="#0086b2" width="1"><IMG border="0" height="1" hspace="0" src="resources/void.gif" vspace="0" width="1"></TD><TD bgcolor="#ffffff" width="462"><FONT size="-1"><PRE>grammarPreparser(&quot;http://www.w3.org/TR/REC-xml&quot;, null)</PRE></FONT></TD><TD bgcolor="#0086b2" width="1"><IMG border="0" height="1" hspace="0" src="resources/void.gif" vspace="0" width="1"></TD></TR><TR><TD bgcolor="#0086b2" height="1" width="1"><IMG border="0" height="1" hspace="0" src="resources/void.gif" vspace="0" width="1"></TD><TD bgcolor="#0086b2" height="1" width="462"><IMG border="0" height="1" hspace="0" src="resources/void.gif" vspace="0" width="462"></TD><TD bgcolor="#0086b2" height="1" width="1"><IMG border="0" height="1" hspace="0" src="resources/void.gif" vspace="0" width="1"></TD></TR></TABLE></DIV>
+    <P>
+        Schema grammars correspond to the URI
+        &quot;http://www.w3.org/2001/XMLSchema&quot;; both these constants
+        can be found in the
+        <CODE>org.apache.xerces.xni.grammars.XMLGrammarDescription</CODE>
+        interface.  The method returns true if an
+        XMLGrammarLoader was successfully associated with the
+        given grammar String, false otherwise.
+    </P>
+    <P>
+        XMLGrammarPreparser also contains methods for setting
+        features and properties on particular loaders--keyed on
+        with the same string that was used to register the
+        loader.  It also allows features and properties the
+        application believes to be general to all loaders to be
+        set; it transmits such features and properties to each
+        loader that is registered.  These methods also silently consume any
+        notRecognized/notSupported exceptions that the loaders throw.  Particularly useful here is
+        registering an <CODE>XMLGrammarPool</CODE>
+        implementation, such as that found in
+        <CODE>org.apache.xerces.util.XMLGrammarPoolImpl</CODE>.
+    </P>
+    <P>
+        To actually parse a grammar, one simply calls the
+        <CODE>preparseGrammar(String grammarType, XMLInputSource
+        source):  Grammar</CODE> method.  As above, the String
+        represents the type of the grammar to be parsed, and the
+        XMLInputSource is the location of the grammar to be
+        parsed; this will not be subjected to entity expansion.
+    </P>
+    <P>
+        It's worth noting that Xerces default grammar loaders
+        will attempt to cache the resulting grammar(s) if a
+        grammar pool implementation is registered with them.
+        This is particularly useful in the case of schema
+        grammars:  If a schema grammar imports another grammar,
+        the Grammar object returned will be the schema doing the
+        importing, not the one being imported.  For caching,
+        this means that if this grammar is cached by itself, the grammars
+        that it imports won't be available to the grammar pool
+        implementation.  Since our Schema Loader knows about this
+        idiosyncrasy, if a grammar pool is registered with it,
+        it will cache all schema grammars it encounters,
+        including the one which it was specifically called to
+        parse.  In general, it is probably advisable to register
+        grammar pool implementations with grammar loaders for
+        this reason; generally, one would want to cache--and make
+        available to the grammar pool implementation--imported
+        grammars as well as specific schema grammars, since the
+        specific schemas cannot be used without those that they
+        import.
+    </P>
+  </FONT></TD></TR></TABLE><BR><A name="faq-4"><!--anchor--></A><TABLE border="0" cellpadding="0" cellspacing="0" width="484"><TR><TD bgcolor="666699" colspan="2" width="484"><TABLE border="0" cellpadding="0" cellspacing="0" width="484"><TR><TD bgcolor="#039acc" height="1" width="1"><IMG border="0" height="1" hspace="0" src="resources/void.gif" vspace="0" width="1"></TD><TD bgcolor="#039acc" height="1" width="482"><IMG border="0" height="1" hspace="0" src="resources/void.gif" vspace="0" width="482"></TD><TD bgcolor="#0086b2" height="1" width="1"><IMG border="0" height="1" hspace="0" src="resources/void.gif" vspace="0" width="1"></TD></TR><TR><TD bgcolor="#039acc" width="1"><IMG border="0" height="1" hspace="0" src="resources/void.gif" vspace="0" width="1"></TD><TD bgcolor="#0086b2" width="482"><FONT color="#ffffff" face="arial,helvetica,sanserif"><IMG border="0" height="2" hspace="0" src="resources/void.gif" vspace="0" width="2"><B>All right, I've (somehow) got a grammar pool full of
+  grammars.  How do I use this with my application that uses
+  standard (SAX|DOM|JAXP) parsers?</B></FONT></TD><TD bgcolor="#017299" width="1"><IMG border="0" height="1" hspace="0" src="resources/void.gif" vspace="0" width="1"></TD></TR><TR><TD bgcolor="#0086b2" height="1" width="1"><IMG border="0" height="1" hspace="0" src="resources/void.gif" vspace="0" width="1"></TD><TD bgcolor="#017299" height="1" width="482"><IMG border="0" height="1" hspace="0" src="resources/void.gif" vspace="0" width="482"></TD><TD bgcolor="#017299" height="1" width="1"><IMG border="0" height="1" hspace="0" src="resources/void.gif" vspace="0" width="1"></TD></TR></TABLE></TD></TR><TR><TD width="10">&nbsp;</TD><TD width="474"><FONT color="#000000" face="arial,helvetica,sanserif" size="-1"><A name="caching-w-standards"><!--anchor--></A>
+    <P>
+        For SAX and DOM the case is simple.  Just do:
+    </P>
+    <DIV align="right"><TABLE border="0" cellpadding="0" cellspacing="4" width="464"><TR><TD bgcolor="#0086b2" height="1" width="1"><IMG border="0" height="1" hspace="0" src="resources/void.gif" vspace="0" width="1"></TD><TD bgcolor="#0086b2" height="1" width="462"><IMG border="0" height="1" hspace="0" src="resources/void.gif" vspace="0" width="462"></TD><TD bgcolor="#0086b2" height="1" width="1"><IMG border="0" height="1" hspace="0" src="resources/void.gif" vspace="0" width="1"></TD></TR><TR><TD bgcolor="#0086b2" width="1"><IMG border="0" height="1" hspace="0" src="resources/void.gif" vspace="0" width="1"></TD><TD bgcolor="#ffffff" width="462"><FONT size="-1"><PRE>XMLParserConfiguration config = new XIncludeAwareParserConfiguration();
+config.setProperty(&quot;http://apache.org/xml/properties/internal/grammar-pool&quot;,
+    myFullGrammarPool);
+(SAX|DOM)Parser parser = new (SAX|DOM)Parser(config);</PRE></FONT></TD><TD bgcolor="#0086b2" width="1"><IMG border="0" height="1" hspace="0" src="resources/void.gif" vspace="0" width="1"></TD></TR><TR><TD bgcolor="#0086b2" height="1" width="1"><IMG border="0" height="1" hspace="0" src="resources/void.gif" vspace="0" width="1"></TD><TD bgcolor="#0086b2" height="1" width="462"><IMG border="0" height="1" hspace="0" src="resources/void.gif" vspace="0" width="462"></TD><TD bgcolor="#0086b2" height="1" width="1"><IMG border="0" height="1" hspace="0" src="resources/void.gif" vspace="0" width="1"></TD></TR></TABLE></DIV>
+    <P>
+        Now your grammar pool instance will be used by all
+        validators created by this parser to validate your
+        instance documents.
+    </P>
+    <P>
+        If you have an application that uses pure JAXP, your task
+        is a bit trickier.  You'll need to do something like
+        this:
+    </P>
+    <DIV align="right"><TABLE border="0" cellpadding="0" cellspacing="4" width="464"><TR><TD bgcolor="#0086b2" height="1" width="1"><IMG border="0" height="1" hspace="0" src="resources/void.gif" vspace="0" width="1"></TD><TD bgcolor="#0086b2" height="1" width="462"><IMG border="0" height="1" hspace="0" src="resources/void.gif" vspace="0" width="462"></TD><TD bgcolor="#0086b2" height="1" width="1"><IMG border="0" height="1" hspace="0" src="resources/void.gif" vspace="0" width="1"></TD></TR><TR><TD bgcolor="#0086b2" width="1"><IMG border="0" height="1" hspace="0" src="resources/void.gif" vspace="0" width="1"></TD><TD bgcolor="#ffffff" width="462"><FONT size="-1"><PRE>System.setProperty(&quot;org.apache.xerces.xni.parser.XMLParserConfiguration&quot;,
+    &quot;org.apache.xerces.parsers.XMLGrammarCachingConfiguration&quot;);
+DocumentBuilder builder = // JAXP factory invocation
+// parse documents and store grammars</PRE></FONT></TD><TD bgcolor="#0086b2" width="1"><IMG border="0" height="1" hspace="0" src="resources/void.gif" vspace="0" width="1"></TD></TR><TR><TD bgcolor="#0086b2" height="1" width="1"><IMG border="0" height="1" hspace="0" src="resources/void.gif" vspace="0" width="1"></TD><TD bgcolor="#0086b2" height="1" width="462"><IMG border="0" height="1" hspace="0" src="resources/void.gif" vspace="0" width="462"></TD><TD bgcolor="#0086b2" height="1" width="1"><IMG border="0" height="1" hspace="0" src="resources/void.gif" vspace="0" width="1"></TD></TR></TABLE></DIV>
+    <P>
+        Note that this only supports the &quot;passive&quot; caching
+        approach discussed in <A href="#passive">above</A>.  The
+        <CODE>org.apache.xerces.parsers.XMLGrammarCachingConfiguration</CODE>
+        represents experimental code; feedback on whether it is
+        useful would be greatly appreciated.
+    </P>
+  </FONT></TD></TR></TABLE><BR><A name="faq-5"><!--anchor--></A><TABLE border="0" cellpadding="0" cellspacing="0" width="484"><TR><TD bgcolor="666699" colspan="2" width="484"><TABLE border="0" cellpadding="0" cellspacing="0" width="484"><TR><TD bgcolor="#039acc" height="1" width="1"><IMG border="0" height="1" hspace="0" src="resources/void.gif" vspace="0" width="1"></TD><TD bgcolor="#039acc" height="1" width="482"><IMG border="0" height="1" hspace="0" src="resources/void.gif" vspace="0" width="482"></TD><TD bgcolor="#0086b2" height="1" width="1"><IMG border="0" height="1" hspace="0" src="resources/void.gif" vspace="0" width="1"></TD></TR><TR><TD bgcolor="#039acc" width="1"><IMG border="0" height="1" hspace="0" src="resources/void.gif" vspace="0" width="1"></TD><TD bgcolor="#0086b2" width="482"><FONT color="#ffffff" face="arial,helvetica,sanserif"><IMG border="0" height="2" hspace="0" src="resources/void.gif" vspace="0" width="2"><B>But I don't want to &quot;preparse&quot; grammars for efficiency; I
+  want to parse them in order to look at their contents using
+  some API!  Can I do this?</B></FONT></TD><TD bgcolor="#017299" width="1"><IMG border="0" height="1" hspace="0" src="resources/void.gif" vspace="0" width="1"></TD></TR><TR><TD bgcolor="#0086b2" height="1" width="1"><IMG border="0" height="1" hspace="0" src="resources/void.gif" vspace="0" width="1"></TD><TD bgcolor="#017299" height="1" width="482"><IMG border="0" height="1" hspace="0" src="resources/void.gif" vspace="0" width="482"></TD><TD bgcolor="#017299" height="1" width="1"><IMG border="0" height="1" hspace="0" src="resources/void.gif" vspace="0" width="1"></TD></TR></TABLE></TD></TR><TR><TD width="10">&nbsp;</TD><TD width="474"><FONT color="#000000" face="arial,helvetica,sanserif" size="-1">
+    <P>
+        Yes, for grammar types for which such an API is defined.
+        No such API exists at the current moment for DTD's.  For
+        XML Schemas, Xerces implements the 
+        <A href="http://www.w3.org/Submission/2004/SUBM-xmlschema-api-20040309/">XML Schema API</A>.
+        For details, it's best to look at the 
+        <A href="api.html#xml-schema-api-documentation">API</A> docs for
+        the <CODE>org.apache.xerces.xs</CODE>
+        package.  Assuming you have produced a Grammar object from an XML Schema
+        document by some means, to turn that object
+        into an object usable in this API, do the following:
+    </P>
+    <OL>
+        <LI>
+            Cast the Grammar object to <CODE>org.apache.xerces.xni.grammars.XSGrammar</CODE>;
+        </LI>
+        <LI>
+            Call the <CODE>toXSModel()</CODE> method on the casted object;
+        </LI>
+        <LI>
+            Use the methods in the <CODE>org.apache.xerces.xs.XSModel</CODE>
+            interface to examine the new object; methods on this
+            interface and others in the same package should allow you to access
+            all aspects of the schema.
+        </LI>
+    </OL>
+  </FONT></TD></TR></TABLE><BR><A name="faq-6"><!--anchor--></A><TABLE border="0" cellpadding="0" cellspacing="0" width="484"><TR><TD bgcolor="666699" colspan="2" width="484"><TABLE border="0" cellpadding="0" cellspacing="0" width="484"><TR><TD bgcolor="#039acc" height="1" width="1"><IMG border="0" height="1" hspace="0" src="resources/void.gif" vspace="0" width="1"></TD><TD bgcolor="#039acc" height="1" width="482"><IMG border="0" height="1" hspace="0" src="resources/void.gif" vspace="0" width="482"></TD><TD bgcolor="#0086b2" height="1" width="1"><IMG border="0" height="1" hspace="0" src="resources/void.gif" vspace="0" width="1"></TD></TR><TR><TD bgcolor="#039acc" width="1"><IMG border="0" height="1" hspace="0" src="resources/void.gif" vspace="0" width="1"></TD><TD bgcolor="#0086b2" width="482"><FONT color="#ffffff" face="arial,helvetica,sanserif"><IMG border="0" height="2" hspace="0" src="resources/void.gif" vspace="0" width="2"><B>Is there an alternative method for getting an XSModel?</B></FONT></TD><TD bgcolor="#017299" width="1"><IMG border="0" height="1" hspace="0" src="resources/void.gif" vspace="0" width="1"></TD></TR><TR><TD bgcolor="#0086b2" height="1" width="1"><IMG border="0" height="1" hspace="0" src="resources/void.gif" vspace="0" width="1"></TD><TD bgcolor="#017299" height="1" width="482"><IMG border="0" height="1" hspace="0" src="resources/void.gif" vspace="0" width="482"></TD><TD bgcolor="#017299" height="1" width="1"><IMG border="0" height="1" hspace="0" src="resources/void.gif" vspace="0" width="1"></TD></TR></TABLE></TD></TR><TR><TD width="10">&nbsp;</TD><TD width="474"><FONT color="#000000" face="arial,helvetica,sanserif" size="-1">
+   <P>
+    Yes, for more information see the <A href="faq-xs.html">XML Schema FAQ</A>.
+   </P>
+  </FONT></TD></TR></TABLE><BR></FONT></TD></TR></TABLE><BR></TD></TR></TABLE></TD></TR></TABLE><BR><TABLE border="0" cellpadding="0" cellspacing="0" width="620"><TR><TD bgcolor="#0086b2"><IMG height="1" src="images/dot.gif" width="1"></TD></TR><TR><TD align="center"><FONT color="#0086b2" size="-1"><I>
+              Copyright &copy; 1999-2020 The Apache Software Foundation.
+              All Rights Reserved.
+            </I></FONT></TD></TR></TABLE></BODY></HTML>
