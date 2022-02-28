@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE TEI SYSTEM "./esempio-dtd.dtd">
+
+<TEI>
+    <header>
+        questa è una nota
+    </header>
+
+    <text></text>
+    <text></text>
+
+    <header></header>
+    <text></text>
+
+
+
+</TEI>
