@@ -36,6 +36,7 @@
 
 ## pagine selezionate (prolusioni 2 - manoscritto Ms. fr. 3951/1)
 
+-  *pagine 2-3 (immagine 85   )
  - *pagine 6-7 (immagini 89-92) 
  - *pagine 8-9 (immagini 93-96)
 
