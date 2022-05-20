@@ -1,17 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE TEI SYSTEM "./esempio-dtd.dtd">
+<!DOCTYPE MIO SYSTEM "./esempio-dtd.dtd"
+    [
+        <!ELEMENT figlio (#PCDATA)>
+        <!ATTLIST MIO nome NMTOKEN #REQUIRED >
 
-<TEI>
-    <header>
-        questa è una nota
-    </header>
+    ]
+>
 
-    <text></text>
-    <text></text>
-
-    <header></header>
-    <text></text>
-
-
-
-</TEI>
+<MIO nome="angelo">
+    
+</MIO>

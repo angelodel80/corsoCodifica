@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<test>
+    <msg n="2">ciao mondo!</msg>
+    <msg n="1">ciao a tutti!</msg>
+</test>

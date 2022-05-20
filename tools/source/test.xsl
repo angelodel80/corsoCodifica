@@ -10,7 +10,7 @@
       indent="yes" />
 
     <xsl:template match="/">
-      <xsl:apply-templates select="/test/msg" />
+      <xsl:apply-templates select="test/msg" />
     </xsl:template>
 
     <xsl:template match="text()">
