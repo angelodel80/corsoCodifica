@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+    Nome: angelo
+    Matricola: 227199 
+-->
+<radice>
+    <Elemento>
+        <figlio> <nipote> </nipote> 
+        </figlio>
+        <figlio></figlio>
+        <empty></empty>
+        testo
+    </Elemento>
+    <Elemento>
+        <riga>
+            <frase> testo in riga e parte di frase </frase>
+        </riga>
+            
+    </Elemento>
+</radice>
