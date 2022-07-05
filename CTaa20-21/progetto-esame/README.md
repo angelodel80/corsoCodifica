@@ -48,6 +48,7 @@
  - *prime due pagine (immagine 111/139)
  - *pagine 4-5 (immagine 112)
  - *pagine 6-7 (immagine 115)
+ - *pagine 8-9 (immagini 116 e 117)
 
 
 
