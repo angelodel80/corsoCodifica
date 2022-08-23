@@ -50,6 +50,7 @@
  - *pagine 6-7 (immagine 115)
  - *pagine 8-9 (immagini 116 e 117)
  - *pagine 10-11 (immagini 118-119)
+ - *pagine 12-13 ()
  - *pagine 14-15 (immagini 122-123)
  - *pagine 16-17 (immagini 124-125)
  - *pagine 17-18 (immagini 124 e 127)
