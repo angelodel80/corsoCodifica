@@ -40,7 +40,7 @@
  - *pagine 4-5 (immagini 86-88)
  - *pagine 6-7 (immagini 89-92) 
  - *pagine 8-9 (immagini 93-96)
- - *pagine 10-11 (immagini)
+ - *pagine 10-11 (immagini 97-98-99)
  - *pagine 11a-12 (immagini 103-105)
 
 ## pagine selezionate (prolusioni 3 - manoscritto Ms. fr. 3951/1)
@@ -50,7 +50,7 @@
  - *pagine 6-7 (immagine 115)
  - *pagine 8-9 (immagini 116 e 117)
  - *pagine 10-11 (immagini 118-119)
- - *pagine 12-13 ()
+ - *pagine 12-13 (immagini 120 e 121)
  - *pagine 14-15 (immagini 122-123)
  - *pagine 16-17 (immagini 124-125)
  - *pagine 17-18 (immagini 124 e 127)
