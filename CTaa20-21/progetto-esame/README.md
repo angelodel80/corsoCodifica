@@ -64,7 +64,7 @@
  - pagine 1, 2 (prima zona) 3 (seconda zona)
  - pagine 2, 3 (pericopi 013 2 021)
  - pagina 3, 7 (pericopi 031 e 032)
- - *pagina 8, 9 ()
+ - *pagina 8, 9 (immagini 16 e 19,)
  - pagina 10, 11 (immagini 22 e 26)
  - pagina 12, 13 (immagini 27-30)
 
