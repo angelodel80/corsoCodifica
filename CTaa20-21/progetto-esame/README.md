@@ -58,9 +58,6 @@
  - *pagine 19-20 (immagini 126-128)
  - *pagine 21-22 (immagini 130-132)
 
-
-
-
 ## pagine selezionate (morfologia - manoscritto Ms. fr. 3951/7)
  - pagine 1, 2 (prima zona) 3 (seconda zona)
  - pagine 2, 3 (pericopi 013 2 021)
@@ -68,6 +65,7 @@
  - *pagina 8, 9 (immagini 16 e 19,)
  - pagina 10, 11 (immagini 22 e 26)
  - pagina 12, 13 (immagini 27-30)
+ - pagina 14,15 (immagini 31 e 33)
 
 
 [1]: https://archives.bge-geneve.ch/archives/archives/fonds/saussure\_ferdinand\_de/view:5892/n:89 "BGE Saussure"
