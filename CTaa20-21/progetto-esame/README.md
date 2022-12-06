@@ -68,6 +68,7 @@
  - pagina 14, 15 (immagini 31 e 33)
  - pagina 14, 15 (immagini 30 e 35)
  - pagine 16, 17 (immagini 37 e 41)
+ - pagine 20, 21 (immagini 46 e 46) 
 
 
 [1]: https://archives.bge-geneve.ch/archives/archives/fonds/saussure\_ferdinand\_de/view:5892/n:89 "BGE Saussure"
