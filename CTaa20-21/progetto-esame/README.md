@@ -30,6 +30,7 @@
  - pagine 17-18 (immagini 48-50)
  - pagine 19-20 (immagini 52-54)
  - pagine 21-22 (immagini 56-57)
+ - *pagine 23-24 (immagini 59-60)
  - pagine 25-26 (immagini 62/63-66)
  - pagine 27-28 (immagini 68-70)
  - pagine 29-30 (immagini 72-75) 
@@ -57,9 +58,6 @@
  - *pagine 19-20 (immagini 126-128)
  - *pagine 21-22 (immagini 130-132)
 
-
-
-
 ## pagine selezionate (morfologia - manoscritto Ms. fr. 3951/7)
  - pagine 1, 2 (prima zona) 3 (seconda zona)
  - pagine 2, 3 (pericopi 013 2 021)
@@ -67,6 +65,11 @@
  - *pagina 8, 9 (immagini 16 e 19,)
  - pagina 10, 11 (immagini 22 e 26)
  - pagina 12, 13 (immagini 27-30)
+ - pagina 14, 15 (immagini 31 e 33)
+ - pagina 14, 15 (immagini 30 e 35)
+ - pagine 16, 17 (immagini 37 e 41)
+ - pagine 18, 19 (immagini 42 e 43)
+ - pagine 20, 21 (immagini 46 e 46) 
 
 
 [1]: https://archives.bge-geneve.ch/archives/archives/fonds/saussure\_ferdinand\_de/view:5892/n:89 "BGE Saussure"
