@@ -14,6 +14,8 @@
 - Diari ARTOM
     - pp 2-6 (_selezionate_)
     - pp 7-8 (_selezionate_)
+    - pp 9-13 (_selezioante_)
+    - pp 16-18 (_selezionate_)
 
 ______________
 
