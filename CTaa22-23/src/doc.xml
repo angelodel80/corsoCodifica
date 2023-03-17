@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!--
+    prologo
+    name:
+    date:
+
+            -->
+<!--body-->
+<avo>
+    <radice>
+        <elem>ciao</elem>
+        ciao
+        <elem></elem>
+        <altro></altro>
+    </radice>
+    <root />
+</avo>
+<!-- epilogo -->
