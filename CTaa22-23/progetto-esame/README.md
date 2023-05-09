@@ -20,8 +20,12 @@
     - \[...\]
     - pp 20-23 (_selezionate_)
     - pp 24-28 (**completato**)
+    - pp 29-33 (_selezionate_)
     - \[...\]
     - pp 42-44 (_selezionate_)
+    - pp 48, 53, 54 (_selezionate_)
+    - pp 70-74 (_selezionate_)
+    - pp 75-79 (_selezionate_)
     - \[...\]
     - pp 160-164 (_selezionate_)
     
