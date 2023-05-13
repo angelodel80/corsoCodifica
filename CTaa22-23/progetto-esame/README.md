@@ -15,19 +15,30 @@
     - pp 2-6 (**completato**)
     - pp 7-8 (_selezionate_)
     - pp 9-13 (**completato**)
-    - \[...\]
+    - pp 14-15, 19 (_selezionate_)
     - pp 16-18 (_selezionate_)
-    - \[...\]
+    - pp 19 (_gruppo pp 14-15_)
     - pp 20-23 (_selezionate_)
     - pp 24-28 (**completato**)
     - pp 29-33 (_selezionate_)
-    - \[...\]
+    - (_pp 40-41_): in attesa di conferma
     - pp 42-44 (_selezionate_)
+    - pp 45-47 (_selezionate_)
     - pp 48, 53, 54 (_selezionate_)
+    - \[...\]
+    - pp 58-60 (_selezionate_)
+    - \[...\]
     - pp 70-74 (_selezionate_)
     - pp 75-79 (_selezionate_)
     - \[...\]
+    - (_pp 96-99_): in attesa di conferma
+    - \[...\]
+    - (_pp 102-104_): in attesa di conferma
+    - \[...\] 
+    - pp 141-145
+    - \[...\]
     - pp 160-164 (_selezionate_)
+    - \[...\]
     
 
 
