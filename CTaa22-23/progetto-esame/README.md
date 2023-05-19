@@ -21,21 +21,23 @@
     - pp 20-23 (_selezionate_)
     - pp 24-28 (**completato**)
     - pp 29-33 (_selezionate_)
-    - (_pp 40-41_): in attesa di conferma
+    - \[...\]
+    - pp 40-41,63 (_selezionate_)
     - pp 42-44 (_selezionate_)
     - pp 45-47 (_selezionate_)
     - pp 48, 53, 54 (_selezionate_)
-    - \[...\]
+    - pp 55-57 (_selezionate_)
     - pp 58-60 (_selezionate_)
+    - pp 61-63 (_selezionate_)
     - \[...\]
     - pp 70-74 (_selezionate_)
     - pp 75-79 (_selezionate_)
     - \[...\]
-    - (_pp 96-99_): in attesa di conferma
+    - pp 96-99,102 (_selezionate_)
     - \[...\]
-    - (_pp 102-104_): in attesa di conferma
-    - \[...\] 
-    - pp 141-145
+    - pp 133-135 (_selezionate_)
+    - \[...\]
+    - pp 141-145 (_selelzionate_)
     - \[...\]
     - pp 160-164 (_selezionate_)
     - \[...\]
