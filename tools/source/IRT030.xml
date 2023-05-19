@@ -1,0 +1,295 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xml:lang="en">
+   <teiHeader>
+      <fileDesc>
+         <titleStmt>
+            <title>
+               <rs type="textType">Dedication<certainty match=".." locus="value" />
+               </rs>
+               to Commodus </title>
+            <editor>J. M. Reynolds</editor>
+            <editor>J. B. Ward-Perkins</editor>
+         </titleStmt>
+         <publicationStmt>
+            <authority>Centre for Computing in the Humanities, King's College London</authority>
+            <idno type="filename">IRT030</idno>
+            <availability>
+               <p>Creative Commons licence Attribution UK 2.0 (<ref>
+                  http://creativecommons.org/licenses/by/2.0/uk/</ref>). </p>
+               <p>All reuse or distribution of this work must contain somewhere a link back to the
+                  URL <ref>http://irt.kcl.ac.uk/</ref>
+               </p>
+            </availability>
+         </publicationStmt>
+         <sourceDesc>
+            <bibl xml:id="irt1952">
+               <author>J. M. Reynolds</author> and <author>J. B. Ward-Perkins</author>, <title
+                  level="m">The Inscriptions of Roman Tripolitania</title>, <pubPlace>Rome</pubPlace>
+               : <publisher>British
+                  School at Rome</publisher>, <date>1952</date>. </bibl>
+            <msDesc>
+               <msIdentifier />
+               <physDesc>
+                  <objectDesc>
+                     <supportDesc>
+                        <support>
+                           <p> Fragment of a <material>marble</material> 
+                              <rs type="objectType">panel</rs>
+                              (<dimensions>
+                                 <width unit="metre">0.155</width>
+                                 <height unit="metre">0.23</height>
+                                 <depth unit="metre">0.15</depth>
+                              </dimensions>,
+                              no edges surviving). </p>
+                        </support>
+                     </supportDesc>
+                     <layoutDesc>
+                        <layout>Inscribed on the surviving face.</layout>
+                     </layoutDesc>
+                  </objectDesc>
+                  <handDesc>
+                     <handNote>Second century capitals: <height unit="metre">0.075</height>. </handNote>
+                  </handDesc>
+               </physDesc>
+               <history>
+                  <origin>
+                     <p>Unknown</p>
+                     <origDate notBefore="0178" notAfter="0192" evidence="reign">A.D. 178-192
+                        (reign)</origDate>
+                  </origin>
+                  <provenance>
+                     <listEvent>
+                        <event type="found">
+                           <p>
+                              <placeName type="ancientFindspot"
+                                 ref="http://atlantides.org/batlas/abrotonum-sabratha-35-e2"
+                                 key="db659">Sabratha</placeName>: <rs type="monuList" key="db832">
+                              Capitolium</rs>, found in the vaults; see note on <ref
+                                 type="inscription">1</ref>.</p>
+                        </event>
+                        <event type="observed">
+                           <p>Findspot</p>
+                        </event>
+                     </listEvent>
+                  </provenance>
+               </history>
+            </msDesc>
+         </sourceDesc>
+      </fileDesc>
+      <encodingDesc>
+         <p>Marked-up according to the EpiDoc Guidelines version 8</p>
+      </encodingDesc>
+      <profileDesc>
+         <langUsage>
+            <language ident="ar">Arabic</language>
+            <language ident="en">English</language>
+            <language ident="fr">French</language>
+            <language ident="de">German</language>
+            <language ident="grc">Ancient Greek</language>
+            <language ident="grc-Latn">Transliterated Greek</language>
+            <language ident="el">Modern Greek</language>
+            <language ident="he">Hebrew</language>
+            <language ident="it">Italian</language>
+            <language ident="la">Latin</language>
+            <language ident="phn-LY">Punic</language>
+            <language ident="ber-Latn">Native Libyan language in Latin script</language>
+         </langUsage>
+         <textClass />
+         <textClass>
+            <keywords scheme="IRCyr">
+               <term>
+                  <geogName type="ancientRegion" key="Tripolitania">Tripolitania</geogName>
+               </term>
+               <term>
+                  <geogName type="modernCountry" key="LY">Libya</geogName>
+               </term>
+               <term>
+                  <placeName type="modernFindspot"
+                     key="http://www.geonames.org/2208578/marsa-zawaghah.html">Marsa Zawaghah</placeName>
+               </term>
+            </keywords>
+         </textClass>
+      </profileDesc>
+      <revisionDesc>
+         <change when="2010-08-18" who="GB">Converted from TEI P4 (EpiDoc DTD v. 6) to P5 (EpiDoc
+            RNG schema v. 8)</change>
+         <change when="2008-09-09" who="ZA">converted using CHET-C</change>
+         <change when="2009-05-19" who="RV">Added Figures</change>
+         <change when="2009-08-24" who="RV">Added Figures</change>
+      </revisionDesc>
+   </teiHeader>
+   <text>
+      <body>
+         <div type="bibliography">
+            <head>Bibliography</head>
+            <p>Not previously published.</p>
+         </div>
+         <div subtype="text-constituted-from" type="history">
+            <head>Text constituted from</head>
+            <p>Transcription (Reynolds, Ward-Perkins)</p>
+         </div>
+         <div type="edition" xml:lang="la">
+            <head xml:lang="en">Text</head>
+            <ab>
+               <lb n="1" />
+               <supplied reason="lost">
+                  <w lemma="imperator" part="I">
+                     <expan>
+                        <abbr>Imp</abbr>
+                        <ex>erator</ex>
+                     </expan>
+                  </w>
+               </supplied>
+               <persName type="emperor">
+                  <supplied reason="lost">
+                     <name type="cognomen" nymRef="Caesar">
+                        <seg part="I">
+                           <expan>
+                              <abbr>Caes</abbr>
+                              <ex>ar</ex>
+                           </expan>
+                        </seg>
+                     </name>
+                     <gap reason="lost" extent="unknown" unit="character" />
+                     <persName type="emperor">
+                        <name type="praenomen" nymRef="Marcus">
+                           <expan>
+                              <abbr>M</abbr>
+                              <ex>arci</ex>
+                           </expan>
+                        </name>
+                        <name type="gentilicium" nymRef="Antoninus">Antonini</name>
+                        <name type="cognomen" nymRef="Pius">Pii</name>
+                     </persName>
+                     <gap reason="lost" extent="unknown" unit="character" />
+                     <w lemma="filius" part="I">
+                        <expan>
+                           <abbr>fil</abbr><ex>i</ex>
+                        </expan>
+                     </w>
+                  </supplied>
+                  <lb n="2" />
+                  <supplied reason="lost">
+                     <persName type="emperor">
+                        <w lemma="diuus">diui</w>
+                        <name type="cognomen" nymRef="Pius">Pii</name>
+                     </persName>
+                     <w part="I">
+                        <expan>
+                           <abbr>n</abbr>
+                           <ex>ep</ex>
+                        </expan>
+                     </w>
+                  </supplied>
+                  <persName type="emperor">
+                     <supplied reason="lost">
+                        <w lemma="diuus">diui</w>
+                     </supplied>
+                     <name type="cognomen" nymRef="Hadrianus"><supplied reason="lost">H</supplied>adr<supplied reason="lost">iani</supplied></name>
+                  </persName>
+                  <supplied reason="lost">
+                     <w part="I">
+                        <expan>
+                           <abbr>pron</abbr>
+                           <ex>ep</ex>
+                        </expan>
+                     </w>
+                  </supplied>
+                  <persName type="emperor">
+                     <supplied reason="lost">
+                        <w lemma="diuus">diui</w>
+                     </supplied>
+                     <lb n="3" />
+                     <supplied reason="lost">
+                        <name type="cognomen" nymRef="Traianus">Traiani</name>
+                        <name type="cognomen" nymRef="Parthicus">Parthici</name>
+                     </supplied>
+                  </persName>
+                  <w part="I">
+                     <expan>
+                        <abbr>abn</abbr>
+                        <ex>ep</ex>
+                     </expan>
+                  </w>
+                  <persName type="emperor">
+                     <w lemma="diuus">
+                        <unclear>d</unclear><supplied reason="lost">iui</supplied>
+                     </w>
+                     <supplied reason="lost">
+                        <name type="cognomen" nymRef="Nerua">Neruae</name>
+                     </supplied>
+                  </persName>
+                  <supplied reason="lost">
+                     <w part="I">
+                        <expan>
+                           <abbr>adn</abbr>
+                           <ex>ep</ex>
+                        </expan>
+                     </w>
+                  </supplied>
+                  <lb n="4" />
+                  <supplied reason="lost">
+                     <name type="praenomen" nymRef="Lucius">
+                        <seg part="I">
+                           <expan>
+                              <abbr>L</abbr>
+                              <ex>uci</ex>
+                           </expan>
+                        </seg>
+                     </name>
+                     <name type="gentilicium" nymRef="Aelius">
+                        <seg part="I">Aeli</seg>
+                     </name>
+                     <name type="gentilicium" nymRef="Aurelius">
+                        <seg part="I">Aureli</seg>
+                     </name>
+                  </supplied>
+                  <name>
+                     <seg part="I">
+                        <unclear>Co</unclear><supplied reason="lost">mmod</supplied>
+                     </seg>
+                  </name>
+                  <supplied reason="lost">
+                     <name type="cognomen" nymRef="Augustus">
+                        <seg part="I">
+                           <expan>
+                              <abbr>Aug</abbr>
+                              <ex>ust</ex>
+                           </expan>
+                        </seg>
+                     </name>
+                  </supplied>
+               </persName>
+               <gap reason="lost" extent="unknown" unit="character" />
+            </ab>
+         </div>
+         <div type="apparatus">
+            <head>Apparatus</head>
+            <p>
+               <app loc="4">
+                  <note>Line 4 is represented by the upper parts only of two letters with rounded bowls.</note>
+               </app>
+            </p>
+         </div>
+         <div type="translation">
+            <head>Translation</head>
+            <p>
+               <supplied reason="lost">Emperor Caesar<gap reason="lost" /> son of Marcus Antonius Pius, grandson of deified Pius, great grandson of deified</supplied> Hadrian, great great grandson <supplied reason="lost">of deified Trajan victor in Parthia</supplied>, great great great grandson <supplied reason="lost">of deified Nerva, Lucuis Aelius Aurelius</supplied> Commodus <supplied reason="lost">Augustus</supplied> <gap reason="lost" />
+            </p>
+         </div>
+         <div type="commentary">
+            <head>Commentary</head>
+            <p>No comment</p>
+         </div>
+         <div type="figure">
+            <head>Photographs</head>
+            <p>
+               <figure>
+                  <graphic url="0046" />
+                  <head>Ward-Perkins Archive, BSR (BSR 48.XXVII.13)</head>
+               </figure>
+            </p>
+         </div>
+      </body>
+   </text>
+</TEI>
