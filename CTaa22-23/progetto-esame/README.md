@@ -26,20 +26,24 @@
     - pp 42-44 (_selezionate_)
     - pp 45-47 (_selezionate_)
     - pp 48, 53, 54 (_selezionate_)
-    - pp 55-57 (_selezionate_)
+    - pp 55-57 (_selezionate_) (**controllare**)
     - pp 58-60 (_selezionate_)
     - pp 61-63 (_selezionate_)
+    - pp 64-66 (_selezionate_)
     - \[...\]
     - pp 70-74 (_selezionate_)
     - pp 75-79 (_selezionate_)
     - \[...\]
     - pp 96-99,102 (_selezionate_)
     - \[...\]
+    - 116-121 (_selezionate_)
+    - \[...\]
     - pp 133-135 (_selezionate_)
     - \[...\]
     - pp 141-145 (_selelzionate_)
     - \[...\]
     - pp 160-164 (_selezionate_)
+    - pp 165-167 (_selezionate_)
     - \[...\]
     
 
