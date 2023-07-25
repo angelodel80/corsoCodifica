@@ -21,6 +21,7 @@
     - pp 20-23 (_selezionate_)
     - pp 24-28 (**completato**)
     - pp 29-33 (_selezionate_)
+    - pp. 34-36 (_selezionate_)
     - \[...\]
     - pp 40-41,63 (_selezionate_)
     - pp 42-44 (_selezionate_)
@@ -35,6 +36,7 @@
     - pp 75-79 (_selezionate_)
     - \[...\]
     - pp 80-84 (_selezionate_)
+    - \[...\]
     - pp 96-99,102 (_selezionate_)
     - pp 104-106 (_selezionate_)
     - \[...\]
@@ -46,6 +48,7 @@
     - \[...\]
     - pp 160-164 (_selezionate_)
     - pp 165-167 (_selezionate_)
+    - pp 168-172 (_selezionate_)
     - \[...\]
     
 
