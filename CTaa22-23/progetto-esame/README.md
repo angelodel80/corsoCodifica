@@ -18,7 +18,7 @@
     - pp 14-15, 19 (_selezionate_)
     - pp 16-18 (_selezionate_)
     - pp 19 (_gruppo pp 14-15_)
-    - pp 20-23 (_selezionate_)
+    - pp 20-23 (**completato**)
     - pp 24-28 (**completato**)
     - pp 29-33 (_selezionate_)
     - pp. 34-36 (_selezionate_)
@@ -29,11 +29,11 @@
     - pp 48, 53, 54 (_selezionate_)
     - pp 49-51 (_selezionate_)
     - pp 53,54 (_selezionate_)
-    - pp 55-57 (_selezionate_) (**controllare**)
+    - pp 55-57 (**completato**)
     - pp 58-60 (_selezionate_)
     - pp 61-63 (_selezionate_)
     - pp 64-66 (_selezionate_)
-    - pp 67-69 (_selezionate_)
+    - pp 67-69 (**completato**)
     - pp 70-74 (_selezionate_)
     - pp 75-79 (_selezionate_)
     - \[...\]
@@ -44,16 +44,17 @@
     - \[...\]
     - pp 116-121 (_selezionate_)
     - \[...\]
-    - pp 125-127 (_selezionate_)
+    - pp 125-127 (**completato**)
     - \[...\]
+    - pp 130-132 (_selezionate_)
     - pp 133-135 (_selezionate_)
     - \[...\]
-    - pp 141-145 (_selezionate_)
+    - pp 141-145 (**completato**)
     - pp 147-149 (_selezionate_)
     - \[...\]
     - pp 160-164 (_selezionate_)
     - pp 165-167 (_selezionate_)
-    - pp 168-172 (_selezionate_)
+    - pp 168-172 (**completato**)
     - \[...\]
     
 
