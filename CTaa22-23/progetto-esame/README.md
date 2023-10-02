@@ -41,6 +41,7 @@
     - \[...\]
     - pp 96-99,102 (_selezionate_)
     - pp 104-106 (_selezionate_)
+    - pp 106-109 (_selezionate_)
     - \[...\]
     - pp 116-121 (_selezionate_)
     - \[...\]
