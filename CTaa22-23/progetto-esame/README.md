@@ -22,7 +22,7 @@
     - pp 24-28 (**completato**)
     - pp 29-33 (_selezionate_)
     - pp. 34-36 (_selezionate_)
-    - \[...\]
+    - pp. 37-39 (__da-confermare__)
     - pp 40-41,63 (_selezionate_)
     - pp 42-44 (_selezionate_)
     - pp 45-47 (_selezionate_)
@@ -39,10 +39,12 @@
     - \[...\]
     - pp 80-84 (_selezionate_)
     - \[...\]
+    - pp 90-92
     - pp 96-99,102 (_selezionate_)
     - pp 104-106 (_selezionate_)
     - pp 106-109 (_selezionate_)
     - \[...\]
+    - pp 111-115 (_selezionate_)
     - pp 116-121 (_selezionate_)
     - \[...\]
     - pp 125-127 (**completato**)
