@@ -48,7 +48,7 @@
     - pp 116-121 (_selezionate_)
     - pp 122-124 (_selezionate_)
     - pp 125-127 (**completato**)
-    - \[...\]
+    - pp 128-129 (_selezionate_)
     - pp 130-132 (_selezionate_)
     - pp 133-135 (_selezionate_)
     - pp 136-138 (_selezionate_)
