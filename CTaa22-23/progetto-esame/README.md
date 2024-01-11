@@ -39,7 +39,9 @@
     - \[...\]
     - pp 80-84 (_selezionate_)
     - \[...\]
-    - pp 90-92
+    - pp 87, 88 (_selezionate_)
+    - \[...\]
+    - pp 90-92 (_selezionate_)
     - pp 96-99,102 (_selezionate_)
     - pp 104-106 (_selezionate_)
     - pp 106-109 (_selezionate_)
@@ -58,7 +60,7 @@
     - pp 150, 159, 173 (_selezionate_)
     - pp 151-153 (_selezionate_)
     - \[...\]
-    - pp 159 (_selezionate_)
+    - pp 158, 159 (_selezionate_)
     - pp 160-164 (_selezionate_)
     - pp 165-167 (_selezionate_)
     - pp 168-172 (**completato**)
