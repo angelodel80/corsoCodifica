@@ -38,9 +38,9 @@
     - pp 75-79 (_selezionate_)
     - \[...\]
     - pp 80-84 (_selezionate_)
-    - \[...\]
+    - pp 85, 86 (_selezionate_)
     - pp 87, 88 (_selezionate_)
-    - \[...\]
+    - pp 89 (_selezionata_)
     - pp 90-92 (_selezionate_)
     - pp 96-99,102 (_selezionate_)
     - pp 104-106 (_selezionate_)
