@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!-- documento xml da validare -->
+<!-- 
+    file: esercizio-doc-da-validare
+    nome: NOME COGNOME
+    data: DATA
+-->
+
+<!-- corpo del documento XML-->
+<elementoRadice>
+    <elementoFiglio>
+        <elementoAnnidato>
+        </elementoAnnidato>
+    </elementoFiglio>
+    <elementoFiglio>
+        <elementoAnnidato>
+            <elementoAnnidato>
+            <elementoFiglio>
+        </elementoAnnidato>
+            </elementoFiglio>
+        <elementoAnnidato><elementoFiglio></elementoFiglio>
+    </elementoFiglio>
+</elementoRadice>
+
+<!-- epilogo -->
