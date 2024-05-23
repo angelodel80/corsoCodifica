@@ -2,15 +2,15 @@
 ## Indicazioni per il progetto d'esame
 ### Realizzare una edizione digitale image-based
 
-> La fonte primaria da selezionare per lo sviluppo dell'edizione digitale è da selezionare 
+> La fonte primaria per lo sviluppo dell'edizione digitale è da selezionare 
 presso l'archivio della rivista letteraria **La Rassegna Settimanale** raggiungibile al seguente link: [rassegnasettimanale.animi.it](https://rassegnasettimanale.animi.it/)
 
 ### Informazioni sulla rivista:
-> per una panoramica sulla rassegna vedere il documento al seguente link [Manica_La-Rassegna-1.pdf](https://rassegnasettimanale.animi.it/wp-content/uploads/2019/03/Manica_La-Rassegna-1.pdf)
+> per una panoramica su La Rassegna vedere il documento al seguente link [Manica_La-Rassegna-1.pdf](https://rassegnasettimanale.animi.it/wp-content/uploads/2019/03/Manica_La-Rassegna-1.pdf)
 
 ### Modalità di selezione del materiale
-- Selezionare da un fascicolo tra quelli disponibili dell'anno 1878 due articoli e in aggiunta la sezione Bibliografia oppure la sezione Notizie.
-- Realizzare l'edizione imaged-based usanto il tool [teizoner](http://teicat.huma-num.fr/zoner.php)
+- Selezionare due articoli da un fascicolo tra quelli disponibili dell'anno 1878 e, in aggiunta, una sezione Bibliografia oppure una sezione Notizie.
+- Realizzare l'edizione imaged-based usando il tool [teizoner](http://teicat.huma-num.fr/zoner.php)
 - Codificare i fenomeni notevoli esemplificati nel file **IL REALISMO IN ARTE** 
 
 ### Articoli selezionati:
