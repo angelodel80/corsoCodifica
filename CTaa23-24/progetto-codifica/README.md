@@ -9,7 +9,7 @@ presso l'archivio della rivista letteraria **La Rassegna Settimanale** raggiungi
 > per una panoramica su La Rassegna vedere il documento al seguente link [Manica_La-Rassegna-1.pdf](https://rassegnasettimanale.animi.it/wp-content/uploads/2019/03/Manica_La-Rassegna-1.pdf)
 
 ### Modalità di selezione del materiale
-- Selezionare due articoli da un fascicolo tra quelli disponibili dell'anno 1878 e, in aggiunta, almeno due entrate della sezione Bibliografia e due entrate della sezione Notizie.
+- Selezionare due articoli da un fascicolo tra quelli disponibili dell'anno 1878 e, in aggiunta, almeno due entrate della sezione Bibliografia e due entrate della sezione Notizie (se in gruppo da due selezionare tre articoli, se in gruppo da tre selezionare cinque articoli).
 - Realizzare l'edizione imaged-based usando il tool [teizoner](http://teicat.huma-num.fr/zoner.php)
 - Codificare i fenomeni notevoli esemplificati nel file **IL REALISMO IN ARTE** 
 
