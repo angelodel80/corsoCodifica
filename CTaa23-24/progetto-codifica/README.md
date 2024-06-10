@@ -33,5 +33,13 @@ presso l'archivio della rivista letteraria **La Rassegna Settimanale** raggiungi
 - L'istruzione delle donne (*vol 1, fascicolo 18*)
 - Frutti proibiti (*vol 2, fascicolo 9*)
 - La Evoluzione dei Colori (*vol 2, fascicolo 9*)
+- L'Istruzione Della Donna (*vol. 1, fascicolo 21*)
+- Le Religioni dell'Asia Orientale  (*vol. 1, fascicolo 21*)
+- Dell'Influenza Germanica sulla Musica  (*vol. 1, fascicolo 21*)
+- Il parlamento (*vol 1, fascicolo 14*)
+- La settimana (*vol 1, fascicolo 14*)
+- Lettere militari. Della artiglieria da fortezza italiana (*volume 9 , fascicolo 209*)
+- In Piazza della Scala e Notti bolognesi (*volume 9 , fascicolo 209*)
+
 
 ______________
