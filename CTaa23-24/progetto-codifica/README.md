@@ -2,8 +2,8 @@
 ## Indicazioni per il progetto d'esame
 ### Realizzare una edizione digitale image-based
 
-> La fonte primaria per lo sviluppo dell'edizione digitale è da selezionare 
-presso l'archivio della rivista letteraria **La Rassegna Settimanale** raggiungibile al seguente link: [rassegnasettimanale.animi.it](https://rassegnasettimanale.animi.it/)
+> La fonte primaria per lo sviluppo dell'edizione digitale può essere selezionata 
+visitando il sito dell'archivio elettronico della rivista letteraria **La Rassegna Settimanale**, raggiungibile al seguente link: [rassegnasettimanale.animi.it](https://rassegnasettimanale.animi.it/)
 
 ### Informazioni sulla rivista:
 > per una panoramica su La Rassegna vedere il documento al seguente link [Manica_La-Rassegna-1.pdf](https://rassegnasettimanale.animi.it/wp-content/uploads/2019/03/Manica_La-Rassegna-1.pdf)
