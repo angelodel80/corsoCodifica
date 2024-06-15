@@ -13,7 +13,7 @@ presso l'archivio della rivista letteraria **La Rassegna Settimanale** raggiungi
 - Realizzare l'edizione imaged-based usando il tool [teizoner](http://teicat.huma-num.fr/zoner.php)
 - Codificare i fenomeni notevoli esemplificati nel file **IL REALISMO IN ARTE** 
 
-### Articoli selezionati:
+### Articoli già selezionati e non più disponibili:
 - Le costruzioni e le nuove convenzioni ferroviarie (*vol 1, fascicolo 7*) 
 - Il conclave, lettere da Roma (*vol 1, fascicolo 7*) 
 - Corrispondenza artistica da Parigi (*vol 2, fascicolo 14*)
