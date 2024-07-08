@@ -40,6 +40,22 @@ visitando il sito dell'archivio elettronico della rivista letteraria **La Rasseg
 - La settimana (*vol 1, fascicolo 14*)
 - Lettere militari. Della artiglieria da fortezza italiana (*volume 9 , fascicolo 209*)
 - In Piazza della Scala e Notti bolognesi (*volume 9 , fascicolo 209*)
+- Traduzioni dal Goethe (*vol 1, fascicolo 15*)
+- I comuni e le nuove ferrovie (*vol 2 fascicolo 49*) 
+- Una esposizione universale in Italia (*vol 1 fascicolo 23*)
+- Le Università secondarie (*vol 1, fascicolo 19*)
+- Napoli a occhio nudo (*vol 1, fascicolo 19*)
+- Il nuovo papa e le questioni sociali (*vol 1 fascicolo 11*)
+- L'emigrazione Italiana (*vol 1 fascicolo 11*)
+- Il Talmud (*Vol 2 Fascicolo 23 (49)*)
+- Dei concorsi musicali in Italia (*Vol 2 Fascicolo 23 (49)*)
+- le scuole normali superiori per le donne (volume 2, fascicolo 47);
+- un Amleto italiano (volume 4, fascicolo 83);
+- il prigioniero di Chillon (volume 5, fascicolo 128).
+- La settimana (*vol 1, fascicolo 1*)
+- Da mezzogiorno a settentrione (*vol 1, fascicolo 1*)
+- Scienza (*vol 1, fascicolo 1*)
+
 
 
 ______________
