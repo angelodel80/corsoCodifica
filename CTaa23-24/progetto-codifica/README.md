@@ -38,8 +38,8 @@ visitando il sito dell'archivio elettronico della rivista letteraria **La Rasseg
 - Dell'Influenza Germanica sulla Musica  (*vol. 1, fascicolo 21*)
 - Il parlamento (*vol 1, fascicolo 14*)
 - La settimana (*vol 1, fascicolo 14*)
-- Lettere militari. Della artiglieria da fortezza italiana (*volume 9 , fascicolo 209*)
-- In Piazza della Scala e Notti bolognesi (*volume 9 , fascicolo 209*)
+- Lettere militari. Della artiglieria da fortezza italiana (*vol 9 , fascicolo 209*)
+- In Piazza della Scala e Notti bolognesi (*vol 9 , fascicolo 209*)
 - Traduzioni dal Goethe (*vol 1, fascicolo 15*)
 - I comuni e le nuove ferrovie (*vol 2 fascicolo 49*) 
 - Una esposizione universale in Italia (*vol 1 fascicolo 23*)
@@ -48,14 +48,20 @@ visitando il sito dell'archivio elettronico della rivista letteraria **La Rasseg
 - Il nuovo papa e le questioni sociali (*vol 1 fascicolo 11*)
 - L'emigrazione Italiana (*vol 1 fascicolo 11*)
 - Il Talmud (*Vol 2 Fascicolo 23 (49)*)
-- Dei concorsi musicali in Italia (*Vol 2 Fascicolo 23 (49)*)
-- le scuole normali superiori per le donne (volume 2, fascicolo 47);
-- un Amleto italiano (volume 4, fascicolo 83);
-- il prigioniero di Chillon (volume 5, fascicolo 128).
+- Dei concorsi musicali in Italia (*vol 2 Fascicolo 23 (49)*)
+- le scuole normali superiori per le donne (*vol 2, fascicolo 47*);
+- un Amleto italiano (*vol 4, fascicolo 83*);
+- il prigioniero di Chillon (*vol 5, fascicolo 128*).
 - La settimana (*vol 1, fascicolo 1*)
 - Da mezzogiorno a settentrione (*vol 1, fascicolo 1*)
 - Scienza (*vol 1, fascicolo 1*)
-
+- le dimostrazioni degli studenti del liceo (*vol 1, fascicolo 22*)
+- ​gli esami liceali (*vol 2, fascicolo 36*)
+- Le belle arti all’esposizione universale del 1878 (*vol 1, fascicolo 20*)
+- Della voce genovese “intendiò” (*vol 3, fascicolo 63*)
+- Marchesa Colombi: In risaia - Racconto di Natale (*vol 1, fascicolo 5*)
+- Lucia (*vol 1, fascicolo 23*)
+- Achillini e Manzoni (*vol. 3, fascicolo 59*)
 
 
 ______________
