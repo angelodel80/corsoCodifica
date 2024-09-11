@@ -62,6 +62,9 @@ visitando il sito dell'archivio elettronico della rivista letteraria **La Rasseg
 - Marchesa Colombi: In risaia - Racconto di Natale (*vol 1, fascicolo 5*)
 - Lucia (*vol 1, fascicolo 23*)
 - Achillini e Manzoni (*vol. 3, fascicolo 59*)
+- Lo scrutinio di Stato (*vol.3, fascicolo 22*)
+- Corrispondenze da Londra (*vol.3, fascicolo 22*)
+- La settimana (*vol.3, fascicolo 22*)
 
 
 ______________
