@@ -47,7 +47,7 @@ visitando il sito dell'archivio elettronico della rivista letteraria **La Rasseg
 - Napoli a occhio nudo (*vol 1, fascicolo 19*)
 - Il nuovo papa e le questioni sociali (*vol 1 fascicolo 11*)
 - L'emigrazione Italiana (*vol 1 fascicolo 11*)
-- Il Talmud (*Vol 2 Fascicolo 23 (49)*)
+- Il Talmud (*vol 2 Fascicolo 23 (49)*)
 - Dei concorsi musicali in Italia (*vol 2 Fascicolo 23 (49)*)
 - le scuole normali superiori per le donne (*vol 2, fascicolo 47*);
 - un Amleto italiano (*vol 4, fascicolo 83*);
@@ -61,10 +61,14 @@ visitando il sito dell'archivio elettronico della rivista letteraria **La Rasseg
 - Della voce genovese “intendiò” (*vol 3, fascicolo 63*)
 - Marchesa Colombi: In risaia - Racconto di Natale (*vol 1, fascicolo 5*)
 - Lucia (*vol 1, fascicolo 23*)
-- Achillini e Manzoni (*vol. 3, fascicolo 59*)
-- Lo scrutinio di Stato (*vol.3, fascicolo 22*)
-- Corrispondenze da Londra (*vol.3, fascicolo 22*)
-- La settimana (*vol.3, fascicolo 22*)
-
+- Achillini e Manzoni (*vol 3, fascicolo 59*)
+- Lo scrutinio di Stato (*vol 3, fascicolo 22*)
+- Corrispondenze da Londra (*vol 3, fascicolo 22*)
+- La settimana (*vol 3, fascicolo 22*)
+- La politica italiana in oriente (*vol 1, fascicolo 5*)
+- Guido Padelletti (*vol 2, fascicolo 1*)
+- Le ragioni del parlamento (*vol 2, fascicolo 1*)
+- Venezia visitata da un frate tedesco del secolo XV (*vol 2, fascicolo 4*)
+- Rassegna tecnologica (*vol 2, fascicolo 4*)
 
 ______________
