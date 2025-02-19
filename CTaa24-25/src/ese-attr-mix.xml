@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI>
+    <header type="intestazione" lang="it"> intestazione del corpo XML</header>
+    <facsimile source="fonte-primaria" ref="id1">elemento facsimile</facsimile>
+    <testo id="id1" type="manuscript"> questo è testo <seg>misto</seg> del documento XML</testo>
+</TEI>

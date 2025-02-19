@@ -1,0 +1,2 @@
+<!ELEMENT element-name (#PCDATA)>
+<!ATTLIST element-name attribute-name ID #REQUIRED>

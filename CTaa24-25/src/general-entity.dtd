@@ -1,0 +1,6 @@
+<!ELEMENT radice (ent)>
+<!ELEMENT ent (intern,esterno)>
+<!ELEMENT esterno (#PCDATA)>
+<!ELEMENT intern (#PCDATA)>
+<!ENTITY int "<intern>entità interna</intern>">
+<!ENTITY est SYSTEM "entita-esterna.ent">
