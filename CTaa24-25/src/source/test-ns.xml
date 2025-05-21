@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xmlns="http://tei.."
+    
+    xmlns:voc="http://voc/1"
+        >
+        <pre:ele></pre:ele>
+
+        <teiHeader xmlns:pre="http://altr0-voc">
+            <pre:elem></pre:elem>
+        </teiHeader>
+
+</TEI>

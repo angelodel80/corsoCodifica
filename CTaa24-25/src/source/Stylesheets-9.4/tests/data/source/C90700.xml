@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?xml-model href="http://www.stoa.org/epidoc/schema/latest/tei-epidoc.rng" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="http://www.stoa.org/epidoc/schema/dev/ircyr-checking.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<?xml-model href="http://www.stoa.org/epidoc/schema/latest/tei-epidoc.rng" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:lang="en">
+   <teiHeader>
+      <fileDesc>
+         <titleStmt>
+            <title><rs type="textType">Funerary</rs> relief</title>
+            <editor>Joyce M. Reynolds</editor>
+         </titleStmt>
+         <publicationStmt>
+            <authority>Centre for Computing in the Humanities, King's College London</authority>
+            <idno type="filename">C90700</idno>
+            <availability>
+               <p/>
+            </availability>
+         </publicationStmt>
+         <sourceDesc>
+            <msDesc>
+               <msIdentifier><repository>Cyrene museum</repository><idno type="invNo">77-377</idno></msIdentifier>
+               <physDesc>
+                  <objectDesc>
+                     <supportDesc>
+                        <support>
+                           <p>Relief <objectType>panel</objectType> of medium-grained white <material>marble</material>; composed from three pieces, 
+                              the upper left-hand corner lost, all edges chipped, the surface encrusted as well as worn away in places
+                              (<dimensions>
+                                 <width>0.415</width>
+                                 <height>0.34</height>
+                                 <depth>0.063</depth>
+                              </dimensions>; depth of relief  0.029). The relief as a whole presents a male figure on horseback 
+                              (both man and horse damaged), riding rightwards towards a draped woman and a boy (damaged) who stand beside a cylindrical altar; behind the 
+                              boy there is an inscribed stele with conical top, and under the horse a snake which uncoils and reaches towards the altar. A dowel hole (depth 
+                              0.015, diameter 0.007) by the right leg of the boy may have served to attach the horse’s front leg to the background. </p>
+                        </support>
+                     </supportDesc>
+                     <layoutDesc>
+                        <layout><rs type="execution" key="scalpro">Inscribed</rs> on the stele shown in the relief. </layout>
+                     </layoutDesc>
+                  </objectDesc>
+                  <handDesc>
+                     <handNote>Not recorded.</handNote>
+                  </handDesc>
+               </physDesc>
+               <history>
+                  <origin>
+                     <origPlace>Unknown.</origPlace>
+                     <origDate notAfter="0033" notBefore="-0033" precision="low" evidence="lettering">Late first century B.C. to early first century A.D.</origDate>
+                  </origin>
+                        <provenance type="found">
+                           <p>
+                              <placeName type="ancientFindspot" ref="http://pleiades.stoa.org/places/373778" key="db909">Cyrene</placeName>:
+                              <rs type="monuList" key="db1381">Shrine of Demeter and Kore</rs>: area F13/G13, 2, 2. 
+                              </p>
+                        </provenance>
+                        <provenance type="observed">
+                           <p><rs type="monuList" key="db933">Cyrene Museum</rs>.</p>
+                        </provenance>
+               </history>
+            </msDesc>
+         </sourceDesc>
+      </fileDesc>
+      <profileDesc>
+         <langUsage>
+            <language ident="ar">Arabic</language>
+            <language ident="en">English</language>
+            <language ident="fr">French</language>
+            <language ident="de">German</language>
+            <language ident="grc">Ancient Greek</language>
+            <language ident="grc-Latn">Transliterated Greek</language>
+            <language ident="el">Modern Greek</language>
+            <language ident="he">Hebrew</language>
+            <language ident="it">Italian</language>
+            <language ident="la">Latin</language>
+         </langUsage>
+         <textClass>
+            <keywords scheme="IRCyr">
+               <term>
+                  <geogName type="ancientRegion" key="Cyrene">Cyrenaica</geogName>
+               </term>
+               <term>
+                  <geogName type="modernCountry" key="LY">Libya</geogName>
+               </term>
+               <term>
+                  <placeName type="modernFindspot" ref="http://sws.geonames.org/82972">Shahat</placeName>
+               </term>
+            </keywords>
+         </textClass>
+      <creation>Transcription (Reynolds).</creation></profileDesc>
+      <revisionDesc>
+         <change when="2012-11-05" who="GB">moved text-constituted-from to profileDesc/creation</change>
+         <change when="2012-10-16" who="GB">broke provenance events into multiple provenance elements</change>
+         <change when="2010-11-23" who="Ljuba">entered and tagged text</change>
+      </revisionDesc>
+   </teiHeader>
+   <text>
+      <body>
+         <div type="bibliography">
+            <p>Mentioned <bibl><ptr target="white1978-1979"/> <biblScope>61, pl. LIV, A</biblScope></bibl>, 
+               and <bibl><ptr target="white1987"/><biblScope>1</biblScope></bibl><bibl>, 
+               </bibl> whence <bibl><title>SEG</title> <biblScope>37.1701bis</biblScope></bibl>
+               ; <bibl><ptr target="kane2003"/> <biblScope>2</biblScope></bibl>, 
+               <bibl> whence <title>SEG</title> <biblScope>53.2055</biblScope></bibl>;
+               <bibl><ptr target="jmr2012"/> <biblScope>A.38</biblScope></bibl>.</p>
+         </div>
+         
+         <div type="edition" xml:lang="grc" xml:space="preserve">
+            <ab><lb n="1"/><persName type="attested"><name nymRef="Θεύδωρος">Θεύδωρος</name> 
+               <lb n="2"/><persName type="attested"><name nymRef="Θεύδωρος">Θευδώρω</name></persName></persName>
+               <lb n="3"/><w>ἥρω<supplied reason="lost">ς</supplied></w>
+            </ab>
+         </div>
+         <div type="translation" xml:space="preserve">
+            <p>Theodoros <supplied reason="subaudible">son</supplied> of Theodoros, hero</p>
+         </div>
+         <div type="commentary">
+            <p>The figure on horseback, who may be pictured as an ephebe or a neos, is clearly deceased, and I take the stele to represent his funerary monument which,
+               with the altar dedicated to a funerary cult, will have stood in the courtyard in front of his tomb, in the manner common in the Cyrene cemeteries, 
+               at any rate until early in the second century A.D.  The courtyard normally also contained a half-figure of a mourning woman and the female figure here
+               may represent her.</p>
+            <p>In the inscription the deceased is named and described as <foreign xml:lang="grc">ἥρως</foreign>, hero, i.e. a superhuman post mortem existence is attributed to him, as also to the 
+            subject of <ref type="inscription">C90900</ref>. Given the relief and its dedication in the Sanctuary (if that is really to be accepted - but it is to
+               be remembered that it was found in what might be described as a dump into which many stones from the adjacent cemetery might have been swept),
+               this divinisation deserves to be regarded as a genuine and comforting belief by his surviving family.</p>
+           <p> A dedication of this kind in the Sanctuary presumably indicates that in some part thereof Kore’s identity with Persephone (locally Persephatta)
+           as Queen of the Underworld was a feature of the cult.</p>
+            <p>It should be noted that the names preserve in Cyrenaean dialect forms (<foreign xml:lang="grc">Θευ-</foreign> for <foreign xml:lang="grc">Θεο</foreign>- 
+               and -<foreign xml:lang="grc">ω</foreign> for -<foreign xml:lang="grc">ου</foreign> in the genitive singular masculine).</p>
+         </div>
+      </body>
+   </text>
+</TEI>

@@ -1,0 +1,232 @@
+<?xml version="1.0" encoding="UTF-8"?><?xml-model href="http://www.stoa.org/epidoc/schema/8.23/tei-epidoc.rng" schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="http://www.stoa.org/epidoc/schema/8.23/tei-epidoc.rng" schematypens="http://purl.oclc.org/dsdl/schematron"?><?xml-model href="http://www.stoa.org/epidoc/schema/dev/ircyr-checking.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI xmlns="http://www.tei-c.org/ns/1.0">
+   <teiHeader>
+      <fileDesc>
+         <titleStmt><title xml:lang="ru">Метрическая эпитафия</title><title xml:lang="en">Metrical epitaph</title><editor xml:id="ip" role="translator"><persName xml:lang="ru">Ирина<forename/><surname>Полинская</surname></persName><persName xml:lang="en"><forename>Irene</forename><surname>Polinskaya</surname></persName></editor></titleStmt>
+         <publicationStmt>
+            <authority>King's College London</authority>
+            <idno type="IM2015">30.231</idno>
+            <idno type="filename">PE3000196</idno>
+            <idno type="PE">PE3000196</idno>
+         </publicationStmt>
+         <sourceDesc>
+            <msDesc>
+               <msIdentifier>
+                  <country/>
+                  <altIdentifier xml:lang="ru">
+                     <repository>Национальный заповедник "Херсонес Таврический"</repository>
+                     <idno>30/37193</idno>
+                  </altIdentifier>
+                  <altIdentifier xml:lang="en">
+                     <repository>National Preserve of Tauric Chersonesos</repository>
+                     <idno>30/37193</idno>
+                  </altIdentifier>
+               </msIdentifier>
+               <msContents>
+                  <summary corresp="document-search.xml#doc2">
+                     <seg xml:lang="ru">Надгробная надпись.</seg>
+                     <seg xml:lang="en">Epitaph.</seg>
+                  </summary>
+               </msContents>
+               <physDesc>
+                  <objectDesc>
+                     <supportDesc>
+                        <support>
+                           <objectType xml:lang="ru" ref="monument-search.xml#mon1">Плита.</objectType>
+                           <objectType xml:lang="en">Panel.</objectType>
+                           <material xml:lang="ru" ref="material-search.xml#m1">Мрамор.</material>
+                           <material xml:lang="en">Marble.</material>
+                           <p xml:lang="ru">Обломана со всех сторон. Лицевой фас плиты тщательно
+                              обработан, тыльная сторона плиты обработана суммарно. На лицевой
+                              стороне сохранилось двенадцать строк надписи, вырезанной по
+                              предварительной разметке.</p>
+                           <p xml:lang="en"/>
+                           <dimensions>
+                              <height unit="cm">26,0</height>
+                              <width unit="cm">17,0</width>
+                              <depth unit="cm">7,5</depth>
+                           </dimensions>
+                        </support>
+                     </supportDesc>
+                     <layoutDesc>
+                        <layout>
+                           <seg xml:lang="ru"/>
+                           <seg xml:lang="en"/>
+                        </layout>
+                     </layoutDesc>
+                  </objectDesc>
+                  <handDesc>
+                     <handNote>
+                        <seg xml:lang="ru">Буквы вырезаны глубоко, некоторые из них слегка наклонены
+                           вправо, правая гаста дельты и лямбды выступает за пересечение с левой
+                           гастой, тета с не доходящей до краев окружности перекладиной, линии
+                           некоторых букв слегка изогнуты, крупные апексы на концах линий
+                           букв.</seg>
+                        <seg xml:lang="en">Deeply cut letters, some slightly lean to the right, alpha and delta with projecting right diagonal</seg>
+                        <height unit="cm">1,0</height>
+                     </handNote>
+                  </handDesc>
+               </physDesc>
+               <history>
+                  <origin>
+                     <origPlace ref="origPlace.xml#p003">
+                        <seg xml:lang="ru">Херсонес.</seg>
+                        <seg xml:lang="en">Chersonesos.</seg>
+                     </origPlace>
+                     <origDate notBefore="0101" notAfter="0200" evidence="палеография">
+                        <seg xml:lang="ru">II в. н.э.</seg>
+                        <seg xml:lang="en">IInd century C.E.</seg>
+                     </origDate>
+                  </origin>
+                  <provenance type="found">
+                     <seg xml:lang="ru">
+                        <placeName type="ancientFindspot" ref="findspot.xml#sevastopol">Севастополь
+                           (Херсонес).</placeName>
+                        <rs type="circumstances">Найдена в 1987 г. в юго-восточном районе
+                           херсонесского городища на участке «цитадели» в засыпи куртины 19
+                           оборонительной стены. Раскопки И.А. Антоновой.</rs>
+                        <rs type="context"/>
+                     </seg>
+                     <seg xml:lang="en">
+                        <placeName type="ancientFindspot">Sevastopol (Chersonesos).</placeName>
+                        <rs type="circumstances">Found in....</rs>
+                        <rs type="context"/>
+                     </seg>
+                  </provenance>
+                  <provenance type="observed">
+                     <seg xml:lang="ru">Севастополь.</seg>
+                     <seg xml:lang="en">Sevastopol.</seg>
+                  </provenance>
+               </history>
+            </msDesc>
+         </sourceDesc>
+      </fileDesc>
+      
+      <revisionDesc>
+         <change when="2015-11-05" who="CB">Added origDate</change>
+         <change when="2015-10-27" who="CB">correcting app crit</change>
+         <change when="2015-09-01" who="CB">app crit</change>
+         <change when="2015-08-24" who="CB">Metadata and app crit</change>
+         <change when="2015-07-15" who="KK">Add photo file name</change>
+         <change when="2015-06-26" who="CB">Tagging metadata</change>
+         <change when="2015-05-08" who="AGi">programmatically created XML from Word docs</change>
+         <change when="2015-05-14" who="AV">programmatically tagging Greek words from Word
+            docs</change>
+      </revisionDesc>
+   </teiHeader>
+   <facsimile>
+      <surface>
+         <graphic url="30.231">
+            <desc xml:lang="en"/>
+            <desc xml:lang="ru"/>
+         </graphic>
+      </surface>
+   </facsimile>
+   <text>
+      <body>
+         <div type="bibliography">
+            <!-- Издания -->
+            <listBibl>
+               <bibl><!-- Макаров 2009 --><ptr target="bib:b0505"/> <citedRange>113</citedRange></bibl>
+               <bibl> (<!-- SEG --><ptr target="bib:SEG"/> <citedRange>59, 815</citedRange></bibl> 
+               <bibl><!-- Bull. ép. --><ptr target="bib:BE"/> <citedRange>2010, 463</citedRange>)</bibl>
+            </listBibl>
+         </div>
+         <div type="bibliography" subtype="commentaries">
+            <!-- Комментарии -->
+            <listBibl>
+               <bibl/>
+            </listBibl>
+         </div>
+         <div type="edition" xml:lang="grc" xml:space="preserve">
+            <ab>
+               <lb n="0"/><space extent="unknown" unit="character"/>
+               <lb n="1"/><lg met="elegiac"><l met="hexameter"><gap reason="lost" quantity="1" unit="line"><certainty locus="name" match=".."/></gap> 
+                              <w><supplied reason="lost">ἔκρυψ</supplied><unclear>ε</unclear></w> <w><unclear>χ</unclear>θὼν</w>
+                              <w>μὲν</w> <orig>ΡΑ</orig><gap reason="lost" extent="unknown" unit="character"/></l>
+               <lb n="2"/><l met="pentameter"><gap reason="lost" quantity="1" unit="line"/><w><supplied reason="lost">σῶ</supplied><unclear>μ'</unclear></w> 
+                              <w>ὑποδεξαμέ<unclear>ν</unclear><supplied reason="lost">α</supplied></w> <gap reason="lost" quantity="1" unit="line"/></l></lg>
+               <lb n="3"/><lg met="elegiac"><l met="hexameter"><gap reason="lost" quantity="1" unit="line"/> <w><supplied reason="lost">ψυχὰ</supplied></w> 
+                              <w>πταμένα</w> <w>ποτ’</w> 
+                              <placeName><name>Ὄλυ<unclear>μ</unclear><supplied reason="lost">πον</supplied></name></placeName></l>
+               <lb n="4"/><l met="pentameter"><gap reason="lost" quantity="1" unit="line"/> <w><supplied reason="lost">μ</supplied>ε<supplied reason="omitted">λ</supplied>ισταγέος</w> 
+                                 <space extent="unknown" unit="character"/>.</l></lg>
+               <lb n="5"/><lg met="elegiac"><l met="hexameter"><gap reason="lost" quantity="1" unit="line"/> <persName type="divine"><name><supplied reason="lost" cert="low">Ἀίδας</supplied></name></persName> 
+                              <w><unclear>ε</unclear>ὐνὰς</w> <w>ἐπόρεξε</w> 
+                              <w>τα<unclear>ν</unclear><supplied reason="lost">ύσας</supplied></w> <gap reason="lost" extent="unknown" unit="character"/></l>
+               <lb n="6"/><l met="pentameter"><gap reason="lost" quantity="1" unit="line"/> <w><supplied reason="lost">ο</supplied>ἴμου</w> <space quantity="4" unit="character"/>. 
+                              <w>ἐπουρ<unclear>α</unclear>ν<supplied reason="lost">ίων</supplied></w> <gap reason="lost" extent="unknown" unit="character"/></l></lg>
+               <lb n="7"/><lg met="elegiac"><l met="hexameter"><gap reason="lost" quantity="1" unit="line"/> <w>ὑπὸ</w> <w>δαίμονος</w> 
+                                 <w>ἁρ<unclear>π</unclear><supplied reason="lost">α</supplied></w><gap reason="lost" quantity="1" unit="line"/></l>
+               <lb n="8"/><l met="pentameter"><gap reason="lost" quantity="1" unit="line"/> <w><supplied reason="lost">θεᾷ</supplied></w> 
+                                 <w><supplied reason="lost">π</supplied><unclear>ε</unclear>ίθεθ’</w> 
+                                 <w>ὑποχθονίᾳ</w> <space extent="unknown" unit="character"/></l></lg>
+               <lb n="9"/><lg met="elegiac"><l met="hexameter"><gap reason="lost" quantity="1" unit="line"/><orig>ΛΛΟΣ</orig> <w>ἔφυ</w> 
+                                 <w>ΚΑΚΟ</w><gap reason="lost" quantity="1" unit="character"/><orig>Η</orig><gap reason="lost" extent="unknown" unit="character"/></l>
+               <lb n="10"/><l met="pentameter"><gap reason="lost" quantity="1" unit="line"/><orig>Σ</orig> <w>φωτὸς</w> 
+                                 <orig>ΙΔ<unclear>Μ</unclear></orig><gap reason="lost" extent="unknown" unit="character"/></l></lg>
+               <lb n="11"/><lg met="elegiac"><l met="hexameter"><gap reason="lost" quantity="1" unit="line"/> <persName type="divine"><name><supplied reason="lost">Ἄιδο</supplied>ς</name></persName> 
+                                 <w>ἀστεμφέο<supplied reason="lost">ς</supplied></w> <gap reason="lost" extent="unknown" unit="character"/></l>
+               <lb n="12"/><l met="pentameter"><gap reason="lost" quantity="1" unit="line"/> <w><supplied reason="lost">π</supplied><unclear>ά</unclear>γχυ</w> 
+                                 <w>ποι<unclear>ή</unclear><supplied reason="lost" cert="low">σας</supplied></w>  <gap reason="lost" extent="unknown" unit="character"/></l></lg>
+               <lb n="13"/><space extent="unknown" unit="character"/>
+            </ab>
+         </div>
+         <div type="apparatus">
+            <listApp>
+               <app>
+                  <note>В конце стк. 4 и 8 vacat обозначает, очевидно, окончание пентаметра.</note>
+               </app>
+               <app loc="1">
+                  <note>в конце строки видна нижняя часть вертикали и следы косой гасты (возможно,
+                     Ν, Κ, Μ, Λ).</note>
+               </app>
+               <app loc="3">
+                  <note>в конце строки след от косой черты, вероятно, M.</note>
+               </app>
+               <app loc="3/4">
+                  <rdg><note>e.g.</note> [ἀθάνατος δ’ αἰεὶ ψυχὰ] πταμένα ποτ’
+                        Ὄλυ<unclear>μ</unclear>[πον | ναιετάει χώρου δῶμα μ]ε[λ]ισταγέος.</rdg>
+               </app>
+               <app loc="4">
+                  <rdg>ΕΔΙΣΤΑΓΕΟΣ <note>lapis.</note></rdg>
+               </app>
+               <app loc="7">
+                  <note>в начале строки след неопределенной буквы (T ?);</note>
+                  <rdg><note>fin.:</note>ἁρ<unclear>π</unclear>[ασθέντι] <note>vel</note>
+                        ἁρ<unclear>π</unclear>[ασθεῖσα]</rdg>
+               </app>
+               <app loc="9">
+                  <note>в конце строки вероятна S.</note>
+               </app>
+               <app loc="10">
+                  <rdg><note>e.g.</note> φωτὸς ἴδ<unclear>μ</unclear>[ονος εὐσεβίας]</rdg>
+               </app>
+               <app loc="10">
+                  <note>в конце строки, вероятно, M или A.</note>
+               </app>
+               <app loc="11">
+                  <rdg><note>cf. GV 15124: </note>ἀστημφὴς Ἀίδης.</rdg>
+               </app>
+               <app loc="12">
+                  <note>от последней буквы сохранилась вертикальная гаста (H ?).</note>
+               </app>
+            </listApp>
+         </div>
+         <div type="translation" xml:lang="ru">
+            <p>[--- Аид] широко расстелил (свое) ложе, --- дороги бессмертных, --- похищенному
+               роком, --- повиновался подземной [богине ---].</p>
+         </div>
+         <div type="translation" xml:lang="en">
+            <p/>
+         </div>
+         <div type="commentary" xml:lang="ru">
+            <p> Метрически завершение укороченных строк 4 и 8 соответствует одной и той же схеме:
+               –∪∪–, что указывает на окончание пентаметра.</p>
+            <p>II в. н.э. (вероятно, вторая треть II в. н.э.).</p>
+         </div>
+         <div type="commentary" xml:lang="en">
+            <p>II century C.E. (probably middle of II century).</p>
+         </div>
+      </body>
+   </text>
+</TEI>

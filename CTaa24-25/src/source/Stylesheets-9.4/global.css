@@ -1,0 +1,133 @@
+.latinnum {
+    border-top: thin black solid;
+     }
+     
+.supraline {
+    border-top: thin black solid;
+     }
+     
+.previouslyread {
+    text-decoration: underline;
+     }
+     
+*[lang="la"] {
+    font-family: "GentiumAlt", "Gentium","Palatino Linotype", "Palatino", "Times New Roman", "Times", "Arial Unicode MS", serif;
+}
+
+*[lang="grc"] {
+    font-family: "Lucida Grande", "Arial Unicode MS","Galilee Unicode Gk", "New Athena Unicode", "Athena Unicode", 
+    "Palatino Linotype", "Titus Cyberbit Basic", "Cardo", "Vusillus Old Face", "Alphabetum", "Galatia SIL", 
+    "Code 2000", "GentiumAlt", "Gentium", "Minion Pro", "GeorgiaGreek", "Vusillus Old Face Italic", 
+    "Everson Mono", "Aristarcoj", "Porson", "Legendum", "Aisa Unicode", "Hindsight Unicode", "Caslon", 
+    "Verdana", "Tahoma";
+   }
+   
+.textpart {
+    left: 6em;
+    line-height: 1.4;
+    margin-top: 8px;
+    margin-bottom: 8px;
+    position: relative;
+    padding-right: 2em;
+}
+
+.textpartnumber {
+    padding-right: 0.2em;
+    position: absolute;
+    }
+    
+.linenumber {
+    left: -4em;
+    padding-right: 0.2em;
+    position: absolute;
+    }
+    
+.linenumberbroken {
+    left: -4em;
+    padding-right: 0.2em;
+    position: absolute;
+    color: red ;
+    text-decoration: blink ;
+    }
+    
+.petraeligature {
+    text-decoration: underline;
+    }
+    
+.inslibligature {
+      border-top: 2px solid black;
+      border-radius: 6px;
+      padding: 4px 2px 0px 2px;
+}
+    
+.underline {
+    text-decoration: underline;
+    }
+
+.italic {
+    font-style: italic;
+    }
+
+.rtl, .rtl * {
+    direction: rtl;
+    text-align-last: right;
+}
+
+h4.slimmer {
+    margin-bottom: -0.5em;
+    }    
+
+h3.iospe {
+    color: rgb(40, 80, 114);
+    float: left;
+    font-family: arial,helvetica,sans-serif;
+    font-size: 125%;
+    max-width: 165px;
+    margin-top:0;
+    padding-top:0;
+    }
+
+h4.iospe {
+    font-family: arial,helvetica,sans-serif;
+    font-size: 13px;
+    color: rgb(51, 51, 51);
+    max-width: 165px;
+    width: 165px;
+    }
+
+dl.iospe {
+    font-family: arial,helvetica,sans-serif;
+    font-size: 13px;
+    margin-bottom: 15px;
+    margin-top: 15px;
+    padding-left: 165px;
+    padding-top: 5px;
+    }
+
+dl.iospe dt {
+    float: left;
+    font-size: 13px;
+    font-weight: bold;
+    color: rgb(51, 51, 51);
+    max-width: 165px;
+    vertical-align: baseline;
+    width: 165px;
+    }
+
+dl.iospe dd {
+    font-size: 13px;
+    margin-left: 165px;
+    vertical-align: baseline;
+    }
+
+div#edition.iospe {
+    margin-left: 100px;
+    }
+
+div.iospe {
+    margin-left:165px;
+    }
+
+.no-space {
+    margin-bottom: -1.9em;
+}

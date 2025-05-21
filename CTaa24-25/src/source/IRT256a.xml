@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?oxygen RNGSchema="http://www.stoa.org/epidoc/schema/8.3/tei-epidoc.rng"
+      type="xml"?><TEI xmlns="http://www.tei-c.org/ns/1.0" xml:lang="en">
+   <teiHeader>
+      <fileDesc>
+         <titleStmt>
+            <title>
+               <rs type="textType">Christian</rs> 
+               <rs type="textType">funerary</rs> inscription for Helladios</title>
+            <editor>J. M. Reynolds</editor>
+            <editor>J. B. Ward-Perkins</editor>
+         </titleStmt>
+         <publicationStmt>
+            <authority>Centre for Computing in the Humanities, King's College London</authority>
+            <idno type="filename">IRT256a</idno>
+            <availability>
+               <p>Creative Commons licence Attribution UK 2.0 (<ref>http://creativecommons.org/licenses/by/2.0/uk/</ref>). </p>
+               <p>All reuse or distribution of this work must contain somewhere a link back to the URL <ref>http://irt.kcl.ac.uk/</ref>
+               </p>
+            </availability>
+         </publicationStmt>
+         <sourceDesc>
+            <bibl xml:id="irt1952">
+                  <author>J. M. Reynolds</author> and <author>J. B. Ward-Perkins</author>, <title level="m">The Inscriptions of Roman Tripolitania</title>, <pubPlace>Rome</pubPlace>: <publisher>British
+                  School at Rome</publisher>, <date>1952</date>. </bibl>
+            <msDesc>
+               <msIdentifier/>
+               <physDesc>
+                  <objectDesc>
+                     <supportDesc>
+                        <support>
+                           <p> The right-hand part  of a <material>marble</material> 
+                              <rs type="objectType">panel</rs>. 
+               (surviving width <dimensions>
+                                 <width unit="metre">0.46</width>
+                                 <height unit="metre">0.38</height>
+                                 <depth unit="metre">0.04</depth>
+                              </dimensions>, surface badly worn). Not seen.  </p>
+                        </support>
+                     </supportDesc>
+                     <layoutDesc>
+                        <layout>Inscribed on the surviving face.</layout>
+                     </layoutDesc>
+                  </objectDesc>
+                  <handDesc>
+                     <handNote>Roughly incised lettering: <height unit="metre" atLeast="0.02" atMost="0.025">0.02-0.025</height>.</handNote>
+                  </handDesc>
+               </physDesc>
+               <history>
+                  <origin>
+                     <p>Unknown</p>
+                     <origDate>Unknown</origDate>
+                  </origin>
+                  <provenance>
+                     <listEvent>
+                        <event type="found">
+                           <p>
+                              <placeName type="ancientFindspot" ref="http://atlantides.org/batlas/oea-35-f2" key="db657">Oea</placeName>:
+                  Tripoli. Seen and recorded in Tripoli in the early part of the nineteenth century.  
+                  Rediscovered near the church of Santa Maria in Tripoli.</p>
+                        </event>
+                        <event type="observed">
+                           <p>
+                              <rs type="monuList" key="db662">Tripoli Castle</rs>.</p>
+                        </event>
+                     </listEvent>
+                  </provenance>
+               </history>
+            </msDesc>
+         </sourceDesc>
+      </fileDesc>
+      <encodingDesc>
+         <p>Marked-up according to the EpiDoc Guidelines version 8</p>
+      </encodingDesc>
+      <profileDesc>
+         <langUsage>
+            <language ident="ar">Arabic</language>
+            <language ident="en">English</language>
+            <language ident="fr">French</language>
+            <language ident="de">German</language>
+            <language ident="grc">Ancient Greek</language>
+            <language ident="grc-Latn">Transliterated Greek</language>
+            <language ident="el">Modern Greek</language>
+            <language ident="he">Hebrew</language>
+            <language ident="it">Italian</language>
+            <language ident="la">Latin</language>
+            <language ident="phn-LY">Punic</language>
+            <language ident="ber-Latn">Native Libyan language in Latin script</language>
+         </langUsage>
+         <textClass/>
+         <textClass>
+            <keywords scheme="IRCyr">
+               <term>
+                  <geogName type="ancientRegion" key="Tripolitania">Tripolitania</geogName>
+               </term>
+               <term>
+                  <geogName type="modernCountry" key="LY">Libya</geogName>
+               </term>
+               <term>
+                  <placeName type="modernFindspot" key="http://www.geonames.org/2210247/tripoli.html">Tripoli</placeName>
+               </term>
+            </keywords>
+         </textClass>
+      </profileDesc>
+      <revisionDesc>
+         <change when="2010-08-18" who="GB">Converted from TEI P4 (EpiDoc DTD v. 6) to P5 (EpiDoc RNG schema v. 8)</change>
+         <change when="2008-09-09" who="ZA">converted using CHET-C</change>
+         <change when="2009-05-19" who="RV">Added Figures</change>
+         <change when="2009-08-24" who="RV">Added Figures</change>
+      </revisionDesc>
+   </teiHeader>
+   <text>
+      <body>
+         <div type="bibliography">
+            <head>Bibliography</head>
+            <p>Not previously published.</p>
+         </div>
+         <div subtype="text-constituted-from" type="history">
+            <head>Text constituted from</head>
+            <p>Transcription (Reynolds, Ward-Perkins)</p>
+         </div>
+         <div type="edition" xml:lang="grc" xml:space="preserve"><head xml:lang="en">Text</head><ab>
+               <lb n="1"/><supplied reason="lost"><w lemma="εὐμοιρέω">Εὐμοιριτο</w></supplied> 
+               <persName type="attested"><name nymRef="Ἑλλάδιος">Ἑλλάδιος</name></persName> <w lemma="ζάω">ἔζησε</w>
+               <date when-iso="PY50"><w lemma="ἔτι">ἔτι</w> <num value="50">ν</num></date>
+               <lb n="2"/><supplied reason="lost"><w lemma="πλείων">πλέον</w>
+                  <w lemma="ἐλάσσων"><expan><abbr>ἔλατ</abbr><ex>τ</ex><abbr>ον</abbr></expan></w></supplied>
+               <w lemma="μήν"><supplied reason="lost">μῆ</supplied>ν<supplied reason="lost">ες</supplied></w>
+               <supplied reason="lost"><num value="3">γ</num></supplied> <w lemma="ἡμέρα">ἡμέρας</w>
+               <lb n="3"/><supplied reason="lost"><w lemma="δεκαπέντε">δεκαπέντε</w> <w lemma="ὁ">ὁ</w> 
+                  <persName type="divine"><name nymRef="Christus">Χριστὸς</name></persName> <w lemma="μετά">μετὰ</w></supplied> 
+               <supplied reason="lost"><w lemma="ὁ"><expan><abbr>τ</abbr><ex>ο</ex><abbr>ῦ</abbr></expan></w></supplied>
+               <w lemma="πνεῦμα">πνεύ<lb n="4" type="inWord"/><supplied reason="lost">ματός</supplied></w> 
+               <supplied reason="lost"><w lemma="σύ"><expan><abbr>σ</abbr><ex>ο</ex><abbr>υ</abbr></expan></w></supplied>
+               <w lemma="τελευτάω"><supplied reason="lost">ἐτ</supplied>ελεύ<supplied reason="lost">τισεν</supplied></w>
+               <w lemma="μήν"><supplied reason="lost">μι</supplied>νὶ</w> 
+               <rs type="month" key="Παῦν"><w lemma="Παῦν"><unclear>Π</unclear>αυνὶ</w></rs>
+               <lb n="5"/><w lemma="ἕβδομος"><supplied reason="lost">ἑβδό</supplied>μι</w>
+               <w lemma="κατά">κατὰ</w> <w lemma="ὁ">τοὺς</w> 
+               <placeName type="ethnic" nymRef="Ἄφρος"><w lemma="Ἄφρος">Ἄφρ<supplied reason="omitted">ο</supplied>υς</w></placeName>
+            </ab></div>
+         <div type="apparatus">
+            <head>Apparatus</head>
+            <p>
+               <app>
+                  <note> The supplied letters are no longer legible. </note>
+               </app>
+            </p>
+         </div>
+         <div type="translation" xml:space="preserve"><head>Translation</head><p><supplied reason="lost">May he be well off</supplied>. Helladios lived approximately 50 years, three months and fifteen days. Christ be with your spirit. He died on the seventh of the month of Payn among the Africans.</p></div>
+         <div type="commentary">
+            <head>Commentary</head>
+            <p>The text evidently refers to an Egyptian who died abroad. </p>
+         </div>
+         <div type="figure">
+            <head>Photographs</head>
+            <p>
+               <figure>
+                  <graphic url="0303"/>
+                  <head>Ward-Perkins Archive, BSR (BSR 48.I.4)</head>
+               </figure>
+               <figure>
+                  <graphic url="0304"/>
+                  <head>Ward-Perkins Archive, BSR (Sopr. DTV 697 Leica)</head>
+               </figure>
+            </p>
+         </div>
+      </body>
+   </text>
+</TEI>

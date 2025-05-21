@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE MIO SYSTEM "./esempio-dtd.dtd"
+    [
+        <!ELEMENT figlio (#PCDATA)>
+        <!ATTLIST MIO nome NMTOKEN #REQUIRED >
+
+    ]
+>
+
+<MIO nome="angelo">
+    
+</MIO>

@@ -1,0 +1,24 @@
+
+
+parameter {
+  display: block ;
+  background-color: white;
+  }
+  
+name {
+  display: block ;
+  background-color: maroon;
+  color: white;
+  font-weight: bold ;
+  border: thin red solid ;
+  }
+  
+value {
+  display: block ;
+  color:gray;
+  }
+  
+value[on='yes'] {
+  color: black ;
+  font-weight: bold ;
+  }

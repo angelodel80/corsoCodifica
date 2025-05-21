@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<fop
+    version="1.0">
+    <font-base>file:/Applications/Oxygen/FOP-fonts/</font-base>
+    <renderers>
+        <renderer
+            mime="application/pdf">
+            <fonts>
+                <!--         https://www.oxygenxml.com/doc/versions/21.1/ug-editor/topics/add-font-to-builtin-FOP.html#add-font-to-builtin-FOP       -->
+<!--                uncomment following for windows fonts autodetection-->
+                <!--<directory>C:\Windows\Fonts</directory>-->
+<!--                uncomment following for mac fonts autodetection-->              
+<!--                <directory>file:/Library/Fonts</directory>-->
+<!--                uncomment following line for autodetection-->
+<!--                <auto-detect/>-->
+               <font
+                    kerning="yes"
+                    embed-url="file:/Library/Fonts/IFAOGrec.ttf">
+                    <font-triplet
+                        name="IFAOGrec"
+                        style="normal"
+                        weight="normal"/>
+                </font>
+                <font
+                    kerning="yes"
+                    embed-url="file:/Library/Fonts/Cardo-Regular.ttf">
+                    <font-triplet
+                        name="Cardo"
+                        style="normal"
+                        weight="normal"/>
+                </font>
+                <font
+                    kerning="yes"
+                    embed-url="file:/Library/Fonts/Cardo-Bold.ttf">
+                    <font-triplet
+                        name="Cardo"
+                        style="normal"
+                        weight="700"/>
+                </font>
+                <font
+                    kerning="yes"
+                    embed-url="file:/Library/Fonts/Cardo-Italic.ttf">
+                    <font-triplet
+                        name="Cardo"
+                        style="italic"
+                        weight="normal"/>
+                </font>
+                
+            </fonts>
+        </renderer>
+    </renderers>
+</fop>

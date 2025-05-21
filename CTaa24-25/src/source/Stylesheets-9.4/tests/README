@@ -1,0 +1,8 @@
+The tests make use of Python's subprocess module to call out to the OS
+to run Saxon to perform XSL transformations. This requires that you
+have Saxon installed on your system, and that the appropriate JAR file
+is on the class path. See
+http://www.saxonica.com/documentation/#!about/installationjava/installingjava
+
+Test scripts are written in Python 3. Run all tests (from this or
+the parent directory) with 'python3 -m unittest' or equivalent.

@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<parameters>
+  <!-- HTML site navigation -->
+  <parameter>
+    <name>topNav</name>
+    <value on="yes">default</value>
+    <value>ddbdp</value>
+  </parameter>
+  
+  <parameter>
+    <name>leiden-style</name>
+    <value>ddbdp</value>
+    <value>dclp</value>
+    <value>dohnicht</value>
+    <value>edh-itx</value>
+    <value>edh-names</value>
+    <value>edh-web</value> 
+    <value>ila</value>
+    <value>iospe</value>
+    <value>london</value>
+    <value on="yes">panciera</value>
+    <value>petrae</value>
+    <value>rib</value>
+    <value>seg</value>
+    <value>sammelbuch</value>
+    <value>eagletxt</value>
+  </parameter>
+  
+  <parameter>
+    <name>edn-structure</name>
+    <value>default</value> <!--on="yes"-->
+    <value>ddbdp</value>
+    <value>hgv</value>
+    <value>inslib</value>
+    <value>iospe</value>
+    <value>edh</value>
+    <value>edh-db</value>
+    <value>rib</value>
+    <value>sammelbuch</value>
+    <value on="yes">sample</value> <!--on="yes"-->
+    <value>eagle</value>
+    <value>igcyr</value>
+  </parameter>
+  
+  <parameter>
+    <name>verse-lines</name>
+    <value on="yes">off</value><!-- print epigraphic lines at all times, whether text in ab or lg/l -->
+    <value>on</value><!-- print verse lines when text in lg/l; interpret gaps as metre where so tagged -->
+  </parameter>
+  
+  <parameter>
+    <name>edition-type</name>
+    <value on="yes">interpretive</value>
+    <value>diplomatic</value>
+  </parameter>
+
+   <!-- Line-numbering increment -->
+  <parameter>
+    <name>line-inc</name>
+    <value>1</value> <!-- 1 -->
+  </parameter>
+  
+  
+  <parameter>
+    <name>internal-app-style</name>
+    <value on="yes">none</value>
+    <value>ddbdp</value><!-- NB: change this parameter locally if you're running PN or SoSOL process! -->
+    <value>iospe</value>
+    <value>fullex</value> <!--this example uses all the currently specified internal apparatus features-->
+<value>minex</value> <!--this is the same as above but only uses some common examples-->
+  </parameter>
+  
+  <parameter>
+    <name>external-app-style</name>
+    <value on="yes">default</value>
+    <value>iospe</value>
+  </parameter>
+  
+  <parameter><!-- DEPRECATED -->
+    <name>apparatus-style</name>
+    <value on="yes">default</value>
+  </parameter>
+  
+  <parameter><!--old paramter for local tests to be removed soon... -->
+    <name>bibliography</name>
+    <value on="yes">none</value>
+    <value>localTEI</value> <!--looks up a local TEI bibliography-->
+    <value>zotero</value> <!--looks at the api and renders the html from there-->
+  </parameter>
+  
+  <parameter> <!--path to local TEI XML bibliography if this is the bibliography used-->
+    <name>localbibl</name>
+    <value>../BIBLIOGRAPHY.xml</value>
+  </parameter>
+  
+  <parameter> if the zotero bibliography is used, select whether it is a group library or a user's library
+    <name>ZoteroUorG</name>
+    <value on="yes">groups</value>
+    <value>users</value>
+  </parameter>
+  
+  
+  <parameter> <!--the key of the library-->
+    <name>ZoteroKey</name>
+    <value on="yes">247748</value><!--EAGLE open group bibliography-->
+    <value>epidig</value> <!--sample value-->
+  </parameter>
+  
+  <parameter> <!--the namespace of tags in the zotero library if any-->
+    <name>ZoteroNS</name>
+    <value on="yes"/> <!--default on no namespace although the htm-teibibl.xsl takes this value only if selected-->
+    <value>igcyr:</value>
+  </parameter>
+  
+  
+  <parameter> <!--the style selected for output-->
+    <name>ZoteroStyle</name>
+    <value on="yes">chicago-author-date</value><!--sample value if nothing is specified Zotero will default to this anyway-->
+    <value>transactions-of-the-american-philological-association</value> <!--sample value-->
+  </parameter>
+  
+ 
+  <parameter>
+    <name>css-loc</name>
+    <value>global.css</value>
+  </parameter>
+  
+<parameter>
+    <name>js-dir</name>
+    <value>../js/</value>
+  </parameter>
+  
+  <parameter>
+    <name>glyph-variant</name>
+    <value on="yes">standard</value>
+    <value>simplified</value>
+    <value>glyph-display</value>
+    <value>text-display</value>
+    <value>g-london</value>
+    <value>g-iospe</value>
+    <value>g-ddbdp</value>
+    <value>g-rib</value>
+    <value>g-creta</value>
+  </parameter>
+  
+</parameters>

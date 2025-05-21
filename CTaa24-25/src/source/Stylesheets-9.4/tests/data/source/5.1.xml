@@ -1,0 +1,229 @@
+<?xml version="1.0" encoding="UTF-8"?>
+   <?xml-model href="http://www.stoa.org/epidoc/schema/8.23/tei-epidoc.rng" schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="http://www.stoa.org/epidoc/schema/8.23/tei-epidoc.rng" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+   <?xml-model href="http://www.stoa.org/epidoc/local/ircyr-checking.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude">
+   <teiHeader>
+      <fileDesc>
+         <titleStmt><title xml:lang="ru">Строительная надпись неизвестного</title><title xml:lang="en">Building inscription</title><editor xml:id="ayv2012">
+               <persName xml:lang="ru"><forename>А.Ю.</forename><surname>Виноградов</surname></persName>
+               <persName xml:lang="en"><forename>A.Yu.</forename><surname>Vinogradov</surname></persName>
+            </editor><editor xml:id="ip" role="translator"><persName xml:lang="ru">Ирина<forename/><surname>Полинская</surname></persName><persName xml:lang="en"><forename>Irene</forename><surname>Polinskaya</surname></persName></editor></titleStmt>
+         <publicationStmt><authority>King's College London</authority>
+            <idno type="filename">5.1</idno><idno type="PE">PE5000001</idno>
+            <idno type="AYV2012-number">byz001</idno>
+         </publicationStmt>
+         <sourceDesc>
+            <msDesc>
+               <msIdentifier><region/>
+                  <altIdentifier xml:lang="ru">
+                     <repository>Неизвестен</repository>
+                     <idno/>
+                  </altIdentifier>
+                  <altIdentifier xml:lang="en">
+                     <repository>Unknown</repository>
+                     <idno/>
+                  </altIdentifier>
+               </msIdentifier>
+               <msContents>
+                  <summary corresp="document-search.xml#doc1">
+                     <seg xml:lang="ru">Строительная надпись.</seg>
+                     <seg xml:lang="en">Building inscription.</seg>
+                  </summary>
+               </msContents>
+               <physDesc>
+                  <objectDesc>
+                     <supportDesc>
+                        <support>
+                           <objectType xml:lang="ru" ref="monument-search.xml#mon1">Плита.</objectType>
+                           <objectType xml:lang="en">Panel.</objectType>
+                           <material xml:lang="ru" ref="material-search.xml#m1">Белый мрамор<certainty cert="low" locus="value" match=".."/>.</material>
+                           <material xml:lang="en">White marble<certainty cert="low" locus="value" match=".."/>.</material>
+                           <p xml:lang="ru">На лицевой стороне рельефные (?) изображения 2 гербов и рамка. Состояние неизвестно.</p>
+                           <p xml:lang="en">Inset panel with two coats of arms (in relief?). Condition unknown.</p>
+                        </support>
+                     </supportDesc>
+                     <layoutDesc>
+                        <layout ana="f1">
+                           <seg xml:lang="ru">Внутри рамки.</seg>
+                           <seg xml:lang="en">Within inset area.</seg>
+                        </layout>
+                     </layoutDesc>
+                  </objectDesc>
+                  <handDesc>
+                     <handNote>
+                        <seg xml:lang="ru"><rs type="execution" ref="execution.xml#scalpro">Лапидарный</rs>; буквы выпуклые, вытянутые, маньеризованные.
+                           Лигатуры, сокращения.</seg>
+                        <seg xml:lang="en">Lapidary; relief, elongated, ornate letters. Ligatures, abbreviations.</seg>
+                     </handNote>
+                  </handDesc>
+               </physDesc>
+               <history>
+                  <origin>
+                     <origPlace ref="origPlace.xml#p001">
+                        <seg xml:lang="ru">Белгород.</seg>
+                        <seg xml:lang="en">Belgorod.</seg>
+                     </origPlace>
+                     <origDate notBefore="1451" notAfter="1452" evidence="эпиграфический_контекст" cert="low">
+                        <seg xml:lang="ru">1451–1452 гг.</seg>
+                        <seg xml:lang="en">1451–1452 C.E.</seg>
+                     </origDate>
+                  </origin>
+                  <provenance type="observed" subtype="autopsy">
+                     <seg xml:lang="ru">Non vidi.</seg>
+                     <seg xml:lang="en">Non vidi.</seg>
+                  </provenance>
+                  <provenance type="found">
+                     <seg xml:lang="ru">
+                        <placeName type="ancientFindspot" ref="findspot.xml#belgorod-dnestrovsky">Белгород-Днестровский.</placeName>
+                        <rs type="circumstances"><date type="found" notBefore="1840" notAfter="1849">1840-е</date> гг., обследования Н.Н. Мурзакевича.</rs>
+                        <rs type="context">Крепость, средняя стена, дозорная башня напротив мечети, в стене.</rs>
+                     </seg>
+                     <seg xml:lang="en">
+                        <placeName type="ancientFindspot">Belgorod-Dnestrovsky.</placeName>
+                        <rs type="circumstances">1840s, survey of N.N. Murzakevich.</rs>
+                        <rs type="context">Fortress, crosswall, watch tower opposite the mosque, in the wall.</rs>
+                     </seg>
+                  </provenance>
+                  <provenance type="observed">
+                     <seg xml:lang="ru">Неизвестно.</seg>
+                     <seg xml:lang="en">Unknown.</seg>
+                  </provenance>
+               </history>
+            </msDesc>
+         </sourceDesc>
+      </fileDesc>
+
+<revisionDesc>
+         <change when="2012-11-27" who="AL">English toponyms in commentary inserted</change>
+         <change when="2012-08-16" who="ΑG">Greek lemmata corrected</change>
+         <change when="2012-08-10" who="GB">inserted Greek lemmata (and normalized unicode)</change>
+         <change when="2012-08-09" who="GB">inserted full Greek lemmata</change>
+         <change when="2012-07-19" who="GB">lemmatized Greek</change>
+         <change when="2012-06-29" who="GB AG">small correction</change>
+         <change when="2012-04-24" who="AG">several lines translated</change>
+         <change when="2012-04-17" who="AG">small corrections in metadata, apparatus and bibliography corrected, editor added</change>
+         <change when="2012-03-21" who="AG">corrections in apparatus</change>
+         <change when="2012-03-07" who="AG">small corrections in apparatus</change>
+         <change when="2012-02-16" who="AG">corrections in bibliography</change>
+         <change when="2012-02-16" who="GB">dropped double bibliography; killed div/textpart in trans, comm and edition</change>
+         <change when="2012-02-15" who="AG"> part of bibliography</change>
+         <change when="2012-01-23" who="AG"> several lines translated, small corrections</change>
+         <change when="2011-12-14" who="AG"> tags corrected in the Greek text</change>
+         <change when="2011-12-01" who="AG"> tags correcton in the Greek text</change>
+         <change when="2011-11-28" who="GB">tidied XML and copied Greek text from Paola's version</change>
+         <change when="2011-11-25" who="KFL">Automated creation from Word doc</change>
+      </revisionDesc>
+   </teiHeader>
+   <facsimile>
+      <surface>
+         <graphic url="5.1">
+            <desc xml:lang="en">Facsimile drawing (from Murzakevich 1950)</desc>
+            <desc xml:lang="ru">Факсимильное изображение (из Мурзакевич 1950)</desc>
+         </graphic>
+      </surface>
+   </facsimile>
+   <text>
+      <body>
+         <div type="bibliography">
+            <listBibl>
+               <bibl n="L1"><!-- Мурзакевич, 1850 --><ptr target="bib:b0176"/>,  <citedRange>481</citedRange></bibl>
+               <bibl n="1.1"><!--Сборник--><ptr target="bib:b0132"/>, 2, № <citedRange>2</citedRange></bibl>
+               <bibl n="1.1.1"><!--Millet 1900--><ptr target="bib:b0397"/></bibl>
+               <bibl n="1.2"><!-- Bogdan, 1907-1908 --><ptr target="bib:b0273"/>,  <citedRange>324</citedRange></bibl>
+               <bibl n="1.3"><!-- Pippidi, 1998 --><ptr target="bib:b0347"/></bibl>
+               <bibl n="1.4"><!-- Шлапак, 2000 --><ptr target="bib:b0252"/></bibl>
+               <bibl n="1.5"><!-- Rhoby 2014 --><ptr target="bib:b0426"/>, <citedRange>749–751</citedRange></bibl>
+            </listBibl>
+         </div>
+         <div type="edition" xml:lang="grc" xml:space="preserve">
+               <ab>
+                <lb n="1"/><date><num value="6960">ςϠξ</num>, <g ref="#stauros"/>
+                <lb n="2"/><w lemma="ἰνδικτιών"><expan><abbr>ἰνδ</abbr><ex>ικτιῶνος</ex></expan></w>
+                   <app type="alternative"><lem><num value="13">ιγ</num></lem><rdg><num value="13">ι<surplus>γ</surplus></num></rdg></app></date>.
+                <lb n="3"/><w lemma="τέλος">Τέλος</w> <w lemma="λαμβάνω"><expan><abbr>ἔλα</abbr><ex>βε</ex></expan></w>
+                  <w lemma="βοήθεια">βιηθείᾳ</w>
+                  <w lemma="ὁ">τὸ</w> <w lemma="τεῖχος"><expan><ex>τ</ex><abbr>ῆχος</abbr></expan></w>.
+                <lb n="4"/><w lemma="ἔρχομαι"><expan><abbr>Ἔλθῃ</abbr><ex>ς</ex></expan></w> <w lemma="βοηθός">βοηθός</w>,
+                  <persName type="divine" key="iesous"><name nymRef="Χριστός"><expan><abbr>Χ</abbr><ex>ριστ</ex><abbr>έ</abbr></expan></name></persName>,
+                  <w lemma="ὁ">τῷ</w>
+                  <w lemma="ποιέω">ποιηκότι</w>.
+                  <date><w lemma="ἔτος">Ἔτι</w> <num value="6960">ςϠξ</num></date>.
+            </ab>
+         </div>
+         <div type="apparatus">
+            <listApp>
+               <app loc="1-2"><rdg source="bib:b0347" xml:lang="cu">В  лт ѕѯ іѡ(анн) ігумень</rdg>
+                  <rdg><note>om. alii</note></rdg></app>
+               <app loc="1"><rdg source="bib:b0252">ςϠξ´</rdg></app>
+               <app loc="2"><rdg source="bib:b0252" xml:lang="ar">٣١٢</rdg></app>
+               <app loc="3">
+                  <rdg source="bib:b0176 bib:b0273 bib:b0347 bib:b0252">Θεία</rdg>
+                  <rdg source="bib:b0132">τόδ]ε</rdg>
+                  <rdg source="bib:b0397">(βο)ηθείᾳ</rdg>
+                  <rdg source="bib:b0426">ἡ θεία (?)</rdg>
+               </app>
+               <app loc="4">
+                  <rdg source="bib:b0176">ἔλθη (ἡ χάρις)</rdg>
+                  <rdg source="bib:b0132">[Βοή]θη ? ὀ</rdg>
+                  <rdg source="bib:b0273 bib:b0252">ἔλθῃς</rdg>
+                  <rdg source="bib:b0347">ἔλθ(ον)</rdg>
+                  <rdg source="bib:b0426">ἐλθὲ</rdg>
+               </app>
+               <app loc="4"><lem>βοηθὸς</lem><rdg source="bib:b0252"><note>om.</note></rdg></app>
+               <app loc="4"><rdg source="bib:b0176 bib:b0132 bib:b0311">Ἰ(ησοῦ)ς</rdg>
+                  <rdg source="bib:b0347">(ὁ) ἱερὸς ναὸς</rdg></app>
+               <app loc="4"><rdg source="bib:b0347">Χ(ριστο)ῦ</rdg></app>
+               <app loc="4"><rdg source="bib:b0176">πεποιηκότι</rdg> <note> et alii</note>
+                  <rdg>? Κόστι <note>Skrzynska<!--needs link--></note></rdg>
+                  <rdg source="bib:b0347">πεντηκόστῃ</rdg>
+                  <rdg source="bib:b0426">ποιηκότι</rdg>
+                  <rdg source="bib:b0252">Σταν <note>add. </note></rdg></app>
+               <app loc="4"><rdg>Ἔτει ςϠζ´ <note>Skrzynska<!--needs link--></note></rdg>
+                  <rdg source="bib:b0347 bib:b0252">ἔτει ςϠξ´</rdg></app>
+            </listApp>
+         </div>
+         <div type="translation" xml:lang="ru">
+               <p>6960, в 13-й (или: 10-й) индикт (?). С <supplied reason="lost">Божьей —  А.В. </supplied> помощью окончена стена.
+                  Приди Помощником, Христе, к построившему. В 6960 году.</p>
+         </div>
+         <div type="translation" xml:lang="en">
+            <p>In the year 6960, in the 13th (or 10th) indiction. With the Lord's help, the wall was completed.
+               Christ, come as a Helper, to the man who has built it. In the year 6960.</p>
+         </div>
+
+         <div type="commentary" xml:lang="ru">
+               <p> Историю изучения надписи см. в Шлапак 2000. Во время посещения Белгорода-Днестровского в 1999 г. надпись обнаружить не удалось.
+                  Чтение надписи основано на копии Мурзакевича (см. Войцеховский 1972, 372, рис. 2), поэтому весьма гипотетично. Н. Йорга (Iorga 1899, 99)
+                  дает перевод надписи, учитывающийся в критическом аппарате, так же, как и  перевод (без издания текста) Е.Ч. Скржинской, опубликованный
+                  в Войцеховский 1972. </p>
+                <p> 1. 1-я строка, очевидно, идентична последнему слову 4-й строки, и ее реконструкция сомнений не вызывает.</p>
+                <p> 2. Предложение Шлапак читать здесь арабские цифры — 1012 г. хиджры (1603 г. от Р.Х.) не кажется необходимым ввиду возможности
+                   греческого прочтения строки. Первый знак строки — обычное сокращение для слова индикт. 13 индикт надписи — ошибка, так как на 6960 г.
+                   от  сотворения мира (1451–1452 г. от Р.Х.) приходился 10 индикт. Не исключено, однако, что за гамму Мурзакевич мог принять случайный или поздний знак.</p>
+            <p> 3–4. Восстановление строк весьма гипотетично, поэтому от исторических комментариев мы воздержимся. Роби указал на метрический характер 2-й и 3-й строк
+               (две додекасиллабические строки) и в этой связи предложил удачное восстановление в середине 2-й строки.
+                   Прокомментировать следует формулы, на которые предыдущие исследователи внимания не обращали.
+                   Формула τέλος ἔλαβε в отношении постройки известна в надписи Ševčenko 1966, 264, № 17 (Синай, XVIII в.).
+                   Формула <foreign xml:lang="grc">Ἔλθῃς βοηθός, Χ(ριστ)έ</foreign> (4-я строка) известна на византийских молибдовулах (см., например, SEB 180, 1b).</p>
+                <p>Об археологическом и историческом контексте постройки см. Бруяко, Сапожников 2000.</p>
+
+         </div>
+         <div type="commentary" xml:lang="en">
+             <p>The study history of the inscription can be found in Shlapak 2000. During my visit to Belgorod-Dnestrovsky in 1999, I was unable to find this inscription.
+                My reading is based on the text of Murzakevich (see Voytsekhovsky 1972, 372, fig. 2)  and is therefore rather hypothetical.
+                N. Iorga's (1899, 99) translation is reflected in the apparatus, as well as the translation of E.Cz. Skrzynska published in Voytsekhovsky 1972.</p>
+            <p>1. Line 1 is apparently identical with the last word of Line 4, and its reconstruction is not in doubt.</p>
+
+            <p>2. Shlapak's proposal that we should read here the arabic numerals - Hijri year 1012 (1603 C.E.) - is not justified since the numbers are intelligible as Greek.
+               The first letter sign of the line represents a conventional abbreviation of the word "indiction." The 13th indiction in the text is a mistake since the year
+               6960 since the Creation (1451-1452 C.E.) corresponds to the 10th indiction. It is possible that Murzakevich interpreted as gamma a random stroke or a late
+               mark.</p>
+            <p>3-4. The textual reconstruction in these lines is rather hypothetical and for this reason I abstain from making historical comments. Rhoby,
+               noting the metrical character of lines 2 and 3 (two dodecasyllabic lines), made a convincing restoration in the middle of line 2. It is worth remarking
+                on the formulae, which have previously attracted little scholarly attention. The formula <foreign xml:lang="grc">τέλος ἔλαβε</foreign> with reference to a physical structure is attested in
+                Shevchenko 1966, 264, № 17  (Sinai, XVIIIth century). The formula <foreign xml:lang="grc">Ἔλθῃς βοηθός, Χ(ριστ)έ</foreign> (line 4) is known from Byzantine lead seals (see, e.g., SEB 180, 1b).</p>
+            <p>For the archaeological and historical context of the architectural construction, see Bruyako, Sapozhnikov 2000.</p>
+         </div>
+      </body>
+   </text>
+</TEI>
