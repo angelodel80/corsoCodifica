@@ -1,4 +1,4 @@
-# Materiali per il progetto del corso di Codifica di Testi aa 2023 - 2024
+# Materiali per il progetto del corso di Codifica di Testi aa 2024 - 2025
 ## Indicazioni per il progetto d'esame
 ### Realizzare una edizione digitale image-based
 
@@ -56,7 +56,7 @@ visitando il sito dell'archivio elettronico della rivista letteraria **La Rasseg
 - Da mezzogiorno a settentrione (*vol 1, fascicolo 1*)
 - Scienza (*vol 1, fascicolo 1*)
 - le dimostrazioni degli studenti del liceo (*vol 1, fascicolo 22*)
-- ​gli esami liceali (*vol 2, fascicolo 36*)
+- gli esami liceali (*vol 2, fascicolo 36*)
 - Le belle arti all’esposizione universale del 1878 (*vol 1, fascicolo 20*)
 - Della voce genovese “intendiò” (*vol 3, fascicolo 63*)
 - Marchesa Colombi: In risaia - Racconto di Natale (*vol 1, fascicolo 5*)
