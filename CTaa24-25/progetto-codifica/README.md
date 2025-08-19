@@ -14,6 +14,22 @@ visitando il sito dell'archivio elettronico della rivista letteraria **La Rasseg
 - Codificare i fenomeni notevoli esemplificati nel file **IL REALISMO IN ARTE** 
 
 ### Articoli già selezionati e non più disponibili:
+- Primavera	(*vol 6, fascicolo 144*)
+- Corrispondenza da Castellammare	(*vol 6, fascicolo 144*)
+- Corrispondenza da Lecce, la raccolta delle olive (*vol 3, fascicolo 72*)
+- Auguri alla patria	(*vol 7, fascicolo 157*)
+- Oracolo di Delfo	(*vol 8, fascicolo 196*)
+- Il trattato di commercio italo-austriaco	(*vol 6, fascicolo 141*)
+- Corrispondenza da Prato. A proposito della legge sul lavoro dei fanciulli	(*vol 6, fascicolo 141*)
+- G. Barzellotti, Le origini della filosofia di Arturo Schopenhauer	(*vol 6, fascicolo 141*)
+- Il commercio nel primo trimestre 1881	(*vol 7, fascicolo 174*)
+- L’enfiteusi dei terreni ecclesiastici in Sicilia (*vol 4, fascicolo 88*)
+- La società siciliana d’economia e il lavoro dei fanciulli (*vol 4, fascicolo 95*)
+- La Questione Monetaria	(*vol 8, fascicolo 188*)
+- Una Gita Al Volturno - Corrispondenza da Napoli	(*vol 8, fascicolo 188*)
+- Il suffragio delle donne	(*vol 3, fascicolo 58*)
+- Il voto della Camera e il macinato (*vol 4, fascicolo 79*)
+- Il riscatto delle ferrovie venete	(*vol 9, fascicolo 210*)
 - La legislazione sociale sull’ubriachezza	(*vol 3, fascicolo 61*)
 - La legislazione e le questioni sociali	(*vol 4, fascicolo 81*)
 - recensione a L. Capuana, Giacinta	(*vol 4, fascicolo 83*)
