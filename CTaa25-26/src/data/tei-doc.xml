@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE TEI SYSTEM "tei_all.dtd">
+<TEI>
+	<teiHeader>
+		<fileDesc>
+			<titleStmt>
+				<title type="main">Titolo principale</title>
+				<title type="sec">sotto titolo</title>
+				<author>autore</author>
+				<respStmt>
+					<resp>codifica</resp>
+					<name>angelo</name>
+				</respStmt>
+				<respStmt>
+					<name>nome</name>
+					<resp>resp</resp>
+				</respStmt>
+			</titleStmt>
+			<publicationStmt></publicationStmt>
+			<sourceDesc></sourceDesc>
+		</fileDesc>
+	</teiHeader>
+	<text></text>
+	<facsimile></facsimile>
+	<standOff></standOff>
+</TEI>
