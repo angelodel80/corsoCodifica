@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model ?>
+<?xml-stylesheet ?>
+<ex:radice 
+	xmlns:ex="http://example.com"
+	xmlns:es="http://ex.com">
+	&amp; &#65;&#x0061;
+	<![CDATA[
+	<!-- ciao  -->
+	]]>
+	<es:elem></es:elem>
+</ex:radice>

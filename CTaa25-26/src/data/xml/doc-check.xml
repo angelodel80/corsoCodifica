@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI>
+	<teiHeader>
+		<fileDesc>
+			<titleStmt>
+				<title>Titolo principale</title>
+				<title>sotto titolo
+				<author>
+				<respStmt>
+					autore</author>
+					<resp>codifica</resp>
+					<name>angelo</name>
+				</respStmt>
+				<respStmt />
+					<name>nome</name>
+					<resp>resp</resp>
+				</respStmt>
+			</titleStmt>
+			<publicationStmt><sourceDesc><publicationStmt>
+			</sourceDesc>
+		</fileDesc>
+	</teiHeader>
+	<text></text>
+	<facsimile></facsimile>
+	<standOff></standOff>
+</TEI>
+<TEIcorpus />

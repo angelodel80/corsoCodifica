@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<!-- ?xml-stylesheet type="" href="" ? -->
+<!-- ?xml-model href="" ?-->
+<!-- DOCTYPE dati -->
+<!-- commenti -->
+<dati>
+	<dati><other/></dati>
+	<strutturali>
+		<item />
+		<item />
+		<elem />
+		<other />
+	</strutturali>
+	<testo>
+		questo è un elemento testuale
+	</testo>
+	<misto>
+		il contenuto misto è composta da <tag /> e testo e altri <elem />
+	</misto>
+	<gerarchia>
+		<figlio>
+			<figlio2></figlio2>
+			<figlio2>
+				<figlio3></figlio3>
+			</figlio2>
+		</figlio>
+		<figlio>
+			<figlio2>
+		</figlio></figlio2>
+	</gerarchia>
+</dati>
