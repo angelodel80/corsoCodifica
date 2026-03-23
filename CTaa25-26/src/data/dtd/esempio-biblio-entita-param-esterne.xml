@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE biblioteca [
+  
+  <!ENTITY % definizioni_esterne SYSTEM "entita-param-esterna.dtd">
+  
+  %definizioni_esterne;
+  
+  <!ELEMENT biblioteca (libro+)>
+]>
+
+<biblioteca>
+    <libro>
+        <titolo>Il Nome della Rosa</titolo>
+        <autore>Umberto Eco</autore>
+    </libro>
+</biblioteca>

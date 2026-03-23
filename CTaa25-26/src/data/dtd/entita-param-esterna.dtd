@@ -1,0 +1,4 @@
+<!-- File: elementi.dtd -->
+<!ELEMENT titolo (#PCDATA)>
+<!ELEMENT autore (#PCDATA)>
+<!ELEMENT libro (titolo, autore)>

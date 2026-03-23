@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE radice SYSTEM "./esempio-dtd.dtd"
+    [
+        <!ELEMENT fgl (#PCDATA|elemento)* >
+    ]
+>
+
+<radice lang="en" name="documento XML">
+    <elemento>ciao mondo XML</elemento>
+    <!--elem> testo <elemento>testo</elemento> testo </elem-->
+    <!--figlio>io sono un elemento figlio</figlio-->
+    <fgl>elemento <elemento /> figlio</fgl>
+</radice>

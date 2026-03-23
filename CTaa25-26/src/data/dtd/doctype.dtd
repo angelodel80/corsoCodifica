@@ -1,0 +1,3 @@
+<!ELEMENT root (figlio,figlia)>
+<!ELEMENT figlio (ciao)>
+<!ELEMENT figlia (#PCDATA)>

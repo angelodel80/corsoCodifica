@@ -1,0 +1,6 @@
+<!ELEMENT radice ((elemento|elem), (figlio|fgl)) >
+<!ATTLIST radice lang (en | it) "en">
+<!ATTLIST radice name NMTOKENS #IMPLIED>
+<!ELEMENT elemento (#PCDATA)>
+<!ELEMENT elem (#PCDATA|elemento)* >
+<!ELEMENT figlio (#PCDATA) >

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE root SYSTEM "doctype.dtd"
+        [
+            <!ELEMENT ciao (elem)>
+            <!ELEMENT elem (#PCDATA)>    
+        ]        
+>
+<!--?xml-model href="doctype.dtd" type="application/xml-dtd"?-->
+<root>
+<figlio><ciao><elem></elem></ciao></figlio>
+<figlia>ciao</figlia>
+</root>
