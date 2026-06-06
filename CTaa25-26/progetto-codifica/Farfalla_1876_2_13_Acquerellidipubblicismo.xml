@@ -1,0 +1,299 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE TEI SYSTEM "./tei_all.dtd">
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+  <teiHeader xml:lang="it">
+      <fileDesc>
+         <titleStmt>
+            <title>Acquerelli di pubblico, Eugenio Torelli-Viollier</title>
+            <respStmt>
+               <resp>Conversione TEI P5 a cura di</resp>
+               <name xml:id="MP">Mariagiusi Polizzi</name>
+            </respStmt>
+         </titleStmt>
+         <editionStmt>
+            <edition n="1">Digital edition - <date when="2024-10">Ottobre 2024</date>
+            </edition>
+            <respStmt>
+               <resp>Digital edition project coordinated by</resp>
+               <name xml:id="DS">Daria Spampinato</name>
+               <name xml:id="ADS">Antonio Di Silvestro</name>
+            </respStmt>
+            <respStmt>
+               <resp>Encoding model by</resp>
+               <name ref="#LM">Laura Mazzagufo</name>
+               <name xml:id="AMDG">Angelo Mario Del Grosso</name>
+               <name xml:id="DB">Denise Bruno</name>
+            </respStmt>
+            <funder>NextGenerationEU</funder>
+            <funder>Ministero dell'Università e della Ricerca</funder>
+            <funder>Italia Domani - Piano Nazionale di Ripresa e Resilienza</funder>
+            <funder ref="coverlessListOrganization.xml#CNR">CNR - Consiglio Nazionale delle
+               Ricerche</funder>
+            <funder ref="coverlessListOrganization.xml#UniCT">Università di Catania</funder>
+         </editionStmt>
+         <publicationStmt>
+            <authority ref="coverlessListOrganization.xml#ISTC">CNR ISTC - Istituto di Scienze e
+               Tecnologie della Cognizione del Consiglio Nazionale delle Ricerche</authority>
+            <authority ref="coverlessListOrganization.xml#UniCT">Università di Catania</authority>
+            <date when="2025">2025</date>
+            <availability status="free">
+               <licence target="https://creativecommons.org/licenses/by-nc/4.0/">CC BY-NC
+                  4.0</licence>
+            </availability>
+            <idno type="filename">Farfalla_1876_2_13_Acquerellidipubblicismo.xml</idno>
+         </publicationStmt>
+         <sourceDesc>
+            <listBibl>
+               <biblStruct>
+                  <analytic>
+                     <title level="a">Acquerelli di pubblico, Eugenio Torelli-Viollier</title>
+                     <author ref="coverlessListPerson.xml#masaccio">Masaccio</author>
+                  </analytic>
+                  <monogr>
+                     <title level="j" xml:id="farfalla">La Farfalla</title>
+                     <imprint>
+                        <pubPlace ref="coverlessListPlace.xml#CA">Cagliari</pubPlace>
+                        <date when="1876">1876</date>
+                     </imprint>
+                     <biblScope unit="volume">2</biblScope>
+                     <biblScope unit="issue">13</biblScope>
+                     <biblScope unit="page">100-101</biblScope>
+                  </monogr>
+               </biblStruct>
+            </listBibl>
+         </sourceDesc>
+      </fileDesc>
+     <encodingDesc>
+        <projectDesc>
+           <p>Codifica realizzata per il progetto PRIN PNRR COVerLeSS (<ref target="http://chroma.cnr.it/progetti/">descrizione online</ref>).</p>
+        </projectDesc>
+        <editorialDecl>
+           <hyphenation>
+              <p>Si è scelto di rimuovere i trattini di marcatura degli "a capo" in fine riga.</p>
+           </hyphenation>
+           <normalization>
+              <p>Si è scelto di normalizzare gli spazi tra parola e punteggiatura.</p>
+              <p>Si è scelto di mantenere la resa grafica del maiuscolo anche nel testo e di
+                 esplicitarne la semantica con l'uso del tag corrispondente.</p>
+           </normalization>
+           <punctuation>
+              <p>Tutta la punteggiatura nella fonte originale è stata mantenuta e rappresentata
+                 usando il carattere corrispondente.</p>
+           </punctuation>
+           <quotation>
+              <p>Tutti i marcatori delle citazioni sono stati mantenuti e inglobati nel contenuto
+                 dell'elemento stesso.</p>
+              <p>Si è scelto di usare sempre <tag>quote</tag> per marcare citazioni che l'autore
+                 del testo attriuisce a fonti esterne allo stesso; è stato usato <tag>q</tag> per
+                 le citazioni implicite.</p>
+           </quotation>
+           <p>Si è scelto di usare lo standard anno-mese-giorno per le date.</p>
+           <interpretation>
+              <p>Si è scelto di creare una tassonomia in <tag>textClass</tag> con i principali temi
+                 del Verismo riconosciuti nei testi codificati. All'interno del testo, sono state
+                 marcate parole e frasi esemplificative di questi temi, ricondotte alle categorie
+                 corrispondenti attraverso l'uso del tag <tag>ref</tag>.</p>
+              <p>Le abbreviazioni sono state sciolte e marcate con il tag <tag>choice</tag> e le
+                 due alternative, <tag>abbr</tag> ed <tag>expan</tag>.</p>
+           </interpretation>
+        </editorialDecl>
+     </encodingDesc>
+     <profileDesc>
+        <textClass>
+           <keywords>
+              <term type="text" subtype="cronaca_letteraria">Articolo in rivista</term>
+           </keywords>
+			<keywords scheme="#themesTaxonomy">
+              <term type="themes" ref="coverlessTassonomia.xml#conflittoSociale">Conflitto sociale</term>
+           </keywords>
+        </textClass>
+        <creation>
+           <placeName ref="coverlessListPlace.xml#CA">Cagliari</placeName>
+           <date when="1876-12-17">17 dicembre 1876</date>
+        </creation>
+        <abstract>
+           <p>Questo testo, intitolato "Acquerelli di Pubblicismo: Eugenio Torelli-Viollier" e firmato "Masaccio," presenta una critica schietta e dettagliata del giornalista Eugenio Torelli-Viollier. L'autore dichiara di non nutrire simpatia per Torelli-Viollier, ma promette imparzialità nel giudicare la sua figura pubblica. Viene fornita una descrizione fisica e caratteriale di Torelli-Viollier, che lo ritrae come una persona fredda e riservata. Il testo traccia poi la sua carriera giornalistica, dalla collaborazione con Alessandro Dumas al suo ruolo nelle case editrici Sonzogno e Treves, fino alla direzione del Corriere della Sera. L'autore menziona anche le accese polemiche politiche e artistiche che coinvolsero Torelli-Viollier, in particolare con Felice Cavallotti, sottolineando la sua tenacia e la sua abilità nel perseguitare gli avversari. Infine, l'articolo critica le sue tattiche giornalistiche attuali, accusandolo di attacchi personali e di mancare di legalità nel dibattito pubblico.</p>
+        </abstract>
+        <langUsage>
+           <language ident="it">Italiano</language>
+           <language ident="it-x-800">Italiano di fine Ottocento</language>
+           <language ident="fr">Francese</language>
+        </langUsage>
+     </profileDesc>
+     <revisionDesc>
+        <change status="draft" when="2025-09-02" resp="#MP">First draft 2 settembre 2025</change>
+		<change status="draft" when="2026-05-20" resp="#LM">First revision 20 maggio 2026</change>
+     </revisionDesc>
+  </teiHeader>
+   <text>
+      <body>
+         <pb n="1" xml:id="Farfalla_1876_2_13_100" facs="Farfalla_1876_2_13_100.png"/>
+         <div type="intestazione">
+            <head type="main" rend="uppercase">ACQUERELLI DI PUBBLICISMO</head>
+            <metamark function="sectionDivider">-</metamark>
+            <head type="subtitle" rend="uppercase">EUGENIO TORELLI—VIOLLIER</head>
+            <metamark function="sectionDivider">-</metamark>
+         </div>
+         <cb n="1" xml:id="col_2-p.100"/>
+         <div type="text">
+            <p rend="first-line-indented"><rs type="person" subtype="real" ref="coverlessListPerson.xml#masaccio">Io</rs> — lo dichiaro subito — non sono niente affatto
+            amico di <persName type="real" ref="coverlessListPerson.xml#eugenioTorelliViollier">Torelli-Viollier</persName>: anzi potrei quasi dire es-
+            sere lui una delle poche persone, cui capisco non ar-
+            riverò mai ad accettare, per un non so che di repul-
+            sivo che sempre mi è parso rinvenire in lui....</p>
+            <p rend="first-line-indented">Questa franca e leale dichiarazione, m’impone, giu-
+            dicando l’uomo pubblico, grandissimi doveri: quello
+            specialmente della imparzialità più scrupolosa a suo
+            riguardo. Ecco perchè dirò di lui senz’odii preconcet-
+            ti e senza sdegni ingenerosi: mettendo fuori nudi e
+            crudi i miei giudizii, senza che sieno aspirati alla
+            tromba premente delle passioni personali.</p>
+            <metamark function="sectionDivider">*</metamark>
+            <p rend="first-line-indented"><persName type="real" ref="coverlessListPerson.xml#eugenioTorelliViollier">Eugenio Torelli Viollier</persName> non ha fisicamente un
+            personale conquidente. Alto, magro, osseo, pallido e
+            serio, due enormi scopettoni alle guance, l’eterno
+            <foreign xml:lang="fr" rend="italic">pince-nez</foreign> inchiodato sul naso proteso come il becco
+            d’un’anitra — la prima impressione ch’esso produce,
+            è di freddezza, di contegnosità, di insensibilità. Sotto
+            il suo sguardo che si abbassa attraverso il vetro de-
+            gli occhiali, l’espansione altrui, pronta a scoppiare,
+            si ferma, si condensa, gela. <rs type="person" subtype="real" ref="coverlessListPerson.xml#eugenioTorelliViollier">Egli</rs> procede innanzi sta-
+            lagmite solitaria fra tutti i diacciuoli prodotti dal
+            suo respiro — che cristallizza tutto innanzi ed intorno
+            a sè. Strano a dirsi ! Conosco una signora che dice
+            provare una sensazione di freddo allorchè s'incontra
+            col direttore del <orgName type="journal" ref="coverlessListOrganization.xml#corriereSera" rend="italic">Corriere della sera</orgName>!</p>
+            <metamark function="sectionDivider">*</metamark>
+            <p rend="first-line-indented"><persName type="real" ref="coverlessListPerson.xml#eugenioTorelliViollier">Eugenio Torelli Viollier</persName> cominciò a <placeName type="real" ref="coverlessListPlace.xml#NA">Napoli</placeName> la sua
+            carriera in una pubblica amministrazione. Nelle sol-
+            datesce mobili prese parte più o meno direttamente alla
+            rivoluzione napoletana, e non so come, poco tempo
+            dopo, lo troviamo all’<orgName type="journal" ref="coverlessListOrganization.xml#indipendente" rend="italic">Indipendente</orgName> di <placeName type="real" ref="coverlessListPlace.xml#NA">Napoli</placeName> con <persName type="real" ref="coverlessListPerson.xml#alexandreDumasfiglio">Ales-
+            sandro Dumas</persName>, il quale ha detto di lui e del suo in-
+            gegno del bene assai.</p>
+            <p rend="first-line-indented">Com’<rs type="person" subtype="real" ref="coverlessListPerson.xml#eugenioTorelliViollier">egli</rs> uscisse da presso a Dumas e com’<rs type="person" subtype="real" ref="coverlessListPerson.xml#eugenioTorelliViollier">egli</rs>
+            venisse a <placeName type="real" ref="coverlessListPlace.xml#MI">Milano</placeName> dopo il <date when="1864">1864</date>, nol so davvero : que-
+            sto solamente mi è noto che la <orgName type="publisher" ref="coverlessListOrganization.xml#sonzogno">casa Sonzogno</orgName> ebbe
+            ben tosto a sè il giovane napoletano, gli caricò sulle
+            spalle tutto il peso dei suoi giornali illustrati, e gli
+            disse: «<quote type="written">Lavora e guadagnati il pane.</quote>» Erano gli an-
+            ni primi della <foreign xml:lang="fr" rend="italic">bohéme</foreign> letteraria di <placeName type="real" ref="coverlessListPlace.xml#MI">Milano</placeName>, e fra i
+            giovani letterati di quei dì non erano peranco scop-
+            piate le fierissime, atroci, implacate ire politiche, ve-
+            nute dopo a mettere per sempre sulla loro penna il
+            fiele, nel loro cuore l’odio....</p>
+            <p rend="first-line-indented"><persName type="real" ref="coverlessListPerson.xml#eugenioTorelliViollier">Eugenio Torelli Viollier</persName>, scrisse nel <orgName type="journal" ref="coverlessListOrganization.xml#gazzettinoRosa" rend="italic">Gazzettino
+                  Rosa</orgName>, scrisse nella <orgName type="journal" ref="coverlessListOrganization.xml#gazzettaMilano" rend="italic">Gazzetta di Milano</orgName>, scrisse nel
+               <orgName type="journal" ref="coverlessListOrganization.xml#secolo" rend="italic">Secolo</orgName>. Fu solamente nel <date when="1868">1868</date> o <date when="1869">1869</date> ch’<rs type="person" subtype="real" ref="coverlessListPerson.xml#eugenioTorelliViollier">egli</rs> dalla
+               <orgName type="publisher" ref="coverlessListOrganization.xml#sonzogno">casa Sonzogno</orgName> emigrò alla casa <orgName type="publisher" ref="coverlessListOrganization.xml#treves">Treves</orgName>, e dall’indi-
+               pendente <orgName type="journal" ref="coverlessListOrganization.xml#secolo" rend="italic">Secolo</orgName> passò al neonato consorte <orgName type="journal" ref="coverlessListOrganization.xml#corriereSera" rend="italic">Il Cor-
+            riere di Milano</orgName>.</p>
+            <pb n="2" xml:id="Farfalla_1876_2_13_101" facs="Farfalla_1876_2_13_101.png"/>
+            <cb n="2" xml:id="col_1-p.101"/>
+            <p rend="first-line-indented">Non apprezzerò, non qualificherò, non rievocherò
+            quel repentino salto: constato però che se ne menò
+            uno scalpore indicibile e che di là cominciò la zuffa
+            a coltello, senza quartiere, senza pietà, senza miseri-
+            cordia fra lui ed i più valenti e più gloriosi campioni
+            della democrazia.</p>
+            <p rend="first-line-indented">Erano i tempi della Regia ancora oggi misteriosa
+            e tetra : e l’attentato di via dell’Amorino, le rivela-
+            zioni dell’avvelenato Scotti — tutto sommava un cupo
+            complesso di sdegni che dovevano fra democratici e
+            consorti divampare. E divamparono. Gli uffici dei
+            giornali milanesi odoravano in quei di l’acre profumo
+            della battaglia. Poi vennero le inventate cospirazioni
+            della <placeName type="real" ref="coverlessListPlace.xml#PiazzaVetra">Vetra</placeName>, poi le dimostrazioni in <placeName type="real" ref="coverlessListPlace.xml#Galleria">Galleria</placeName>, poi il
+               <placeName type="real" ref="coverlessListPlace.xml#Bormida">Bormida</placeName>, poi tutto il <foreign xml:lang="fr" rend="italic">bataclan</foreign> dei questurini che at-
+            taccavano i cittadini, e dei fogli consorti che battevano
+            le mani ai seguaci di <persName type="fictional" ref="coverlessListPerson.xml#mardocheo">Mardocheo</persName>....</p>
+            <p rend="first-line-indented"><persName type="real" ref="coverlessListPerson.xml#eugenioTorelliViollier">Torelli Viollier</persName> rumoreggiava a destra col fer-
+            vore dei neofiti. Ultimo venuto fra i burgravi si diè at-
+            torno mani e piedi per fari perdonare la recenza
+            della sua conversione. Domandò d’essere subito por-
+            tato al fuoco e lo fu. Diventò l'<foreign xml:lang="fr" rend="italic">enfant terrible</foreign> del
+            partito. Ebbe dei duelli ed impegnò gravi e furibonde
+            polemiche politiche ed artistiche coll'onorevole <persName type="real" ref="coverlessListPerson.xml#feliceCavallotti">Ca-
+            vallotti</persName>, al quale non perdonò mai i suoi successi
+            letterari, forse per essere <rs type="person" subtype="real" ref="coverlessListPerson.xml#eugenioTorelliViollier">egli</rs> clamorosamente caduto
+            col suo <title ref="coverlessListWork.xml#mondodellaLuna" rend="italic">Mondo della Luna</title>. Le ire salirono al più
+               alto diapason, e parmi che un bel dì <rs type="person" subtype="real" ref="coverlessListPerson.xml#eugenioTorelliViollier">egli</rs> mandasse
+            un cartello di sfida al <rs type="person" subtype="real" ref="coverlessListPerson.xml#feliceCavallotti">poeta</rs> dei <title ref="coverlessListWork.xml#pezzenti">Pezzenti</title> e d’<title ref="coverlessListWork.xml#alcibiade" rend="italic">Alci-
+            biade</title>. Il cartello non fu accettato e allora scoppiò
+            in tutta la sua ferocia lo sdegno del pubblicista napo-
+            litano che un altro dì venne fuori con un’aspra, pas-
+            sionata, inesatta recensione dei <title ref="coverlessListWork.xml#pezzenti" rend="italic">Pezzenti</title>. A quali de-
+               plorabili eccessi il <persName type="real" ref="coverlessListPerson.xml#eugenioTorelliViollier">Torelli</persName> lasciossi tirare in conse-
+            guenza di tale nimistà personale — io non starò a
+            ripetervi. Le sue <hi rend="italic">Pagine</hi> sul <orgName type="journal" ref="coverlessListOrganization.xml#corriereSera" rend="italic">Corriere della sera</orgName> —
+            sono e resteranno pur troppo, monumento del punto
+            cui inconsultamente può lasciarsi trascinare un indivi-
+            duo, esagitato dalle furie dell’amor proprio ferito....</p>
+            <metamark function="sectionDivider">*</metamark>
+            <p rend="first-line-indented"><rs type="person" subtype="real" ref="coverlessListPerson.xml#masaccio">Io</rs> non mi faccio colla passione politica un velo
+               così fitto da non riconoscere che il sig. <persName type="real" ref="coverlessListPerson.xml#eugenioTorelliViollier">Eugenio To-
+            relli Viollier</persName> è fornito di assai ingegno, e d’una certo-
+            sinesca pazienza che lo supera in tenacia e in longa-
+            nimità. Mai, o quasi, la storia letteraria d’un paese
+            ha fornito altro esempio di questo, d’uno scrittore che
+            ne segue pazientemente un altro, sindacando atto per
+            atto la sua vita, filandolo passo passo nella sua car-
+            riera, leggendone sillaba per sillaba tutti gli arti-
+            coli da sedici anni a questa parte, pedinandolo ora
+            per ora nella sua vita pubblica, e facendo miracoli
+            d’astuzia e d’abilità per pure arrivare a cogliere in
+            fallo l’avversario, e quindi a presentarlo al pubblico
+            sotto le tinte più atre. <persName type="real" ref="coverlessListPerson.xml#eugenioTorelliViollier">Torelli Viollier</persName> sulle peste di
+               <persName type="real" ref="coverlessListPerson.xml#feliceCavallotti">Felice Cavallotti</persName> ricorda scultoriamente <persName type="fictional" ref="coverlessListPerson.xml#javert">Javert</persName> che
+               pedina <persName type="fictional" ref="coverlessListPerson.xml#jeanValjean">Valjean</persName>, strada per strada, angolo per angolo...</p>
+            <p rend="first-line-indented">Ma <persName type="real" ref="coverlessListPerson.xml#feliceCavallotti">Cavallotti</persName> non ha avuto bisogno di trovare la
+               cinta del <placeName type="fictional" ref="coverlessListPlace.xml#PetitPicpus">Petit-Picpus</placeName> per salvarsi. <rs type="person" subtype="real" ref="coverlessListPerson.xml#eugenioTorelliViollier">Egli</rs> ha tenuto
+            testa al suo avversario senza bisogno di porsi in salvo
+            scavalcando muri di sorta : quella coscienza di dia-
+            mante bastò a sè medesima, potente e splendisissima
+            egida!</p>
+            <p rend="first-line-indented">Quando meno ardenti saranno le passioni dell'oggi
+               <cb n="2" xml:id="col_2-p.101"/>
+            vi racconterò fino a che punto possono arrivare le
+            conseguenze d’un odio letterario !</p>
+            <metamark function="sectionDivider">*</metamark>
+            <p rend="first-line-indented">Poco prima del <date when="1875-03-18">18 Marzo</date>, il sig. <persName type="real" ref="coverlessListPerson.xml#eugenioTorelliViollier">Eugenio Torelli
+            Viollier</persName> incavalierato dal <persName type="real" ref="coverlessListPerson.xml#girolamoCantelli">conte Cantelli</persName>, abbandonò
+            la direzione della ufficiale <orgName type="journal" ref="coverlessListOrganization.xml#lombardia" rend="italic">Lombardia</orgName>, ed assunse la
+               direzione del <orgName type="journal" ref="coverlessListOrganization.xml#corriereSera" rend="italic">Corriere della sera</orgName>, giornale messo in
+            piedi dai più ardenti e più giovani apostoli della mi-
+            lanese Associazione Costituzionale. Il <date when="1876-03-18">18 Marzo</date> pas-
+            sò come un uragano sul neonato giornale: ed alcuni
+            — forse i principali fra i suoi azionisti — passarono
+            arme e bagaglio nella Società Progressista abbando-
+            nando ancora in fasce la creatura di pochi dì ch’essi
+            avevano messa al mondo. Per un momento si cre-
+            dette che il <orgName type="journal" ref="coverlessListOrganization.xml#corriereSera" rend="italic">Corriere</orgName> fosse in agonia. E lo era. E sa-
+            rebbe morto, se altri ardenti moderati non avessero
+            preso il posto dei convertiti nella sesta giornata....</p>
+            <metamark function="sectionDivider">*</metamark>
+            <p rend="first-line-indented">Oggi il signor <persName type="real" ref="coverlessListPerson.xml#eugenioTorelliViollier">Torelli Viollier</persName> dalle colonne del
+            suo giornale morde acutamente il Gabinetto, gli uo-
+            mini e le idee della sinistra. Non si può disconoscere
+            al suo foglio una certa abilità di compilazione: ma
+            non sempre le sue armi sono di misura legale : e di
+            quando in quando gli attacchi alla personalità degli
+            avversari fanno la loro apparizione....</p>
+            <p rend="first-line-indented">Il che torna a grande disdoro del partito cui egli
+            appartiene: poichè la battaglia del pubblicismo deve
+            sempre combattersi al sole delle idee e sul campo
+            dei principii...</p>
+            <p rend="first-line-indented">Mi ricordo in buon punto che il signor <persName type="real" ref="coverlessListPerson.xml#eugenioTorelliViollier">Torelli
+            Viollier</persName> è un fierissimo avversario del mio partito e
+            pertanto non aggiungo una sillaba di più....</p>
+            <p rend="first-line-indented">(<hi rend="italic">Da <placeName type="real" ref="coverlessListPlace.xml#MI">Milano</placeName></hi>)</p>
+         </div>
+         <div type="closer">
+            <signed>
+               <persName type="real" ref="coverlessListPerson.xml#masaccio">Masaccio</persName>
+            </signed>
+         </div>
+      </body>
+  </text>
+</TEI>

@@ -1,0 +1,78 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml"
+	schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+	<teiHeader>
+		<fileDesc>
+			<titleStmt>
+				<title>
+					Lista di entità nominate per i testi codificati in COVerLeSS: temi e tassonomia
+				</title>
+			</titleStmt>
+			<editionStmt>
+				<edition n="1">Digital edition - <date when="2024-10">October 2024</date></edition>
+				<respStmt>
+					<resp>Digital edition project coordineted by</resp>
+					<name xml:id="DS">Daria Spampinato</name>
+					<name xml:id="ADS">Antonio Di Silvestro</name>
+				</respStmt>
+				<respStmt>
+					<resp>Encoding model by</resp>
+					<name resp="#DS">Daria Spampinato</name>
+					<name xml:id="LM">Laura Mazzagufo</name>
+					<name xml:id="AMDG">Angelo Mario Del Grosso</name>
+					<name xml:id="DB">Denise Bruno</name>
+				</respStmt>
+				<funder>NextGenerationEU</funder>
+				<funder>Ministero dell'Università e della Ricerca</funder>
+				<funder>Italia Domani - Piano Nazionale di Ripresa e Resilienza</funder>
+				<funder ref="coverlessListOrganization.xml#CNR">CNR - Consiglio Nazionale delle Ricerche</funder>
+				<funder ref="coverlessListOrganization.xml#UniCT">Università di Catania</funder>
+			</editionStmt>
+			<publicationStmt>
+				<!-- Dati di diffusione e distribuzione dell'edizione -->
+                <authority ref="coverlessListOrganization.xml#ISTC">CNR ISTC - Istituto di Scienze e Tecnologie della Cognizione del Consiglio Nazionale delle Ricerche</authority>
+                <authority ref="coverlessListOrganization.xml#UniCT">Università di Catania</authority>
+                <date when="2025">2025</date>
+                <availability status="free">
+                    <licence target="https://creativecommons.org/licenses/by-nc/4.0/">CC BY-NC 4.0</licence>
+                </availability>
+                <idno type="filename">coverlessTassonomia.xml</idno>
+			</publicationStmt>
+			<sourceDesc>
+				<p>Born digital.</p>
+			</sourceDesc>
+		</fileDesc>
+
+		<encodingDesc>
+			<classDecl>
+                <taxonomy xml:id="themesTaxonomy">
+                    <category xml:id="istruzione">
+                        <catDesc><term type="themes">Istruzione</term>: Riferimenti all'istruzione</catDesc> <!-- rivedere la definizione -->
+                    </category>
+					<category xml:id="istruzioneDonne">
+                        <catDesc><term type="themes">Istruzione delle donne</term>: Riferimenti all'istruzione delle donne</catDesc>  <!-- rivedere la definizione -->
+                    </category>
+					<category xml:id="conflittoSociale">
+                        <catDesc><term type="themes">Conflitto sociale</term>: Riferimenti al conflitto sociale</catDesc>  <!-- rivedere la definizione -->
+                    </category>
+                </taxonomy>
+            </classDecl>
+		</encodingDesc>
+
+		<profileDesc>
+            <abstract><p><!-- Qui va inserita una descrizione del contenuto --></p></abstract>
+            <creation><date when="1878-05-02">2 maggio 1878</date></creation>
+        </profileDesc>
+
+        <revisionDesc>
+            <change status="draft" when="2024-10">Final draft available in October 2024</change>
+        </revisionDesc>
+	</teiHeader>
+	<text>
+		<body>
+			<p>This is a template for a minimal TEI header with the mandatory components</p>
+		</body>
+	</text>
+</TEI>
