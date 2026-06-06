@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?xml-model href="http://www.stoa.org/epidoc/schema/latest/tei-epidoc.rng" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="http://www.stoa.org/epidoc/schema/dev/ircyr-checking.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<?xml-model href="http://www.stoa.org/epidoc/schema/latest/tei-epidoc.rng" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="T71200" xml:lang="en">
+   <teiHeader>
+      <fileDesc>
+         <titleStmt>
+            <title><rs type="textType">Ephebic</rs> (perhaps) inscription.</title>
+            <editor>Joyce M. Reynolds</editor>
+         </titleStmt>
+         <publicationStmt>
+            <authority>Centre for Computing in the Humanities, King's College London</authority>
+            <idno type="filename">T71200</idno>
+            <availability>
+               <p>Creative Commons licence Attribution UK 2.0
+                    (<ref>http://creativecommons.org/licenses/by/2.0/uk/</ref>)</p>
+               <p>All reuse or distribution of this work must contain somewhere a link back to the
+                    URL <ref>http://inslib.kcl.ac.uk/</ref>
+               </p>
+            </availability>
+         </publicationStmt>
+         <sourceDesc>
+            <msDesc>
+               <msIdentifier><msName>n/a</msName></msIdentifier>
+               <physDesc>
+                  <objectDesc>
+                     <supportDesc>
+                        <support>
+                           <p>Apparently a rectangular block, ?in a wall.</p>
+                        </support>
+                     </supportDesc>
+                     <layoutDesc>
+                        <layout><rs type="execution" key="scalpro">Inscribed</rs> on one face.</layout>
+                     </layoutDesc>
+                  </objectDesc>
+                  <handDesc>
+                     <handNote>First to second centuries A.D.</handNote><handNote/>
+                  </handDesc>
+               </physDesc>
+               <history>
+                  <origin>
+                     <origPlace>Unknown.</origPlace>
+                     <origDate notBefore="0001" notAfter="0200" precision="low" evidence="lettering">First to second centuries A.D.</origDate>
+                  </origin>
+                  
+                     
+                        <provenance type="found">
+                           <p>
+                              <placeName type="ancientFindspot" ref="http://pleiades.stoa.org/places/373736" key="db913">Taucheira</placeName>: 
+                              No findspot; recorded by Pacho in <date type="found">1825</date>.</p>
+                        </provenance>
+                        <provenance type="observed">
+                           <p>Findspot (<date type="observed">1825</date>)</p>
+                        </provenance>
+                        
+               </history>
+            </msDesc>
+         </sourceDesc>
+      </fileDesc>
+      <encodingDesc>
+         <p>Marked-up according to the EpiDoc Guidelines version 8</p>
+      <classDecl><taxonomy><category xml:id="photograph"><catDesc>Digital or digitized photographs</catDesc></category><category xml:id="representation"><catDesc>Digitized other representations</catDesc></category></taxonomy></classDecl></encodingDesc>
+      <profileDesc>
+         <langUsage>
+            <language ident="ar">Arabic</language>
+            <language ident="en">English</language>
+            <language ident="fr">French</language>
+            <language ident="de">German</language>
+            <language ident="grc">Ancient Greek</language>
+            <language ident="grc-Latn">Transliterated Greek</language>
+            <language ident="el">Modern Greek</language>
+            <language ident="he">Hebrew</language>
+            <language ident="it">Italian</language>
+            <language ident="la">Latin</language>
+         </langUsage>
+         <textClass/>
+         <textClass>
+            <keywords scheme="IRCyr">
+               <term>
+                        <geogName type="ancientRegion" key="Cyrene">Cyrenaica</geogName>
+                    </term>
+               <term>
+                        <geogName type="modernCountry" key="LY">Libya</geogName>
+                    </term>
+               <term>
+                        <placeName type="modernFindspot" ref="http://sws.geonames.org/88834">Tocra</placeName>
+                    </term>
+            </keywords>
+         </textClass>
+      <creation>Previous publications.</creation></profileDesc>
+       <revisionDesc>
+         <change when="2012-11-05" who="GB">moved text-constituted-from to profileDesc/creation</change>
+         <change when="2012-10-16" who="GB">broke provenance events into multiple provenance elements</change>
+         <change when="2012-03-21" who="SS">created from template</change>
+      </revisionDesc>
+   </teiHeader><facsimile><graphic url="PachoLXXXI" decls="#photograph"><desc>Transcription (1827, Pacho, plate LXXXI)</desc></graphic></facsimile>
+   <text>
+      <body>
+      
+         <div type="bibliography">
+            <head>Bibliography</head>
+            <p>
+               <bibl><ptr target="pacho1827"/>  pl. <biblScope>LXXXI</biblScope></bibl>, whence
+               <bibl><ptr target="cigiii"/> <biblScope>5329</biblScope></bibl>.
+            </p>
+         </div>
+         
+         <div type="edition" xml:lang="grc" xml:space="preserve">
+            <ab>
+                    <lb n="1"/><persName type="attested"><name nymRef="Πασικλῆς">Πασικ<unclear>λῆ</unclear>ϲ</name>
+                    <lb n="2"/><persName type="attested"><name nymRef="Σῶσος">Ϲ<unclear>ώ</unclear><supplied reason="lost">ϲ</supplied>ο<supplied reason="lost">υ</supplied></name></persName></persName> 
+               <w><expan><abbr><am><g type="year"/></am></abbr><ex>ἔτουϲ</ex></expan></w>
+               <num value="30">λ</num> <num value="11"><unclear>ι</unclear>
+                    <lb n="3" break="no"/>α</num> <rs type="month" key="Χοιάκ"><w lemma="Χοιάκ">Χοι<supplied reason="lost">άκ</supplied></w></rs>
+            </ab>
+         </div>
+         <div type="apparatus">
+            <head>Apparatus</head>
+            <listApp>
+               <app loc="1"><rdg resp="#pacho1827">ΠΑΣΙΚΑΙϹ</rdg></app>
+               
+               <app loc="2"><rdg resp="#pacho1827">ϹΟΟΞΛΙ</rdg>
+                  <rdg resp="#cigiii">Σ[ώσου (ἐτῶν)] λ[γʹ]</rdg></app>
+            </listApp>
+         </div>
+         <div type="translation" xml:space="preserve"><head>Translation</head>
+            <p/>
+         </div>
+         <div type="commentary">
+            <head>Commentary</head>
+            <p/>
+         </div>
+         
+      </body>
+   </text>
+</TEI>

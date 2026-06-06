@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="http://www.stoa.org/epidoc/schema/latest/tei-epidoc.rng" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="http://www.stoa.org/epidoc/schema/dev/ircyr-checking.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<?xml-model href="http://www.stoa.org/epidoc/schema/latest/tei-epidoc.rng" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="A00300" xml:lang="en">
+   <teiHeader>
+      <fileDesc>
+         <titleStmt>
+            <title>
+               <rs type="textType">Caption</rs> for image of Noah</title>
+            <editor>Joyce M. Reynolds</editor>
+         </titleStmt>
+         <publicationStmt>
+            <authority>Centre for Computing in the Humanities, King's College London</authority>
+            <idno type="filename">A00300</idno>
+            <availability>
+               <p>Creative Commons licence Attribution UK 2.0
+                        (<ref>http://creativecommons.org/licenses/by/2.0/uk/</ref>)</p>
+               <p>All reuse or distribution of this work must contain somewhere a link back to the
+                    URL <ref>http://inslib.kcl.ac.uk/</ref>
+               </p>
+            </availability>
+         </publicationStmt>
+         <sourceDesc>
+            <msDesc>
+               <msIdentifier><msName>n/a</msName></msIdentifier>
+               <physDesc>
+                  <objectDesc>
+                     <supportDesc>
+                        <support>
+                           <p><material>Mosaic</material> <objectType>floor</objectType>.</p>
+                        </support>
+                     </supportDesc>
+                     <layoutDesc>
+                        <layout>
+                           <rs type="execution" key="tessellis">Mosaic</rs> lettering, in a panel representing <rs type="iconography">Noah</rs> as he
+                           releases the <rs type="iconography">dove</rs> from the <rs type="iconography">Ark</rs>.
+                        </layout>
+                     </layoutDesc>
+                  </objectDesc>
+                  <handDesc>
+                     <handNote>
+                        <height unit="metre">0.09</height>; lunate epsilon, omega.
+                     </handNote>
+                  </handDesc>
+               </physDesc>
+               <history>
+                  <origin>
+                     <origPlace>Findspot.</origPlace>
+                     <origDate notBefore="0501" notAfter="0600" precision="low" evidence="mosaic">Sixth century A.D.</origDate>
+                  </origin>
+                  
+                     
+                        <provenance type="found">
+                           <p>
+                              <placeName type="ancientFindspot" ref="http://pleiades.stoa.org/places/373732" key="db911">Apollonia</placeName>:
+                              <rs type="monuList" key="db914">East Church</rs>: on the floor
+                        of the south transept; found in <date type="found">1920</date>.</p>
+                        </provenance>
+                        <provenance type="observed">
+                           <p>
+                              <rs type="monuList" key="db932">Apollonia Museum</rs>.</p>
+                        </provenance>
+                     
+                  
+               </history>
+            </msDesc>
+         </sourceDesc>
+      </fileDesc>
+      <encodingDesc>
+         <p>Marked-up according to the EpiDoc Guidelines version 8</p>
+      <classDecl><taxonomy><category xml:id="photograph"><catDesc>Digital or digitized photographs</catDesc></category><category xml:id="representation"><catDesc>Digitized other representations</catDesc></category></taxonomy></classDecl></encodingDesc>
+      <profileDesc>
+         <langUsage>
+            <language ident="ar">Arabic</language>
+            <language ident="en">English</language>
+            <language ident="fr">French</language>
+            <language ident="de">German</language>
+            <language ident="grc">Ancient Greek</language>
+            <language ident="grc-Latn">Transliterated Greek</language>
+            <language ident="el">Modern Greek</language>
+            <language ident="he">Hebrew</language>
+            <language ident="it">Italian</language>
+            <language ident="la">Latin</language>
+         </langUsage>
+         <textClass/>
+         <textClass>
+            <keywords scheme="IRCyr">
+               <term>
+                        <geogName type="ancientRegion" key="Cyrene">Cyrenaica</geogName>
+                    </term>
+               <term>
+                        <geogName type="modernCountry" key="LY">Libya</geogName>
+                    </term>
+               <term>
+                        <placeName type="modernFindspot" ref="http://sws.geonames.org/81584">Marsa Suza</placeName>
+                    </term>
+               <term>Christian</term>
+            </keywords>
+         </textClass>
+      <creation>Transcription (Reynolds).</creation></profileDesc>
+      <revisionDesc>
+         <change when="2012-11-05" who="GB">moved text-constituted-from to profileDesc/creation</change>
+         <change when="2012-10-16" who="GB">broke provenance events into multiple provenance elements</change>
+         <change when="2010-08-04" who="GB">Converted from TEI P4 (EpiDoc DTD v. 6) to P5 (EpiDoc RNG schema v. 8)</change>
+         <change when="2010-04-12" who="GB">tagged bibliography</change>
+         <change when="2010-02-23" who="GB">tidied</change>
+         <change when="2010-02-11" who="CMR">Title, number</change>
+         <change when="2010-02-11" who="MR">tagged metadata</change>
+         <change when="2009-07-13" who="Pietro">corrected text; tagged words and name</change>
+         <change when="2008-06-30" who="VA">hand-copied from Apollonia article</change>
+      </revisionDesc>
+   </teiHeader><facsimile><!--JR 61--><surface/></facsimile>
+   <text>
+      <body>
+         <div type="bibliography">
+            <head>Bibliography</head>
+            <p><bibl><ptr target="jmr1960"/> <biblScope>9</biblScope></bibl>,  whence
+                    <bibl><title>SEG</title> <biblScope>18.760</biblScope></bibl>
+               (= <bibl><title>PHI</title> <biblScope n="PH324459">324459</biblScope></bibl>); 
+               <bibl><ptr target="jmr1976"/><biblScope>3</biblScope> and pl. LVII</bibl>;
+               <bibl><ptr target="jmr1980"/><biblScope>p. 150</biblScope>, with plate, and discussion at 61</bibl>, whence
+               <bibl><title>SEG</title> <biblScope>30.1782</biblScope></bibl>
+               (= <bibl><title>PHI</title> <biblScope n="PH324459">324530</biblScope></bibl>);
+               <bibl><ptr target="jmr-jbwp-rgg2003"/> <biblScope>57.1</biblScope></bibl>.
+               </p>
+         </div>
+         
+         
+         
+         <div type="edition" xml:lang="grc" xml:space="preserve">
+            <ab>
+                    <lb n="1"/><persName type="other"><name nymRef="Νῶε">Νῶε</name></persName>
+         </ab>
+         </div>
+         
+         <div type="translation" xml:space="preserve">
+            <p>Noah.</p>
+         </div>
+         
+         <div type="commentary">
+            <head>Commentary</head>
+            <p>This is, so far, the only church mosaic in Cyrenaica to show a biblical scene.
+                    Rosenbaum <!-- add ref --> discussed its depiction of Noah releasing from the ark, 
+                    arguing that it is is rather old-fashioned for the time.</p>
+         </div>
+</body>
+   </text>
+</TEI>

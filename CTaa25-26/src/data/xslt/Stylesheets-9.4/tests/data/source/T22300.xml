@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?xml-model href="http://www.stoa.org/epidoc/schema/latest/tei-epidoc.rng" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="http://www.stoa.org/epidoc/schema/dev/ircyr-checking.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<?xml-model href="http://www.stoa.org/epidoc/schema/latest/tei-epidoc.rng" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="T22300" xml:lang="en">
+   <teiHeader>
+      <fileDesc>
+         <titleStmt>
+            <title>Fragmentary <rs type="textType">ephebic</rs> <rs type="textType">name</rs>s</title>
+            <editor>Joyce M. Reynolds</editor>
+         </titleStmt>
+         <publicationStmt>
+            <authority>Centre for Computing in the Humanities, King's College London</authority>
+            <idno type="filename">T22300</idno>
+            <idno type="JMR">72</idno>
+            <availability>
+               <p>Creative Commons licence Attribution UK 2.0
+                    (<ref>http://creativecommons.org/licenses/by/2.0/uk/</ref>)</p>
+               <p>All reuse or distribution of this work must contain somewhere a link back to the
+                    URL <ref>http://inslib.kcl.ac.uk/</ref>
+               </p>
+            </availability>
+         </publicationStmt>
+         <sourceDesc>
+            <msDesc>
+               <msIdentifier><msName>n/a</msName></msIdentifier>
+               <physDesc>
+                  <objectDesc>
+                     <supportDesc>
+                        <support>
+                           <p><material>Sandstone</material> block.</p>
+                        </support>
+                     </supportDesc>
+                     <layoutDesc>
+                        <layout><rs type="execution" key="litteris scariphatis">Incised</rs> on the face, in two hands</layout>
+                     </layoutDesc>
+                  </objectDesc>
+                  <handDesc>
+                     <handNote>i: <height>0.06-0.08</height>;  ii: <height>0.09</height>.</handNote>
+                  </handDesc>
+               </physDesc>
+               <history>
+                  <origin>
+                     <origPlace>Gymnasium</origPlace>
+                     <origDate evidence="lettering, context" notBefore="-0050" notAfter="0150" precision="low">Late first century B.C.- early second century A.D. </origDate>
+                  </origin>
+                  
+                     
+                        <provenance type="found">
+                           <p>
+                              <placeName type="ancientFindspot" ref="http://pleiades.stoa.org/places/373736" key="db913">Teuchira</placeName>: 
+                              <rs type="monuList" key="db1111">South Wall</rs>: The second Tower, the first tower to the west of the angle.</p>
+                        </provenance>
+                        <provenance type="observed">
+                           <p>Reused in a modern wall, South of the city-wall.</p>
+                        </provenance>
+                     
+                  
+               </history>
+            </msDesc>
+         </sourceDesc>
+      </fileDesc>
+      <encodingDesc>
+         <p>Marked-up according to the EpiDoc Guidelines version 8</p>
+      <classDecl><taxonomy><category xml:id="photograph"><catDesc>Digital or digitized photographs</catDesc></category><category xml:id="representation"><catDesc>Digitized other representations</catDesc></category></taxonomy></classDecl></encodingDesc>
+      <profileDesc>
+         <langUsage>
+            <language ident="ar">Arabic</language>
+            <language ident="en">English</language>
+            <language ident="fr">French</language>
+            <language ident="de">German</language>
+            <language ident="grc">Ancient Greek</language>
+            <language ident="grc-Latn">Transliterated Greek</language>
+            <language ident="el">Modern Greek</language>
+            <language ident="he">Hebrew</language>
+            <language ident="it">Italian</language>
+            <language ident="la">Latin</language>
+         </langUsage>
+         <textClass/>
+         <textClass>
+            <keywords scheme="IRCyr">
+               <term>
+                        <geogName type="ancientRegion" key="Cyrene">Cyrenaica</geogName>
+                    </term>
+               <term>
+                        <geogName type="modernCountry" key="LY">Libya</geogName>
+                    </term>
+               <term>
+                        <placeName type="modernFindspot" ref="http://sws.geonames.org/89183">Tocra</placeName>
+                    </term>
+            </keywords>
+         </textClass>
+      <creation>Transcription (Reynolds).</creation></profileDesc>
+      <revisionDesc>
+         <change when="2012-11-05" who="GB">moved text-constituted-from to profileDesc/creation</change>
+         <change when="2012-10-16" who="GB">broke provenance events into multiple provenance elements</change>
+         <change when="2011-03-17" who="MGDA">Tagged header information</change>
+         <change when="2010-08-04" who="GB">Converted from TEI P4 (EpiDoc DTD v. 6) to P5 (EpiDoc RNG schema v. 8)</change>
+         <change when="2009-08-14" who="Pietro">Tokenized</change>
+         <change when="2008-07-14" who="GB">mailmerged: created from template</change>
+      </revisionDesc>
+   </teiHeader><facsimile><graphic url="JMRNS01_004" decls="#photograph"><desc><ref type="inscription">T22300</ref> 
+      and <ref type="inscription">T22400</ref> (Reynolds NS.I.4)</desc></graphic>
+      <graphic url="JMRNS01_005" decls="#photograph"><desc><ref type="inscription">T22300</ref> 
+         and <ref type="inscription">T22400</ref> (Reynolds NS.I.5)</desc></graphic>
+      <graphic url="JMRNS01_006" decls="#photograph"><desc><ref type="inscription">T22300</ref> 
+         and <ref type="inscription">T22400</ref> (Reynolds NS.I.6)</desc></graphic></facsimile>
+   <text>
+      <body>
+         <div type="bibliography">
+            <head>Bibliography</head>
+            <p/>
+         </div>
+         
+         <div type="edition" xml:lang="grc" xml:space="preserve"><div subtype="section" n="i" type="textpart"><ab>
+                    <lb n="1"/><gap reason="lost" extent="unknown" unit="character"/><orig><unclear>α</unclear>ζ<unclear>η</unclear></orig><gap reason="lost" extent="unknown" unit="character"/>
+                    <lb n="2"/><gap reason="lost" extent="unknown" unit="character"/><orig><unclear>η</unclear>ια<unclear>ι</unclear></orig><gap reason="lost" extent="unknown" unit="character"/>
+                </ab></div><div subtype="section" n="ii" type="textpart"><ab>
+                    <lb n="1"/><gap reason="lost" extent="unknown" unit="character"/><persName type="attested"><name nymRef="Δάφνις"><supplied reason="lost">Δ</supplied>άφνις</name></persName> <orig>ι</orig><gap reason="lost" extent="unknown" unit="character"/>
+                    <lb n="2"/><gap reason="lost" extent="unknown" unit="character"/><orig>αρ<unclear>α</unclear></orig><gap reason="lost" extent="unknown" unit="character"/>
+                </ab>
+</div>
+</div>
+         
+         <div type="translation" xml:space="preserve"><head>Translation</head><p/></div>
+         <div type="commentary">
+            <head>Commentary</head>
+            <p/>
+         </div>
+         
+      </body>
+   </text>
+</TEI>

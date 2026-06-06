@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="UTF-8"?><?xml-model href="http://www.stoa.org/epidoc/schema/8.23/tei-epidoc.rng" schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="http://www.stoa.org/epidoc/schema/8.23/tei-epidoc.rng" schematypens="http://purl.oclc.org/dsdl/schematron"?><?xml-model href="http://www.stoa.org/epidoc/schema/dev/ircyr-checking.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI xmlns="http://www.tei-c.org/ns/1.0">
+   <teiHeader>
+      <fileDesc>
+         <titleStmt><title xml:lang="ru">Надгробие Эсхина</title><title xml:lang="en">Epitaph of Aischinas</title><editor xml:id="ip" role="translator"><persName xml:lang="ru">Ирина<forename/><surname>Полинская</surname></persName><persName xml:lang="en"><forename>Irene</forename><surname>Polinskaya</surname></persName></editor></titleStmt>
+         <publicationStmt>
+            <authority>King's College London</authority>
+            <idno type="IM2015">30.14</idno>
+            <idno type="filename">PE3000014</idno>
+            <idno type="PE">PE3000014</idno>
+         </publicationStmt>
+         <sourceDesc>
+            <msDesc>
+               <msIdentifier>
+                  <country/>
+                  <altIdentifier xml:lang="ru">
+                     <repository>Государственный Эрмитаж</repository>
+                     <idno>Х.1974.1</idno>
+                  </altIdentifier>
+                  <altIdentifier xml:lang="en">
+                     <repository>State Hermitage</repository>
+                     <idno>Х.1974.1</idno>
+                  </altIdentifier>
+               </msIdentifier>
+               <msContents>
+                  <summary corresp="document-search.xml#doc2">
+                     <seg xml:lang="ru">Надгробная надпись.</seg>
+                     <seg xml:lang="en">Epitaph.</seg>
+                  </summary>
+               </msContents>
+               <physDesc>
+                  <objectDesc>
+                     <supportDesc>
+                        <support>
+                           <objectType xml:lang="ru" ref="monument-search.xml#mon3">Стела.</objectType>
+                           <objectType xml:lang="en">Stele.</objectType>
+                           <material xml:lang="ru" ref="material-search.xml#m2">Известняк.</material>
+                           <material xml:lang="en">Limestone.</material>
+                           <p xml:lang="ru">Верхняя часть стелы с карнизом с антефиксами. Лицевая
+                              грань украшена рельефными розетками. Между карнизом и розетками  без
+                              предварительной разметки вырезана двухстрочная надпись. Под розетками
+                              коричневой краской нанесено изображение суковатого посоха.</p>
+                           <p xml:lang="en">Upper part of a stele bearing cornice with antefixes. On the front - two relief rosettes. Between the cornice and 
+                              rosettes - a two-line inscription is carved {без предварительной разметки}. Below the rosettes - knobbly stick painted in brown.</p>
+                           <dimensions>
+                              <height unit="cm">108,0</height>
+                              <width unit="cm">31,5</width>
+                              <depth unit="cm">15,0</depth>
+                           </dimensions>
+                        </support>
+                     </supportDesc>
+                     <layoutDesc>
+                        <layout>
+                           <seg xml:lang="ru"/>
+                           <seg xml:lang="en"/>
+                        </layout>
+                     </layoutDesc>
+                  </objectDesc>
+                  <handDesc>
+                     <handNote>
+                        <seg xml:lang="ru">Омикрон немного меньше остальных букв, правая вертикаль
+                           ню слегка приподнята, сигма с расходящимися верхней и нижней гастами,
+                           слегка изогнутые линии отдельных букв, слабые утолщения на концах линий
+                           букв. Надпись вырезана достаточно небрежно, без предварительной
+                           разметки.</seg>
+                        <seg xml:lang="en">Omicron smaller than other letters, nu with short right
+                           vertical, four-bar sigma with splayed bars, </seg>
+                        <height unit="cm">1,8</height>
+                     </handNote>
+                  </handDesc>
+               </physDesc>
+               <history>
+                  <origin>
+                     <origPlace ref="origPlace.xml#p003">
+                        <seg xml:lang="ru">Херсонес.</seg>
+                        <seg xml:lang="en">Chersonesos.</seg>
+                     </origPlace>
+                     <origDate notBefore="-0333" notAfter="-0250" evidence="палеография">
+                        <seg xml:lang="ru">Кон. IV - 1-я пол. III в. до н.э.</seg>
+                        <seg xml:lang="en">Late IVth - 1st half of IIIrd century B.C.E.</seg>
+                     </origDate>
+                  </origin>
+                  <provenance type="found">
+                     <seg xml:lang="ru">
+                        <placeName type="ancientFindspot" ref="findspot.xml#sevastopol">Севастополь
+                           (Херсонес).</placeName>
+                        <rs type="circumstances">Найдена в 1960 г. Раскопки
+                           С.Ф. Стржелецкого (НА НЗХТ, д. 30).</rs>
+                        <rs type="context">Юго-восточный район Херсонеса, оборонительные стены, ядро башни XVII (башня Зенона), кладка.</rs>
+                     </seg>
+                     <seg xml:lang="en">
+                        <placeName type="ancientFindspot">Sevastopol (Chersonesos).</placeName>
+                        <rs type="circumstances">Found in 1960, excavations of S.F. Strzheletsky (НА НЗХТ, д. 30).</rs>
+                        <rs type="context">Southeast sector of Chersonesos, fortification walls, Tower XVII ("Zeno's Tower"), masonry.</rs>
+                     </seg>
+                  </provenance>
+                  <provenance type="observed">
+                     <seg xml:lang="ru">Санкт-Петербург, Россия.</seg>
+                     <seg xml:lang="en">St Petersburg, Russia</seg>
+                  </provenance>
+               </history>
+            </msDesc>
+         </sourceDesc>
+      </fileDesc>
+      
+      <revisionDesc>
+         <change when="2016-02-15" who="SS">corrected references to alists; tidied xml</change>
+         <change when="2015-11-05" who="CB">Added origDate</change>
+         <change when="2015-10-27" who="CB">corrections to Biblio and app crit</change>
+         <change when="2015-09-28" who="CB">Biblio and app crit</change>
+         <change when="2015-07-10" who="KK">Add photo file name</change>
+         <change when="2015-06-02" who="CB">Metadata tagging</change>
+         <change when="2015-03-12" who="GB">programmatically created XML from Word docs</change>
+         <change when="2015-03-12" who="VP">Tagging the Greek names</change>
+      </revisionDesc>
+   </teiHeader>
+   <facsimile>
+      <surface>
+         <graphic url="30.14">
+            <desc xml:lang="en"/>
+            <desc xml:lang="ru"/>
+         </graphic>
+      </surface>
+   </facsimile>
+   <text>
+      <body>
+         <div type="bibliography">
+            <!-- Издания -->
+            <listBibl>
+               <bibl><!--Соломоник 1969--><ptr target="bib:b0504"/>, 68, №
+                     <citedRange>27</citedRange></bibl>
+               <bibl><!--НЭПХ II--><ptr target="bib:НЭПХ2"/>
+                  <citedRange>161</citedRange></bibl>
+               <bibl><!--Perlman 2011--><ptr target="bib:b0437"/>, 434, №
+                     <citedRange>27</citedRange></bibl>
+            </listBibl>
+         </div>
+         <div type="bibliography" subtype="commentaries">
+            <!-- Комментарии -->
+            <listBibl>
+               <bibl><!--Posamentir 2011--><ptr target="bib:b0439"/>, 38, № 27</bibl>
+            </listBibl>
+         </div>
+         <div type="edition" xml:lang="grc" xml:space="preserve">
+            <ab>
+               <lb n="1"/><persName type="attested" ref="#person482"><name nymRef="Αἰσχίνας">Αἰσχίνας</name>
+               <lb n="2"/><persName type="attested" ref="#person483"><name nymRef="Γέρων">Γέροντος</name></persName></persName>.
+            </ab>
+         </div>
+         <div type="apparatus">
+            <listApp>
+               <app>
+                  <note/>
+               </app>
+            </listApp>
+         </div>
+         <div type="translation" xml:lang="ru">
+            <p>Эсхин, (сын) Геронта.</p>
+         </div>
+         <div type="translation" xml:lang="en">
+            <p>Aischinas, (son of) Geron.</p>
+         </div>
+         <div type="commentary" xml:lang="ru">
+            <p>Согласно атрибуции Posamentir 2011, 38 стела относится к «кругу мастерской Санниона».
+               Другие примеры использования этих личных имен в Херсонесе см. LGPN IV.</p>
+         </div>
+         <div type="commentary" xml:lang="en">
+            <p/>
+         </div>
+      </body>
+   </text>
+</TEI>

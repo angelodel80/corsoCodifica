@@ -1,0 +1,218 @@
+<?xml version="1.0" encoding="UTF-8"?><?xml-model href="http://www.stoa.org/epidoc/schema/8.23/tei-epidoc.rng" schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="http://www.stoa.org/epidoc/schema/8.23/tei-epidoc.rng" schematypens="http://purl.oclc.org/dsdl/schematron"?><?xml-model href="http://www.stoa.org/epidoc/schema/dev/ircyr-checking.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude">
+   <teiHeader>
+      <fileDesc>
+         <titleStmt><title xml:lang="ru">Декрет (?) римского времени</title><title xml:lang="en">Decree (?)</title><editor xml:id="ip" role="translator"><persName xml:lang="ru">Ирина<forename/><surname>Полинская</surname></persName><persName xml:lang="en"><forename>Irene</forename><surname>Polinskaya</surname></persName></editor></titleStmt>
+         <publicationStmt>
+            <authority>King's College London</authority>
+            <idno type="IM2015">30.366</idno>
+            <idno type="filename">PE3000487</idno>
+            <idno type="PE">PE3000487</idno>
+         </publicationStmt>
+         <sourceDesc>
+            <msDesc>
+               <msIdentifier><region>Crimea</region>
+               </msIdentifier>
+               <msContents>
+                  <summary corresp="document-search.xml#doc15" cert="low">
+                     <seg xml:lang="ru">Декрет (?)</seg>
+                     <seg xml:lang="en">Decree (?)</seg>
+                  </summary>
+               </msContents>
+               <physDesc>
+                  <objectDesc>
+                     <supportDesc>
+                        <support>
+                           <objectType xml:lang="ru" ref="monument-search.xml#mon1">Плита.</objectType>
+                           <objectType xml:lang="en">Panel.</objectType>
+                           <material xml:lang="ru" ref="material-search.xml#m1">Мрамор.</material>
+                           <material xml:lang="en">Marble.</material>
+                           <p xml:lang="ru">Два не соединяющихся фрагмента плиты, обломанных со всех сторон. Лицевая и тыльная стороны хорошо отполированы. 
+                              На каждом фрагменте сохранились остатки трех строк надписи, вырезанной по предварительной разметке.</p>
+                           <p xml:lang="en"/>
+                        </support>
+                     </supportDesc>
+                     <layoutDesc>
+                        <layout>
+                           <seg xml:lang="ru"/>
+                           <seg xml:lang="en"/>
+                        </layout>
+                     </layoutDesc>
+                  </objectDesc>
+                  <handDesc>
+                     <handNote>
+                        <seg xml:lang="ru">Курсивные мю, омега; крупный овальный омикрон, прямоугольная сигма, апексы.</seg>
+                        <seg xml:lang="en">Cursive mu, omega; large oval omicron, rectangular sigma; serifs.</seg>
+                        <height unit="cm">1,2</height>
+                     </handNote>
+                  </handDesc>
+               </physDesc>
+               <history>
+                  <origin>
+                     <origPlace ref="origPlace.xml#p003">
+                        <seg xml:lang="ru">Херсонес.</seg>
+                        <seg xml:lang="en">Chersonesos.</seg>
+                     </origPlace>
+                     <origDate notBefore="0151" notAfter="0233" evidence="Палеография">
+                        <seg xml:lang="ru">2-я пол. II – нач. III в. н.э.</seg>
+                        <seg xml:lang="en">2nd half of IInd - early IIIrd cent. C.E.</seg>
+                     </origDate>
+                  </origin>
+                  <provenance type="found">
+                     <seg xml:lang="ru">
+                        <placeName type="ancientFindspot" ref="findspot.xml#sevastopol">Севастополь (Херсонес).</placeName>
+                        <rs type="circumstances">Найдены в 1976 г. Раскопки  М.И. Золотарева.</rs>
+                        <rs type="context">в северо-восточном районе Херсонеса, в колодце на площади около Восточной базилики.</rs>
+                     </seg>
+                     <seg xml:lang="en">
+                        <placeName type="ancientFindspot">Sevastopol (Chersonesos).</placeName>
+                        <rs type="circumstances"/>
+                        <rs type="context"/>
+                     </seg>
+                  </provenance>
+                  <provenance type="observed">
+                     <seg xml:lang="ru">Севастополь.</seg>
+                     <seg xml:lang="en">Sevastopol.</seg>
+                  </provenance>
+               </history>
+               <msPart n="1">
+                  <msIdentifier><country/>
+                     <altIdentifier xml:lang="ru">
+                        <repository>Национальный заповедник "Херсонес Таврический"</repository>
+                        <idno>143/36934</idno>
+                     </altIdentifier>
+                     <altIdentifier xml:lang="en">
+                        <repository>National Preserve of Tauric Chersonesos</repository>
+                        <idno>143/36934</idno>
+                     </altIdentifier>
+                  </msIdentifier>
+                  <physDesc>
+                     <objectDesc>
+                        <supportDesc>
+                           <support>
+                              <dimensions>
+                                 <height unit="cm">4,0</height>
+                                 <width unit="cm">6,0</width>
+                                 <depth unit="cm">3,0</depth>
+                              </dimensions>
+                           </support>
+                        </supportDesc>
+                     </objectDesc>
+                  </physDesc>
+               </msPart>
+               <msPart n="2">
+                  <msIdentifier><country/>
+                     <altIdentifier xml:lang="ru">
+                        <repository>Национальный заповедник "Херсонес Таврический"</repository>
+                        <idno>144/36934</idno>
+                     </altIdentifier>
+                     <altIdentifier xml:lang="en">
+                        <repository>National Preserve of Tauric Chersonesos</repository>
+                        <idno>144/36934</idno>
+                     </altIdentifier>
+                  </msIdentifier>
+                  <physDesc>
+                     <objectDesc>
+                        <supportDesc>
+                           <support>
+                              <dimensions>
+                                 <height unit="cm">5,0</height>
+                                 <width unit="cm">5,0</width>
+                                 <depth unit="cm">3,0</depth>
+                              </dimensions>
+                           </support>
+                        </supportDesc>
+                     </objectDesc>
+                  </physDesc>
+               </msPart>
+            </msDesc>
+         </sourceDesc>
+      </fileDesc>
+      
+      <revisionDesc>
+         <change when="2016-09-13" who="SS">encoded text and metadata</change>
+         <change when="2016-09-13" who="AGi">programmatically created XML from Word docs</change>
+      </revisionDesc>
+   </teiHeader>
+   <facsimile>
+      <surface>
+         <graphic url="30.366">
+            <desc xml:lang="en"/>
+            <desc xml:lang="ru"/>
+         </graphic>
+      </surface>
+   </facsimile>
+   <text>
+      <body>
+         <div type="bibliography">
+            <!-- Издания -->
+            <listBibl>
+               <bibl><!-- Соломоник 1983 --><ptr target="bib:b0208"/>, 68, № <citedRange>2</citedRange></bibl>
+            </listBibl>
+         </div>
+         <div type="bibliography" subtype="commentaries">
+            <!-- Комментарии -->
+            <listBibl>
+               <bibl><!-- SEG --><ptr target="bib:SEG"/> <citedRange>33, 595-596</citedRange></bibl>
+            </listBibl>
+         </div>
+         <div type="edition" xml:lang="grc" xml:space="preserve">
+            <div type="textpart" subtype="fragment" n="1">
+               <ab>
+               		<lb n="0"/><gap reason="lost" extent="unknown" unit="line"/>
+               		<lb n="1"/><gap reason="lost" extent="unknown" unit="character"/><orig><unclear>ΑΤ</unclear></orig><gap reason="lost" extent="unknown" unit="character"/>
+               		<lb n="2"/><gap reason="lost" extent="unknown" unit="character"/><orig>ΑΥΤΟ</orig><gap reason="illegible" quantity="1" unit="character"/><gap reason="lost" extent="unknown" unit="character"/>
+               		<lb n="3"/><gap reason="lost" extent="unknown" unit="character"/><gap reason="illegible" quantity="1" unit="character"/><orig>ΑΣΜΙ<unclear>Ω</unclear></orig><gap reason="lost" extent="unknown" unit="character"/>
+               		<lb n="3a"/><gap reason="lost" extent="unknown" unit="line"/>
+               </ab>
+            </div>
+            <div type="textpart" subtype="fragment" n="2">
+               <ab>
+               		<lb n="0"/><gap reason="lost" extent="unknown" unit="line"/>
+               		<lb n="1"/><gap reason="lost" extent="unknown" unit="character"/><gap reason="illegible" quantity="1" unit="character"/><gap reason="lost" extent="unknown" unit="character"/>
+               		<lb n="2"/><gap reason="lost" extent="unknown" unit="character"/><orig><unclear>Α</unclear>Τ<unclear>Ο</unclear></orig><gap reason="lost" extent="unknown" unit="character"/>
+               		<lb n="3"/><gap reason="lost" extent="unknown" unit="character"/><orig>ΤΑΤ</orig><gap reason="lost" extent="unknown" unit="character"/>
+               		<lb n="3a"/><gap reason="lost" extent="unknown" unit="line"/>
+            </ab>
+            </div>
+         </div>
+         <div type="apparatus">
+            <div type="textpart" n="1">
+               <listApp>
+               <app loc="2">
+                  <note>в конце стк. видна часть вертикальной гасты</note>
+               </app>
+               <app loc="2-3">
+                  <rdg>[- - -] Αὐτοκ̣[ράτορι Καίσαρι - - - / - - - σεβ]ασμίω[ι - - -] <note>ed. pr.</note></rdg>
+               </app>
+               <app loc="3">
+                  <note>в начале стк. след изогнутой линии</note>
+                 <rdg><note>om. ed. pr.</note></rdg>
+               </app>
+            </listApp>
+            </div>
+               <div type="textpart" n="2">
+                  <listApp>
+                      <app loc="1">
+                         <note>видна нижняя часть наклонной гасты</note>
+                      </app>
+                      <app loc="2-3">
+                         <rdg>[τὸ δὲ ψάφισμ]α το̣[ῦτο ἀναγραφᾶμεν λευκολίθου στάλᾳ καὶ θέμεν / ἐν τῷ ἐπισαμο]τάτ[ῳ τᾶς πόλιος τόπῳ - - -] <note>ed. pr.</note></rdg>
+                      </app>
+            </listApp>
+               </div>
+         </div>
+         <div type="translation" xml:lang="ru">
+            <p/>
+         </div>
+         <div type="translation" xml:lang="en">
+            <p/>
+         </div>
+         <div type="commentary" xml:lang="ru">
+            <p/>
+         </div>
+         <div type="commentary" xml:lang="en">
+            <p/>
+         </div>
+      </body>
+   </text>
+</TEI>

@@ -1,7 +1,7 @@
 # Materiali per il progetto del corso di Codifica di Testi aa 2025 - 2026
 ## Indicazioni per il progetto d'esame
 ### Realizzare una edizione digitale image-based
-*fonte primaria: rivista letteraria **La Farfalla**.*[vedi sito progetto COVerLeSS](https://coverless.cnr.it/riviste.html) 
+*fonte primaria: rivista letteraria **La Farfalla**: *[vedi sito progetto COVerLeSS](https://coverless.cnr.it/riviste.html) 
 
 ![logo progetto COVerLeSS](https://coverless.cnr.it/imgs/logo_coverless-chiaro.svg)
 

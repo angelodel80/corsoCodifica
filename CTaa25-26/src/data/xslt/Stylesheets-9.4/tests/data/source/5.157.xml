@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="UTF-8"?><?xml-model href="http://www.stoa.org/epidoc/schema/8.23/tei-epidoc.rng" schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="http://www.stoa.org/epidoc/schema/8.23/tei-epidoc.rng" schematypens="http://purl.oclc.org/dsdl/schematron"?><?xml-model href="http://www.stoa.org/epidoc/schema/dev/ircyr-checking.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude">
+   <teiHeader>
+      <fileDesc>
+         <titleStmt><title xml:lang="ru">Прошение <certainty cert="low" locus="value" match=".."/> неизвестного</title><title xml:lang="en">Invocation <certainty cert="low" locus="value" match=".."/> of an unknown</title><editor xml:id="ayv2012">
+               <persName xml:lang="ru"><forename>А.Ю.</forename><surname>Виноградов</surname></persName>
+               <persName xml:lang="en"><forename>A.Yu.</forename><surname>Vinogradov</surname></persName>
+            </editor><editor xml:id="ip" role="translator"><persName xml:lang="ru">Ирина<forename/><surname>Полинская</surname></persName><persName xml:lang="en"><forename>Irene</forename><surname>Polinskaya</surname></persName></editor></titleStmt>
+         <publicationStmt><authority>King's College London</authority>
+            <idno type="filename">5.157</idno><idno type="PE">PE5000157</idno>
+            <idno type="AYV2012-number">byz152</idno>
+         </publicationStmt>
+         <sourceDesc>
+            <msDesc>
+               <msIdentifier><country>Ukraine (?)</country>
+                  <altIdentifier xml:lang="ru">
+                     <repository>In situ (?)</repository>
+                     <idno/>
+                  </altIdentifier>
+                  <altIdentifier xml:lang="en">
+                     <repository>In situ (?)</repository>
+                     <idno/>
+                  </altIdentifier>
+               </msIdentifier>
+               <msContents>
+                  <summary corresp="document-search.xml#doc3">
+                     <seg xml:lang="ru">Инвокативная <certainty cert="low" locus="value" match=".."/> надпись.</seg>
+                     <seg xml:lang="en">Invocative <certainty cert="low" locus="value" match=".."/> inscription.</seg>
+                  </summary>
+               </msContents>
+               <physDesc>
+                  <objectDesc>
+                     <supportDesc>
+                        <support>
+                           <objectType xml:lang="ru" ref="monument-search.xml#mon16 #mon20">Скальная стена.</objectType>
+                           <objectType xml:lang="en">Rock wall.</objectType>
+                           <material xml:lang="ru" ref="material-search.xml#m2">Известняк.</material>
+                           <material xml:lang="en">Limestone.</material>
+                           <p xml:lang="ru">Повреждена в верхней части.</p>
+                           <p xml:lang="en">Damaged at the top.</p>
+                           <dimensions>
+                              <height>12,0</height>
+                              <width>11,5</width>
+                           </dimensions>
+                        </support>
+                     </supportDesc>
+                     <layoutDesc>
+                        <layout ana="f1">
+                           <seg xml:lang="ru">На лицевой стороне.</seg>
+                           <seg xml:lang="en">On the front.</seg>
+                        </layout>
+                     </layoutDesc>
+                  </objectDesc>
+                  <handDesc>
+                     <handNote>
+                        <seg xml:lang="ru"><rs type="execution" ref="execution.xml#scalpro">Лапидарный</rs>; буквы неравной величины, сильно маньеризированы. Лигатуры.</seg>
+                        <seg xml:lang="en">Lapidary; highly ornate letters of unequal size. Ligatures.</seg>
+                        <height unit="cm">1,0–4,0.</height>
+                     </handNote>
+                  </handDesc>
+               </physDesc>
+               <history>
+                  <origin>
+                     <origPlace ref="origPlace.xml#p013">
+                        <seg xml:lang="ru">Каламита.</seg>
+                        <seg xml:lang="en">Kalamita.</seg>
+                     </origPlace>
+                     <origDate notBefore="1201" notAfter="1800" precision="medium" evidence="палеография">
+                        <seg xml:lang="ru">XIII–XVIII вв.</seg>
+                        <seg xml:lang="en">XIII–XVIIIth centuries C.E.</seg>
+                     </origDate>
+                  </origin>
+                  <provenance type="observed" subtype="autopsy">
+                     <seg xml:lang="ru">Non vidi.</seg>
+                     <seg xml:lang="en">Non vidi.</seg>
+                  </provenance>
+                  <provenance type="found">
+                     <seg xml:lang="ru">
+                        <placeName type="ancientFindspot" ref="findspot.xml#inkerman">Инкерман.</placeName>
+                        <rs type="circumstances">1870-е гг., обследования Д.М. Струкова.</rs>
+                        <rs type="context">Монастырская скала, монастырь св. Георгия, лестница, восточная стена, над левой усыпальницей (?).</rs>
+                     </seg>
+                     <seg xml:lang="en">
+                        <placeName type="ancientFindspot">Inkerman.</placeName>
+                        <rs type="circumstances">1870s, survey of D.M. Strukov.</rs>
+                        <rs type="context">Monastyrskaya Rock, monastery of St. George, staircase, east wall, over a sepulchre on the left.</rs>
+                     </seg>
+                  </provenance>
+                  <provenance type="observed">
+                     <seg xml:lang="ru">In situ (?).</seg>
+                     <seg xml:lang="en">In situ (?).</seg>
+                  </provenance>
+               </history>
+            </msDesc>
+         </sourceDesc>
+      </fileDesc>
+
+<revisionDesc>
+         <change when="2015-04-01" who="CB">Andrey's corrections</change>
+         <change when="2012-07-19" who="GB">lemmatized Greek</change>
+         <change when="2012-05-31" who="AG">editor added, several lines translated</change>
+         <change when="2012-03-13" who="AFS">corrections in metadata</change>
+          <change when="2012-03-12" who="AFS">tagged greek text</change>
+         <change when="2011-11-30" who="KFL">programmatically created from Word doc</change>
+      </revisionDesc>
+   </teiHeader>
+   <facsimile>
+      <surface>
+         <graphic url="5.157">
+            <desc xml:lang="en">Drawing of face</desc>
+            <desc xml:lang="ru"/>
+         </graphic>
+      </surface>
+   </facsimile>
+   <text>
+      <body>
+         <div type="bibliography">
+            <p/>
+         </div>
+         <div type="edition" xml:lang="grc" xml:space="preserve">
+            <ab>
+               <lb n="1"/><gap reason="lost" extent="unknown" unit="character"/> <w lemma="ὁ"><supplied reason="lost">το</supplied>ῦ</w> <persName type="divine" key="theos"><roleName><w lemma="θεός"><expan><abbr>θ</abbr><ex>εο</ex><abbr>ῦ</abbr></expan></w></roleName></persName>
+               <lb n="2"/><gap reason="lost" quantity="8" unit="character"/>
+               <lb n="3"/><w lemma="βοηθέω">Βοήθι</w>
+               <lb n="4"/><gap reason="lost" quantity="5" unit="character"/>.
+            </ab>
+         </div>
+         <div type="translation" xml:lang="ru">
+            <p>… Бога… помоги…</p>
+         </div>
+         <div type="translation" xml:lang="en">
+            <p>... of God... Help...</p>
+         </div>
+         <div type="commentary" xml:lang="ru">
+            <p> Местонахождение памятника, упомянутого Латышевым (1896, 42–43, 46, № 34, 41; 1897, 152) 
+                устанавливается предположительно, по единственному упоминанию надписи в 
+                Георгиевском монастыре Н.И. Репниковым (Материалы к археологической карте юго-западного 
+                нагорья Крыма (РА ИИМК РАН. Ф. 10, № 10. С. 34)). Чтение основано на единственной копии 
+                Д.М. Струкова (РА ИИМК РАН. Ф. Р–I, № 619. Л. 6). Остальная часть надписи не поддается 
+                дешифровке. Судя по своему положению над могилой, надпись могла быть надгробной. Неясно, 
+                какую роль играет в ней инвокация.</p>
+         </div>
+         <div type="commentary" xml:lang="en">
+            <p>We can speculate about the topographic position of the monument, noted by Latyshev (1896, 42–43, 46, № 34, 41; 1897, 152), only on the basis of a mention made by
+               N.I. Repnikov who says that it was found at St. George monastery (Materials for the archaeological map of the southwest mountains of Crimea (Manuscript Archive, 
+               Institute for History of Material Culture, Russian Academy of Sciences, f. 10, № 10, s. 34)). The edition is based on the single transcription of D.M. Strukov
+               (Manuscript Archive, Institute for History of Material Culture, Russian Academy of Sciences, f. Р–I, № 619, l. 6). The rest of the text cannot be deciphered. 
+               Judging by its placement over a grave, it was probably an epitaph. The role of invocation in it is unclear.</p>
+         </div>
+      </body>
+   </text>
+</TEI>
