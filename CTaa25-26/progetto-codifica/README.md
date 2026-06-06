@@ -6,7 +6,7 @@
 ![logo progetto COVerLeSS](https://coverless.cnr.it/imgs/logo_coverless-chiaro.svg)
 
 ### Informazioni sul progetto d'esame:
-> Una dettagliata guida alle modalità di codifica per la fonte primaria **La Farfalla** vedere il documento al seguente link [COVerLeSS-annotazioni_2026-05-29.pdf](./COVerLeSS-annotazioni_2026-05-29.pdf)
+> Una dettagliata guida sulle modalità di codifica per la fonte primaria **La Farfalla** vedere il documento al seguente link [COVerLeSS-annotazioni_2026-05-29.pdf](./COVerLeSS-annotazioni_2026-05-29.pdf)
 
 ### Video presentazione materiale
 > Un video di spiegazione sulle modalità di codifica è raggiungibile al seguente link Teams: [video](https://unipiit.sharepoint.com/:v:/s/a__td_69940/IQD8v8UEAz0fT7_ekwPiV_hjAYFH3Mh_rH6p08rHzawOR1A?e=vQq0Gf)
